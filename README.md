@@ -2,7 +2,7 @@
 
 Adds file specific icons to atom for improved visual grepping
 
-![Screenshot](https://github.com/DanBrooker/file-icon/raw/master/file-icons.png)
+![Screenshot](https://github.com/DanBrooker/file-icons/blob/master/file-icons.png)
 
 # Customisation
 
