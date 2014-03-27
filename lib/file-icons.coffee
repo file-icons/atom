@@ -1,9 +1,6 @@
 module.exports =
   activate: (state) ->
     @timeout(100)
-    atom.workspaceView.on "tree-view:expand-directory", =>
-      console.log "treeview expanded"
-      @icons()
     atom.workspaceView.on 'tree-view:directory-modified', =>
       console.log "treeview modified"
       @icons()
