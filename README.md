@@ -10,7 +10,7 @@ CSS classes can be used to customise the file icon or the filename
 
     // This is the ruby default css
     // Sets the icon to octicon-ruby and colours it red
-    .filetype-icon-rb:before
+    .file-icon-rb:before
     {
       content: "\f047";
       color: red;
@@ -26,11 +26,11 @@ e.g.
 ```
 // You could also colour the entire filename and icon if you so desired
 // Sets the icon to octicon-ruby and colours both the icon and filename text
-.filetype-icon-rb
+.file-icon-rb
 {
   color: red;
 }
-.filetype-icon-rb:before
+.file-icon-rb:before
 {
   content: "\f047";
 }
