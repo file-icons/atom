@@ -8,19 +8,19 @@ Adds file specific icons to atom for improved visual grepping
 ## Icons
 Icons are located at `./stylesheets/icons.less`. You can create a custom CSS class and express its code through `content: "\fxxx";`. Octicons is the default icon's class.
 
-```less
+```css
 .ruby-icon { content: "\f047"; }
 ```
 
 Some custom fonts are already provided, such as [FontAwesome](http://fortawesome.github.io/)(`.fa`) and [FontMfizz](http://mfizz.com/oss/font-mfizz)(`.mf`), you just have to provide its class.
 
-```less
+```css
 .coffee-icon { .fa; content: "\f0f4"; }
 ```
 
 ## Colors
 You can disable icon colors at `./stylesheets/colors.less`.
-```less
+```css
 @colorized-icons: true; // Set it to false to disable colors
 ```
 
@@ -31,7 +31,7 @@ Colors are used from the [Base16](https://github.com/chriskempson/base16) color 
 
 Medium is color provided by Base16. Light is medium lightened 15%. Dark is medium darkened 15%. In order to "construct" a CSS class color, you provide its variant followed by a dash (-).
 
-```less
+```css
 .light-red;
 .medium-blue;
 .dark-maroon;
@@ -39,7 +39,7 @@ Medium is color provided by Base16. Light is medium lightened 15%. Dark is mediu
 
 You can also color the entire filename by removing `:before` from the icon class selector.
 
-```less
+```css
 .filetype-icon-rb        { .ruby-icon; .medium-red; } // Colors icon and filename
 .filetype-icon-rb:before { .ruby-icon; .medium-red; } // Colors only icon
 .filetype-icon-rb:before { .ruby-icon;              } // Icon and no color, to disable color for only a specific subset
@@ -49,7 +49,7 @@ You can also color the entire filename by removing `:before` from the icon class
 
 CSS classes can be used to customise the file icon or the filename
 
-```less
+```css
 // This is the ruby default css
 // Sets the icon to octicon-ruby and colors it Medium Red
 .filetype-icon-rb:before { .ruby-icon; .medium-red; }
