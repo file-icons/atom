@@ -1,150 +1,72 @@
-.file-icon-rb:before
-{
-  content: "\f047";
-  color: red;
-}
+@import "colors.less";
+@import "fonts.less";
+@import "icons.less";
 
-.file-icon-erb:before
-{
-  content: "\f047";
-  color: darken(red, 15%);
-}
+// Checklist icon
+.file-icon-TODO:before { .checklist-icon; .medium-yellow; }
 
-.file-icon-Gemfile:before
-{
-  content: "\f047";
-}
+// Code icon
+.file-icon-js:before  { .code-icon; .medium-yellow; }
+.file-icon-xml:before { .code-icon; .medium-blue;   }
 
-.file-icon-js:before
-{
-    color: #90c276;
-}
+// Coffee icon
+.file-icon-coffee:before    { .coffee-icon; .medium-maroon; }
+.file-icon-litcoffee:before { .coffee-icon; .light-maroon;  }
 
-.file-icon-jsx:before
-{
-    color: green;
-}
+// Comment icon
+.file-icon-rb[data-name$="_spec.rb"]:before { .comment-icon; .medium-green; }
 
+// CSS3 icon
+.file-icon-less:before { .css3-icon; .dark-blue;    }
+.file-icon-sass:before { .css3-icon; .light-purple; }
+.file-icon-scss:before { .css3-icon; .dark-purple;  }
+.file-icon-css:before  { .css3-icon; .medium-blue;  }
 
-.file-icon-md:before
-{
-    color: #78b4c4;
-}
+// Dashboard icon
+.file-icon-slim:before { .dashboard-icon; .medium-orange; }
 
-.file-icon-json:before
-{
-    color: #b17bc7;
-}
+// Database icon
+.file-icon-json:before { .database-icon; .medium-yellow; }
+.file-icon-cson:before { .database-icon; .medium-maroon; }
+.file-icon-yml:before  { .database-icon; .light-red; }
 
-.file-icon-cson:before
-{
-    color: #c67dc9;
-}
+// HTML5 icon
+.file-icon-erb:before  { .html5-icon; .medium-red;    }
+.file-icon-php:before  { .html5-icon; .dark-blue;     }
+.file-icon-html:before { .html5-icon; .medium-orange; }
+.file-icon-haml:before { .html5-icon; .light-red;     }
+.file-icon-jade:before { .html5-icon; .medium-green;  }
 
-.file-icon-npmignore:before
-{
-    color: #c97d7d;
-}
+// Gear icon
+.file-icon-gitignore:before    { .gear-icon;                 }
+.file-icon-editorconfig:before { .gear-icon; .medium-orange; }
+.file-icon-npmignore:before    { .gear-icon; .medium-green;  }
+.file-icon-jshintrc:before     { .gear-icon; .medium-yellow; }
+.file-icon-module:before       { .gear-icon; .medium-blue;   }
+.file-icon-htaccess:before     { .gear-icon; .medium-red;    }
 
-.file-icon-gitignore:before
-{
-    color: #c9a07d;
-}
+// Github icon
+.icon-file-directory[data-name=".git"]:before { .git-icon; }
 
-.file-icon-yml:before
-{
-    color: #bec97d;
-}
+// Package icon
+.icon-file-directory[data-name=".bundle"]:before { .package-icon; }
 
-.file-icon-txt:before
-{
-    color: #7dc9c6;
-}
+// Python icon
+.file-icon-py:before { .python-icon; .dark-yellow; }
 
-.file-icon-coffee:before
-{
-    color: #b0734b;
-}
+// Ruby icon
+.file-icon-Gemfile:before { .ruby-icon;              }
+.file-icon-rb:before      { .ruby-icon; .medium-red; }
 
-.file-icon-litcoffee:before
-{
-    color: #b0734b;
-}
+// Secret icon
+.file-icon-secret:before { .secret-icon; }
 
-.file-icon-php:before
-{
-    color: #5991db;
-}
+// Default icon: image
+.file-icon-png:before { .medium-orange; }
+.file-icon-gif:before { .medium-yellow; }
+.file-icon-jpg:before { .medium-green;  }
 
-.file-icon-less:before
-{
-    color: #78c497;
-}
-
-.file-icon-sass:before
-{
-    color: #8078c4;
-}
-
-.file-icon-scss:before
-{
-    color: #8078c4;
-}
-
-
-.file-icon-css:before
-{
-    color: #c478c3;
-}
-
-.file-icon-jshintrc:before
-{
-    color: #c77b9f;
-}
-
-.file-icon-editorconfig:before
-{
-    color: #c77b81;
-}
-
-.file-icon-png:before
-{
-    color: #d5b559;
-}
-
-.file-icon-gif:before
-{
-    color: #d6d85b;
-}
-
-.file-icon-jpg:before
-{
-    color: #c2d85b;
-}
-
-.file-icon-html:before
-{
-    color: #5cb5db;
-    content: "\f0b6";
-}
-
-.file-icon-sh:before
-{
-    color: #de5ebd;
-}
-
-.file-icon-htaccess:before
-{
-    color: #e16178;
-}
-
-.file-icon-module:before
-{
-    color: #e1c761;
-}
-
-.file-icon-xml:before
-{
-    color: #a9e161;
-    content: "\f010";
-}
+// No default icons
+.file-icon-md:before  { .medium-blue;   }
+.file-icon-txt:before { .medium-cyan;   }
+.file-icon-sh:before  { .medium-purple; }
