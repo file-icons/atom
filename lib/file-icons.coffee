@@ -1,22 +1,24 @@
 module.exports =
+  treeFileSelector: "li.file span"
   activate: (state) ->
-    @timeout(100)
+    @planUpdate()
     atom.workspaceView.on 'tree-view:directory-modified', =>
       console.log "treeview modified"
       @icons()
-  timeout: (interval) ->
-    self = this
-    setTimeout( ->
-      self.icons()
-      self.timeout(2000) # I would prefer not to do this, but until there's more filetree events it's hard to get notified
-    , interval)
+
+  planUpdate: ->
+    setTimeout =>
+      @icons()
+      @planUpdate()
+    , 300
+
   icons: ->
     treeView = document.querySelector(".tree-view")
     return unless treeView
-    elements = treeView.querySelectorAll("li.file span")
+    elements = treeView.querySelectorAll(@treeFileSelector)
 
-    for el in elements
-      @colorElement(el)
+    @colorElement(el) for el in elements
+
   colorElement: (el) ->
     fileName = el.innerHTML
 
@@ -25,4 +27,4 @@ module.exports =
     @clearElement(el)
     el.className = el.className + " " + className;
   clearElement: (el) ->
-    el.className = el.className.replace(/\sfile-icon-[\S]+/, '');
+    el.className = el.className.replace(/\sfile-icon-[\w]+/, '');
