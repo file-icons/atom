@@ -40,9 +40,9 @@ Medium is color provided by Base16. Light is medium lightened 15%. Dark is mediu
 You can also color the entire filename by removing `:before` from the icon class selector.
 
 ```css
-.filetype-icon-rb        { .ruby-icon; .medium-red; } // Colors icon and filename
-.filetype-icon-rb:before { .ruby-icon; .medium-red; } // Colors only icon
-.filetype-icon-rb:before { .ruby-icon;              } // Icon and no color, to disable color for only a specific subset
+.file-icon-rb        { .ruby-icon; .medium-red; } // Colors icon and filename
+.file-icon-rb:before { .ruby-icon; .medium-red; } // Colors only icon
+.file-icon-rb:before { .ruby-icon;              } // Icon and no color, to disable color for only a specific subset
 ```
 
 ## Full Icon
@@ -52,7 +52,7 @@ CSS classes can be used to customise the file icon or the filename
 ```css
 // This is the ruby default css
 // Sets the icon to octicon-ruby and colors it Medium Red
-.filetype-icon-rb:before { .ruby-icon; .medium-red; }
+.file-icon-rb:before { .ruby-icon; .medium-red; }
 ```
 
 Classes are generated based on file extension or file name in absence of extension.

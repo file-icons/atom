@@ -25,6 +25,6 @@ module.exports =
     ext = fileName.split('.').pop()
     className = "file-icon-" + ext
     @clearElement(el)
-    el.className = el.className + " " + className;
+    el.className = el.className + " " + className
   clearElement: (el) ->
-    el.className = el.className.replace(/\sfile-icon-[\w]+/, '');
+    el.className = el.className.replace(/\sfile-icon-[\S]+/, '')
