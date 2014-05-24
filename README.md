@@ -68,3 +68,4 @@ Classes for directory must specify its name through a `data-name` attribute.
 
 # Acknowledgments
 Wouldn't have even tried to make this if it weren't for [sommerper/filetype-color](https://github.com/sommerper/filetype-color)
+Also thanks to all the [contributors](https://github.com/DanBrooker/file-icons/graphs/contributors).
