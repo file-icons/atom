@@ -10,7 +10,7 @@ module.exports =
     setTimeout =>
       @icons()
       @planUpdate()
-    , 300
+    , 100
 
   icons: ->
     treeView = document.querySelector(".tree-view")
