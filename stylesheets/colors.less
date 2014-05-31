@@ -88,3 +88,28 @@
 .light-cyan  when (@colored-icons) { color: @lc; }
 .medium-cyan when (@colored-icons) { color: @mc; }
 .dark-cyan   when (@colored-icons) { color: @dc; }
+
+
+// Custom builder (not working due to atom bug)
+// .generate(@color, @name, @tsp: 15%) when (@colored-icons) {
+//   .light-@{name}  { color: lighten(@color, @tsp) }
+//   .medium-@{name} { color: @color                }
+//   .dark-@{name}   { color: darken(@color, @tsp)  }
+// }
+//
+// .generate(@color, @name) when (@colored-icons = false) {
+//   .light-@{name}  { }
+//   .medium-@{name} { }
+//   .dark-@{name}   { }
+// }
+//
+// This builder would generate the same classes as before.
+// Usage: (~ is needed before name to unescape css colors)
+// .generate(@base08, ~'red');
+// .generate(@base09, ~'yellow');
+// .generate(@base0A, ~'orange');
+// .generate(@base0B, ~'green');
+// .generate(@base0C, ~'cyan');
+// .generate(@base0D, ~'blue');
+// .generate(@base0E, ~'purple');
+// .generate(@base0F, ~'maroon');
