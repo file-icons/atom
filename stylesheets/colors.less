@@ -4,13 +4,13 @@
  */
 @colored-icons: true;
 
-/* Easy config for desired theme
+/* Easy config for desired theme.
  * Currently available themes are
  * located inside /themes/ folder.
  */
 @base16-theme: 'default';
-.getTheme() { @import "themes/@{base16-theme}.less"; }
-.getTheme();
+
+@import "themes/@{base16-theme}.less";
 
 /* @m<x> = .medium-<x>
  * @l<x> = .light-<x> (<x> ligthened 15%)

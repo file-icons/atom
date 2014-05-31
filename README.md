@@ -12,7 +12,7 @@ Icons are located at `./stylesheets/icons.less`. You can create a custom CSS cla
 .ruby-icon { content: "\f047"; }
 ```
 
-Some custom fonts are already provided, such as [FontAwesome](http://fortawesome.github.io/)(`.fa`) and [FontMfizz](http://mfizz.com/oss/font-mfizz)(`.mf`), you just have to provide its class.
+Some custom fonts are already provided, such as [FontAwesome](http://fontawesome.io/)(`.fa`) and [FontMfizz](http://mfizz.com/oss/font-mfizz)(`.mf`), you just have to provide its class.
 
 ```css
 .coffee-icon { .fa; content: "\f0f4"; }
