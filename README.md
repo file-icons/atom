@@ -21,6 +21,7 @@ The following css can be added to your user stylesheet to customise files with t
 
 Folders
 ```css
+.icon-file-directory[data-name=".git"]:before { .git-icon; }
 ```
 
 ## Icons
