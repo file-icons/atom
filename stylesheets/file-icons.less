@@ -53,8 +53,11 @@
 .icon-file-text[data-name$=".py"]:before { .python-icon; .dark-yellow; }
 
 // Ruby icon
-.icon-file-text[data-name$="Gemfile"]:before { .ruby-icon;              }
-.icon-file-text[data-name$=".rb"]:before     { .ruby-icon; .medium-red; }
+.icon-file-text[data-name$="Gemfile"]:before,
+.icon-file-text[data-name$=".ruby-gemset"]:before,
+.icon-file-text[data-name$=".ruby-version"]:before { .ruby-icon;              }
+.icon-file-text[data-name$=".rb"]:before,
+.icon-file-text[data-name$=".opal"]:before   { .ruby-icon; .medium-red; }
 
 .icon-file-text[data-name$="_spec.rb"]:before { .comment-icon; .medium-green; }
 
