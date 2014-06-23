@@ -1,6 +1,6 @@
 # file-icons
 
-Adds file specific icons to atom for improved visual grepping. Works with Tree View and Fuzzy Finder.
+Adds file specific icons to atom for improved visual grepping. Works with Tree View and Fuzzy Finder and Tabs.
 
 ![Screenshot](https://raw.githubusercontent.com/DanBrooker/file-icons/master/file-icons.png)
 
@@ -12,6 +12,11 @@ File Icons are now specified via css only.
 # Customisation
 
 The following css can be added to your user stylesheet to customise files with the .rb file extension
+
+```css
+@import "packages/file-icons/stylesheets/colors"; // to use the colours
+@import "packages/file-icons/stylesheets/icons";  // to use the defined icons
+```
 
 ```css
 .icon-file-text[data-name$=".rb"]          { .medium-red;             } // Colours icon and filename
