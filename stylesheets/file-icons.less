@@ -66,12 +66,16 @@
   &[data-name$=".py"]:before { .python-icon; .dark-yellow; }
 
   // Ruby icon
+  &[data-name="Rakefile"],
+  &[data-name$=".gemspec"],
+  &[data-name="Gemfile.lock"],
   &[data-name$="Gemfile"]:before,
   &[data-name$=".ruby-gemset"]:before,
-  &[data-name$=".ruby-version"]:before { .ruby-icon;              }
+  &[data-name$=".ruby-version"]:before { .ruby-icon; }
+  
   &[data-name$=".rb"]:before,
   &[data-name$=".opal"]:before   { .ruby-icon; .medium-red; }
-
+  
   &[data-name$="_spec.rb"]:before { .comment-icon; .medium-green; }
 
   // Perl icon
