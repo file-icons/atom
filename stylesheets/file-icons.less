@@ -67,8 +67,12 @@
 
   // Ruby icon
   &[data-name$="Gemfile"]:before,
-  &[data-name$=".ruby-gemset"]:before,
-  &[data-name$=".ruby-version"]:before { .ruby-icon;              }
+  &[data-name$="Gemfile.lock"]:before,
+  &[data-name$="Rakefile"]:before,
+  &[data-name$=".gemspec"]:before,
+  &[data-name=".ruby-gemset"]:before,
+  &[data-name=".ruby-version"]:before { .ruby-icon; }
+
   &[data-name$=".rb"]:before,
   &[data-name$=".opal"]:before   { .ruby-icon; .medium-red; }
 
