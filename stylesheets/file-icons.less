@@ -110,7 +110,10 @@
   &[data-name$=".txt"]:before { .medium-cyan;   }
 
   // shell
-  &[data-name$=".sh"]:before  { .terminal-icon; .medium-purple; }
-  &[data-name$=".zsh"]:before  { .terminal-icon; .medium-blue; }
-  &[data-name$=".fish"]:before  { .terminal-icon; .medium-green; }
+  &[data-name$=".sh"]:before,
+  &[data-name=".bashrc"]:before { .terminal-icon; .medium-purple; }
+  &[data-name$=".zsh"]:before,
+  &[data-name=".zshrc"]:before { .terminal-icon; .medium-blue; }
+  &[data-name$=".fish"]:before,
+  &[data-name=".fishrc"]:before  { .terminal-icon; .medium-green; }
 }
