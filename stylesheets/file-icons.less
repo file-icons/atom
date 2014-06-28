@@ -36,8 +36,6 @@
 
   // CSS3 icon
   &[data-name$=".less"]:before { .css3-icon; .dark-blue; }
-  &[data-name$=".sass"]:before { .css3-icon; .light-purple; }
-  &[data-name$=".scss"]:before { .css3-icon; .dark-purple; }
   &[data-name$=".css"]:before  { .css3-icon; .medium-blue; }
 
   // Dashboard icon
@@ -70,11 +68,18 @@
   &[data-name$=".gitignore"]:before     { .gear-icon;                 }
   &[data-name$=".gitattributes"]:before { .gear-icon;                 }
   &[data-name$=".editorconfig"]:before  { .gear-icon; .medium-orange; }
-  &[data-name$=".npmignore"]:before     { .gear-icon; .medium-green;  }
   &[data-name$=".jshintrc"]:before      { .gear-icon; .medium-yellow; }
   &[data-name$=".jscsrc"]:before        { .gear-icon; .medium-yellow; }
   &[data-name$=".module"]:before        { .gear-icon; .medium-blue;   }
   &[data-name$=".htaccess"]:before      { .gear-icon; .medium-red;    }
+
+  // Npm icon
+  &[data-name$=".npmignore"]:before    { .gear-icon; .medium-red; }
+  &[data-name$="npm-debug.log"]:before    { .gear-icon; .medium-red; }
+
+  // Sass icon
+  &[data-name$=".sass"]:before { .sass-icon; .light-purple; }
+  &[data-name$=".scss"]:before { .sass-icon; .dark-purple; }
 
   // Python icon
   &[data-name$=".py"]:before { .python-icon; .dark-yellow; }
@@ -130,4 +135,25 @@
   &[data-name=".zshrc"]:before { .terminal-icon; .medium-blue; }
   &[data-name$=".fish"]:before,
   &[data-name=".fishrc"]:before  { .terminal-icon; .medium-green; }
+
+  // Grunt icon
+  &[data-name="GRUNTFILE.js"]:before,
+  &[data-name="Gruntfile.js"]:before,
+  &[data-name="gruntfile.js"]:before,
+  &[data-name="GRUNTFILE.coffee"]:before,
+  &[data-name="Gruntfile.coffee"]:before,
+  &[data-name="gruntfile.coffee"]:before { .grunt-icon; .medium-yellow; }
+
+  // Gulp icon
+  &[data-name="GULPFILE.js"]:before,
+  &[data-name="Gulpfile.js"]:before,
+  &[data-name="gulpfile.js"]:before,
+  &[data-name="GULPFILE.coffee"]:before,
+  &[data-name="Gulpfile.coffee"]:before,
+  &[data-name="gulpfile.coffee"]:before { .gulp-icon; .medium-red; }
+
+  // Mustache icon
+  &[data-name$=".hbs"]:before,
+  &[data-name$=".mustache"]:before { .hbs-mustache-icon; .medium-orange; }
+
 }
