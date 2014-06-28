@@ -3,6 +3,11 @@
 @import "icons.less";
 @import "items.less";
 
+// Defaults
+.icon-file-text, .icon-file-directory, .icon-file-media, .icon-book {
+  &:before { text-align: center; }
+}
+
 // Github icon
 .icon-file-directory[data-name=".git"]:before { .git-icon; }
 
@@ -17,7 +22,7 @@
 // Default icon: book
 .icon-book[data-name="README.md"]:before,
 .icon-book[data-name="Readme.md"]:before,
-.icon-book[data-name="readme.md"]:before { left: -1px; .medium-blue; }
+.icon-book[data-name="readme.md"]:before { .medium-blue; }
 
 @{pane-tab-selector}, .icon-file-text {
 
