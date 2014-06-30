@@ -109,22 +109,23 @@
   &[data-name$=".py"]:before { .python-icon; .dark-yellow; }
 
   // Ruby icon
-  &[data-name$="Gemfile"]:before,
-  &[data-name$="Gemfile.lock"]:before,
   &[data-name$="Rakefile"]:before,
+  &[data-name$="Gemfile"]:before,
+  &[data-name$="Gemfile.lock"]:before  { .ruby-icon; .light-red;}
+
   &[data-name$=".gemspec"]:before,
   &[data-name=".ruby-gemset"]:before,
   &[data-name=".ruby-version"]:before { .ruby-icon; }
 
   &[data-name$=".rb"]:before,
-  &[data-name$=".opal"]:before      { .ruby-icon; .medium-red; }
+  &[data-name$=".opal"]:before      { .ruby-icon;      .medium-red; }
 
   &[data-name$="_spec.rb"]:before   { .comment-icon; .medium-green; }
 
   // Sass icon
-  &[data-name$=".sass"]:before { .sass-icon; .light-purple; }
-  &[data-name$=".scss"]:before { .sass-icon; .dark-purple; }
-  
+  &[data-name$=".sass"]:before      { .sass-icon; .medium-purple; }
+  &[data-name$=".scss"]:before      { .sass-icon;   .dark-purple; }
+
   // Scala
   &[data-name$=".scala"]:before     { .scala-icon; .medium-green; }
 
@@ -147,6 +148,25 @@
   // txt
   &[data-name$=".txt"]:before       { .medium-cyan; }
 
-  &[data-name$=".xml"]:before  { .code-icon; .medium-blue;   }
+  &[data-name$=".xml"]:before       { .code-icon; .medium-blue;   }
 
+  // Grunt icon
+  &[data-name="GRUNTFILE.js"]:before,
+  &[data-name="Gruntfile.js"]:before,
+  &[data-name="gruntfile.js"]:before,
+  &[data-name="GRUNTFILE.coffee"]:before,
+  &[data-name="Gruntfile.coffee"]:before,
+  &[data-name="gruntfile.coffee"]:before { .grunt-icon; .medium-yellow; }
+
+  // Gulp icon
+  &[data-name="GULPFILE.js"]:before,
+  &[data-name="Gulpfile.js"]:before,
+  &[data-name="gulpfile.js"]:before,
+  &[data-name="GULPFILE.coffee"]:before,
+  &[data-name="Gulpfile.coffee"]:before,
+  &[data-name="gulpfile.coffee"]:before { .gulp-icon; .medium-red; }
+
+  // Mustache icon
+  &[data-name$=".hbs"]:before,
+  &[data-name$=".mustache"]:before { .hbs-mustache-icon; .medium-orange; }
 }
