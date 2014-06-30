@@ -50,7 +50,7 @@
   // Elixir icon
   &[data-name$=".ex"]:before        { .elixir-icon;   .dark-purple; }
   &[data-name$=".exs"]:before       { .elixir-icon; .medium-purple; }
-  &[data-name$="mix.exs"]:before    { .elixir-icon;  .light-purple; }
+  &[data-name$="mix.exs"]:before    { .elixir-icon;  .medium-blue; }
   &[data-name$="mix.ex"]:before     { .elixir-icon;  .light-purple; }
 
   // Erlang icon
@@ -64,7 +64,7 @@
   &[data-name$=".haml"]:before { .html5-icon; .light-red;     }
   &[data-name$=".jade"]:before { .html5-icon; .medium-green;  }
 
-  // Gear icon
+  // Git icon
   &[data-name$=".gitignore"]:before    { .gear-icon;                 }
   &[data-name$=".editorconfig"]:before { .gear-icon; .medium-orange; }
   &[data-name$=".npmignore"]:before    { .gear-icon; .medium-green;  }
@@ -72,34 +72,15 @@
   &[data-name$=".module"]:before       { .gear-icon; .medium-blue;   }
   &[data-name$=".htaccess"]:before     { .gear-icon; .medium-red;    }
 
-  // Python icon
-  &[data-name$=".py"]:before { .python-icon; .dark-yellow; }
-
-  // Ruby icon
-  &[data-name$="Gemfile"]:before,
-  &[data-name$="Gemfile.lock"]:before,
-  &[data-name$="Rakefile"]:before,
-  &[data-name$=".gemspec"]:before,
-  &[data-name=".ruby-gemset"]:before,
-  &[data-name=".ruby-version"]:before   { .ruby-icon; }
-
-  &[data-name$=".rb"]:before,
-  &[data-name$=".opal"]:before   { .ruby-icon; .medium-red; }
-
-  &[data-name$="_spec.rb"]:before { .comment-icon; .medium-green; }
-
-  // Perl icon
-  &[data-name$=".pl"]:before { .perl-icon; .medium-purple; }
-  &[data-name$=".pm"]:before { .perl-icon; .medium-purple; }
-
-  // Java icon
-  &[data-name$=".java"]:before { .java-icon; .medium-purple; }
-
   // Go
   &[data-name$=".go"]:before { .medium-green; }
 
-  // Scala
-  &[data-name$=".scala"]:before     { .scala-icon; .medium-green; }
+  // Java icon
+  &[data-name$=".java"]:before      { .java-icon; .medium-purple; }
+
+  // Markdown (except readme.md)
+  &[data-name$=".md"]:before        { .markdown-icon; .medium-blue; }
+  &[data-name$=".markdown"]:before  { .markdown-icon; .medium-blue; }
 
   // MongoDB
   &[data-name$=".bson"]:before      { .mongodb-icon; .medium-green; }
@@ -111,23 +92,48 @@
   &[data-name$=".m"]:before         { .objc-icon; .medium-blue;   }
   &[data-name$=".swift"]:before     { .objc-icon; .medium-green;  }
 
-  &[data-name$=".cs"]:before        { .csharp-icon; .medium-blue;   }
+  &[data-name$=".cs"]:before        { .csharp-icon; .medium-blue; }
+
+  // Perl icon
+  &[data-name$=".pl"]:before { .perl-icon; .medium-purple; }
+  &[data-name$=".pm"]:before { .perl-icon; .medium-purple; }
+
+  // Python icon
+  &[data-name$=".py"]:before { .python-icon; .dark-yellow; }
+
+  // Ruby icon
+  &[data-name$="Gemfile"]:before,
+  &[data-name$="Gemfile.lock"]:before,
+  &[data-name$="Rakefile"]:before,
+  &[data-name$=".gemspec"]:before,
+  &[data-name=".ruby-gemset"]:before,
+  &[data-name=".ruby-version"]:before { .ruby-icon; }
+
+  &[data-name$=".rb"]:before,
+  &[data-name$=".opal"]:before      { .ruby-icon; .medium-red; }
+
+  &[data-name$="_spec.rb"]:before   { .comment-icon; .medium-green; }
+
+  // Scala
+  &[data-name$=".scala"]:before     { .scala-icon; .medium-green; }
 
   // Secret icon
   &[data-name$=".secret"]:before    { .secret-icon; }
 
-  // Markdown (except readme.md)
-  &[data-name$=".md"]:before        { .markdown-icon; .medium-blue;   }
-  &[data-name$=".markdown"]:before  { .markdown-icon; .medium-blue;   }
+  // shell
+  &[data-name$=".sh"]:before,
+  &[data-name=".bashrc"]:before     { .terminal-icon; .medium-purple; }
+
+  &[data-name$=".zsh"]:before,
+  &[data-name=".zshrc"]:before      { .terminal-icon; .medium-blue; }
+
+  &[data-name$=".fish"]:before,
+  &[data-name=".fishrc"]:before     { .terminal-icon; .medium-green; }
+
+  // SVG
+  &[data-name$=".svg"]:before       { .svg-icon; .medium-orange; }
 
   // txt
   &[data-name$=".txt"]:before       { .medium-cyan; }
 
-  // shell
-  &[data-name$=".sh"]:before,
-  &[data-name=".bashrc"]:before     { .terminal-icon; .medium-purple; }
-  &[data-name$=".zsh"]:before,
-  &[data-name=".zshrc"]:before      { .terminal-icon; .medium-blue; }
-  &[data-name$=".fish"]:before,
-  &[data-name=".fishrc"]:before     { .terminal-icon; .medium-green; }
 }
