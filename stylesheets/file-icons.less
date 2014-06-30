@@ -3,6 +3,10 @@
 @import "icons.less";
 @import "items.less";
 
+.icon-file-text, .icon-file-directory, .icon-file-media, .icon-book {
+  &:before { text-align: center; }
+}
+
 // Github icon
 .icon-file-directory[data-name=".git"]:before { .git-icon; }
 
@@ -17,17 +21,16 @@
 // Default icon: book
 .icon-book[data-name="README.md"]:before,
 .icon-book[data-name="Readme.md"]:before,
-.icon-book[data-name="readme.md"]:before { left: -1px; .medium-blue; }
+.icon-book[data-name="readme.md"]:before { .medium-blue; }
 
 @{pane-tab-selector}, .icon-file-text {
 
   // Checklist icon
   &[data-name$="TODO"]:before { .checklist-icon; .medium-yellow; }
 
-  // Code icon
-  &[data-name$=".js"]:before  { .code-icon; .medium-yellow; }
-  &[data-name$=".jsx"]:before  { .code-icon; .medium-green; }
-  &[data-name$=".xml"]:before { .code-icon; .medium-blue;   }
+  // Javascript icon
+  &[data-name$=".js"]:before   { .javascript-icon; .dark-yellow; }
+  &[data-name$=".jsx"]:before  { .javascript-icon; .dark-green; }
 
   // Coffee icon
   &[data-name$=".coffee"]:before    { .coffee-icon; .medium-maroon; }
@@ -35,8 +38,6 @@
 
   // CSS3 icon
   &[data-name$=".less"]:before { .css3-icon; .dark-blue; }
-  &[data-name$=".sass"]:before { .css3-icon; .light-purple; }
-  &[data-name$=".scss"]:before { .css3-icon; .dark-purple; }
   &[data-name$=".css"]:before  { .css3-icon; .medium-blue; }
 
   // Dashboard icon
@@ -50,12 +51,12 @@
   // Elixir icon
   &[data-name$=".ex"]:before        { .elixir-icon;   .dark-purple; }
   &[data-name$=".exs"]:before       { .elixir-icon; .medium-purple; }
-  &[data-name$="mix.exs"]:before    { .elixir-icon;  .medium-blue; }
+  &[data-name$="mix.exs"]:before    { .elixir-icon;   .medium-blue; }
   &[data-name$="mix.ex"]:before     { .elixir-icon;  .light-purple; }
 
   // Erlang icon
-  &[data-name$=".erl"]:before        { .erlang-icon;   .medium-red; }
-  &[data-name$=".beam"]:before       { .erlang-icon;     .dark-red; }
+  &[data-name$=".erl"]:before       { .erlang-icon;   .medium-red; }
+  &[data-name$=".beam"]:before      { .erlang-icon;     .dark-red; }
 
   // HTML5 icon
   &[data-name$=".erb"]:before  { .html5-icon; .medium-red;    }
@@ -65,18 +66,20 @@
   &[data-name$=".jade"]:before { .html5-icon; .medium-green;  }
 
   // Git icon
-  &[data-name$=".gitignore"]:before    { .gear-icon;                 }
-  &[data-name$=".editorconfig"]:before { .gear-icon; .medium-orange; }
-  &[data-name$=".npmignore"]:before    { .gear-icon; .medium-green;  }
-  &[data-name$=".jshintrc"]:before     { .gear-icon; .medium-yellow; }
-  &[data-name$=".module"]:before       { .gear-icon; .medium-blue;   }
-  &[data-name$=".htaccess"]:before     { .gear-icon; .medium-red;    }
+  &[data-name$=".gitignore"]:before     { .gear-icon;                 }
+  &[data-name$=".gitattributes"]:before { .gear-icon;                 }
+  &[data-name$=".editorconfig"]:before  { .gear-icon; .medium-orange; }
+  &[data-name$=".jshintrc"]:before      { .gear-icon; .medium-yellow; }
+  &[data-name$=".jscsrc"]:before        { .gear-icon; .medium-yellow; }
+  &[data-name$=".module"]:before        { .gear-icon; .medium-blue;   }
+  &[data-name$=".htaccess"]:before      { .gear-icon; .medium-red;    }
 
   // Go
   &[data-name$=".go"]:before { .medium-green; }
 
   // Java icon
   &[data-name$=".java"]:before      { .java-icon; .medium-purple; }
+  &[data-name$=".jsp"]:before       { .java-icon; .dark-purple; }
 
   // Markdown (except readme.md)
   &[data-name$=".md"]:before        { .markdown-icon; .medium-blue; }
@@ -84,6 +87,10 @@
 
   // MongoDB
   &[data-name$=".bson"]:before      { .mongodb-icon; .medium-green; }
+
+  // Npm icon
+  &[data-name=".npmignore"]:before       { .npm-icon; .medium-red; }
+  &[data-name="npm-debug.log"]:before    { .npm-icon; .medium-red; }
 
   // Objective-C, C++, C
   &[data-name$=".c"]:before         { .c-icon; .medium-blue;      }
@@ -135,5 +142,7 @@
 
   // txt
   &[data-name$=".txt"]:before       { .medium-cyan; }
+
+  &[data-name$=".xml"]:before  { .code-icon; .medium-blue;   }
 
 }
