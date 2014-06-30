@@ -81,7 +81,7 @@
   &[data-name$="Rakefile"]:before,
   &[data-name$=".gemspec"]:before,
   &[data-name=".ruby-gemset"]:before,
-  &[data-name=".ruby-version"]:before { .ruby-icon; }
+  &[data-name=".ruby-version"]:before   { .ruby-icon; }
 
   &[data-name$=".rb"]:before,
   &[data-name$=".opal"]:before   { .ruby-icon; .medium-red; }
@@ -99,31 +99,35 @@
   &[data-name$=".go"]:before { .medium-green; }
 
   // Scala
-  &[data-name$=".scala"]:before { .scala-icon; .medium-green; }
+  &[data-name$=".scala"]:before     { .scala-icon; .medium-green; }
+
+  // MongoDB
+  &[data-name$=".bson"]:before      { .mongodb-icon; .medium-green; }
 
   // Objective-C, C++, C
-  &[data-name$=".c"]:before   { .c-icon; .medium-blue;   }
-  &[data-name$=".h"]:before   { .medium-purple; }
-  &[data-name$=".cpp"]:before { .cpp-icon; .medium-blue;   }
-  &[data-name$=".m"]:before   { .objc-icon; .medium-blue;   }
-  &[data-name$=".swift"]:before   { .objc-icon; .medium-green;   }
+  &[data-name$=".c"]:before         { .c-icon; .medium-blue;      }
+  &[data-name$=".h"]:before         { .medium-purple;             }
+  &[data-name$=".cpp"]:before       { .cpp-icon; .medium-blue;    }
+  &[data-name$=".m"]:before         { .objc-icon; .medium-blue;   }
+  &[data-name$=".swift"]:before     { .objc-icon; .medium-green;  }
 
-  &[data-name$=".cs"]:before   { .csharp-icon; .medium-blue;   }
+  &[data-name$=".cs"]:before        { .csharp-icon; .medium-blue;   }
 
   // Secret icon
-  &[data-name$=".secret"]:before { .secret-icon; }
+  &[data-name$=".secret"]:before    { .secret-icon; }
 
   // Markdown (except readme.md)
-  &[data-name$=".md"]:before  { .markdown-icon; .medium-blue;   }
+  &[data-name$=".md"]:before        { .markdown-icon; .medium-blue;   }
+  &[data-name$=".markdown"]:before  { .markdown-icon; .medium-blue;   }
 
   // txt
-  &[data-name$=".txt"]:before { .medium-cyan;   }
+  &[data-name$=".txt"]:before       { .medium-cyan; }
 
   // shell
   &[data-name$=".sh"]:before,
-  &[data-name=".bashrc"]:before { .terminal-icon; .medium-purple; }
+  &[data-name=".bashrc"]:before     { .terminal-icon; .medium-purple; }
   &[data-name$=".zsh"]:before,
-  &[data-name=".zshrc"]:before { .terminal-icon; .medium-blue; }
+  &[data-name=".zshrc"]:before      { .terminal-icon; .medium-blue; }
   &[data-name$=".fish"]:before,
-  &[data-name=".fishrc"]:before  { .terminal-icon; .medium-green; }
+  &[data-name=".fishrc"]:before     { .terminal-icon; .medium-green; }
 }
