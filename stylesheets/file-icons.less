@@ -3,6 +3,7 @@
 @import "icons.less";
 @import "items.less";
 
+// Defaults
 .icon-file-text, .icon-file-directory, .icon-file-media, .icon-book {
   &:before { text-align: center; }
 }
@@ -74,36 +75,13 @@
   &[data-name$=".module"]:before        { .gear-icon; .medium-blue;   }
   &[data-name$=".htaccess"]:before      { .gear-icon; .medium-red;    }
 
-  // Go
-  &[data-name$=".go"]:before { .medium-green; }
-
-  // Java icon
-  &[data-name$=".java"]:before      { .java-icon; .medium-purple; }
-  &[data-name$=".jsp"]:before       { .java-icon; .dark-purple; }
-
-  // Markdown (except readme.md)
-  &[data-name$=".md"]:before        { .markdown-icon; .medium-blue; }
-  &[data-name$=".markdown"]:before  { .markdown-icon; .medium-blue; }
-
-  // MongoDB
-  &[data-name$=".bson"]:before      { .mongodb-icon; .medium-green; }
-
   // Npm icon
   &[data-name=".npmignore"]:before       { .npm-icon; .medium-red; }
   &[data-name="npm-debug.log"]:before    { .npm-icon; .medium-red; }
 
-  // Objective-C, C++, C
-  &[data-name$=".c"]:before         { .c-icon; .medium-blue;      }
-  &[data-name$=".h"]:before         { .medium-purple;             }
-  &[data-name$=".cpp"]:before       { .cpp-icon; .medium-blue;    }
-  &[data-name$=".m"]:before         { .objc-icon; .medium-blue;   }
-  &[data-name$=".swift"]:before     { .objc-icon; .medium-green;  }
-
-  &[data-name$=".cs"]:before        { .csharp-icon; .medium-blue; }
-
-  // Perl icon
-  &[data-name$=".pl"]:before { .perl-icon; .medium-purple; }
-  &[data-name$=".pm"]:before { .perl-icon;   .dark-purple; }
+  // Sass icon
+  &[data-name$=".sass"]:before { .sass-icon; .light-purple; }
+  &[data-name$=".scss"]:before { .sass-icon; .dark-purple; }
 
   // Python icon
   &[data-name$=".py"]:before { .python-icon; .dark-yellow; }
@@ -112,6 +90,8 @@
   &[data-name$="Rakefile"]:before,
   &[data-name$="Gemfile"]:before,
   &[data-name$="Gemfile.lock"]:before  { .ruby-icon; .light-red;}
+ 
+  &[data-name$="Guardfile"]:before,    { .ruby-icon; .medium-purple;}
 
   &[data-name$=".gemspec"]:before,
   &[data-name=".ruby-gemset"]:before,
