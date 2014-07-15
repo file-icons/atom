@@ -71,6 +71,11 @@
   &[data-name$=".jade"]:before { .html5-icon; .medium-green;  }
   &[data-name$=".jsp"]:before  { .html5-icon; .medium-purple; }
   &[data-name$=".ctp"]:before  { .html5-icon; .medium-blue;   }
+  &[data-name$=".ejs"]:before  { .html5-icon; .medium-green; }
+
+  // Mustache icon
+  &[data-name$=".hbs"]:before,
+  &[data-name$=".mustache"]:before { .hbs-mustache-icon; .medium-orange; }
 
   // Gear icon
   &[data-name$=".gitignore"]:before     { .gear-icon;                 }
@@ -166,9 +171,4 @@
   &[data-name="GULPFILE.coffee"]:before,
   &[data-name="Gulpfile.coffee"]:before,
   &[data-name="gulpfile.coffee"]:before { .gulp-icon; .medium-maroon; }
-
-  // Mustache icon
-  &[data-name$=".hbs"]:before,
-  &[data-name$=".mustache"]:before { .hbs-mustache-icon; .medium-orange; }
-
 }
