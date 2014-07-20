@@ -7,7 +7,27 @@ Adds file specific icons to atom for improved visual grepping. Works with Tree V
 A number of icons and colours are provied by default for a range of common file types.
 If you have file that you would like custom icons for you can easily add this yourself.
 
-File Icons are now specified via css only.
+File Icons are now specified via css(less) only.
+
+## No Colours
+
+You can remove the colours from this package if you want icons only
+
+Just add this line below to your user stylesheet
+
+```css
+@import "packages/file-icons/stylesheets/features/no-colours";
+```
+
+## Unity Theme
+
+By default the Unity theme hides icons
+
+Just add this line below to your user stylesheet to show them
+
+```css
+@import "packages/file-icons/stylesheets/features/force-show-icons";
+```
 
 # Customisation
 
@@ -19,14 +39,20 @@ The following css can be added to your user stylesheet to customise files with t
 ```
 
 ```css
-.icon-file-text[data-name$=".rb"]          { .medium-red;             } // Colours icon and filename
-.icon-file-text[data-name$=".rb"]:before   { .ruby-icon; .medium-red; } // Colours icon only
-.icon-file-text[data-name$=".rb"]:before   { .ruby-icon; .medium-red; } // Colours icon only
+@import "packages/file-icons/stylesheets/items";
+@{pane-tab-selector}, .icon-file-text {
+  &[data-name$=".rb"]          { .medium-red;             } // Colours icon and filename
+  &[data-name$=".rb"]:before   { .ruby-icon; .medium-red; } // Colours icon only
+  &[data-name$=".rb"]:before   { .ruby-icon; .medium-red; } // Colours icon only
+}
 ```
 
 Folders
 ```css
-.icon-file-directory[data-name=".git"]:before { .git-icon; }
+@import "packages/file-icons/stylesheets/items";
+@{pane-tab-selector}, .icon-file-directory {
+  &[data-name=".git"]:before { .git-icon; }
+}
 ```
 
 ## Icons
@@ -36,7 +62,12 @@ Icons are located at `./stylesheets/icons.less`. You can create a custom CSS cla
 .ruby-icon { content: "\f047"; }
 ```
 
-Some custom fonts are already provided, such as [FontAwesome](http://fortawesome.github.io/Font-Awesome/)(`.fa`) and [FontMfizz](http://mfizz.com/oss/font-mfizz)(`.mf`), you just have to provide its class.
+## Fonts
+Some custom fonts are already provided
+* [FontAwesome](http://fortawesome.github.io/Font-Awesome/)(`.fa`)
+* [FontMfizz](http://mfizz.com/oss/font-mfizz)(`.mf`)
+* [Icomoon](http://icomoon.io)(`.iconmoon`)
+* [Devicons](http://vorillaz.github.io/devicons/)(`.devicons`)
 
 ```css
 .coffee-icon { .fa; content: "\f0f4"; }
@@ -58,5 +89,6 @@ Medium is colour provided by Base16. Light is medium lightened 15%. Dark is medi
 ```
 
 # Acknowledgments
+
 Wouldn't have even tried to make this if it weren't for [sommerper/filetype-color](https://github.com/sommerper/filetype-color)
 Also thanks to all the [contributors](https://github.com/DanBrooker/file-icons/graphs/contributors).
