@@ -68,7 +68,18 @@
 .devicons { font-family: "devicons"; font-size: large; text-align: center; top: 3px; }
 
 .bower-icon         { .devicons; content: "\e64d"; }
-.go-icon            { /*.devicons; content: "\e624"; Too light */ }
+
+.go-icon            {
+  .devicons;
+  content: "\e624";
+  font-weight: bolder;
+  top: 4px;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 0.85px;
+  -webkit-transform: scale(1.15, 1.10);
+}
+
 // .coffee-icon        { .devicons; content: "\e651"; }
 .swift-icon         { .devicons; content: "\e655"; font-size: large; }
 // .npm-icon           { .devicons; content: "\e616"; }
