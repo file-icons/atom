@@ -16,7 +16,7 @@ You can remove the colours from this package if you want icons only
 Just add this line below to your user stylesheet
 
 ```css
-@import "packages/file-icons/stylesheets/features/no-colours";
+@import "packages/file-icons/features/no-colours";
 ```
 
 ## Unity Theme
@@ -26,7 +26,7 @@ By default the Unity theme hides icons
 Just add this line below to your user stylesheet to show them
 
 ```css
-@import "packages/file-icons/stylesheets/features/force-show-icons";
+@import "packages/file-icons/features/force-show-icons";
 ```
 
 # Customisation
