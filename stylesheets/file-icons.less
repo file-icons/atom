@@ -28,6 +28,8 @@
 
 @{pane-tab-selector}, .icon-file-text {
 
+  &:before { .text-icon; }
+
   // Checklist icon
   &[data-name$="TODO"]:before { .checklist-icon; .medium-yellow; }
 
@@ -227,4 +229,9 @@
   &[data-name="README.md"]:before,
   &[data-name="Readme.md"]:before,
   &[data-name="readme.md"]:before { .book-icon; .medium-blue; }
+
+  // Images
+  &[data-name$=".png"]:before { .image-icon; .medium-orange; }
+  &[data-name$=".gif"]:before { .image-icon; .medium-yellow; }
+  &[data-name$=".jpg"]:before { .image-icon; .medium-green;  }
 }
