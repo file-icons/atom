@@ -37,15 +37,6 @@
   &[data-name$=".xml"]:before { .code-icon; .medium-blue;   }
   &[data-name$=".jl"]:before { .code-icon; .medium-purple;   }
 
-  // JavaScript icon
-  &[data-name$=".js"]:before  { .js-icon; .medium-yellow; }
-  &[data-name$=".jsx"]:before { .js-icon; .medium-green; }
-  &[data-name$=".ts"]:before  { .js-icon; .medium-purple; }
-
-  // Coffee icon
-  &[data-name$=".coffee"]:before    { .coffee-icon; .medium-maroon; }
-  &[data-name$=".litcoffee"]:before { .coffee-icon; .light-maroon;  }
-
   // CSS3 icon
   &[data-name$=".less"]:before { .css3-icon; .dark-blue; }
   &[data-name$=".css"]:before  { .css3-icon; .medium-blue; }
@@ -72,7 +63,6 @@
   &[data-name$=".beam"]:before       { .erlang-icon;     .dark-red; }
 
   // HTML5 icon
-  &[data-name$=".erb"]:before  { .html5-icon; .medium-red;    }
   &[data-name$=".html"]:before { .html5-icon; .medium-orange; }
   &[data-name$=".haml"]:before { .html5-icon; .light-red;     }
   &[data-name$=".jade"]:before { .html5-icon; .medium-green;  }
@@ -127,11 +117,28 @@
   &[data-name=".ruby-version"]:before { .ruby-icon; }
 
   &[data-name$=".rb"]:before,
+  &[data-name$=".erb"]:before,
   &[data-name$=".opal"]:before   { .ruby-icon; .medium-red; }
 
   &[data-name$="_spec.rb"]:before { .comment-icon; .medium-green; }
 
   &[data-name$=".pp"]:before { .puppet-icon; .medium-purple }
+
+
+  // JavaScript icon
+  &[data-name$=".js"]:before  { .js-icon; .medium-yellow; }
+  &[data-name$=".jsx"]:before { .js-icon; .medium-green; }
+  &[data-name$=".ts"]:before  { .js-icon; .medium-purple; }
+
+  // Coffee icon
+  &[data-name$=".coffee"]:before    { .coffee-icon; .medium-maroon; }
+  &[data-name$=".litcoffee"]:before { .coffee-icon; .light-maroon;  }
+
+
+  // ERB combinations
+  &[data-name$=".js.erb"]:before     { .js-icon;     .medium-red; }
+  &[data-name$=".coffee.erb"]:before { .coffee-icon; .medium-red; }
+  &[data-name$=".html.erb"]:before   { .html5-icon;  .medium-red; }
 
   // Perl icon
   &[data-name$=".pl"]:before { .perl-icon; .medium-blue; }
