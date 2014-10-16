@@ -242,3 +242,15 @@
   &[data-name$=".gif"]:before { .image-icon; .medium-yellow; }
   &[data-name$=".jpg"]:before { .image-icon; .medium-green;  }
 }
+
+body.file-icons-colourless {
+  .icon-file-text, .icon-file-directory, .icon-file-media, .icon-book, .pane ul.tab-bar li.tab .title {
+    &:before { color: inherit !important; }
+  }
+}
+
+body.file-icons-force-show-icons {
+  .tree-view .entry > .header > .name:before, .tree-view .entry > .name:before {
+    display: inherit;
+  }
+}
