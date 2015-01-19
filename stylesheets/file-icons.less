@@ -32,13 +32,21 @@
 
   // Checklist icon
   &[data-name$="TODO"]:before { .checklist-icon; .medium-yellow; }
-
+  
+  //Makefile icon
+  &[data-name$="Makefile"]:before { .checklist-icon; .medium-yellow; }
+  &[data-name$="makefile"]:before { .checklist-icon; .medium-yellow; }
+  &[data-name$=".mk"]:before { .checklist-icon; .medium-yellow; }
+  &[data-name$=".mak"]:before { .checklist-icon; .medium-yellow; }
   // Clojure
   &[data-name$=".clj"]:before,
   &[data-name$=".cljs"]:before { .clojure-icon; .medium-blue; }
 
   // Code icon
   &[data-name$=".xml"]:before { .code-icon; .medium-blue;   }
+  ///app.exe.config and manifest format is xml.
+  &[data-name$=".config"]:before { .code-icon; .medium-blue;   }
+  &[data-name$=".manifest"]:before { .code-icon; .medium-blue;   }
   &[data-name$=".jl"]:before { .code-icon; .medium-purple;   }
   &[data-name$=".cfc"]:before { .code-icon; .light-cyan; }
   &[data-name$=".cfm"]:before { .code-icon; .medium-cyan; }
