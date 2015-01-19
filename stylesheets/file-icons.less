@@ -33,9 +33,16 @@
   // Checklist icon
   &[data-name$="TODO"]:before { .checklist-icon; .medium-yellow; }
 
+  // Clojure
+  &[data-name$=".clj"]:before,
+  &[data-name$=".cljs"]:before { .clojure-icon; .medium-blue; }
+
   // Code icon
   &[data-name$=".xml"]:before { .code-icon; .medium-blue;   }
   &[data-name$=".jl"]:before { .code-icon; .medium-purple;   }
+  &[data-name$=".cfc"]:before { .code-icon; .light-cyan; }
+  &[data-name$=".cfm"]:before { .code-icon; .medium-cyan; }
+  &[data-name$=".cfml"]:before { .code-icon; .medium-cyan; }
 
   // CSS3 icon
   &[data-name$=".less"]:before { .css3-icon; .dark-blue; }
@@ -115,21 +122,29 @@
   &[data-name$=".py"]:before { .python-icon; .dark-yellow; }
 
   // Ruby icon
+  &[data-name="Capfile"]:before,
   &[data-name$="Gemfile"]:before,
   &[data-name$="Gemfile.lock"]:before,
+  &[data-name="Guardfile"]:before,
   &[data-name$="Rakefile"]:before,
   &[data-name$=".gemspec"]:before,
   &[data-name=".ruby-gemset"]:before,
-  &[data-name=".ruby-version"]:before { .ruby-icon; }
+  &[data-name=".ruby-version"]:before,
+  &[data-name=".rspec"]:before { .ruby-icon; }
 
   &[data-name$=".rb"]:before,
+  &[data-name$=".ru"]:before,
   &[data-name$=".erb"]:before,
   &[data-name$=".opal"]:before   { .ruby-icon; .medium-red; }
 
-  &[data-name$="_spec.rb"]:before { .comment-icon; .medium-green; }
+  &[data-name$="_spec.rb"]:before   { .ruby-icon; .light-green; }
+
+  &[data-name="rails"]:before { .rails-icon; .medium-red; }
 
   &[data-name$=".pp"]:before { .puppet-icon; .medium-purple }
 
+  // Cucumber (Gherkin) icon
+  &[data-name$=".feature"]:before { .comment-icon; .medium-green; }
 
   // JavaScript icon
   &[data-name$=".js"]:before  { .js-icon; .medium-yellow; }
@@ -175,6 +190,10 @@
 
   // Haskell
   &[data-name$=".hs"]:before { .haskell-icon; .medium-purple; }
+
+  // Rust
+  &[data-name$=".rs"]:before   { .rust-icon; .medium-maroon; }
+  &[data-name$=".rlib"]:before { .rust-icon; .light-maroon; }
 
   // Objective-C, C++, C
   &[data-name$=".c"]:before       { .c-icon; .medium-blue; }
@@ -266,7 +285,7 @@
 }
 
 body.file-icons-colourless {
-  .icon-file-text, .icon-file-directory, .icon-file-media, .icon-book, .pane ul.tab-bar li.tab .title {
+  .icon-file-text, .icon-file-directory, .icon-file-media, .icon-book, atom-pane ul.tab-bar li.tab .title {
     &:before { color: inherit !important; }
   }
 }
