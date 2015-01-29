@@ -2,7 +2,6 @@
 
 Adds file specific icons to atom for improved visual grepping. Works with Tree View and Fuzzy Finder and Tabs.
 
-*New Settings*
 
 ![Screenshot](https://raw.githubusercontent.com/DanBrooker/file-icons/master/file-icons.png)
 
@@ -13,23 +12,11 @@ File Icons are now specified via css(less) only.
 
 ## No Colours
 
-*Colourless icons is now a setting in the atom preferences*
-
-You can now remove this from your user stylesheet
-```css
-@import "packages/file-icons/features/no-colours";
-```
+Disable colours in the settings
 
 ## Unity Theme
 
-By default the Unity theme hides icons
-
-*Force show icons is now a setting in the atom preferences*
-
-You can now remove this from your user stylesheet
-```css
-@import "packages/file-icons/features/force-show-icons";
-```
+By default the Unity theme hides icons, you can force to show the icons in the settings
 
 # Customisation
 
