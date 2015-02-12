@@ -247,6 +247,12 @@
 
   // txt
   &[data-name$=".txt"]:before { .medium-cyan;   }
+  
+  // Assembly and binary
+  &[data-name$=".o"]:before,
+  &[data-name$=".out"]:before,
+  &[data-name$=".s"]:before,
+  &[data-name$=".asm"]:before { .binary-icon; .medium-red; }
 
   // shell
   &[data-name$=".sh"]:before,
