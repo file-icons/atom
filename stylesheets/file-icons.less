@@ -79,12 +79,12 @@
 
   // HTML5 icon
   &[data-name$=".html"]:before { .html5-icon; .medium-orange; }
-  &[data-name$=".shtml"]:before { .html5-icon; .medium-cyan; }
-  &[data-name$=".haml"]:before { .html5-icon; .light-red;     }
+  &[data-name$=".shtml"]:before { .html5-icon; .medium-cyan;  }
+  &[data-name$=".haml"]:before { .haml-icon; .medium-yellow;  }
   &[data-name$=".jade"]:before { .html5-icon; .medium-green;  }
   &[data-name$=".jsp"]:before  { .html5-icon; .medium-purple; }
   &[data-name$=".ctp"]:before  { .html5-icon; .medium-blue;   }
-  &[data-name$=".ejs"]:before  { .html5-icon; .medium-green; }
+  &[data-name$=".ejs"]:before  { .html5-icon; .medium-green;  }
 
   // Mustache icon
   &[data-name$=".hbs"]:before,
@@ -275,6 +275,9 @@
   &[data-name="GULPFILE.coffee"]:before,
   &[data-name="Gulpfile.coffee"]:before,
   &[data-name="gulpfile.coffee"]:before { .gulp-icon; .medium-maroon; }
+
+  // Ionic icon
+  &[data-name="ionic.project"]:before { .ionic-icon; .medium-blue; }
 
   // Travis icon
   &[data-name^=".travis"]:before { .travis-icon; .medium-red; }
