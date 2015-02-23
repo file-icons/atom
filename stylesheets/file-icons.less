@@ -247,7 +247,7 @@
 
   // txt
   &[data-name$=".txt"]:before { .medium-cyan;   }
-  
+
   // Assembly and binary
   &[data-name$=".o"]:before,
   &[data-name$=".out"]:before,
@@ -285,6 +285,9 @@
   // Ionic icon
   &[data-name="ionic.project"]:before { .ionic-icon; .medium-blue; }
 
+  // NGINX icon
+  &[data-name$=".conf"]:before { .nginx-icon; .dark-green; }
+
   // Travis icon
   &[data-name^=".travis"]:before { .travis-icon; .medium-red; }
 
@@ -312,7 +315,7 @@
   &[data-name$=".png"]:before { .image-icon; .medium-orange; }
   &[data-name$=".gif"]:before { .image-icon; .medium-yellow; }
   &[data-name$=".jpg"]:before { .image-icon; .medium-green;  }
-  
+
   // Config files
   &[data-name$=".ini"]:before { .config-icon; .medium-yellow; }
   &[data-name$=".properties"]:before { .config-icon; .medium-purple; }
