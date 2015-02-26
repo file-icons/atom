@@ -3,11 +3,11 @@ module.exports =
     coloured:
       type: 'boolean'
       default: true
-      description: "Untick this for colourless icons"
+      description: 'Untick this for colourless icons'
     forceShow:
       type: 'boolean'
       default: false
-      description: "Force show icons - for themes that hide icons"
+      description: 'Force show icons - for themes that hide icons'
   activate: (state) ->
     self = @
     atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) ->
