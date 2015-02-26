@@ -12,6 +12,7 @@ module.exports =
       type: 'boolean'
       default: false
       description: 'Only colour icons when file is modified'
+
   activate: (state) ->
     atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) =>
       @colour newValue
@@ -25,16 +26,20 @@ module.exports =
       @onChanges newValue
     @onChanges atom.config.get 'file-icons.onChanges'
     # console.log 'activate'
+
   deactivate: ->
     # console.log 'deactivate'
+
   serialize: ->
     # console.log 'serialize'
+
   colour: (enable) ->
     body = document.querySelector 'body'
     if enable
       body.className = body.className.replace /\sfile-icons-colourless/, ''
     else
       body.className = "#{body.className} file-icons-colourless"
+
   forceShow: (enable) ->
     body = document.querySelector 'body'
     className = body.className
@@ -42,6 +47,7 @@ module.exports =
       body.className = "#{className} file-icons-force-show-icons"
     else
       body.className = className.replace /\sfile-icons-force-show-icons/, ''
+
   onChanges: (enable) ->
     body = document.querySelector 'body'
     className = body.className
