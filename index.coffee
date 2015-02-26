@@ -8,6 +8,10 @@ module.exports =
       type: 'boolean'
       default: false
       description: 'Force show icons - for themes that hide icons'
+    onChanges:
+      type: 'boolean'
+      default: false
+      description: 'Only colour icons when file is modified'
   activate: (state) ->
     self = @
     atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) ->
@@ -17,6 +21,10 @@ module.exports =
     atom.config.onDidChange 'file-icons.forceShow', ({newValue, oldValue}) ->
       self.forceShow(newValue)
     @forceShow(atom.config.get('file-icons.forceShow'))
+
+    atom.config.onDidChange 'file-icons.onChanges', ({newValue, oldValue}) ->
+      self.onChanges(newValue)
+    @onChanges(atom.config.get('file-icons.onChanges'))
     # console.log 'activate'
   deactivate: ->
     # console.log 'deactivate'
@@ -35,3 +43,10 @@ module.exports =
       body.className = "#{className} file-icons-force-show-icons"
     else
       body.className = className.replace /\sfile-icons-force-show-icons/, ''
+  onChanges: (enable) ->
+    body = document.querySelector('body')
+    className = body.className
+    if enable
+      body.className = "#{className} file-icons-on-changes"
+    else
+      body.className = className.replace /\sfile-icons-on-changes/, ''
