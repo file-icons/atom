@@ -13,18 +13,17 @@ module.exports =
       default: false
       description: 'Only colour icons when file is modified'
   activate: (state) ->
-    self = @
-    atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) ->
-      self.colour(newValue)
-    @colour(atom.config.get('file-icons.coloured'))
+    atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) =>
+      @colour newValue
+    @colour atom.config.get('file-icons.coloured')
 
-    atom.config.onDidChange 'file-icons.forceShow', ({newValue, oldValue}) ->
-      self.forceShow(newValue)
-    @forceShow(atom.config.get('file-icons.forceShow'))
+    atom.config.onDidChange 'file-icons.forceShow', ({newValue, oldValue}) =>
+      @forceShow newValue
+    @forceShow atom.config.get('file-icons.forceShow')
 
-    atom.config.onDidChange 'file-icons.onChanges', ({newValue, oldValue}) ->
-      self.onChanges(newValue)
-    @onChanges(atom.config.get('file-icons.onChanges'))
+    atom.config.onDidChange 'file-icons.onChanges', ({newValue, oldValue}) =>
+      @onChanges newValue
+    @onChanges atom.config.get('file-icons.onChanges')
     # console.log 'activate'
   deactivate: ->
     # console.log 'deactivate'
