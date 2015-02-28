@@ -336,3 +336,11 @@ body.file-icons-force-show-icons {
     display: inherit;
   }
 }
+
+body.file-icons-on-changes {
+  .file.entry.list-item:not(.status-modified) {
+    .name.icon:before {
+      color: inherit !important;
+    }
+  }
+}
