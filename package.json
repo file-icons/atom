@@ -1,7 +1,7 @@
 {
   "name": "file-icons",
   "main": "index",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "private": true,
   "description": "Assign file extension icons and colours for improved visual grepping",
   "repository": {
