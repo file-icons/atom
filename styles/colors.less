@@ -49,6 +49,11 @@
 @lc: lighten(@mc, 15%);
 @dc: darken(@mc, 15%);
 
+// Pink colors
+@mpk: #ff00cc;
+@lpk: lighten(@mpk, 15%);
+@dpk: darken(@mpk, 15%);
+
 .light-red when (@colored-icons) { color: @lr; }
 .medium-red when (@colored-icons) { color: @mr; }
 .dark-red when (@colored-icons) { color: @dr; }
@@ -80,3 +85,7 @@
 .light-cyan when (@colored-icons) { color: @lc; }
 .medium-cyan when (@colored-icons) { color: @mc; }
 .dark-cyan when (@colored-icons) { color: @dc; }
+
+.light-pink when (@colored-icons) { color: @lpk; }
+.medium-pink when (@colored-icons) { color: @mpk; }
+.dark-pink when (@colored-icons) { color: @dpk; }
