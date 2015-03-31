@@ -345,6 +345,14 @@
   &[data-name$=".ini"]:before { .config-icon; .medium-yellow; }
   &[data-name$=".properties"]:before { .config-icon; .medium-purple; }
   &[data-name$=".toml"]:before { .config-icon; .dark-maroon; }
+
+  // Windows specific Files
+  &[data-name$=".bat"]:before { .windows-icon; .medium-purple;}
+  &[data-name$=".cmd"]:before { .windows-icon; .medium-purple;}
+  &[data-name$=".exe"]:before { .windows-icon; }
+  &[data-name$=".com"]:before { .windows-icon; }
+  &[data-name$=".reg"]:before { .windows-icon; .medium-blue;}
+
 }
 
 body.file-icons-colourless {
