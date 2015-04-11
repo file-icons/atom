@@ -28,7 +28,10 @@
 
 @{pane-tab-selector}, .icon-file-text {
 
-  &:before { .text-icon; }
+  &:before {
+    .text-icon;
+    font-style: normal !important;
+  }
 
   // Checklist icon
   &[data-name$="TODO"]:before { .checklist-icon; .medium-yellow; }
