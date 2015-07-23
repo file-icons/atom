@@ -12,6 +12,10 @@ module.exports =
       type: 'boolean'
       default: false
       description: 'Only colour icons when file is modified'
+    tabPaneIcon:
+      type: 'boolean'
+      default: true
+      description: 'Show file icons on tab pane'
 
   activate: (state) ->
     atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) =>
@@ -25,6 +29,10 @@ module.exports =
     atom.config.onDidChange 'file-icons.onChanges', ({newValue, oldValue}) =>
       @onChanges newValue
     @onChanges atom.config.get 'file-icons.onChanges'
+
+    atom.config.onDidChange 'file-icons.tabPaneIcon', ({newValue, oldValue}) =>
+      @tabPaneIcon newValue
+    @tabPaneIcon atom.config.get 'file-icons.tabPaneIcon'
     # console.log 'activate'
 
   deactivate: ->
@@ -55,3 +63,11 @@ module.exports =
       body.className = "#{className} file-icons-on-changes"
     else
       body.className = className.replace /\sfile-icons-on-changes/, ''
+
+  tabPaneIcon: (enable) ->
+    body = document.querySelector 'body'
+    className = body.className
+    if enable
+      body.className = "#{className} file-icons-tab-pane-icon"
+    else
+      body.className = className.replace /\sfile-icons-tab-pane-icon/, ''
