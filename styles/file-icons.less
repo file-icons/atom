@@ -41,6 +41,12 @@
   &[data-name$="makefile"]:before { .checklist-icon; .medium-yellow; }
   &[data-name$=".mk"]:before { .checklist-icon; .medium-yellow; }
   &[data-name$=".mak"]:before { .checklist-icon; .medium-yellow; }
+  
+  // Config files
+  &[data-name$=".ini"]:before { .config-icon; .medium-yellow; }
+  &[data-name$=".properties"]:before { .config-icon; .medium-purple; }
+  &[data-name$=".toml"]:before { .config-icon; .medium-green; }
+  
   // Clojure
   &[data-name$=".clj"]:before,
   &[data-name$=".cljs"]:before { .clojure-icon; .medium-blue; }
@@ -244,11 +250,6 @@
   &[data-name$=".rs"]:before   { .rust-icon; .medium-maroon; }
   &[data-name$=".rlib"]:before { .rust-icon; .light-maroon; }
 
-  //Cargo
-  &[data-name$="Cargo.toml"]:before { .package-icon; .light-orange; }
-  &[data-name$="Cargo.lock"]:before { .package-icon; .dark-orange; }
-
-
   // Objective-C, C++, C
   &[data-name$=".c"]:before       { .c-icon; .medium-blue; }
   &[data-name$=".h"]:before       { .c-icon; .medium-purple; }
@@ -332,6 +333,10 @@
   &[data-name="GULPFILE.babel.js"]:before,
   &[data-name="Gulpfile.babel.js"]:before,
   &[data-name="gulpfile.babel.js"]:before  { .gulp-icon; .medium-red; }
+  
+  //Cargo
+  &[data-name$="Cargo.toml"]:before { .package-icon; .light-orange; }
+  &[data-name$="Cargo.lock"]:before { .package-icon; .dark-orange; }
 
   // Ionic icon
   &[data-name="ionic.project"]:before { .ionic-icon; .medium-blue; }
@@ -366,12 +371,6 @@
   &[data-name$=".png"]:before { .image-icon; .medium-orange; }
   &[data-name$=".gif"]:before { .image-icon; .medium-yellow; }
   &[data-name$=".jpg"]:before { .image-icon; .medium-green;  }
-
-  // Config files
-  &[data-name$=".ini"]:before { .config-icon; .medium-yellow; }
-  &[data-name$=".properties"]:before { .config-icon; .medium-purple; }
-  &[data-name$=".toml"]:before { .config-icon; .dark-maroon; }
-
 
   // Windows specific Files
   &[data-name$=".bat"]:before { .windows-icon; .medium-purple;}
