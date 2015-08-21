@@ -6,17 +6,24 @@
 // but not colorize them.
 @colored-icons: true;
 
-.medium-dynamic-color(@color) {
+.modify-color(@color) {
   // There are probably better ways to determine suitable colors...
-  color: contrast(@tree-view-background-color, @color, saturate(multiply(@color, #666), 100%) );
+  @modified-color: saturate(multiply(@color, #666), 100%);
+}
+
+.medium-dynamic-color(@color) {
+  .modify-color(@color);
+  color: contrast(@tree-view-background-color, @color, @modified-color);
 }
 
 .light-dynamic-color(@color) {
-  color: lighten(contrast(@tree-view-background-color, @color, saturate(multiply(@color, #666), 100%)), 15%);
+  .modify-color(@color);
+  color: lighten(contrast(@tree-view-background-color, @color, @modified-color), 15%);
 }
 
 .dark-dynamic-color(@color) {
-  color: darken(contrast(@tree-view-background-color, @color, saturate(multiply(@color, #666), 100%)), 15%);
+  .modify-color(@color);
+  color: darken(contrast(@tree-view-background-color, @color, @modified-color), 15%);
 }
 
 /* @m<x> = .medium-<x>
