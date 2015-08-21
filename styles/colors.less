@@ -1,8 +1,23 @@
+@import "ui-variables";
+
 // Base16 Colors from https://github.com/chriskempson/base16
 
 // Easy config for when user wants to display different icons,
 // but not colorize them.
 @colored-icons: true;
+
+.medium-dynamic-color(@color) {
+  // There are probably better ways to determine suitable colors...
+  color: contrast(@tree-view-background-color, @color, saturate(multiply(@color, #666), 100%) );
+}
+
+.light-dynamic-color(@color) {
+  color: lighten(contrast(@tree-view-background-color, @color, saturate(multiply(@color, #666), 100%)), 15%);
+}
+
+.dark-dynamic-color(@color) {
+  color: darken(contrast(@tree-view-background-color, @color, saturate(multiply(@color, #666), 100%)), 15%);
+}
 
 /* @m<x> = .medium-<x>
  * @l<x> = .light-<x> (<x> ligthened 15%)
@@ -11,81 +26,63 @@
 
 // Red Colors
 @mr: #AC4142;
-@lr: lighten(@mr, 15%);
-@dr: darken(@mr, 15%);
 
 // Green colors
 @mg: #90A959;
-@lg: lighten(@mg, 15%);
-@dg: darken(@mg, 15%);
 
 // Yellow colors
 @my: #F4BF75;
-@ly: lighten(@my, 15%);
-@dy: darken(@my, 15%);
 
 // Blue colors
 @mb: #6A9FB5;
-@lb: lighten(@mb, 15%);
-@db: darken(@mb, 15%);
 
 // Maroon colors
 @mm: #8F5536;
-@lm: lighten(@mm, 15%);
-@dm: darken(@mm, 15%);
 
 // Purple colors
 @mp: #AA759F;
-@lp: lighten(@mp, 15%);
-@dp: darken(@mp, 15%);
 
 // Orange colors
 @mo: #D28445;
-@lo: lighten(@mo, 15%);
-@do: darken(@mo, 15%);
 
 // Cyan colors
 @mc: #75B5AA;
-@lc: lighten(@mc, 15%);
-@dc: darken(@mc, 15%);
 
 // Pink colors
 @mpk: #ff00cc;
-@lpk: lighten(@mpk, 15%);
-@dpk: darken(@mpk, 15%);
 
-.light-red when (@colored-icons) { color: @lr; }
-.medium-red when (@colored-icons) { color: @mr; }
-.dark-red when (@colored-icons) { color: @dr; }
+.light-red when (@colored-icons) { .light-dynamic-color(@mr) }
+.medium-red when (@colored-icons) { .medium-dynamic-color(@mr) }
+.dark-red when (@colored-icons) { .dark-dynamic-color(@mr) }
 
-.light-green when (@colored-icons) { color: @lg; }
-.medium-green when (@colored-icons) { color: @mg; }
-.dark-green when (@colored-icons) { color: @dg; }
+.light-green when (@colored-icons) { .light-dynamic-color(@mg) }
+.medium-green when (@colored-icons) { .medium-dynamic-color(@mg) }
+.dark-green when (@colored-icons) { .dark-dynamic-color(@mg) }
 
-.light-yellow when (@colored-icons) { color: @ly; }
-.medium-yellow when (@colored-icons) { color: @my; }
-.dark-yellow when (@colored-icons) { color: @dy; }
+.light-yellow when (@colored-icons) { .light-dynamic-color(@my) }
+.medium-yellow when (@colored-icons) { .medium-dynamic-color(@my) }
+.dark-yellow when (@colored-icons) { .dark-dynamic-color(@my) }
 
-.light-blue when (@colored-icons) { color: @lb; }
-.medium-blue when (@colored-icons) { color: @mb; }
-.dark-blue when (@colored-icons) { color: @db; }
+.light-blue when (@colored-icons) { .light-dynamic-color(@mb) }
+.medium-blue when (@colored-icons) { .medium-dynamic-color(@mb) }
+.dark-blue when (@colored-icons) { .dark-dynamic-color(@mb) }
 
-.light-maroon when (@colored-icons) { color: @lm; }
-.medium-maroon when (@colored-icons) { color: @mm; }
-.dark-maroon when (@colored-icons) { color: @dm; }
+.light-maroon when (@colored-icons) { .light-dynamic-color(@mm) }
+.medium-maroon when (@colored-icons) { .medium-dynamic-color(@mm) }
+.dark-maroon when (@colored-icons) { .dark-dynamic-color(@mm) }
 
-.light-purple when (@colored-icons) { color: @lp; }
-.medium-purple when (@colored-icons) { color: @mp; }
-.dark-purple when (@colored-icons) { color: @dp; }
+.light-purple when (@colored-icons) { .light-dynamic-color(@mp) }
+.medium-purple when (@colored-icons) { .medium-dynamic-color(@mp) }
+.dark-purple when (@colored-icons) { .dark-dynamic-color(@mp) }
 
-.light-orange when (@colored-icons) { color: @lo; }
-.medium-orange when (@colored-icons) { color: @mo; }
-.dark-orange when (@colored-icons) { color: @do; }
+.light-orange when (@colored-icons) { .light-dynamic-color(@mo) }
+.medium-orange when (@colored-icons) { .medium-dynamic-color(@mo) }
+.dark-orange when (@colored-icons) { .dark-dynamic-color(@mo) }
 
-.light-cyan when (@colored-icons) { color: @lc; }
-.medium-cyan when (@colored-icons) { color: @mc; }
-.dark-cyan when (@colored-icons) { color: @dc; }
+.light-cyan when (@colored-icons) { .light-dynamic-color(@mc) }
+.medium-cyan when (@colored-icons) { .medium-dynamic-color(@mc) }
+.dark-cyan when (@colored-icons) { .dark-dynamic-color(@mc) }
 
-.light-pink when (@colored-icons) { color: @lpk; }
-.medium-pink when (@colored-icons) { color: @mpk; }
-.dark-pink when (@colored-icons) { color: @dpk; }
+.light-pink when (@colored-icons) { .light-dynamic-color(@mpk) }
+.medium-pink when (@colored-icons) { .medium-dynamic-color(@mpk) }
+.dark-pink when (@colored-icons) { .dark-dynamic-color(@mpk) }
