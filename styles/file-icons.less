@@ -51,8 +51,10 @@
   &[data-name$=".toml"]:before { .config-icon; .medium-green; }
 
   // Clojure
-  &[data-name$=".clj"]:before,
-  &[data-name$=".cljs"]:before { .clojure-icon; .medium-blue; }
+  &[data-name$=".clj"]:before { .clojure-icon; .medium-blue; }
+
+  // ClojureScript
+  &[data-name$=".cljs"]:before { .cljs-icon; .medium-blue; }
 
   // Code icon
   &[data-name$=".xml"]:before { .code-icon; .medium-blue;   }
@@ -99,10 +101,14 @@
   &[data-name$=".fsi"]:before    { .fsharp-icon; .medium-blue; }
 
   // Git icon
+  &[data-name$=".gitconfig"]:before { .git-icon; }
   &[data-name$=".gitignore"]:before { .git-icon; }
+  &[data-name$=".gitignore_global"]:before { .git-icon; }
+  &[data-name$=".gitkeep"]:before { .git-icon; }
   &[data-name$=".gitattributes"]:before { .git-icon; }
   &[data-name$=".gitmodules"]:before { .git-icon; }
 
+  // HTML5 icon
   &[data-name$=".html"]:before  { .html5-icon; .medium-orange; }
   &[data-name$=".htm"]:before   { .html5-icon; .medium-orange; }
   &[data-name$=".shtml"]:before { .html5-icon; .medium-cyan;  }
@@ -191,6 +197,7 @@
 
   &[data-name$=".rb"]:before,
   &[data-name$=".ru"]:before,
+  &[data-name$=".rake"]:before,
   &[data-name$=".erb"]:before,
   &[data-name$=".opal"]:before   { .ruby-icon; .medium-red; }
 
@@ -212,6 +219,15 @@
   // JSX icon
   &[data-name$=".jsx"]:before { .react-icon; .medium-blue; }
   /* &[data-name$=".jsx"]:before { .jsx-icon; .medium-blue; } */
+
+  // Elm icon
+  &[data-name$=".elm"]:before { .elm-icon; .medium-blue; }
+
+  // Boot icon
+  &[data-name$="build.boot"]:before { .boot-icon; }
+
+  // Lein icon
+  &[data-name$="project.clj"]:before { .lein-icon; }
 
   // Coffee icon
   &[data-name$=".coffee"]:before    { .coffee-icon; .medium-maroon; }
@@ -382,9 +398,11 @@
   &[data-name$=".png"]:before { .image-icon; .medium-orange; }
   &[data-name$=".gif"]:before { .image-icon; .medium-yellow; }
   &[data-name$=".jpg"]:before { .image-icon; .medium-green;  }
+  &[data-name$=".svg"]:before { .svg-icon; .dark-yellow;  }
   &[data-name$=".PNG"]:before { .image-icon; .medium-orange; }
   &[data-name$=".GIF"]:before { .image-icon; .medium-yellow; }
   &[data-name$=".JPG"]:before { .image-icon; .medium-green;  }
+  &[data-name$=".SVG"]:before { .svg-icon; .dark-yellow;  }
 
   // Windows specific Files
   &[data-name$=".bat"]:before { .windows-icon; .medium-purple;}
