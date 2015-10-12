@@ -251,15 +251,15 @@
 
   // Go
   .set-go-bg-color(@c) when (lightness(@c) >= 50%) {
-    background-color: lighten(@mc, 55%);
+    background-color: lighten(@file-icons-cyan, 55%);
   }
   .set-go-bg-color(@c) when (lightness(@c) <  50%) {
-    background-color:  darken(@mc, 55%);
+    background-color:  darken(@file-icons-cyan, 55%);
   }
   &[data-name$=".go"]:before {
     .go-icon;
     .set-go-bg-color(@tree-view-background-color);
-    color: @mb;
+    color: @file-icons-blue;
   }
   .selected > &[data-name$=".go"]:before {
     -webkit-text-stroke-width: 0px !important;
