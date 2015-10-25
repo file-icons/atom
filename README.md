@@ -1,3 +1,7 @@
+# If you've just updated and your icons are all messed up, please restart Atom before filing an issue. 
+
+Some of the underlying icon fonts have updated and rearranged their icons, a restart will fix this.
+
 # file-icons
 
 Adds file specific icons to atom for improved visual grepping. Works with Tree View and Fuzzy Finder and Tabs.
