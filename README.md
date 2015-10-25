@@ -1,11 +1,10 @@
-# If you've just updated and your icons are all messed up, please restart Atom before filing an issue. 
+# If you've just updated and your icons are all messed up, please restart Atom before filing an issue.
 
 Some of the underlying icon fonts have updated and rearranged their icons, a restart will fix this.
 
 # file-icons
 
 Adds file specific icons to atom for improved visual grepping. Works with Tree View and Fuzzy Finder and Tabs.
-
 
 ![Screenshot](https://raw.githubusercontent.com/DanBrooker/file-icons/master/file-icons.png)
 
@@ -16,7 +15,7 @@ File Icons are now specified via css(less) only.
 
 ## No Colours
 
-Disable colours in the settings
+Disable colours in the settings.
 
 ## Unity Theme
 
@@ -24,7 +23,7 @@ By default the Unity theme hides icons, you can force to show the icons in the s
 
 # Customisation
 
-The following css can be added to your user stylesheet to customise files with the .rb file extension
+The following css can be added to your user stylesheet to customise files with the .rb file extension.
 
 ```css
 @import "packages/file-icons/styles/colors"; // to use the colours
@@ -69,7 +68,7 @@ Some custom fonts are already provided
 
 Colours are from the [Base16](https://github.com/chriskempson/base16) colour palette. CSS classes used to apply color follow its primary 8 (eight) colours and 3 (three) variants:
 
-  * Red, Green, Yellow, Blue, Maroon, Purple, Orange, Cyan
+  * Red, Green, Yellow, Blue, Maroon, Purple, Orange, Cyan.
   * Light, Medium, Dark.
 
 Medium is colour provided by Base16. Light is medium lightened 15%. Dark is medium darkened 15%. In order to "construct" a CSS class color, you provide its variant followed by a dash (-).
