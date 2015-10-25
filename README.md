@@ -20,7 +20,7 @@ By default the Unity theme hides icons, you can force to show the icons in the s
 
 # Customisation
 
-The following css can be added to your user stylesheet to customise files with the .rb file extension
+The following css can be added to your user stylesheet to customise files with the .rb file extension.
 
 ```css
 @import "packages/file-icons/styles/colors"; // to use the colours
@@ -65,7 +65,7 @@ Some custom fonts are already provided
 
 Colours are from the [Base16](https://github.com/chriskempson/base16) colour palette. CSS classes used to apply color follow its primary 8 (eight) colours and 3 (three) variants:
 
-  * Red, Green, Yellow, Blue, Maroon, Purple, Orange, Cyan
+  * Red, Green, Yellow, Blue, Maroon, Purple, Orange, Cyan.
   * Light, Medium, Dark.
 
 Medium is colour provided by Base16. Light is medium lightened 15%. Dark is medium darkened 15%. In order to "construct" a CSS class color, you provide its variant followed by a dash (-).
