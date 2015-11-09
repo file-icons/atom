@@ -2,6 +2,14 @@
 
 Some of the underlying icon fonts have updated and rearranged their icons, a restart will fix this.
 
+## Installing
+#### On the command line:
+```ssh
+apm install file-icons
+```
+#### On Atom:
+Go to `Preferences > Install`, search for `file-icons` and install it.
+
 # file-icons
 
 Adds file specific icons to atom for improved visual grepping. Works with Tree View and Fuzzy Finder and Tabs.
