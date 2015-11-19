@@ -287,7 +287,7 @@
   &[data-name$=".cpp"]:before     { .cpp-icon; .medium-blue; }
   &[data-name$=".hpp"]:before     { .cpp-icon; .medium-purple; }
   &[data-name$=".cxx"]:before     { .cpp-icon; .medium-blue; }
-  &[data-name$=".cc"]:before     { .cpp-icon; .medium-blue; }
+  &[data-name$=".cc"]:before      { .cpp-icon; .medium-blue; }
   &[data-name$=".hxx"]:before     { .cpp-icon; .medium-purple; }
   &[data-name$=".ipp"]:before     { .cpp-icon; .medium-orange; }
   &[data-name$=".m"]:before       { .objc-icon; .medium-blue; }
@@ -439,6 +439,13 @@
   // Seperated Value files
   &[data-name$=".csv"]:before { .graph-icon; .light-red; }
   &[data-name$=".tsv"]:before { .graph-icon; .light-green; }
+
+  // Matlab or GNU Octave files
+  // &[data-name$=".mat"]:before,
+  // &[data-name$=".m"]:before   { .matlab-icon; .medium-orange; }
+
+  // SaltStack state files
+  &[data-name$=".sls"]:before { .salt-icon; .medium-blue; }
 
 }
 
