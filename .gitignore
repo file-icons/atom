@@ -1,3 +1,5 @@
 .DS_Store
 npm-debug.log
 node_modules
+resources/fonts-src/*
+!resources/fonts-src/selection.json
