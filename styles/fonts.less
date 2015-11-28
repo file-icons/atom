@@ -26,30 +26,28 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "fontcustom";
-  src: url(atom://file-icons/resources/fonts/docker.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "iconsxd";
-  src: url(atom://file-icons/resources/fonts/iconsxd.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// Package-specific font for custom icon additions
+@custom-font-path: 'atom://file-icons/resources/fonts/file-icons.woff';
 
 @font-face {
   font-family: "file-icons";
-  src: url(atom://file-icons/resources/fonts/file-icons.woff) format("woff");
+  src: url(@custom-font-path) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Kept for backwards compatibility only
+@font-face {
+  font-family: "iconsxd";
+  src: url(@custom-font-path) format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "tex";
-  src: url(atom://file-icons/resources/fonts/tex.woff) format("woff");
+  src: url(@custom-font-path) format("woff");
   font-weight: normal;
   font-style: normal;
 }

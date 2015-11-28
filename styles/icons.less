@@ -62,7 +62,7 @@
 .sql-icon             { .mf; content: "\f10e"; }
 .svg-icon             { .mf; content: "\f15c"; }
 .elixir-icon          { .mf; content: '\f113'; }
-.apache-icon          { .mf; content: '\f102'; }
+.apache-icon          { .mf; content: '\f102'; top: 3px; left: 0; }
 .debian-icon          { .mf; content: '\f111'; }
 .red-hat-icon         { .mf; content: '\f14e'; }
 .osx-icon             { .mf; content: '\f141'; }
@@ -123,13 +123,6 @@
 // .npm-icon           { .devicons; content: "\e616"; }
 // .sass-icon          { .devicons; content: "\e603"; }
 
-.docker             { font-family: "fontcustom"; font-size: large; text-align: center; top: 3px; }
-.docker-icon        { .docker; content: "\f100"; }
-
-.tex                { font-family: "tex"; font-size: 8px; text-align: center;  }
-.tex-icon           { .tex; content: "\e600"; }
-.bibtex-icon        { .tex; content: "\e601"; top: -1px }
-
 .git-icon           {
   .devicons;
   content: "\e602";
@@ -140,22 +133,19 @@
   -webkit-transform: scale(1.15, 1.10);
 }
 
-// IconsXD, from http://icomoon.io XD
 
-.icons-xd   { font-family: "iconsxd"; font-size: 18px; text-align: center; top: 3px; }
-
-.ionic-icon { .icons-xd; content: "\f14b"; }
-.haml-icon  { .icons-xd; content: "\f15b"; font-size: 15px; }
-.node-icon  { .icons-xd; content: "\f17b"; top: 6px; }
-.nginx-icon { .icons-xd; content: "\f146b"; font-size: 15px; }
-
-// File Icons, custom
-
-.file-icons { font-family: "file-icons"; font-size: large; text-align: center; top: 3px; }
-
-.react-icon { .file-icons; content: "\f100" }
-.jsx-icon   { .file-icons; content: "\f101" }
-.elm-icon   { .file-icons; content: "\f102" }
-.boot-icon  { .file-icons; content: "\f103" }
-.cljs-icon  { .file-icons; content: "\f104" }
-.lein-icon  { .file-icons; content: "\f105" }
+// Custom file icons
+.file-icons         { font-family: "file-icons"; font-size: large; text-align: center; top: 2px; }
+.bibtex-icon        { .file-icons; content: "\e601"; font-size: 8px;  top: -2px }
+.boot-icon          { .file-icons; content: "\f103"; left: 2px; }
+.cljs-icon          { .file-icons; content: "\f104"; }
+.docker-icon        { .file-icons; content: "\f106"; }
+.elm-icon           { .file-icons; content: "\f102"; }
+.haml-icon          { .file-icons; content: "\f15b"; font-size: 15px; }
+.ionic-icon         { .file-icons; content: "\f14b"; font-size: 18px; left: 1px; }
+.jsx-icon           { .file-icons; content: "\f101"; }
+.lein-icon          { .file-icons; content: "\f105"; left: 3px; }
+.nginx-icon         { .file-icons; content:"\f146b"; font-size: 15px; left: 1px; }
+.node-icon          { .file-icons; content: "\f17b"; font-size: 18px; top: 5px; }
+.react-icon         { .file-icons; content: "\f100"; }
+.tex-icon           { .file-icons; content: "\e600"; font-size: 8px;  top: 0 }
