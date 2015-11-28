@@ -6,7 +6,7 @@ you can add it to the package's custom icon set with [IcoMoon.io](https://icomoo
 
 1. Click the **Import Icons** button in the top-left corner.
 
-2. Pick `selection.json` from the package's `resources/fonts-src/` directory.
+2. Pick `selection.json` from the package's base directory.
 
 3. You may be presented with a dialogue asking *"Your icon selection was loaded. Would you like to load all the settings stored in your selection file?"*. If so, click **Yes**.
 
