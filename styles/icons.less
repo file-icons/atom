@@ -1,5 +1,7 @@
-// Octicon icons, from: https://github.com/github/octicons
-
+/*============================================================================*
+  Octicons
+  https://github.com/github/octicons
+/*============================================================================*/
 .octicons { font-family: "Octicons Regular"; font-size: medium; text-align: center; }
 
 .checklist-icon { .octicons; content: "\f076"; }
@@ -22,28 +24,29 @@
 .binary-icon    { .octicons; content: "\f094"; }
 .config-icon    { .octicons; content: "\f07c"; }
 
-// .c-icon       { .octicons; content: "\f010"; }
-// .h-icon       { .octicons; content: "\f010"; }
-// .cpp-icon     { .octicons; content: "\f010"; }
-// .objc-icon    { .octicons; content: "\f010"; font-size: medium; }
 
-// FontAwesome icons, looks better on small font-size,
-// from: http://fortawesome.github.io/Font-Awesome/cheatsheet/
 
+/*============================================================================*
+  FontAwesome
+  http://fortawesome.github.io/Font-Awesome/cheatsheet
+/*============================================================================*/
 .fa { font-family: "FontAwesome"; font-size: small; text-align: center; }
 
-.coffee-icon  { .fa; content: "\f0f4"; }
-.css3-icon    { .fa; content: "\f13c"; }
-.html5-icon   { .fa; content: "\f13b"; }
-.twitter-icon { .fa; content: "\f099"; }
-.puppet-icon  { .fa; content: "\f0c3"; }
-.smarty-icon  { .fa; content: "\f0eb"; }
-.lua-icon     { .fa; content: "\f186"; }
-.twig-icon    { .fa; content: "\f1bb"; }
+.coffee-icon    { .fa; content: "\f0f4"; }
+.css3-icon      { .fa; content: "\f13c"; }
+.html5-icon     { .fa; content: "\f13b"; }
+.twitter-icon   { .fa; content: "\f099"; }
+.puppet-icon    { .fa; content: "\f0c3"; }
+.smarty-icon    { .fa; content: "\f0eb"; }
+.lua-icon       { .fa; content: "\f186"; }
+.twig-icon      { .fa; content: "\f1bb"; }
 
-// Mfizz icons, look better on small font-size,
-// from: http://mfizz.com/oss/font-mfizz
 
+
+/*============================================================================*
+  Mfizz
+  http://mfizz.com/oss/font-mfizz
+/*============================================================================*/
 .mf { font-family: "FontMfizz"; font-size: small; text-align: center;  }
 
 .js-icon              { .mf; content: "\f128"; font-size: medium; }
@@ -62,13 +65,18 @@
 .sql-icon             { .mf; content: "\f10e"; }
 .svg-icon             { .mf; content: "\f15c"; }
 .elixir-icon          { .mf; content: '\f113'; }
-.apache-icon          { .mf; content: '\f102'; }
+.apache-icon          { .mf; content: '\f102'; top: 3px; left: 0; }
 .debian-icon          { .mf; content: '\f111'; }
 .red-hat-icon         { .mf; content: '\f14e'; }
 .osx-icon             { .mf; content: '\f141'; }
 
-// Icomoon icons, from http://icomoon.io
 
+
+
+/*============================================================================*
+  IcoMoon's default icon library
+  https://icomoon.io/#preview-free
+/*============================================================================*/
 .icomoon { font-family: "icomoon"; font-size: 18px; text-align: center; top: 3px; }
 
 .grunt-icon         { .icomoon; content: "\e611"; }
@@ -76,25 +84,31 @@
 .hbs-mustache-icon  { .icomoon; content: "\e60f"; }
 .npm-icon           { .icomoon; content: "\e616"; }
 
-// Dev icons, from http://vorillaz.github.io/devicons/
 
+
+
+/*============================================================================*
+  Devicons
+  http://vorillaz.github.io/devicons
+/*============================================================================*/
 .devicons { font-family: "devicons"; font-size: large; text-align: center; top: 3px; }
 
-.laravel-icon       { .devicons; content: "\e63f"; }
 .bower-icon         { .devicons; content: "\e64d"; }
 .clojure-icon       { .devicons; content: "\e668"; }
+.dart-icon          { .devicons; content: "\e698"; }
+.dlang-icon         { .devicons; content: "\e6af"; }
+.erlang-icon        { .devicons; content: '\e6b1'; }
+.fsharp-icon        { .devicons; content: "\e6a7"; left: 1px; }
+.laravel-icon       { .devicons; content: "\e63f"; }
+.meteor-icon        { .devicons; content: "\e6a5"; font-size: x-large; left: -2px; }
 .rails-icon         { .devicons; content: "\e63b"; }
 .rust-icon          { .devicons; content: "\e6a8"; }
+.sass-icon          { .devicons; content: "\e64b"; top: 0; }
+.swift-icon         { .devicons; content: "\e655"; font-size: large; }
 .travis-icon        { .devicons; content: "\e67e"; font-size: medium; }
 .windows-icon       { .devicons; content: "\e60f"; }
-.erlang-icon        { .devicons; content: '\e6b1'; }
-.dlang-icon         { .devicons; content: "\e6af"; }
-.fsharp-icon        { .devicons; content: "\e6a7"; left: 1px; }
-.sass-icon          { .devicons; content: "\e64b"; top: 0; }
-.meteor-icon        { .devicons; content: "\e6a5"; font-size: x-large; left: -2px; }
-.dart-icon          { .devicons; content: "\e698"; }
 
-.composer-icon      {
+.composer-icon {
   .devicons;
   content: "\e683";
   font-weight: bolder;
@@ -102,11 +116,10 @@
   -webkit-background-clip: text;
   -webkit-text-stroke-color: transparent;
   -webkit-text-stroke-width: 0.9px;
-  // -webkit-transform: scale(1.15, 1.10);
   font-size: medium;
 }
 
-.go-icon            {
+.go-icon {
   .devicons;
   content: "\e624";
   font-weight: bolder;
@@ -118,19 +131,7 @@
   font-size: medium;
 }
 
-// .coffee-icon        { .devicons; content: "\e651"; }
-.swift-icon         { .devicons; content: "\e655"; font-size: large; }
-// .npm-icon           { .devicons; content: "\e616"; }
-// .sass-icon          { .devicons; content: "\e603"; }
-
-.docker             { font-family: "fontcustom"; font-size: large; text-align: center; top: 3px; }
-.docker-icon        { .docker; content: "\f100"; }
-
-.tex                { font-family: "tex"; font-size: 8px; text-align: center;  }
-.tex-icon           { .tex; content: "\e600"; }
-.bibtex-icon        { .tex; content: "\e601"; top: -1px }
-
-.git-icon           {
+.git-icon {
   .devicons;
   content: "\e602";
   top: 4px;
@@ -140,22 +141,37 @@
   -webkit-transform: scale(1.15, 1.10);
 }
 
-// IconsXD, from http://icomoon.io XD
 
-.icons-xd   { font-family: "iconsxd"; font-size: 18px; text-align: center; top: 3px; }
 
-.ionic-icon { .icons-xd; content: "\f14b"; }
-.haml-icon  { .icons-xd; content: "\f15b"; font-size: 15px; }
-.node-icon  { .icons-xd; content: "\f17b"; top: 6px; }
-.nginx-icon { .icons-xd; content: "\f146b"; font-size: 15px; }
+/*============================================================================*
+  Custom file icons
+  See CONTRIBUTING.md
+/*============================================================================*/
+.file-icons         { font-family: "file-icons"; font-size: large; text-align: center; top: 2px; }
 
-// File Icons, custom
-
-.file-icons { font-family: "file-icons"; font-size: large; text-align: center; top: 3px; }
-
-.react-icon { .file-icons; content: "\f100" }
-.jsx-icon   { .file-icons; content: "\f101" }
-.elm-icon   { .file-icons; content: "\f102" }
-.boot-icon  { .file-icons; content: "\f103" }
-.cljs-icon  { .file-icons; content: "\f104" }
-.lein-icon  { .file-icons; content: "\f105" }
+.bibtex-icon        { .file-icons; content: "\e601"; font-size: 8px;  top: -2px }
+.boot-icon          { .file-icons; content: "\f103"; left: 2px; }
+.cljs-icon          { .file-icons; content: "\f104"; }
+.docker-icon        { .file-icons; content: "\f106"; }
+.elm-icon           { .file-icons; content: "\f102"; }
+.haml-icon          { .file-icons; content: "\f15b"; font-size: 15px; }
+.ionic-icon         { .file-icons; content: "\f14b"; font-size: 18px; left: 1px; }
+.jsx-icon           { .file-icons; content: "\f101"; }
+.lein-icon          { .file-icons; content: "\f105"; left: 3px; }
+.nginx-icon         { .file-icons; content:"\f146b"; font-size: 15px; left: 1px; }
+.node-icon          { .file-icons; content: "\f17b"; font-size: 18px; top: 5px; }
+.react-icon         { .file-icons; content: "\f100"; }
+.tex-icon           { .file-icons; content: "\e600"; font-size: 8px;  top: 0 }
+.maxscript-icon     { .file-icons; content: "\e900"; font-size: 15px; }
+.kivy-icon          { .file-icons; content: "\e901"; font-size: 17px; top: 3px; }
+.crystal-icon       { .file-icons; content: "\e902"; font-size: 15px; left: 1px; }
+.gradle-icon        { .file-icons; content: "\e903"; font-size: 14px; top: 1px; }
+.groovy-icon        { .file-icons; content: "\e904"; font-size: 14px; left: -1px; }
+.r-icon             { .file-icons; content: "\e905"; font-size: 13px; left: 0; top: 1px; }
+.vue-icon           { .file-icons; content: "\e906"; font-size: 14px; top: 3px; }
+.haxe-icon          { .file-icons; content: "\e907"; font-size: 15px; top: 1px; left: 1px; }
+.ada-icon           { .file-icons; content: "\e90b"; font-size: 17px; }
+.apl-icon           { .file-icons; content: "\e909"; font-size: 15px; }
+.dyalog-icon        { .file-icons; content: "\e90c"; font-size: 14px; left: 1px; }
+.fortran-icon       { .file-icons; content: "\e90a"; font-size: 14px; left: 1px; top: 1px; }
+.lisp-icon          { .file-icons; content: "\e908"; font-size: 12px; top: 1px; }
