@@ -507,6 +507,14 @@
 
   // Jade
   &[data-name$=".jade"]:before  { .jade-icon; .medium-red;  }
+
+  // ESLint icon
+  &[data-name$=".eslintrc"]:before,
+  &[data-name$=".eslintrc.js"]:before,
+  &[data-name$=".eslintrc.json"]:before,
+  &[data-name$=".eslintrc.yaml"]:before,
+  &[data-name$=".eslintrc.yml"]:before     { .eslint-icon;  .light-purple }
+  &[data-name$=".eslintignore"]:before     { .eslint-icon; .medium-purple }
 }
 
 body.file-icons-colourless {
