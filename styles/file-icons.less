@@ -29,7 +29,7 @@
 .icon-book[data-name="Readme.md"]:before,
 .icon-book[data-name="readme.md"]:before { .medium-blue; }
 
-.file-icons-tab-pane-icon @{pane-tab-selector}, .icon-file-text {
+.file-icons-tab-pane-icon @{pane-tab-selector}, .icon-file-text, .icon-file-binary {
 
   &:before {
     .text-icon;
@@ -95,6 +95,13 @@
   // Erlang icon
   &[data-name$=".erl"]:before        { .erlang-icon;   .medium-red; }
   &[data-name$=".beam"]:before       { .erlang-icon;     .dark-red; }
+
+  // Fonts
+  &[data-name$=".eot"]:before   { .font-icon; .light-green;  }
+  &[data-name$=".ttf"]:before   { .font-icon; .medium-green;  }
+  &[data-name$=".otf"]:before   { .font-icon; .dark-yellow;  }
+  &[data-name$=".woff"]:before  { .font-icon; .medium-blue;  }
+  &[data-name$=".woff2"]:before { .font-icon; .dark-blue;  }
 
   // FSharp icon
   &[data-name$=".fs"]:before     { .fsharp-icon; .medium-blue; }
