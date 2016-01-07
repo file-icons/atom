@@ -29,7 +29,7 @@
 .icon-book[data-name="Readme.md"]:before,
 .icon-book[data-name="readme.md"]:before { .medium-blue; }
 
-.file-icons-tab-pane-icon @{pane-tab-selector}, .icon-file-text {
+.file-icons-tab-pane-icon @{pane-tab-selector}, .icon-file-text, .icon-file-binary {
 
   &:before {
     .text-icon;
@@ -96,6 +96,13 @@
   &[data-name$=".erl"]:before        { .erlang-icon;   .medium-red; }
   &[data-name$=".beam"]:before       { .erlang-icon;     .dark-red; }
 
+  // Fonts
+  &[data-name$=".eot"]:before   { .font-icon; .light-green;  }
+  &[data-name$=".ttf"]:before   { .font-icon; .medium-green;  }
+  &[data-name$=".otf"]:before   { .font-icon; .dark-yellow;  }
+  &[data-name$=".woff"]:before  { .font-icon; .medium-blue;  }
+  &[data-name$=".woff2"]:before { .font-icon; .dark-blue;  }
+
   // FSharp icon
   &[data-name$=".fs"]:before     { .fsharp-icon; .medium-blue; }
   &[data-name$=".fsx"]:before    { .fsharp-icon; .medium-blue; }
@@ -114,7 +121,6 @@
   &[data-name$=".htm"]:before   { .html5-icon; .medium-orange; }
   &[data-name$=".shtml"]:before { .html5-icon; .medium-cyan;  }
   &[data-name$=".haml"]:before  { .haml-icon; .medium-yellow;  }
-  &[data-name$=".jade"]:before  { .html5-icon; .medium-green;  }
   &[data-name$=".jsp"]:before   { .html5-icon; .medium-purple; }
   &[data-name$=".ctp"]:before   { .html5-icon; .medium-blue;   }
   &[data-name$=".ejs"]:before   { .html5-icon; .medium-green;  }
@@ -214,7 +220,6 @@
 
   // JavaScript icon
   &[data-name$=".js"]:before  { .js-icon; .medium-yellow; }
-  &[data-name$=".ts"]:before  { .js-icon; .medium-purple; }
   &[data-name$=".es6"]:before  { .js-icon; .medium-yellow; }
   &[data-name$=".es"]:before  { .js-icon; .medium-yellow; }
 
@@ -223,6 +228,9 @@
   &[data-name$=".tsx"]:before { .react-icon; .light-blue; }
   &[data-name$=".react.js"]:before { .react-icon; .medium-blue; }
   /* &[data-name$=".jsx"]:before { .jsx-icon; .medium-blue; } */
+
+  // TypeScript icon
+  &[data-name$=".ts"]:before  { .ts-icon; .medium-blue; }
 
   // Elm icon
   &[data-name$=".elm"]:before { .elm-icon; .medium-blue; }
@@ -448,17 +456,17 @@
   &[data-name$=".ms"]:before,
   &[data-name$=".mce"]:before,
   &[data-name$=".mcr"]:before { .maxscript-icon; .dark-blue; }
-  
+
   // Kivy
   &[data-name$=".kv"]:before { .kivy-icon; .dark-maroon; }
-  
+
   // Crystal
   &[data-name$=".cr"]:before,
   &[data-name$=".ecr"]:before { .crystal-icon; .medium-cyan; }
-  
+
   // Gradle
   &[data-name$=".gradle"]:before { .gradle-icon; .medium-blue; }
-  
+
   // Groovy
   &[data-name$=".groovy"]:before,
   &[data-name$=".grt"]:before,
@@ -472,23 +480,30 @@
   &[data-name$=".Rprofile"]:before,
   &[data-name$=".R"]:before,
   &[data-name$=".r"]:before { .r-icon; .medium-blue; }
-  
+
   // Vue
   &[data-name$=".vue"]:before { .vue-icon; .light-green; }
-  
+
   // Haxe
   &[data-name$=".hx"]:before,
   &[data-name$=".hxsl"]:before { .haxe-icon; .medium-orange; }
   
+  // OpenSCAD
+  &[data-name$=".scad"]:before { .scad-icon; .medium-orange; }
+  
+  // PostCSS
+  &[data-name$=".postcss"]:before { .postcss-icon; .dark-red; }
+  
+
   // Ada
   &[data-name$=".ada"]:before,
   &[data-name$=".adb"]:before,
   &[data-name$=".ads"]:before { .ada-icon; .medium-blue; }
-  
+
   // APL / Dyalog APL
   &[data-name$=".apl"]:before    { .apl-icon; .dark-red; }
   &[data-name$=".dyalog"]:before { .dyalog-icon; .medium-orange; }
-  
+
   // FORTRAN
   &[data-name$=".f"]:before      { .fortran-icon; .medium-maroon; }
   &[data-name$=".f90"]:before    { .fortran-icon; .medium-green;  }
@@ -498,13 +513,24 @@
   &[data-name$=".f95"]:before    { .fortran-icon; .dark-pink;     }
   &[data-name$=".for"]:before    { .fortran-icon; .dark-cyan;     }
   &[data-name$=".fpp"]:before    { .fortran-icon; .dark-yellow;   }
-  
+
   // LISP
   &[data-name$=".lsp"]:before    { .lisp-icon; .medium-red;       }
   &[data-name$=".lisp"]:before   { .lisp-icon; .dark-red;         }
   &[data-name$=".cl"]:before     { .lisp-icon; .medium-orange;    }
   &[data-name$=".l"]:before      { .lisp-icon; .medium-maroon;    }
   &[data-name$=".ny"]:before     { .lisp-icon; .medium-blue;      }
+
+  // Jade
+  &[data-name$=".jade"]:before  { .jade-icon; .medium-red;  }
+
+  // ESLint icon
+  &[data-name$=".eslintrc"]:before,
+  &[data-name$=".eslintrc.js"]:before,
+  &[data-name$=".eslintrc.json"]:before,
+  &[data-name$=".eslintrc.yaml"]:before,
+  &[data-name$=".eslintrc.yml"]:before     { .eslint-icon;  .light-purple }
+  &[data-name$=".eslintignore"]:before     { .eslint-icon; .medium-purple }
 }
 
 body.file-icons-colourless {
