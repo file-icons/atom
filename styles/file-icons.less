@@ -360,7 +360,12 @@
   // Shell
   &[data-name$=".sh"]:before,
   &[data-name$=".bash"]:before,
-  &[data-name=".bashrc"]:before { .terminal-icon; .medium-purple; }
+  &[data-name="bashrc"]:before,
+  &[data-name=".bashrc"]:before,
+  &[data-name="bash_login"]:before,
+  &[data-name=".bash_login"]:before,
+  &[data-name="bash_profile"]:before,
+  &[data-name=".bash_profile"]:before{ .terminal-icon; .medium-purple; }
   &[data-name$=".zsh"]:before,
   &[data-name=".zshrc"]:before { .terminal-icon; .medium-blue; }
   &[data-name$=".fish"]:before,
