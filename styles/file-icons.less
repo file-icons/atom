@@ -297,6 +297,8 @@
   // Rust
   &[data-name$=".rs"]:before   { .rust-icon; .medium-maroon; }
   &[data-name$=".rlib"]:before { .rust-icon; .light-maroon; }
+  &.title[data-path][data-name$=".rs"]:before,
+  &.title[data-path][data-name$=".rlib"]:before { vertical-align: -35%; }
 
   // Objective-C, C++, C
   &[data-name$=".c"]:before       { .c-icon; .medium-blue; }
