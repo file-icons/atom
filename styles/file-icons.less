@@ -353,8 +353,11 @@
   &[data-name$=".out"]:before,
   &[data-name$=".s"]:before,
   &[data-name$=".asm"]:before { .binary-icon; .medium-red; }
+  
+  // Linux kernel modules
+  &[data-name$=".ko"]:before  { .binary-icon; .dark-green; }
 
-  // shell
+  // Shell
   &[data-name$=".sh"]:before,
   &[data-name$=".bash"]:before,
   &[data-name=".bashrc"]:before { .terminal-icon; .medium-purple; }
