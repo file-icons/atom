@@ -4,7 +4,7 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unreleased]
+[1.6.15] - 2016-02-22
 ------------
 ### Added
 - This changelog
@@ -553,7 +553,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.14...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.15...HEAD
+[1.6.15]: https://github.com/DanBrooker/file-icons/compare/v1.6.14...v1.6.15
 [1.6.14]: https://github.com/DanBrooker/file-icons/compare/v1.6.13...v1.6.14
 [1.6.13]: https://github.com/DanBrooker/file-icons/compare/v1.6.12...v1.6.13
 [1.6.12]: https://github.com/DanBrooker/file-icons/compare/v1.6.11...v1.6.12
