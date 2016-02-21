@@ -39,7 +39,7 @@
   // Checklist icon
   &[data-name$="TODO"]:before { .checklist-icon; .medium-yellow; }
 
-  //Makefile icon
+  // Makefile icon
   &[data-name$="Makefile"]:before { .checklist-icon; .medium-yellow; }
   &[data-name$="makefile"]:before { .checklist-icon; .medium-yellow; }
   &[data-name$=".mk"]:before { .checklist-icon; .medium-yellow; }
@@ -132,6 +132,7 @@
   &[data-name$=".hbs"]:before,
   &[data-name$=".handlebars"]:before,
   &[data-name$=".mustache"]:before { .hbs-mustache-icon; .medium-orange; }
+  
   // Emblem
   &[data-name$=".emblem"]:before,
   &[data-name$=".em"]:before { .hbs-mustache-icon; .medium-blue; }
@@ -162,7 +163,7 @@
   &[data-name="nodemon.json"]:before,
   &[data-name=".nodemonignore"]:before  { .gear-icon; .medium-green;  }
 
-  // Npm icon
+  // NPM icon
   &[data-name=".npmrc"]:before           { .node-icon; }
   &[data-name=".npmignore"]:before       { .node-icon; }
   &[data-name="npm-debug.log"]:before    { .node-icon; .medium-red; }
@@ -218,7 +219,8 @@
 
   // Cucumber (Gherkin) icon
   &[data-name$=".feature"]:before { .comment-icon; .medium-green; }
-
+  
+  
   // JavaScript icon
   &[data-name$=".js"]:before  { .js-icon; .medium-yellow; }
   &[data-name$=".es6"]:before  { .js-icon; .medium-yellow; }
@@ -229,7 +231,7 @@
   &[data-name$=".tsx"]:before { .jsx-icon; .light-blue; }
   &[data-name$=".react.js"]:before { .react-icon; .medium-blue; }
 
-  // TypeScript icon
+  // TypeScript
   &[data-name$=".ts"]:before  { .ts-icon; .medium-blue; }
   
   // LiveScript
@@ -304,14 +306,14 @@
   &[data-name$=".cpp"]:before     { .cpp-icon; .medium-blue; }
   &[data-name$=".hpp"]:before     { .cpp-icon; .medium-purple; }
   &[data-name$=".cxx"]:before     { .cpp-icon; .medium-blue; }
-  &[data-name$=".cc"]:before     { .cpp-icon; .medium-blue; }
+  &[data-name$=".cc"]:before      { .cpp-icon; .medium-blue; }
   &[data-name$=".hxx"]:before     { .cpp-icon; .medium-purple; }
   &[data-name$=".ipp"]:before     { .cpp-icon; .medium-orange; }
   &[data-name$=".m"]:before       { .objc-icon; .medium-blue; }
   &[data-name$=".mm"]:before      { .objc-icon; .medium-blue; }
   &[data-name$=".swift"]:before   { .swift-icon; .medium-green; }
 
-  ///D lang icon
+  // D lang
   &[data-name$=".d"]:before     { .dlang-icon; .medium-red; }
   &[data-name$=".di"]:before    { .dlang-icon; .medium-red; }
 
@@ -337,31 +339,48 @@
   &[data-name$=".ron"]:before,
   &[data-name$=".md"]:before  { .markdown-icon; .medium-blue;   }
 
-  //Template Toolkit
+  // Template Toolkit
   &[data-name$=".tt"]:before { .templatetoolkit-icon; .medium-blue; }
   &[data-name$=".tt2"]:before { .templatetoolkit-icon; .medium-blue; }
   &[data-name$=".tt3"]:before { .templatetoolkit-icon; .medium-purple; }
 
-  //SQL
-  &[data-name$=".sql"]:before { .sql-icon;}
+  // SQL
+  &[data-name$=".sql"]:before { .sql-icon; }
 
-  // txt
-  &[data-name$=".txt"]:before { .medium-cyan;   }
+  // Text
+  &[data-name$=".txt"]:before { .medium-cyan; }
 
   // Assembly and binary
   &[data-name$=".o"]:before,
   &[data-name$=".out"]:before,
   &[data-name$=".s"]:before,
   &[data-name$=".asm"]:before { .binary-icon; .medium-red; }
+  
+  // Linux kernel modules
+  &[data-name$=".ko"]:before  { .binary-icon; .dark-green; }
 
-  // shell
+  // Shell
   &[data-name$=".sh"]:before,
   &[data-name$=".bash"]:before,
-  &[data-name=".bashrc"]:before { .terminal-icon; .medium-purple; }
+  &[data-name="bashrc"]:before,
+  &[data-name=".bashrc"]:before,
+  &[data-name="bash_login"]:before,
+  &[data-name=".bash_login"]:before,
+  &[data-name="bash_profile"]:before,
+  &[data-name=".bash_profile"]:before{ .terminal-icon; .medium-purple; }
   &[data-name$=".zsh"]:before,
   &[data-name=".zshrc"]:before { .terminal-icon; .medium-blue; }
   &[data-name$=".fish"]:before,
   &[data-name=".fishrc"]:before  { .terminal-icon; .medium-green; }
+  
+  // Vim
+  &[data-name$=".vim"]:before,
+  &[data-name$=".nvimrc"]:before,
+  &[data-name$=".vimrc"]:before,
+  &[data-name="_vimrc"]:before,
+  &[data-name="gvimrc"]:before,
+  &[data-name="nvimrc"]:before,
+  &[data-name="vimrc"]:before { .vim-icon; .medium-green; }
 
   // Composer icon
   &[data-name="composer.json"]:before { .composer-icon; .medium-yellow; }
@@ -384,8 +403,11 @@
   &[data-name="GULPFILE.babel.js"]:before,
   &[data-name="Gulpfile.babel.js"]:before,
   &[data-name="gulpfile.babel.js"]:before  { .gulp-icon; .medium-red; }
+  
+  // Riot.js
+  &[data-name$=".tag"]:before { .riot-icon; .medium-red; }
 
-  //Cargo
+  // Cargo
   &[data-name$="Cargo.toml"]:before { .package-icon; .light-orange; }
   &[data-name$="Cargo.lock"]:before { .package-icon; .dark-orange; }
 
