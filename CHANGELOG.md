@@ -4,6 +4,17 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unreleased]
+------------
+### Added
+- **New icons:** OCaml, Lua
+
+### Changed
+- Composer and Haml icons replaced with silhouetted versions
+- Java icon made slightly bolder
+
+
+
 [1.6.15] - 2016-02-22
 ------------
 ### Added
