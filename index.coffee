@@ -38,6 +38,10 @@ module.exports =
 
   deactivate: ->
     @disableSetiIcons false
+    @forceShow false
+    @onChanges false
+    @colour true
+    @tabPaneIcon false
     # console.log 'deactivate'
 
   serialize: ->
