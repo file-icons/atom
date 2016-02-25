@@ -18,6 +18,7 @@ module.exports =
       description: 'Show file icons on tab pane'
 
   activate: (state) ->
+    @disableSetiIcons true
     atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) =>
       @colour newValue
     @colour atom.config.get 'file-icons.coloured'
@@ -36,6 +37,7 @@ module.exports =
     # console.log 'activate'
 
   deactivate: ->
+    @disableSetiIcons false
     # console.log 'deactivate'
 
   serialize: ->
@@ -71,3 +73,7 @@ module.exports =
       body.className = "#{className} file-icons-tab-pane-icon"
     else
       body.className = className.replace /\sfile-icons-tab-pane-icon/, ''
+
+  disableSetiIcons: (disable) ->
+    workspaceElement = atom.views.getView(atom.workspace)
+    workspaceElement.classList.toggle 'seti-ui-no-icons', disable
