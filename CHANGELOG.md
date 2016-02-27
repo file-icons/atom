@@ -4,10 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unreleased]
+[1.6.16] - 2016-02-27
 ------------
 ### Added
 - **New icons:** OCaml, Lua
+
+### Fixed
+- Icons now display properly with the
+  [Seti UI](https://github.com/jesseweed/seti-ui) theme
 
 ### Changed
 - Composer and Haml icons replaced with silhouetted versions
@@ -564,7 +568,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.15...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.16...HEAD
+[1.6.16]: https://github.com/DanBrooker/file-icons/compare/v1.6.15...v1.6.16
 [1.6.15]: https://github.com/DanBrooker/file-icons/compare/v1.6.14...v1.6.15
 [1.6.14]: https://github.com/DanBrooker/file-icons/compare/v1.6.13...v1.6.14
 [1.6.13]: https://github.com/DanBrooker/file-icons/compare/v1.6.12...v1.6.13
