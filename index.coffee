@@ -18,6 +18,7 @@ module.exports =
       description: 'Show file icons on tab pane'
 
   activate: (state) ->
+    @disableSetiIcons true
     atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) =>
       @colour newValue
     @colour atom.config.get 'file-icons.coloured'
@@ -36,6 +37,11 @@ module.exports =
     # console.log 'activate'
 
   deactivate: ->
+    @disableSetiIcons false
+    @forceShow false
+    @onChanges false
+    @colour true
+    @tabPaneIcon false
     # console.log 'deactivate'
 
   serialize: ->
@@ -43,31 +49,20 @@ module.exports =
 
   colour: (enable) ->
     body = document.querySelector 'body'
-    if enable
-      body.className = body.className.replace /\sfile-icons-colourless/, ''
-    else
-      body.className = "#{body.className} file-icons-colourless"
+    body.classList.toggle 'file-icons-colourless', !enable
 
   forceShow: (enable) ->
     body = document.querySelector 'body'
-    className = body.className
-    if enable
-      body.className = "#{className} file-icons-force-show-icons"
-    else
-      body.className = className.replace /\sfile-icons-force-show-icons/, ''
+    body.classList.toggle 'file-icons-force-show-icons', enable
 
   onChanges: (enable) ->
     body = document.querySelector 'body'
-    className = body.className
-    if enable
-      body.className = "#{className} file-icons-on-changes"
-    else
-      body.className = className.replace /\sfile-icons-on-changes/, ''
+    body.classList.toggle 'file-icons-on-changes', enable
 
   tabPaneIcon: (enable) ->
     body = document.querySelector 'body'
-    className = body.className
-    if enable
-      body.className = "#{className} file-icons-tab-pane-icon"
-    else
-      body.className = className.replace /\sfile-icons-tab-pane-icon/, ''
+    body.classList.toggle 'file-icons-tab-pane-icon', enable
+
+  disableSetiIcons: (disable) ->
+    workspaceElement = atom.views.getView(atom.workspace)
+    workspaceElement.classList.toggle 'seti-ui-no-icons', disable

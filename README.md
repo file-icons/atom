@@ -101,6 +101,9 @@ It is possible to overwrite the base colors by using the following variables in 
 @file-icons-pink: #ff00cc;
 ```
 
+# Changelog
+See [CHANGELOG.md](CHANGELOG.md).
+
 # Acknowledgments
 
 Wouldn't have even tried to make this if it weren't for [sommerper/filetype-color](https://github.com/sommerper/filetype-color)
