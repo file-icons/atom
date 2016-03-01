@@ -4,8 +4,21 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[1.6.17] - 2016-03-01
+---------------------
+### Changed
+- Elephant now used for PHP icon
+- NPM icon changed to use block-shaped "n" used by npmjs.com
+
+### Fixed
+- [[`#284`](https://github.com/DanBrooker/file-icons/issues/284)]
+            Pattern matching used for task runner config files
+- [[`#246`](https://github.com/DanBrooker/file-icons/issues/246)]
+            Text-file icons not showing in Flatland Dark UI theme
+
+
 [1.6.16] - 2016-02-27
-------------
+---------------------
 ### Added
 - **New icons:** OCaml, Lua
 
@@ -20,7 +33,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [1.6.15] - 2016-02-22
-------------
+---------------------
 ### Added
 - This changelog
 - **New icons:** AsciiDoc, LiveScript, OrgMode, RAML, Riot, SaltStack, Terraform
@@ -568,7 +581,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.16...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.17...HEAD
+[1.6.17]: https://github.com/DanBrooker/file-icons/compare/v1.6.16...v1.6.17
 [1.6.16]: https://github.com/DanBrooker/file-icons/compare/v1.6.15...v1.6.16
 [1.6.15]: https://github.com/DanBrooker/file-icons/compare/v1.6.14...v1.6.15
 [1.6.14]: https://github.com/DanBrooker/file-icons/compare/v1.6.13...v1.6.14
