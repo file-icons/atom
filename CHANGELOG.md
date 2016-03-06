@@ -4,6 +4,13 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[1.6.18] - 2016-03-06
+---------------------
+### Fixed
+- [[`#296`](https://github.com/DanBrooker/file-icons/issues/296)]
+            Riot tag too large in Atom Material theme's tree view
+
+
 [1.6.17] - 2016-03-01
 ---------------------
 ### Changed
@@ -581,7 +588,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.17...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.18...HEAD
+[1.6.18]: https://github.com/DanBrooker/file-icons/compare/v1.6.17...v1.6.18
 [1.6.17]: https://github.com/DanBrooker/file-icons/compare/v1.6.16...v1.6.17
 [1.6.16]: https://github.com/DanBrooker/file-icons/compare/v1.6.15...v1.6.16
 [1.6.15]: https://github.com/DanBrooker/file-icons/compare/v1.6.14...v1.6.15
