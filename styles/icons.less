@@ -180,3 +180,9 @@
 .composer-icon      { .file-icons; content: "\e683"; font-size: 17px; }
 .lua-icon           { .file-icons; content: "\e91b"; font-size: 14px; }
 .php-icon           { .file-icons; content: "\f147"; font-size: 14px; left: 1px; }
+
+
+// #gh-296: Force Riot icon's size for Atom Material
+.theme-atom-material-ui .name.icon[data-name$=".tag"]::before {
+  font-size: 7px !important;
+}
