@@ -633,3 +633,14 @@ body.file-icons-on-changes {
     }
   }
 }
+
+
+// #gh-271: Undo styling applied by Remote-Edit
+@{pane-tab-selector}{
+  &.icon-globe::before{
+    display: inline;
+    line-height: inherit;
+    width: auto;
+    height: auto;
+  }
+}
