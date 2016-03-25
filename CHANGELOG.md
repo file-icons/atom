@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ---------------------
 ### Added
 - **New icons:** LLVM assembly (`.ll`)
+
 ### Fixed
 - [[`#271`](https://github.com/DanBrooker/file-icons/issues/271)]
             Tab icons misaligned in files opened by Remote-Edit
