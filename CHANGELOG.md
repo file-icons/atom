@@ -4,6 +4,15 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[1.6.19] - 2016-03-26
+---------------------
+### Added
+- **New icons:** LLVM assembly (`.ll`)
+### Fixed
+- [[`#271`](https://github.com/DanBrooker/file-icons/issues/271)]
+            Tab icons misaligned in files opened by Remote-Edit
+
+
 [1.6.18] - 2016-03-06
 ---------------------
 ### Fixed
@@ -588,7 +597,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.18...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.19...HEAD
+[1.6.19]: https://github.com/DanBrooker/file-icons/compare/v1.6.18...v1.6.19
 [1.6.18]: https://github.com/DanBrooker/file-icons/compare/v1.6.17...v1.6.18
 [1.6.17]: https://github.com/DanBrooker/file-icons/compare/v1.6.16...v1.6.17
 [1.6.16]: https://github.com/DanBrooker/file-icons/compare/v1.6.15...v1.6.16
