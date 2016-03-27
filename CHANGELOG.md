@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unreleased]
+------------
+### Added
+- **Support:** TrueType Collections (`.ttc`), generic audio formats
+
+
 [1.6.19] - 2016-03-26
 ---------------------
 ### Added
