@@ -103,11 +103,12 @@
   &[data-name$=".beam"]:before       { .erlang-icon;     .dark-red; }
 
   // Fonts
-  &[data-name$=".eot"]:before   { .font-icon; .light-green;  }
-  &[data-name$=".ttf"]:before   { .font-icon; .medium-green;  }
-  &[data-name$=".otf"]:before   { .font-icon; .dark-yellow;  }
-  &[data-name$=".woff"]:before  { .font-icon; .medium-blue;  }
-  &[data-name$=".woff2"]:before { .font-icon; .dark-blue;  }
+  &[data-name$=".eot"]:before    { .font-icon; .light-green;   }
+  &[data-name$=".ttc"]:before    { .font-icon; .dark-green;    }
+  &[data-name$=".ttf"]:before    { .font-icon; .medium-green;  }
+  &[data-name$=".otf"]:before    { .font-icon; .dark-yellow;   }
+  &[data-name$=".woff"]:before   { .font-icon; .medium-blue;   }
+  &[data-name$=".woff2"]:before  { .font-icon; .dark-blue;     }
 
   // FSharp icon
   &[data-name$=".fs"]:before     { .fsharp-icon; .medium-blue; }
@@ -270,6 +271,7 @@
   &[data-name$=".html.erb"]:before   { .html5-icon;  .medium-red; }
 
   // Perl icon
+  &[data-name$=".pl6"]:before { .perl-icon; .medium-blue; }
   &[data-name$=".pl"]:before { .perl-icon; .medium-blue; }
   &[data-name$=".pm"]:before { .perl-icon; .medium-blue; }
   &[data-name$=".t"]:before { .perl-icon; .medium-blue; }
@@ -491,6 +493,23 @@
   &[data-name$=".ICO"]:before { .image-icon; .medium-blue;  }
   &[data-name$=".SVG"]:before { .svg-icon; .dark-yellow;  }
 
+  // Audio
+  &[data-name$=".mp3"]:before { .audio-icon; .medium-red;    }
+  &[data-name$=".m4p"]:before,
+  &[data-name$=".aac"]:before { .audio-icon; .dark-cyan;     }
+  &[data-name$=".aiff"]:before{ .audio-icon; .medium-purple; }
+  &[data-name$=".au"]:before  { .audio-icon; .medium-cyan;   }
+  &[data-name$=".flac"]:before{ .audio-icon; .dark-red;      }
+  &[data-name$=".m4a"]:before { .audio-icon; .medium-cyan;   }
+  &[data-name$=".mpc"]:before,
+  &[data-name$=".mp+"]:before,
+  &[data-name$=".mpp"]:before { .audio-icon; .dark-green;    }
+  &[data-name$=".oga"]:before { .audio-icon; .dark-orange;   }
+  &[data-name$=".opus"]:before{ .audio-icon; .dark-maroon;   }
+  &[data-name$=".ra"]:before,
+  &[data-name$=".rm"]:before  { .audio-icon; .dark-blue;     }
+  &[data-name$=".wav"]:before { .audio-icon; .dark-yellow;   }
+  &[data-name$=".wma"]:before { .audio-icon; .medium-blue;   }
 
   // Videos
   &[data-name$="avi"]:before  { .video-icon; .medium-blue;   }
@@ -508,7 +527,7 @@
   &[data-name$="mpeg"]:before { .video-icon; .medium-red;    }
   &[data-name$="3gpp"]:before { .video-icon; .light-blue;    }
   &[data-name$="ogm"]:before  { .video-icon; .dark-red;      }
-  
+
 
   // Windows specific Files
   &[data-name$=".bat"]:before { .windows-icon; .medium-purple;}
@@ -604,6 +623,9 @@
 
   // Jade
   &[data-name$=".jade"]:before  { .jade-icon; .medium-red;  }
+  
+  // LLVM Assembly
+  &[data-name$=".ll"]:before { .llvm-icon; .dark-green; }
 
   // ESLint icon
   &[data-name$=".eslintrc"]:before,
@@ -631,5 +653,16 @@ body.file-icons-on-changes {
     .name.icon:before {
       color: inherit !important;
     }
+  }
+}
+
+
+// #gh-271: Undo styling applied by Remote-Edit
+@{pane-tab-selector}{
+  &.icon-globe::before{
+    display: inline;
+    line-height: inherit;
+    width: auto;
+    height: auto;
   }
 }
