@@ -4,6 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Added
+- **New icons:** Babel, Webpack
+- **Support:** `.pug` files (Jade)
+
+
+
 [1.6.20] - 2016-03-31
 ---------------------
 ### Added
