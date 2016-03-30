@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ------------
 ### Added
 - **Support:** TrueType Collections (`.ttc`), generic audio formats
-
+- **Support:** Add uppercase SQL extension
 
 [1.6.19] - 2016-03-26
 ---------------------
@@ -465,7 +465,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Stylesheet to remove package colours
 - Updated Font Awesome to
   [4.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/4.1.0)
-  
+
 ### Removed
 - Go icon (too faint)
 
