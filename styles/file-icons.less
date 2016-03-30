@@ -67,6 +67,10 @@
   &[data-name$=".s"]:before,
   &[data-name$=".asm"]:before            { .binary-icon;          .medium-red; }
   &[data-name$=".ko"]:before             { .binary-icon;          .dark-green; }
+  
+  // Babel
+  &[data-name$=".babelrc"]:before        { .babel-icon;        .medium-yellow; }
+  &[data-name$=".babelignore"]:before    { .babel-icon;          .dark-yellow; }
 
   // Boot
   &[data-name$="build.boot"]:before      { .boot-icon; }
@@ -178,8 +182,6 @@
   &[data-name$=".csslintrc"]:before      { .gear-icon;         .medium-yellow; }
   &[data-name$=".jshintrc"]:before       { .gear-icon;         .medium-yellow; }
   &[data-name$=".jshintignore"]:before   { .gear-icon;                         }
-  &[data-name$=".babelrc"]:before        { .gear-icon;         .medium-yellow; }
-  &[data-name$=".babelignore"]:before    { .gear-icon;                         }
   &[data-name$=".jscsrc"]:before         { .gear-icon;         .medium-yellow; }
   &[data-name$=".module"]:before         { .gear-icon;           .medium-blue; }
   &[data-name=".htaccess"]:before        { .gear-icon;            .medium-red; }
@@ -561,6 +563,9 @@
 
   // Vue
   &[data-name$=".vue"]:before            { .vue-icon;            .light-green; }
+  
+  // Webpack
+  &[data-name$="webpack.config.js"]:before { .webpack-icon;     .medium-blue;  }
 
   // Windows-specific
   &[data-name$=".bat"]:before            { .windows-icon;      .medium-purple; }
