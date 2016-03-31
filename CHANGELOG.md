@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Babel, Webpack
+- **New icons:** Babel, Marko, Webpack
 - **Support:** `.pug` files (Jade)
 
 
