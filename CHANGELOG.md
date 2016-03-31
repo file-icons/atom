@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.6.21] - 2016-04-01
+---------------------
 ### Added
 - **New icons:** Babel, Marko, Webpack
 - **Support:** `.pug` files (Jade)
@@ -617,7 +617,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.20...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.21...HEAD
+[1.6.21]: https://github.com/DanBrooker/file-icons/compare/v1.6.20...v1.6.21
 [1.6.20]: https://github.com/DanBrooker/file-icons/compare/v1.6.19...v1.6.20
 [1.6.19]: https://github.com/DanBrooker/file-icons/compare/v1.6.18...v1.6.19
 [1.6.18]: https://github.com/DanBrooker/file-icons/compare/v1.6.17...v1.6.18
