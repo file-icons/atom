@@ -1,0 +1,2 @@
+# Prevent the icon-font's source from cluttering diffs
+selection.json -diff
