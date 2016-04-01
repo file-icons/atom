@@ -570,7 +570,7 @@
   &[data-name$=".vue"]:before            { .vue-icon;            .light-green; }
   
   // Webpack
-  &[data-name^="webpack.config."]:before { .webpack-icon;     .medium-blue;    }
+  &[data-name*="webpack.config."]:before { .webpack-icon;        .medium-blue; }
 
   // Windows-specific
   &[data-name$=".bat"]:before            { .windows-icon;      .medium-purple; }
