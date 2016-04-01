@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Flow
+- **New icons:** Broccoli, Flow
 
 ### Changed
 - Webpack icon now used for all filenames containing `webpack.config.`
