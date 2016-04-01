@@ -12,6 +12,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Webpack icon now used for all filenames containing `webpack.config.`
 
+### Fixed
+- Binary files now respect value of user's "Colourless Icons" setting
+
 
 
 [1.6.21] - 2016-04-01
