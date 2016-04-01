@@ -4,17 +4,20 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.0] - 2016-04-02
+--------------------
 ### Added
 - **New icons:** Broccoli, Flow
 - **Support:** Ruby gems
 
 ### Changed
 - Webpack icon now used for all filenames containing `webpack.config.`
+- Size/alignment tweaked for Kivy, SQL, Scala, OS X and Smarty icons
 
 ### Fixed
 - Binary files now respect value of user's "Colourless Icons" setting
+- Bright colours and faint icons now adjust for users of light-coloured themes
+- Dark red/maroon are brightened for users of darker themes
 
 
 
@@ -631,7 +634,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.6.21...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.0...HEAD
+[1.7.0]:  https://github.com/DanBrooker/file-icons/compare/v1.6.21...v1.7.0
 [1.6.21]: https://github.com/DanBrooker/file-icons/compare/v1.6.20...v1.6.21
 [1.6.20]: https://github.com/DanBrooker/file-icons/compare/v1.6.19...v1.6.20
 [1.6.19]: https://github.com/DanBrooker/file-icons/compare/v1.6.18...v1.6.19
