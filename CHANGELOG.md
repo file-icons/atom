@@ -4,6 +4,16 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Added
+- **New icons:** Flow
+
+### Changed
+- Webpack icon now used for all filenames containing `webpack.config.`
+
+
+
 [1.6.21] - 2016-04-01
 ---------------------
 ### Added
