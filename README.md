@@ -74,9 +74,9 @@ Some custom fonts are already provided
 
 ## Colours
 
-Colours are from the [Base16](https://github.com/chriskempson/base16) colour palette. CSS classes used to apply color follow its primary 8 (eight) colours and 3 (three) variants:
+Colours are from the [Base16](https://github.com/chriskempson/base16) colour palette. CSS classes used to apply color follow its primary 9 (nine) colours and 3 (three) variants:
 
-  * Red, Green, Yellow, Blue, Maroon, Purple, Orange, Cyan.
+  * Red, Green, Yellow, Blue, Maroon, Purple, Orange, Cyan, Pink
   * Light, Medium, Dark.
 
 Medium is colour provided by Base16. Light is medium lightened 15%. Dark is medium darkened 15%. In order to "construct" a CSS class color, you provide its variant followed by a dash (-).
@@ -87,9 +87,22 @@ Medium is colour provided by Base16. Light is medium lightened 15%. Dark is medi
 .dark-maroon;
 ```
 
+It is possible to overwrite the base colors by using the following variables in your `styles.less` file:
+
+```less
+@file-icons-red: #AC4142;
+@file-icons-green: #90A959;
+@file-icons-yellow: #F4BF75;
+@file-icons-blue: #6A9FB5;
+@file-icons-maroon: #8F5536;
+@file-icons-purple: #AA759F;
+@file-icons-orange: #D28445;
+@file-icons-cyan: #75B5AA;
+@file-icons-pink: #ff00cc;
+```
+
 # Changelog
 See [CHANGELOG.md](CHANGELOG.md).
-
 
 # Acknowledgments
 
