@@ -1,11 +1,12 @@
-// pane tab
-@pane-tab-selector: ~'atom-pane .tab-bar .tab .title[data-path]';
+// Pane tab
+@pane-tab-selector:      ~'atom-pane .tab-bar .tab .title[data-path]';
 @pane-tab-temp-selector: ~'atom-pane .tab-bar .tab.temp .title[data-path]';
 
 @{pane-tab-selector}:before {
   margin-right: 5px;
   vertical-align: top;
-  //for better visualization in mac os
+  
+  // For better visualisation in Mac OS
   -webkit-font-smoothing: antialiased;
 }
 

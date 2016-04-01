@@ -79,8 +79,8 @@
   &[data-name$="TODO"]:before            { .checklist-icon;    .medium-yellow; }
 
   // Clojure / ClojureScript
-  &[data-name$=".clj"]:before            { .clojure-icon;        .medium-blue; }
-  &[data-name$=".cljs"]:before           { .cljs-icon;           .medium-blue; }
+  &[data-name$=".clj"]:before            { .clojure-icon;         .auto(blue); }
+  &[data-name$=".cljs"]:before           { .cljs-icon;            .auto(blue); }
 
   // CoffeeScript
   &[data-name$=".coffee"]:before         { .coffee-icon;       .medium-maroon; }
@@ -307,14 +307,14 @@
   &[data-name$=".java"]:before           { .java-icon;         .medium-purple; }
 
   // JavaScript
-  &[data-name$=".js"]:before             { .js-icon;           .medium-yellow; }
-  &[data-name$=".es6"]:before            { .js-icon;           .medium-yellow; }
-  &[data-name$=".es"]:before             { .js-icon;           .medium-yellow; }
+  &[data-name$=".js"]:before             { .js-icon;            .auto(yellow); }
+  &[data-name$=".es6"]:before            { .js-icon;            .auto(yellow); }
+  &[data-name$=".es"]:before             { .js-icon;            .auto(yellow); }
 
   // JSX
-  &[data-name$=".jsx"]:before            { .jsx-icon;            .medium-blue; }
+  &[data-name$=".jsx"]:before            { .jsx-icon;             .auto(blue); }
   &[data-name$=".tsx"]:before            { .jsx-icon;             .light-blue; }
-  &[data-name$=".react.js"]:before       { .react-icon;          .medium-blue; }
+  &[data-name$=".react.js"]:before       { .react-icon;           .auto(blue); }
 
   // Kivy
   &[data-name$=".kv"]:before             { .kivy-icon;           .dark-maroon; }
@@ -383,8 +383,8 @@
   // Objective-C, C++, C
   &[data-name$=".c"]:before              { .c-icon;              .medium-blue; }
   &[data-name$=".h"]:before              { .c-icon;            .medium-purple; }
-  &[data-name$=".cpp"]:before            { .cpp-icon;            .medium-blue; }
-  &[data-name$=".hpp"]:before            { .cpp-icon;          .medium-purple; }
+  &[data-name$=".cpp"]:before            { .cpp-icon;             .auto(blue); }
+  &[data-name$=".hpp"]:before            { .cpp-icon;           .auto(purple); }
   &[data-name$=".cxx"]:before            { .cpp-icon;            .medium-blue; }
   &[data-name$=".cc"]:before             { .cpp-icon;            .medium-blue; }
   &[data-name$=".hxx"]:before            { .cpp-icon;          .medium-purple; }
@@ -392,7 +392,7 @@
   &[data-name$=".m"]:before              { .objc-icon;           .medium-blue; }
   &[data-name$=".mm"]:before             { .objc-icon;           .medium-blue; }
   &[data-name$=".swift"]:before          { .swift-icon;         .medium-green; }
-  &[data-name$=".cs"]:before             { .csharp-icon;         .medium-blue; }
+  &[data-name$=".cs"]:before             { .csharp-icon;          .auto(blue); }
   &[data-name$=".vb"]:before             { .code-icon;           .medium-blue; }
 
   // OCaml
@@ -494,7 +494,7 @@
   &.title[data-path][data-name$=".rlib"]:before        { vertical-align: -35%; }
 
   // SaltStack
-  &[data-name$=".sls"]:before            { .saltstack-icon;      .medium-blue; }
+  &[data-name$=".sls"]:before            { .saltstack-icon;       .auto(blue); }
 
   // Sass/SCSS
   &[data-name$=".sass"]:before           { .sass-icon;             .dark-pink; }
@@ -525,10 +525,10 @@
   &[data-name=".fishrc"]:before          { .terminal-icon;      .medium-green; }
 
   // Smarty
-  &[data-name$=".tpl"]:before            { .smarty-icon;       .medium-yellow; }
+  &[data-name$=".tpl"]:before            { .smarty-icon;        .auto(yellow); }
 
   // Sourcepwn
-  &[data-name$=".sp"]:before,            { .clojure-icon;      .medium-yellow; }
+  &[data-name$=".sp"]:before,            { .clojure-icon;       .auto(yellow); }
   &[data-name$=".inc"]:before            { .clojure-icon;       .medium-green; }
 
   // SQL
@@ -544,10 +544,10 @@
   &[data-name$=".tf"]:before             { .terraform-icon;      .dark-purple; }
 
   // TeX
-  &[data-name$=".tex"]:before            { .tex-icon;            .medium-blue; }
-  &[data-name$=".sty"]:before            { .tex-icon;             .medium-red; }
-  &[data-name$=".cls"]:before            { .tex-icon;          .medium-orange; }
-  &[data-name$=".bib"]:before            { .bibtex-icon;       .medium-yellow; }
+  &[data-name$=".tex"]:before            { .tex-icon;             .auto(blue); }
+  &[data-name$=".sty"]:before            { .tex-icon;              .auto(red); }
+  &[data-name$=".cls"]:before            { .tex-icon;           .auto(orange); }
+  &[data-name$=".bib"]:before            { .bibtex-icon;        .auto(yellow); }
 
   // Text
   &[data-name$=".txt"]:before            { .medium-cyan; }
@@ -597,7 +597,7 @@
   
   // Bower
   &[data-name=".bowerrc"]:before         { .bower-icon;                        }
-  &[data-name="bower.json"]:before       { .bower-icon;        .medium-yellow; }
+  &[data-name="bower.json"]:before       { .bower-icon;          .auto(bower); }
   
   // Broccoli
   &[data-name^="Brocfile."]:before,

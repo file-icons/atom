@@ -1,6 +1,11 @@
 @import "colors.less";
 @import "ui-variables";
 
+// Turn off antialiasing for Mac OS
+.thicken{
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
 
 /*============================================================================*
   Octicons
@@ -97,13 +102,13 @@
 /*============================================================================*/
 .devicons { font-family: "devicons"; font-size: large; text-align: center; top: 3px; }
 
-.bower-icon           { .devicons; content: "\e64d"; }
-.clojure-icon         { .devicons; content: "\e668"; }
+.bower-icon           { .devicons; content: "\e64d"; text-shadow: 0 0 0; }
+.clojure-icon         { .devicons; content: "\e668"; .thicken; }
 .dart-icon            { .devicons; content: "\e698"; }
 .dlang-icon           { .devicons; content: "\e6af"; }
 .erlang-icon          { .devicons; content: "\e6b1"; }
 .fsharp-icon          { .devicons; content: "\e6a7"; left: 1px; }
-.laravel-icon         { .devicons; content: "\e63f"; }
+.laravel-icon         { .devicons; content: "\e63f"; .thicken; }
 .meteor-icon          { .devicons; content: "\e6a5"; font-size: x-large; left: -2px; }
 .rails-icon           { .devicons; content: "\e63b"; }
 .sass-icon            { .devicons; content: "\e64b"; }
@@ -168,7 +173,7 @@
 .apl-icon           { .file-icons; content: "\e909"; font-size: 15px; }
 .asciidoc-icon      { .file-icons; content: "\e918"; font-size: 14px; }
 .babel-icon         { .file-icons; content: "\e91f"; font-size: 15px; top: 3px; left: 2px; }
-.bibtex-icon        { .file-icons; content: "\e601"; font-size: 8px;  top: -2px }
+.bibtex-icon        { .file-icons; content: "\e601"; font-size: 8px;  top: -2px; .thicken; }
 .boot-icon          { .file-icons; content: "\f103"; left: 2px; }
 .broccoli-icon      { .file-icons; content: "\e922"; font-size: 14px; }
 .cljs-icon          { .file-icons; content: "\f104"; }
@@ -209,7 +214,7 @@
 .saltstack-icon     { .file-icons; content: "\e915"; font-size: 14px; }
 .scad-icon          { .file-icons; content: "\e911"; font-size: 14px; }
 .terraform-icon     { .file-icons; content: "\e916"; font-size: 14px; }
-.tex-icon           { .file-icons; content: "\e600"; font-size: 8px;  top: 0 }
+.tex-icon           { .file-icons; content: "\e600"; font-size: 8px;  top: 0; .thicken; }
 .ts-icon            { .file-icons; content: "\e912"; font-size: 14px; left: -1px; top: 2px; }
 .webpack-icon       { .file-icons; content: "\e91e"; font-size: 15px; top: 3px; }
 .vue-icon           { .file-icons; content: "\e906"; font-size: 14px; top: 3px; }

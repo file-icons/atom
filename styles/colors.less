@@ -1,91 +1,144 @@
-// Base16 Colors from https://github.com/chriskempson/base16
+@import "ui-variables";
+
+// Base16 Colours from https://github.com/chriskempson/base16
 
 // Easy config for when user wants to display different icons,
-// but not colorize them.
+// but not colourise them.
 @colored-icons: true;
 
 /* @m<x> = .medium-<x>
- * @l<x> = .light-<x> (<x> ligthened 15%)
- * @d<x> = .dark-<x> (<x> darkened 15%)
+ * @l<x> = .light-<x> (<x> lightened 15%)
+ * @d<x> = .dark-<x>  (<x>  darkened 15%)
  */
 
-// Red Colors
+// Red
 @mr: #AC4142;
 @lr: lighten(@mr, 15%);
-@dr: darken(@mr, 15%);
+@dr:  darken(@mr, 15%);
 
-// Green colors
+// Green
 @mg: #90A959;
 @lg: lighten(@mg, 15%);
-@dg: darken(@mg, 15%);
+@dg:  darken(@mg, 15%);
 
-// Yellow colors
+// Yellow
 @my: #F4BF75;
 @ly: lighten(@my, 15%);
-@dy: darken(@my, 15%);
+@dy:  darken(@my, 15%);
 
-// Blue colors
+// Blue
 @mb: #6A9FB5;
 @lb: lighten(@mb, 15%);
-@db: darken(@mb, 15%);
+@db:  darken(@mb, 15%);
 
-// Maroon colors
+// Maroon
 @mm: #8F5536;
 @lm: lighten(@mm, 15%);
-@dm: darken(@mm, 15%);
+@dm:  darken(@mm, 15%);
 
-// Purple colors
+// Purple
 @mp: #AA759F;
 @lp: lighten(@mp, 15%);
-@dp: darken(@mp, 15%);
+@dp:  darken(@mp, 15%);
 
-// Orange colors
+// Orange
 @mo: #D28445;
 @lo: lighten(@mo, 15%);
-@do: darken(@mo, 15%);
+@do:  darken(@mo, 15%);
 
-// Cyan colors
+// Cyan
 @mc: #75B5AA;
 @lc: lighten(@mc, 15%);
-@dc: darken(@mc, 15%);
+@dc:  darken(@mc, 15%);
 
-// Pink colors
-@mpk: #ff00cc;
+// Pink
+@mpk: #F0C;
 @lpk: lighten(@mpk, 15%);
-@dpk: darken(@mpk, 15%);
+@dpk:  darken(@mpk, 15%);
 
-.light-red when (@colored-icons) { color: @lr; }
-.medium-red when (@colored-icons) { color: @mr; }
-.dark-red when (@colored-icons) { color: @dr; }
 
-.light-green when (@colored-icons) { color: @lg; }
-.medium-green when (@colored-icons) { color: @mg; }
-.dark-green when (@colored-icons) { color: @dg; }
 
-.light-yellow when (@colored-icons) { color: @ly; }
-.medium-yellow when (@colored-icons) { color: @my; }
-.dark-yellow when (@colored-icons) { color: @dy; }
+@theme-colour: @tree-view-background-color;
 
-.light-blue when (@colored-icons) { color: @lb; }
-.medium-blue when (@colored-icons) { color: @mb; }
-.dark-blue when (@colored-icons) { color: @db; }
 
-.light-maroon when (@colored-icons) { color: @lm; }
+// Darken certain shades that're too bright in light-coloured themes
+.darken-if-needed(@colour, @amount: 25%)
+	when (lightness(@theme-colour) >= 50%) {
+		color: darken(@colour, @amount);
+	}
+
+.darken-if-needed(@colour, @amount: 25%)
+	when (lightness(@theme-colour) < 50%) {
+		color: @colour;
+	}
+
+
+// Same as above, except consider all logic inverted
+.brighten-if-needed(@colour, @amount: 25%)
+	when (lightness(@theme-colour) < 50%) {
+		color: saturate(lighten(@colour, @amount), @amount);
+	}
+.brighten-if-needed(@colour, @amount: 25%)
+	when (lightness(@theme-colour) >= 50%) {
+		color: @colour;
+	}
+
+
+.light-red     when (@colored-icons) { color: @lr; }
+.medium-red    when (@colored-icons) { color: @mr; }
+.dark-red      when (@colored-icons) { .brighten-if-needed(@dr, 15%); }
+
+.light-green   when (@colored-icons) { .darken-if-needed(@lg, 5%); }
+.medium-green  when (@colored-icons) { color: @mg; }
+.dark-green    when (@colored-icons) { color: @dg; }
+
+.light-yellow  when (@colored-icons) { color: @ly; }
+.medium-yellow when (@colored-icons) { .darken-if-needed(@my, 15%); }
+.dark-yellow   when (@colored-icons) { .darken-if-needed(@dy, 10%);  }
+
+.light-blue    when (@colored-icons) { .darken-if-needed(@lb, 18%); }
+.medium-blue   when (@colored-icons) { color: @mb; }
+.dark-blue     when (@colored-icons) { color: @db; }
+
+.light-maroon  when (@colored-icons) { color: @lm; }
 .medium-maroon when (@colored-icons) { color: @mm; }
-.dark-maroon when (@colored-icons) { color: @dm; }
+.dark-maroon   when (@colored-icons) { .brighten-if-needed(@dm, 8%); }
 
-.light-purple when (@colored-icons) { color: @lp; }
+.light-purple  when (@colored-icons) { color: @lp; }
 .medium-purple when (@colored-icons) { color: @mp; }
-.dark-purple when (@colored-icons) { color: @dp; }
+.dark-purple   when (@colored-icons) { color: @dp; }
 
-.light-orange when (@colored-icons) { color: @lo; }
+.light-orange  when (@colored-icons) { .darken-if-needed(@lo, 8%); }
 .medium-orange when (@colored-icons) { color: @mo; }
-.dark-orange when (@colored-icons) { color: @do; }
+.dark-orange   when (@colored-icons) { color: @do; }
 
-.light-cyan when (@colored-icons) { color: @lc; }
-.medium-cyan when (@colored-icons) { color: @mc; }
-.dark-cyan when (@colored-icons) { color: @dc; }
+.light-cyan    when (@colored-icons) { .darken-if-needed(@lc, 18%); }
+.medium-cyan   when (@colored-icons) { color: @mc; }
+.dark-cyan     when (@colored-icons) { color: @dc; }
 
-.light-pink when (@colored-icons) { color: @lpk; }
-.medium-pink when (@colored-icons) { color: @mpk; }
-.dark-pink when (@colored-icons) { color: @dpk; }
+.light-pink    when (@colored-icons) { color: @lpk; }
+.medium-pink   when (@colored-icons) { color: @mpk; }
+.dark-pink     when (@colored-icons) { .brighten-if-needed(@dpk, 5%); }
+
+
+// Pick a dark or medium shade depending on the theme's brightness
+.auto(red)     when (lightness(@theme-colour) >= 50%) {      .dark-red; }
+.auto(red)     when (lightness(@theme-colour) <  50%) {    .medium-red; }
+.auto(green)   when (lightness(@theme-colour) >= 50%) {    .dark-green; }
+.auto(green)   when (lightness(@theme-colour) <  50%) {  .medium-green; }
+.auto(yellow)  when (lightness(@theme-colour) >= 50%) {   .dark-yellow; }
+.auto(yellow)  when (lightness(@theme-colour) <  50%) { .medium-yellow; }
+.auto(blue)    when (lightness(@theme-colour) >= 50%) {     .dark-blue; }
+.auto(blue)    when (lightness(@theme-colour) <  50%) {   .medium-blue; }
+.auto(maroon)  when (lightness(@theme-colour) >= 50%) {   .dark-maroon; }
+.auto(maroon)  when (lightness(@theme-colour) <  50%) { .medium-maroon; }
+.auto(purple)  when (lightness(@theme-colour) >= 50%) {   .dark-purple; }
+.auto(purple)  when (lightness(@theme-colour) <  50%) { .medium-purple; }
+.auto(orange)  when (lightness(@theme-colour) >= 50%) {   .dark-orange; }
+.auto(orange)  when (lightness(@theme-colour) <  50%) { .medium-orange; }
+.auto(cyan)    when (lightness(@theme-colour) >= 50%) {     .dark-cyan; }
+.auto(cyan)    when (lightness(@theme-colour) <  50%) {   .medium-cyan; }
+.auto(pink)    when (lightness(@theme-colour) >= 50%) {     .dark-pink; }
+.auto(pink)    when (lightness(@theme-colour) <  50%) {   .medium-pink; }
+.auto(bower)   when (lightness(@theme-colour) >= 50%) { .medium-orange; }
+.auto(bower)   when (lightness(@theme-colour) <  50%) { .medium-yellow; }
