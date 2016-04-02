@@ -7,8 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Appveyor
-- **Support:** `.jsbeautifyrc` files
+- **New icons:** Appveyor, Cakefile
+- **Support:** `.jsbeautifyrc`, `.coffeelintignore`
 
 
 [1.7.0] - 2016-04-02
