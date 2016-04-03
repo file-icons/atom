@@ -8,7 +8,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Appveyor, Cakefile
-- **Support:** `.jsbeautifyrc`, `.coffeelintignore`
+- **Support:** `.jsbeautifyrc`, `.coffeelintignore`, `mkfile`
+
+### Fixed
+- [[`#311`](https://github.com/DanBrooker/file-icons/issues/311)]
+            Lowercase `makefile` no longer matches any filename
 
 
 [1.7.0] - 2016-04-02
