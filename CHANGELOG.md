@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** AppleScript, Appveyor, Cakefile, Emacs Lisp, Illustrator, Photoshop, Sketch
-- **Support:** `.jsbeautifyrc`, `.coffeelintignore`, additional Makefile names (`mkfile`, `Kbuild`, `GNUmakefile`)
+- **Support:** `.jsbeautifyrc`, `.coffeelintignore`, additional Makefile names (`mkfile`, `Kbuild`, `GNUmakefile`), `.Rmd`
 
 ### Fixed
 - [[`#310`](https://github.com/DanBrooker/file-icons/issues/310)] Go icon replaced with something clearer
