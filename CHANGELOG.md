@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.1] - 2016-04-05
+--------------------
 ### Added
 - **New icons:** AppleScript, Appveyor, Cakefile, Emacs Lisp, Illustrator, Photoshop, Sketch
 - **Support:** `.jsbeautifyrc`, `.coffeelintignore`, additional Makefile names (`mkfile`, `Kbuild`, `GNUmakefile`), `.Rmd`
@@ -623,7 +623,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.0...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.1...HEAD
+[1.7.1]:  https://github.com/DanBrooker/file-icons/compare/v1.7.0...v1.7.1
 [1.7.0]:  https://github.com/DanBrooker/file-icons/compare/v1.6.21...v1.7.0
 [1.6.21]: https://github.com/DanBrooker/file-icons/compare/v1.6.20...v1.6.21
 [1.6.20]: https://github.com/DanBrooker/file-icons/compare/v1.6.19...v1.6.20
