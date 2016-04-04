@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** AppleScript, Appveyor, Cakefile, Emacs Lisp
+- **New icons:** AppleScript, Appveyor, Cakefile, Emacs Lisp, Illustrator, Photoshop, Sketch
 - **Support:** `.jsbeautifyrc`, `.coffeelintignore`, additional Makefile names (`mkfile`, `Kbuild`, `GNUmakefile`)
 
 ### Fixed
