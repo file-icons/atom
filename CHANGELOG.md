@@ -8,12 +8,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** AppleScript, Appveyor, Cakefile
-- **Support:** `.jsbeautifyrc`, `.coffeelintignore`, additional Makefile names
-               (`mkfile`, `Kbuild`, `GNUmakefile`)
+- **Support:** `.jsbeautifyrc`, `.coffeelintignore`, additional Makefile names (`mkfile`, `Kbuild`, `GNUmakefile`)
 
 ### Fixed
-- [[`#311`](https://github.com/DanBrooker/file-icons/issues/311)]
-            Lowercase `makefile` no longer matches any filename
+- [[`#311`](https://github.com/DanBrooker/file-icons/issues/311)] Lowercase `makefile` no longer matches any filename
+- Changelog now displays properly in Atom's Markdown preview
 
 
 [1.7.0] - 2016-04-02
@@ -44,8 +43,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [1.6.20] - 2016-03-31
 ---------------------
 ### Added
-- **Support:** TrueType Collections (`.ttc`), Perl 6 (`.pl6`), generic
-               audio formats, `.geojson`, `.phtml`, uppercased SQL extensions
+- **Support:** TrueType Collections (`.ttc`), Perl 6 (`.pl6`), generic audio formats, `.geojson`, `.phtml`, uppercased SQL extensions
 
 ### Fixed
 - Colour is now applied to Ruby manifests and Git/NPM-related config files
@@ -58,15 +56,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** LLVM assembly (`.ll`)
 
 ### Fixed
-- [[`#271`](https://github.com/DanBrooker/file-icons/issues/271)]
-            Tab icons misaligned in files opened by Remote-Edit
+- [[`#271`](https://github.com/DanBrooker/file-icons/issues/271)] Tab icons misaligned in files opened by Remote-Edit
 
 
 [1.6.18] - 2016-03-06
 ---------------------
 ### Fixed
-- [[`#296`](https://github.com/DanBrooker/file-icons/issues/296)]
-            Riot tag too large in Atom Material theme's tree view
+- [[`#296`](https://github.com/DanBrooker/file-icons/issues/296)] Riot tag too large in Atom Material theme's tree view
 
 
 [1.6.17] - 2016-03-01
@@ -76,10 +72,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - NPM icon changed to use block-shaped "n" used by npmjs.com
 
 ### Fixed
-- [[`#284`](https://github.com/DanBrooker/file-icons/issues/284)]
-            Pattern matching used for task runner config files
-- [[`#246`](https://github.com/DanBrooker/file-icons/issues/246)]
-            Text-file icons not showing in Flatland Dark UI theme
+- [[`#284`](https://github.com/DanBrooker/file-icons/issues/284)] Pattern matching used for task runner config files
+- [[`#246`](https://github.com/DanBrooker/file-icons/issues/246)] Text-file icons not showing in Flatland Dark UI theme
 
 
 [1.6.16] - 2016-02-27
@@ -88,8 +82,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** OCaml, Lua
 
 ### Fixed
-- Icons now display properly with the
-  [Seti UI](https://github.com/jesseweed/seti-ui) theme
+- Icons now display properly with the [Seti UI](https://github.com/jesseweed/seti-ui) theme
 
 ### Changed
 - Composer and Haml icons replaced with silhouetted versions
@@ -102,8 +95,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - This changelog
 - **New icons:** AsciiDoc, LiveScript, OrgMode, RAML, Riot, SaltStack, Terraform
-- **Support:** Video files, `.dockerignore`, `.json5`, `.lesshintrc`, `.hxml`,
-              `.ko`, `bash_profile`, `bash_login`, `bashrc`, VimL
+- **Support:** Video files, `.dockerignore`, `.json5`, `.lesshintrc`, `.hxml`, `.ko`, `bash_profile`, `bash_login`, `bashrc`, VimL
 
 ### Changed
 - JSX/TSX files use JSX icon instead of React's
@@ -119,22 +111,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icons:** Jade, ESLint, Fonts, TypeScript, PostCSS, OpenSCAD
 - **Support:** `.htaccess`, `.htpasswd`
-- Font Awesome updated to
-  [4.4](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.4.0)
+- Font Awesome updated to [4.4](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.4.0)
 
 ### Fixed
-- [[`#239`](https://github.com/DanBrooker/file-icons/issues/239)]
-            Bottom border of inactive tabs hidden/incomplete
-- [[`#248`](https://github.com/DanBrooker/file-icons/issues/248)]
-            Incorrect alignment/centring of React/JSX icon
+- [[`#239`](https://github.com/DanBrooker/file-icons/issues/239)] Bottom border of inactive tabs hidden/incomplete
+- [[`#248`](https://github.com/DanBrooker/file-icons/issues/248)] Incorrect alignment/centring of React/JSX icon
 
 
 
 [1.6.13] - 2015-12-01
 ---------------------
 ### Added
-- **New icons:** Ada, APL, Crystal, FORTRAN, Gradle, Groovy, Haxe, Kivy, Lisp,
-                 MAXScript, R, Vue
+- **New icons:** Ada, APL, Crystal, FORTRAN, Gradle, Groovy, Haxe, Kivy, Lisp, MAXScript, R, Vue
 - **Support:** Gnuplot scripts
 - [CONTRIBUTING.md](CONTRIBUTING.md) file explaining how to add new icons
 - Optimised version of preview image
@@ -262,8 +250,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 --------------------
 ### Added
 - **New icons:** D lang, Elixir, Erlang
-- Updated Devicons to
-  [1.8.0](https://github.com/vorillaz/devicons/releases/tag/1.8.0)
+- Updated Devicons to [1.8.0](https://github.com/vorillaz/devicons/releases/tag/1.8.0)
 
 ### Fixed
 - Prevent theme styling from italicising icons
@@ -284,8 +271,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 --------------------
 ### Added
 - **New fonts:** `latex` (for LaTeX/BibTeX icons)
-- **New icons:** TemplateToolkit TT, SQL, LaTeX, BibTeX,
-                 Windows-specific files (BAT, CMD, EXE, COM, REG)
+- **New icons:** TemplateToolkit TT, SQL, LaTeX, BibTeX, Windows-specific files (BAT, CMD, EXE, COM, REG)
 - **Support:** `.ndjson`, Babel Gulpfiles
 
 
@@ -341,16 +327,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** Nodemon
 
 ### Fixed
-- [[`#103`](https://github.com/DanBrooker/file-icons/issues/103)]
-            Tab icons for Settings and Release Notes disappearing
+- [[`#103`](https://github.com/DanBrooker/file-icons/issues/103)] Tab icons for Settings and Release Notes disappearing
 
 
 
 [1.4.8] - 2015-01-19
 --------------------
 ### Added
-- **Support:** D lang, Makefiles, `.config`, `.manifest`,
-               `.psd1`, `.ps1m`, `.ps1xml`
+- **Support:** D lang, Makefiles, `.config`, `.manifest`, `.psd1`, `.ps1m`, `.ps1xml`
 
 
 
@@ -367,8 +351,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [1.4.6] - 2015-01-15
 --------------------
 ### Fixed
-- [[`#104`](https://github.com/DanBrooker/file-icons/issues/104)]
-            Updated core selectors to use new custom elements
+- [[`#104`](https://github.com/DanBrooker/file-icons/issues/104)] Updated core selectors to use new custom elements
 
 ### Changed
 - Updated minimum compatible Atom version to 0.171.0
@@ -475,8 +458,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [1.3.2] - 2014-08-01
 --------------------
 ### Fixed
-- [[`#57`](https://github.com/DanBrooker/file-icons/issues/57)]
-           Console error causing dev tools to open when reloading window
+- [[`#57`](https://github.com/DanBrooker/file-icons/issues/57)] Console error causing dev tools to open when reloading window
 
 
 
@@ -491,8 +473,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Font smoothing to improve icon appearance on Mac OS
 
 ### Changed
-- [[`#54`](https://github.com/DanBrooker/file-icons/issues/54)]
-           Reverted CoffeeScript to use pre-1.3.0 icon
+- [[`#54`](https://github.com/DanBrooker/file-icons/issues/54)] Reverted CoffeeScript to use pre-1.3.0 icon
 - Reverted C and C++ files to use generic icons
 
 
@@ -505,8 +486,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** `.handlebars`, `.pp`
 - Stylesheet to override Unity theme's icon removal
 - Stylesheet to remove package colours
-- Updated Font Awesome to
-  [4.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/4.1.0)
+- Updated Font Awesome to [4.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/4.1.0)
 
 ### Removed
 - Go icon (too faint)
@@ -540,8 +520,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [1.2.4] - 2014-06-29
 --------------------
 ### Fixed
-- [[`#30`](https://github.com/DanBrooker/file-icons/issues/30)]
-           Text of active tab vertically misaligned
+- [[`#30`](https://github.com/DanBrooker/file-icons/issues/30)] Text of active tab vertically misaligned
 
 
 
@@ -597,8 +576,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [1.0.2] - 2014-05-28
 --------------------
 ### Fixed
-- [[`#7`](https://github.com/DanBrooker/file-icons/issues/7)]:
-          Incorrectly-centred icons
+- [[`#7`](https://github.com/DanBrooker/file-icons/issues/7)] Incorrectly-centred icons
 
 
 
@@ -613,10 +591,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [1.0.0] - 2014-05-24
 --------------------
 ### Added
-- **New fonts:** [FontAwesome](http://fortawesome.github.io/Font-Awesome/),
-                 [Mfizz](http://fizzed.com/oss/font-mfizz)
-- **New icons:** Checklists, Code, CoffeeScript, Comments, CSS3, Dashboard,
-                 Database, Gear, Git, HTML5, JSX, Package, Python, Secret
+- **New fonts:** [FontAwesome](http://fortawesome.github.io/Font-Awesome/), [Mfizz](http://fizzed.com/oss/font-mfizz)
+- **New icons:** Checklists, Code, CoffeeScript, Comments, CSS3, Dashboard, Database, Gear, Git, HTML5, JSX, Package, Python, Secret
 
 ### Changed
 - Moved colour and icon properties to different stylesheets
