@@ -117,30 +117,6 @@
 .vim-icon             { .devicons; content: "\e6c5"; }
 .windows-icon         { .devicons; content: "\e60f"; }
 
-
-// Adjust colour of Go icon depending on theme
-.set-go-bg-color(@c) when (lightness(@c) >= 50%) { background-color: lighten(@mc, 55%); }
-.set-go-bg-color(@c) when (lightness(@c) <  50%) { background-color:  darken(@mc, 55%); }
-
-.go-icon {
-  .devicons;
-  content: "\e624";
-  font-weight: bolder;
-  top: 4px;
-  -webkit-background-clip: text;
-  -webkit-text-stroke-color: transparent;
-  -webkit-text-stroke-width: 0.85px;
-  -webkit-transform: scale(1.15, 1.10);
-  font-size: medium;
-  
-  .set-go-bg-color(@tree-view-background-color);
-  color: @mb;
-  
-  .selected > &:before {
-    -webkit-text-stroke-width: 0 !important;
-  }
-}
-
 .git-icon {
   .devicons;
   content: "\e602";
@@ -189,6 +165,7 @@
 .flow-icon          { .file-icons; content: "\e921"; font-size: 15px; left: 2px; }
 .font-icon          { .file-icons; content: "\e90f"; font-size: 14px; left: 1px; top: -1px; }
 .fortran-icon       { .file-icons; content: "\e90a"; font-size: 14px; left: 1px; top: 1px; }
+.go-icon            { .file-icons; content: "\e624"; font-size: 15px; top: 3px; }
 .gradle-icon        { .file-icons; content: "\e903"; font-size: 14px; top: 1px; }
 .groovy-icon        { .file-icons; content: "\e904"; font-size: 14px; left: -1px; }
 .haml-icon          { .file-icons; content: "\f15b"; font-size: 15px; left: 1px; }

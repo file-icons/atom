@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** `.jsbeautifyrc`, `.coffeelintignore`, additional Makefile names (`mkfile`, `Kbuild`, `GNUmakefile`)
 
 ### Fixed
+- [[`#310`](https://github.com/DanBrooker/file-icons/issues/310)] Go icon replaced with something clearer
 - [[`#311`](https://github.com/DanBrooker/file-icons/issues/311)] Lowercase `makefile` no longer matches any filename
 - Changelog now displays properly in Atom's Markdown preview
 
