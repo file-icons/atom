@@ -1,3 +1,5 @@
+{basename} = require "path"
+
 module.exports =
   config:
     coloured:
@@ -22,6 +24,7 @@ module.exports =
     atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) =>
       @colour newValue
     @colour atom.config.get 'file-icons.coloured'
+    @observe true
 
     atom.config.onDidChange 'file-icons.forceShow', ({newValue, oldValue}) =>
       @forceShow newValue
@@ -34,7 +37,7 @@ module.exports =
     atom.config.onDidChange 'file-icons.tabPaneIcon', ({newValue, oldValue}) =>
       @tabPaneIcon newValue
     @tabPaneIcon atom.config.get 'file-icons.tabPaneIcon'
-    # console.log 'activate'
+
 
   deactivate: ->
     @disableSetiIcons false
@@ -42,7 +45,31 @@ module.exports =
     @onChanges false
     @colour true
     @tabPaneIcon false
-    # console.log 'deactivate'
+    @observe false
+
+
+  observe: (enabled) ->
+    if enabled
+      @observer = atom.workspace.observeTextEditors (editor) ->
+        
+        # New file
+        if not editor.getFileName()?
+          onSave = editor.onDidSave (file) ->
+            pane = atom.views.getView(atom.workspace.getActivePane())
+            tab  = pane?.querySelector(".tab-bar > .active.tab > .title")
+            
+            # Patch data-* attributes to fix missing tab-icon
+            if not tab.dataset.path
+              {path} = file
+              tab.dataset.path = path
+              tab.dataset.name = basename path
+            
+            # Remove the listener
+            onSave.dispose()
+            
+    else if @observer?
+      @observer.dispose()
+
 
   serialize: ->
     # console.log 'serialize'
