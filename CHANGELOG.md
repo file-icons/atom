@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** `PKGBUILD`, `.ebuild`, `.ad`, `.spacemacs`
+- **Support:** `PKGBUILD`, `.ebuild`, `.ad`, `.spacemacs`, `.desktop`, `.directory`, `.menu`, `_service`, `_osc`, `.install`
 
 
 [1.7.1] - 2016-04-05
