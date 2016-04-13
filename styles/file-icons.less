@@ -104,7 +104,7 @@
   // Config files
   &[data-name$=".ini"]:before            { .config-icon;       .medium-yellow; }
   &[data-name$=".desktop"]:before        { .config-icon;       .medium-yellow; }
-  &[data-name$=".directory"]:before            { .config-icon;       .medium-yellow; }
+  &[data-name$=".directory"]:before      { .config-icon;       .medium-yellow; }
   &[data-name$=".properties"]:before     { .config-icon;       .medium-purple; }
   &[data-name$=".toml"]:before           { .config-icon;        .medium-green; }
 
@@ -236,7 +236,7 @@
 
   // Generic format: Code
   &[data-name$=".xml"]:before            { .code-icon;           .medium-blue; }
-  &[data-name="_service"]               { .code-icon;           .medium-blue; }
+  &[data-name="_service"]                { .code-icon;           .medium-blue; }
   &[data-name$=".menu"]:before           { .code-icon;           .medium-blue; }
   &[data-name$=".config"]:before         { .code-icon;           .medium-blue; }
   &[data-name$=".manifest"]:before       { .code-icon;           .medium-blue; }
@@ -244,6 +244,9 @@
   &[data-name$=".cfc"]:before            { .code-icon;            .light-cyan; }
   &[data-name$=".cfm"]:before            { .code-icon;           .medium-cyan; }
   &[data-name$=".cfml"]:before           { .code-icon;           .medium-cyan; }
+  &[data-name$=".m4"]:before             { .code-icon;            .medium-red; }
+  &[data-name$=".sed"]:before            { .code-icon;            .dark-green; }
+  &[data-name="configure.ac"]:before     { .code-icon;            .medium-red; }
 
   // Generic format: Fonts
   &[data-name$=".eot"]:before            { .font-icon;           .light-green; }
@@ -374,6 +377,7 @@
   &[data-name="mkfile"]:before           { .checklist-icon;    .medium-yellow; }
   &[data-name$=".mk"]:before             { .checklist-icon;    .medium-yellow; }
   &[data-name$=".mak"]:before            { .checklist-icon;    .medium-yellow; }
+  &[data-name$=".am"]:before             { .checklist-icon;       .medium-red; }
 
   // Markdown (except readme.md)
   &[data-name$=".mdown"]:before,
@@ -426,6 +430,7 @@
   &[data-name$=".swift"]:before          { .swift-icon;         .medium-green; }
   &[data-name$=".cs"]:before             { .csharp-icon;          .auto(blue); }
   &[data-name$=".vb"]:before             { .code-icon;           .medium-blue; }
+  &[data-name="config.h.in"]:before      { .c-icon;               .medium-red; }
 
   // OCaml
   &[data-name$=".ml"]:before             { .ocaml-icon;        .medium-orange; }
@@ -547,6 +552,7 @@
   &[data-name$=".bash"]:before,
   &[data-name$=".ebuild"]:before,
   &[data-name$=".install"]:before,
+  &[data-name="install-sh"]:before,
   &[data-name="_osc"],
   &[data-name="PKGBUILD"],
   &[data-name="bashrc"]:before,
@@ -559,6 +565,14 @@
   &[data-name=".zshrc"]:before           { .terminal-icon;       .medium-blue; }
   &[data-name$=".fish"]:before,
   &[data-name=".fishrc"]:before          { .terminal-icon;      .medium-green; }
+  &[data-name="configure"]:before,
+  &[data-name="config.guess"]:before,
+  &[data-name="config.rpath"]:before,
+  &[data-name="config.status"]:before,
+  &[data-name="config.sub"]:before,
+  &[data-name="depcomp"]:before,
+  &[data-name="libtool"]:before,
+  &[data-name="compile"]:before          { .terminal-icon;        .medium-red; }
 
   // Sketch
   &[data-name$=".sketch"]:before         { .sketch-icon;       .medium-orange; }
