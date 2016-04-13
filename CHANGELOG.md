@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
+- **New icons:** Doxygen
 - **Support:** `PKGBUILD`, `.ebuild`, `.ad`, `.spacemacs`, `.desktop`, `.directory`, `.menu`, `_service`, `_osc`, `.install`
 
 
