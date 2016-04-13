@@ -233,7 +233,7 @@
 
   // Generic format: Code
   &[data-name$=".xml"]:before            { .code-icon;           .medium-blue; }
-  &[data-name$="_service"]:before        { .code-icon;           .medium-blue; }
+  &[data-name="_service"]               { .code-icon;           .medium-blue; }
   &[data-name$=".menu"]:before           { .code-icon;           .medium-blue; }
   &[data-name$=".config"]:before         { .code-icon;           .medium-blue; }
   &[data-name$=".manifest"]:before       { .code-icon;           .medium-blue; }
@@ -544,8 +544,8 @@
   &[data-name$=".bash"]:before,
   &[data-name$=".ebuild"]:before,
   &[data-name$=".install"]:before,
-  &[data-name$="_osc"]:before,
-  &[data-name$="PKGBUILD"]:before,
+  &[data-name="_osc"],
+  &[data-name="PKGBUILD"],
   &[data-name="bashrc"]:before,
   &[data-name=".bashrc"]:before,
   &[data-name="bash_login"]:before,
