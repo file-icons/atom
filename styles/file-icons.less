@@ -14,14 +14,24 @@
 }
 
 
-// Git
-.icon-file-directory[data-name=".git"]:before     { .git-icon; }
+// Directory icons
+.icon-file-directory {
+  
+  // Git
+  &[data-name=".git"]:before     { .git-icon; }
+  
+  // GitHub
+  &[data-name=".github"]:before  { .github-icon; }
 
-// Package
-.icon-file-directory[data-name=".bundle"]:before  { .package-icon; }
+  // Package
+  &[data-name=".bundle"]:before  { .package-icon; }
+  
+  // Meteor
+  &[data-name=".meteor"]:before  { .meteor-icon; }
+}
 
-// Meteor
-.icon-file-directory[data-name=".meteor"]:before  { .meteor-icon; }
+
+
 
 // Default: Image
 .icon-file-media[data-name$=".png"]:before { .medium-orange; }
