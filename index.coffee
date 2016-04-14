@@ -49,24 +49,44 @@ module.exports =
 
 
   observe: (enabled) ->
+    
+    # Setting up observers
     if enabled
       @observer = atom.workspace.observeTextEditors (editor) ->
+        workspace = atom.views.getView(atom.workspace)
+        openedFile = editor.getPath()
         
         # New file
-        if not editor.getFileName()?
+        unless openedFile
           onSave = editor.onDidSave (file) ->
-            pane = atom.views.getView(atom.workspace.getActivePane())
-            tab  = pane?.querySelector(".tab-bar > .active.tab > .title")
+            tab = workspace?.querySelector(".tab-bar > .active.tab > .title")
             
             # Patch data-* attributes to fix missing tab-icon
-            if not tab.dataset.path
+            if not tab?.dataset.path
               {path} = file
               tab.dataset.path = path
               tab.dataset.name = basename path
             
             # Remove the listener
             onSave.dispose()
+        
+        # Existing file: wait for pane to finish loading before querying the DOM
+        else
+          onDone = editor.onDidStopChanging () ->
+            tabs = workspace?.querySelectorAll(".pane > .tab-bar > .tab")
+            fileTabs = [].filter.call tabs, (tab) -> tab?.item is editor
             
+            # When a file's been renamed, patch the dataset of each tab that has it open
+            editor.onDidChangePath (path) =>
+              for tab in fileTabs
+                title = tab.itemTitle
+                title.dataset.path = path
+                title.dataset.name = basename path
+            
+            # Drop the registration listener
+            onDone.dispose()
+    
+    # Disable observers if deactivating package
     else if @observer?
       @observer.dispose()
 

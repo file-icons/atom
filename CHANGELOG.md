@@ -11,6 +11,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** `.ad`, `.am`, `.desktop`, `.directory`, `.ebuild`, `.install`, `.m4`, `.menu`, `_osc`, `PKGBUILD`, `.sed`, `_service`, `.spacemacs`
 - Support for numerous GNU Automake/Autoconf files
 
+### Fixed
+- [[`#193`](https://github.com/DanBrooker/file-icons/issues/193)] Tab icons now update when changing file extensions
+- [[`#316`](https://github.com/DanBrooker/file-icons/issues/316)] Newly-saved files now display icons in tab
+
 
 [1.7.1] - 2016-04-05
 --------------------
