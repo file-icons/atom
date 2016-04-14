@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Doxygen
-- **Support:** `.ad`, `.am`, `.desktop`, `.directory`, `.ebuild`, `.install`, `.m4`, `.menu`, `_osc`, `PKGBUILD`, `.sed`, `_service`, `.spacemacs`
+- **Support:** `.ad`, `.am`, `.desktop`, `.directory`, `.ebuild`, `.install`, `.m4`, `.menu`, `_osc`, `PKGBUILD`, `.sed`, `_service`, `.spacemacs`, `Brewfile`
 - Support for numerous GNU Automake/Autoconf files
 
 ### Fixed
