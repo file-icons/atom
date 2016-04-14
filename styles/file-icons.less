@@ -5,7 +5,8 @@
 @import "ui-variables";
 
 
-// Defaults
+/*==[ DEFAULTS ]==============================================================*/
+
 .icon-file-text,
 .icon-file-directory,
 .icon-file-media,
@@ -13,8 +14,20 @@
   &:before { text-align: center; }
 }
 
+// Images
+.icon-file-media[data-name$=".png"]:before { .medium-orange; }
+.icon-file-media[data-name$=".gif"]:before { .medium-yellow; }
+.icon-file-media[data-name$=".jpg"]:before { .medium-green;  }
 
-// Directory icons
+// Book
+.icon-book[data-name="README.md"]:before,
+.icon-book[data-name="Readme.md"]:before,
+.icon-book[data-name="readme.md"]:before { .medium-blue; }
+
+
+
+/*==[ DIRECTORY ICONS ]=======================================================*/
+
 .icon-file-directory {
   
   // Git
@@ -32,20 +45,8 @@
 
 
 
+/*==[ FILE ICONS ]============================================================*/
 
-// Default: Image
-.icon-file-media[data-name$=".png"]:before { .medium-orange; }
-.icon-file-media[data-name$=".gif"]:before { .medium-yellow; }
-.icon-file-media[data-name$=".jpg"]:before { .medium-green;  }
-
-// Default: Book
-.icon-book[data-name="README.md"]:before,
-.icon-book[data-name="Readme.md"]:before,
-.icon-book[data-name="readme.md"]:before { .medium-blue; }
-
-
-
-// File icons
 .file-icons-tab-pane-icon @{pane-tab-selector},
 .icon-file-text,
 .icon-file-binary,
