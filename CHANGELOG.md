@@ -3,6 +3,14 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[Unpublished]
+-------------
+### Added
+- **New icons:** ColdFusion
+
+### Fixed
+- `_osc` and `PKGBUILD` icons now show icons correctly
+
 
 [1.7.2] - 2016-04-14
 --------------------
