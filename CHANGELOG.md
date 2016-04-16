@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** ABAP, ANTLR, API Blueprint, ColdFusion, Pascal
+- **New icons:** ABAP, ActionScript, ANTLR, API Blueprint, ColdFusion, Pascal
 - **Support:** ASP.net
 
 ### Fixed
