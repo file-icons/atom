@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** ABAP, ANTLR, API Blueprint, ColdFusion, Pascal
+- **Support:** ASP.net
 
 ### Fixed
 - `_osc` and `PKGBUILD` icons now show icons correctly
