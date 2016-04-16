@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** ABAP, ANTLR, ColdFusion, Pascal
+- **New icons:** ABAP, ANTLR, API Blueprint, ColdFusion, Pascal
 
 ### Fixed
 - `_osc` and `PKGBUILD` icons now show icons correctly
