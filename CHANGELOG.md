@@ -6,8 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** ABAP, ActionScript, ANTLR, API Blueprint, ColdFusion, Pascal
-- **Support:** Agda, ASP.net
+- **New icons:** ABAP, ActionScript, ANTLR, API Blueprint, Arc, ColdFusion, Pascal
+- **Support:** Agda, ASP.net, `.pcss`
 
 ### Fixed
 - `_osc` and `PKGBUILD` icons now show icons correctly
