@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** ABAP, ActionScript, Alloy, ANTLR, API Blueprint, Arc, Arduino, ATS, Augeas, AutoHotkey, AutoIt, ColdFusion, Pascal
+- **New icons:** ABAP, ActionScript, Alloy, ANTLR, API Blueprint, Arc, Arduino, ATS, Augeas, AutoHotkey, AutoIt, ColdFusion, Manual pages, Pascal
 - **Support:** Agda, ASP.net, AspectJ, AWK-scripts, Extra assembly extensions, `.pcss`
 
 ### Fixed
