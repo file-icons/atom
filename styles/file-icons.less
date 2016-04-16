@@ -117,8 +117,18 @@
   &[data-name$=".o"]:before,
   &[data-name$=".out"]:before,
   &[data-name$=".s"]:before,
+  &[data-name$=".a51"]:before,
+  &[data-name$=".nasm"]:before,
   &[data-name$=".asm"]:before            { .binary-icon;          .medium-red; }
   &[data-name$=".ko"]:before             { .binary-icon;          .dark-green; }
+  &[data-name$=".objdump"]:before,
+  &[data-name$=".c-objdump"]:before,
+  &[data-name$=".cppobjdump"]:before,
+  &[data-name$=".c++-objdump"]:before,
+  &[data-name$=".c++objdump"]:before,
+  &[data-name$=".cpp-objdump"]:before,
+  &[data-name$=".cxx-objdump"]:before    { .binary-icon;         .dark-orange; }
+  &[data-name$=".d-objdump"]:before      { .binary-icon;           .dark-blue; }
 
   // Babel
   &[data-name$=".babelrc"]:before        { .babel-icon;        .medium-yellow; }
