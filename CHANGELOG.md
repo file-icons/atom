@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Bluespec, Boo, Brainfuck, Bro, Glade, GNU
-- **Support:** Befunge, BitBake, Brightscript, C2hs, COBOL, `.csx`, Extra extensions for C and C++
+- **Support:** Befunge, BitBake, Brightscript, C2hs, Cap'n Proto, COBOL, `.csx`, Extra extensions for C and C++
 
 
 [1.7.3] - 2016-04-17
