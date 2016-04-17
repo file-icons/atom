@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Glade
+- **New icons:** Glade, GNU
 
 
 [1.7.3] - 2016-04-17
