@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Dogescript, IDL, Jakefile
+- **New icons:** Dogescript, IDL, Jakefile, Verilog
 - **Support:** LOLCODE, Omgrofl
 
 
