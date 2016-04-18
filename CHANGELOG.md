@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Bluespec, Boo, Brainfuck, Bro, Glade, GNU, Stylelint
+- **New icons:** Ant Build System, Bluespec, Boo, Brainfuck, Bro, Glade, GNU, Stylelint
 - **Support:** Befunge, BitBake, Brightscript, C2hs, Cap'n Proto, COBOL, `.csx`, Extra extensions for C and C++
 
 
