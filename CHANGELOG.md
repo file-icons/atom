@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Ant Build System, Bluespec, Boo, Brainfuck, Bro, ChucK, CLIPS, CMake, Component Pascal, Glade, GNU, Isabelle, Jinja, Mapbox, Stylelint
-- **Support:** AGS, ApacheConf (`.apacheconf`, `.vhost), Befunge, BitBake, BlitzMax, Brightscript, C2hs, Cap'n Proto, COBOL, `.csx`, Extra extensions for C, C++ and Erlang, Jenkins
+- **Support:** AGS, ApacheConf (`.apacheconf`, `.vhost), Befunge, BitBake, BlitzMax, Brightscript, C2hs, Cap'n Proto, COBOL, `.csx`, Extra extensions for C, C++ and Erlang, Haskell `.hsc` files, HTTP, Jenkins, JSONLD, TopoJSON
 
 
 [1.7.3] - 2016-04-17

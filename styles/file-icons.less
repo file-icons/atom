@@ -250,8 +250,11 @@
   // Data files
   &[data-name$=".json"]:before           { .database-icon;     .medium-yellow; }
   &[data-name$=".json5"]:before          { .database-icon;       .dark-yellow; }
+  &[data-name$=".jsonld"]:before         { .database-icon;       .medium-blue; }
+  &[data-name$=".http"]:before           { .database-icon;        .medium-red; }
   &[data-name$=".hjson"]:before          { .database-icon;     .medium-yellow; }
   &[data-name$=".geojson"]:before        { .database-icon;     .medium-yellow; }
+  &[data-name$=".topojson"]:before       { .database-icon;     .medium-yellow; }
   &[data-name$=".ndjson"]:before         { .database-icon;     .medium-orange; }
   &[data-name$=".cson"]:before           { .database-icon;     .medium-maroon; }
   &[data-name$=".yml"]:before            { .database-icon;         .light-red; }
@@ -443,6 +446,7 @@
 
   // Haskell
   &[data-name$=".hs"]:before             { .haskell-icon;      .medium-purple; }
+  &[data-name$=".hsc"]:before            { .haskell-icon;        .medium-blue; }
   &[data-name$=".c2hs"]:before           { .haskell-icon;        .dark-purple; }
 
   // Haxe
@@ -797,6 +801,7 @@
 
   // TeX
   &[data-name$=".tex"]:before            { .tex-icon;             .auto(blue); }
+  &[data-name$=".aux"]:before            { .tex-icon;            .auto(green); }
   &[data-name$=".sty"]:before            { .tex-icon;              .auto(red); }
   &[data-name$=".cls"]:before            { .tex-icon;           .auto(orange); }
   &[data-name$=".bib"]:before            { .bibtex-icon;        .auto(yellow); }
