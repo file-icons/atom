@@ -8,10 +8,51 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Dogescript, IDL, Jakefile, Verilog
-- **Support:** LOLCODE, Omgrofl
-- Font Awesome updated to [4.6.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.6.1)
+- **Support:**
+  - Ant: `.ant`
+  - Clojure: `.boot`, `.cl2`, `.cljc`, `.cljs.hl`, `.cljscm`, `.cljx`, `.hic`, `riemann.config`
+  - Common Lisp: `.podsl`, `.sexp`
+  - `.cproject`
+  - Generic code: `.axml`, `.ccxml`, `.clixml`
+  - Gnuplot: `.gnu`, `.plot`, `.plt`
+  - Config files: `.cfg`, `.prefs`
+  - JavaScript: `._js`, `.jsb`, `.jsfl`, `.jsm`, `.jss`, `.sjs`, `.ssjs`, `.xsjs`, `.xsjslib`
+  - Literate Agda
+  - Literate Haskell
+  - LiveScript: `._ls`, `Slakefile`
+  - Lua: `.pd_lua`, `.rbxs`
+  - LOLCODE
+  - Markdown: `.mkdn`
+  - nesC: `.nc`
+  - NewLisp: `.nl`
+  - Nginx: `.nginxconf`
+  - Node.js: `.njs`
+  - Omgrofl
+  - OpenSCAD: `.jscad`
+  - Perl: `.perl`, `.ph`, `.plx`, `.psgi`
+  - Perl6: `.6pl`, `.6pm`, `.nqp`, `.p6`, `.p6l`, `.p6m`, `.pm6`, `Rexfile`
+  - PHP: `.php{3-5}`, `.phps`, `.phpt`
+  - PLSQL: `.pck`, `.pkb`, `.pks`, `.plb`, `.pls`, `.plsql`
+  - Protocol Buffers
+  - Python: `.bzl`, `.gyp`, `.lmi`, `.pyde`, `.pyp`, `.pyt`, `.pyw`, `.wsgi`, `.xpy`, `BUCK`, `BUILD`, `SConscript`, `SConstruct`, `Snakefile`, `wscript`
+  - Python Tracebacks
+  - RHTML
+  - Ruby: `.builder`, `.god`, `.irbrc`, `.jbuilder`, `.mspec`, `.pluginspec`, `.podspec`, `.pryrc`, `.rabl`, `.rbuild`, `.rbw`, `.rbx`, `.ruby`, `.thor`, `.watchr`, `Appraisals`, `Berksfile`, `Buildfile`, `Deliverfile`, `Fastfile`, `Jarfile`, `Mavenfile`, `Podfile`, `Puppetfile`, `Snapfile`, `Thorfile`, `Vagrantfile`
+  - Rust: `.rs.in`
+  - SQL: `.cql`, `.db2`, `.ddl`, `.prc`, `.tab`, `.udf`, `.viw`
+  - Scala: `.sc`, `.sbt`
+  - Scaml
+  - Shell: `.bats`, `.command`, `.ksh`, `.sh.in`, `.tmux`, `.tool`
+  - ShellSession
+  - SourcePawn: `.sma`
+  - Squirrel: `.nut`
+  - Tea: `.tea`
+  - TeX: `.bbx`, `.cbx`, `.dtx`, `.ins`, `.lbx`, `.ltx`, `.mkii`, `.mkiv`, `.mkvi`, `.toc`
+  - Unified Parallel C
+  - Visual Basic: `.bas`, `.csproj`, `.frm`, `.frx`, `.vba`, `.vbhtml`, `.vbs`
 
 ### Changed
+- Font Awesome updated to [4.6.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.6.1)
 - Devicons, Icomoon, and Mfizz fonts converted to WOFF2 for better compression
 
 

@@ -63,6 +63,7 @@
   
   // ActionScript
   &[data-name$=".as"]:before             { .as-icon;              .medium-red; }
+  &[data-name$=".jsfl"]:before           { .as-icon;            .auto(yellow); }
 
   // Ada
   &[data-name$=".ada"]:before,
@@ -113,8 +114,9 @@
   &[data-name$=".aspx"]:before           { .asp-icon;          .medium-purple; }
   &[data-name$=".axd"]:before            { .asp-icon;            .medium-cyan; }
   
-  // AspectJ
+  // AspectJ / Eclipse
   &[data-name$=".aj"]:before             { .eclipse-icon;      .medium-maroon; }
+  &[data-name$=".cproject"]:before       { .eclipse-icon;          .dark-blue; }
 
   // Assembly and binary
   &[data-name$=".o"]:before,
@@ -169,7 +171,7 @@
   &[data-name$=".boo"]:before            { .boo-icon;           .medium-green; }
 
   // Boot
-  &[data-name$="build.boot"]:before      { .boot-icon; }
+  &[data-name$=".boot"]:before           { .boot-icon; }
   
   // Brainfuck
   &[data-name$=".bf"]:before,
@@ -195,7 +197,13 @@
 
   // Clojure / ClojureScript
   &[data-name$=".clj"]:before            { .clojure-icon;         .auto(blue); }
+  &[data-name$=".cl2"]:before            { .clojure-icon;       .auto(purple); }
+  &[data-name$=".cljc"]:before           { .clojure-icon;        .auto(green); }
+  &[data-name$=".cljx"]:before           { .clojure-icon;          .auto(red); }
+  &[data-name$=".hic"]:before            { .clojure-icon;          .auto(red); }
+  &[data-name$=".cljs.hl"]:before        { .cljs-icon;            .auto(blue); }
   &[data-name$=".cljs"]:before           { .cljs-icon;            .auto(blue); }
+  &[data-name$=".cljscm"]:before         { .cljs-icon;            .auto(blue); }
 
   // CMake
   &[data-name$=".cmake"]:before          { .cmake-icon;         .medium-green; }
@@ -222,6 +230,8 @@
   &[data-name$=".desktop"]:before        { .config-icon;       .medium-yellow; }
   &[data-name$=".directory"]:before      { .config-icon;       .medium-yellow; }
   &[data-name$=".properties"]:before     { .config-icon;       .medium-purple; }
+  &[data-name$=".cfg"]:before            { .config-icon;       .medium-yellow; }
+  &[data-name$=".prefs"]:before          { .config-icon;       .medium-yellow; }
   &[data-name$=".toml"]:before           { .config-icon;        .medium-green; }
 
   // Crystal
@@ -256,6 +266,8 @@
   &[data-name$=".geojson"]:before        { .database-icon;     .medium-yellow; }
   &[data-name$=".topojson"]:before       { .database-icon;     .medium-yellow; }
   &[data-name$=".ndjson"]:before         { .database-icon;     .medium-orange; }
+  &[data-name$=".proto"]:before          { .database-icon;         .dark-cyan; }
+  &[data-name$=".pytb"]:before           { .database-icon;     .medium-orange; }
   &[data-name$=".cson"]:before           { .database-icon;     .medium-maroon; }
   &[data-name$=".yml"]:before            { .database-icon;         .light-red; }
   &[data-name$=".yaml"]:before           { .database-icon;         .light-red; }
@@ -361,6 +373,9 @@
 
   // Generic format: Code
   &[data-name$=".xml"]:before            { .code-icon;           .medium-blue; }
+  &[data-name$=".axml"]:before           { .code-icon;             .dark-blue; }
+  &[data-name$=".ccxml"]:before          { .code-icon;             .dark-blue; }
+  &[data-name$=".clixml"]:before         { .code-icon;             .dark-blue; }
   &[data-name="_service"]                { .code-icon;           .medium-blue; }
   &[data-name$=".menu"]:before           { .code-icon;           .medium-blue; }
   &[data-name$=".config"]:before         { .code-icon;           .medium-blue; }
@@ -380,6 +395,7 @@
   &[data-name$=".ccp"]:before            { .code-icon;           .dark-maroon; }
   &[data-name$=".cpy"]:before            { .code-icon;           .dark-maroon; }
   &[data-name$=".capnp"]:before          { .code-icon;              .dark-red; }
+  &[data-name$=".lagda"]:before          { .code-icon;           .medium-cyan; }
   &[data-name$=".lol"]:before            { .code-icon;           .medium-pink; }
   &[data-name$=".omgrofl"]:before        { .code-icon;           .dark-purple; }
 
@@ -433,7 +449,10 @@
 
   // Gnuplot
   &[data-name$=".gp"]:before,
+  &[data-name$=".plt"]:before,
+  &[data-name$=".plot"]:before,
   &[data-name$=".gnuplot"]:before        { .graph-icon;           .medium-red; }
+  &[data-name$=".gnu"]:before            { .gnu-icon;              .auto(red); }
 
   // Go
   &[data-name$=".go"]:before             { .go-icon;             .medium-blue; }
@@ -453,6 +472,7 @@
   &[data-name$=".hs"]:before             { .haskell-icon;      .medium-purple; }
   &[data-name$=".hsc"]:before            { .haskell-icon;        .medium-blue; }
   &[data-name$=".c2hs"]:before           { .haskell-icon;        .dark-purple; }
+  &[data-name$=".lhs"]:before            { .haskell-icon;          .dark-blue; }
 
   // Haxe
   &[data-name$=".hx"]:before,
@@ -470,6 +490,7 @@
   &[data-name$=".swig"]:before           { .html5-icon;         .medium-green; }
   &[data-name$=".phtml"]:before          { .html5-icon;            .dark-blue; }
   &[data-name$=".cshtml"]:before         { .html5-icon;           .medium-red; }
+  &[data-name$=".scaml"]:before          { .html5-icon;             .dark-red; }
 
   // IDL
   &[data-name$=".dlm"]:before            { .idl-icon;            .medium-blue; }
@@ -486,14 +507,24 @@
 
   // Jakefile
   &[data-name="Jakefile"]:before         { .jake-icon;          .auto(maroon); }
+  &[data-name$=".jake"]:before           { .jake-icon;          .auto(yellow); }
 
   // Java
   &[data-name$=".java"]:before           { .java-icon;         .medium-purple; }
 
   // JavaScript
   &[data-name$=".js"]:before             { .js-icon;            .auto(yellow); }
+  &[data-name$="._js"]:before            { .js-icon;            .auto(orange); }
+  &[data-name$=".jsb"]:before            { .js-icon;            .auto(maroon); }
+  &[data-name$=".jsm"]:before            { .js-icon;              .auto(blue); }
+  &[data-name$=".jss"]:before            { .js-icon;             .auto(green); }
   &[data-name$=".es6"]:before            { .js-icon;            .auto(yellow); }
   &[data-name$=".es"]:before             { .js-icon;            .auto(yellow); }
+  &[data-name$=".sjs"]:before            { .js-icon;              .auto(pink); }
+  &[data-name$=".ssjs"]:before           { .js-icon;               .auto(red); }
+  &[data-name$=".xsjs"]:before           { .js-icon;            .auto(purple); }
+  &[data-name$=".xsjslib"]:before        { .js-icon;              .auto(blue); }
+  &[data-name$=".njs"]:before            { .node-icon;          .medium-green; }
   
   // Jenkins
   &[data-name="Jenkinsfile"]:before      { .jenkins-icon;          .auto(red); }
@@ -517,16 +548,24 @@
   &[data-name$=".lisp"]:before           { .lisp-icon;              .dark-red; }
   &[data-name$=".cl"]:before             { .lisp-icon;         .medium-orange; }
   &[data-name$=".l"]:before              { .lisp-icon;         .medium-maroon; }
+  &[data-name$=".nl"]:before             { .lisp-icon;         .medium-maroon; }
   &[data-name$=".ny"]:before             { .lisp-icon;           .medium-blue; }
+  &[data-name$=".podsl"]:before          { .lisp-icon;         .medium-purple; }
+  &[data-name$=".sexp"]:before           { .lisp-icon;           .medium-blue; }
 
   // LiveScript
   &[data-name$=".ls"]:before             { .ls-icon;             .medium-blue; }
+  &[data-name$="._ls"]:before            { .ls-icon;               .dark-blue; }
+  &[data-name="Slakefile"]:before        { .ls-icon;            .medium-green; }
 
   // LLVM Assembly
   &[data-name$=".ll"]:before             { .llvm-icon;            .dark-green; }
 
   // Lua
   &[data-name$=".lua"]:before            { .lua-icon;            .medium-blue; }
+  &[data-name$=".pd_lua"]:before         { .lua-icon;              .dark-blue; }
+  &[data-name$=".rbxs"]:before           { .lua-icon;            .dark-purple; }
+  &[data-name$=".wlua"]:before           { .lua-icon;               .dark-red; }
 
   // Makefile
   &[data-name^="Makefile"]:before        { .checklist-icon;    .medium-yellow; }
@@ -547,6 +586,7 @@
   &[data-name$=".markdown"]:before,
   &[data-name$=".mkd"]:before,
   &[data-name$=".mkdown"]:before,
+  &[data-name$=".mkdn"]:before,
   &[data-name$=".rmd"]:before,
   &[data-name$=".Rmd"]:before,
   &[data-name$=".ron"]:before,
@@ -598,6 +638,7 @@
 
   // NGINX
   &[data-name$=".conf"]:before           { .nginx-icon;           .dark-green; }
+  &[data-name$=".nginxconf"]:before      { .nginx-icon;         .medium-green; }
 
   // Nodemon
   &[data-name="nodemon.json"]:before,
@@ -616,6 +657,8 @@
   &[data-name$=".cats"]:before           { .c-icon;            .medium-purple; }
   &[data-name$=".idc"]:before            { .c-icon;             .medium-green; }
   &[data-name$=".w"]:before              { .c-icon;            .medium-maroon; }
+  &[data-name$=".nc"]:before             { .c-icon;                .dark-blue; }
+  &[data-name$=".upc"]:before            { .c-icon;              .medium-cyan; }
   &[data-name$=".c++"]:before            { .cpp-icon;             .auto(blue); }
   &[data-name$=".cpp"]:before            { .cpp-icon;             .auto(blue); }
   &[data-name$=".hpp"]:before            { .cpp-icon;           .auto(purple); }
@@ -632,7 +675,6 @@
   &[data-name$=".swift"]:before          { .swift-icon;         .medium-green; }
   &[data-name$=".cs"]:before             { .csharp-icon;          .auto(blue); }
   &[data-name$=".csx"]:before            { .csharp-icon;           .auto(red); }
-  &[data-name$=".vb"]:before             { .code-icon;           .medium-blue; }
   &[data-name="config.h.in"]:before      { .c-icon;               .medium-red; }
 
   // OCaml
@@ -646,6 +688,7 @@
 
   // OpenSCAD
   &[data-name$=".scad"]:before           { .scad-icon;         .medium-orange; }
+  &[data-name$=".jscad"]:before          { .scad-icon;         .medium-yellow; }
 
   // Org-mode
   &[data-name$=".org"]:before            { .org-icon;             .dark-green; }
@@ -663,15 +706,36 @@
   
 
   // Perl
-  &[data-name$=".pl"]:before             { .perl-icon;           .medium-blue; }
-  &[data-name$=".pl6"]:before            { .perl-icon;            .light-blue; }
+  &[data-name$=".pl"]:before,
+  &[data-name$=".perl"]:before           { .perl-icon;           .medium-blue; }
+  &[data-name$=".ph"]:before             { .perl-icon;           .dark-purple; }
+  &[data-name$=".plx"]:before            { .perl-icon;         .medium-purple; }
   &[data-name$=".pm"]:before             { .perl-icon;             .dark-blue; }
   &[data-name$=".t"]:before              { .perl-icon;           .medium-blue; }
+  &[data-name$=".psgi"]:before           { .perl-icon;            .medium-red; }
+  
+  // Perl6
+  &[data-name$=".pl6"]:before            { .perl-icon;            .light-blue; }
+  &[data-name$=".6pl"]:before            { .perl-icon;            .light-blue; }
+  &[data-name$=".6pm"]:before            { .perl-icon;             .dark-cyan; }
+  &[data-name$=".nqp"]:before            { .perl-icon;           .dark-purple; }
+  &[data-name$=".p6"]:before             { .perl-icon;            .light-blue; }
+  &[data-name$=".p6l"]:before            { .perl-icon;           .medium-blue; }
+  &[data-name$=".p6m"]:before            { .perl-icon;             .dark-pink; }
+  &[data-name$=".pm6"]:before            { .perl-icon;             .dark-pink; }
+  &[data-name="Rexfile"]:before          { .perl-icon;          .medium-green; }
 
   // PHP
-  &[data-name$=".php"]:before            { .php-icon;              .dark-blue; }
+  &[data-name$=".php"]:before,
+  &[data-name$=".php3"]:before,
+  &[data-name$=".php4"]:before,
+  &[data-name$=".php5"]:before,
+  &[data-name$=".phps"]:before,
+  &[data-name$=".phpt"]:before           { .php-icon;              .dark-blue; }
   &[data-name$=".hh"]:before             { .php-icon;              .dark-blue; }
   &[data-name$=".blade.php"]:before      { .laravel-icon;        .dark-purple; }
+  &[data-name^="Phakefile"]:before       { .php-icon;             .dark-green; }
+
 
   // PostCSS
   &[data-name$=".postcss"]:before,
@@ -690,7 +754,22 @@
 
   // Python
   &[data-name$=".py"]:before             { .python-icon;         .dark-yellow; }
+  &[data-name$=".bzl"]:before            { .python-icon;         .dark-yellow; }
   &[data-name$=".ipy"]:before            { .python-icon;           .dark-blue; }
+  &[data-name$=".gyp"]:before            { .python-icon;        .medium-green; }
+  &[data-name$=".pyde"]:before           { .python-icon;       .medium-orange; }
+  &[data-name$=".pyp"]:before            { .python-icon;         .dark-purple; }
+  &[data-name$=".pyt"]:before            { .python-icon;          .dark-green; }
+  &[data-name$=".pyw"]:before            { .python-icon;       .medium-maroon; }
+  &[data-name$=".tac"]:before            { .python-icon;           .dark-pink; }
+  &[data-name$=".wsgi"]:before           { .python-icon;            .dark-red; }
+  &[data-name$=".xpy"]:before            { .python-icon;        .auto(yellow); }
+  &[data-name="BUCK"]:before,
+  &[data-name="BUILD"]:before,
+  &[data-name="SConstruct"]:before,
+  &[data-name="SConscript"]:before       { .python-icon;          .dark-green; }
+  &[data-name="Snakefile"]:before        { .python-icon;        .medium-green; }
+  &[data-name="wscript"]:before          { .python-icon;         .dark-maroon; }
 
   // R
   &[data-name$=".rd"]:before,
@@ -716,29 +795,40 @@
   &[data-name$=".tag"]:before            { .riot-icon;            .medium-red; }
 
   // Ruby
-  &[data-name="Capfile"]:before,
-  &[data-name$="Gemfile"]:before,
-  &[data-name$="Gemfile.lock"]:before,
-  &[data-name="Guardfile"]:before,
-  &[data-name$="Rakefile"]:before,
-  &[data-name$=".gemspec"]:before,
-  &[data-name=".ruby-gemset"]:before,
-  &[data-name=".ruby-version"]:before,
-  &[data-name=".rspec"]:before,
-  &[data-name$=".rb"]:before,
-  &[data-name$=".ru"]:before,
-  &[data-name$=".rake"]:before,
-  &[data-name$=".erb"]:before,
+  &[data-name=".pryrc"]:before,          &[data-name=".rspec"]:before,
+  &[data-name=".ruby-gemset"]:before,    &[data-name=".ruby-version"]:before,
+  &[data-name="Appraisals"]:before,      &[data-name="Berksfile"]:before,
+  &[data-name="buildfile"]:before,       &[data-name="Buildfile"]:before,
+  &[data-name="Capfile"]:before,         &[data-name="Deliverfile"]:before,
+  &[data-name="Fastfile"]:before,        &[data-name="Guardfile"]:before,
+  &[data-name="Jarfile"]:before,         &[data-name="Mavenfile"]:before,
+  &[data-name="Podfile"]:before,         &[data-name="Puppetfile"]:before,
+  &[data-name="Snapfile"]:before,        &[data-name="Thorfile"]:before,
+  &[data-name="Vagrantfile"]:before,     &[data-name$=".erb"]:before,
+  &[data-name$=".gemspec"]:before,       &[data-name$=".god"]:before,
+  &[data-name$=".irbrc"]:before,         &[data-name$=".mspec"]:before,
+  &[data-name$=".pluginspec"]:before,    &[data-name$=".podspec"]:before,
+  &[data-name$=".rabl"]:before,          &[data-name$=".rake"]:before,
+  &[data-name$=".rb"]:before,            &[data-name$=".ru"]:before,
+  &[data-name$=".ruby"]:before,          &[data-name$="Gemfile.lock"]:before,
+  &[data-name$="Rakefile"]:before,       &[data-name$="Gemfile"]:before,
   &[data-name$=".opal"]:before           { .ruby-icon;            .medium-red; }
+  &[data-name$=".jbuilder"]:before,      &[data-name$=".rbuild"]:before,
+  &[data-name$=".rbw"]:before,           &[data-name$=".rbx"]:before,
+  &[data-name$=".builder"]:before        { .ruby-icon;              .dark-red; }
   &[data-name$="_spec.rb"]:before        { .ruby-icon;           .light-green; }
   &[data-name="rails"]:before            { .rails-icon;           .medium-red; }
   &[data-name$=".pp"]:before             { .puppet-icon;       .medium-purple; }
   &[data-name$=".gem"]:before            { .zip-icon;             .medium-red; }
+  &[data-name$=".thor"]:before           { .ruby-icon;           .dark-orange; }
+  &[data-name$=".watchr"]:before         { .ruby-icon;           .dark-yellow; }
 
   // Rust
   &[data-name$=".rs"]:before             { .rust-icon;         .medium-maroon; }
   &[data-name$=".rlib"]:before           { .rust-icon;          .light-maroon; }
+  &[data-name$=".rs.in"]:before          { .rust-icon;           .dark-maroon; }
   &.title[data-path][data-name$=".rs"]:before,
+  &.title[data-path][data-name$=".rs.in"]:before,
   &.title[data-path][data-name$=".rlib"]:before        { vertical-align: -35%; }
 
   // SaltStack
@@ -749,6 +839,8 @@
   &[data-name$=".scss"]:before           { .sass-icon;            .light-pink; }
 
   // Scala
+  &[data-name$=".sbt"]:before,
+  &[data-name$=".sc"]:before,
   &[data-name$=".scala"]:before          { .scala-icon;           .medium-red; }
 
   // Secret
@@ -756,13 +848,17 @@
 
   // Seperated-value files
   &[data-name$=".csv"]:before            { .graph-icon;            .light-red; }
+  &[data-name$=".tab"]:before,
   &[data-name$=".tsv"]:before            { .graph-icon;          .light-green; }
 
   // Shell
   &[data-name$=".sh"]:before,
+  &[data-name$=".bats"]:before,
   &[data-name$=".bash"]:before,
+  &[data-name$=".tool"]:before,
   &[data-name$=".ebuild"]:before,
   &[data-name$=".install"]:before,
+  &[data-name$=".command"]:before,
   &[data-name="install-sh"]:before,
   &[data-name="_osc"]:before,
   &[data-name="PKGBUILD"]:before,
@@ -772,10 +868,14 @@
   &[data-name=".bash_login"]:before,
   &[data-name="bash_profile"]:before,
   &[data-name=".bash_profile"]:before    { .terminal-icon;     .medium-purple; }
+  &[data-name$=".ksh"]:before            { .terminal-icon;       .dark-yellow; }
+  &[data-name$=".sh-session"]:before     { .terminal-icon;      .auto(yellow); }
   &[data-name$=".zsh"]:before,
   &[data-name=".zshrc"]:before           { .terminal-icon;       .medium-blue; }
   &[data-name$=".fish"]:before,
   &[data-name=".fishrc"]:before          { .terminal-icon;      .medium-green; }
+  &[data-name$=".sh.in"]:before          { .terminal-icon;          .dark-red; }
+  &[data-name$=".tmux"]:before           { .terminal-icon;       .medium-blue; }
   &[data-name="configure"]:before,
   &[data-name="config.guess"]:before,
   &[data-name="config.rpath"]:before,
@@ -791,16 +891,34 @@
   // Smarty
   &[data-name$=".tpl"]:before            { .smarty-icon;        .auto(yellow); }
 
-  // Sourcepwn
-  &[data-name$=".sp"]:before,            { .clojure-icon;       .auto(yellow); }
+  // SourcePawn
+  &[data-name$=".sma"]:before,
+  &[data-name$=".sp"]:before             { .clojure-icon;       .auto(yellow); }
   &[data-name$=".inc"]:before            { .clojure-icon;       .medium-green; }
+  
+  // Squirrel
+  &[data-name$=".nut"]:before            { .squirrel-icon;     .medium-maroon; }
 
   // Stylelint
   &[data-name$=".stylelintrc"]:before    { .stylelint-icon;                    }
 
   // SQL
   &[data-name$=".sql"]:before,
-  &[data-name$=".SQL"]:before            { .sql-icon; }
+  &[data-name$=".SQL"]:before,
+  &[data-name$=".ddl"]:before,
+  &[data-name$=".udf"]:before,
+  &[data-name$=".viw"]:before,
+  &[data-name$=".db2"]:before,
+  &[data-name$=".prc"]:before            { .sql-icon; }
+  &[data-name$=".pls"]:before,           // PLSQL
+  &[data-name$=".pck"]:before,
+  &[data-name$=".pks"]:before,
+  &[data-name$=".plb"]:before,
+  &[data-name$=".plsql"]:before,
+  &[data-name$=".pkb"]:before            { .sql-icon;             .medium-red; }
+
+  // Tea
+  &[data-name$=".tea"]:before            { .coffee-icon;       .medium-orange; }
 
   // Template Toolkit
   &[data-name$=".tt"]:before             { .tt-icon;             .medium-blue; }
@@ -812,10 +930,20 @@
 
   // TeX
   &[data-name$=".tex"]:before            { .tex-icon;             .auto(blue); }
+  &[data-name$=".ltx"]:before            { .tex-icon;             .auto(blue); }
   &[data-name$=".aux"]:before            { .tex-icon;            .auto(green); }
   &[data-name$=".sty"]:before            { .tex-icon;              .auto(red); }
+  &[data-name$=".dtx"]:before            { .tex-icon;           .auto(maroon); }
   &[data-name$=".cls"]:before            { .tex-icon;           .auto(orange); }
+  &[data-name$=".ins"]:before            { .tex-icon;            .auto(green); }
+  &[data-name$=".lbx"]:before            { .tex-icon;             .auto(blue); }
+  &[data-name$=".cbx"]:before            { .bibtex-icon;           .auto(red); }
+  &[data-name$=".bbx"]:before            { .bibtex-icon;        .auto(orange); }
   &[data-name$=".bib"]:before            { .bibtex-icon;        .auto(yellow); }
+  &[data-name$=".mkiv"]:before           { .tex-icon;           .auto(orange); }
+  &[data-name$=".mkvi"]:before           { .tex-icon;           .auto(orange); }
+  &[data-name$=".mkii"]:before           { .tex-icon;           .auto(orange); }
+  &[data-name$=".toc"]:before            { .tex-icon;             .auto(cyan); }
 
   // Text
   &[data-name$=".txt"]:before            { .medium-cyan; }
@@ -842,6 +970,16 @@
   &[data-name="nvimrc"]:before,
   &[data-name="vimrc"]:before            { .vim-icon;           .medium-green; }
 
+  // Visual Basic
+  &[data-name$=".vb"]:before,
+  &[data-name$=".frm"]:before,
+  &[data-name$=".frx"]:before,
+  &[data-name$=".vba"]:before,
+  &[data-name$=".bas"]:before            { .code-icon;           .medium-blue; }
+  &[data-name$=".vbhtml"]:before         { .code-icon;            .medium-red; }
+  &[data-name$=".vbs"]:before            { .code-icon;          .medium-green; }
+  &[data-name$=".csproj"]:before         { .code-icon;             .dark-blue; }
+
   // Vue
   &[data-name$=".vue"]:before            { .vue-icon;            .light-green; }
 
@@ -865,6 +1003,7 @@
   ============================================================================*/
   // Ant Build System
   &[data-name="ant.xml"]:before          { .ant-icon;              .dark-pink; }
+  &[data-name$=".ant"]:before            { .ant-icon;              .dark-pink; }
   
   // Apache
   &[data-name="apache.conf"]:before      { .apache-icon;          .medium-red; }
@@ -887,6 +1026,9 @@
   // Cargo
   &[data-name$="Cargo.toml"]:before      { .package-icon;       .light-orange; }
   &[data-name$="Cargo.lock"]:before      { .package-icon;        .dark-orange; }
+  
+  // Riemann (Clojure)
+  &[data-name="riemann.config"]:before   { .clojure-icon;       .auto(maroon); }
 
   // Composer
   &[data-name="composer.json"]:before,
@@ -896,6 +1038,7 @@
   &[data-name$=".js.erb"]:before         { .js-icon;              .medium-red; }
   &[data-name$=".coffee.erb"]:before     { .coffee-icon;          .medium-red; }
   &[data-name$=".html.erb"]:before       { .html5-icon;           .medium-red; }
+  &[data-name$=".rhtml"]:before          { .html5-icon;           .medium-red; }
 
   // Grunt
   &[data-name$="GRUNTFILE.js"]:before,
