@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Dogescript, IDL, Jakefile, Phalcon, Verilog
+- **New icons:** Dogescript, IDL, Jakefile, Phalcon, Verilog, Fabric
 - **Support:**
   - Ant: `.ant`
   - Clojure: `.boot`, `.cl2`, `.cljc`, `.cljs.hl`, `.cljscm`, `.cljx`, `.hic`, `riemann.config`
