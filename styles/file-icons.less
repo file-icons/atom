@@ -243,11 +243,15 @@
   // Config files
   &[data-name$=".ini"]:before            { .config-icon;       .medium-yellow; }
   &[data-name$=".desktop"]:before        { .config-icon;       .medium-yellow; }
+  &[data-name$=".desktop.in"]:before     { .config-icon;       .medium-yellow; }
   &[data-name$=".directory"]:before      { .config-icon;       .medium-yellow; }
   &[data-name$=".properties"]:before     { .config-icon;       .medium-purple; }
   &[data-name$=".cfg"]:before            { .config-icon;       .medium-yellow; }
   &[data-name$=".prefs"]:before          { .config-icon;       .medium-yellow; }
   &[data-name$=".toml"]:before           { .config-icon;        .medium-green; }
+  &[data-name$=".ld"]:before             { .config-icon;            .dark-red; }
+  &[data-name$=".lds"]:before            { .config-icon;          .medium-red; }
+  &[data-name="ld.script"]:before        { .config-icon;       .medium-orange; }
 
   // Crystal
   &[data-name$=".cr"]:before,
@@ -286,6 +290,9 @@
   &[data-name$=".cson"]:before           { .database-icon;     .medium-maroon; }
   &[data-name$=".yml"]:before            { .database-icon;         .light-red; }
   &[data-name$=".yaml"]:before           { .database-icon;         .light-red; }
+  &[data-name$=".po"]:before             { .database-icon;        .medium-red; }
+  &[data-name$=".pot"]:before            { .database-icon;          .dark-red; }
+  &[data-name$=".edn"]:before            { .database-icon;     .medium-purple; }
 
   // Dockerfile
   &[data-name^="Dockerfile"]:before      { .docker-icon;           .dark-blue; }
@@ -413,6 +420,8 @@
   &[data-name$=".capnp"]:before          { .code-icon;              .dark-red; }
   &[data-name$=".lagda"]:before          { .code-icon;           .medium-cyan; }
   &[data-name$=".lol"]:before            { .code-icon;           .medium-pink; }
+  &[data-name$=".mask"]:before           { .code-icon;            .medium-red; }
+  &[data-name$=".mtml"]:before           { .code-icon;             .dark-blue; }
   &[data-name$=".omgrofl"]:before        { .code-icon;           .dark-purple; }
 
   // Generic format: Fonts
@@ -507,6 +516,9 @@
   &[data-name$=".phtml"]:before          { .html5-icon;            .dark-blue; }
   &[data-name$=".cshtml"]:before         { .html5-icon;           .medium-red; }
   &[data-name$=".scaml"]:before          { .html5-icon;             .dark-red; }
+  &[data-name$=".liquid"]:before         { .html5-icon;          .medium-blue; }
+  &[data-name$=".latte"]:before          { .html5-icon;           .medium-red; }
+  &[data-name$=".kit"]:before            { .html5-icon;         .medium-green; }
 
   // IDL
   &[data-name$=".dlm"]:before            { .idl-icon;            .medium-blue; }
@@ -552,7 +564,7 @@
   &[data-name$=".jsx"]:before            { .jsx-icon;             .auto(blue); }
   &[data-name$=".tsx"]:before            { .jsx-icon;             .light-blue; }
   &[data-name$=".react.js"]:before       { .react-icon;           .auto(blue); }
-
+  
   // Kivy
   &[data-name$=".kv"]:before             { .kivy-icon;           .dark-maroon; }
 
@@ -600,6 +612,7 @@
   &[data-name$=".mak"]:before            { .checklist-icon;    .medium-yellow; }
   &[data-name$=".am"]:before             { .checklist-icon;       .medium-red; }
   &[data-name$=".bb"]:before             { .checklist-icon;        .dark-blue; }
+  &[data-name$=".ninja"]:before          { .checklist-icon;      .medium-blue; }
 
   // Mapbox
   &[data-name$=".mss"]:before            { .mapbox-icon;         .medium-cyan; }
@@ -931,6 +944,11 @@
 
   // Squirrel
   &[data-name$=".nut"]:before            { .squirrel-icon;     .medium-maroon; }
+
+  // SSH keys
+  &[data-name^="id_rsa"]:before          { .key-icon;             .medium-red; }
+  &[data-name$=".pub"]:before            { .key-icon;          .medium-yellow; }
+  &[data-name$=".pem"]:before            { .key-icon;          .medium-orange; }
 
   // Stylelint
   &[data-name$=".stylelintrc"]:before    { .stylelint-icon;                    }

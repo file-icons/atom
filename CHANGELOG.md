@@ -15,22 +15,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Clojure: `.boot`, `.cl2`, `.cljc`, `.cljs.hl`, `.cljscm`, `.cljx`, `.hic`, `riemann.config`
   - Common Lisp: `.podsl`, `.sexp`
   - `.cproject`
-  - Generic code: `.axml`, `.ccxml`, `.clixml`
+  - `.desktop.in`
+  - EDN files
+  - Generic code: `.axml`, `.ccxml`, `.clixml`, `.lol`, `.mask`, `.mtml`, `.omgrofl`
+  - Gettext: `.po`, `.pot`
   - Gnuplot: `.gnu`, `.plot`, `.plt`
   - Config files: `.cfg`, `.prefs`
   - JavaScript: `._js`, `.jsb`, `.jsfl`, `.jsm`, `.jss`, `.sjs`, `.ssjs`, `.xsjs`, `.xsjslib`
+  - HTML: `.latte`, `.liquid`, `.kit`
   - LilyPond: `.ly`, `.ily`
+  - Linker Scripts: `.ld`, `.lds`, `ld.script`
   - Literate Agda
   - Literate Haskell
   - LiveScript: `._ls`, `Slakefile`
   - Lua: `.pd_lua`, `.rbxs`
-  - LOLCODE
   - Markdown: `.mkdn`
   - nesC: `.nc`
   - NewLisp: `.nl`
+  - Ninja build files
   - Nginx: `.nginxconf`
   - Node.js: `.njs`
-  - Omgrofl
   - OpenSCAD: `.jscad`
   - Perl: `.perl`, `.ph`, `.plx`, `.psgi`
   - Perl6: `.6pl`, `.6pm`, `.nqp`, `.p6`, `.p6l`, `.p6m`, `.pm6`, `Rexfile`
@@ -49,6 +53,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - ShellSession
   - SourcePawn: `.sma`
   - Squirrel: `.nut`
+  - SSH keys: `id_rsa`, `.pem`, `.pub`
   - Tea: `.tea`
   - TeX: `.bbx`, `.cbx`, `.dtx`, `.ins`, `.lbx`, `.ltx`, `.mkii`, `.mkiv`, `.mkvi`, `.toc`
   - Unified Parallel C
