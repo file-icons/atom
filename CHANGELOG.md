@@ -19,6 +19,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Gnuplot: `.gnu`, `.plot`, `.plt`
   - Config files: `.cfg`, `.prefs`
   - JavaScript: `._js`, `.jsb`, `.jsfl`, `.jsm`, `.jss`, `.sjs`, `.ssjs`, `.xsjs`, `.xsjslib`
+  - LilyPond: `.ly`, `.ily`
   - Literate Agda
   - Literate Haskell
   - LiveScript: `._ls`, `Slakefile`
