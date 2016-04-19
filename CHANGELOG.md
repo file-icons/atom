@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - New selector variable to override tab-icons in user stylesheets
-- **New icons:** AMPL, Ceylon, Chapel, Cirru, Clarion, Dogescript, Fabric, IDL, Jakefile, LFE, Nmap, Nunjucks, Phalcon, Verilog
+- **New icons:** AMPL, Ceylon, Chapel, Cirru, Clarion, Dogescript, Fabric, IDL, Jakefile, LFE, MediaWiki, Nmap, Nunjucks, Tcl, Phalcon, PostScript, Verilog
 - **Support:**
   - Ant: `.ant`
   - Charity: `.ch`
