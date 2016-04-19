@@ -10,7 +10,7 @@ you can add it to the package's custom icon set with [IcoMoon.io](https://icomoo
 
 3. You may be presented with a dialogue asking *"Your icon selection was loaded. Would you like to load all the settings stored in your selection file?"*. If so, click **Yes**.
 
-4. Add your desired icon/s.
+4. Add your desired icon/s. If possible, make sure they're fitted to a square canvas: this ensures consistent sizing between themes.
 
 5. Export and extract the contents of the downloaded zip file:
 
