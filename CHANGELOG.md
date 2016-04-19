@@ -55,6 +55,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Font Awesome updated to [4.6.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.6.1)
 - Devicons, Icomoon, and Mfizz fonts converted to WOFF2 for better compression
 
+### Fixed
+- Height of `.meteor` folders
+
 
 [1.7.4] - 2016-04-18
 --------------------
