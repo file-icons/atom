@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
+- New selector variable to override tab-icons in user stylesheets
 - **New icons:** Dogescript, Fabric, IDL, Jakefile, LFE, Nmap, Phalcon, Verilog
 - **Support:**
   - Ant: `.ant`
