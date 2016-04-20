@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** BYOND, Clean, Click, Coq, Creole, Cython, Darcs, Diff, E, Eagle, Ecere, Eiffel, NVIDIA, Patch
+- **New icons:** BYOND, Clean, Click, Coq, Creole, Cython, Darcs, Diff, E, Eagle, Ecere, Eiffel, EmberScript, Factor, Fancy, Flux, NVIDIA, Patch
 - **Support:** Cycript (`.cy`), DNS Zones (`.arpa`, `.zone`), Dylan (`.dylan`, `.dyl`, `.intr`, `.lid`), ECL (`.ecl`, `.eclxml`)
 
 
