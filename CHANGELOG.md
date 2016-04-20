@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Clean, Click, Coq, Creole, CUDA
+- **New icons:** BYOND, Clean, Click, Coq, Creole, Cython, Darcs, Diff, E, Eagle, Ecere, Eiffel, NVIDIA, Patch
 
 
 [1.7.5] - 2016-04-20
