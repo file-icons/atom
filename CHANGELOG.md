@@ -4,12 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.5] - 2016-04-20
+--------------------
 ### Added
 - New selector variable to override tab-icons in user stylesheets
 - **New icons:** AMPL, Ceylon, Chapel, Cirru, Clarion, Dogescript, Fabric, IDL, Jakefile, JSON-LD, LFE, MediaWiki, Nmap, Nunjucks, Tcl, OWL, Phalcon, PostScript, SAS, SPARQL, Verilog, YANG
-- **Support:** Over +150 new extensions and filenames added
+- **Support:** [Over +150](https://github.com/DanBrooker/file-icons/releases/tag/v1.7.5#support) new extensions and filenames added
 
 ### Changed
 - Font Awesome updated to [4.6.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.6.1)
@@ -670,68 +670,69 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.4...HEAD
-[1.7.4]:  https://github.com/DanBrooker/file-icons/compare/v1.7.3...v1.7.4
-[1.7.3]:  https://github.com/DanBrooker/file-icons/compare/v1.7.2...v1.7.3
-[1.7.2]:  https://github.com/DanBrooker/file-icons/compare/v1.7.1...v1.7.2
-[1.7.1]:  https://github.com/DanBrooker/file-icons/compare/v1.7.0...v1.7.1
-[1.7.0]:  https://github.com/DanBrooker/file-icons/compare/v1.6.21...v1.7.0
-[1.6.21]: https://github.com/DanBrooker/file-icons/compare/v1.6.20...v1.6.21
-[1.6.20]: https://github.com/DanBrooker/file-icons/compare/v1.6.19...v1.6.20
-[1.6.19]: https://github.com/DanBrooker/file-icons/compare/v1.6.18...v1.6.19
-[1.6.18]: https://github.com/DanBrooker/file-icons/compare/v1.6.17...v1.6.18
-[1.6.17]: https://github.com/DanBrooker/file-icons/compare/v1.6.16...v1.6.17
-[1.6.16]: https://github.com/DanBrooker/file-icons/compare/v1.6.15...v1.6.16
-[1.6.15]: https://github.com/DanBrooker/file-icons/compare/v1.6.14...v1.6.15
-[1.6.14]: https://github.com/DanBrooker/file-icons/compare/v1.6.13...v1.6.14
-[1.6.13]: https://github.com/DanBrooker/file-icons/compare/v1.6.12...v1.6.13
-[1.6.12]: https://github.com/DanBrooker/file-icons/compare/v1.6.11...v1.6.12
-[1.6.11]: https://github.com/DanBrooker/file-icons/compare/v1.6.10...v1.6.11
-[1.6.10]: https://github.com/DanBrooker/file-icons/compare/v1.6.8...v1.6.10
-[1.6.8]: https://github.com/DanBrooker/file-icons/compare/v1.6.7...v1.6.8
-[1.6.7]: https://github.com/DanBrooker/file-icons/compare/v1.6.6...v1.6.7
-[1.6.6]: https://github.com/DanBrooker/file-icons/compare/v1.6.5...v1.6.6
-[1.6.5]: https://github.com/DanBrooker/file-icons/compare/v1.6.3...v1.6.5
-[1.6.3]: https://github.com/DanBrooker/file-icons/compare/v1.6.1...v1.6.3
-[1.6.1]: https://github.com/DanBrooker/file-icons/compare/v1.5.8...v1.6.1
-[1.5.8]: https://github.com/DanBrooker/file-icons/compare/v1.5.7...v1.5.8
-[1.5.7]: https://github.com/DanBrooker/file-icons/compare/v1.5.6...v1.5.7
-[1.5.6]: https://github.com/DanBrooker/file-icons/compare/v1.5.5...v1.5.6
-[1.5.5]: https://github.com/DanBrooker/file-icons/compare/v1.5.4...v1.5.5
-[1.5.4]: https://github.com/DanBrooker/file-icons/compare/v1.5.3...v1.5.4
-[1.5.3]: https://github.com/DanBrooker/file-icons/compare/v1.5.2...v1.5.3
-[1.5.2]: https://github.com/DanBrooker/file-icons/compare/v1.5.1...v1.5.2
-[1.5.1]: https://github.com/DanBrooker/file-icons/compare/v1.5.0...v1.5.1
-[1.5.0]: https://github.com/DanBrooker/file-icons/compare/v1.4.11...v1.5.0
-[1.4.11]: https://github.com/DanBrooker/file-icons/compare/v1.4.10...v1.4.11
-[1.4.10]: https://github.com/DanBrooker/file-icons/compare/v1.4.9...v1.4.10
-[1.4.9]: https://github.com/DanBrooker/file-icons/compare/v1.4.8...v1.4.9
-[1.4.8]: https://github.com/DanBrooker/file-icons/compare/v1.4.7...v1.4.8
-[1.4.7]: https://github.com/DanBrooker/file-icons/compare/v1.4.6...v1.4.7
-[1.4.6]: https://github.com/DanBrooker/file-icons/compare/v1.4.5...v1.4.6
-[1.4.5]: https://github.com/DanBrooker/file-icons/compare/v1.4.4...v1.4.5
-[1.4.4]: https://github.com/DanBrooker/file-icons/compare/v1.4.3...v1.4.4
-[1.4.3]: https://github.com/DanBrooker/file-icons/compare/v1.4.2...v1.4.3
-[1.4.2]: https://github.com/DanBrooker/file-icons/compare/v1.4.1...v1.4.2
-[1.4.1]: https://github.com/DanBrooker/file-icons/compare/v1.4.0...v1.4.1
-[1.4.0]: https://github.com/DanBrooker/file-icons/compare/v1.3.6...v1.4.0
-[1.3.6]: https://github.com/DanBrooker/file-icons/compare/v1.3.5...v1.3.6
-[1.3.5]: https://github.com/DanBrooker/file-icons/compare/v1.3.4...v1.3.5
-[1.3.4]: https://github.com/DanBrooker/file-icons/compare/v1.3.3...v1.3.4
-[1.3.3]: https://github.com/DanBrooker/file-icons/compare/v1.3.2...v1.3.3
-[1.3.2]: https://github.com/DanBrooker/file-icons/compare/v1.3.1...v1.3.2
-[1.3.1]: https://github.com/DanBrooker/file-icons/compare/v1.3.0...v1.3.1
-[1.3.0]: https://github.com/DanBrooker/file-icons/compare/v1.2.6...v1.3.0
-[1.2.6]: https://github.com/DanBrooker/file-icons/compare/v1.2.5...v1.2.6
-[1.2.5]: https://github.com/DanBrooker/file-icons/compare/v1.2.4...v1.2.5
-[1.2.4]: https://github.com/DanBrooker/file-icons/compare/v1.2.3...v1.2.4
-[1.2.3]: https://github.com/DanBrooker/file-icons/compare/v1.2.2...v1.2.3
-[1.2.2]: https://github.com/DanBrooker/file-icons/compare/v1.2.1...v1.2.2
-[1.2.1]: https://github.com/DanBrooker/file-icons/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/DanBrooker/file-icons/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/DanBrooker/file-icons/compare/v1.0.2...v1.1.0
-[1.0.2]: https://github.com/DanBrooker/file-icons/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/DanBrooker/file-icons/compare/v1.0.0...v1.0.1
-[1.0.0]: https://github.com/DanBrooker/file-icons/compare/v0.3.0...v1.0.0
-[0.3.0]: https://github.com/DanBrooker/file-icons/compare/v0.2.0...v0.3.0
-[0.2.0]: https://github.com/DanBrooker/file-icons/compare/v0.1.0...v0.2.0
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.5...HEAD
+[1.7.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.5
+[1.7.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.4
+[1.7.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.3
+[1.7.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.2
+[1.7.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.1
+[1.7.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.0
+[1.6.21]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.21
+[1.6.20]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.20
+[1.6.19]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.19
+[1.6.18]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.18
+[1.6.17]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.17
+[1.6.16]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.16
+[1.6.15]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.15
+[1.6.14]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.14
+[1.6.13]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.13
+[1.6.12]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.12
+[1.6.11]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.11
+[1.6.10]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.10
+[1.6.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.8
+[1.6.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.7
+[1.6.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.6
+[1.6.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.5
+[1.6.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.3
+[1.6.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.1
+[1.5.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.8
+[1.5.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.7
+[1.5.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.6
+[1.5.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.5
+[1.5.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.4
+[1.5.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.3
+[1.5.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.2
+[1.5.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.1
+[1.5.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.0
+[1.4.11]: https://github.com/DanBrooker/file-icons/releases/tag/v1.4.11
+[1.4.10]: https://github.com/DanBrooker/file-icons/releases/tag/v1.4.10
+[1.4.9]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.9
+[1.4.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.8
+[1.4.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.7
+[1.4.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.6
+[1.4.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.5
+[1.4.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.4
+[1.4.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.3
+[1.4.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.2
+[1.4.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.1
+[1.4.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.0
+[1.3.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.6
+[1.3.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.5
+[1.3.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.4
+[1.3.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.3
+[1.3.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.2
+[1.3.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.1
+[1.3.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.0
+[1.2.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.6
+[1.2.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.5
+[1.2.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.4
+[1.2.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.3
+[1.2.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.2
+[1.2.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.1
+[1.2.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.0
+[1.1.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.1.0
+[1.0.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.0.2
+[1.0.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.0.1
+[1.0.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.0.0
+[0.3.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v0.3.0
+[0.2.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v0.2.0
