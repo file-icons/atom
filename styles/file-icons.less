@@ -137,6 +137,8 @@
   &[data-name$=".cpp-objdump"]:before,
   &[data-name$=".cxx-objdump"]:before    { .binary-icon;         .dark-orange; }
   &[data-name$=".d-objdump"]:before      { .binary-icon;           .dark-blue; }
+  &[data-name$=".gcode"]:before,
+  &[data-name$=".gco"]:before            { .binary-icon;       .medium-orange; }
 
   // ATS
   &[data-name$=".dats"]:before           { .ats-icon;             .medium-red; }
@@ -322,6 +324,7 @@
   &[data-name$=".po"]:before             { .database-icon;        .medium-red; }
   &[data-name$=".pot"]:before            { .database-icon;          .dark-red; }
   &[data-name$=".edn"]:before            { .database-icon;     .medium-purple; }
+  &[data-name$=".eam.fs"]:before         { .database-icon;       .dark-purple; }
   
   // Diff/Patch
   &[data-name$=".diff"]:before           { .diff-icon;         .medium-orange; }
@@ -497,6 +500,12 @@
   &[data-name$=".lid"]:before            { .code-icon;         .medium-purple; }
   &[data-name$=".ecl"]:before            { .code-icon;           .medium-blue; }
   &[data-name$=".eclxml"]:before         { .code-icon;            .dark-green; }
+  &[data-name$=".4th"]:before            { .code-icon;           .medium-blue; }
+  &[data-name$=".fth"]:before            { .code-icon;             .dark-blue; }
+  &[data-name$=".forth"]:before          { .code-icon;           .medium-blue; }
+  &[data-name$=".fr"]:before             { .code-icon;         .medium-purple; }
+  &[data-name$=".frt"]:before            { .code-icon;           .dark-purple; }
+  
 
   // Generic format: Fonts
   &[data-name$=".eot"]:before            { .font-icon;           .light-green; }
@@ -1124,10 +1133,10 @@
   &[data-name$=".frm"]:before,
   &[data-name$=".frx"]:before,
   &[data-name$=".vba"]:before,
-  &[data-name$=".bas"]:before            { .code-icon;           .medium-blue; }
-  &[data-name$=".vbhtml"]:before         { .code-icon;            .medium-red; }
-  &[data-name$=".vbs"]:before            { .code-icon;          .medium-green; }
-  &[data-name$=".csproj"]:before         { .code-icon;             .dark-blue; }
+  &[data-name$=".bas"]:before            { .vb-icon;             .medium-blue; }
+  &[data-name$=".vbhtml"]:before         { .vb-icon;              .medium-red; }
+  &[data-name$=".vbs"]:before            { .vb-icon;            .medium-green; }
+  &[data-name$=".csproj"]:before         { .vb-icon;               .dark-blue; }
 
   // Vue
   &[data-name$=".vue"]:before            { .vue-icon;            .light-green; }

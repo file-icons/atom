@@ -8,10 +8,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** BYOND, Clean, Click, Coq, Creole, Cython, Darcs, Diff, E, Eagle, Ecere, Eiffel, EmberScript, Factor, Fancy, Flux, NVIDIA, Patch
-- **Support:** Cycript (`.cy`), DNS Zones (`.arpa`, `.zone`), Dust (`.dust`), Dylan (`.dylan`, `.dyl`, `.intr`, `.lid`), ECL (`.ecl`, `.eclxml`)
+- **Support:** Cycript (`.cy`), DNS Zones (`.arpa`, `.zone`), Dust (`.dust`), Dylan (`.dylan`, `.dyl`, `.intr`, `.lid`), ECL (`.ecl`, `.eclxml`), Formatted (`.eam.fs`), Forth (`.4th`, `.fth`, `.forth`, `.fr`, `.frt`), G-code (`.gco`, `.gcode`)
 
 ### Changed
 - Python icon is now blue instead of orange [[`#199`](https://github.com/DanBrooker/file-icons/issues/199)]
+- Visual Basic files now distinguished by Visual Studio icon
 
 
 [1.7.5] - 2016-04-20
