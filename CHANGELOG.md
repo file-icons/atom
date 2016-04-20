@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Added
+- **New icons:** Clean, Click, Coq, Creole, CUDA
+
+
 [1.7.5] - 2016-04-20
 --------------------
 ### Added
