@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** BYOND, Clean, Click, Common Lisp, Coq, Creole, Cython, Darcs, Diff, E, Eagle, Ecere, Eiffel, EmberScript, Factor, Fancy, Fantom, Flux, FreeMarker, Frege, GameMaker, GAMS, GAP, Genshi, Gentoo, Godot, Golo, Gosu, Grammatical Framework, GraphQL, Graveviz, Harbour, Hashicorp, Hy, IGOR Pro, Io, NVIDIA, Patch, Perl 6, Pointwise
+- **New icons:** BYOND, Clean, Click, Common Lisp, Coq, Creole, Cython, Darcs, Diff, E, Eagle, Ecere, Eiffel, EmberScript, Factor, Fancy, Fantom, Flux, FreeMarker, Frege, GameMaker, GAMS, GAP, Genshi, Gentoo, Godot, Golo, Gosu, Grammatical Framework, GraphQL, Graveviz, Harbour, Hashicorp, Hy, Idris, IGOR Pro, Inform 7, Io, Ioke, NVIDIA, Patch, Perl 6, Pointwise
 - **Support:** Composer (`composer.phar`), Cycript (`.cy`), DNS Zones (`.arpa`, `.zone`), Dust (`.dust`), Dylan (`.dylan`, `.dyl`, `.intr`, `.lid`), ECL (`.ecl`, `.eclxml`), Formatted (`.eam.fs`), Forth (`.4th`, `.fth`, `.forth`, `.frt`), G-code (`.gco`, `.gcode`), Grace (`.grace`), Graph Modelling Language (`.gml`)
 
 ### Changed
