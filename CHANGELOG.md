@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Inno Setup, Jupyter, Kotlin, KRL, LabVIEW, Lasso, Lean, LSL, Logtalk, LookML, Mako, Matlab, Sublime Text
+- **Support:** JFlex (`.flex`, `.jflex`), JSONiq (`.jq`), Lex (`.lex`), Logos (`.x`, `.xm`, `.xi`), M (`.mumps`), MUF (`.muf`)
 
 
 [1.7.6] - 2016-04-22
