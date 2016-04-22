@@ -678,6 +678,9 @@
   // Inform 7
   &[data-name$=".ni"]:before             { .inform7-icon;        .medium-blue; }
   &[data-name$=".i7x"]:before            { .inform7-icon;          .dark-blue; }
+  
+  // Inno Setup
+  &[data-name$=".iss"]:before            { .inno-icon;             .dark-blue; }
 
   // Isabelle
   &[data-name$=".thy"]:before            { .isabelle-icon;          .dark-red; }
@@ -731,8 +734,23 @@
   &[data-name$=".tsx"]:before            { .jsx-icon;             .light-blue; }
   &[data-name$=".react.js"]:before       { .react-icon;           .auto(blue); }
   
+  // Jupyter Notebook
+  &[data-name$=".ipynb"]:before          { .jupyter-icon;        .dark-orange; }
+  &[data-name="Notebook"]:before         { .jupyter-icon;          .dark-cyan; }
+  
   // Kivy
   &[data-name$=".kv"]:before             { .kivy-icon;           .dark-maroon; }
+  
+  // Kotlin
+  &[data-name$=".kt"]:before             { .kotlin-icon;           .dark-blue; }
+  &[data-name$=".ktm"]:before            { .kotlin-icon;         .medium-blue; }
+  &[data-name$=".kts"]:before            { .kotlin-icon;       .medium-orange; }
+  
+  // KRL
+  &[data-name$=".krl"]:before            { .krl-icon;            .medium-blue; }
+
+  // LabVIEW
+  &[data-name$=".lvproj"]:before         { .labview-icon;          .dark-blue; }
 
   // Leiningen
   &[data-name$="project.clj"]:before     { .lein-icon; }
@@ -1148,6 +1166,24 @@
   &[data-name$=".plb"]:before,
   &[data-name$=".plsql"]:before,
   &[data-name$=".pkb"]:before            { .sql-icon;             .medium-red; }
+  
+  // Sublime Text
+  &[data-name$=".sublime-build"]:before,
+  &[data-name$=".sublime-commands"]:before,
+  &[data-name$=".sublime-completions"]:before,
+  &[data-name$=".sublime-keymap"]:before,
+  &[data-name$=".sublime-macro"]:before,
+  &[data-name$=".sublime-menu"]:before,
+  &[data-name$=".sublime-mousemap"]:before,
+  &[data-name$=".sublime-project"]:before,
+  &[data-name$=".sublime-settings"]:before,
+  &[data-name$=".sublime-theme"]:before,
+  &[data-name$=".sublime-workspace"]:before,
+  &[data-name$=".sublime_metrics"]:before,
+  &[data-name$=".sublime_session"]:before,
+  &[data-name$=".sublime-snippet"]:before,
+  &[data-name$=".stTheme"]:before        { .sublime-icon;      .medium-orange; }
+  &[data-name$=".sublime-syntax"]:before { .sublime-icon;        .dark-orange; }
   
   // Tcl
   &[data-name$=".tcl"]:before            { .tcl-icon;            .dark-orange; }

@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Added
+- **New icons:** Inno Setup, Jupyter, Kotlin, KRL, LabVIEW, Sublime Text
+
+
 [1.7.6] - 2016-04-22
 --------------------
 ### Added
