@@ -4,14 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.7 - 2016-04-24]
+--------------------
 ### Added
 - **New icons:** AMX, Inno Setup, Jupyter, Kotlin, KRL, LabVIEW, Lasso, Lean, LSL, Logtalk, LookML, Mako, Matlab, Max, Mercury, Metal, Mirah, Modula-2, Monkey-X, NetLogo, Nimrod, Nit, Nix, NSIS, NumPy, Objective-J, OpenCL, Processing, Sublime Text
 - **Support:** Certificate files (`.crt`, `.key`), GraphQL (`.gql`), JFlex (`.flex`, `.jflex`), JSONiq (`.jq`), Lex (`.lex`), Logos (`.x`, `.xm`, `.xi`), M (`.mumps`), Modelica (`.mo`), Module Management Systems (`.mmk`, `.mms`), MoonScript (`.moon`), MUF (`.muf`), Myghty (`.myt`), NCL (`.ncl`), Nu (`.nu`), Pure Data (`.pd`), QMake (`.pri`), Unity3D assets (`.anim`, `.asset`, `.mat`, `.meta`, `.prefab`, `.unity`)
 
 ### Fixed
-- [[`#336`](Errors thrown for users of sublime-panes package)]
+- [[`#336`](https://github.com/DanBrooker/file-icons/issues/336)] Errors thrown for users of the [`sublime-panes`](https://atom.io/packages/sublime-panes) package
 
 
 [1.7.6] - 2016-04-22
@@ -692,7 +692,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.6...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.7...HEAD
+[1.7.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.7
 [1.7.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.6
 [1.7.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.5
 [1.7.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.4
