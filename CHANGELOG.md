@@ -3,6 +3,14 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[Unpublished]
+-------------
+### Added
+- **Support:** Apache Thrift (`.thrift`), PigLatin (`.pig`), Prolog (`.pro`, `.prolog`, `.yap`), QML (`.qml`, `.qbs`), Ragel in Ruby (`.rl`), Redcode (`.cw`), RenderScript (`.rsh`), Rouge (`.rg`), SMT (`.smt`, `.smt2`), STON (`.ston`), Smali (`.smali`), Smalltalk (`.st`), Standard ML (`.ML`, `.fun`, `.sig`, `.sml`), Tcsh (`.tcsh`, `.csh`), Turtle (`.ttl`)
+
+### Changed
+- [[`#339`](https://github.com/DanBrooker/file-icons/issues/339)] `.toc` files now use a more generic-looking icon
+
 
 [1.7.7 - 2016-04-24]
 --------------------

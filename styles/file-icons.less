@@ -326,6 +326,10 @@
   &[data-name$=".pot"]:before            { .database-icon;          .dark-red; }
   &[data-name$=".edn"]:before            { .database-icon;     .medium-purple; }
   &[data-name$=".eam.fs"]:before         { .database-icon;       .dark-purple; }
+  &[data-name$=".qml"]:before            { .database-icon;       .medium-pink; }
+  &[data-name$=".qbs"]:before            { .database-icon;         .dark-pink; }
+  &[data-name$=".ston"]:before           { .database-icon;     .medium-maroon; }
+  &[data-name$=".ttl"]:before            { .database-icon;       .medium-cyan; }
   
   // Diff/Patch
   &[data-name$=".diff"]:before           { .diff-icon;         .medium-orange; }
@@ -535,6 +539,19 @@
   &[data-name$=".mumps"]:before          { .code-icon;            .medium-red; }
   &[data-name$=".muf"]:before            { .code-icon;         .medium-orange; }
   &[data-name$=".myt"]:before            { .code-icon;             .dark-blue; }
+  &[data-name$=".pig"]:before            { .code-icon;           .medium-pink; }
+  &[data-name$=".pro"]:before            { .code-icon;           .medium-blue; }
+  &[data-name$=".prolog"]:before         { .code-icon;           .medium-cyan; }
+  &[data-name$=".yap"]:before            { .code-icon;         .medium-purple; }
+  &[data-name$=".rl"]:before             { .code-icon;            .medium-red; }
+  &[data-name$=".cw"]:before             { .code-icon;            .medium-red; }
+  &[data-name$=".smt2"]:before           { .code-icon;           .medium-cyan; }
+  &[data-name$=".smt"]:before            { .code-icon;            .light-blue; }
+  &[data-name$=".st"]:before             { .code-icon;           .medium-blue; }
+  &[data-name$=".ML"]:before             { .code-icon;            .medium-red; }
+  &[data-name$=".fun"]:before            { .code-icon;         .medium-orange; }
+  &[data-name$=".sig"]:before            { .code-icon;          .light-maroon; }
+  &[data-name$=".sml"]:before            { .code-icon;            .medium-red; }
 
   // Generic format: Fonts
   &[data-name$=".eot"]:before            { .font-icon;           .light-green; }
@@ -1164,9 +1181,15 @@
   &[data-name$=".rpy"]:before            { .python-icon;         .medium-pink; }
   &[data-name$=".rpyb"]:before           { .binary-icon;          .medium-red; }
   &[data-name$=".rpyc"]:before           { .binary-icon;          .medium-red; }
+  
+  // RenderScript
+  &[data-name$=".rsh"]:before            { .android-icon;        .dark-maroon; }
 
   // Riot.js
   &[data-name$=".tag"]:before            { .riot-icon;            .medium-red; }
+  
+  // Rouge (Clojure)
+  &[data-name$=".rg"]:before             { .clojure-icon;         .medium-red; }
 
   // Ruby
   &[data-name=".pryrc"]:before,          &[data-name=".rspec"]:before,
@@ -1258,12 +1281,18 @@
   &[data-name="depcomp"]:before,
   &[data-name="libtool"]:before,
   &[data-name="compile"]:before          { .terminal-icon;        .medium-red; }
+  &[data-name$=".tcsh"]:before           { .terminal-icon;      .medium-green; }
+  &[data-name$=".csh"]:before            { .terminal-icon;     .medium-yellow; }
+  
 
   // Sketch
   &[data-name$=".sketch"]:before         { .sketch-icon;       .medium-orange; }
 
   // Smarty
   &[data-name$=".tpl"]:before            { .smarty-icon;        .auto(yellow); }
+  
+  // Smali
+  &[data-name$=".smali"]:before          { .android-icon;       .medium-green; }
 
   // SourcePawn
   &[data-name$=".sma"]:before,
@@ -1354,7 +1383,7 @@
   &[data-name$=".mkiv"]:before           { .tex-icon;           .auto(orange); }
   &[data-name$=".mkvi"]:before           { .tex-icon;           .auto(orange); }
   &[data-name$=".mkii"]:before           { .tex-icon;           .auto(orange); }
-  &[data-name$=".toc"]:before            { .tex-icon;             .auto(cyan); }
+  &[data-name$=".toc"]:before            { .toc-icon;             .auto(cyan); }
 
   // Text
   &[data-name$=".txt"]:before            { .medium-cyan; }
@@ -1436,6 +1465,7 @@
   &[data-name="httpd.conf"]:before       { .apache-icon;          .medium-red; }
   &[data-name$=".apacheconf"]:before     { .apache-icon;            .dark-red; }
   &[data-name$=".vhost"]:before          { .apache-icon;          .dark-green; }
+  &[data-name$=".thrift"]:before         { .apache-icon;        .medium-green; }
 
   // Appveyor
   &[data-name="appveyor.yml"]:before     { .appveyor-icon;       .medium-blue; }
