@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Cabal, Opa, OpenEdge ABL, Ox, Oxygene, Oz, Pan, Papyrus, Parrot, PAWN, Pike, PogoScript, Pony, POV-Ray SDL, Propeller Spin, Puppet, PureBasic, PureScript, Racket, RDoc, REALbasic, Rebol, Red, RobotFramework, Sage, Scheme, Scilab, Self, Shen, Slash, SQF, Stan, Stata, SuperCollider, SystemVerilog, Textile, TextMate, Turing, TXL, Uno, UnrealScript, UrWeb, Varnish, VHDL, X10, XMOS
-- **Support:** Apache Thrift (`.thrift`), PigLatin (`.pig`), Prolog (`.pro`, `.prolog`, `.yap`), QML (`.qml`, `.qbs`), Ragel in Ruby (`.rl`), Redcode (`.cw`), RenderScript (`.rsh`), Rouge (`.rg`), SMT (`.smt`, `.smt2`), STON (`.ston`), Smali (`.smali`), Smalltalk (`.st`), Standard ML (`.ML`, `.fun`, `.sig`, `.sml`), Tcsh (`.tcsh`, `.csh`), Turtle (`.ttl`), Vala (`.vala`, `.vapi`), Ruby (`.gemrc`)
+- **Support:** Apache Thrift (`.thrift`), PigLatin (`.pig`), Prolog (`.pro`, `.prolog`, `.yap`), QML (`.qml`, `.qbs`), Ragel in Ruby (`.rl`), Redcode (`.cw`), RenderScript (`.rsh`), Rouge (`.rg`), SMT (`.smt`, `.smt2`), STON (`.ston`), Smali (`.smali`), Smalltalk (`.st`), Standard ML (`.ML`, `.fun`, `.sig`, `.sml`), Tcsh (`.tcsh`, `.csh`), Turtle (`.ttl`), Vala (`.vala`, `.vapi`), Ruby (`.gemrc`), Zsh (`.zlogin`, `.zlogout`, `.zprofile`, `.zshenv`)
 
 ### Changed
 - [[`#339`](https://github.com/DanBrooker/file-icons/issues/339)] `.toc` files now use a more generic-looking icon
