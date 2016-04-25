@@ -1554,10 +1554,27 @@
   
   // UnrealScript
   &[data-name$=".uc"]:before             { .unreal-icon; }
+  
+  // Vala
+  &[data-name$=".vala"]:before           { .gnome-icon;        .medium-purple; }
+  &[data-name$=".vapi"]:before           { .gnome-icon;          .dark-purple; }
+  
+  // VCL (Varnish Configuration Language)
+  &[data-name$=".vcl"]:before            { .varnish-icon;          .dark-blue; }
 
   // Verilog
   &[data-name$=".v"]:before              { .verilog-icon;         .dark-green; }
   &[data-name$=".veo"]:before            { .verilog-icon;         .medium-red; }
+  
+  // VHDL
+  &[data-name$=".vhdl"]:before           { .vhdl-icon;            .dark-green; }
+  &[data-name$=".vhd"]:before            { .vhdl-icon;          .medium-green; }
+  &[data-name$=".vhf"]:before            { .vhdl-icon;             .dark-blue; }
+  &[data-name$=".vhi"]:before            { .vhdl-icon;           .medium-blue; }
+  &[data-name$=".vho"]:before            { .vhdl-icon;           .dark-purple; }
+  &[data-name$=".vhs"]:before            { .vhdl-icon;         .medium-purple; }
+  &[data-name$=".vht"]:before            { .vhdl-icon;              .dark-red; }
+  &[data-name$=".vhw"]:before            { .vhdl-icon;           .dark-orange; }
 
   // Vim
   &[data-name$=".vim"]:before,
@@ -1703,12 +1720,19 @@ body.file-icons-on-changes {
 }
 
 
-// #gh-271: Undo styling applied by Remote-Edit
 @{pane-tab-selector}{
+  
+  // #gh-271: Undo styling applied by Remote-Edit
   &.icon-globe::before{
     display: inline;
     line-height: inherit;
     width: auto;
     height: auto;
+  }
+  
+  // Temporary fix until Mfizz is shot in the head
+  &[data-name$=".vala"]:before,
+  &[data-name$=".vapi"]:before{
+    line-height: 1.5;
   }
 }

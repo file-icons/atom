@@ -6,8 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Cabal, Opa, OpenEdge ABL, Ox, Oxygene, Oz, Pan, Papyrus, Parrot, PAWN, Pike, PogoScript, Pony, POV-Ray SDL, Propeller Spin, Puppet, PureBasic, PureScript, Racket, RDoc, REALbasic, Rebol, Red, RobotFramework, Sage, Scheme, Scilab, Self, Shen, Slash, SQF, Stan, Stata, SuperCollider, SystemVerilog, Textile, Turing, TXL, Uno, UnrealScript
-- **Support:** Apache Thrift (`.thrift`), PigLatin (`.pig`), Prolog (`.pro`, `.prolog`, `.yap`), QML (`.qml`, `.qbs`), Ragel in Ruby (`.rl`), Redcode (`.cw`), RenderScript (`.rsh`), Rouge (`.rg`), SMT (`.smt`, `.smt2`), STON (`.ston`), Smali (`.smali`), Smalltalk (`.st`), Standard ML (`.ML`, `.fun`, `.sig`, `.sml`), Tcsh (`.tcsh`, `.csh`), Turtle (`.ttl`)
+- **New icons:** Cabal, Opa, OpenEdge ABL, Ox, Oxygene, Oz, Pan, Papyrus, Parrot, PAWN, Pike, PogoScript, Pony, POV-Ray SDL, Propeller Spin, Puppet, PureBasic, PureScript, Racket, RDoc, REALbasic, Rebol, Red, RobotFramework, Sage, Scheme, Scilab, Self, Shen, Slash, SQF, Stan, Stata, SuperCollider, SystemVerilog, Textile, Turing, TXL, Uno, UnrealScript, Varnish, VHDL
+- **Support:** Apache Thrift (`.thrift`), PigLatin (`.pig`), Prolog (`.pro`, `.prolog`, `.yap`), QML (`.qml`, `.qbs`), Ragel in Ruby (`.rl`), Redcode (`.cw`), RenderScript (`.rsh`), Rouge (`.rg`), SMT (`.smt`, `.smt2`), STON (`.ston`), Smali (`.smali`), Smalltalk (`.st`), Standard ML (`.ML`, `.fun`, `.sig`, `.sml`), Tcsh (`.tcsh`, `.csh`), Turtle (`.ttl`), Vala (`.vala`, `.vapi`)
 
 ### Changed
 - [[`#339`](https://github.com/DanBrooker/file-icons/issues/339)] `.toc` files now use a more generic-looking icon
