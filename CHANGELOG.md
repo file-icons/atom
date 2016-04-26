@@ -15,6 +15,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`93e705d`](https://github.com/DanBrooker/file-icons/commit/93e705d4d)] Fixed advance widths of icons with portrait-sized dimensions
 - Size and alignment corrections made to Boot, ClojureScript, Elm, Ionic, JSX, Leiningen, nginx and React icons
 
+### Removed
+- Dropped support for Graph Modelling Language; its extension conflicts with GameMaker Language (`.gml`)
+
 
 [1.7.7 - 2016-04-24]
 --------------------
