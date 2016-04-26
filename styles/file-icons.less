@@ -1120,6 +1120,7 @@
   &[data-name$=".pm"]:before             { .perl-icon;             .dark-blue; }
   &[data-name$=".t"]:before              { .perl-icon;           .medium-blue; }
   &[data-name$=".psgi"]:before           { .perl-icon;            .medium-red; }
+  &[data-name$=".xs"]:before             { .perl-icon;            .medium-red; }
 
   // Perl6
   &[data-name$=".pl6"]:before            { .perl6-icon;        .medium-purple; }
@@ -1243,12 +1244,12 @@
   &[data-name$=".rdoc"]:before           { .rdoc-icon;            .medium-red; }
   
   // REALbasic
-  &[data-name$=".rbbas"]:before          { .realbasic-icon;     .medium-green; }
-  &[data-name$=".rbfrm"]:before          { .realbasic-icon;       .dark-green; }
-  &[data-name$=".rbmnu"]:before          { .realbasic-icon;        .dark-cyan; }
-  &[data-name$=".rbres"]:before          { .realbasic-icon;      .medium-cyan; }
-  &[data-name$=".rbtbar"]:before         { .realbasic-icon;      .medium-blue; }
-  &[data-name$=".rbuistate"]:before      { .realbasic-icon;        .dark-blue; }
+  &[data-name$=".rbbas"]:before          { .xojo-icon;          .medium-green; }
+  &[data-name$=".rbfrm"]:before          { .xojo-icon;            .dark-green; }
+  &[data-name$=".rbmnu"]:before          { .xojo-icon;             .dark-cyan; }
+  &[data-name$=".rbres"]:before          { .xojo-icon;           .medium-cyan; }
+  &[data-name$=".rbtbar"]:before         { .xojo-icon;           .medium-blue; }
+  &[data-name$=".rbuistate"]:before      { .xojo-icon;             .dark-blue; }
 
   // Readme
   &[data-name="README.md"]:before,
@@ -1640,6 +1641,18 @@
   
   // XC
   &[data-name$=".xc"]:before             { .xmos-icon;         .medium-orange; }
+  
+  // XProc (icon "borrowed" from XC above)
+  &[data-name$=".xpl"]:before            { .xmos-icon;             .dark-blue; }
+  &[data-name$=".xproc"]:before          { .xmos-icon;         .medium-purple; }
+  
+  // Xojo
+  &[data-name$=".xojo_code"]:before      { .xojo-icon;          .medium-green; }
+  &[data-name$=".xojo_menu"]:before      { .xojo-icon;           .medium-blue; }
+  &[data-name$=".xojo_report"]:before    { .xojo-icon;            .medium-red; }
+  &[data-name$=".xojo_script"]:before    { .xojo-icon;            .dark-green; }
+  &[data-name$=".xojo_toolbar"]:before   { .xojo-icon;           .dark-purple; }
+  &[data-name$=".xojo_window"]:before    { .xojo-icon;             .dark-cyan; }
   
   // YANG
   &[data-name$=".yang"]:before           { .yang-icon;         .medium-yellow; }
