@@ -4,11 +4,11 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.8 - 2016-04-28]
+--------------------
 ### Added
 - **New icons:** Cabal, eC, MuPAD, OOC, Opa, OpenEdge ABL, Ox, Oxygene, Oz, Pan, Papyrus, Parrot, PAWN, Pickle, Pike, PogoScript, Pony, POV-Ray SDL, Propeller Spin, Puppet, PureBasic, PureScript, Racket, RDoc, REALbasic/Xojo, Rebol, Red, reStructuredText, RobotFramework, Sage, Scheme, Scilab, Self, Shen, Slash, SQF, Stan, Stata, SuperCollider, SystemVerilog, Textile, TextMate, Turing, TXL, Uno, UnrealScript, UrWeb, Varnish, VHDL, X10, XMOS, XPages, Xtend, Zephir, Zimpl
-- **Support:** Apache Thrift (`.thrift`), Certificate files (`.der`), Eclipse (`.classpath`, `.project`), Data files (`.rviz`, `.syntax`), Generic code (`.ct`, `.dita`, `.ditamap`, `.ditaval`, `.dotsettings`, `.filters`, `.fsproj`, `.fxml`, `.grxml`, `.iml`, `.ivy`, `.jelly`, `.jsproj`, `.launch`, `.mdpolicy`, `.mxml`, `.nproj`, `.nuspec`, `.odd`, `.osm`, `.plist`, `.prg`, `.prw`, `.props`, `.psc1`, `.pt`, `.rdf`, `.scxml`, `Settings.StyleCop`, `.srdf`, `.storyboard`, `.targets`, `.tml`, `.ui`, `.urdf`, `.ux`, `.vxml`, `.webidl`, `.wisp`, `.wsdl`, `.wsf`, `.wxi`, `.wxl`, `.wxs`, `.x3d`, `.xacro`, `.xib`, `.xlf`, `.xliff`, `.xmi`, `.xproj`, `.xsd`, `.xsl`, `.xslt`, `.xul`, `.zcml`), Generic config (`.reek`), GLSL (`.glsl`, `.fp`, `.frag`, `.frg`, `.fs`, `.fshader`, `.geo`, `.geom`, `.glslv`, `.gshader`, `.shader`, `.vert`, `.vrx`, `.vshader`), HLSL (`.hlsl`, `.fx`, `.fxh`, `.hlsli`), KML (`.kml`), LLVM (`.clang-format`), PigLatin (`.pig`), Prolog (`.pro`, `.prolog`, `.yap`), QML (`.qml`, `.qbs`), Ragel in Ruby (`.rl`), Redcode (`.cw`), RenderScript (`.rsh`), Rouge (`.rg`), RSS (`.rss`), Ruby (`.gemrc`), SMT (`.smt`, `.smt2`), STON (`.ston`), Smali (`.smali`), Smalltalk (`.st`), Standard ML (`.ML`, `.fun`, `.sig`, `.sml`), Tcsh (`.tcsh`, `.csh`), Turtle (`.ttl`), Vala (`.vala`, `.vapi`), Visual Basic (`.vbproj`, `.vcxproj`, `.vssettings`), XQuery (`.xquery`, `.xq`, `.xql`, `.xqm`, `.xqy`), Yacc (`.y`, `.yacc`, `.yy`), Zsh (`.zlogin`, `.zlogout`, `.zprofile`, `.zshenv`)
+- **Support:** [Over +120 new extensions added](https://github.com/DanBrooker/file-icons/releases/tag/v1.7.8)
 
 ### Changed
 - [[`#339`](https://github.com/DanBrooker/file-icons/issues/339)] `.toc` files now use a more generic-looking icon
@@ -707,7 +707,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.7...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.8...HEAD
+[1.7.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.8
 [1.7.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.7
 [1.7.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.6
 [1.7.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.5
