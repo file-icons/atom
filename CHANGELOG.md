@@ -13,6 +13,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Prolog files now use a dedicated icon instead of a generic one
 
+### Fixed
+- [[`#341`](https://github.com/DanBrooker/file-icons/issues/341)] Yellow icons no longer share same colour as modification indicator
+
 
 [1.7.8 - 2016-04-28]
 --------------------
