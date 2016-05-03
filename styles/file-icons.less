@@ -582,8 +582,6 @@
   &[data-name$=".plist"]:before          { .code-icon;             .dark-cyan; }
   &[data-name$=".prg"]:before            { .code-icon;            .medium-red; }
   &[data-name$=".prw"]:before            { .code-icon;              .dark-red; }
-  &[data-name$=".pro"]:before            { .code-icon;           .medium-blue; }
-  &[data-name$=".prolog"]:before         { .code-icon;           .medium-cyan; }
   &[data-name$=".props"]:before          { .code-icon;           .medium-cyan; }
   &[data-name$=".psc1"]:before           { .code-icon;            .light-blue; }
   &[data-name$=".pt"]:before             { .code-icon;            .medium-red; }
@@ -625,7 +623,6 @@
   &[data-name$=".xul"]:before            { .code-icon;         .medium-orange; }
   &[data-name$=".y"]:before              { .code-icon;            .dark-green; }
   &[data-name$=".yacc"]:before           { .code-icon;          .medium-green; }
-  &[data-name$=".yap"]:before            { .code-icon;         .medium-purple; }
   &[data-name$=".yy"]:before             { .code-icon;           .medium-cyan; }
   &[data-name$=".zcml"]:before           { .code-icon;             .dark-pink; }
 
@@ -747,6 +744,9 @@
   &[data-name$=".hx"]:before,
   &[data-name$=".hxsl"]:before           { .haxe-icon;         .medium-orange; }
   &[data-name$=".hxml"]:before           { .checklist-icon;    .medium-orange; }
+  
+  // Heroku
+  &[data-name="Procfile"]:before         { .heroku-icon;       .medium-purple; }
 
   // HTML
   &[data-name$=".html"]:before           { .html5-icon;        .medium-orange; }
@@ -1009,6 +1009,8 @@
   &[data-name$=".man"]:before,     &[data-name$=".mandoc"]:before,
   &[data-name$=".mdoc"]:before,    &[data-name$=".me"]:before,
   &[data-name$=".mom"]:before,     &[data-name$=".n"]:before,
+  &[data-name$=".tmac"]:before,    &[data-name$=".tmac-u"]:before,
+  &[data-name$=".nroff"]:before,   &[data-name$=".troff"]:before,
   &[data-name$=".tr"]:before       { .manpage-icon;         .dark-green; }
   &[data-name$=".rnh"]:before,
   &[data-name$=".rno"]:before,
@@ -1253,6 +1255,11 @@
   
   // Processing
   &[data-name$=".pde"]:before            { .processing-icon;       .dark-blue; }
+  
+  // Prolog
+  &[data-name$=".pro"]:before            { .prolog-icon;         .medium-blue; }
+  &[data-name$=".prolog"]:before         { .prolog-icon;         .medium-cyan; }
+  &[data-name$=".yap"]:before            { .prolog-icon;       .medium-purple; }
   
   // Propeller Spin
   &[data-name$=".spin"]:before           { .propeller-icon;    .medium-orange; }
@@ -1626,6 +1633,7 @@
   &[data-name$=".cls"]:before            { .tex-icon;           .auto(orange); }
   &[data-name$=".ins"]:before            { .tex-icon;            .auto(green); }
   &[data-name$=".lbx"]:before            { .tex-icon;             .auto(blue); }
+  &[data-name$=".texi"]:before           { .tex-icon;              .auto(red); }
   &[data-name$=".cbx"]:before            { .bibtex-icon;           .auto(red); }
   &[data-name$=".bbx"]:before            { .bibtex-icon;        .auto(orange); }
   &[data-name$=".bib"]:before            { .bibtex-icon;        .auto(yellow); }

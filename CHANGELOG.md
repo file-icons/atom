@@ -8,6 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** CakePHP, Hack, Karma, Pug, SBT, Shopify, TSX (React/Typescript)
+- **Support:** Heroku (`Procfile`), Manual Pages (`.tmac`, `.tmac-u`, `.nroff`, `.troff`), Prolog (`.pro`, `.prolog`, `.yap`), Texinfo (`.texi`)
+
+### Changed
+- Prolog files now use a dedicated icon instead of a generic one
 
 
 [1.7.8 - 2016-04-28]
