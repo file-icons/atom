@@ -724,6 +724,9 @@
   &[data-name$=".gtpl"]:before,
   &[data-name$=".gsp"]:before,
   &[data-name$=".gvy"]:before            { .groovy-icon;          .light-blue; }
+
+  // Hack
+  &[data-name$=".hh"]:before             { .hack-icon;         .medium-orange; }
   
   // Harbour
   &[data-name$=".hb"]:before             { .harbour-icon;          .dark-blue; }
@@ -755,7 +758,6 @@
   &[data-name$=".phtml"]:before          { .html5-icon;            .dark-blue; }
   &[data-name$=".cshtml"]:before         { .html5-icon;           .medium-red; }
   &[data-name$=".scaml"]:before          { .html5-icon;             .dark-red; }
-  &[data-name$=".liquid"]:before         { .html5-icon;          .medium-blue; }
   &[data-name$=".latte"]:before          { .html5-icon;           .medium-red; }
   &[data-name$=".kit"]:before            { .html5-icon;         .medium-green; }
   
@@ -831,12 +833,16 @@
 
   // JSX
   &[data-name$=".jsx"]:before            { .jsx-icon;             .auto(blue); }
-  &[data-name$=".tsx"]:before            { .jsx-icon;             .light-blue; }
+  &[data-name$=".tsx"]:before            { .tsx-icon;             .light-blue; }
   &[data-name$=".react.js"]:before       { .react-icon;           .auto(blue); }
   
   // Jupyter Notebook
   &[data-name$=".ipynb"]:before          { .jupyter-icon;        .dark-orange; }
   &[data-name="Notebook"]:before         { .jupyter-icon;          .dark-cyan; }
+  
+  // Karma
+  &[data-name$="karma.conf.js"]:before    { .karma-icon;         .medium-cyan; }
+  &[data-name$="karma.conf.coffee"]:before{ .karma-icon;       .medium-maroon; }
   
   // Kivy
   &[data-name$=".kv"]:before             { .kivy-icon;           .dark-maroon; }
@@ -1224,7 +1230,6 @@
   &[data-name$=".php5"]:before,
   &[data-name$=".phps"]:before,
   &[data-name$=".phpt"]:before           { .php-icon;              .dark-blue; }
-  &[data-name$=".hh"]:before             { .php-icon;              .dark-blue; }
   &[data-name$=".blade.php"]:before      { .laravel-icon;        .dark-purple; }
   &[data-name^="Phakefile"]:before       { .php-icon;             .dark-green; }
   
@@ -1269,7 +1274,7 @@
   &[data-name$=".ps1xml"]:before         { .terminal-icon;       .medium-blue; }
 
   // Pug/Jade
-  &[data-name$=".pug"]:before,
+  &[data-name$=".pug"]:before            { .pug-icon;             .medium-red; }
   &[data-name$=".jade"]:before           { .jade-icon;            .medium-red; }
   
   // Puppet
@@ -1489,6 +1494,9 @@
   
   // Shen
   &[data-name$=".shen"]:before           { .shen-icon;             .dark-cyan; }
+  
+  // Shopify
+  &[data-name$=".liquid"]:before         { .shopify-icon;       .medium-green; }
   
   // Sketch
   &[data-name$=".sketch"]:before         { .sketch-icon;       .medium-orange; }

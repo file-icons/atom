@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Added
+- **New icons:** Hack, Karma, Pug, Shopify, TSX (React/Typescript)
+
+
 [1.7.8 - 2016-04-28]
 --------------------
 ### Added
