@@ -410,6 +410,7 @@
   &[data-name$=".hrl"]:before            { .erlang-icon;       .medium-maroon; }
   &[data-name$=".xrl"]:before            { .erlang-icon;        .medium-green; }
   &[data-name$=".yrl"]:before            { .erlang-icon;          .dark-green; }
+  &[data-name$=".app.src"]:before        { .erlang-icon;         .dark-maroon; }
 
   // ESLint
   &[data-name$=".eslintrc"]:before,
@@ -490,6 +491,8 @@
   &[data-name=".htaccess"]:before        { .gear-icon;            .medium-red; }
   &[data-name=".htpasswd"]:before        { .gear-icon;         .medium-orange; }
   &[data-name^=".env."]:before           { .gear-icon;            .dark-green; }
+  &[data-name$=".yardopts"]:before       { .gear-icon;            .medium-red; }
+  &[data-name$=".codoopts"]:before       { .gear-icon;         .medium-maroon; }
 
   // Generic format: Audio
   &[data-name$=".mp3"]:before            { .audio-icon;           .medium-red; }
@@ -545,6 +548,7 @@
   &[data-name$=".flex"]:before           { .code-icon;              .dark-red; }
   &[data-name$=".forth"]:before          { .code-icon;           .medium-blue; }
   &[data-name$=".frt"]:before            { .code-icon;           .dark-purple; }
+  &[data-name$=".fsh"]:before            { .code-icon;              .dark-red; }
   &[data-name$=".fsproj"]:before         { .code-icon;              .dark-red; }
   &[data-name$=".fth"]:before            { .code-icon;             .dark-blue; }
   &[data-name$=".fun"]:before            { .code-icon;         .medium-orange; }
@@ -585,6 +589,7 @@
   &[data-name$=".props"]:before          { .code-icon;           .medium-cyan; }
   &[data-name$=".psc1"]:before           { .code-icon;            .light-blue; }
   &[data-name$=".pt"]:before             { .code-icon;            .medium-red; }
+  &[data-name$=".resx"]:before           { .code-icon;           .medium-cyan; }
   &[data-name$=".rdf"]:before            { .code-icon;              .dark-red; }
   &[data-name$=".rl"]:before             { .code-icon;            .medium-red; }
   &[data-name$=".scxml"]:before          { .code-icon;            .light-cyan; }
@@ -601,6 +606,7 @@
   &[data-name$=".ui"]:before             { .code-icon;           .medium-blue; }
   &[data-name$=".urdf"]:before           { .code-icon;           .dark-orange; }
   &[data-name$=".ux"]:before             { .code-icon;          .light-orange; }
+  &[data-name$=".vsh"]:before            { .code-icon;           .medium-cyan; }
   &[data-name$=".vxml"]:before           { .code-icon;          .light-purple; }
   &[data-name$=".webidl"]:before         { .code-icon;            .medium-red; }
   &[data-name$=".wisp"]:before           { .code-icon;             .dark-cyan; }
@@ -671,6 +677,7 @@
   &[data-name$=".eclass"]:before         { .gentoo-icon;         .medium-blue; }
 
   // Git
+  &[data-name^=".git"]:before,
   &[data-name$=".gitattributes"]:before,
   &[data-name$=".gitconfig"]:before,
   &[data-name$=".gitignore_global"]:before,
@@ -706,6 +713,7 @@
 
   // Gradle
   &[data-name$=".gradle"]:before         { .gradle-icon;         .medium-blue; }
+  &[data-name$="gradlew"]:before         { .gradle-icon;         .dark-purple; }
   
   // GraphQL
   &[data-name$=".graphql"]:before        { .graphql-icon;        .medium-pink; }
@@ -1022,6 +1030,9 @@
   // MediaWiki
   &[data-name$=".mediawiki"]:before      { .mediawiki-icon;    .medium-yellow; }
   &[data-name$=".wiki"]:before           { .mediawiki-icon;    .medium-orange; }
+  
+  // Mention-bot config
+  &[data-name=".mention-bot"]:before     { .bullhorn-icon;     .medium-orange; }
   
   // Mercury
   &[data-name$=".moo"]:before            { .mercury-icon;        .medium-cyan; }
@@ -1356,9 +1367,10 @@
   &[data-name$=".rbuistate"]:before      { .xojo-icon;             .dark-blue; }
 
   // Readme
-  &[data-name="README.md"]:before,
-  &[data-name="Readme.md"]:before,
-  &[data-name="readme.md"]:before        { .book-icon;           .medium-blue; }
+  &[data-name="README.md"]:before,       &[data-name="Readme.md"]:before,
+  &[data-name="readme.md"]:before,       &[data-name$=".readme"]:before,
+  &[data-name="read.me"]:before,         &[data-name$=".README"]:before,
+  &[data-name="Read.me"]:before          { .book-icon;           .medium-blue; }
   
   // Rebol
   &[data-name$=".rebol"]:before,
@@ -1481,13 +1493,12 @@
   &[data-name$=".command"]:before,
   &[data-name="install-sh"]:before,
   &[data-name="_osc"]:before,
-  &[data-name="PKGBUILD"]:before,
-  &[data-name="bashrc"]:before,
-  &[data-name=".bashrc"]:before,
-  &[data-name="bash_login"]:before,
-  &[data-name=".bash_login"]:before,
-  &[data-name="bash_profile"]:before,
-  &[data-name=".bash_profile"]:before    { .terminal-icon;     .medium-purple; }
+  &[data-name="bashrc"]:before,          &[data-name=".bashrc"]:before,
+  &[data-name="bash_login"]:before,      &[data-name=".bash_login"]:before,
+  &[data-name="bash_logout"]:before,     &[data-name=".bash_logout"]:before,
+  &[data-name="bash_profile"]:before,    &[data-name=".bash_profile"]:before,
+  &[data-name="bash_history"]:before,    &[data-name=".bash_history"]:before,
+  &[data-name="PKGBUILD"]:before         { .terminal-icon;     .medium-purple; }
   &[data-name$=".ksh"]:before            { .terminal-icon;       .dark-yellow; }
   &[data-name$=".sh-session"]:before     { .terminal-icon;      .auto(yellow); }
   &[data-name$=".zsh"]:before,
@@ -1736,7 +1747,7 @@
   &[data-name="nvimrc"]:before,
   &[data-name="vimrc"]:before            { .vim-icon;           .medium-green; }
 
-  // Visual Basic
+  // Visual Studio
   &[data-name$=".vb"]:before,
   &[data-name$=".frm"]:before,
   &[data-name$=".frx"]:before,
@@ -1748,6 +1759,7 @@
   &[data-name$=".vbproj"]:before         { .vb-icon;                .dark-red; }
   &[data-name$=".vcxproj"]:before        { .vb-icon;             .dark-purple; }
   &[data-name$=".vssettings"]:before     { .vb-icon;              .dark-green; }
+  &[data-name$=".builds"]:before         { .vb-icon;           .medium-maroon; }
 
   // Vue
   &[data-name$=".vue"]:before            { .vue-icon;            .light-green; }
@@ -1765,6 +1777,8 @@
   &[data-name$=".com"]:before            { .windows-icon;                      }
   &[data-name$=".msi"]:before            { .windows-icon;                      }
   &[data-name$=".reg"]:before            { .windows-icon;        .medium-blue; }
+  &[data-name$=".dll"]:before            { .gears-icon;          .dark-orange; }
+  &[data-name$=".lnk"]:before            { .link-icon;           .medium-blue; }
 
   // XAML
   &[data-name$=".xaml"]:before           { .code-icon;           .medium-blue; }
