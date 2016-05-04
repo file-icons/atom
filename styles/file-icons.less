@@ -1827,6 +1827,14 @@
   &[data-name="composer.lock"]:before    { .composer-icon;     .medium-yellow; }
   &[data-name="composer.phar"]:before    { .composer-icon;         .dark-blue; }
 
+  // ESLint
+  &[data-name$=".eslintrc"]:before,
+  &[data-name$=".eslintrc.js"]:before,
+  &[data-name$=".eslintrc.json"]:before,
+  &[data-name$=".eslintrc.yaml"]:before,
+  &[data-name$=".eslintrc.yml"]:before   { .eslint-icon;         .light-purple }
+  &[data-name$=".eslintignore"]:before   { .eslint-icon;        .medium-purple }
+  
   // ERB combinations
   &[data-name$=".js.erb"]:before         { .js-icon;              .medium-red; }
   &[data-name$=".coffee.erb"]:before     { .coffee-icon;          .medium-red; }
