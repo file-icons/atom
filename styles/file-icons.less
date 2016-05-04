@@ -489,6 +489,7 @@
   &[data-name$=".module"]:before         { .gear-icon;           .medium-blue; }
   &[data-name=".htaccess"]:before        { .gear-icon;            .medium-red; }
   &[data-name=".htpasswd"]:before        { .gear-icon;         .medium-orange; }
+  &[data-name^=".env."]:before           { .gear-icon;            .dark-green; }
 
   // Generic format: Audio
   &[data-name$=".mp3"]:before            { .audio-icon;           .medium-red; }
@@ -747,6 +748,7 @@
   
   // Heroku
   &[data-name="Procfile"]:before         { .heroku-icon;       .medium-purple; }
+  &[data-name$=".buildpacks"]:before     { .heroku-icon;        .light-purple; }
 
   // HTML
   &[data-name$=".html"]:before           { .html5-icon;        .medium-orange; }
