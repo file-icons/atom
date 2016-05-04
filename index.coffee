@@ -21,9 +21,14 @@ module.exports =
 
   activate: (state) ->
     @disableSetiIcons true
-    atom.config.onDidChange 'file-icons.coloured', ({newValue, oldValue}) =>
+    
+    colouredIcons = "file-icons.coloured"
+    atom.config.onDidChange colouredIcons, ({newValue, oldValue}) =>
       @colour newValue
-    @colour atom.config.get 'file-icons.coloured'
+    @colour atom.config.get colouredIcons
+    atom.commands.add 'body', 'file-icons:toggle-colours', (event) ->
+    	atom.config.set colouredIcons, !(atom.config.get colouredIcons)
+    
     @observe true
 
     atom.config.onDidChange 'file-icons.forceShow', ({newValue, oldValue}) =>
