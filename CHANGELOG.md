@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Brakeman, CakePHP, Code Climate, Hack, Karma, New Relic, Pug, SBT, Scrutinizer, Shopify, TSX (React/Typescript)
-- **Support:** Config files (`.env.*`), Heroku (`.buildpacks`, `Procfile`), Manual Pages (`.tmac`, `.tmac-u`, `.nroff`, `.troff`), Prolog (`.pro`, `.prolog`, `.yap`), Texinfo (`.texi`)
+- **Support:** Config files (`.env.*`), Heroku (`.buildpacks`, `Procfile`, `.vendor_urls`), Manual Pages (`.tmac`, `.tmac-u`, `.nroff`, `.troff`), Prolog (`.pro`, `.prolog`, `.yap`), Texinfo (`.texi`)
 
 ### Changed
 - Prolog files now use a dedicated icon instead of a generic one
