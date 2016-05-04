@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Brakeman, CakePHP, Code Climate, Hack, Jenkins, Karma, New Relic, Pug, SBT, Scrutinizer, Shopify, TSX (React/Typescript)
+- **New icons:** Brakeman, CakePHP, Code Climate, Hack, Jenkins, Karma, New Relic, NuGet, PowerShell, Pug, SBT, Scrutinizer, Shopify, Thor, TSX (React/Typescript), Vagrant
 - **Support:** Config files (`.env.*`), Heroku (`.buildpacks`, `Procfile`, `.vendor_urls`), Manual Pages (`.tmac`, `.tmac-u`, `.nroff`, `.troff`), Prolog (`.pro`, `.prolog`, `.yap`), Texinfo (`.texi`)
 
 ### Changed
@@ -16,7 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - [[`#341`](https://github.com/DanBrooker/file-icons/issues/341)] Yellow icons no longer share same colour as modification indicator
-- `.eslintrc.js` files are no longer overridden by js icon
+- `.eslintrc.js` files are no longer overridden by JS icon
 
 
 [1.7.8 - 2016-04-28]
