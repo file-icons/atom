@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Brakeman, CakePHP, Code Climate, Hack, Jenkins, Karma, Minecraft, New Relic, NuGet, PowerShell, Pug, SBT, Scrutinizer, Service Fabric, Shopify, Thor, TSX (React/Typescript), Vagrant
-- **Support:** Config files (`.codoopts`, `.env.*`, `.yardopts`), Erlang (`.app.src`), Gears (`.dll`), Generic code (`.resx`, `.fsh`, `.vsh`), Git (`.git*`), Gradle (`gradlew`), Heroku (`.buildpacks`, `Procfile`, `.vendor_urls`), Manual Pages (`.tmac`, `.tmac-u`, `.nroff`, `.troff`), Mention-bot configs (`.mention-bot`), Prolog (`.pro`, `.prolog`, `.yap`), Readme (`.readme`, `.read.me`), Shell (`bash_history`, `bash_logout`), Texinfo (`.texi`), Visual Studio (`.builds`), Windows shortcuts (`.lnk`)
+- **Support:** Adobe Photoshop (`.psb`), Config files (`.codoopts`, `.env.*`, `.yardopts`), Erlang (`.app.src`), Gears (`.dll`), Generic code (`.resx`, `.fsh`, `.vsh`), Git (`.git*`), Gradle (`gradlew`), Heroku (`.buildpacks`, `Procfile`, `.vendor_urls`), Images (`.apng`, `.bmp`, `.bpg`, `.cd5`, `.cpc`, `.dcm`, `.ecw`, `.exr`, `.fit`, `.fits`, `.flif`, `.fts`, `.hdp`, `.hdr`, `.heic`, `.heif`, `.icns`, `.iff`, `.jpf`, `.jps`, `.jxr`, `.lbm`, `.liff`, `.mpo`, `.nrrd`, `.ora`, `.pbm`, `.pcx`, `.pgf`, `.pict`, `.pxr`, `.raw`, `.sct`, `.tga`, `.wbm`, `.wdp`), Manual Pages (`.tmac`, `.tmac-u`, `.nroff`, `.troff`), Mention-bot configs (`.mention-bot`), Prolog (`.pro`, `.prolog`, `.yap`), Readme (`.readme`, `.read.me`), Shell (`bash_history`, `bash_logout`), Shockwave Flash (`.swf`), Texinfo (`.texi`), Visual Studio (`.builds`), Windows shortcuts (`.lnk`)
 
 ### Changed
 - Clearer icon now used for Jenkinsfiles
