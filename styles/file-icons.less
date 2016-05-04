@@ -1819,8 +1819,8 @@
   &[data-name$="Cargo.toml"]:before      { .package-icon;       .light-orange; }
   &[data-name$="Cargo.lock"]:before      { .package-icon;        .dark-orange; }
 
-  // Riemann (Clojure)
-  &[data-name="riemann.config"]:before   { .clojure-icon;       .auto(maroon); }
+  // Code Climate
+  &[data-name=".codeclimate.yml"]:before { .cc-icon;            .medium-green; }
 
   // Composer
   &[data-name="composer.json"]:before,
@@ -1862,6 +1862,12 @@
   &[data-name$="GULPFILE.babel.js"]:before,
   &[data-name$="Gulpfile.babel.js"]:before,
   &[data-name$="gulpfile.babel.js"]:before { .gulp-icon;          .medium-red; }
+
+  // Riemann
+  &[data-name="riemann.config"]:before   { .clojure-icon;       .auto(maroon); }
+
+  // Scrutinizer
+  &[data-name$=".scrutinizer.yml"]:before  { .scrutinizer-icon;    .dark-blue; }
 }
 
 

@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** CakePHP, Hack, Karma, Pug, SBT, Shopify, TSX (React/Typescript)
+- **New icons:** Brakeman, CakePHP, Code Climate, Hack, Karma, Pug, SBT, Scrutinizer, Shopify, TSX (React/Typescript)
 - **Support:** Heroku (`Procfile`), Manual Pages (`.tmac`, `.tmac-u`, `.nroff`, `.troff`), Prolog (`.pro`, `.prolog`, `.yap`), Texinfo (`.texi`)
 
 ### Changed
