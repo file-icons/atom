@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Clearer icon now used for Jenkinsfiles
+- Git icon used for `.mailmap` files
 - Prolog files now use a dedicated icon instead of a generic one
 
 ### Fixed
