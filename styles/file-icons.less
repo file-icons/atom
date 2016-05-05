@@ -98,6 +98,7 @@
 
   // APL / Dyalog APL
   &[data-name$=".apl"]:before            { .apl-icon;               .dark-red; }
+  &[data-name$=".apl.history"]:before    { .apl-icon;          .medium-maroon; }
   &[data-name$=".dyalog"]:before         { .dyalog-icon;       .medium-orange; }
 
   // AppleScript
@@ -285,6 +286,7 @@
   &[data-name$=".lds"]:before            { .config-icon;          .medium-red; }
   &[data-name="ld.script"]:before        { .config-icon;       .medium-orange; }
   &[data-name$=".reek"]:before           { .config-icon;          .medium-red; }
+  &[data-name$=".apl.ascii"]:before      { .config-icon;          .medium-red; }
 
   // Coq
   &[data-name$=".coq"]:before            { .coq-icon;          .medium-maroon; }
@@ -1914,7 +1916,7 @@
 
   // Appveyor
   &[data-name="appveyor.yml"]:before     { .appveyor-icon;       .medium-blue; }
-
+  
   // Bower
   &[data-name=".bowerrc"]:before         { .bower-icon;                        }
   &[data-name="bower.json"]:before       { .bower-icon;          .auto(bower); }
@@ -1988,10 +1990,13 @@
   &[data-name^="newrelic.yml"]:before      { .newrelic-icon;     .medium-cyan; }
 
   // Riemann
-  &[data-name="riemann.config"]:before   { .clojure-icon;       .auto(maroon); }
+  &[data-name="riemann.config"]:before     { .clojure-icon;     .auto(maroon); }
 
   // Scrutinizer
   &[data-name$=".scrutinizer.yml"]:before  { .scrutinizer-icon;    .dark-blue; }
+  
+  // Swap files
+  &[data-name$=".swp"]:before              { .binary-icon;        .dark-green; }
 }
 
 

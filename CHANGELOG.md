@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** Stylelint (`.stylelintignore`)
+- **Support:** APL (`.apl.history`), Binary (`.swp`), Config files (`.apl.ascii`), Stylelint (`.stylelintignore`)
 
 
 [1.7.9 - 2016-05-05]
