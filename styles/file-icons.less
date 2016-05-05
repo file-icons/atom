@@ -24,6 +24,9 @@
 .icon-book[data-name="Readme.md"]:before,
 .icon-book[data-name="readme.md"]:before { .medium-blue; }
 
+// PDF
+.icon-file-pdf:before { .medium-red; }
+
 
 
 /*==[ DIRECTORY ICONS ]=======================================================*/
@@ -82,6 +85,9 @@
 
   // AMPL
   &[data-name$=".ampl"]:before           { .ampl-icon;           .dark-maroon; }
+
+  // ANSI Weather
+  &[data-name$=".ansiweatherrc"]:before  { .sun-icon;           .auto(yellow); }
 
   // ANTLR
   &[data-name$=".g"]:before              { .antlr-icon;           .medium-red; }
@@ -350,9 +356,10 @@
   &[data-name$=".diff"]:before           { .diff-icon;         .medium-orange; }
   &[data-name$=".patch"]:before          { .patch-icon;         .medium-green; }
   
-  // DNS Zone
+  // DNS Zone / CNAME
   &[data-name$=".zone"]:before           { .earth-icon;          .medium-blue; }
   &[data-name$=".arpa"]:before           { .earth-icon;         .medium-green; }
+  &[data-name="CNAME"]:before            { .earth-icon;            .dark-blue; }
 
   // Dockerfile
   &[data-name^="Dockerfile"]:before      { .docker-icon;           .dark-blue; }
@@ -480,6 +487,7 @@
   // Gear
   &[data-name$=".hgignore"]:before       { .gear-icon;                         }
   &[data-name=".mailmap"]:before         { .gear-icon;                         }
+  &[data-name$=".arcconfig"]:before      { .gear-icon;             .dark-blue; }
   &[data-name$=".editorconfig"]:before   { .gear-icon;         .medium-orange; }
   &[data-name=".lesshintrc"]:before      { .gear-icon;           .dark-yellow; }
   &[data-name=".csscomb.json"]:before    { .gear-icon;         .medium-yellow; }
@@ -495,6 +503,9 @@
   &[data-name^=".env."]:before           { .gear-icon;            .dark-green; }
   &[data-name$=".yardopts"]:before       { .gear-icon;            .medium-red; }
   &[data-name$=".codoopts"]:before       { .gear-icon;         .medium-maroon; }
+  &[data-name=".pairs"]:before           { .gear-icon;            .dark-green; }
+  &[data-name=".python-version"]:before  { .gear-icon;             .dark-blue; }
+  &[data-name$=".ctags"]:before          { .gear-icon;           .dark-purple; }
 
   // Generic format: Audio
   &[data-name$=".mp3"]:before            { .audio-icon;           .medium-red; }
@@ -555,6 +566,7 @@
   &[data-name$=".fth"]:before            { .code-icon;             .dark-blue; }
   &[data-name$=".fun"]:before            { .code-icon;         .medium-orange; }
   &[data-name$=".fxml"]:before           { .code-icon;         .medium-maroon; }
+  &[data-name$=".gdbinit"]:before        { .code-icon;            .medium-red; }
   &[data-name$=".grace"]:before          { .code-icon;         .medium-purple; }
   &[data-name$=".grxml"]:before          { .code-icon;           .dark-orange; }
   &[data-name$=".iml"]:before            { .code-icon;            .medium-red; }
@@ -737,6 +749,11 @@
   &[data-name$=".plt"]:before,
   &[data-name$=".plot"]:before,
   &[data-name$=".gnuplot"]:before        { .graph-icon;           .medium-red; }
+  
+  // GNU
+  &[data-name$=".gplv2"]:before,         &[data-name$=".GPLv2"]:before,
+  &[data-name$=".GPLV2"]:before,         &[data-name$=".gplv3"]:before,
+  &[data-name$=".GPLv3"]:before,         &[data-name$=".GPLV3"]:before,
   &[data-name$=".gnu"]:before            { .gnu-icon;              .auto(red); }
 
   // Go
@@ -979,6 +996,7 @@
   // Makefile / Build-systems
   &[data-name^="Makefile"]:before        { .checklist-icon;    .medium-yellow; }
   &[data-name="GNUmakefile"]:before      { .checklist-icon;     .medium-green; }
+  &[data-name="BSDmakefile"]:before      { .checklist-icon;       .medium-red; }
   &[data-name="Kbuild"]:before           { .checklist-icon;      .medium-blue; }
   &[data-name="makefile"]:before         { .checklist-icon;    .medium-yellow; }
   &[data-name="mkfile"]:before           { .checklist-icon;    .medium-yellow; }
@@ -1407,11 +1425,21 @@
   &[data-name$=".rbtbar"]:before         { .xojo-icon;           .medium-blue; }
   &[data-name$=".rbuistate"]:before      { .xojo-icon;             .dark-blue; }
 
-  // Readme
+  // Readme (and similar files)
   &[data-name="README.md"]:before,       &[data-name="Readme.md"]:before,
   &[data-name="readme.md"]:before,       &[data-name$=".readme"]:before,
   &[data-name="read.me"]:before,         &[data-name$=".README"]:before,
-  &[data-name="Read.me"]:before          { .book-icon;           .medium-blue; }
+  &[data-name="Read.me"]:before,         &[data-name$=".ReadMe"]:before,
+  &[data-name="AUTHORS"]:before,         &[data-name="COPYING"]:before,
+  &[data-name="LICENSE"]:before,         &[data-name="LICENCE"]:before,
+  &[data-name="LICENSES"]:before,        &[data-name="LICENCES"]:before,
+  &[data-name="MIT-LICENSE"]:before,     &[data-name="INSTALL"]:before,
+  &[data-name="HISTORY"]:before,         &[data-name="ChangeLog"]:before,
+  &[data-name^="ChangeLog."]:before,     &[data-name="CHANGELOG"]:before,
+  &[data-name="changelog"]:before,       &[data-name="NEWS"]:before,
+  &[data-name="THANKS"]:before,          &[data-name="PROJECTS"]:before,
+  &[data-name="CONTRIBUTING"]:before,    &[data-name="CONTRIBUTORS"]:before,
+  &[data-name="Contributors"]:before     { .book-icon;           .medium-blue; }
   
   // Rebol
   &[data-name$=".rebol"]:before,
@@ -1670,6 +1698,12 @@
   &[data-name$=".svh"]:before            { .sysverilog-icon;     .auto(green); }
   &[data-name$=".vh"]:before             { .sysverilog-icon;      .auto(cyan); }
   
+  // Tags file (Ctags)
+  &[data-name$=".tags"]:before,
+  &[data-name$=".TAGS"]:before,
+  &[data-name="tags"]:before,
+  &[data-name="TAGS"]:before             { .tag-icon;            .medium-blue; }
+  
   // Tcl
   &[data-name$=".tcl"]:before            { .tcl-icon;            .dark-orange; }
   &[data-name$=".adp"]:before            { .tcl-icon;          .medium-orange; }
@@ -1716,6 +1750,7 @@
   &[data-name$=".tmPreferences"]:before  { .textmate-icon;         .dark-blue; }
   &[data-name$=".tmSnippet"]:before      { .textmate-icon;         .dark-pink; }
   &[data-name$=".tmTheme"]:before        { .textmate-icon;       .medium-pink; }
+  &[data-name$=".JSON-tmLanguage"]:before{ .textmate-icon;     .medium-purple; }
   &[data-name$=".yaml-tmlanguage"]:before{ .textmate-icon;     .medium-orange; }
   
   // Thor
@@ -1902,6 +1937,15 @@
   &[data-name="composer.json"]:before,
   &[data-name="composer.lock"]:before    { .composer-icon;     .medium-yellow; }
   &[data-name="composer.phar"]:before    { .composer-icon;         .dark-blue; }
+
+  // Configs / Data sources
+  &[data-name="METADATA.pb"]:before      { .database-icon;        .medium-red; }
+  &[data-name$=".indent.pro"]:before     { .gear-icon;           .medium-blue;
+    
+    // Prolog's icon offset seems to be inherited here, so reset it
+    top: 1px;
+    left: 0;
+  }
 
   // ESLint
   &[data-name$=".eslintrc"]:before,
