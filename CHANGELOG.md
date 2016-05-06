@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.10 - 2016-05-07]
+---------------------
 ### Added
 - **Support:** APL (`.apl.history`), Binary (`.swp`), Config files (`.apl.ascii`), Manual pages (`mmn`, `mmt`, `tmac.`), Stylelint (`.stylelintignore`)
 
@@ -735,7 +735,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.9...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.10...HEAD
+[1.7.10]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.10
 [1.7.9]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.9
 [1.7.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.8
 [1.7.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.7
