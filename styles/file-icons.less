@@ -1082,6 +1082,7 @@
   &[data-name$=".mom"]:before,     &[data-name$=".n"]:before,
   &[data-name$=".tmac"]:before,    &[data-name$=".tmac-u"]:before,
   &[data-name$=".nroff"]:before,   &[data-name$=".troff"]:before,
+  &[data-name="mmn"]:before,       &[data-name="mmt"]:before,
   &[data-name$=".tr"]:before       { .manpage-icon;         .dark-green; }
   &[data-name$=".rnh"]:before,
   &[data-name$=".rno"]:before,
@@ -1986,6 +1987,9 @@
   &[data-name$="Gulpfile.babel.js"]:before,
   &[data-name$="gulpfile.babel.js"]:before { .gulp-icon;          .medium-red; }
   
+  // Manual Pages
+  &[data-name^="tmac."]:before             { .manpage-icon;       .dark-green; }
+
   // New Relic
   &[data-name^="newrelic.yml"]:before      { .newrelic-icon;     .medium-cyan; }
 
