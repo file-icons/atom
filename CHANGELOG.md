@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Added
+- **Support:** SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`)
+
+
 [1.7.10 - 2016-05-07]
 ---------------------
 ### Added
