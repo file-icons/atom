@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`)
+- **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`)
 
 
 [1.7.10 - 2016-05-07]
