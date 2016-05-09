@@ -9,6 +9,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`)
 
+### Changed
+- Alignment tweaked for PDF icon
+
+### Fixed
+- PDF files now respect value of user's "Coloured" setting
+
 
 [1.7.10 - 2016-05-07]
 ---------------------
