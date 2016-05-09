@@ -506,7 +506,6 @@
   &[data-name$=".yardopts"]:before       { .gear-icon;            .medium-red; }
   &[data-name$=".codoopts"]:before       { .gear-icon;         .medium-maroon; }
   &[data-name=".pairs"]:before           { .gear-icon;            .dark-green; }
-  &[data-name=".python-version"]:before  { .gear-icon;             .dark-blue; }
   &[data-name$=".ctags"]:before          { .gear-icon;           .dark-purple; }
 
   // Generic format: Audio
@@ -1163,12 +1162,15 @@
   // Nmap (Lua)
   &[data-name$=".nse"]:before            { .nmap-icon;             .dark-blue; }
 
+  // NodeJS
+  &[data-name=".node-version"]:before    { .node-icon;          .medium-green; }
+
   // Nodemon
   &[data-name="nodemon.json"]:before,
   &[data-name=".nodemonignore"]:before   { .gear-icon;          .medium-green; }
 
   // NPM (Node.js)
-  &[data-name=".npmrc"]:before           { .npm-icon;             .medium-red; }
+  &[data-name="npmrc"]:before,           &[data-name=".npmrc"]:before,
   &[data-name=".npmignore"]:before       { .npm-icon;             .medium-red; }
   &[data-name="npm-debug.log"]:before    { .npm-icon;             .medium-red; }
   &[data-name="package.json"]:before     { .npm-icon;             .medium-red; }
@@ -1384,6 +1386,9 @@
   &[data-name$=".purs"]:before           { .purescript-icon;     .dark-purple; }
 
   // Python
+  &[data-name="pypirc"]:before,          &[data-name=".pypirc"]:before,
+  &[data-name="pythonrc"]:before,        &[data-name=".pythonrc"]:before,
+  &[data-name=".python-venv"]:before,    &[data-name=".python-version"]:before,
   &[data-name$=".py"]:before             { .python-icon;           .dark-blue; }
   &[data-name$=".bzl"]:before            { .python-icon;           .dark-blue; }
   &[data-name$=".ipy"]:before            { .python-icon;         .medium-blue; }
@@ -1482,8 +1487,9 @@
   &[data-name$=".rss"]:before            { .rss-icon;          .medium-orange; }
 
   // Ruby
-  &[data-name=".gemrc"]:before,
-  &[data-name=".pryrc"]:before,          &[data-name=".rspec"]:before,
+  &[data-name="gemrc"]:before,           &[data-name=".gemrc"]:before,
+  &[data-name="pryrc"]:before,           &[data-name=".pryrc"]:before,
+  &[data-name="rspec"]:before,           &[data-name=".rspec"]:before,
   &[data-name=".ruby-gemset"]:before,    &[data-name=".ruby-version"]:before,
   &[data-name="Appraisals"]:before,      &[data-name="Berksfile"]:before,
   &[data-name="buildfile"]:before,       &[data-name="Buildfile"]:before,
