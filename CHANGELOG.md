@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), Node.js/NPM (`.node-version`, `npmrc`), Python (`pypirc`, `.pypirc`, `pythonrc`, `.pythonrc`, `.python-venv`), Ruby (`gemrc`, `pryrc`, `rspec`), SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`), ZSH (`zlogin`, `zlogout`, `zprofile`, `zshenv`, `zshrc`)
+- **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), NodeJS (`.node-version`), NPM (`npmrc`), Python (`pypirc`, `.pypirc`, `pythonrc`, `.pythonrc`, `.python-venv`), Ruby (`gemrc`, `pryrc`, `rspec`), SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`), ZSH (`zlogin`, `zlogout`, `zprofile`, `zshenv`, `zshrc`)
 
 ### Changed
 - Size/alignment tweaked for PDF and Python icons
