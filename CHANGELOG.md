@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`), ZSH (`zlogin`, `zlogout`, `zprofile`, `zshenv`, `zshrc`)
 
 ### Changed
-- Alignment tweaked for PDF icon
+- Size/alignment tweaked for PDF and Python icons
 
 ### Fixed
 - PDF files now respect value of user's "Coloured" setting
