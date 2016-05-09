@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`)
+- **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`), ZSH (`zlogin`, `zlogout`, `zprofile`, `zshenv`, `zshrc`)
 
 ### Changed
 - Alignment tweaked for PDF icon
