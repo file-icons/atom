@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.11 - 2016-05-10]
+---------------------
 ### Added
 - **New icons:** Julia, SQLite
 - **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), NodeJS (`.node-version`), NPM (`npmrc`), Python (`pypirc`, `.pypirc`, `pythonrc`, `.pythonrc`, `.python-venv`), Ruby (`gemrc`, `pryrc`, `rspec`), ZSH (`zlogin`, `zlogout`, `zprofile`, `zshenv`, `zshrc`, `.zsh-theme`)
@@ -750,7 +750,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.10...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.11...HEAD
+[1.7.11]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.11
 [1.7.10]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.10
 [1.7.9]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.9
 [1.7.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.8
