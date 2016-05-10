@@ -7,13 +7,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), NodeJS (`.node-version`), NPM (`npmrc`), Python (`pypirc`, `.pypirc`, `pythonrc`, `.pythonrc`, `.python-venv`), Ruby (`gemrc`, `pryrc`, `rspec`), SQLite (`.sqlite`, `.sqlite3`, `.db`, `.db3`), ZSH (`zlogin`, `zlogout`, `zprofile`, `zshenv`, `zshrc`, `.zsh-theme`)
+- **New icons:** Julia, SQLite
+- **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), NodeJS (`.node-version`), NPM (`npmrc`), Python (`pypirc`, `.pypirc`, `pythonrc`, `.pythonrc`, `.python-venv`), Ruby (`gemrc`, `pryrc`, `rspec`), ZSH (`zlogin`, `zlogout`, `zprofile`, `zshenv`, `zshrc`, `.zsh-theme`)
 
 ### Changed
 - Size/alignment tweaked for PDF and Python icons
 - Python icon used for `.python-version` files
 
 ### Fixed
+- Alignment and advance widths of Docker, Gradle, Groovy, Lisp, R, and Vue icons
 - PDF files now respect value of user's "Coloured" setting
 
 
