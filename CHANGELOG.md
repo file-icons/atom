@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
+- **New icons:** Protractor, Typings
 - **Support:** Config files (`.htmlhintrc`)
 
 
