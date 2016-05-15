@@ -7,8 +7,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Protractor, Typings
+- **New icons:** C# Cake, C#-Script, NAnt, Protractor, Strings, Typings
 - **Support:** Config files (`.htmlhintrc`)
+
+### Changed
+- Cakefile class-name changed from `.cake` to `.cakefile` to accommodate C#'s "cake"
 
 
 [1.7.11 - 2016-05-10]
