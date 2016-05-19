@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** C# Cake, C#-Script, NAnt, Protractor, Strings, Typings
+- **New icons:** C# Cake, C#-Script, Cucumber/Gherkin, NAnt, Protractor, Strings, Typings
 - **Support:** Config files (`.htmlhintrc`)
 
 ### Changed
