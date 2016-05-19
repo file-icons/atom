@@ -742,6 +742,14 @@
   &[data-name$=".gitkeep"]:before,
   &[data-name$=".gitmodules"]:before,
   &[data-name=".mailmap"]:before         { .git-icon;             .medium-red; }
+  
+  // Git: Commit
+  &[data-name="COMMIT_EDITMSG"]:before   { .git-commit-icon;      .medium-red; }
+  
+  // Git: Merge
+  &[data-name="MERGE_HEAD"]:before,
+  &[data-name="MERGE_MODE"]:before,
+  &[data-name="MERGE_MSG"]:before        { .git-merge-icon;       .medium-red; }
 
   // Glade
   &[data-name$=".glade"]:before          { .glade-icon;         .medium-green; }
