@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** C# Cake, C#-Script, Cucumber/Gherkin, NAnt, Protractor, Strings, Typings
-- **Support:** Config files (`.htmlhintrc`), Git commit/merge messages (`COMMIT_EDITMSG`, `MERGE_HEAD`, `MERGE_MODE`, `MERGE_MSG`)
+- **Support:** Config files (`.htmlhintrc`), Git commit/merge messages (`COMMIT_EDITMSG`, `MERGE_HEAD`, `MERGE_MODE`, `MERGE_MSG`), Preprocessed FORTRAN (`.F`, `.F77`, `.F90`, `.F95`, `.F03`, `.F08`, `.FOR`, `.FPP`)
 
 ### Changed
 - Cakefile class-name changed from `.cake` to `.cakefile` to accommodate C#'s "cake"
