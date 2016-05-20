@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.12 - 2016-05-21]
+---------------------
 ### Added
 - **New icons:** Adobe CC (After Effects, InDesign, Premiere), APL, Blank page, C# Cake, C#-Script, Csound, Cucumber/Gherkin, dBASE, Finder, Keynote, Microsoft Office (Access, Excel, OneNote, PowerPoint, Word), NAnt, OpenOffice, Protractor, Storyist, Strings, Typings, Wavefront OBJ, ZBrush
 - **Support:** Config files (`.htmlhintrc`), Generic code (`.aepx`, `.sgm`, `.sgml`), Git commit/merge messages (`COMMIT_EDITMSG`, `MERGE_HEAD`, `MERGE_MODE`, `MERGE_MSG`), Graph files (`.dif`, `.slk`), Music-related (`.chord`), Preprocessed FORTRAN (`.F`, `.F77`, `.F90`, `.F95`, `.F03`, `.F08`, `.FOR`, `.FPP`), Readme (`.1st`)
@@ -767,7 +767,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.11...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.12...HEAD
+[1.7.12]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.12
 [1.7.11]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.11
 [1.7.10]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.10
 [1.7.9]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.9
