@@ -17,6 +17,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - APL icon replaced with the more recognisable [grade up symbol](http://www.fileformat.info/info/unicode/char/234b/index.htm).
 - Cakefile class-name changed from `.cake` to `.cakefile` to accommodate C#'s "cake"
 
+### Fixed
+- Horizontal alignment of symlinks and zip-files
+
 
 [1.7.11 - 2016-05-10]
 ---------------------
