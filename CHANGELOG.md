@@ -7,10 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** C# Cake, C#-Script, Cucumber/Gherkin, NAnt, Protractor, Strings, Typings
+- **New icons:** APL, Blank page, C# Cake, C#-Script, Cucumber/Gherkin, NAnt, Protractor, Strings, Typings
 - **Support:** Config files (`.htmlhintrc`), Git commit/merge messages (`COMMIT_EDITMSG`, `MERGE_HEAD`, `MERGE_MODE`, `MERGE_MSG`), Preprocessed FORTRAN (`.F`, `.F77`, `.F90`, `.F95`, `.F03`, `.F08`, `.FOR`, `.FPP`)
+- Alternative solid-coloured icons for TypeScript (`\02A6`), TSX (`\E9E7`) and JSX (`\E9E6`). To use them, copy their codepoints into your stylesheet.
 
 ### Changed
+- APL icon replaced with the more recognisable [grade up symbol](http://www.fileformat.info/info/unicode/char/234b/index.htm).
 - Cakefile class-name changed from `.cake` to `.cakefile` to accommodate C#'s "cake"
 
 
