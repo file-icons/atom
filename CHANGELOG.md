@@ -7,8 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Adobe CC (After Effects, InDesign, Premiere), APL, Blank page, C# Cake, C#-Script, Csound, Cucumber/Gherkin, dBASE, Finder, KeyNote, Microsoft Office (Access, Excel, OneNote, PowerPoint, Word), NAnt, Open Office, Protractor, Storyist, Strings, Typings, Wavefront OBJ, ZBrush
-- **Support:** Config files (`.htmlhintrc`), Generic code (`.sgm`, `.sgml`), Git commit/merge messages (`COMMIT_EDITMSG`, `MERGE_HEAD`, `MERGE_MODE`, `MERGE_MSG`), Graph files (`.dif`, `.slk`), Music (`.chord`), Preprocessed FORTRAN (`.F`, `.F77`, `.F90`, `.F95`, `.F03`, `.F08`, `.FOR`, `.FPP`), Readme (`.1st`)
+- **New icons:** Adobe CC (After Effects, InDesign, Premiere), APL, Blank page, C# Cake, C#-Script, Csound, Cucumber/Gherkin, dBASE, Finder, Keynote, Microsoft Office (Access, Excel, OneNote, PowerPoint, Word), NAnt, OpenOffice, Protractor, Storyist, Strings, Typings, Wavefront OBJ, ZBrush
+- **Support:** Config files (`.htmlhintrc`), Generic code (`.aepx`, `.sgm`, `.sgml`), Git commit/merge messages (`COMMIT_EDITMSG`, `MERGE_HEAD`, `MERGE_MODE`, `MERGE_MSG`), Graph files (`.dif`, `.slk`), Music-related (`.chord`), Preprocessed FORTRAN (`.F`, `.F77`, `.F90`, `.F95`, `.F03`, `.F08`, `.FOR`, `.FPP`), Readme (`.1st`)
 - Alternative solid-coloured icons for TypeScript (`\02A6`), TSX (`\E9E7`) and JSX (`\E9E6`). To use them, copy their codepoints into your stylesheet.
 
 ### Changed
