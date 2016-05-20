@@ -58,7 +58,7 @@
 .theme-flatland-dark-ui .icon-book {
 
   &:before {
-    .text-icon;
+    .default-icon;
     font-style: normal !important;
   }
 
@@ -716,6 +716,22 @@
   &[data-name$=".wbm"]:before            { .image-icon;          .dark-maroon; }
   &[data-name$=".wdp"]:before            { .image-icon;             .dark-red; }
 
+  // Generic format: Text
+	&[data-name$=".ans"]:before            { .text-icon;           .dark-orange; }
+	&[data-name$=".err"]:before            { .text-icon;            .medium-red; }
+	&[data-name$=".etx"]:before            { .text-icon;         .medium-yellow; }
+	&[data-name$=".irclog"]:before         { .text-icon;           .medium-blue; }
+	&[data-name$=".log"]:before            { .text-icon;         .medium-maroon; }
+	&[data-name$=".msg"]:before            { .text-icon;         .medium-orange; }
+	&[data-name$=".nfo"]:before            { .text-icon;             .dark-blue; }
+	&[data-name$=".rtf"]:before            { .text-icon;              .dark-red; }
+	&[data-name$=".srt"]:before            { .text-icon;         .medium-purple; }
+	&[data-name$=".sub"]:before            { .text-icon;           .dark-purple; }
+	&[data-name$=".text"]:before,
+	&[data-name$=".txt"]:before            { .text-icon;           .medium-blue; }
+	&[data-name$=".utxt"]:before,
+	&[data-name$=".utf8"]:before           { .text-icon;           .medium-cyan; }
+	&[data-name$=".weechatlog"]:before     { .text-icon;          .medium-green; }
 
   // Generic format: Videos
   &[data-name$="avi"]:before             { .video-icon;          .medium-blue; }
