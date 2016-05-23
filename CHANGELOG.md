@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
+- **New icons:** Khronos, Nib, Stylus (new logo)
 - **Support:** Danmakufu (`.dnh`), PHPUnit Config (`.xml.dist`), Stylelint (`.stylelintrc.{json, yaml, js}`, `stylelint.config.js`)
 
 
