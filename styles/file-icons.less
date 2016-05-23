@@ -1793,10 +1793,6 @@
   &[data-name$=".matah"]:before          { .stata-icon;           .light-cyan; }
   &[data-name$=".sthlp"]:before          { .stata-icon;        .medium-purple; }
 
-  // Stylelint
-  &[data-name$=".stylelintrc"]:before    { .stylelint-icon;    .medium-purple; }
-  &[data-name$=".stylelintignore"]:before{ .stylelint-icon;        .dark-blue; }
-  
   // SAS
   &[data-name$=".sas"]:before            { .sas-icon;            .medium-blue; }
 
@@ -2169,6 +2165,12 @@
 
   // Scrutinizer
   &[data-name$=".scrutinizer.yml"]:before  { .scrutinizer-icon;    .dark-blue; }
+  
+  // Stylelint
+  &[data-name^=".stylelintrc"]:before,
+  &[data-name$=".stylelintrc"]:before    { .stylelint-icon;    .medium-purple; }
+  &[data-name$=".stylelintignore"]:before{ .stylelint-icon;        .dark-blue; }
+  &[data-name="stylelint.config.js"]:before{ .stylelint-icon;   .auto(yellow); }
   
   // Swap files
   &[data-name$=".swp"]:before              { .binary-icon;        .dark-green; }
