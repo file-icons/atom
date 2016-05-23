@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** Danmakufu (`.dnh`)
+- **Support:** Danmakufu (`.dnh`), PHPUnit Config (`.xml.dist`)
 
 
 [1.7.12 - 2016-05-21]
