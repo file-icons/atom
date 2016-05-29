@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Khronos, Nib, Stylus (new logo)
+- **New icons:** Audacity, Blender, FBX, Khronos, LightWave 3D, Maya, Nib, Stylus (new logo)
 - **Support:** 3DS Max (`.3ds`, `.max`), 3D models (`.stl`), Danmakufu (`.dnh`), Generic code (`.appxmanifest`), PHPUnit Config (`.xml.dist`), Stylelint (`.stylelintrc.{json, yaml, js}`, `stylelint.config.js`), Wavefront Materials (`.mtl`)
 - Colour variations for MAXScript files
 
