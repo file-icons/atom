@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.13] - 2016-05-30
+---------------------
 ### Added
 - **New icons:** Audacity, Blender, FBX, Khronos, LightWave 3D, Maya, Nib, Stylus (new logo)
 - **Support:** 3DS Max (`.3ds`, `.max`), 3D models (`.stl`), Danmakufu (`.dnh`), Flash (`.swc`), Generic code (`.appxmanifest`), Images (`.dds`), Keys (`git-credential-osxkeychain`), Links (`.url`), Models (`.u3d`), PHPUnit Config (`.xml.dist`), Stylelint (`.stylelintrc.{json, yaml, js}`, `stylelint.config.js`), Unity3D (`.unityproj`), Visual Studio (`.sln`), Wavefront Materials (`.mtl`)
@@ -781,7 +781,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.12...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.13...HEAD
+[1.7.13]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.13
 [1.7.12]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.12
 [1.7.11]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.11
 [1.7.10]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.10
