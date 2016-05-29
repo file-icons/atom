@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icons:** Khronos, Nib, Stylus (new logo)
 - **Support:** Danmakufu (`.dnh`), Generic code (`.appxmanifest`), PHPUnit Config (`.xml.dist`), Stylelint (`.stylelintrc.{json, yaml, js}`, `stylelint.config.js`), Wavefront Materials (`.mtl`)
+- Colour variations for MAXScript files
 
 ### Fixed
 - `CMakeLists.txt` no longer replaced with standard text-file icon
