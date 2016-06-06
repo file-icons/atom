@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Alpine Linux, Knockout, Rollup, Stylus (alternate icons)
+- Added NodeJS icon to `node_modules` folder
 
 ### Changed
 - Stylus icon changed to use the logotype's first letter, [as per Stylus's favicon](http://stylus-lang.com/favicon.ico). The previous icon is still included at codepoint `\E9F7`.
