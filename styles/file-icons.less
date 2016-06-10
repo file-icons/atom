@@ -47,7 +47,7 @@
 
   // Meteor
   &[data-name=".meteor"]:before  { .meteor-icon; }
-  
+
   // Node Modules
   &[data-name="node_modules"]:before { .node-icon; .medium-green; }
 }
@@ -403,6 +403,10 @@
 
   // dBASE
   &[data-name$=".dbf"]:before            { .dbase-icon;           .medium-red; }
+
+  // Debian
+  &[data-name$="control"]:before           { .debian-icon;         .dark-cyan; }
+  &[data-name$="rules"]:before           { .debian-icon;         .medium-cyan; }
 
   // Diff/Patch
   &[data-name$=".diff"]:before           { .diff-icon;         .medium-orange; }
@@ -1632,6 +1636,9 @@
   &[data-name$=".red"]:before            { .red-icon;             .medium-red; }
   &[data-name$=".reds"]:before           { .red-icon;              .light-red; }
 
+  // Red Hat
+  &[data-name$=".spec"]:before           { .red-icon;               .dark-red; }
+
   // Ren'Py (Python)
   &[data-name$=".rpy"]:before            { .python-icon;         .medium-pink; }
   &[data-name$=".rpyb"]:before           { .binary-icon;          .medium-red; }
@@ -1742,7 +1749,6 @@
   &[data-name$=".bats"]:before,
   &[data-name$=".bash"]:before,
   &[data-name$=".tool"]:before,
-  &[data-name$=".install"]:before,
   &[data-name$=".command"]:before,
   &[data-name="install-sh"]:before,
   &[data-name="_osc"]:before,
@@ -1751,7 +1757,6 @@
   &[data-name="bash_logout"]:before,     &[data-name=".bash_logout"]:before,
   &[data-name="bash_profile"]:before,    &[data-name=".bash_profile"]:before,
   &[data-name="bash_history"]:before,    &[data-name=".bash_history"]:before,
-  &[data-name="PKGBUILD"]:before         { .terminal-icon;     .medium-purple; }
   &[data-name$=".ksh"]:before            { .terminal-icon;       .dark-yellow; }
   &[data-name$=".sh-session"]:before     { .terminal-icon;      .auto(yellow); }
   &[data-name="zlogin"]:before,          &[data-name=".zlogin"]:before,
@@ -2217,7 +2222,7 @@
 
   // Riemann
   &[data-name="riemann.config"]:before     { .clojure-icon;     .auto(maroon); }
-  
+
   // Rollup
   &[data-name^="rollup.config."]:before    { .rollup-icon;         .auto(red); }
 
@@ -2235,6 +2240,14 @@
 
   // Typings
   &[data-name="typings.json"]:before       { .typings-icon;    .medium-maroon; }
+
+  // Arch Linux
+  &[data-name$=".install"]:before,       { .arch-icon;           .dark-purple; }
+  &[data-name$=".SRCINFO"]:before,       { .arch-icon;           .dark-maroon; }
+  &[data-name$="pacman.conf"]:before,    { .arch-icon;           .dark-yellow; }
+  &[data-name$="pamac.conf"]:before,     { .arch-icon;          .light-yellow; }
+  &[data-name$="PKGBUILD"]:before,       { .arch-icon;             .dark-cyan; }
+  &[data-name$="yaourtrc"]:before,       { .arch-icon;          .light-yellow; }
 }
 
 
