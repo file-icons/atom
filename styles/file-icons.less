@@ -2055,8 +2055,10 @@
   &[data-name$=".owl"]:before            { .owl-icon;              .dark-blue; }
 
   // Webpack
-  &[data-name*="webpack.config."]:before { .webpack-icon;        .medium-blue; }
-
+  &[data-name*="webpack"] {
+    &[data-name*=".config."]:before      { .webpack-icon;        .medium-blue; }
+  }
+  
   // Windows-specific
   &[data-name$=".bat"]:before            { .windows-icon;      .medium-purple; }
   &[data-name$=".cmd"]:before            { .windows-icon;      .medium-purple; }
