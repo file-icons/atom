@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.14] - 2016-06-10
+---------------------
 ### Added
 - **New icons:** Alpine Linux, Knockout, Rollup, Stylus (alternate icons)
 - Added NodeJS icon to `node_modules` folder
@@ -792,7 +792,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.13...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.14...HEAD
+[1.7.14]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.14
 [1.7.13]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.13
 [1.7.12]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.12
 [1.7.11]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.11
