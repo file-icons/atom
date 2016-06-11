@@ -8,6 +8,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added Debian icon to `control` and `rules` files.
 - Added Red Hat icon to `.spec` files. 
 
+[Unpublished]
+-------------
+### Added
+- **New icons:** Arch Linux
+
+### Changed
+- [[`#381`](https://github.com/DanBrooker/file-icons/issues/381)] Erosion removed from Vagrant icon
+
+
 [1.7.14] - 2016-06-10
 ---------------------
 ### Added
