@@ -3,16 +3,12 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-### Added
-- **New icon:** Arch Linux.
-- Added Debian icon to `control` and `rules` files.
-- Added Red Hat icon to `.spec` files. 
 
 [Unpublished]
 -------------
 ### Added
 - **New icons:** Arch Linux, TypeDoc
-- **Support:** Webpack (`webpackfile.js`)
+- **Support:** Debian (`control`, `rules`), Red Hat (`.spec`), Webpack (`webpackfile.js`)
 
 ### Changed
 - [[`#381`](https://github.com/DanBrooker/file-icons/issues/381)] Erosion removed from Vagrant icon
