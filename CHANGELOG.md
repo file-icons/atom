@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** Arch Linux
+- **New icons:** Arch Linux, TypeDoc
 - **Support:** Webpack (`webpackfile.js`)
 
 ### Changed
