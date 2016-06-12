@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Arch Linux, TypeDoc
-- **Support:** Debian (`control`, `rules`), Red Hat (`.spec`), Webpack (`webpackfile.js`)
+- **Support:** Debian (`control`, `rules`), Red Hat (`.spec`), Webpack (`webpackfile.js`), Bower Components `bower_components` folder
 
 ### Changed
 - [[`#381`](https://github.com/DanBrooker/file-icons/issues/381)] Erosion removed from Vagrant icon
