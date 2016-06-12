@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Arch Linux
+- **Support:** Webpack (`webpackfile.js`)
 
 ### Changed
 - [[`#381`](https://github.com/DanBrooker/file-icons/issues/381)] Erosion removed from Vagrant icon
