@@ -3,6 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+### Added
+- **New icon:** Arch Linux.
+- Added Debian icon to `control` and `rules` files.
+- Added Red Hat icon to `.spec` files. 
 
 [Unpublished]
 -------------
