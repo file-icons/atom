@@ -39,11 +39,20 @@
   // Atom
   &[data-name=".atom"]:before { .atom-icon; }
 
+  // Config
+  &[data-name=".config"]:before { .config-icon; .medium-cyan; }
+
+  // Emacs
+  &[data-name=".emacs.d"]:before { .emacs-icon; }
+
   // Git
   &[data-name=".git"]:before     { .git-icon; }
 
   // GitHub
   &[data-name=".github"]:before  { .github-icon; }
+
+  // Oh My Zsh
+  &[data-name=".oh-my-zsh"]:before { .terminal-icon; .medium-blue; }
 
   // Package
   &[data-name=".bundle"]:before  { .package-icon; }
@@ -825,6 +834,7 @@
   // Gentoo Linux
   &[data-name$=".ebuild"]:before         { .gentoo-icon;           .dark-cyan; }
   &[data-name$=".eclass"]:before         { .gentoo-icon;         .medium-blue; }
+  &[data-name="Manifest"]:before         { .gentoo-icon;        .light-purple; }
 
   // Git
   &[data-name^=".git"]:before,
