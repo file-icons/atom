@@ -2290,7 +2290,8 @@ body.file-icons-force-show-icons {
 
 // Show colours only when files have been modified
 body.file-icons-on-changes {
-  .file.entry.list-item:not(.status-modified) {
+  .file.entry.list-item:not(.status-modified),
+  .directory.entry:not(.status-modified){
     .name.icon:before {
       color: inherit !important;
     }

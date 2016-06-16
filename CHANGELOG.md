@@ -13,6 +13,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - [[`#381`](https://github.com/DanBrooker/file-icons/issues/381)] Erosion removed from Vagrant icon
 
+### Fixed
+- [[`#390`](https://github.com/DanBrooker/file-icons/issues/390)] Directory icons now respect user's *"Colour only when changed"* setting
+
 
 [1.7.14] - 2016-06-10
 ---------------------
