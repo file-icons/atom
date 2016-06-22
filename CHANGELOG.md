@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** BibTeX (`.bst`)
+- **Support:** BibTeX (`.bst`), NPM (`npm-shrinkwrap.json`)
 
 
 [1.7.15] - 2016-06-17
