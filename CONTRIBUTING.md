@@ -1,23 +1,7 @@
 Adding new icons to the package
 ===============================
 
-If a desired icon isn't included in one of the [existing icon-font packages](README.md#fonts),
-you can add it to the package's custom icon set with [IcoMoon.io](https://icomoon.io/app/#/select):
-
-1. Click the **Import Icons** button in the top-left corner.
-
-2. Pick `selection.json` from the package's base directory.
-
-3. You may be presented with a dialogue asking *"Your icon selection was loaded. Would you like to load all the settings stored in your selection file?"*. If so, click **Yes**.
-
-4. Add your desired icon/s. If possible, make sure they're fitted to a square canvas: this ensures consistent sizing between themes.
-
-5. Export and extract the contents of the downloaded zip file:
-
-	a. Copy `file-icons.woff2` to your fork's `resources/fonts` directory.
-	
-	b. Copy `selection.json` to your fork's base directory.
-
+The package's icon-font is now handled in its [own repository](https://github.com/Alhadis/FileIcons). Consult its [readme](https://github.com/Alhadis/FileIcons#adding-new-icons) for instructions on adding new icons.
 
 
 Updating the changelog
@@ -31,7 +15,7 @@ Preserve the existing format so readers can grep what they're looking for when s
 	<dt>New icons:</dt>
 	<dd>
 		This should be used for icons that are quite literally <em>new</em>.
-		This may be a custom glyph (added in the process described above), or provided by an existing icon file.
+		This may be a custom glyph, or provided by an existing icon file.
 	</dd>
 	
 	<dt>Support:</dt>
