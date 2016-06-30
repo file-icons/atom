@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** BibTeX (`.bst`), NPM (`npm-shrinkwrap.json`)
+- **Support:** BibTeX (`.bst`), NPM (`npm-shrinkwrap.json`), Yeoman (`.yo-rc.json`)
 
 ### Changed
 - New procedure for adding icons - a [separate repository](https://github.com/Alhadis/FileIcons) now manages the package's icon-font. Contributors should take heed of the new [submission process]((https://github.com/Alhadis/FileIcons#adding-new-icons).
