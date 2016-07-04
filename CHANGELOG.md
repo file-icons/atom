@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.16] - 2016-07-05
+---------------------
 ### Added
 - **New icons:** Akka, ChartJS, CKEditor, CodeMirror, EQ, Fuel UX, GDB, Leaflet, MathJax, Neko, Normalize.css, Sinatra, Spray, TinyMCE, YUI
 - **Support:** BibTeX (`.bst`), NPM (`npm-shrinkwrap.json`), Yeoman (`.yo-rc.json`)
@@ -815,7 +815,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.15...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.16...HEAD
+[1.7.16]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.16
 [1.7.15]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.15
 [1.7.14]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.14
 [1.7.13]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.13
