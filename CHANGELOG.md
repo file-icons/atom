@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
+- **New icons:** Akka, Baboon, CKEditor, ChartJS, EQ, FluxUX, GDB, Leaflet, MathJax, Neko, Normalize.css, Sinatra, Spray, TinyMCE, YUI
 - **Support:** BibTeX (`.bst`), NPM (`npm-shrinkwrap.json`), Yeoman (`.yo-rc.json`)
 
 ### Changed

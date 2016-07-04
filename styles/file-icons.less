@@ -475,6 +475,9 @@
   &[data-name$=".emblem"]:before,
   &[data-name$=".em"]:before             { .mustache-icon;       .medium-blue; }
 
+  // EQ
+  &[data-name$=".eq"]:before             { .eq-icon;           .medium-orange; }
+
   // Erlang
   &[data-name$=".erl"]:before            { .erlang-icon;          .medium-red; }
   &[data-name$=".beam"]:before           { .erlang-icon;            .dark-red; }
@@ -553,6 +556,10 @@
   &[data-name$=".gap"]:before            { .gap-icon;           .auto(yellow); }
   &[data-name$=".gi"]:before             { .gap-icon;              .dark-blue; }
   &[data-name$=".tst"]:before            { .gap-icon;          .medium-orange; }
+
+  // GDB
+  &[data-name$=".gdb"]:before            { .gdb-icon;            .auto(green); }
+  &[data-name$=".gdbinit"]:before        { .gdb-icon;             .auto(cyan); }
 
   // GDScript / Godot
   &[data-name$=".gd"]:before             { .godot-icon;          .medium-blue; }
@@ -640,7 +647,6 @@
   &[data-name$=".fth"]:before            { .code-icon;             .dark-blue; }
   &[data-name$=".fun"]:before            { .code-icon;         .medium-orange; }
   &[data-name$=".fxml"]:before           { .code-icon;         .medium-maroon; }
-  &[data-name$=".gdbinit"]:before        { .code-icon;            .medium-red; }
   &[data-name$=".grace"]:before          { .code-icon;         .medium-purple; }
   &[data-name$=".grxml"]:before          { .code-icon;           .dark-orange; }
   &[data-name$=".iml"]:before            { .code-icon;            .medium-red; }
@@ -1300,6 +1306,10 @@
   // NCAR Command Language (NCL)
   &[data-name$=".ncl"]:before            { .earth-icon;         .medium-green; }
 
+  // Neko
+  &[data-name$=".neko"]:before           { .neko-icon;         .medium-orange; }
+  &[data-name="run.n"]:before            { .neko-icon;           .dark-orange; }
+
   // NetLinx (AMX logo)
   &[data-name$=".axs"]:before            { .amx-icon;            .medium-blue; }
   &[data-name$=".axi"]:before            { .amx-icon;              .dark-blue; }
@@ -1795,7 +1805,7 @@
 
   // Shopify
   &[data-name$=".liquid"]:before         { .shopify-icon;       .medium-green; }
-  
+
   // Sigils
   &[data-name$=".sigils"]:before         { .sigils-icon;            .dark-red; }
 
@@ -2267,7 +2277,7 @@
 
   // Typings
   &[data-name="typings.json"]:before       { .typings-icon;    .medium-maroon; }
-  
+
   // Yeoman
   &[data-name$=".yo-rc.json"]:before       { .yeoman-icon;       .medium-cyan; }
 }
