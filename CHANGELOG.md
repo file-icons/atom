@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Added
+- **New icons:** Cordova, D3, Ember
+
+
 [1.7.16] - 2016-07-05
 ---------------------
 ### Added
