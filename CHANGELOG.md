@@ -9,6 +9,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icons:** Cordova, D3, Ember
 
+### Changed
+- Laravel icon is now orange, as per their logo
+
+### Fixed
+- [[`#400`](https://github.com/DanBrooker/file-icons/issues/400)] Laravel icon too small in Atom Material UI
+
 
 [1.7.16] - 2016-07-05
 ---------------------

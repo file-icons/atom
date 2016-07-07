@@ -1512,7 +1512,7 @@
   &[data-name$=".php5"]:before,
   &[data-name$=".phps"]:before,
   &[data-name$=".phpt"]:before           { .php-icon;              .dark-blue; }
-  &[data-name$=".blade.php"]:before      { .laravel-icon;        .dark-purple; }
+  &[data-name$=".blade.php"]:before      { .laravel-icon;      .medium-orange; }
   &[data-name^="Phakefile"]:before       { .php-icon;             .dark-green; }
 
   // Pickled Python object
@@ -2332,5 +2332,32 @@ body.file-icons-on-changes {
   &[data-name$=".vala"]:before,
   &[data-name$=".vapi"]:before{
     line-height: 1.5;
+  }
+}
+
+
+// #gh-400: Temporary fix for Laravel icon in Atom Material UI
+.theme-atom-material-ui{
+
+  .entry[is="tree-view-file"] > .icon-file-text[data-name$=".blade.php"]:before{
+    .laravel-icon;
+    .medium-orange;
+    
+    font-size: 16px !important;
+    transform: scale(1.35) !important;
+    top: 2px;
+    left: -1px;
+  }
+  
+  .file-icons-tab-pane-icon & @{pane-tab-selector}[data-name$=".blade.php"]:before{
+    .laravel-icon;
+    .medium-orange;
+    top: -3px !important;
+    position: relative;
+    display: inline-block;
+    
+    font-size: 16px !important;
+    transform: scale(1.35) !important;
+    left: -1px;
   }
 }
