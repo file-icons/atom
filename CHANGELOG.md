@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** Chai, Cordova, D3, Ember, ESLint (new), Mocha
-- **Support:** ESLint (`.eslintcache`)
+- **Support:** Assembly (`.agc`), ESLint (`.eslintcache`)
 
 ### Changed
 - Laravel icon is now orange, as per their logo
