@@ -426,7 +426,7 @@
 
   // Dockerfile
   &[data-name^="Dockerfile"]:before      { .docker-icon;           .dark-blue; }
-  &[data-name$=".dockefile"]:before	 { .docker-icon;	   .dark-blue; }
+  &[data-name$=".dockerfile"]:before	 { .docker-icon;	   .dark-blue; }
   &[data-name$=".dockerignore"]:before   { .docker-icon;           .dark-blue; }
 
   // Dogescript
@@ -2345,20 +2345,20 @@ body.file-icons-on-changes {
   .entry[is="tree-view-file"] > .icon-file-text[data-name$=".blade.php"]:before{
     .laravel-icon;
     .medium-orange;
-    
+
     font-size: 16px !important;
     transform: scale(1.35) !important;
     top: 2px;
     left: -1px;
   }
-  
+
   .file-icons-tab-pane-icon & @{pane-tab-selector}[data-name$=".blade.php"]:before{
     .laravel-icon;
     .medium-orange;
     top: -3px !important;
     position: relative;
     display: inline-block;
-    
+
     font-size: 16px !important;
     transform: scale(1.35) !important;
     left: -1px;
