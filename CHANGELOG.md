@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.17] - 2016-07-14
+---------------------
 ### Added
 - **New icons:** Chai, Cordova, D3, Ember, ESLint (new), Mocha
 - **Support:** Assembly (`.agc`), Docker (`.dockerfile`), ESLint (`.eslintcache`)
@@ -828,7 +828,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.16...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.17...HEAD
+[1.7.17]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.17
 [1.7.16]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.16
 [1.7.15]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.15
 [1.7.14]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.14
