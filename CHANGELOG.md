@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Added
+- **Support:** NodeJS (`.nvmrc`)
+
+
 [1.7.17] - 2016-07-14
 ---------------------
 ### Added
