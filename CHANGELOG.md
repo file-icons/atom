@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** Mocha (`mocha.opts`), NodeJS (`.nvmrc`)
+- **Support:** Mocha (`mocha.opts`), mSQL (`.dsql`), NodeJS (`.nvmrc`), Pug (`.pug-lintrc`)
 
 
 [1.7.17] - 2016-07-14
