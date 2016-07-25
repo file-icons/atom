@@ -7,7 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** Jinja (`.jinja2`), Mocha (`mocha.opts`), mSQL (`.dsql`), NodeJS (`.nvmrc`), Pug (`.pug-lintrc`)
+- **New icons:** Tern (`.tern-project`)
+- **Support:** Jinja (`.jinja2`), Mocha (`mocha.opts`), Manpages (`.pic`), mSQL (`.dsql`), NodeJS (`.nvmrc`), Pug (`.pug-lintrc`)
 
 
 [1.7.17] - 2016-07-14
