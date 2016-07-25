@@ -10,6 +10,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** CircleCI (`circle.yml`), Tern (`.tern-project`)
 - **Support:** Jinja (`.jinja2`), Mocha (`mocha.opts`), Manpages (`.pic`), mSQL (`.dsql`), NodeJS (`.nvmrc`), Pug (`.pug-lintrc`)
 
+### Changed
+- `.x` files now use Objective-C icon
+
 
 [1.7.17] - 2016-07-14
 ---------------------
