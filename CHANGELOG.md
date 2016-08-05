@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.18] - 2016-08-05
+---------------------
 ### Added
 - **New icons:** CircleCI (`circle.yml`), Tern (`.tern-project`)
 - **Support:** Flow (`.js.flow`), Jinja (`.jinja2`), Mocha (`mocha.opts`), Manpages (`.pic`), mSQL (`.dsql`), NodeJS (`.nvmrc`), Pug (`.pug-lintrc`)
@@ -838,7 +838,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.17...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.18...HEAD
+[1.7.18]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.18
 [1.7.17]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.17
 [1.7.16]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.16
 [1.7.15]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.15
