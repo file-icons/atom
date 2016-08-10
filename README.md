@@ -14,7 +14,7 @@ Go to `Preferences > Install`, search for `file-icons` and install it.
 
 Adds file specific icons to atom for improved visual grepping. Works with Tree View and Fuzzy Finder and Tabs.
 
-![Screenshot](https://raw.githubusercontent.com/DanBrooker/file-icons/master/file-icons.png)
+![Screenshot](https://raw.githubusercontent.com/DanBrooker/file-icons/master/preview.png)
 
 A number of icons and colours are provided by default for a range of common file types.
 If you have file that you would like custom icons for you can easily add this yourself.
