@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Changed
+- Updated icons in readme's preview image
+
+
 [1.7.18] - 2016-08-05
 ---------------------
 ### Added
