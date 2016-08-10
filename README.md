@@ -19,7 +19,7 @@ Adds file specific icons to atom for improved visual grepping. Works with Tree V
 A number of icons and colours are provided by default for a range of common file types.
 If you have file that you would like custom icons for you can easily add this yourself.
 
-File Icons are now specified via css(less) only.
+Icons are now specified via CSS (Less) only.
 
 ## No Colours
 
@@ -30,15 +30,14 @@ Disable colours in the settings.
 By default the Unity theme hides icons, you can force to show the icons in the settings
 
 # Customisation
+The following CSS can be added to your user stylesheet to customise files with the `.rb` file extension:
 
-The following css can be added to your user stylesheet to customise files with the .rb file extension.
-
-```css
+```less
 @import "packages/file-icons/styles/colors"; // to use the colours
 @import "packages/file-icons/styles/icons";  // to use the defined icons
 ```
 
-```css
+```less
 @import "packages/file-icons/styles/items";
 @{pane-tab-selector}, .icon-file-text {
   &[data-name$=".rb"]          { .medium-red;             } // Colours icon and filename
@@ -47,7 +46,7 @@ The following css can be added to your user stylesheet to customise files with t
 ```
 
 Folders
-```css
+```less
 @import "packages/file-icons/styles/items";
 @{pane-tab-selector}, .icon-file-directory {
   &[data-name=".git"]:before { .git-icon; }
@@ -57,7 +56,7 @@ Folders
 ## Icons
 Icons are located at `./stylesheets/icons.less`. You can create a custom CSS class and express its code through `content: "\fxxx";`. Octicons is the default icon's class.
 
-```css
+```less
 .ruby-icon { content: "\f047"; }
 ```
 
@@ -68,7 +67,7 @@ Some custom fonts are already provided
 * [Icomoon](https://icomoon.io/)(`.iconmoon`)
 * [Devicons](http://vorillaz.github.io/devicons/)(`.devicons`)
 
-```css
+```less
 .coffee-icon { .fa; content: "\f0f4"; }
 ```
 
@@ -81,7 +80,7 @@ Colours are from the [Base16](https://github.com/chriskempson/base16) colour pal
 
 Medium is colour provided by Base16. Light is medium lightened 15%. Dark is medium darkened 15%. In order to "construct" a CSS class color, you provide its variant followed by a dash (-).
 
-```css
+```less
 .light-red;
 .medium-blue;
 .dark-maroon;
