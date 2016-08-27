@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **New icons:** FontForge (`.pe`, `.sfd`)
-- **Support:** Emacs Lisp (`.elc`), GNU's readline configuration (`.inputrc`)
+- **Support:** Emacs Lisp (`.elc`), GNU's readline configuration (`.inputrc`), PostScript (`.afm`, `.pfb`)
 
 ### Changed
 - Updated icons in readme's preview image
