@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** GNU's readline configuration (`.inputrc`)
+- **Support:** Emacs Lisp (`.elc`), GNU's readline configuration (`.inputrc`)
 
 ### Changed
 - Updated icons in readme's preview image
