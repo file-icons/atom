@@ -4,6 +4,16 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[1.7.20] - 2016-10-04
+---------------------
+### Added
+- **New icons:** 1C (`.bsl`, `.os`), PowerBuilder (`.pbl`, `.pbt`, `.srw`, `.sru`, `.srp`, `.sra`, `.srj`), Regex (`.regex`, `.regexp`), REXX (`.rex`, `.rexx`, `.pprx`)
+- **Support:** Emacs Lisp (`.eld`, `.gnus`, `.viper`, `Project.ede`, `_emacs`, `abbrev_defs`), Generic (`.asn`, `.asn1`), TextMate (`.tmcg`), TI-BASIC (`.8xp`, `.8xk`, `.8xp.txt`, `.8xk.txt`)
+
+### Changed
+- Pug icon improved; previous icon retained at [`U+E9D0`](https://github.com/Alhadis/FileIcons/blob/master/charmap.md#E9D0)
+
+
 [1.7.19] - 2016-08-28
 ---------------------
 ### Added
@@ -848,7 +858,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.19...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.20...HEAD
+[1.7.20]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.20
 [1.7.19]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.19
 [1.7.18]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.18
 [1.7.17]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.17
