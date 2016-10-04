@@ -73,6 +73,10 @@
     font-style: normal !important;
   }
 
+  // 1C Enterprise language
+  &[data-name$=".bsl"]:before            { .1c-icon;               .dark-blue; }
+  &[data-name$=".os"]:before             { .1c-icon;              .medium-red; }
+
   // ABAP
   &[data-name$=".abap"]:before           { .abap-icon;         .medium-orange; }
 
@@ -465,11 +469,17 @@
   &[data-name$=".elm"]:before            { .elm-icon;            .medium-blue; }
 
   // Emacs Lisp
+  &[data-name="_emacs"]:before,
+  &[data-name="abbrev_defs"]:before,
   &[data-name$=".emacs"]:before,
   &[data-name$=".spacemacs"]:before,
   &[data-name$=".emacs.desktop"]:before,
   &[data-name$=".el"]:before             { .emacs-icon;        .medium-purple; }
+  &[data-name$=".eld"]:before,
   &[data-name$=".elc"]:before            { .emacs-icon;          .dark-purple; }
+  &[data-name$=".gnus"]:before           { .emacs-icon;           .medium-red; }
+  &[data-name$=".viper"]:before          { .emacs-icon;           .dark-green; }
+  &[data-name="Project.ede"]:before      { .emacs-icon;          .medium-blue; }
 
   // EmberScript
   &[data-name$=".emberscript"]:before    { .em-icon;              .medium-red; }
@@ -622,6 +632,8 @@
   &[data-name$=".agda"]:before           { .code-icon;             .dark-cyan; }
   &[data-name$=".appxmanifest"]:before   { .code-icon;         .medium-orange; }
   &[data-name$=".ash"]:before            { .code-icon;           .medium-cyan; }
+  &[data-name$=".asn"]:before            { .code-icon;           .medium-cyan; }
+  &[data-name$=".asn1"]:before           { .code-icon;           .medium-cyan; }
   &[data-name$=".axml"]:before           { .code-icon;             .dark-blue; }
   &[data-name$=".befunge"]:before        { .code-icon;         .medium-orange; }
   &[data-name$=".bmx"]:before            { .code-icon;             .dark-blue; }
@@ -1571,6 +1583,15 @@
   // POV-Ray SDL
   &[data-name$=".pov"]:before            { .povray-icon;           .dark-blue; }
 
+  // PowerBuilder
+  &[data-name$=".pbl"]:before            { .powerbuilder-icon;   .medium-blue; }
+  &[data-name$=".pbt"]:before            { .powerbuilder-icon;     .dark-blue; }
+  &[data-name$=".srw"]:before            { .powerbuilder-icon;    .medium-red; }
+  &[data-name$=".sru"]:before            { .powerbuilder-icon; .medium-orange; }
+  &[data-name$=".srp"]:before            { .powerbuilder-icon; .medium-maroon; }
+  &[data-name$=".sra"]:before            { .powerbuilder-icon;   .medium-blue; }
+  &[data-name$=".srj"]:before            { .powerbuilder-icon; .medium-purple; }
+
   // PowerShell
   &[data-name$=".ps1"]:before            { .powershell-icon;     .medium-blue; }
   &[data-name$=".psd1"]:before           { .powershell-icon;       .dark-blue; }
@@ -1675,6 +1696,10 @@
   // Red Hat
   &[data-name$=".spec"]:before           { .red-hat-icon;           .dark-red; }
 
+  // Regular expressions
+  &[data-name$=".regex"]:before,
+  &[data-name$=".regexp"]:before         { .regex-icon;         .medium-green; }
+
   // Ren'Py (Python)
   &[data-name$=".rpy"]:before            { .python-icon;         .medium-pink; }
   &[data-name$=".rpyb"]:before           { .binary-icon;          .medium-red; }
@@ -1688,6 +1713,11 @@
   &[data-name$=".rest"]:before           { .rst-icon;              .dark-blue; }
   &[data-name$=".rest.txt"]:before       { .rst-icon;              .dark-blue; }
   &[data-name$=".rst.txt"]:before        { .rst-icon;              .dark-blue; }
+
+  // REXX
+  &[data-name$=".rex"]:before,
+  &[data-name$=".rexx"]:before           { .rexx-icon;            .medium-red; }
+  &[data-name$=".pprx"]:before           { .rexx-icon;           .medium-blue; }
 
   // Riot.js
   &[data-name$=".tag"]:before            { .riot-icon;            .medium-red; }
@@ -1994,6 +2024,7 @@
   &[data-name$=".textile"]:before        { .textile-icon;      .medium-orange; }
 
   // TextMate
+  &[data-name$=".tmcg"]:before           { .textmate-icon;        .dark-green; }
   &[data-name$=".tmLanguage"]:before     { .textmate-icon;       .dark-purple; }
   &[data-name$=".tmCommand"]:before      { .textmate-icon;       .medium-blue; }
   &[data-name$=".tmPreferences"]:before  { .textmate-icon;         .dark-blue; }
@@ -2300,6 +2331,12 @@
 
   // Swap files
   &[data-name$=".swp"]:before              { .binary-icon;        .dark-green; }
+
+  // TI-BASIC / TI PRGM
+  &[data-name$=".8xp"]:before,
+  &[data-name$=".8xp.txt"]:before          { .calc-icon;       .medium-maroon; }
+  &[data-name$=".8xk"]:before,
+  &[data-name$=".8xk.txt"]:before          { .calc-icon;            .dark-red; }
 
   // Typings
   &[data-name="typings.json"]:before       { .typings-icon;    .medium-maroon; }
