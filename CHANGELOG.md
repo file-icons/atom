@@ -9,6 +9,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **Support:** Git (`.keep`), `.vagrant` folders
 
+### Fixed
+- [[`#429`](https://github.com/DanBrooker/file-icons/issues/429)] Tab-icon colours not obeying value of user's _"Changed only"_ setting.
+
 
 [1.7.20] - 2016-10-04
 ---------------------
