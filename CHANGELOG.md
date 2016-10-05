@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** Git (`.keep`)
+- **Support:** Git (`.keep`), `.vagrant` folders
 
 
 [1.7.20] - 2016-10-04
