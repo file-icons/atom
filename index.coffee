@@ -27,7 +27,7 @@ module.exports =
       @colour newValue
     @colour atom.config.get colouredIcons
     atom.commands.add 'body', 'file-icons:toggle-colours', (event) ->
-    	atom.config.set colouredIcons, !(atom.config.get colouredIcons)
+      atom.config.set colouredIcons, !(atom.config.get colouredIcons)
     
     @observe true
 
