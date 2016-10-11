@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **New icons:** mruby (`.mrb`)
+- **New icons:** mruby (`.mrb`), Wercker (`wercker.yml`)
 - **Support:** Git (`.keep`), `.vagrant` folders
 
 ### Fixed
