@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------
+[1.7.21] - 2016-10-12
+---------------------
 ### Added
 - **New icons:** DyLib (`.dylib`), mruby (`.mrb`), SVN (`.svn`), Wercker (`wercker.yml`)
 - **Support:** Git (`.keep`), `.vagrant` folders
@@ -868,7 +868,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.20...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.21...HEAD
+[1.7.21]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.21
 [1.7.20]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.20
 [1.7.19]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.19
 [1.7.18]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.18
