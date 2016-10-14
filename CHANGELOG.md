@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]
 -------------
+### Added
+- **New icons:** Glyphs (`.glyphs`), Yarn (`yarn.lock`)
+
 ### Fixed
 - [[`#435`](https://github.com/DanBrooker/file-icons/issues/435)] Icon of [`markdown-preview`] misaligned after reloading
 - [[`#437`](https://github.com/DanBrooker/file-icons/issues/437)] Ambiguous wording of package settings
