@@ -13,11 +13,12 @@ module.exports =
     onChanges:
       type: 'boolean'
       default: false
-      description: 'Only colour icons when file is modified'
+      title: 'Only colour when changed'
+      description: 'Show different icon colours for modified files only. Requires that project be a Git repository.'
     tabPaneIcon:
       type: 'boolean'
       default: true
-      description: 'Show file icons on tab pane'
+      title: 'Show icons in file tabs'
 
   activate: (state) ->
     @disableSetiIcons true

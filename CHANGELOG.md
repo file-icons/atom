@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Changed
+- [[`#437`](https://github.com/DanBrooker/file-icons/issues/437)] Clarified wording of package settings
+
+
 [1.7.21] - 2016-10-12
 ---------------------
 ### Added
