@@ -6,8 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]
 -------------
-### Changed
-- [[`#437`](https://github.com/DanBrooker/file-icons/issues/437)] Clarified wording of package settings
+### Fixed
+- [[`#435`](https://github.com/DanBrooker/file-icons/issues/435)] Icon of [`markdown-preview`] misaligned after reloading
+- [[`#437`](https://github.com/DanBrooker/file-icons/issues/437)] Ambiguous wording of package settings
+
+[`markdown-preview`]: https://github.com/atom/markdown-preview
 
 
 [1.7.21] - 2016-10-12

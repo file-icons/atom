@@ -31,6 +31,13 @@ module.exports =
       atom.config.set colouredIcons, !(atom.config.get colouredIcons)
     
     @observe true
+    
+    # gh-435: Strip path attributes from Markdown-Preview on startup
+    atom.packages.onDidActivateInitialPackages ->
+      selector = '.file-icons-tab-pane-icon .tab[data-type="MarkdownPreviewView"]'
+      tabs = atom.views.getView(atom.workspace).querySelectorAll(selector)
+      for tab in tabs
+        tab.itemTitle.removeAttribute "data-path"
 
     atom.config.onDidChange 'file-icons.forceShow', ({newValue, oldValue}) =>
       @forceShow newValue
