@@ -3,6 +3,11 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[Unreleased]
+---------------------
+### Added
+- **Support:** Bower Rails (`Bowerfile`)
+
 
 [1.7.22] - 2016-10-14
 ---------------------
