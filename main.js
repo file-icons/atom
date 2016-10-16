@@ -22,6 +22,8 @@ module.exports = {
 	
 	iconClassForPath(path, context = ""){
 		const file = this.fileRegistry.get(path);
-		return "icon-file-text";
+		if(/package\.json$/.test(path))
+			return "npm-icon";
+		return "js-icon";
 	}
 };
