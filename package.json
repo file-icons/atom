@@ -1,0 +1,13 @@
+{
+	"name": "FI-Files",
+	"version": "0.0.0",
+	"private": true,
+	"main": "main.js",
+	"providedServices": {
+		"atom.file-icons": {
+			"versions": {
+				"1.0.0": "provideService"
+			}
+		}
+	}
+}
