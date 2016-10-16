@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unreleased]
 ---------------------
 ### Added
-- **Support:** Bower Rails (`Bowerfile`)
+- **Support:** Bower Rails (`Bowerfile`), Docker Compose (`.docker-compose.*`), Docker Sync (`docker-sync.yml`)
 
 
 [1.7.22] - 2016-10-14
