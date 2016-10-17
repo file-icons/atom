@@ -10,11 +10,14 @@ const UI = require("./lib/ui.js");
 module.exports = {
 
 	activate(){
+		this.defaultIconClass = atom.config.get("file-icons.defaultIconClass");
+		this.coloured = atom.config.get("file-icons.coloured");
+		
 		this.fileRegistry = new FileRegistry();
-		this.iconRegistry = new IconRegistry();
+		this.iconRegistry = IconRegistry;
 		this.ui = new UI();
 		
-		this.iconRegistry.load([
+		IconRegistry.load([
 			require.resolve("./lib/.config.json")
 		]);
 	},
@@ -25,15 +28,12 @@ module.exports = {
 			this.fileRegistry = null;
 		}
 		
-		if(this.iconRegistry){
-			this.iconRegistry.destroy();
-			this.iconRegistry = null;
-		}
-		
 		if(this.ui){
 			this.ui.destroy();
 			this.ui = null;
 		}
+		
+		IconRegistry.reset();
 	},
 
 	provideService(){ return this; },
@@ -42,8 +42,10 @@ module.exports = {
 	
 	iconClassForPath(path, context = ""){
 		const file = this.fileRegistry.get(path);
-		if(/package\.json$/.test(path))
-			return "npm-icon";
-		return "js-icon";
+		const icon = file.getIcon();
+		
+		return icon
+			? icon.getClass(this.coloured ? ~~this.ui.lightTheme : null)
+			: this.defaultIconClass;
 	}
 };
