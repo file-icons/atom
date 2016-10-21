@@ -1591,6 +1591,7 @@
   &[data-name$=".postcss"]:before,
   &[data-name$=".pcss"]:before           { .postcss-icon;           .dark-red; }
   &[data-name$=".sss"]:before            { .postcss-icon;          .dark-pink; }
+  &[data-name$=".postcssrc"]:before      { .postcss-icon;       .auto(orange); }
 
   // PostScript
   &[data-name$=".ps"]:before             { .postscript-icon;      .medium-red; }
@@ -2330,6 +2331,9 @@
 
   // New Relic
   &[data-name^="newrelic.yml"]:before      { .newrelic-icon;     .medium-cyan; }
+
+  // PostCSS
+  &[data-name$="postcss.config.js"]:before { .postcss-icon;     .auto(yellow); }
 
   // Protractor
   &[data-name^="protractor.conf."]:before  { .protractor-icon;    .medium-red; }
