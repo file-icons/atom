@@ -3,7 +3,7 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unreleased]
+[1.7.23] - 2016-10-27
 ---------------------
 ### Added
 - **New icon:** EditorConfig (`.editorconfig`)
@@ -886,7 +886,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.22...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.23...HEAD
+[1.7.23]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.23
 [1.7.22]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.22
 [1.7.21]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.21
 [1.7.20]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.20
