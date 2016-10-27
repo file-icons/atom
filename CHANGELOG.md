@@ -3,6 +3,13 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+
+[Unpublished]
+---------------------
+### Added
+- **New icon:** Snyk (`.synk`)
+
+
 [1.7.23] - 2016-10-27
 ---------------------
 ### Added
