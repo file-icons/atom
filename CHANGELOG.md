@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unreleased]
 ---------------------
 ### Added
+- **New icon:** EditorConfig (`.editorconfig`)
 - **Support:** Bower Rails (`Bowerfile`), Docker Compose (`.docker-compose.*`), Docker Sync (`docker-sync.yml`), Gear (`.lintstagedrc`), OpenType feature files (`.fea`), PostCSS (`.postcssrc`, `postcss.config.js`), Zsh (`.antigen`, `.zpreztorc`)
 
 
