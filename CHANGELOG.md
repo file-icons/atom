@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **New icon:** Reason (`.re`), Snyk (`.synk`)
+- **New icon:** Reason (`.re`, `.rei`), Snyk (`.synk`)
 
 
 [1.7.23] - 2016-10-27
