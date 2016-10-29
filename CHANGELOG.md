@@ -9,6 +9,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icon:** Reason (`.re`, `.rei`), Snyk (`.synk`)
 
+### Changed
+- Solid-filled icons now used for `.js`, `.jsx`, `.ts` and `.tsx` files
+
 
 [1.7.23] - 2016-10-27
 ---------------------

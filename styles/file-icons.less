@@ -2447,17 +2447,26 @@ body.file-icons-on-changes {
 }
 
 
-// #gh-400: Temporary fix for Laravel icon in Atom Material UI
+// Temporary fixes for Atom Material UI
 .theme-atom-material-ui{
 
-  .entry[is="tree-view-file"] > .icon-file-text[data-name$=".blade.php"]:before{
-    .laravel-icon;
-    .medium-orange;
+  .entry[is="tree-view-file"] > .icon-file-text{
 
-    font-size: 16px !important;
-    transform: scale(1.35) !important;
-    top: 2px;
-    left: -1px;
+    // #gh-400: Laravel icon
+    &[data-name$=".blade.php"]:before{
+      .laravel-icon;
+      .medium-orange;
+
+      font-size: 16px !important;
+      transform: scale(1.35) !important;
+      top: 2px;
+      left: -1px;
+    }
+
+    // JavaScript
+    &[data-name$=".js"]:before{
+      font-size: 19px !important;
+    }
   }
 
   .file-icons-tab-pane-icon & @{pane-tab-selector}[data-name$=".blade.php"]:before{
