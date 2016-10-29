@@ -13,9 +13,9 @@ module.exports = {
 		this.defaultIconClass = atom.config.get("file-icons.defaultIconClass");
 		this.coloured = atom.config.get("file-icons.coloured");
 		
+		UI.init();
 		FileRegistry.init();
 		IconRegistry.init();
-		UI.init();
 		
 		IconRegistry.load([
 			require.resolve("./lib/.config.json")
