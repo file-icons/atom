@@ -33,9 +33,7 @@ module.exports = {
 	},
 
 	provideService(){ return this; },
-	
-	onWillDeactivate(){},
-	
+
 	iconClassForPath(path, context = ""){
 		const file = FileRegistry.get(path);
 		const icon = file.getIcon();
