@@ -12,10 +12,10 @@ module.exports = {
 	activate(){
 		this.defaultIconClass = atom.config.get("file-icons.defaultIconClass");
 		this.coloured = atom.config.get("file-icons.coloured");
-		this.ui = new UI();
 		
 		FileRegistry.init();
 		IconRegistry.init();
+		UI.init();
 		
 		IconRegistry.load([
 			require.resolve("./lib/.config.json")
@@ -23,13 +23,9 @@ module.exports = {
 	},
 	
 	deactivate(){
-		if(this.ui){
-			this.ui.destroy();
-			this.ui = null;
-		}
-		
 		FileRegistry.reset();
 		IconRegistry.reset();
+		UI.reset();
 	},
 
 	provideService(){ return this; },
