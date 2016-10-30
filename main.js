@@ -4,7 +4,8 @@ const path = require("path");
 
 const FileRegistry = require("./lib/file-registry.js");
 const IconRegistry = require("./lib/icon-registry.js");
-const UI = require("./lib/ui.js");
+const TreeView     = require("./lib/tree-view.js");
+const UI           = require("./lib/ui.js");
 
 
 module.exports = {
@@ -14,6 +15,7 @@ module.exports = {
 		this.coloured = atom.config.get("file-icons.coloured");
 		
 		UI.init();
+		TreeView.init();
 		FileRegistry.init();
 		IconRegistry.init();
 		
@@ -25,6 +27,7 @@ module.exports = {
 	deactivate(){
 		FileRegistry.reset();
 		IconRegistry.reset();
+		TreeView.reset();
 		UI.reset();
 	},
 
