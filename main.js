@@ -1,7 +1,6 @@
 "use strict";
 
-const path = require("path");
-
+const Options      = require("./lib/options.js");
 const FileRegistry = require("./lib/file-registry.js");
 const IconRegistry = require("./lib/icon-registry.js");
 const TreeView     = require("./lib/tree-view.js");
@@ -11,9 +10,7 @@ const UI           = require("./lib/ui.js");
 module.exports = {
 
 	activate(){
-		this.defaultIconClass = atom.config.get("file-icons.defaultIconClass");
-		this.coloured = atom.config.get("file-icons.coloured");
-		
+		Options.init();
 		UI.init();
 		TreeView.init();
 		FileRegistry.init();
@@ -29,16 +26,15 @@ module.exports = {
 		IconRegistry.reset();
 		TreeView.reset();
 		UI.reset();
+		Options.reset();
 	},
 
 	provideService(){ return this; },
 
 	iconClassForPath(path, context = ""){
-		const file = FileRegistry.get(path);
-		const icon = file.getIcon();
-		
+		const icon = FileRegistry.get(path).getIcon();
 		return icon
-			? icon.getClass(this.coloured ? ~~this.ui.lightTheme : null)
-			: this.defaultIconClass;
+			? icon.getClass(Options.coloured ? ~~UI.lightTheme : null)
+			: Options.defaultIconClass;
 	}
 };
