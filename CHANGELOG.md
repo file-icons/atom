@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **New icon:** Reason (`.re`, `.rei`), Snyk (`.synk`)
+- **New icon:** Codecov (`codecov.yml`), NSIS (new logo), Reason (`.re`, `.rei`), Snyk (`.synk`)
 
 ### Changed
 - Solid-filled icons now used for `.js`, `.jsx`, `.ts` and `.tsx` files
