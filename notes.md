@@ -26,12 +26,3 @@
 * archive-view
 	+ Base class: `file icon`
 	+ Property: `.spacePenView.name`
-
-
-
-CHANGES TO CONFIG.CSON
-----------------------
-
-	* `interpreter` is now always stored as a regex (as opposed to a possible string)
-	* Colours can no longer be omitted by passing an object instead of a string
-	* "Bower colour" replaced with a more logical 2-element array of colour names
