@@ -33,9 +33,6 @@ module.exports = {
 	provideService(){ return this; },
 
 	iconClassForPath(path, context = ""){
-		const icon = FileRegistry.get(path).getIcon();
-		return icon
-			? icon.getClass(Options.colourMode)
-			: Options.defaultIconClass;
+		return FileRegistry.get(path).consumeIconClass();
 	}
 };
