@@ -1,0 +1,31 @@
+@font-face {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	src: url("atom://file-icons/fonts/fontawesome.woff2") format(woff2);
+}
+
+@font-face {
+	font-family: Mfizz;
+	src: url("atom://file-icons/fonts/mfixx.woff2") format(woff2);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Devicons;
+	src: url("atom://file-icons/fonts/devopicons.woff2") format(woff2);
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// Package-specific font for custom icon additions
+@custom-font-path: "atom://file-icons/fonts/file-icons-v1.7.23.woff2";
+
+@font-face {
+	font-family: file-icons;
+	src: url(@custom-font-path) format(woff2);
+	font-weight: normal;
+	font-style: normal;
+}

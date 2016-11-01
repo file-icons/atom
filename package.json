@@ -1,12 +1,26 @@
 {
-	"name": "FI-Files",
-	"version": "0.0.0",
-	"private": true,
+	"name": "file-icons",
 	"main": "main.js",
+	"version": "2.0.0",
+	"private": true,
+	"description": "Assign file extension icons and colours for improved visual grepping",
+	"repository": "https://github.com/DanBrooker/file-icons",
+	"bugs": "https://github.com/DanBrooker/file-icons/issues",
+	"homepage": "https://github.com/DanBrooker/file-icons",
+	"license": "MIT",
+	"engines": {"atom": ">1.11.0"},
 	"atomTestRunner": "./node_modules/.bin/atom-mocha",
 	"atom-mocha": {
 		"slide": true,
-		"autoIt": true
+		"autoIt": true,
+		"interactive": {
+			"mocha": {
+				"bail": true
+			}
+		}
+	},
+	"dependencies": {
+		"minimatch": "*"
 	},
 	"devDependencies": {
 		"coffee-script": "*",
@@ -16,6 +30,65 @@
 		"atom.file-icons": {
 			"versions": {
 				"1.0.0": "provideService"
+			}
+		}
+	},
+	"configSchema": {
+		"coloured": {
+			"type": "boolean",
+			"default": true,
+			"description": "Untick this for colourless icons",
+			"order": 1
+		},
+		"onChanges": {
+			"type": "boolean",
+			"default": false,
+			"title": "Only colour when changed",
+			"description": "Show different icon colours for modified files only. Requires that project be a Git repository.",
+			"order": 2
+		},
+		"tabPaneIcon": {
+			"type": "boolean",
+			"default": true,
+			"title": "Show icons in file tabs",
+			"order": 3
+		},
+		"defaultIconClass": {
+			"type": "string",
+			"default": "default-icon",
+			"title": "Default icon class",
+			"description": "CSS class added to files that lack an icon.",
+			"order": 4
+		},
+		"iconMatching": {
+			"type": "object",
+			"description": "Advanced settings for dynamic icon assignment.",
+			"order": 5,
+			"properties": {
+				"changeOnOverride": {
+					"type": "boolean",
+					"default": true,
+					"title": "Change on grammar override",
+					"description": "Change a file's icon when manually assigning a grammar."
+				},
+				"checkHashbangs": {
+					"type": "boolean",
+					"default": true,
+					"title": "Check hashbangs",
+					"description": "Allow lines like `#!/usr/bin/perl` to affect icons."
+				},
+				"checkModelines": {
+					"type": "boolean",
+					"default": true,
+					"title": "Check modelines",
+					"description": "Allow [Vim](http://vim.wikia.com/wiki/Modeline_magic) and [Emacs](https://www.gnu.org/software/emacs/manual/html_node/emacs/Specifying-File-Variables.html#Specifying-File-Variables) modelines to change icons."
+				},
+				"useLinguistAttr": {
+					"type": "boolean",
+					"default": true,
+					"title": "Use .gitattributes",
+					"description": "Honour [`linguist-language`](https://github.com/github/linguist#using-gitattributes) attributes in local `.gitattributes` files."
+				}
 			}
 		}
 	}
