@@ -69,7 +69,7 @@ directoryIcons:
 	Bower:
 		icon: "bower"
 		match: /^bower[-_]components$/
-		colour: "bower"
+		colour: ["medium-yellow", "medium-orange"]
 
 	Dropbox:
 		icon: "dropbox"
@@ -2338,7 +2338,7 @@ fileIcons:
 	NSIS:
 		icon: "nsis"
 		match: [
-			[".nsi", "medium-cyan", "nsis"]
+			[".nsi", "medium-purple", "nsis"]
 			[".nsh", "dark-cyan"]
 		]
 
