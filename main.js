@@ -35,7 +35,7 @@ module.exports = {
 	iconClassForPath(path, context = ""){
 		const icon = FileRegistry.get(path).getIcon();
 		return icon
-			? icon.getClass(Options.coloured ? ~~UI.lightTheme : null)
+			? icon.getClass(Options.colourMode)
 			: Options.defaultIconClass;
 	}
 };
