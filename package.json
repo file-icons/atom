@@ -4,6 +4,10 @@
 	"private": true,
 	"main": "main.js",
 	"atomTestRunner": "./node_modules/.bin/atom-mocha",
+	"atom-mocha": {
+		"slide": true,
+		"autoIt": true
+	},
 	"devDependencies": {
 		"coffee-script": "*",
 		"atom-mocha": "*"
