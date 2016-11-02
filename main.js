@@ -16,6 +16,7 @@ module.exports = {
 		TreeView.init();
 		FileRegistry.init();
 		IconRegistry.init();
+		UI.observe();
 		
 		IconRegistry.load([
 			require.resolve("./lib/.config.json")
