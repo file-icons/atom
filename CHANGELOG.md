@@ -4,10 +4,11 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
+[1.7.24] - 2016-11-03
 ---------------------
 ### Added
 - **New icon:** Codecov (`codecov.yml`), NSIS (new logo), Reason (`.re`, `.rei`), Snyk (`.synk`)
+- **Support:** Boot (`Makefile.boot`), Generic (`.abnf`, `.bnf`, `.ebnf`)
 
 ### Changed
 - Solid-filled icons now used for `.js`, `.jsx`, `.ts` and `.tsx` files
@@ -896,7 +897,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.23...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.24...HEAD
+[1.7.24]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.24
 [1.7.23]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.23
 [1.7.22]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.22
 [1.7.21]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.21
