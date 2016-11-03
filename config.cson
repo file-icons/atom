@@ -445,7 +445,10 @@ fileIcons:
 
 	Boot:
 		icon: "boot"
-		match: ".boot"
+		match: [
+			[".boot"]
+			[/^Makefile\.boot$/i, "auto-green", priority: 2]
+		]
 
 	Bootstrap:
 		icon: "bootstrap"
@@ -1255,6 +1258,7 @@ fileIcons:
 			[/^configure\.ac$/, "medium-red"]
 			[/^Settings\.StyleCop$/, "medium-green"]
 			[".4th", "medium-blue"]
+			[".abnf", "medium-green"]
 			[".aepx", "medium-purple"]
 			[".agda", "dark-cyan"]
 			[".appxmanifest", "medium-orange"]
@@ -1262,6 +1266,7 @@ fileIcons:
 			[".axml", "dark-blue"]
 			[".befunge", "medium-orange"]
 			[".bmx", "dark-blue"]
+			[".bnf", "medium-maroon"]
 			[".brs", "dark-blue", "brightscript"]
 			[".capnp", "dark-red", scope: "capnp", alias: /Cap'?n\s?Proto|capnp/i]
 			[".cbl", "medium-maroon"]
@@ -1282,7 +1287,7 @@ fileIcons:
 			[".dotsettings", "dark-red"]
 			[".dyl", "medium-blue"]
 			[".dylan", "medium-blue"]
-			[/\.e?bnf$/i, "dark-green"]
+			[".ebnf", "medium-red"]
 			[".ecl", "medium-blue"]
 			[".eclxml", "dark-green"]
 			[".filters", "medium-pink"]
