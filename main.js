@@ -6,6 +6,7 @@ const IconRegistry = require("./lib/icon-registry.js");
 const UI           = require("./lib/ui.js");
 
 const TreeView     = require("./lib/consumers/tree-view.js");
+const Tabs         = require("./lib/consumers/tabs.js");
 
 
 module.exports = {
@@ -14,6 +15,7 @@ module.exports = {
 		Options.init();
 		UI.init();
 		TreeView.init();
+		Tabs.init();
 		FileRegistry.init();
 		IconRegistry.init();
 		UI.observe();
@@ -27,6 +29,7 @@ module.exports = {
 		FileRegistry.reset();
 		IconRegistry.reset();
 		TreeView.reset();
+		Tabs.init();
 		UI.reset();
 		Options.reset();
 	},
