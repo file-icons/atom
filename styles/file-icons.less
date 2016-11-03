@@ -643,6 +643,7 @@
   &[data-name="configure.ac"]:before     { .code-icon;            .medium-red; }
   &[data-name="Settings.StyleCop"]:before{ .code-icon;          .medium-green; }
   &[data-name$=".4th"]:before            { .code-icon;           .medium-blue; }
+  &[data-name$=".abnf"]:before           { .code-icon;          .medium-green; }
   &[data-name$=".aepx"]:before           { .code-icon;         .medium-purple; }
   &[data-name$=".agda"]:before           { .code-icon;             .dark-cyan; }
   &[data-name$=".appxmanifest"]:before   { .code-icon;         .medium-orange; }
@@ -652,6 +653,7 @@
   &[data-name$=".axml"]:before           { .code-icon;             .dark-blue; }
   &[data-name$=".befunge"]:before        { .code-icon;         .medium-orange; }
   &[data-name$=".bmx"]:before            { .code-icon;             .dark-blue; }
+  &[data-name$=".bnf"]:before            { .code-icon;         .medium-maroon; }
   &[data-name$=".brs"]:before            { .code-icon;             .dark-blue; }
   &[data-name$=".capnp"]:before          { .code-icon;              .dark-red; }
   &[data-name$=".cbl"]:before            { .code-icon;         .medium-maroon; }
@@ -672,6 +674,7 @@
   &[data-name$=".dotsettings"]:before    { .code-icon;              .dark-red; }
   &[data-name$=".dyl"]:before            { .code-icon;           .medium-blue; }
   &[data-name$=".dylan"]:before          { .code-icon;           .medium-blue; }
+  &[data-name$=".ebnf"]:before           { .code-icon;            .medium-red; }
   &[data-name$=".ecl"]:before            { .code-icon;           .medium-blue; }
   &[data-name$=".eclxml"]:before         { .code-icon;            .dark-green; }
   &[data-name$=".filters"]:before        { .code-icon;           .medium-pink; }
@@ -2342,6 +2345,9 @@
   &[data-name$="GULPFILE.babel.js"]:before,
   &[data-name$="Gulpfile.babel.js"]:before,
   &[data-name$="gulpfile.babel.js"]:before { .gulp-icon;          .medium-red; }
+
+  // Makefile.boot
+  &[data-name="Makefile.boot"]:before      { .boot-icon;         .auto(green); }
 
   // Manual Pages
   &[data-name^="tmac."]:before             { .manpage-icon;       .dark-green; }
