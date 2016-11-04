@@ -7,6 +7,7 @@ const UI           = require("./lib/ui.js");
 
 const TreeView     = require("./lib/consumers/tree-view.js");
 const Tabs         = require("./lib/consumers/tabs.js");
+const FuzzyFinder  = require("./lib/consumers/fuzzy-finder.js");
 
 
 module.exports = {
@@ -16,6 +17,7 @@ module.exports = {
 		UI.init();
 		TreeView.init();
 		Tabs.init();
+		FuzzyFinder.init();
 		FileRegistry.init();
 		IconRegistry.init();
 		UI.observe();
@@ -26,10 +28,11 @@ module.exports = {
 	},
 	
 	deactivate(){
-		FileRegistry.reset();
-		IconRegistry.reset();
 		TreeView.reset();
 		Tabs.init();
+		FuzzyFinder.reset();
+		FileRegistry.reset();
+		IconRegistry.reset();
 		UI.reset();
 		Options.reset();
 	},
