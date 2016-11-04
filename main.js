@@ -1,13 +1,14 @@
 "use strict";
 
-const Options      = require("./lib/options.js");
-const FileRegistry = require("./lib/file-registry.js");
-const IconRegistry = require("./lib/icon-registry.js");
-const UI           = require("./lib/ui.js");
+const Options        = require("./lib/options.js");
+const FileRegistry   = require("./lib/file-registry.js");
+const IconRegistry   = require("./lib/icon-registry.js");
+const UI             = require("./lib/ui.js");
 
-const TreeView     = require("./lib/consumers/tree-view.js");
-const Tabs         = require("./lib/consumers/tabs.js");
-const FuzzyFinder  = require("./lib/consumers/fuzzy-finder.js");
+const TreeView       = require("./lib/consumers/tree-view.js");
+const Tabs           = require("./lib/consumers/tabs.js");
+const FuzzyFinder    = require("./lib/consumers/fuzzy-finder.js");
+const FindAndReplace = require("./lib/consumers/find-and-replace.js");
 
 
 module.exports = {
@@ -18,6 +19,7 @@ module.exports = {
 		TreeView.init();
 		Tabs.init();
 		FuzzyFinder.init();
+		FindAndReplace.init();
 		FileRegistry.init();
 		IconRegistry.init();
 		UI.observe();
@@ -30,6 +32,7 @@ module.exports = {
 	deactivate(){
 		TreeView.reset();
 		Tabs.init();
+		FindAndReplace.reset();
 		FuzzyFinder.reset();
 		FileRegistry.reset();
 		IconRegistry.reset();
