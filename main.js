@@ -33,7 +33,7 @@ module.exports = {
 	
 	deactivate(){
 		TreeView.reset();
-		Tabs.init();
+		Tabs.reset();
 		ArchiveView.reset();
 		FindAndReplace.reset();
 		FuzzyFinder.reset();
