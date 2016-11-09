@@ -9,6 +9,7 @@ const TreeView       = require("./lib/consumers/tree-view.js");
 const Tabs           = require("./lib/consumers/tabs.js");
 const FuzzyFinder    = require("./lib/consumers/fuzzy-finder.js");
 const FindAndReplace = require("./lib/consumers/find-and-replace.js");
+const ArchiveView    = require("./lib/consumers/archive-view.js");
 
 
 module.exports = {
@@ -20,6 +21,7 @@ module.exports = {
 		Tabs.init();
 		FuzzyFinder.init();
 		FindAndReplace.init();
+		ArchiveView.init();
 		FileRegistry.init();
 		IconRegistry.init();
 		UI.observe();
@@ -32,6 +34,7 @@ module.exports = {
 	deactivate(){
 		TreeView.reset();
 		Tabs.init();
+		ArchiveView.reset();
 		FindAndReplace.reset();
 		FuzzyFinder.reset();
 		FileRegistry.reset();
