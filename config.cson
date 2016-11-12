@@ -271,13 +271,12 @@ fileIcons:
 		match: /^appcelerator\.js$/i
 		colour: "medium-red"
 
-	AppleScript:
+	Apple:
 		icon: "apple"
-		scope: "applescript"
-		alias: "osascript"
-		interpreter: "osascript"
-		match: /\.(?:applescript|scpt)$/i
-		colour: "medium-purple"
+		match: [
+			[/\.(?:applescript|scpt)$/i, "medium-purple", scope: "applescript", alias: "osascript", interpreter: "osascript"]
+			[/^com\.apple\./, "medium-blue", priority: 0.5]
+		]
 
 	Appveyor:
 		icon: "appveyor"
@@ -906,6 +905,7 @@ fileIcons:
 			[".ttl", "medium-cyan", scope: "turtle"]
 			[".rviz", "dark-blue"]
 			[".syntax", "medium-blue"]
+			[/^mime\.types$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
 		]
 
@@ -3016,7 +3016,7 @@ fileIcons:
 		icon: "terminal"
 		generic: true
 		match: [
-			[/\.(?:sh|bats|bash|tool|install|command)$/i, "medium-purple"
+			[/\.(?:sh|rc|bats|bash|tool|install|command)$/i, "medium-purple"
 				scope: "shell"
 				alias: /sh|shell|Shell-?Script|Bash/i
 				interpreter: /bash|sh|zsh|rc/]
@@ -3032,6 +3032,7 @@ fileIcons:
 			[".tmux", "medium-blue"]
 			[/^(?:configure|config\.(?:guess|rpath|status|sub)|depcomp|libtool|compile)$/, "medium-red"]
 			[/^\/(?:private\/)?etc\/(?:[^/]+\/)*(?:profile$|nanorc$|rc\.|csh\.)/i, "dark-purple", matchPath: true]
+			[/rc/i, "medium-purple", priority: -1]
 			[".tcsh", "medium-green"]
 			[".csh", "medium-yellow"]
 		]
@@ -3142,6 +3143,7 @@ fileIcons:
 			[".der", "medium-purple"]
 			[/^id_rsa/, "medium-red"]
 			[/\.glyphs\d*License$/i, "medium-green"]
+			[/^(?:master\.)?passwd$/i, "dark-green"]
 			[/^git-credential-osxkeychain$/i, "medium-green"]
 		]
 
