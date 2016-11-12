@@ -4,6 +4,19 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+---------------------
+### Added
+- **New icons:** Rollup (new logo), SilverStripe (`.ss`)
+- [[`435769b`]]: Copies of Octicons noticeably affected by Atom 1.13's [upgrade to Octicons 4.4.0]: `Settings`, `Dashboard`, `Tag`, `Terminal`, `Video`
+
+[`435769b`]: https://github.com/Alhadis/FileIcons/commit/435769bbc5d14f11352d9c633a60ebd5d3cf2142
+[upgrade to Octicons 4.4.0]: https://github.com/atom/atom/pull/13138
+
+### Changed
+- `.ss` files no longer associated with Scheme
+
+
 [1.7.24] - 2016-11-03
 ---------------------
 ### Added
