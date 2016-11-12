@@ -20,7 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [1.7.24] - 2016-11-03
 ---------------------
 ### Added
-- **New icon:** Codecov (`codecov.yml`), NSIS (new logo), Reason (`.re`, `.rei`), Snyk (`.synk`)
+- **New icons:** Codecov (`codecov.yml`), NSIS (new logo), Reason (`.re`, `.rei`), Snyk (`.synk`)
 - **Support:** Boot (`Makefile.boot`), Generic (`.abnf`, `.bnf`, `.ebnf`)
 
 ### Changed
