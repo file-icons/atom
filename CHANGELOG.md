@@ -4,7 +4,7 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
+[1.7.25] - 2016-11-13
 ---------------------
 ### Added
 - **New icons:** Rollup (new logo), SilverStripe (`.ss`)
@@ -910,7 +910,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.24...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.25...HEAD
+[1.7.25]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.25
 [1.7.24]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.24
 [1.7.23]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.23
 [1.7.22]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.22
