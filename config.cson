@@ -54,6 +54,11 @@ interpreter:  Program name(s) to look for in hashbang lines. This may be a strin
               strings are not converted into regular expressions the way other options are. Ergo, /python/ will
               match "python2" but "python" would not.
 
+matchPath:    By default, matching is done using a file or directory's basename. Setting matchPath instructs the
+              service to match against an entity's full system-path instead. If the rule's match-pattern was supplied
+              as a string, its path separators are expanded to match both Windows and POSIX-style delimiters. That is,
+              "node_modules/.bin" becomes the same as writing /node_modules[\/\\]\.bin$/i.
+
 noSuffix:     By default, icon names are suffixed with "-icon". Set noSuffix to true if you need to specify an
               icon class in its entirety (such as a default Atom icon). This should otherwise rarely be used.
 ###
@@ -75,6 +80,11 @@ directoryIcons:
 		icon: "dropbox"
 		match: /^(?:Dropbox|\.dropbox\.cache)$/
 		colour: "medium-blue"
+
+	"Executable Node Modules":
+		icon: "terminal"
+		match: "node_modules/.bin"
+		matchPath: true
 
 	Framework:
 		icon: "dylib"
@@ -237,6 +247,7 @@ fileIcons:
 			[/^(?:apache2?|httpd).conf$/i, "medium-red"]
 			[".apacheconf", "dark-red", scope: "apache-config", alias: /aconf|ApacheConf/i]
 			[/^httpd\.conf/i, "medium-red", priority: 0]
+			["apache2/magic", "medium-purple", matchPath: true]
 			[".vhost", "dark-green"]
 			[".thrift", "medium-green"]
 		]
@@ -765,6 +776,10 @@ fileIcons:
 			[/^ld\.script$/i, "medium-orange"]
 			[".reek", "medium-red"]
 			[/config|settings|option|pref/i, null, priority: 0]
+			[/^\/(?:private\/)?etc\/(?:[^/]+\/)*[^/]*\.(?:cf|conf|ini)(?:\.default)?$/i, "dark-orange", matchPath: true]
+			[/^\/(?:private\/)?etc\/(?:aliases|auto_(?:home|master)|ftpusers|group|gettytab|hosts(?:\.equiv)?|manpaths|networks|paths|protocols|services|shells|sudoers|ttys)$/i,
+				"medium-maroon",
+				matchPath: true]
 		]
 
 	Coq:
@@ -3016,6 +3031,7 @@ fileIcons:
 			[".sh.in", "dark-red"]
 			[".tmux", "medium-blue"]
 			[/^(?:configure|config\.(?:guess|rpath|status|sub)|depcomp|libtool|compile)$/, "medium-red"]
+			[/^\/(?:private\/)?etc\/(?:[^/]+\/)*(?:profile$|nanorc$|rc\.|csh\.)/i, "dark-purple", matchPath: true]
 			[".tcsh", "medium-green"]
 			[".csh", "medium-yellow"]
 		]
