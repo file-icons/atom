@@ -12,21 +12,6 @@ const Icon = require("../lib/icon.js");
 describe("Icon config", () => {
 	
 	describe("Definitions", () => {
-		it("accepts strings as patterns", () => {
-			const icons = Icon.compile({
-				a: {match: ".jpg"},
-				b: {match: ".jpg", scope: "js"},
-				c: {match: ".jpg", scope: "f", alias: "F"},
-				d: {match: ".jpg", scope: "g", interpreter: "j"}
-			});
-			
-			expect(icons[0].match).to.eql(/\.jpg$/i);
-			expect(icons[1].scope).to.eql(/\.js$/i);
-			expect(icons[2].lang).to.eql(/c|F/i);
-			expect(icons[3].interpreter).to.eql(/^j$/);
-		});
-		
-		
 		it("serialises icons as JSON", () => {
 			const configPath  = path.join(__dirname, "..", "config.cson");
 			const configData  = fs.readFileSync(configPath).toString();
@@ -40,7 +25,7 @@ describe("Icon config", () => {
 		
 		
 		it("merges icons with compatible properties", () => {
-			const icons = Icon.compile({
+			let icons = Icon.compile({
 				Foo: {
 					icon: "foo",
 					match: [
@@ -54,6 +39,36 @@ describe("Icon config", () => {
 			expect(icons[0].colour).to.eql(["medium-red", "medium-red"]);
 			expect(icons[0]).to.have.property("scope");
 			expect(icons).to.have.lengthOf(2);
+			
+			icons = Icon.compile({
+				Foo: {
+					icon: "foo",
+					match: [
+						[".foo", "red", {matchPath: true}],
+						[".bar", "red"]
+					]
+				}
+			});
+			expect(icons).to.have.lengthOf(2);
+			expect(icons[0].matchPath).to.eql(true);
+			expect(icons[1].matchPath).not.to.exist;
+			expect("1.foo").to.match(icons[0].match).and.not.match(icons[1].match);
+			expect("2.bar").to.match(icons[1].match).and.not.match(icons[0].match);
+			
+			icons = Icon.compile({
+				Foo: {
+					icon: "foo",
+					match: [
+						[".merge", "red", {matchPath: true}],
+						[".this",  "red", {matchPath: true}]
+					]
+				}
+			});
+			expect(icons).to.have.lengthOf(1);
+			expect(icons[0].matchPath).to.be.true;
+			expect("hurry/up/and/ship.this").to.match(icons[0].match);
+			expect("will/be/good/to.merge").to.match(icons[0].match);
+			expect(".this_").not.to.match(icons[0].match);
 		});
 		
 		
@@ -82,6 +97,76 @@ describe("Icon config", () => {
 			
 			expect(icons[0].icon).to.equal("alpha-icon");
 			expect(icons[1].icon).to.equal("beta");
+		});
+		
+		
+		it("recognises the matchPath property", () => {
+			const icons = Icon.compile({
+				a: {match: /a/},
+				b: {match: /b/, matchPath: true},
+				c: {match: [
+					[/c/, null, {matchPath: true}]
+				]}
+			});
+			expect(icons[0].matchPath).not.to.exist;
+			expect(icons[1].matchPath).to.exist.and.be.true;
+			expect(icons[2].matchPath).to.exist.and.be.true;
+		});
+		
+		
+		describe("String patterns", () => {
+			it("accepts strings as patterns", () => {
+				const icons = Icon.compile({
+					a: {match: ".jpg"},
+					b: {match: ".jpg", scope: "js"},
+					c: {match: ".jpg", scope: "f", alias: "F"},
+					d: {match: ".jpg", scope: "g", interpreter: "j"}
+				});
+				expect(icons[0].match).to.eql(/\.jpg$/i);
+				expect(icons[1].scope).to.eql(/\.js$/i);
+				expect(icons[2].lang).to.eql(/c|F/i);
+				expect(icons[3].interpreter).to.eql(/^j$/);
+			});
+			
+			it("escapes regex metacharacters", () => {
+				const icons = Icon.compile({
+					a: {match: "[A-Z]+*.nope"},
+					b: {match: "file.js"},
+					c: {match: "/foo/bar.var"}
+				});
+				expect(icons[0].match).to.eql(/\[A-Z\]\+\*\.nope$/i);
+				expect(icons[1].match).to.eql(/file\.js$/i);
+				expect(icons[2].match).to.eql(/\/foo\/bar\.var$/i);
+			});
+			
+			it("uses platform-agnostic path separators", () => {
+				const icons = Icon.compile({
+					a: {match: "foo/bar.txt", matchPath: true},
+					b: {match: "C:\\foo\\bar.txt", matchPath: true},
+					c: {match: /over\/kill\.ott/, matchPath: true}
+				});
+				expect(icons[0].match).to.eql(/foo[\\\/]bar\.txt$/i);
+				expect(icons[1].match).to.eql(/C:[\\\/]foo[\\\/]bar\.txt$/i);
+				expect("over\\kill.ott").not.to.match(icons[2].match);
+			});
+			
+			it("leaves path separators alone if matchPath is disabled", () => {
+				const icons = Icon.compile({
+					a: {match: "foo/bar.txt"},
+					b: {match: "C:\\foo\\bar.txt"}
+				});
+				expect(icons[0].match).to.eql(/foo\/bar\.txt$/i);
+				expect(icons[1].match).to.eql(/C:\\foo\\bar\.txt$/i);
+			});
+			
+			it("bestows no special meaning to leading slashes", () => {
+				const icons = Icon.compile({
+					a: {match: "/etc/php.ini", matchPath: true},
+					b: {match: "\\etc\\php.ini", matchPath: true}
+				});
+				expect("/usr/local/etc/php.ini").to.match(icons[0].match);
+				expect("\\usr\\local\\etc\\php.ini").to.match(icons[1].match);
+			});
 		});
 	});
 	
