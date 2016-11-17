@@ -46,7 +46,7 @@ module.exports = {
 	provideService(){ return this; },
 
 	iconClassForPath(path, context = ""){
-		return FileRegistry.get(path).consumeIconClass();
+		return FileRegistry.get(path).getIconClass();
 	}
 };
 
