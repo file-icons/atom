@@ -1273,6 +1273,7 @@ fileIcons:
 			[".agda", "dark-cyan"]
 			[".appxmanifest", "medium-orange"]
 			[".ash", "medium-cyan"]
+			[/\.asn1?$/i, "medium-cyan"]
 			[".axml", "dark-blue"]
 			[".befunge", "medium-orange"]
 			[".bmx", "dark-blue"]
@@ -3317,6 +3318,7 @@ fileIcons:
 	TextMate:
 		icon: "textmate"
 		match: [
+			[".tmcg", "dark-green"]
 			[".tmLanguage", "dark-purple"]
 			[".tmCommand", "medium-blue"]
 			[".tmPreferences", "dark-blue"]
