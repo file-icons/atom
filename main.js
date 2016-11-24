@@ -3,7 +3,6 @@
 const Options        = require("./lib/options.js");
 const FileRegistry   = require("./lib/file-registry.js");
 const IconRegistry   = require("./lib/icon-registry.js");
-const VCS            = require("./lib/vcs.js");
 const UI             = require("./lib/ui.js");
 
 const TreeView       = require("./lib/consumers/tree-view.js");
@@ -18,7 +17,6 @@ module.exports = {
 	activate(){
 		Options.init();
 		UI.init();
-		VCS.init();
 		TreeView.init();
 		Tabs.init();
 		FuzzyFinder.init();
@@ -41,7 +39,6 @@ module.exports = {
 		FuzzyFinder.reset();
 		FileRegistry.reset();
 		IconRegistry.reset();
-		VCS.reset();
 		UI.reset();
 		Options.reset();
 	},
