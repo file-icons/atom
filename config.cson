@@ -1038,6 +1038,11 @@ fileIcons:
 			[/^Project\.ede$/i, "medium-blue"]
 		]
 
+	Email:
+		icon: "at"
+		match: /^(?:authors|owners)$/i
+		colour: "auto-red"
+
 	Ember:
 		icon: "ember"
 		priority: 2
@@ -1583,6 +1588,7 @@ fileIcons:
 			[".shtml", "medium-cyan"]
 			[".scaml", "dark-red", "scaml"]
 			[".swig", "medium-green", "swig"]
+			[".vash", "medium-red", "vash"]
 			[/\.html?\.ecr$/i, "medium-cyan", priority: 2]
 			[/\.(?:html?\.erb|rhtml)$/i, "medium-red", scope: "html.erb", priority: 2]
 		]
@@ -2783,8 +2789,8 @@ fileIcons:
 		icon: "book"
 		match: [
 			[/^README(?:\b|_)|^(?:licen[sc]es?|(?:read|readme|click|delete|keep|test)\.me)$|\.(?:readme|1st)$/i, "medium-blue", priority: 2]
-			[/^(?:notice|authors|bugs|change[-_]?log(?:[-._]?\d+)?|contribute|contributing|contributors|copying|hacking|history|install|maintainers|manifest|more\.stuff|projects|revision|terms|thanks)$/i, "dark-blue", priority: 2]
-			[/\b(?:changelog|copying(?:v?\d)?|install|read[-_]?me)\b/i, "medium-blue", priority: 0]
+			[/^(?:notice|bugs|change[-_]?log(?:[-._]?\d+)?|contribute|contributing|contributors|copying|hacking|history|install|maintainers|manifest|more\.stuff|projects|revision|terms|thanks)$/i, "dark-blue", priority: 2]
+			[/\b(?:changelog|copying(?:v?\d)?|install|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
 			[/^news(?:[-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
 		]
 
