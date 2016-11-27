@@ -1441,6 +1441,13 @@ fileIcons:
 		match: ".glyphs"
 		colour: "medium-green"
 
+	GN:
+		icon: "gn"
+		match: [
+			[".gn", "dark-blue", "gn"]
+			[".gni", "medium-blue"]
+		]
+
 	GNU:
 		icon: "gnu"
 		match: /\.(?:gnu|gplv[23])$/i
@@ -1977,7 +1984,7 @@ fileIcons:
 			[/^mkfile$/i, "medium-yellow"]
 			[".am", "medium-red"]
 			[".bb", "dark-blue"]
-			[".ninja", "medium-blue"]
+			[/^DEPS$/, "dark-blue"]
 			[".mms", "medium-blue"]
 			[".mmk", "light-blue"]
 			[".pri", "dark-purple"]
@@ -2318,6 +2325,12 @@ fileIcons:
 		scope: "nim"
 		match: /\.nim(?:rod)?$/i
 		colour: "medium-green"
+
+	Ninja:
+		icon: "shuriken"
+		scope: "ninja"
+		match: ".ninja"
+		colour: "medium-blue"
 
 	Nit:
 		icon: "nit"
@@ -2727,7 +2740,9 @@ fileIcons:
 			[".py", "dark-blue", scope: "python", alias: "rusthon", interpreter: /python[\d.]*/]
 			[".bzl", "dark-blue"]
 			[".ipy", "medium-blue"]
+			[".isolate", "dark-green"]
 			[".gyp", "medium-green"]
+			[".gypi", "dark-green"]
 			[".pyde", "medium-orange"]
 			[".pyp", "dark-purple"]
 			[".pyt", "dark-green"]
@@ -2738,7 +2753,7 @@ fileIcons:
 			[".rpy", "medium-pink", scope: "renpy", alias: /Ren'?Py/i]
 			[/\.?(?:pypirc|pythonrc|python-venv)$/i, "dark-blue"]
 			[/^(?:BUCK|BUILD|SConstruct|SConscript)$/, "dark-green"]
-			[/^Snakefile$/, "medium-green"]
+			[/^(?:Snakefile|WATCHLISTS)$/, "medium-green"]
 			[/^wscript$/, "dark-maroon"]
 		]
 
