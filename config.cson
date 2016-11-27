@@ -2330,9 +2330,10 @@ fileIcons:
 
 	Ninja:
 		icon: "shuriken"
-		scope: "ninja"
-		match: ".ninja"
-		colour: "medium-blue"
+		match: [
+			[".ninja", "medium-blue", "ninja"]
+			[".ninja.d", "dark-cyan", priority: 2]
+		]
 
 	Nit:
 		icon: "nit"
