@@ -3458,7 +3458,7 @@ fileIcons:
 
 	V8:
 		icon: "v8"
-		match: /^(?:[dv]8|v8[-_.].*|mksnapshot|mkpeephole)$/i
+		match: /^(?:[dv]8|v8[-_.][^.]*|mksnapshot|mkpeephole)$/i
 		colour: "medium-blue"
 		priority: 0
 
