@@ -328,11 +328,11 @@ fileIcons:
 	Assembly: # Or binary
 		icon: "binary"
 		match: [
-			[/\.(?:l?a|[ls]?o|out|s|a51|nasm|asm|z80)$/i, "medium-red", scope: /(?:^|\.)(?:a[rs]m|x86|z80|lc-?3|cpu12|x86asm|m68k|assembly|avr(?:dis)?asm|dasm)(?:\.|$)/i, alias: "nasm"]
+			[/\.(?:l?a|[ls]?o|out|s|a51|nasm|asm|wasm|z80)$/i, "medium-red", scope: /(?:^|\.)(?:a[rs]m|x86|z80|lc-?3|cpu12|x86asm|m68k|assembly|avr(?:dis)?asm|dasm)(?:\.|$)/i, alias: "nasm"]
 			[".agc", "dark-blue", scope: "source.agc", alias: /(?:Virtual\s*)?AGC|Apollo(?:[-_\s]?11)?\s*Guidance\s*Computer/i]
 			[".ko", "dark-green"]
 			[".lst", "medium-blue", "lst-cpu12"]
-			[/\.(?:(?:c(?:[+px]{2}?)?-?)?objdump)$/i, "dark-orange"]
+			[/\.(?:(?:c(?:[+px]{2}?)?-?)?objdump|bin|dat|pak|pdb)$/i, "dark-orange"]
 			[".d-objdump", "dark-blue"]
 			[/\.gcode|\.gco/i, "medium-orange"]
 			[/\.rpy[bc]$/i, "medium-red"]
