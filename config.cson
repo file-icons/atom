@@ -1911,7 +1911,7 @@ fileIcons:
 			[".lws", "medium-blue"]
 		]
 
-	LISP:
+	Lisp:
 		icon: "lisp"
 		match: [
 			[".lsp", "medium-red", "newlisp"]
@@ -2804,7 +2804,7 @@ fileIcons:
 		icon: "book"
 		match: [
 			[/^README(?:\b|_)|^(?:licen[sc]es?|(?:read|readme|click|delete|keep|test)\.me)$|\.(?:readme|1st)$/i, "medium-blue", priority: 2]
-			[/^(?:notice|bugs|change[-_]?log(?:[-._]?\d+)?|contribute|contributing|contributors|copying|hacking|history|install|maintainers|manifest|more\.stuff|projects|revision|terms|thanks)$/i, "dark-blue", priority: 2]
+			[/^(?:notice|bugs|changes|change[-_]?log(?:[-._]?\d+)?|contribute|contributing|contributors|copying|hacking|history|install|maintainers|manifest|more\.stuff|projects|revision|terms|thanks)$/i, "dark-blue", priority: 2]
 			[/\b(?:changelog|copying(?:v?\d)?|install|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
 			[/^news(?:[-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
 		]
