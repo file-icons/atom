@@ -470,7 +470,7 @@ fileIcons:
 		icon: "bower"
 		priority: 2
 		match: /^(?:\.bowerrc|bower\.json|Bowerfile)$/i
-		colour: "bower"
+		colour: ["medium-yellow", "medium-orange"]
 
 	Brainfuck:
 		icon: "brain"
@@ -891,6 +891,7 @@ fileIcons:
 			[".json.eex", "medium-purple"]
 			[".proto", "dark-cyan", scope: "protobuf", alias: /protobuf|Protocol\s?Buffers?/i]
 			[".pytb", "medium-orange", scope: "python.traceback"]
+			[".pydeps", "dark-blue"]
 			[/\.pot?$/, "medium-red"]
 			[".edn", "medium-purple"]
 			[".eam.fs", "dark-purple"]
@@ -1224,7 +1225,7 @@ fileIcons:
 		icon: "gdb"
 		match: [
 			[".gdb", "auto-green", "gdb"]
-			[".gdbinit", "auto-cyan"]
+			["gdbinit", "auto-cyan"]
 		]
 
 	GDScript:
@@ -1252,6 +1253,7 @@ fileIcons:
 			[".arcconfig", "dark-blue"]
 			[".pairs", "dark-green"]
 			[".python-version", "dark-blue"]
+			[".lintstagedrc", "dark-orange"]
 			[/^nodemon\.json$|^\.nodemonignore$/i, "medium-green"]
 			[".indent.pro", "medium-blue", priority: 2]
 			[/^\./, null, priority: 0]
@@ -3042,7 +3044,7 @@ fileIcons:
 			[".sh-session", "auto-yellow"
 				scope: "shell-session"
 				alias: /(?:Bash|Shell|Sh)[-\s]?Session|Console/i]
-			[/\.zsh(?:-theme|_history)?$|^\.?(?:zlogin|zlogout|zprofile|zshenv|zshrc)$/i, "medium-blue"]
+			[/\.zsh(?:-theme|_history)?$|^\.?(?:antigen|zpreztorc|zlogin|zlogout|zprofile|zshenv|zshrc)$/i, "medium-blue"]
 			[/\.fish$|^\.fishrc$/i, "medium-green", "fish"]
 			[".inputrc", "medium-red"]
 			[".sh.in", "dark-red"]
@@ -3285,7 +3287,7 @@ fileIcons:
 	Terraform:
 		icon: "terraform"
 		scope: /\.terra(?:form)?$/i
-		match: ".tf"
+		match: /\.tf(?:vars)?$/i
 		colour: "dark-purple"
 
 	TeX:
@@ -3550,6 +3552,12 @@ fileIcons:
 			[/webpack\.config\./i, "medium-blue"]
 			[/^webpackfile\.js$/i, "medium-blue"]
 		]
+
+	Wercker:
+		icon: "wercker"
+		priority: 2
+		match: /^wercker\.ya?ml$/i
+		colour: "medium-purple"
 
 	Windows:
 		icon: "windows"
