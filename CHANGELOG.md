@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unreleased]
 ---------------------
 ### Added
-- **Support:** Vash templates (`.vash`)
+- **Support:** Vash templates (`.vash`), XHTML (`.xhtml`)
 
 [1.7.25] - 2016-11-13
 ---------------------
