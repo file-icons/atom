@@ -1585,7 +1585,7 @@ fileIcons:
 	HTML:
 		icon: "html5"
 		match: [
-			[/\.html?$/i, "medium-orange", scope: "html.basic", alias: /xhtml|htm/i]
+			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /xhtml|htm/i]
 			[".cshtml", "medium-red"]
 			[".ejs", "medium-green"]
 			[".gohtml", "dark-blue", "gohtml"]
