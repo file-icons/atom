@@ -16,13 +16,12 @@ module.exports = {
 		Consumers.init();
 		FileRegistry.init();
 		IconRegistry.init();
+		Strategies.init();
 		UI.observe();
 		
 		IconRegistry.load([
 			require.resolve("./lib/.config.json")
 		]);
-		
-		Strategies.init();
 	},
 	
 	deactivate(){
