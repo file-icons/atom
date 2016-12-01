@@ -4,6 +4,7 @@ const Consumers      = require("./lib/consumers/all.js");
 const Options        = require("./lib/options.js");
 const FileRegistry   = require("./lib/file-registry.js");
 const IconRegistry   = require("./lib/icon-registry.js");
+const Strategies     = require("./lib/strategies/all.js");
 const UI             = require("./lib/ui.js");
 
 
@@ -20,9 +21,12 @@ module.exports = {
 		IconRegistry.load([
 			require.resolve("./lib/.config.json")
 		]);
+		
+		Strategies.init();
 	},
 	
 	deactivate(){
+		Strategies.reset();
 		Consumers.reset();
 		FileRegistry.reset();
 		IconRegistry.reset();
