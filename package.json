@@ -60,32 +60,44 @@
 			"description": "CSS class added to files that lack an icon.",
 			"order": 4
 		},
-		"iconMatching": {
+		"strategies": {
 			"type": "object",
+			"title": "Match strategies",
 			"description": "Advanced settings for dynamic icon assignment.",
 			"order": 5,
 			"properties": {
-				"changeOnOverride": {
+				"grammar": {
 					"type": "boolean",
 					"default": true,
+					"order": 1,
 					"title": "Change on grammar override",
-					"description": "Change a file's icon when manually assigning a grammar."
+					"description": "Change a file's icon when manually setting its language."
 				},
-				"checkHashbangs": {
+				"hashbangs": {
 					"type": "boolean",
 					"default": true,
+					"order": 2,
 					"title": "Check hashbangs",
 					"description": "Allow lines like `#!/usr/bin/perl` to affect icons."
 				},
-				"checkModelines": {
+				"modelines": {
 					"type": "boolean",
 					"default": true,
+					"order": 3,
 					"title": "Check modelines",
 					"description": "Allow [Vim](http://vim.wikia.com/wiki/Modeline_magic) and [Emacs](https://www.gnu.org/software/emacs/manual/html_node/emacs/Specifying-File-Variables.html#Specifying-File-Variables) modelines to change icons."
 				},
-				"useLinguistAttr": {
+				"customTypes": {
 					"type": "boolean",
 					"default": true,
+					"order": 4,
+					"title": "Use custom file-types",
+					"description": "Respect the user's [custom language-type settings](http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-language-recognition)."
+				},
+				"linguist": {
+					"type": "boolean",
+					"default": true,
+					"order": 5,
 					"title": "Use .gitattributes",
 					"description": "Honour [`linguist-language`](https://github.com/github/linguist#using-gitattributes) attributes in local `.gitattributes` files."
 				}
