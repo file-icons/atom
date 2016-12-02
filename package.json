@@ -1,6 +1,6 @@
 {
 	"name": "file-icons",
-	"main": "main.js",
+	"main": "lib/main.js",
 	"version": "2.0.0",
 	"private": true,
 	"description": "Assign file extension icons and colours for improved visual grepping",

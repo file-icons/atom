@@ -3,7 +3,7 @@
 
 const fs   = require("fs");
 const path = require("path");
-const Icon = require("../lib/icon.js");
+const Icon = require("../lib/service/icon.js");
 const CoffeeScript = require("coffee-script");
 
 
@@ -11,7 +11,7 @@ const configPath = path.resolve(__dirname, "..", "config.cson");
 const configData = fs.readFileSync(configPath).toString();
 const config     = CoffeeScript.eval(configData);
 
-const outputPath = path.join(path.dirname(configPath), "lib", ".config.json");
+const outputPath = path.join(path.dirname(configPath), "lib", "service", ".config.json");
 const outputData = JSON.stringify([
 	Icon.compile(config.directoryIcons),
 	Icon.compile(config.fileIcons)
