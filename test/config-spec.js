@@ -7,7 +7,7 @@ const CoffeeScript = require("coffee-script");
 const {expect}     = require("chai");
 
 
-const Icon = require("../lib/icon.js");
+const Icon = require("../lib/service/icon.js");
 
 describe("Icon config", () => {
 	
