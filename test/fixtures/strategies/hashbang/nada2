@@ -1,0 +1,3 @@
+ #!/usr/sbin/ruby
+
+# Top-line has a space: it shouldn't be treated as a hashbang
