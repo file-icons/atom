@@ -87,7 +87,7 @@
 					"title": "Check modelines",
 					"description": "Allow [Vim](http://vim.wikia.com/wiki/Modeline_magic) and [Emacs](https://www.gnu.org/software/emacs/manual/html_node/emacs/Specifying-File-Variables.html#Specifying-File-Variables) modelines to change icons."
 				},
-				"customTypes": {
+				"usertypes": {
 					"type": "boolean",
 					"default": true,
 					"order": 4,
