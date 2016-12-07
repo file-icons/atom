@@ -1330,12 +1330,14 @@ fileIcons:
 			[".lex", "medium-cyan"]
 			[".lid", "medium-purple"]
 			[".lol", "medium-pink"]
+			[".lp", "dark-purple"]
 			[".m4", "medium-red"]
 			[".manifest", "medium-blue"]
 			[".mask", "medium-red"]
 			[".mdpolicy", "dark-blue"]
 			[".menu", "medium-blue"]
 			[/\.ML$/, "medium-red"]
+			[/\.mq[45h]$/i, "dark-blue", scope: /(?:^|\.)mq[45](?=\.|$)/i]
 			[".mtml", "dark-blue"]
 			[".muf", "medium-orange"]
 			[".mumps", "medium-red"]
@@ -2575,14 +2577,13 @@ fileIcons:
 	Perl6:
 		icon: "perl6"
 		match: [
-			[".pl6", "medium-purple", scope: "perl6", alias: /pl6|Perl\s6/i, interpreter: "perl6"]
-			[".6pl", "light-blue"]
+			[".pl6", "medium-purple", scope: /(?:^|\.)perl6(?:fe)?(?=\.|$)/, alias: /pl6|Perl\s6/i, interpreter: "perl6"]
+			[/\.[tp]6$|\.6pl$/i, "light-blue"]
+			[/\.(?:pm6|p6m)$/i, "dark-pink"]
 			[".6pm", "dark-cyan"]
 			[".nqp", "dark-purple"]
-			[".p6", "light-blue"]
 			[".p6l", "medium-blue"]
-			[".p6m", "dark-pink"]
-			[".pm6", "dark-pink"]
+			[".pod6", "dark-green"]
 			[/^Rexfile$/, "medium-green"]
 		]
 
@@ -2595,7 +2596,7 @@ fileIcons:
 	PHP:
 		icon: "php"
 		match: [
-			[/\.(?:php[st\d]?)$/i, "dark-blue", "php"]
+			[/\.php(?:[st\d]|_cs)?$/i, "dark-blue", "php"]
 			[/^Phakefile/, "dark-green"]
 		]
 
@@ -2744,11 +2745,13 @@ fileIcons:
 			[".bzl", "dark-blue"]
 			[".ipy", "medium-blue"]
 			[".isolate", "dark-green"]
+			[".pep", "medium-orange", "pep8"]
 			[".gyp", "medium-green"]
 			[".gypi", "dark-green"]
 			[".pyde", "medium-orange"]
 			[".pyp", "dark-purple"]
 			[".pyt", "dark-green"]
+			[".py3", "dark-blue"]
 			[".pyw", "medium-maroon"]
 			[".tac", "dark-pink"]
 			[".wsgi", "dark-red"]
@@ -2788,6 +2791,12 @@ fileIcons:
 		priority: 2
 		match: /^raphael(?:\.min|\.no-deps)*\.js$/i
 		colour: "medium-orange"
+
+	Rascal:
+		icon: "rascal"
+		scope: "rascal"
+		match: ".rsc"
+		colour: "medium-yellow"
 
 	RDoc:
 		icon: "rdoc"
@@ -2925,7 +2934,7 @@ fileIcons:
 				alias: /rbx?|rake|jruby|macruby/i
 				interpreter: /(?:mac|j)?ruby|rake|rbx/]
 			[/^\.?(?:irbrc|gemrc|pryrc|rspec|ruby-(?:gemset|version))$/i, "medium-red"]
-			[/^(?:Appraisals|(?:Rake|Gem|[bB]uild|Berks|Cap|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(?:\.lock)?)$/, "medium-red"]
+			[/^(?:Appraisals|(?:Rake|Gem|[bB]uild|Berks|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(?:\.lock)?)$/, "medium-red"]
 			[/\.(?:jbuilder|rbuild|rb[wx]|builder)$/i, "dark-red"]
 			["_spec.rb", "light-green"]
 			[/^rails$/, "medium-red"]
