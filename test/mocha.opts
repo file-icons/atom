@@ -1,1 +1,2 @@
 --slow 9999
+--spec-pattern /\d+-[\w-]+\.js$/i
