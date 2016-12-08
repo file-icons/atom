@@ -246,4 +246,152 @@ describe("Utilities", () => {
 			});
 		});
 	});
+
+
+	describe("MappedDisposable class", () => {
+		const MappedDisposable = require("../lib/utils/mapped-disposable.js");
+		const {CompositeDisposable, Disposable} = require("atom");
+		
+		it("can be constructed with an iterable", () => {
+			const disposable1 = new Disposable();
+			const disposable2 = new Disposable();
+			const disposable3 = new CompositeDisposable();
+			const map = new MappedDisposable([
+				[{name: "foo"}, disposable1],
+				[{name: "bar"}, disposable2],
+				[{name: "baz"}, disposable3]
+			]);
+			map.dispose();
+			expect(disposable1.disposed).to.be.true;
+			expect(disposable2.disposed).to.be.true;
+			expect(disposable3.disposed).to.be.true;
+		});
+		
+		it("can be constructed without an iterable", () => {
+			const map = new MappedDisposable();
+			expect(map.disposed).to.be.false;
+			map.dispose();
+			expect(map.disposed).to.be.true;
+		});
+		
+		it("embeds ordinary disposables in CompositeDisposables", () => {
+			const disposable1 = new Disposable();
+			const disposable2 = new CompositeDisposable();
+			const map = new MappedDisposable([
+				["foo", disposable1],
+				["bar", disposable2]
+			]);
+			expect(map.get("foo")).to.be.instanceof(CompositeDisposable);
+			expect(map.get("bar")).to.equal(disposable2);
+		});
+		
+		it("allows disposables to be added to keys", () => {
+			const key = {};
+			const cd1 = new CompositeDisposable();
+			const cd2 = new CompositeDisposable();
+			const cd3 = new CompositeDisposable();
+			const map = new MappedDisposable([ [key, cd1] ]);
+			expect(map.get(key)).to.equal(cd1);
+			map.add(key, cd2);
+			expect(cd1.disposables.size).to.equal(1);
+			map.add("foo", cd3);
+			expect(map.size).to.equal(2);
+			map.dispose();
+			expect(map.disposed).to.be.true;
+			expect(cd1.disposed).to.be.true;
+			expect(cd2.disposed).to.be.true;
+		});
+		
+		it("allows disposables to be removed from keys", () => {
+			const key = {};
+			const cd1 = new CompositeDisposable();
+			const cd2 = new CompositeDisposable();
+			const cd3 = new CompositeDisposable();
+			const cd4 = new CompositeDisposable();
+			const cd5 = new CompositeDisposable();
+			const map = new MappedDisposable([ [key, cd1] ]);
+			map.add(key, cd2, cd3, cd4, cd5);
+			expect(cd1.disposables.size).to.equal(4);
+			map.remove(key, cd3, cd5);
+			expect(cd1.disposables.size).to.equal(2);
+			map.dispose();
+			expect(map.disposed).to.be.true;
+			expect(cd1.disposed).to.be.true;
+			expect(cd2.disposed).to.be.true;
+			expect(cd3.disposed).to.be.false;
+			expect(cd4.disposed).to.be.true;
+			expect(cd5.disposed).to.be.false;
+		});
+		
+		it("allows other MappedDisposables to be added to keys", () => {
+			const disposable = new Disposable();
+			const map1 = new MappedDisposable([ ["foo", disposable] ]);
+			const map2 = new MappedDisposable([ ["bar", map1] ]);
+			expect(map1.get("foo").disposables.has(disposable)).to.be.true;
+			expect(map2.get("bar").disposables.has(map1)).to.be.true;
+			map2.dispose();
+			expect(disposable.disposed).to.be.true;
+			expect(map1.disposed).to.be.true;
+			expect(map2.disposed).to.be.true;
+		});
+		
+		it("reports accurate entry count", () => {
+			const map = new MappedDisposable();
+			expect(map.size).to.equal(0);
+			map.add("foo", new Disposable());
+			expect(map.size).to.equal(1);
+			map.add("foo", new Disposable());
+			map.add("bar", new Disposable());
+			expect(map.size).to.equal(2);
+			map.delete("foo");
+			expect(map.size).to.equal(1);
+			map.dispose();
+			expect(map.size).to.equal(0);
+		});
+		
+		it("deletes keys when disposing them", () => {
+			const key = {};
+			const cd1 = new CompositeDisposable();
+			const map = new MappedDisposable([ [key, cd1] ]);
+			map.delete(key);
+			expect(map.has(key)).to.be.false;
+			expect(map.get(key)).to.be.undefined;
+			map.dispose();
+			expect(cd1.disposed).to.be.false;
+		});
+		
+		it("deletes all keys when disposed", () => {
+			const map = new MappedDisposable([
+				["foo", new Disposable()],
+				["bar", new Disposable()]
+			]);
+			expect(map.has("foo")).to.be.true;
+			expect(map.has("bar")).to.be.true;
+			map.dispose();
+			expect(map.has("foo")).to.be.false;
+			expect(map.has("bar")).to.be.false;
+			expect(map.size).to.equal(0);
+		});
+		
+		it("allows a disposable list to be replaced with another", () => {
+			const cd1 = new CompositeDisposable();
+			const cd2 = new CompositeDisposable();
+			const key = {};
+			const map = new MappedDisposable([[key, cd1]]);
+			map.set(key, cd2);
+			expect(map.get(key)).to.equal(cd2);
+			expect(map.get(key).disposables.has(cd1)).to.be.false;
+			map.dispose();
+			expect(cd1.disposed).to.be.false;
+			expect(cd2.disposed).to.be.true;
+		});
+		
+		it("throws an error when setting a value to a non-disposable", () => {
+			expect(() => {
+				const key = {};
+				const map = new MappedDisposable([ [key, new Disposable()] ]);
+				map.set(key, {});
+			}).to.throw("Value must have a .dispose() method");
+		});
+	});
 });
