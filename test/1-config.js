@@ -124,7 +124,7 @@ describe("Icon config", () => {
 				});
 				expect(icons[0].match).to.eql(/\.jpg$/i);
 				expect(icons[1].scope).to.eql(/\.js$/i);
-				expect(icons[2].lang).to.eql(/c|F/i);
+				expect(icons[2].lang).to.eql(/^c$|^F$/i);
 				expect(icons[3].interpreter).to.eql(/^j$/);
 			});
 			
@@ -223,8 +223,8 @@ describe("Icon config", () => {
 					colour: "medium-blue"
 				}
 			});
-			expect(icons[0].lang).to.eql(/AsciiDoc/i);
-			expect(icons[1].lang).to.eql(/JavaScript|Ecmascript/i);
+			expect(icons[0].lang).to.eql(/^AsciiDoc$/i);
+			expect(icons[1].lang).to.eql(/^JavaScript$|^Ecmascript$/i);
 		});
 		
 		
