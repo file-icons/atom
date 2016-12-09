@@ -397,7 +397,7 @@ describe("Utilities", () => {
 	
 	
 	describe("PatternMap class", () => {
-		const PatternMap = require("../lib/utils/pattern-map.js");
+		const {PatternMap} = require("../lib/utils/pattern-lists.js");
 		
 		describe("Construction", () => {
 			it("can be constructed with an iterable", () => {
@@ -593,7 +593,7 @@ describe("Utilities", () => {
 			});
 		});
 		
-		describe("match()", () => {
+		describe("String matching", () => {
 			it("returns the matched key and its results by default", () => {
 				const key = /^A:(XYZ)$|^A(:)(\d{3})$/;
 				const map = new PatternMap([ [key, true] ]);
@@ -626,6 +626,181 @@ describe("Utilities", () => {
 					[/A|B|C/, Object.assign(["A"],   {index:  0, input})],
 					[/1|2|3/, Object.assign(["2"],   {index: 16, input})],
 					[/xYz$/i, Object.assign(["xYZ"], {index: 38, input})]
+				]);
+			});
+		});
+	});
+
+
+	describe("PatternSet class", () => {
+		const {PatternSet} = require("../lib/utils/pattern-lists.js");
+		
+		describe("Construction", () => {
+			it("can be constructed with an iterable", () => {
+				const iterable = [/A/, /B/, /C/];
+				const set = new PatternSet(iterable);
+				expect(set.size).to.equal(3);
+				expect(set.has(iterable[0])).to.be.true;
+				expect(set.has(iterable[1])).to.be.true;
+				expect(set.has(iterable[2])).to.be.true;
+			});
+			
+			it("can be constructed without an iterable", () => {
+				expect(new PatternSet().size).to.equal(0);
+				expect(new PatternSet([]).size).to.equal(0);
+			});
+		});
+		
+		describe("Identicality", () => {
+			it("doesn't add duplicate expressions", () => {
+				const set = new PatternSet([/A/, /B/, /C/]);
+				expect(set.size).to.equal(3);
+				expect(set.add(/A/).size).to.equal(3);
+				expect(set.add(/D/).size).to.equal(4);
+				expect(set.has(/D/)).to.be.true;
+				expect(set.has(/A/)).to.be.true;
+				expect(set.has(/E/)).to.be.false;
+			});
+			
+			it("deletes matching expressions", () => {
+				const set = new PatternSet([/A/, /B/, /C/]);
+				expect(set.size).to.equal(3);
+				expect(set.delete(/B/)).to.be.true;
+				expect(set.size).to.equal(2);
+				expect(set.delete(/D/)).to.be.false;
+				expect(set.delete(/B/)).to.be.false;
+				expect(set.has(/B/)).to.be.false;
+				expect(set.size).to.equal(2);
+				expect(set.delete(/A/)).to.be.true;
+				expect(set.has(/A/)).to.be.false;
+				expect(set.size).to.equal(1);
+			});
+			
+			it("acknowledges flags when distinguishing expressions", () => {
+				const set = new PatternSet([ /A/, /B/i ]);
+				expect(set.add(/A/).size).to.equal(2);
+				expect(set.has(/A/i)).to.be.false;
+				expect(set.add(/A/i).size).to.equal(3);
+				expect(set.has(/A/g)).to.be.false;
+				expect(set.has(/B/)).to.be.false;
+				expect(set.delete(/B/)).to.be.false;
+				expect(set.delete(/B/i)).to.be.true;
+				expect(set.size).to.equal(2);
+			});
+			
+			it("stringifies values before comparison", () => {
+				const set = new PatternSet([ /A/ ]);
+				expect(set.has("/A/")).to.be.true;
+				expect(set.has(/A/)).to.be.true;
+				expect(set.size).to.equal(1);
+				expect(set.delete("/A/")).to.be.true;
+				expect(set.delete(/A/)).to.be.false;
+				expect(set.size).to.equal(0);
+			});
+			
+			it("references only the first RegExp for a pattern", () => {
+				const re1 = /A/;
+				const re2 = /A/;
+				const set = new PatternSet();
+				expect(set.add(re1).size).to.equal(1);
+				expect(set.add(re2).size).to.equal(1);
+				expect([...set.keys()][0]).to.equal(re1);
+				for(const value of set){
+					expect(value).to.equal(re1);
+					expect(value).not.to.equal(re2);
+				}
+				set.clear();
+				expect(set.size).to.equal(0);
+				expect(set.has(/A/)).to.be.false;
+				expect(set.has(re1)).to.be.false;
+			});
+		});
+		
+		describe("Validation", () => {
+			const error = "Values added to a PatternSet must be regular expressions";
+			const empty = undefined;
+			const obj   = {match: text => [text]};
+			const re    = new RegExp("^A$", "i");
+				
+			it("throws an error if initialised with non-RegExp values", () => {
+				expect(_=> new PatternSet([ empty ])).not.to.throw(error);
+				expect(_=> new PatternSet([ re    ])).not.to.throw(error);
+				expect(_=> new PatternSet([ false ])).to.throw(error);
+				expect(_=> new PatternSet([ true  ])).to.throw(error);
+				expect(_=> new PatternSet([ obj   ])).to.throw(error);
+				expect(_=> new PatternSet([ 200   ])).to.throw(error);
+			});
+			
+			it("throws an error when adding non-RegExp values", () => {
+				const set = new PatternSet();
+				expect(_=> set.add( false )).to.throw(error);
+				expect(_=> set.add( true  )).to.throw(error);
+				expect(_=> set.add( re    )).not.to.throw(error);
+				expect(_=> set.add( /A/   )).not.to.throw(error);
+				expect(_=> set.add( 200   )).to.throw(error);
+			});
+			
+			it("returns false if testing for the existence of an invalid key", () => {
+				const set = new PatternSet([/A/, /B/]);
+				expect(set.has("foo")).to.be.false;
+			});
+		});
+		
+		describe("Iteration", () => {
+			const patterns = Object.freeze([/A/, /B/, /C/, /D/]);
+			
+			it("returns patterns as RegExp objects when cast to an Array", () => {
+				const set = new PatternSet(patterns);
+				const array = Array.from(set);
+				expect(set.size).to.equal(4);
+				expect(array).to.have.lengthOf(4).and.to.eql(patterns);
+			});
+			
+			it("uses RegExp values when iterating through for..of loops", () => {
+				const set = new PatternSet(patterns);
+				for(const value of set)
+					expect(value).to.be.instanceOf(RegExp);
+			});
+			
+			it("uses RegExp values when iterating with Set methods", () => {
+				const set = new PatternSet(patterns);
+				expect(Array.from(set.values())).to.eql(patterns);
+				expect(Array.from(set.keys())).to.eql(patterns);
+				let index = 0;
+				for(const entry of set.entries()){
+					expect(entry[0]).to.be.instanceOf(RegExp);
+					expect(entry[1]).to.be.instanceOf(RegExp);
+					expect(entry[0]).to.equal(entry[1]);
+					++index;
+				}
+				expect(index).to.equal(4);
+			});
+		});
+		
+		describe("String matching", () => {
+			const patterns = Object.freeze([/(A|B|C)/, /1|2|3/, /xYz$/i]);
+			
+			it("returns the matched value and its results by default", () => {
+				const set = new PatternSet(patterns);
+				let input = "AOK";
+				let index = 0;
+				expect(set.size).to.equal(3);
+				expect(set.match("Nah")).to.be.null;
+				expect(set.match(input)).to.eql([
+					patterns[0],
+					Object.assign(["A", "A"], {index, input})
+				]);
+			});
+			
+			it("returns every matched value/result pair if second argument is set", () => {
+				const set = new PatternSet(patterns);
+				expect(set.match("Nah", true)).to.eql([]);
+				const input = "ABCDEFGHIJKL... 2, 1, 3, xYz MNOPQRSTUxYZ";
+				const match = set.match(input, true);
+				expect(match).to.eql([
+					[/(A|B|C)/, Object.assign(["A", "A"], {index:  0, input})],
+					[/1|2|3/,   Object.assign(["2"],      {index: 16, input})],
+					[/xYz$/i,   Object.assign(["xYZ"],    {index: 38, input})]
 				]);
 			});
 		});
