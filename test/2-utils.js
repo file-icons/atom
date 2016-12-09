@@ -86,7 +86,7 @@ describe("Utilities", () => {
 			it("makes punctuation optional",                 () => void expect("abc")    .to.match(fuzz("A.B.C.")));
 		});
 		
-		describe("caseKludge", () => {
+		describe("caseKludge()", () => {
 			const {caseKludge} = utils;
 			it("generates case-insensitive regex source", () => {
 				const pattern = new RegExp(`^(ABC|${caseKludge("DEF")})`);
@@ -392,6 +392,242 @@ describe("Utilities", () => {
 				const map = new MappedDisposable([ [key, new Disposable()] ]);
 				map.set(key, {});
 			}).to.throw("Value must have a .dispose() method");
+		});
+	});
+	
+	
+	describe("PatternMap class", () => {
+		const PatternMap = require("../lib/utils/pattern-map.js");
+		
+		describe("Construction", () => {
+			it("can be constructed with an iterable", () => {
+				const iterable = [
+					[/A/, 1],
+					[/B/, 2],
+					[/C/, 3]
+				];
+				const map = new PatternMap(iterable);
+				expect(map.size).to.equal(3);
+				expect(map.get(iterable[0][0])).to.equal(1);
+				expect(map.get(iterable[1][0])).to.equal(2);
+				expect(map.get(iterable[2][0])).to.equal(3);
+			});
+			
+			it("can be constructed without an iterable", () => {
+				expect(new PatternMap().size).to.equal(0);
+				expect(new PatternMap([]).size).to.equal(0);
+			});
+		});
+		
+		describe("Identicality", () => {
+			it("uses existing keys when matching expressions exist", () => {
+				const obj1 = {};
+				const obj2 = {};
+				const obj3 = {};
+				const obj4 = {};
+				const map = new PatternMap([
+					[/A/, obj1],
+					[/B/, obj2],
+					[/C/, obj3],
+					[/E/, null]
+				]);
+				expect(map.size).to.equal(4);
+				expect(map.has(/A/)).to.be.true;
+				expect(map.has(/B/)).to.be.true;
+				expect(map.has(/C/)).to.be.true;
+				expect(map.has(/D/)).to.be.false;
+				expect(map.get(/A/)).to.equal(obj1);
+				expect(map.get(/B/)).to.equal(obj2);
+				expect(map.get(/C/)).to.equal(obj3);
+				expect(map.get(/D/)).to.be.undefined;
+				expect(map.get(/E/)).to.be.null;
+				map.set(/A/, obj4);
+				map.set(/B/, obj3);
+				map.set(/C/, obj1);
+				map.set(/D/, obj2);
+				map.set(/E/, obj1);
+				expect(map.size).to.equal(5);
+				expect(map.get(/A/)).to.equal(obj4);
+				expect(map.get(/B/)).to.equal(obj3);
+				expect(map.get(/C/)).to.equal(obj1);
+				expect(map.get(/D/)).to.equal(obj2);
+				expect(map.get(/E/)).to.equal(obj1);
+				expect(map.delete(/D/)).to.be.true;
+				expect(map.delete(/B/)).to.be.true;
+				expect(map.delete(/D/)).to.be.false;
+				expect(map.size).to.equal(3);
+				expect(map.get(/D/)).to.be.undefined;
+			});
+			
+			it("acknowledges flags when distinguishing expressions", () => {
+				const map = new PatternMap([
+					[/A/, 1],
+					[/A/, "foo"]
+				]);
+				expect(map.size).to.equal(1);
+				expect(map.get(/A/)).to.equal("foo");
+				map.set(/A/, "bar");
+				expect(map.get(/A/)).to.equal("bar");
+				expect(map.has(/A/i)).not.to.be.true;
+				map.set(/A/i, "baz");
+				expect(map.has(/A/i)).to.be.true;
+				expect(map.has(/A/g)).not.to.be.true;
+				expect(map.size).to.equal(2);
+				expect(map.get(/A/)).to.equal("bar");
+				expect(map.get(/A/i)).to.equal("baz");
+				map.set(/A/i, 90);
+				expect(map.get(/A/i)).to.equal(90);
+				map.delete(/A/i);
+				expect(map.get(/A/)).to.exist.and.to.equal("bar");
+				expect(map.get(/A/i)).to.be.undefined;
+				expect(map.size).to.equal(1);
+				map.delete(/A/);
+				expect(map.size).to.equal(0);
+				expect(map.get(/A/)).to.be.undefined;
+			});
+			
+			it("stringifies keys before comparison", () => {
+				const map = new PatternMap([[/A/, 1]]);
+				expect(map.get("/A/")).to.equal(1);
+				expect(map.get(/A/)).to.equal(1);
+				expect(map.size).to.equal(1);
+			});
+			
+			it("references only the first RegExp object for a key", () => {
+				const re1 = /A/;
+				const re2 = /A/;
+				const map = new PatternMap([[re1, 1]]);
+				map.set(re2, 2);
+				expect(map.size).to.equal(1);
+				expect(map.get(/A/)).to.equal(2);
+				for(const [key] of map){
+					expect(key).to.equal(re1);
+					expect(key).not.to.equal(re2);
+				}
+				map.clear();
+				expect(map.size).to.equal(0);
+				expect(map.get(/A/)).to.be.undefined;
+			});
+		});
+		
+		describe("Validation", () => {
+			const error = "PatternMap keys must be regular expressions";
+			const empty = undefined;
+			const obj   = {match: text => [text]};
+			const re    = new RegExp("^A$", "i");
+				
+			it("throws an error if initialised with non-RegExp keys", () => {
+				expect(_=> new PatternMap([ [empty, 1] ])).not.to.throw(error);
+				expect(_=> new PatternMap([ [re,    1] ])).not.to.throw(error);
+				expect(_=> new PatternMap([ [false, 1] ])).to.throw(error);
+				expect(_=> new PatternMap([ [true,  1] ])).to.throw(error);
+				expect(_=> new PatternMap([ [obj,   1] ])).to.throw(error);
+				expect(_=> new PatternMap([ [200,   1] ])).to.throw(error);
+			});
+			
+			it("throws an error when assigning non-RegExp keys", () => {
+				const map = new PatternMap();
+				expect(_=> map.set(false, 1)).to.throw(error);
+				expect(_=> map.set(true,  1)).to.throw(error);
+				expect(_=> map.set(re,    1)).not.to.throw(error);
+				expect(_=> map.set(/A/,   1)).not.to.throw(error);
+				expect(_=> map.set(200,   1)).to.throw(error);
+			});
+			
+			it("returns undefined if reading an invalid key", () => {
+				const map = new PatternMap([[/A/, 1]]);
+				expect(map.get("foo")).to.be.undefined;
+			});
+		});
+		
+		describe("Iteration", () => {
+			const entries = Object.freeze([
+				[/A/, 1],
+				[/[BCD]/g, {foo: "bar"}],
+				[/(?:\d+\.)?\d+|(?:\d+\.?)(?!\d[.])/, Number]
+			]);
+			
+			it("uses RegExp keys when converted to an Array", () => {
+				const map = new PatternMap(entries);
+				expect(map.size).to.equal(3);
+				expect(Array.from(map)).to.eql(entries);
+			});
+			
+			it("uses RegExp keys in for..of loops", () => {
+				const map = new PatternMap(entries);
+				let count = 0;
+				for(const [key, value] of map){
+					expect(key).to.be.instanceof(RegExp);
+					expect(map.get(key)).to.equal(value);
+					++count;
+				}
+				expect(map.size).to.equal(3);
+				expect(count).to.equal(3);
+				for(const entry of map){
+					expect(entry[0]).to.be.instanceof(RegExp);
+					expect(map.get(entry[0])).to.equal(entry[1]);
+					++count;
+				}
+				expect(count).to.equal(6);
+			});
+			
+			it("uses RegExp keys in iterables returned from Map methods", () => {
+				const map = new PatternMap(entries);
+				const keys = map.keys();
+				const ents = map.entries();
+				let iterations = 0;
+				for(const key of keys){
+					expect(key).to.be.instanceof(RegExp);
+					++iterations;
+				}
+				expect(iterations).to.equal(3);
+				iterations = 0;
+				const values = Array.from(map.values());
+				for(const entry of ents){
+					expect(entry[0]).to.be.instanceof(RegExp);
+					expect(map.get(entry[0])).to.equal(entry[1]);
+					expect(values[iterations]).to.equal(entry[1]);
+					++iterations;
+				}
+				expect(iterations).to.equal(3);
+			});
+		});
+		
+		describe("match()", () => {
+			it("returns the matched key and its results by default", () => {
+				const key = /^A:(XYZ)$|^A(:)(\d{3})$/;
+				const map = new PatternMap([ [key, true] ]);
+				
+				let input = "A:XYZ";
+				let match = [key, [input, "XYZ", undefined, undefined]];
+				match[1].index = 0;
+				match[1].input = input;
+				expect(map.match(input)).to.eql(match);
+				expect(map.match("a:xyz")).to.be.null;
+				
+				input = "A:123";
+				match[1] = [input, undefined, ":", "123"];
+				match[1].index = 0;
+				match[1].input = input;
+				expect(map.match(input)).to.eql(match);
+				expect(map.match("-XYZ-")).to.be.null;
+			});
+			
+			it("returns every matching key/result if second argument is set", () => {
+				const map = new PatternMap([
+					[/A|B|C/, 1],
+					[/1|2|3/, 2],
+					[/xYz$/i, 3]
+				]);
+				expect(map.match("Nah", true)).to.eql([]);
+				const input = "ABCDEFGHIJKL... 2, 1, 3, xYz MNOPQRSTUxYZ";
+				const match = map.match(input, true);
+				expect(match).to.eql([
+					[/A|B|C/, Object.assign(["A"],   {index:  0, input})],
+					[/1|2|3/, Object.assign(["2"],   {index: 16, input})],
+					[/xYz$/i, Object.assign(["xYZ"], {index: 38, input})]
+				]);
+			});
 		});
 	});
 });
