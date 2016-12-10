@@ -328,7 +328,9 @@ fileIcons:
 	Assembly: # Or binary
 		icon: "binary"
 		match: [
-			[/\.(?:l?a|[ls]?o|out|s|a51|nasm|asm|wasm|z80)$/i, "medium-red", scope: /(?:^|\.)(?:a[rs]m|x86|z80|lc-?3|cpu12|x86asm|m68k|assembly|avr(?:dis)?asm|dasm)(?:\.|$)/i, alias: "nasm"]
+			[/\.(?:l?a|[ls]?o|out|s|a51|n?asm|axf|elf|prx|puff|was[mt]|z80)$/i, "medium-red",
+				scope: /(?:^|\.)(?:a[rs]m|x86|z80|lc-?3|cpu12|x86asm|m68k|assembly|avr(?:dis)?asm|dasm)(?:\.|$)/i,
+				alias: "nasm"]
 			[".agc", "dark-blue", scope: "source.agc", alias: /(?:Virtual\s*)?AGC|Apollo(?:[-_\s]?11)?\s*Guidance\s*Computer/i]
 			[".ko", "dark-green"]
 			[".lst", "medium-blue", "lst-cpu12"]
@@ -612,6 +614,11 @@ fileIcons:
 		match: ".ck"
 		colour: "medium-green"
 
+	Chrome:
+		icon: "chrome"
+		match: ".crx"
+		colour: "medium-red"
+
 	CircleCI:
 		icon: "circleci"
 		priority: 2
@@ -744,15 +751,19 @@ fileIcons:
 			[/\.(?:zip|z|xz)$/i]
 			[".rar", "medium-blue"]
 			[/\.t?gz$/i, "dark-blue"]
-			[/\.lz(?:o|ma)?/i, "medium-maroon"]
+			[/\.(lzo?|lzma|tlz|tar\.lzma)$/i, "medium-maroon"]
+			[".7z", "medium-maroon"]
+			[".apk", "medium-red"]
 			[".tar", "dark-blue"]
 			[".bz2", "dark-cyan"]
+			[".iso", "medium-blue"]
 			[".xpi", "medium-orange"]
 			[".gem", "medium-red"]
 			[".whl", "dark-blue"]
 			[".epub", "medium-green"]
 			[".jar", "dark-pink"]
 			[".war", "medium-purple"]
+			[".xar", "dark-orange"]
 			[".egg", "light-orange"]
 		]
 
@@ -967,7 +978,7 @@ fileIcons:
 
 	DyLib:
 		icon: "dylib"
-		match: ".dylib"
+		match: /\.(dylib|bundle)$/i
 		colour: "medium-cyan"
 
 	E:
@@ -1641,10 +1652,12 @@ fileIcons:
 			[".apng", "medium-orange"]
 			[".bmp", "medium-red"]
 			[".bpg", "medium-red"]
+			[".cin", "medium-orange"]
 			[".cd5", "dark-green"]
 			[".cpc", "light-yellow"]
 			[".dcm", "medium-cyan"]
 			[".dds", "dark-green"]
+			[".dpx", "dark-orange"]
 			[".ecw", "light-blue"]
 			[".exr", "dark-yellow"]
 			[".fit", "medium-cyan"]
@@ -1675,6 +1688,7 @@ fileIcons:
 			[".sgi", "medium-yellow"]
 			[".svgz", "medium-orange"]
 			[".tga", "dark-orange"]
+			[/\.vsdx?$/i, "dark-blue"]
 			[".wbm", "dark-maroon"]
 			[".wdp", "dark-red"]
 		]
@@ -2258,6 +2272,7 @@ fileIcons:
 		generic: true
 		match: [
 			[".chord", "medium-orange"]
+			[/\.midi?$/i, "dark-blue"]
 
 			# LilyPond
 			[".ly", "medium-green", scope: /\.(?:At)?lilypond-/i, alias: /Lily\s?Pond/i]
