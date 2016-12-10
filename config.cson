@@ -523,7 +523,6 @@ fileIcons:
 			[".w", "medium-maroon"]
 			[".nc", "dark-blue"]
 			[".upc", "medium-cyan"]
-			[/^config\.h\.in$/, "medium-red"]
 		]
 
 	"C++":
@@ -677,7 +676,6 @@ fileIcons:
 		icon: "cmake"
 		match: [
 			[".cmake", "medium-green", "cmake"]
-			[".cmake.in", "medium-blue"]
 			[/^CMakeLists\.txt$/, "medium-red"]
 		]
 
@@ -771,7 +769,7 @@ fileIcons:
 		icon: "config"
 		generic: true
 		match: [
-			[/\.(?:ini|desktop(?:\.in)?|directory|cfg|conf|prefs)$/i, "medium-yellow", scope: "ini", alias: "dosini"]
+			[/\.(?:ini|desktop|directory|cfg|conf|prefs)$/i, "medium-yellow", scope: "ini", alias: "dosini"]
 			[".properties", "medium-purple", scope: "java-properties"]
 			[".toml", "medium-green"]
 			[".ld", "dark-red"]
@@ -1399,7 +1397,6 @@ fileIcons:
 			[".xlf", "dark-cyan"]
 			[".xliff", "medium-red"]
 			[".xmi", "medium-green"]
-			[".xml.dist", "medium-blue"]
 			[".xproj", "dark-red"]
 			[".xsd", "dark-blue"]
 			[".xsl", "medium-cyan", "xsl"]
@@ -2874,7 +2871,6 @@ fileIcons:
 		match: [
 			[".rpm", "medium-red"]
 			[".spec", "dark-red"]
-			[".spec.in", "dark-blue"]
 		]
 
 	RegExp:
@@ -2961,7 +2957,6 @@ fileIcons:
 		match: [
 			[".rs", "medium-maroon", "rust"]
 			[".rlib", "light-maroon"]
-			[".rs.in", "dark-maroon"]
 		]
 
 	Sage:
@@ -3072,7 +3067,6 @@ fileIcons:
 			[/\.zsh(?:-theme|_history)?$|^\.?(?:antigen|zpreztorc|zlogin|zlogout|zprofile|zshenv|zshrc)$/i, "medium-blue"]
 			[/\.fish$|^\.fishrc$/i, "medium-green", "fish"]
 			[".inputrc", "medium-red"]
-			[".sh.in", "dark-red"]
 			[".tmux", "medium-blue"]
 			[/^(?:configure|config\.(?:guess|rpath|status|sub)|depcomp|libtool|compile)$/, "medium-red"]
 			[/^\/(?:private\/)?etc\/(?:[^/]+\/)*(?:profile$|nanorc$|rc\.|csh\.)/i, "dark-purple", matchPath: true]
@@ -3138,10 +3132,10 @@ fileIcons:
 
 	SourcePawn:
 		icon: "clojure"
-		match: [
-			[/\.(?:sma|sp)$/i, "auto-yellow", scope: "sp", alias: "sourcemod"]
-			[".inc", "medium-green"]
-		]
+		alias: "sourcemod"
+		match: /\.(?:sma|sp)$/i
+		colour: "auto-yellow"
+		scope: "sp"
 
 	SPARQL:
 		icon: "sparql"
