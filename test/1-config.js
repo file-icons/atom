@@ -114,6 +114,18 @@ describe("Icon config", () => {
 		});
 		
 		
+		it("forces capturing groups to be non-capturing", () => {
+			const icons = Icon.compile({
+				a: {match: /A(B)(?=C)/gi},
+				b: {match: /(A)(?:B)(C)/}
+			});
+			expect(icons[0].match).to.eql(/A(?:B)(?=C)/gi);
+			expect(icons[1].match).to.eql(/(?:A)(?:B)(?:C)/);
+			expect("ABC".match(icons[0].match)).to.have.lengthOf(1);
+			expect("ABC".match(icons[1].match)).to.have.lengthOf(1);
+		});
+		
+		
 		describe("String patterns", () => {
 			it("accepts strings as patterns", () => {
 				const icons = Icon.compile({
