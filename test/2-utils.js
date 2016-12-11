@@ -88,45 +88,33 @@ describe("Utilities", () => {
 
 		describe("forceNonCapturing()", () => {
 			const force = utils.forceNonCapturing;
-			
-			describe("Group conversion", () => {
-				it("converts capturing groups into non-capturing", () => expect(force(/AA(BB)AA/)).to.eql(/AA(?:BB)AA/));
-				it("normalises existing non-capturing groups",     () => expect(force(/AA(?:BB)AA/)).to.eql(/AA(?:BB)AA/));
-				it("retains the original expression's flags",      () => expect(force(/B(ie)n/muy)).to.eql(/B(?:ie)n/muy));
-				it("retains lookaheads/lookbehinds",               () => expect(force(/A(?=B)C/)).to.eql(/A(?=B)C/));
-			});
-			
-			describe("Escape sequences", () => {
-				it("avoids changing brackets that are escaped",    () => expect(force(/AA\(BB\)AA/)).to.eql(/AA\(BB\)AA/));
-				it("can handle escaped brackets inside groups",    () => expect(force(/A(\(B\)\\)D/)).to.eql(/A(?:\(B\)\\)D/));
-				it("can handle trailing escapes",                  () => expect(force(/AA\\\(BB\)\\/)).to.eql(/AA\\\(BB\)\\/));
-				it("can handle escaped non-capturing groups",      () => expect(force(/AA\(\?:BB\)C/)).to.eql(/AA\(\?:BB\)C/));
-			});
-			
-			describe("Escaped groups: Not empty", () => {
-				it("recognises escaped groups after 1 escape",     () => expect(force(/A\\(\(B\\)\)C/)).to.eql(/A\\(?:\(B\\)\)C/));
-				it("recognises escaped groups after 2 escapes",    () => expect(force(/A\\(\(B\\)\)C/)).to.eql(/A\\(?:\(B\\)\)C/));
-				it("recognises escaped groups after 3 escapes",    () => expect(force(/A\\\\\(B\)\\\\/)).to.eql(/A\\\\\(B\)\\\\/));
-				it("recognises escaped groups after 4 escapes",    () => expect(force(/A\\\\\\\(B\)\\\\\\/)).to.eql(/A\\\\\\\(B\)\\\\\\/));
-				it("recognises unescaped groups after 1 escape",   () => expect(force(/A\\(B\\)C/)).to.eql(/A\\(?:B\\)C/));
-				it("recognises unescaped groups after 2 escapes",  () => expect(force(/A\\\\(B\\\\)C/)).to.eql(/A\\\\(?:B\\\\)C/));
-				it("recognises unescaped groups after 3 escapes",  () => expect(force(/A\\\\\\(B\\\\\\)C/)).to.eql(/A\\\\\\(?:B\\\\\\)C/));
-				it("recognises unescaped groups after 4 escapes",  () => expect(force(/A\\\\\\\\(B\\\\\\)C/)).to.eql(/A\\\\\\\\(?:B\\\\\\)C/));
-			});
-			
-			describe("Escaped groups: Empty", () => {
-				it("recognises escaped groups after 1 escape",     () => expect(force(/A\\(\(\\)\)C/)).to.eql(/A\\(?:\(\\)\)C/));
-				it("recognises escaped groups after 2 escapes",    () => expect(force(/A\\(\(\\)\)C/)).to.eql(/A\\(?:\(\\)\)C/));
-				it("recognises escaped groups after 3 escapes",    () => expect(force(/A\\\\\(\)\\\\/)).to.eql(/A\\\\\(\)\\\\/));
-				it("recognises escaped groups after 4 escapes",    () => expect(force(/A\\\\\\\(\)\\\\\\/)).to.eql(/A\\\\\\\(\)\\\\\\/));
-				it("recognises unescaped groups after 1 escape",   () => expect(force(/\\(\\)/)).to.eql(/\\(?:\\)/));
-				it("recognises unescaped groups after 2 escapes",  () => expect(force(/\\\\(\\\\)/)).to.eql(/\\\\(?:\\\\)/));
-				it("recognises unescaped groups after 3 escapes",  () => expect(force(/\\\\\\(\\\\\\)/)).to.eql(/\\\\\\(?:\\\\\\)/));
-				it("recognises unescaped groups after 4 escapes",  () => expect(force(/\\\\\\\\(\\\\\\)/)).to.eql(/\\\\\\\\(?:\\\\\\)/));
-				it('doesn\'t suffer "leaning toothpick syndrome"', () => {
-					expect(force(/\\(\\(\\(\\\(\\\\(\\)\)\\)\\)\\)\\\/\)/)).to.eql(/\\(?:\\(?:\\(?:\\\(\\\\(?:\\)\)\\)\\)\\)\\\/\)/);
-					expect(force(/\(\\(\\)/)).to.eql(/\(\\(?:\\)/) //... although this test's frikkin' author did.
-				});
+			it("converts capturing groups into non-capturing", () => expect(force(/AA(BB)AA/)).to.eql(/AA(?:BB)AA/));
+			it("normalises existing non-capturing groups",     () => expect(force(/AA(?:BB)AA/)).to.eql(/AA(?:BB)AA/));
+			it("retains the original expression's flags",      () => expect(force(/B(ie)n/muy)).to.eql(/B(?:ie)n/muy));
+			it("retains lookaheads/lookbehinds",               () => expect(force(/A(?=B)C/)).to.eql(/A(?=B)C/));
+			it("avoids changing brackets that are escaped",    () => expect(force(/AA\(BB\)AA/)).to.eql(/AA\(BB\)AA/));
+			it("can handle escaped brackets inside groups",    () => expect(force(/A(\(B\)\\)D/)).to.eql(/A(?:\(B\)\\)D/));
+			it("can handle trailing escapes",                  () => expect(force(/AA\\\(BB\)\\/)).to.eql(/AA\\\(BB\)\\/));
+			it("can handle escaped non-capturing groups",      () => expect(force(/AA\(\?:BB\)C/)).to.eql(/AA\(\?:BB\)C/));
+			it('doesn\'t suffer "leaning toothpick syndrome"', () => {
+				expect(force(/A\\(\(B\\)\)C/)).to.eql(/A\\(?:\(B\\)\)C/);
+				expect(force(/A\\(\(B\\)\)C/)).to.eql(/A\\(?:\(B\\)\)C/);
+				expect(force(/A\\\\\(B\)\\\\/)).to.eql(/A\\\\\(B\)\\\\/);
+				expect(force(/A\\\\\\\(B\)\\\\\\/)).to.eql(/A\\\\\\\(B\)\\\\\\/);
+				expect(force(/A\\(B\\)C/)).to.eql(/A\\(?:B\\)C/);
+				expect(force(/A\\\\(B\\\\)C/)).to.eql(/A\\\\(?:B\\\\)C/);
+				expect(force(/A\\\\\\(B\\\\\\)C/)).to.eql(/A\\\\\\(?:B\\\\\\)C/);
+				expect(force(/A\\\\\\\\(B\\\\\\)C/)).to.eql(/A\\\\\\\\(?:B\\\\\\)C/);
+				expect(force(/A\\(\(\\)\)C/)).to.eql(/A\\(?:\(\\)\)C/);
+				expect(force(/A\\(\(\\)\)C/)).to.eql(/A\\(?:\(\\)\)C/);
+				expect(force(/A\\\\\(\)\\\\/)).to.eql(/A\\\\\(\)\\\\/);
+				expect(force(/A\\\\\\\(\)\\\\\\/)).to.eql(/A\\\\\\\(\)\\\\\\/);
+				expect(force(/\\(\\)/)).to.eql(/\\(?:\\)/);
+				expect(force(/\\\\(\\\\)/)).to.eql(/\\\\(?:\\\\)/);
+				expect(force(/\\\\\\(\\\\\\)/)).to.eql(/\\\\\\(?:\\\\\\)/);
+				expect(force(/\\\\\\\\(\\\\\\)/)).to.eql(/\\\\\\\\(?:\\\\\\)/);
+				expect(force(/\(\\(\\)/)).to.eql(/\(\\(?:\\)/);
+				expect(force(/\\(\\(\\(\\\(\\\\(\\)\)\\)\\)\\)\\\/\)/)).to.eql(/\\(?:\\(?:\\(?:\\\(\\\\(?:\\)\)\\)\\)\\)\\\/\)/);
 			});
 		});
 		
