@@ -56,6 +56,9 @@ interpreter:  Program name(s) to look for in hashbang lines. This may be a strin
               strings are not converted into regular expressions the way other options are. Ergo, /python/ will
               match "python2" but "python" would not.
 
+signature:    RegExp (not string) to match file signatures (aka, "magic numbers"). This is done as a last resort
+              when no paths are matched. Note the binary icon is always shown for files that contain null bytes.
+
 matchPath:    By default, matching is done using a file or directory's basename. Setting matchPath instructs the
               service to match against an entity's full system-path instead. If the rule's match-pattern was supplied
               as a string, its path separators are expanded to match both Windows and POSIX-style delimiters. That is,
@@ -184,7 +187,7 @@ fileIcons:
 	"Adobe Photoshop":
 		icon: "psd"
 		match: [
-			[".psd", "medium-blue"]
+			[".psd", "medium-blue", signature: /^8BPS/]
 			[".psb", "dark-purple"]
 		]
 
@@ -361,18 +364,18 @@ fileIcons:
 	Audio:
 		icon: "audio"
 		match: [
-			[".mp3", "medium-red"]
-			[".wav", "dark-yellow"]
+			[".mp3", "medium-red", signature: /^\xFF\xFB|^ID3/]
+			[".wav", "dark-yellow", signature: /^RIFF/]
 			[/\.(m4p|aac)$/i, "dark-cyan"]
 			[".aiff", "medium-purple"]
 			[".au", "medium-cyan"]
-			[".flac", "dark-red"]
+			[".flac", "dark-red", signature: /^fLaC/]
 			[".m4a", "medium-cyan"]
 			[/\.(mpc|mp\+|mpp)$/i, "dark-green"]
 			[".oga", "dark-orange"]
 			[".opus", "dark-maroon"]
 			[/\.r[am]$/i, "dark-blue"]
-			[".wma", "medium-blue"]
+			[".wma", "medium-blue", signature: /^\x30\x26\xB2\x75\x8E\x66\xCF\x11\xA6\xD9\x00\xAA\x00\x62\xCE\x6C/]
 		]
 
 	Augeas:
@@ -619,6 +622,7 @@ fileIcons:
 		icon: "chrome"
 		match: ".crx"
 		colour: "medium-red"
+		signature: /^Cr24/
 
 	CircleCI:
 		icon: "circleci"
@@ -748,22 +752,22 @@ fileIcons:
 	Compressed:
 		icon: "zip"
 		match: [
-			[/\.(zip|z|xz)$/i]
-			[".rar", "medium-blue"]
-			[/\.t?gz$/i, "dark-blue"]
-			[/\.(lzo?|lzma|tlz|tar\.lzma)$/i, "medium-maroon"]
-			[".7z", "medium-maroon"]
+			[/\.(zip|z|xz)$/i, null, signature: /^(\x50\x4B(\x03\x04|\x05\x06|\x07|\x08)|\x1F[\x9D\xA0]|BZh|RNC[\x01\x02]|\xD0\xCF\x11\xE0)/]
+			[".rar", "medium-blue", signature: /^Rar!\x1A\x07\x01?\0/]
+			[/\.t?gz$/i, "dark-blue", signature: /^\x1F\x8B/]
+			[/\.(lzo?|lzma|tlz|tar\.lzma)$/i, "medium-maroon", signature: /^LZIP/]
+			[".7z", "medium-maroon", signature: /^7z\xBC\xAF\x27\x1C/]
 			[".apk", "medium-red"]
 			[".tar", "dark-blue"]
 			[".bz2", "dark-cyan"]
-			[".iso", "medium-blue"]
+			[".iso", "medium-blue", signature: /^\x45\x52\x02\0{3}|^\x8B\x45\x52\x02/]
 			[".xpi", "medium-orange"]
 			[".gem", "medium-red"]
 			[".whl", "dark-blue"]
 			[".epub", "medium-green"]
 			[".jar", "dark-pink"]
 			[".war", "medium-purple"]
-			[".xar", "dark-orange"]
+			[".xar", "dark-orange", signature: /^xar!/]
 			[".egg", "light-orange"]
 		]
 
@@ -1161,8 +1165,8 @@ fileIcons:
 	Font:
 		icon: "font"
 		match: [
-			[".woff2", "dark-blue"]
-			[".woff", "medium-blue"]
+			[".woff2", "dark-blue", signature: /^wOF2/]
+			[".woff", "medium-blue", signature: /^wOFF/]
 			[".eot", "light-green"]
 			[".ttc", "dark-green"]
 			[".ttf", "medium-green"]
@@ -1275,12 +1279,13 @@ fileIcons:
 		icon: "gears"
 		match: ".dll"
 		colour: "dark-orange"
+		signature: /^PMOCCMOC/
 
 	Generic:
 		icon: "code"
 		generic: true
 		match: [
-			[".xml", "medium-blue"]
+			[".xml", "medium-blue", signature: /^<\?xml /]
 			[".rdf", "dark-red"]
 			[".config", "medium-blue"]
 			[/^_service$/, "medium-blue"]
@@ -1644,26 +1649,27 @@ fileIcons:
 	Image:
 		icon: "image"
 		match: [
-			[".png", "medium-orange"]
-			[".gif", "medium-yellow"]
-			[".jpg", "medium-green"]
-			[".ico", "medium-blue"]
+			[".png", "medium-orange", signature: /^\x89PNG\r\n\x1A\n/]
+			[".gif", "medium-yellow", signature: /^GIF8[97]a/]
+			[".jpg", "medium-green", signature: /^\xFF\xD8\xFF[\xDB\xE0\xE1]|(JFIF|Exif)\0|^\xCF\x84\x01|^\xFF\xD8.+\xFF\xD9$/]
+			[/\.tiff?$/i, "medium-red", signature: /^II\x2A\0|^MM\0\x2A/]
+			[".ico", "medium-blue", signature: /^\0{2}\x01\0/]
 			[".webp", "dark-blue"]
 			[".apng", "medium-orange"]
 			[".bmp", "medium-red"]
-			[".bpg", "medium-red"]
-			[".cin", "medium-orange"]
+			[".bpg", "medium-red", signature: /^BPG\xFB/]
+			[".cin", "medium-orange", signature: /^\x80\x2A\x5F\xD7/]
 			[".cd5", "dark-green"]
 			[".cpc", "light-yellow"]
 			[".dcm", "medium-cyan"]
 			[".dds", "dark-green"]
-			[/\.djvu?$/i, "medium-purple"]
-			[".dpx", "dark-orange"]
+			[/\.djvu?$/i, "medium-purple", signature: /^AT&TFORM/]
+			[".dpx", "dark-orange", signature: /^(SDPX|XPDS)/]
 			[".ecw", "light-blue"]
-			[".exr", "dark-yellow"]
+			[".exr", "dark-yellow", signature: /^v\/1\x01/]
 			[".fit", "medium-cyan"]
 			[".fits", "medium-cyan"]
-			[".flif", "dark-red"]
+			[".flif", "dark-red", signature: /^FLIF/]
 			[".fts", "medium-cyan"]
 			[".hdp", "dark-red"]
 			[".hdr", "medium-blue"]
@@ -2273,7 +2279,7 @@ fileIcons:
 		generic: true
 		match: [
 			[".chord", "medium-orange"]
-			[/\.midi?$/i, "dark-blue"]
+			[/\.midi?$/i, "dark-blue", signature: /^MThd/]
 
 			# LilyPond
 			[".ly", "medium-green", scope: /\.(At)?lilypond-/i, alias: /^Lily\s*Pond$/i]
@@ -2513,6 +2519,7 @@ fileIcons:
 		icon: "osx"
 		match: ".dmg"
 		colour: "medium-red"
+		signature: /^\x78\x01\x73\x0D\x62\x62\x60/
 
 	Ox:
 		icon: "ox"
@@ -2578,6 +2585,7 @@ fileIcons:
 		noSuffix: true
 		match: ".pdf"
 		colour: "medium-red"
+		signature: /^%PDF/
 
 	Perl:
 		icon: "perl"
@@ -2612,7 +2620,7 @@ fileIcons:
 	PHP:
 		icon: "php"
 		match: [
-			[/\.php([st\d]|_cs)?$/i, "dark-blue", "php"]
+			[/\.php([st\d]|_cs)?$/i, "dark-blue", "php", signature: /^<\?php/]
 			[/^Phakefile/, "dark-green"]
 		]
 
@@ -2663,7 +2671,7 @@ fileIcons:
 	PostScript:
 		icon: "postscript"
 		match: [
-			[".ps", "medium-red", scope: "postscript", alias: "postscr"]
+			[".ps", "medium-red", scope: "postscript", alias: "postscr", signature: /^%!PS/]
 			[".eps", "medium-orange"]
 			[".pfa", "dark-blue"]
 			[".pfb", "dark-maroon"]
@@ -3342,7 +3350,7 @@ fileIcons:
 		icon: "icon-file-text"
 		noSuffix: true
 		match: [
-			[/\.te?xt$/i, "medium-blue"]
+			[/\.te?xt$/i, "medium-blue", signature: /^\xEF\xBB\xBF|^\xFF\xFE/]
 			[/\.log$|^Terminal[-_\s]Saved[-_\s]Output$/i, "medium-maroon"]
 			[".err", "medium-red"]
 			[".rtf", "dark-red"]
@@ -3533,20 +3541,19 @@ fileIcons:
 	Videos:
 		icon: "video"
 		match: [
-			[".avi", "medium-blue"]
+			[/\.3gpp?$/i, "medium-blue", signature: /^.{4}ftyp3g/]
+			[".avi", "medium-blue", signature: /^MLVI/]
 			[".mp4", "dark-blue"]
 			[".mov", "medium-cyan"]
 			[".mkv", "medium-purple"]
 			[".h264", "dark-green"]
-			[".webm", "dark-blue"]
+			[".webm", "dark-blue", signature: /^\x1A\x45\xDF\xA3/]
 			[".wmv", "dark-purple"]
 			[".ogv", "dark-orange"]
-			[".ogg", "medium-orange"]
-			[".3gp", "medium-blue"]
+			[".ogg", "medium-orange", signature: /^OggS/]
 			[".m4v", "dark-yellow"]
 			[".mpg", "dark-red"]
 			[".mpeg", "medium-red"]
-			[".3gpp", "light-blue"]
 			[".ogm", "dark-red"]
 		]
 
