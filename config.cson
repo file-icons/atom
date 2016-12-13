@@ -3140,6 +3140,14 @@ fileIcons:
 		colour: "auto-yellow"
 		scope: "sp"
 
+	"Source Map":
+		icon: "sourcemap"
+		priority: 2
+		match: [
+			[".css.map", "medium-blue"]
+			[".js.map", "auto-yellow"]
+		]
+
 	SPARQL:
 		icon: "sparql"
 		match: [
