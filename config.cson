@@ -144,7 +144,7 @@ fileIcons:
 		icon: "as"
 		match: [
 			[".swf", "medium-blue"]
-			[".as", "medium-red", scope: /\.(flex-config|actionscript(\.\d+)?)$/i, alias: /ActionScript\s?3|as3/i]
+			[".as", "medium-red", scope: /\.(flex-config|actionscript(\.\d+)?)$/i, alias: /^(ActionScript\s*3|as3)$/i]
 			[".jsfl", "auto-yellow"]
 			[".swc", "dark-red"]
 		]
@@ -152,7 +152,7 @@ fileIcons:
 	Ada:
 		icon: "ada"
 		scope: "ada"
-		alias: /ada95|ada2005/i
+		alias: /^(ada95|ada2005)$/i
 		match: /\.(ada|adb|ads)$/i
 		colour: "medium-blue"
 
@@ -242,7 +242,7 @@ fileIcons:
 		priority: 2
 		match: [
 			[/^(apache2?|httpd).conf$/i, "medium-red"]
-			[".apacheconf", "dark-red", scope: "apache-config", alias: /aconf|ApacheConf/i]
+			[".apacheconf", "dark-red", scope: "apache-config", alias: /^(aconf|ApacheConf)$/i]
 			[/^httpd\.conf/i, "medium-red", priority: 0]
 			["apache2/magic", "medium-purple", matchPath: true]
 			[".vhost", "dark-green"]
@@ -313,7 +313,7 @@ fileIcons:
 	"ASP.net":
 		icon: "asp"
 		match: [
-			[".asp", "dark-blue", scope: "asp", alias: /aspx(-vb)?/]
+			[".asp", "dark-blue", scope: "asp", alias: /^aspx(-vb)?$/]
 			[".asax", "medium-maroon"]
 			[".ascx", "dark-green"]
 			[".ashx", "medium-green"]
@@ -333,7 +333,7 @@ fileIcons:
 			[/\.(l?a|[ls]?o|out|s|a51|n?asm|axf|elf|prx|puff|was[mt]|z80)$/i, "medium-red",
 				scope: /(^|\.)(a[rs]m|x86|z80|lc-?3|cpu12|x86asm|m68k|assembly|avr(dis)?asm|dasm)(\.|$)/i,
 				alias: "nasm"]
-			[".agc", "dark-blue", scope: "source.agc", alias: /(Virtual\s*)?AGC|Apollo([-_\s]?11)?\s*Guidance\s*Computer/i]
+			[".agc", "dark-blue", scope: "source.agc", alias: /^(Virtual\s*)?AGC$|^Apollo([-_\s]*11)?\s*Guidance\s*Computer$/i]
 			[".ko", "dark-green"]
 			[".lst", "medium-blue", "lst-cpu12"]
 			[/\.((c([+px]{2}?)?-?)?objdump|bin|dat|pak|pdb)$/i, "dark-orange"]
@@ -390,7 +390,7 @@ fileIcons:
 	AutoIt:
 		icon: "autoit"
 		scope: /(^|\.)autoit(\.|$)/i
-		alias: /AutoIt3|AutoItScript|au3/i
+		alias: /^(AutoIt3|AutoItScript|au3)$/i
 		match: ".au3"
 		colour: "medium-purple"
 
@@ -479,7 +479,7 @@ fileIcons:
 	Brainfuck:
 		icon: "brain"
 		scope: /\.(bf|brainfuck)$/i
-		alias: /bf|Brainf\**ck/i
+		alias: /^(bf|Brainf\**ck)$/i
 		match: /\.bf?$/i
 		colour: "dark-pink"
 
@@ -511,7 +511,7 @@ fileIcons:
 	BYOND: # Dream Maker Script
 		icon: "byond"
 		scope: "dm"
-		alias: /DM|Dream\s?Maker(\s?Script)?/i
+		alias: /^(DM|Dream\s*Maker(\s*Script)?)$/i
 		match: ".dm"
 		colour: "medium-blue"
 
@@ -539,7 +539,7 @@ fileIcons:
 	"C#":
 		icon: "csharp"
 		scope: "cs"
-		alias: /c\s?sharp/i
+		alias: /^c\s*sharp$/i
 		match: ".cs"
 		colour: "auto-blue"
 
@@ -696,7 +696,7 @@ fileIcons:
 	CoffeeScript:
 		icon: "coffee"
 		match: [
-			[".coffee", "medium-maroon", scope: "coffee", alias: /Coffee(-Script)?/i, interpreter: "coffee"]
+			[".coffee", "medium-maroon", scope: "coffee", alias: /^Coffee(-Script)?$/i, interpreter: "coffee"]
 			[".cjsx", "dark-maroon"]
 			[".coffee.ecr", "medium-cyan", priority: 2]
 			[".coffee.erb", "medium-red",  priority: 2]
@@ -707,8 +707,8 @@ fileIcons:
 	ColdFusion:
 		icon: "cf"
 		match: [
-			[".cfc", "light-cyan", scope: "cfscript", alias: /CFC|CFScript/i]
-			[/\.cfml?$/i, "medium-cyan", scope: /\.cfml?$/i, alias: /cfml?|ColdFusion\s?HTML/i]
+			[".cfc", "light-cyan", scope: "cfscript", alias: /^(CFC|CFScript)$/i]
+			[/\.cfml?$/i, "medium-cyan", scope: /\.cfml?$/i, alias: /^(cfml?|ColdFusion\s*HTML)$/i]
 		]
 
 	COLLADA:
@@ -719,8 +719,8 @@ fileIcons:
 	"Common Lisp":
 		icon: "cl"
 		scope: "common-lisp"
-		alias: /c?lisp/i
-		interpreter: /c?lisp|sbcl|[ec]cl/
+		alias: /^c?lisp$/i
+		interpreter: /^(c?lisp|sbcl|[ec]cl)$/
 		match: ".cl"
 		colour: "medium-orange"
 
@@ -900,7 +900,7 @@ fileIcons:
 			[".ndjson", "medium-orange"]
 			[".fea", "light-blue", scope: "opentype", alias: "afdko"]
 			[".json.eex", "medium-purple"]
-			[".proto", "dark-cyan", scope: "protobuf", alias: /protobuf|Protocol\s?Buffers?/i]
+			[".proto", "dark-cyan", scope: "protobuf", alias: /^(protobuf|Protocol\s*Buffers?)$/i]
 			[".pytb", "medium-orange", scope: "python.traceback"]
 			[".pydeps", "dark-blue"]
 			[/\.pot?$/, "medium-red"]
@@ -1298,7 +1298,7 @@ fileIcons:
 			[".bmx", "dark-blue"]
 			[".bnf", "medium-maroon", "bnf"]
 			[".brs", "dark-blue", "brightscript"]
-			[".capnp", "dark-red", scope: "capnp", alias: /Cap'?n\s?Proto|capnp/i]
+			[".capnp", "dark-red", scope: "capnp", alias: /^(Cap[^\w\s]?n\s*Proto|capnp)$/i]
 			[".cbl", "medium-maroon"]
 			[".ccp", "dark-maroon"]
 			[".ccxml", "dark-blue"]
@@ -1414,7 +1414,7 @@ fileIcons:
 	Genshi:
 		icon: "genshi"
 		scope: "genshi"
-		alias: /xml\+(genshi|kid)/i
+		alias: /^xml\+(genshi|kid)$/i
 		match: ".kid"
 		colour: "medium-red"
 
@@ -1577,8 +1577,8 @@ fileIcons:
 		match: [
 			[".hs", "medium-purple", scope: "source.haskell", interpreter: "runhaskell"]
 			[".hsc", "medium-blue", scope: "hsc2hs"]
-			[".c2hs", "dark-purple", scope: "c2hs", alias: /C2hs(\s?Haskell)?/i]
-			[".lhs", "dark-blue", scope: "latex.haskell", alias: /lhaskell|lhs|Literate\s?Haskell/i]
+			[".c2hs", "dark-purple", scope: "c2hs", alias: /^C2hs(\s*Haskell)?$/i]
+			[".lhs", "dark-blue", scope: "latex.haskell", alias: /^(lhaskell|lhs|Literate\s*Haskell)$/i]
 		]
 
 	Haxe:
@@ -1598,12 +1598,12 @@ fileIcons:
 	HTML:
 		icon: "html5"
 		match: [
-			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /xhtml|htm/i]
+			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /^(xhtml|htm)$/i]
 			[".cshtml", "medium-red"]
 			[".ejs", "medium-green"]
 			[".gohtml", "dark-blue", "gohtml"]
 			[".html.eex", "medium-purple"]
-			[".jsp", "medium-purple", scope: "jsp", alias: /jsp|Java\s?Server\s?Pages?/i]
+			[".jsp", "medium-purple", scope: "jsp", alias: /^(jsp|Java\s*Server\s*Pages?)$/i]
 			[".kit", "medium-green"]
 			[".latte", "medium-red", "latte"]
 			[".phtml", "dark-blue"]
@@ -1739,7 +1739,7 @@ fileIcons:
 		match: ".ijs"
 		colour: "light-blue"
 
-	Jade: # Now known as "Pug"
+	Jade:
 		icon: "jade"
 		scope: "jade"
 		match: ".jade"
@@ -1761,7 +1761,7 @@ fileIcons:
 	JavaScript:
 		icon: "js"
 		match: [
-			[".js", "auto-yellow", scope: "js", alias: /js|node/i, interpreter: /node|iojs/]
+			[".js", "auto-yellow", scope: "js", alias: /^(js|node)$/i, interpreter: /^(node|iojs)$/]
 			["._js", "auto-orange"]
 			[".jsb", "auto-maroon"]
 			[".jsm", "auto-blue"]
@@ -1786,7 +1786,7 @@ fileIcons:
 	Jinja:
 		icon: "jinja"
 		match: [
-			[".jinja", "dark-red", scope: "jinja", alias: /django|htmldjango|html\+django\/jinja|html\+jinja/i]
+			[".jinja", "dark-red", scope: "jinja", alias: /^(django|htmldjango|html\+django\/jinja|html\+jinja)$/i]
 			[".jinja2", "medium-red", alias: "jinja2"]
 		]
 
@@ -1828,7 +1828,7 @@ fileIcons:
 	"Jupyter Notebook":
 		icon: "jupyter"
 		match: [
-			[".ipynb", "dark-orange", scope: "ipynb", alias: /ipynb|(Jupyter|IPython)\s?Notebook/i]
+			[".ipynb", "dark-orange", scope: "ipynb", alias: /^(ipynb|(Jupyter|IPython)\s*Notebook)$/i]
 			[/^Notebook$/, "dark-cyan"]
 		]
 
@@ -1944,7 +1944,7 @@ fileIcons:
 	LiveScript:
 		icon: "ls"
 		match: [
-			[".ls", "medium-blue", scope: "livescript", alias: /ls|live-script/i]
+			[".ls", "medium-blue", scope: "livescript", alias: /^(ls|live-script)$/i]
 			["._ls", "dark-blue"]
 			[/^Slakefile$/, "medium-green"]
 		]
@@ -1993,7 +1993,7 @@ fileIcons:
 	Makefile: # (Or similar build systems)
 		icon: "checklist"
 		match: [
-			[/^Makefile/, "medium-yellow", scope: "makefile", alias: /bsdmake|make|mf/i, interpreter: "make"]
+			[/^Makefile/, "medium-yellow", scope: "makefile", alias: /^(bsdmake|make|mf)$/i, interpreter: "make"]
 			[/\.(mk|mak|make)$/i, "medium-yellow"]
 			[/^BSDmakefile$/i, "medium-red"]
 			[/^GNUmakefile$/i, "medium-green"]
@@ -2019,7 +2019,7 @@ fileIcons:
 		match: [
 			[/\.(1([bcmsx]|has|in)?|[24568]|3(avl|bsm|3c|in|m|qt|x)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|n|nroff|pic|tmac|tmac-u|tr|troff)$/i, "dark-green"
 				scope: /\.[gt]?roff$/i
-				alias: /[gtn]?roff|manpage/i
+				alias: /^([gtn]?roff|manpage)$/i
 				interpreter: /man|mandoc|([gnt]|dit)roff/i]
 			[/\.(rnh|rno|roff|run|runoff)$/i, "dark-maroon", "runoff"]
 			[/^tmac\.|^(mmn|mmt)$/i, "dark-green", priority: 2]
@@ -2028,7 +2028,7 @@ fileIcons:
 	Mapbox:
 		icon: "mapbox"
 		scope: "mss"
-		alias: /Carto(CSS)?/i
+		alias: /^Carto(CSS)?$/i
 		match: ".mss"
 		colour: "medium-cyan"
 
@@ -2275,7 +2275,7 @@ fileIcons:
 			[/\.midi?$/i, "dark-blue"]
 
 			# LilyPond
-			[".ly", "medium-green", scope: /\.(At)?lilypond-/i, alias: /Lily\s?Pond/i]
+			[".ly", "medium-green", scope: /\.(At)?lilypond-/i, alias: /^Lily\s*Pond$/i]
 			[".ily", "dark-green"]
 
 			# Pure Data
@@ -2285,7 +2285,7 @@ fileIcons:
 	Mustache: # (Or Handlebars)
 		icon: "mustache"
 		scope: /(^|\.)(mustache|handlebars)(\.|$)/i
-		alias: /hbs|htmlbars|handlebars/i
+		alias: /^(hbs|htmlbars|handlebars)$/i
 		match: /\.(hbs|handlebars|mustache)$/i
 		colour: "medium-orange"
 
@@ -2428,7 +2428,7 @@ fileIcons:
 	"Objective-C":
 		icon: "objc"
 		match: [
-			[/\.mm?$/i, "medium-blue", scope: /\.objc(pp)?$/i, alias: /(obj-?c|objectivec)(\+\+)?/i]
+			[/\.mm?$/i, "medium-blue", scope: /\.objc(pp)?$/i, alias: /^(Obj-?C|ObjectiveC)(\+\+)?$/i]
 			[".pch", "dark-red"]
 			[".x", "dark-green"]
 		]
@@ -2436,7 +2436,7 @@ fileIcons:
 	"Objective-J":
 		icon: "objj"
 		match: [
-			[".j", "dark-orange", scope: "objj", alias: /obj-?j|objectivej/i]
+			[".j", "dark-orange", scope: "objj", alias: /^(Obj-?J|ObjectiveJ)$/i]
 			[".sj", "dark-red"]
 		]
 
@@ -2473,7 +2473,7 @@ fileIcons:
 	"OpenEdge ABL":
 		icon: "progress"
 		scope: "abl"
-		alias: /progress|openedge|abl/i
+		alias: /^(progress|openedge|abl)$/i
 		match: ".p"
 		colour: "medium-red"
 
@@ -2592,7 +2592,7 @@ fileIcons:
 	Perl6:
 		icon: "perl6"
 		match: [
-			[".pl6", "medium-purple", scope: /(^|\.)perl6(fe)?(?=\.|$)/, alias: /pl6|Perl\s6/i, interpreter: "perl6"]
+			[".pl6", "medium-purple", scope: /(^|\.)perl6(fe)?(?=\.|$)/, alias: /^(pl6|Perl\s*6)$/i, interpreter: "perl6"]
 			[/\.[tp]6$|\.6pl$/i, "light-blue"]
 			[/\.(pm6|p6m)$/i, "dark-pink"]
 			[".6pm", "dark-cyan"]
@@ -2771,7 +2771,7 @@ fileIcons:
 			[".tac", "dark-pink"]
 			[".wsgi", "dark-red"]
 			[".xpy", "auto-yellow"]
-			[".rpy", "medium-pink", scope: "renpy", alias: /Ren'?Py/i]
+			[".rpy", "medium-pink", scope: "renpy", alias: /^Ren'?Py$/i]
 			[/\.?(pypirc|pythonrc|python-venv)$/i, "dark-blue"]
 			[/^(BUCK|BUILD|SConstruct|SConscript)$/, "dark-green"]
 			[/^(Snakefile|WATCHLISTS)$/, "medium-green"]
@@ -2781,7 +2781,7 @@ fileIcons:
 	R:
 		icon: "r"
 		scope: "r"
-		alias: /Rscript|splus|Rlang/i
+		alias: /^(Rscript|splus|Rlang)$/i
 		interpreter: "Rscript"
 		match: /\.(r|Rprofile|rsx|rd)$/i
 		colour: "medium-blue"
@@ -2896,7 +2896,7 @@ fileIcons:
 	reStructuredText:
 		icon: "rst"
 		scope: "restructuredtext"
-		alias: /re?st/i
+		alias: /^re?st$/i
 		match: /\.re?st(\.txt)?$/i
 		colour: "dark-blue"
 
@@ -2945,7 +2945,7 @@ fileIcons:
 		match: [
 			[/\.(rb|ru|ruby|erb|gemspec|god|mspec|pluginspec|podspec|rabl|rake|opal)$/i, "medium-red"
 				scope: "ruby"
-				alias: /rbx?|rake|jruby|macruby/i
+				alias: /^(rbx?|rake|jruby|macruby)$/i
 				interpreter: /(mac|j)?ruby|rake|rbx/]
 			[/^\.?(irbrc|gemrc|pryrc|rspec|ruby-(gemset|version))$/i, "medium-red"]
 			[/^(Appraisals|(Rake|Gem|[bB]uild|Berks|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(\.lock)?)$/, "medium-red"]
@@ -2972,7 +2972,7 @@ fileIcons:
 	SaltStack:
 		icon: "saltstack"
 		scope: "salt"
-		alias: /SaltState|Salt/i
+		alias: /^Salt(State)?$/i
 		match: ".sls"
 		colour: "auto-blue"
 
@@ -3060,13 +3060,13 @@ fileIcons:
 		match: [
 			[/\.(sh|rc|bats|bash|tool|install|command)$/i, "medium-purple"
 				scope: "shell"
-				alias: /sh|shell|Shell-?Script|Bash/i
+				alias: /^(sh|shell|Shell-?Script|Bash)$/i
 				interpreter: /bash|sh|zsh|rc/]
 			[/^(\.?bash(rc|[-_]?(profile|login|logout|history|prompt))|_osc|config|install-sh|PKGBUILD)$/i, "dark-purple"]
 			[".ksh", "dark-yellow"]
 			[".sh-session", "auto-yellow"
 				scope: "shell-session"
-				alias: /(Bash|Shell|Sh)[-\s]?Session|Console/i]
+				alias: /^(Bash|Shell|Sh)[-\s]*(Session|Console)$/i]
 			[/\.zsh(-theme|_history)?$|^\.?(antigen|zpreztorc|zlogin|zlogout|zprofile|zshenv|zshrc)$/i, "medium-blue"]
 			[/\.fish$|^\.fishrc$/i, "medium-green", "fish"]
 			[".inputrc", "medium-red"]
@@ -3427,7 +3427,7 @@ fileIcons:
 	TypeScript:
 		icon: "ts"
 		scope: "ts"
-		alias: /ts|Type-Script/i
+		alias: /^(ts|Type[-\s]*Script)$/i
 		match: ".ts"
 		colour: "medium-blue"
 
@@ -3473,7 +3473,7 @@ fileIcons:
 	UrWeb:
 		icon: "urweb"
 		match: [
-			[".ur", "medium-maroon", scope: "ur", alias: /Ur(\/Web)?/i]
+			[".ur", "medium-maroon", scope: "ur", alias: /^Ur(\/Web)?$/i]
 			[".urs", "dark-blue"]
 		]
 
@@ -3524,34 +3524,34 @@ fileIcons:
 	Videos:
 		icon: "video"
 		match: [
-			["avi", "medium-blue"]
-			["mp4", "dark-blue"]
-			["mov", "medium-cyan"]
-			["mkv", "medium-purple"]
-			["h264", "dark-green"]
-			["webm", "dark-blue"]
-			["wmv", "dark-purple"]
-			["ogv", "dark-orange"]
-			["ogg", "medium-orange"]
-			["3gp", "medium-blue"]
-			["m4v", "dark-yellow"]
-			["mpg", "dark-red"]
-			["mpeg", "medium-red"]
-			["3gpp", "light-blue"]
-			["ogm", "dark-red"]
+			[".avi", "medium-blue"]
+			[".mp4", "dark-blue"]
+			[".mov", "medium-cyan"]
+			[".mkv", "medium-purple"]
+			[".h264", "dark-green"]
+			[".webm", "dark-blue"]
+			[".wmv", "dark-purple"]
+			[".ogv", "dark-orange"]
+			[".ogg", "medium-orange"]
+			[".3gp", "medium-blue"]
+			[".m4v", "dark-yellow"]
+			[".mpg", "dark-red"]
+			[".mpeg", "medium-red"]
+			[".3gpp", "light-blue"]
+			[".ogm", "dark-red"]
 		]
 
 	Vim:
 		icon: "vim"
 		match: [
-			[/\.(vim|n?vimrc)$/i, "medium-green", scope: "viml", alias: /VimL?|NVim|Vim\s?Script/i, interpreter: /Vim?/i]
+			[/\.(vim|n?vimrc)$/i, "medium-green", scope: "viml", alias: /^(VimL?|NVim|Vim\s*Script)$/i, interpreter: /Vim?/i]
 			[/^[gn_]?vim(rc|info)$/i, "dark-green"]
 		]
 
 	"Visual Studio":
 		icon: "vs"
 		match: [
-			[/\.(vba?|fr[mx]|bas)$/i, "medium-blue", scope: "vbnet", alias: /vb\.?net/i]
+			[/\.(vba?|fr[mx]|bas)$/i, "medium-blue", scope: "vbnet", alias: /^vb\.?net$/i]
 			[".vbhtml", "medium-red"]
 			[".vbs", "medium-green"]
 			[".csproj", "dark-blue"]
@@ -3591,7 +3591,7 @@ fileIcons:
 		icon: "windows"
 		generic: true
 		match: [
-			[".bat", "medium-purple", scope: /(^|\.)(bat|dosbatch)(\.|$)/i, alias: /bat|(DOS|Win)?Batch/i]
+			[".bat", "medium-purple", scope: /(^|\.)(bat|dosbatch)(\.|$)/i, alias: /^(bat|(DOS|Win)?Batch)$/i]
 			[".cmd", "medium-purple"]
 			[/\.(exe|com|msi)$/i]
 			[".reg", "medium-blue"]
