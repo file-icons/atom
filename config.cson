@@ -1657,6 +1657,7 @@ fileIcons:
 			[".cpc", "light-yellow"]
 			[".dcm", "medium-cyan"]
 			[".dds", "dark-green"]
+			[/\.djvu?$/i, "medium-purple"]
 			[".dpx", "dark-orange"]
 			[".ecw", "light-blue"]
 			[".exr", "dark-yellow"]
