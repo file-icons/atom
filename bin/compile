@@ -1,4 +1,4 @@
-#!/usr/local/bin/node --es_staging
+#!/usr/bin/env node
 "use strict";
 
 const {join, resolve} = require("path");
