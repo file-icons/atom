@@ -914,6 +914,7 @@ fileIcons:
 			[".syntax", "medium-blue"]
 			[/^mime\.types$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
+			["lib/icons/.icondb.js", "dark-red", matchPath: true]
 		]
 
 	dBASE:

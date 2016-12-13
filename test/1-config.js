@@ -7,25 +7,16 @@ const CoffeeScript = require("coffee-script");
 const {expect}     = require("chai");
 
 
-const Icon = require("../lib/service/icon.js");
+const Icon         = require("../lib/icons/icon.js");
+const IconCompiler = require("../lib/icons/icon-compiler.js");
 
-describe("Icon config", () => {
+
+describe("Icon database", () => {
 	
-	describe("Definitions", () => {
-		it("serialises icons as JSON", () => {
-			const configPath  = path.join(__dirname, "..", "config.cson");
-			const configData  = fs.readFileSync(configPath).toString();
-			const {fileIcons} = CoffeeScript.eval(configData);
-			
-			const icons  = Icon.compile(fileIcons);
-			const before = icons;
-			const after  = Icon.deserialise(JSON.parse(JSON.stringify(icons)));
-			expect(before).to.eql(after);
-		});
-		
+	describe("Definition", () => {
 		
 		it("merges icons with compatible properties", () => {
-			let icons = Icon.compile({
+			let icons = IconCompiler.compileList({
 				Foo: {
 					icon: "foo",
 					match: [
@@ -40,7 +31,7 @@ describe("Icon config", () => {
 			expect(icons[0]).to.have.property("scope");
 			expect(icons).to.have.lengthOf(2);
 			
-			icons = Icon.compile({
+			icons = IconCompiler.compileList({
 				Foo: {
 					icon: "foo",
 					match: [
@@ -51,11 +42,11 @@ describe("Icon config", () => {
 			});
 			expect(icons).to.have.lengthOf(2);
 			expect(icons[0].matchPath).to.eql(true);
-			expect(icons[1].matchPath).not.to.exist;
+			expect(icons[1].matchPath).to.eql(false);
 			expect("1.foo").to.match(icons[0].match).and.not.match(icons[1].match);
 			expect("2.bar").to.match(icons[1].match).and.not.match(icons[0].match);
 			
-			icons = Icon.compile({
+			icons = IconCompiler.compileList({
 				Foo: {
 					icon: "foo",
 					match: [
@@ -73,7 +64,7 @@ describe("Icon config", () => {
 		
 		
 		it("honours case-sensitivity", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				a: {colour: "dark-red", match: /AbC$/},
 				b: {colour: "dark-red", match: "AbC"}
 			});
@@ -82,7 +73,7 @@ describe("Icon config", () => {
 		
 		
 		it("honours the noFuzz property", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				"abcXYZ": {match: ".a", noFuzz: true, scope: "xyz"}
 			});
 			expect("abc-xyz").to.not.match(icons[0].match)
@@ -90,7 +81,7 @@ describe("Icon config", () => {
 		
 		
 		it("honours the noSuffix property", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				a: {icon: "alpha", match: ".a"},
 				b: {icon: "beta",  match: ".b", noSuffix: true}
 			});
@@ -101,21 +92,21 @@ describe("Icon config", () => {
 		
 		
 		it("recognises the matchPath property", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				a: {match: /a/},
 				b: {match: /b/, matchPath: true},
 				c: {match: [
 					[/c/, null, {matchPath: true}]
 				]}
 			});
-			expect(icons[0].matchPath).not.to.exist;
+			expect(icons[0].matchPath).to.exist.and.be.false;
 			expect(icons[1].matchPath).to.exist.and.be.true;
 			expect(icons[2].matchPath).to.exist.and.be.true;
 		});
 		
 		
 		it("forces capturing groups to be non-capturing", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				a: {match: /A(B)(?=C)/gi},
 				b: {match: /(A)(?:B)(C)/}
 			});
@@ -128,7 +119,7 @@ describe("Icon config", () => {
 		
 		describe("String patterns", () => {
 			it("accepts strings as patterns", () => {
-				const icons = Icon.compile({
+				const icons = IconCompiler.compileList({
 					a: {match: ".jpg"},
 					b: {match: ".jpg", scope: "js"},
 					c: {match: ".jpg", scope: "f", alias: "F"},
@@ -141,7 +132,7 @@ describe("Icon config", () => {
 			});
 			
 			it("escapes regex metacharacters", () => {
-				const icons = Icon.compile({
+				const icons = IconCompiler.compileList({
 					a: {match: "[A-Z]+*.nope"},
 					b: {match: "file.js"},
 					c: {match: "/foo/bar.var"}
@@ -152,7 +143,7 @@ describe("Icon config", () => {
 			});
 			
 			it("uses platform-agnostic path separators", () => {
-				const icons = Icon.compile({
+				const icons = IconCompiler.compileList({
 					a: {match: "foo/bar.txt", matchPath: true},
 					b: {match: "C:\\foo\\bar.txt", matchPath: true},
 					c: {match: /over\/kill\.ott/, matchPath: true}
@@ -163,7 +154,7 @@ describe("Icon config", () => {
 			});
 			
 			it("leaves path separators alone if matchPath is disabled", () => {
-				const icons = Icon.compile({
+				const icons = IconCompiler.compileList({
 					a: {match: "foo/bar.txt"},
 					b: {match: "C:\\foo\\bar.txt"}
 				});
@@ -172,7 +163,7 @@ describe("Icon config", () => {
 			});
 			
 			it("bestows no special meaning to leading slashes", () => {
-				const icons = Icon.compile({
+				const icons = IconCompiler.compileList({
 					a: {match: "/etc/php.ini", matchPath: true},
 					b: {match: "\\etc\\php.ini", matchPath: true}
 				});
@@ -185,7 +176,7 @@ describe("Icon config", () => {
 
 	describe("Colours", () => {
 		it("stores colours as two values", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				a: {match: ".foo", colour: "medium-blue"},
 				b: {match: ".bar", colour: ["medium-green"]},
 				c: {match: ".qux", colour: ["medium-green", "medium-green"]},
@@ -202,7 +193,7 @@ describe("Icon config", () => {
 		
 		
 		it("substitutes auto-colours with correct shades", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				a: {match: ".foo", colour: "auto-orange"},
 				b: {match: ".bar", colour: "auto-green"}
 			});
@@ -215,18 +206,19 @@ describe("Icon config", () => {
 	
 	describe("Language names", () => {
 		it("gives names to language-specific icons", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				a: {match: ".a", alias: "Alpha"},
 				b: {match: ".b", alias: "Beta", scope: "text.fancy"}
 			});
 			
-			expect(icons[0]).not.to.have.property("lang");
+			expect(icons[0].lang).to.not.be.ok;
 			expect(icons[1]).to.have.property("lang");
+			expect("Beta").to.match(icons[1].lang);
 		});
 		
 		
 		it("includes config keys in language names", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				JavaScript: {match: ".js", scope: "js", alias: "ECMAScript"},
 				AsciiDoc: {
 					icon: "asciidoc",
@@ -241,7 +233,7 @@ describe("Icon config", () => {
 		
 		
 		it("ignores config keys of generic icons", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				a: {generic: true, match: ".a", scope: "foo", alias: "x"},
 				b: {generic: true, match: ".b", scope: "bar", alias: "y"}
 			});
@@ -259,14 +251,14 @@ describe("Icon config", () => {
 				z: {match: ".z", colour: "dark-green", priority: 2}
 			};
 			
-			expect(Icon.compile(config)[0].colour[0]).to.equal("dark-green");
+			expect(IconCompiler.compileList(config)[0].colour[0]).to.equal("dark-green");
 			config.z.priority = -2;
-			expect(Icon.compile(config)[0].colour[0]).to.equal("medium-red");
+			expect(IconCompiler.compileList(config)[0].colour[0]).to.equal("medium-red");
 		});
 		
 		
 		it("alphabetises icons of equal priority", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				z: {match: ".z", priority: 2},
 				a: {match: ".a", priority: 2},
 				j: {match: ".j", priority: 2}
@@ -278,7 +270,7 @@ describe("Icon config", () => {
 		
 		
 		it("matches icons with 0 priority last", () => {
-			const icons = Icon.compile({
+			const icons = IconCompiler.compileList({
 				a: {match: ".a", priority: 0},
 				b: {match: ".b", priority: 1}
 			});
