@@ -23,6 +23,7 @@
 		"minimatch": "*"
 	},
 	"devDependencies": {
+		"get-options": "*",
 		"coffee-script": "*",
 		"atom-mocha": "*"
 	},
