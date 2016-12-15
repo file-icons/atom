@@ -272,7 +272,7 @@ describe("Utilities", () => {
 			});
 			
 			it("trims extra bytes if content is shorter than sample limit", () => {
-				const imagePath = path.resolve(__dirname, "fixtures/basic/image.gif");
+				const imagePath = path.resolve(__dirname, "fixtures/project/image.gif");
 				const [dataSample] = sampleFile(imagePath, 100);
 				expect(dataSample).to.have.lengthOf(42);
 			});
