@@ -2,21 +2,26 @@
 
 const {bindMethods} = require("../../lib/utils/general.js");
 
+let treeElement = null;   // ->  <div class="tree-view-resizer">…
+let treeControl = null;   // ->  spacePenView
+let projectRoot = null;   // ->  <li is="tree-view-directory">…
+let entriesList = null;   // ->  <ol class="entries list-tree">…
+let projectPath = "";     // ->  "/path/to/file-icons/test/fixtures/project"
+
 
 class TreeTools{
 	
 	constructor(){
-		this.rootElement = null;
-		this.rootEntries = null;
 		bindMethods(this);
 		
-		let root = null;
 		Object.defineProperty(this.ls, "element", {
-			get: () => root,
+			get: () => treeControl,
 			set: to => {
-				root = to;
-				this.rootElement = root.querySelector(".project-root");
-				this.rootEntries = this.rootElement.lastElementChild;
+				treeElement = to;
+				treeControl = to.spacePenView;
+				projectRoot = treeElement.querySelector(".project-root");
+				entriesList = projectRoot.lastElementChild;
+				projectPath = projectRoot.directory.path;
 			}
 		});
 	}
@@ -43,12 +48,12 @@ class TreeTools{
 	ls(){
 		const entries = [];
 		const query = ".file.entry, .directory.entry";
-		for(const entry of this.rootEntries.querySelectorAll(query))
+		for(const entry of entriesList.querySelectorAll(query))
 			entries.push(entry);
 		
 		const directories = [];
 		const files = [];
-		const rootHeader = this.rootElement.firstElementChild.firstElementChild;
+		const rootHeader = projectRoot.firstElementChild.firstElementChild;
 		const props = {".": {value: rootHeader}};
 		entries.forEach(entry => {
 			const isDirectory = entry.classList.contains("directory");
@@ -60,6 +65,18 @@ class TreeTools{
 		props.files = {value: files};
 		props.directories = {value: directories};
 		return Object.defineProperties(entries, props);
+	}
+	
+	
+	get(projectPath){
+		return treeControl.entryForPath(projectPath);
+	}
+	
+	
+	select(path = null){
+		(!path || path === ".")
+			? treeControl.deselect(treeControl.getSelectedEntries())
+			: treeControl.selectEntryForPath(path);
 	}
 	
 

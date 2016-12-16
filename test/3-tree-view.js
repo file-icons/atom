@@ -1,5 +1,6 @@
 "use strict";
 
+const Options = require("../lib/options.js");
 Chai.should();
 
 const {
@@ -9,12 +10,13 @@ const {
 } = require("../lib/utils/general.js");
 
 const {activate, open, setTheme, setup} = require("./utils/atom-specs.js");
-const {assertIconClasses, ls, expand} = require("./utils/tree-tools.js");
+const {assertIconClasses, ls, expand, select} = require("./utils/tree-tools.js");
 
 
 describe("Tree-view", () => {
 	let workspace;
 	let treeView;
+	let files;
 	
 	setup("Activate packages", new Promise((done, fail) => {
 		workspace = atom.views.getView(atom.workspace);
@@ -29,14 +31,20 @@ describe("Tree-view", () => {
 			expect(treeView).to.exist.and.be.an.instanceof(HTMLElement);
 			ls.element = treeView;
 			attachToDOM(workspace);
+			files = ls();
 			done();
 		}).catch(error => fail(error));
 	}));
 	
+	afterEach(() => {
+		files = ls();
+		select(null);
+	});
+	
 	
 	describe("Icon assignment", () => {
 		it("displays an icon beside each filename", () => {
-			assertIconClasses(ls(), [
+			assertIconClasses(files, [
 				[".default-config", "name icon"],
 				[".default-gear",   "gear-icon"],
 				[".gitignore",      "git-icon"],
@@ -50,7 +58,7 @@ describe("Tree-view", () => {
 		});
 		
 		it("displays an icon beside each directory", () => {
-			assertIconClasses(ls(), [
+			assertIconClasses(files, [
 				["node_modules", "node-icon"],
 				["Dropbox",      "dropbox-icon"],
 				["subfolder",    "icon-file-directory"],
@@ -59,14 +67,13 @@ describe("Tree-view", () => {
 		});
 		
 		it("removes the default file-icon class", () => {
-			const files = ls();
 			for(const name of [".default-config", "data.json", "la.tex", "markdown.md"])
 				files[name].should.not.have.class("icon-file-text");
 		});
 		
 		it("retains the default directory-icon class", () => {
 			const defaults = "name icon icon-file-directory";
-			assertIconClasses(ls(), [
+			assertIconClasses(files, [
 				[".",         defaults],
 				["subfolder", defaults],
 				["symlinks",  defaults]
@@ -97,7 +104,7 @@ describe("Tree-view", () => {
 	
 	describe("Colour assignment", () => {
 		it("displays file-icons in colour", () => {
-			assertIconClasses(ls(), [
+			assertIconClasses(files, [
 				[".gitignore",   "medium-red"],
 				["data.json",    "medium-yellow"],
 				["image.gif",    "medium-yellow"],
@@ -109,7 +116,7 @@ describe("Tree-view", () => {
 		});
 		
 		it("displays directory-icons in colour", () => {
-			assertIconClasses(ls(), [
+			assertIconClasses(files, [
 				["Dropbox",               "medium-blue"],
 				["node_modules",          "medium-green"],
 				["symlinks/Dropbox",      "medium-blue"],
@@ -118,7 +125,6 @@ describe("Tree-view", () => {
 		});
 		
 		it("uses darker colours for thin icons in light themes", () => {
-			const files = ls();
 			files["la.tex"].should.have.class("medium-blue");
 			files["la.tex"].should.not.have.class("dark-blue");
 			
@@ -129,7 +135,6 @@ describe("Tree-view", () => {
 		});
 		
 		it("uses different colours for Bower icons in light themes", () => {
-			const files = ls();
 			atom.themes.getActiveThemeNames().should.include("atom-light-ui");
 			files[".bowerrc"].should.have.class("medium-orange");
 			files[".bowerrc"].should.not.have.class("medium-yellow");
@@ -163,7 +168,7 @@ describe("Tree-view", () => {
 			atom.commands.dispatch(workspace, "file-icons:toggle-colours");
 			atom.config.get("file-icons.coloured").should.be.false;
 			
-			assertIconClasses(ls(), [
+			assertIconClasses(files, [
 				...allColouredFiles,
 				["la.tex",   "medium-blue dark-blue"],
 				[".bowerrc", "medium-orange medium-yellow"]
@@ -175,11 +180,63 @@ describe("Tree-view", () => {
 			atom.commands.dispatch(workspace, "file-icons:toggle-colours");
 			atom.config.get("file-icons.coloured").should.be.true;
 			
-			assertIconClasses(ls(), [
+			assertIconClasses(files, [
 				...allColouredFiles,
 				["la.tex",   "medium-blue"],
 				[".bowerrc", "medium-yellow"]
 			]);
 		});
+	});
+	
+	
+	describe("Default file-icon", () => {
+		const setting = "file-icons.defaultIconClass";
+		
+		beforeEach(() => {
+			atom.config.set(setting, undefined);
+			atom.config.get(setting).should.equal("default-icon");
+		});
+		
+		it("uses a default icon-class for unrecognised filetypes", () => {
+			files["blank.file"].should.have.class("default-icon");
+		});
+		
+		it("allows users to set their own default icon-class", () => {
+			files["blank.file"].should.have.class("default-icon");
+			Options.set("defaultIconClass", "icon-file-text");
+			files["blank.file"].should.have.class("icon-file-text");
+			files["blank.file"].should.not.have.class("default-icon");
+		});
+		
+		it("allows users to set multiple default icon-classes", () => {
+			Options.set("defaultIconClass",         "icon-file-text    medium-red");
+			Options.defaultIconClass.should.eql(   ["icon-file-text", "medium-red"]);
+			files["blank.file"].should.have.classes("icon-file-text    medium-red");
+			
+			Options.set("defaultIconClass",         "icon-file-text    dark-red    light-yellow");
+			Options.defaultIconClass.should.eql(   ["icon-file-text", "dark-red", "light-yellow"]);
+			files["blank.file"].should.have.classes("icon-file-text    dark-red    light-yellow");
+		});
+		
+		unlessOnWindows(() => {
+			it("drops the first default-class to avoid overwriting symlink icons", () => {
+				atom.config.get(setting).should.equal("default-icon");
+				files["symlinks/empty.file"].should.have.class("icon-file-symlink-file");
+				files["symlinks/empty.file"].should.not.have.class("default-icon");
+				
+				Options.set("defaultIconClass", "icon-file-code medium-green");
+				Options.defaultIconClass.should.eql(["icon-file-code", "medium-green"]);
+				files["symlinks/empty.file"].should.have.class("icon-file-symlink-file");
+				files["symlinks/empty.file"].should.not.have.class("icon-file-code");
+			});
+			
+			it("assigns remaining classes for colours", () => {
+				Options.set("defaultIconClass",       "icon-file-code    medium-green    sharpen-edges");
+				Options.defaultIconClass.should.eql( ["icon-file-code", "medium-green", "sharpen-edges"]);
+				files["symlinks/empty.file"].should.have.classes("icon-file-symlink-file");
+				files["symlinks/empty.file"].should.not.have.classes("icon-file-code");
+				files["symlinks/empty.file"].should.have.classes("medium-green sharpen-edges");
+			});
+		})
 	});
 });
