@@ -25,7 +25,8 @@
 	"devDependencies": {
 		"get-options": "*",
 		"coffee-script": "*",
-		"atom-mocha": "*"
+		"atom-mocha": "*",
+		"tmp": "*"
 	},
 	"providedServices": {
 		"atom.file-icons": {

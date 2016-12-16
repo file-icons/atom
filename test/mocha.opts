@@ -1,2 +1,3 @@
 --slow 9999
---spec-pattern /\d+-[\w-]+\.js$/i
+--css spec-runner.css
+--spec-pattern 3-tree-view.js

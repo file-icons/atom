@@ -1,0 +1,8 @@
+/** NOTE: We can't access theme variables, so just use predetermined colours instead */
+.theme-atom-dark-ui      .theme-colour-check{ background: #303030 }
+.theme-atom-light-ui     .theme-colour-check{ background: #eee    }
+.theme-atom-material-ui  .theme-colour-check{ background: #fff    }
+.theme-flatland-dark-ui  .theme-colour-check{ background: #1d1f21 }
+.theme-one-dark-ui       .theme-colour-check{ background: #2b2b2b }
+.theme-one-light-ui      .theme-colour-check{ background: #ebebeb }
+.theme-seti-ui           .theme-colour-check{ background: #15191b }
