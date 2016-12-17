@@ -2,6 +2,7 @@
 
 const {isAbsolute, join} = require("path");
 const {chain, wait} = require("../../lib/utils/general.js");
+Chai.should();
 
 
 module.exports = {
@@ -37,6 +38,7 @@ module.exports = {
 			atom.themes.addActiveThemeClasses();
 			atom.themes.loadBaseStylesheets();
 			atom.themes.emitter.emit("did-change-active-themes");
+			atom.packages.loadedPackages["file-icons"].reloadStylesheets();
 		}).then(() => wait(100));
 	},
 	
@@ -46,7 +48,7 @@ module.exports = {
 			? ["Setup", args[0]]
 			: args;
 		
-		beforeEach(name, () => handler);
+		beforeEach(name, () => new Promise(handler));
 	}
 };
 

@@ -1,16 +1,25 @@
 "use strict";
 
 const Options = require("../lib/options.js");
-Chai.should();
 
 const {
 	chain,
-	isRegExp,
 	wait
 } = require("../lib/utils/general.js");
 
-const {activate, open, setTheme, setup} = require("./utils/atom-specs.js");
-const {assertIconClasses, ls, expand, select} = require("./utils/tree-tools.js");
+const {
+	activate,
+	open,
+	setTheme,
+	setup
+} = require("./utils/atom-specs.js");
+
+const {
+	assertIconClasses,
+	ls,
+	expand,
+	select
+} = require("./utils/tree-tools.js");
 
 
 describe("Tree-view", () => {
@@ -18,7 +27,7 @@ describe("Tree-view", () => {
 	let treeView;
 	let files;
 	
-	setup("Activate packages", new Promise((done, fail) => {
+	setup("Activate packages", (done, fail) => {
 		workspace = atom.views.getView(atom.workspace);
 		open("fixtures/project");
 		
@@ -34,7 +43,7 @@ describe("Tree-view", () => {
 			files = ls();
 			done();
 		}).catch(error => fail(error));
-	}));
+	});
 	
 	afterEach(() => {
 		files = ls();
@@ -103,6 +112,11 @@ describe("Tree-view", () => {
 
 	
 	describe("Colour assignment", () => {
+		beforeEach(() => {
+			const themes = atom.themes.getActiveThemeNames();
+			themes.should.include("atom-dark-ui").and.not.include("atom-light-ui");
+		});
+		
 		it("displays file-icons in colour", () => {
 			assertIconClasses(files, [
 				[".gitignore",   "medium-red"],
@@ -135,13 +149,12 @@ describe("Tree-view", () => {
 		});
 		
 		it("uses different colours for Bower icons in light themes", () => {
-			atom.themes.getActiveThemeNames().should.include("atom-light-ui");
-			files[".bowerrc"].should.have.class("medium-orange");
-			files[".bowerrc"].should.not.have.class("medium-yellow");
+			files[".bowerrc"].should.have.class("medium-yellow");
+			files[".bowerrc"].should.not.have.class("medium-orange");
 			
-			return setTheme("atom-dark").then(_=> {
-				files[".bowerrc"].should.have.class("medium-yellow");
-				files[".bowerrc"].should.not.have.class("medium-orange");
+			return setTheme("atom-light").then(_=> {
+				files[".bowerrc"].should.have.class("medium-orange");
+				files[".bowerrc"].should.not.have.class("medium-yellow");
 			});
 		});
 		

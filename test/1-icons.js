@@ -4,8 +4,6 @@ const fs           = require("fs");
 const path         = require("path");
 const print        = require("print");
 const CoffeeScript = require("coffee-script");
-const {expect}     = require("chai");
-
 
 const Icon         = require("../lib/icons/icon.js");
 const IconCompiler = require("../lib/icons/icon-compiler.js");

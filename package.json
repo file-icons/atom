@@ -11,8 +11,6 @@
 	"engines": {"atom": ">1.11.0"},
 	"atomTestRunner": "./node_modules/.bin/atom-mocha",
 	"atom-mocha": {
-		"slide": true,
-		"autoIt": true,
 		"interactive": {
 			"mocha": {
 				"bail": true

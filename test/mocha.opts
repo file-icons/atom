@@ -1,3 +1,5 @@
+--auto-it
+--require chai/should
+--slide
 --slow 9999
---css spec-runner.css
---spec-pattern 3-tree-view.js
+--spec-pattern /\d+-[-\w]+\.js$/
