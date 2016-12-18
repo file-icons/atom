@@ -146,7 +146,7 @@ describe("Tabs", () => {
 		it("displays no icon when opening a blank editor", () => {
 			tabBar = Tabs.package.tabBarViews[0];
 			tabBar.should.exist;
-			tabBar.children.should.have.lengthOf(3);
+			tabBar.getTabs().should.have.lengthOf(3);
 			Tabs.should.have.lengthOf(3);
 			
 			pane = atom.workspace.getActivePane();
@@ -154,7 +154,7 @@ describe("Tabs", () => {
 			pane.addItem(editor);
 			
 			Tabs.should.have.lengthOf(3);
-			tabBar.children.should.have.lengthOf(4);
+			tabBar.getTabs().should.have.lengthOf(4);
 		});
 		
 		it("displays an icon after saving a new file", () => {
