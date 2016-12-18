@@ -27,14 +27,6 @@ class TreeTools{
 	}
 
 
-	assertIconClasses(nodes, assertions, negate = false){
-		for(const [name, classes] of assertions)
-			negate
-				? nodes[name].should.not.have.class(classes)
-				: nodes[name].should.have.class(classes);
-	}
-	
-	
 	collapse(path){
 		this.setExpanded(path, false);
 	}

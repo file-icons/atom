@@ -18,6 +18,20 @@ module.exports = {
 	},
 	
 	
+	assertIconClasses(nodes, assertions, negate = false){
+		for(const [name, classes] of assertions)
+			negate
+				? nodes[name].should.not.have.class(classes)
+				: nodes[name].should.have.class(classes);
+	},
+	
+	
+	dispatch(command, target = null){
+		target = target || atom.views.getView(atom.workspace);
+		return atom.commands.dispatch(target, command);
+	},
+	
+	
 	open(...paths){
 		const projects = [];
 		for(const path of paths)
@@ -49,6 +63,21 @@ module.exports = {
 			: args;
 		
 		beforeEach(name, () => new Promise(handler));
+	},
+	
+	
+	waitForEvent(subject, event, timeout = 2000){
+		return new Promise((resolve, reject) => {
+			const disposable = subject.emitter.on(event, value => {
+				disposable.dispose();
+				resolve(value);
+			});
+			
+			wait(timeout).then(() => {
+				disposable.dispose();
+				return reject(new Error(`Timed out waiting for ${event}`));
+			});
+		});
 	}
 };
 

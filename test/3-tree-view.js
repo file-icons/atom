@@ -9,13 +9,13 @@ const {
 
 const {
 	activate,
+	assertIconClasses,
 	open,
 	setTheme,
 	setup
 } = require("./utils/atom-specs.js");
 
 const {
-	assertIconClasses,
 	ls,
 	expand,
 	select
