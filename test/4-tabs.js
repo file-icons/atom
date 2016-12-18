@@ -53,35 +53,36 @@ describe("Tabs", () => {
 		});
 		
 		it("uses darker colours for thin icons in light themes", () => {
-			tabs["la.tex"].should.have.class("medium-blue");
+			tabs["la.tex"].should.have.classes("title icon medium-blue");
 			tabs["la.tex"].should.not.have.class("dark-blue");
 			
 			return setTheme("atom-light").then(_=> {
-				tabs["la.tex"].should.have.class("dark-blue");
+				tabs["la.tex"].should.have.classes("title icon dark-blue");
 				tabs["la.tex"].should.not.have.class("medium-blue");
 			});
 		});
 		
 		it("uses different colours for Bower icons in light themes", () => {
-			tabs[".bowerrc"].should.have.class("medium-yellow");
+			tabs[".bowerrc"].should.have.classes("title icon medium-yellow");
 			tabs[".bowerrc"].should.not.have.class("medium-orange");
 			
 			return setTheme("atom-light").then(_=> {
-				tabs[".bowerrc"].should.have.class("medium-orange");
+				tabs[".bowerrc"].should.have.classes("title icon medium-orange");
 				tabs[".bowerrc"].should.not.have.class("medium-yellow");
 			});
 		});
 		
 		it("displays monochrome icons if coloured icons are disabled", () => {
 			atom.config.get("file-icons.coloured").should.be.true;
-			tabs["markdown.md"].should.have.class("medium-blue");
+			tabs["markdown.md"].should.have.classes("title icon medium-blue");
 			
 			Options.set("coloured", false);
 			atom.config.get("file-icons.coloured").should.be.false;
 			tabs["markdown.md"].should.not.have.class("medium-blue");
+			tabs["markdown.md"].should.have.classes("title icon");
 			
 			Options.set("coloured", true);
-			tabs["markdown.md"].should.have.class("medium-blue");
+			tabs["markdown.md"].should.have.classes("title icon medium-blue");
 		});
 		
 		it("doesn't change the icons of built-in views", () => {
@@ -105,13 +106,13 @@ describe("Tabs", () => {
 			atom.config.get("file-icons.tabPaneIcon").should.be.true;
 			atom.config.get("file-icons.coloured").should.be.true;
 			
-			tabs["markdown.md"].should.have.classes(classes);
+			tabs["markdown.md"].should.have.classes(classes, "title icon");
 			Options.set("tabPaneIcon", false);
 			atom.config.get("file-icons.tabPaneIcon").should.be.false;
 			tabs["markdown.md"].should.not.have.classes(classes);
 			
 			Options.set("tabPaneIcon", true);
-			tabs["markdown.md"].should.have.classes(classes);
+			tabs["markdown.md"].should.have.classes(classes, "title icon");
 		});
 		
 		it("doesn't show icon if tab-icons are disabled and colour-setting changes", () => {
@@ -129,7 +130,7 @@ describe("Tabs", () => {
 		});
 		
 		it("uses the current colour-setting when re-enabling icons", () => {
-			tabs["markdown.md"].should.have.class("medium-blue");
+			tabs["markdown.md"].should.have.classes("title icon medium-blue");
 			Options.set("coloured", false);
 			tabs["markdown.md"].should.not.have.class("medium-blue");
 			
@@ -138,7 +139,7 @@ describe("Tabs", () => {
 			tabs["markdown.md"].should.not.have.class("medium-blue");
 			
 			Options.set("tabPaneIcon", true);
-			tabs["markdown.md"].should.have.classes(classes);
+			tabs["markdown.md"].should.have.classes(classes, "title icon");
 		});
 	});
 	
@@ -169,18 +170,19 @@ describe("Tabs", () => {
 			
 			save(editor, "file.js");
 			return wait(400).then(() => {
-				tabEl.should.have.classes("js-icon", "medium-yellow");
+				tabEl.should.have.classes("title icon js-icon medium-yellow");
 				Tabs.should.have.lengthOf(4);
 				Tabs.tabsByElement.has(tab).should.be.true;
 			});
 		});
 		
 		it("updates the icon after saving when settings change", () => {
-			tabEl.should.have.class("medium-yellow");
+			tabEl.should.have.classes("title icon js-icon medium-yellow");
 			Options.set("coloured", false);
+			tabEl.should.have.classes("title icon js-icon");
 			tabEl.should.not.have.class("medium-yellow");
 			Options.set("coloured", true);
-			tabEl.should.have.class("medium-yellow");
+			tabEl.should.have.classes("title icon js-icon medium-yellow");
 			
 			Options.set("tabPaneIcon", false);
 			tabEl.should.not.have.classes("js-icon", "medium-yellow");
@@ -189,10 +191,10 @@ describe("Tabs", () => {
 		});
 		
 		it("updates the icon when the file extension changes", () => {
-			tabEl.should.have.classes("js-icon", "medium-yellow");
+			tabEl.should.have.classes("title icon js-icon medium-yellow");
 			move("file.js", "file.pl");
 			return wait(400).then(() => {
-				tabEl.should.have.classes("perl-icon", "medium-blue");
+				tabEl.should.have.classes("title icon perl-icon medium-blue");
 				Options.set("coloured", false);
 				tabEl.should.have.class("perl-icon");
 				tabEl.should.not.have.class("medium-blue");
