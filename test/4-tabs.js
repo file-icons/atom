@@ -146,24 +146,27 @@ describe("Tabs", () => {
 	
 	describe("New files", () => {
 		let editor, pane, tabBar, tabEl;
+		let trackedTabCount = 0;
 		
 		it("displays no icon when opening a blank editor", () => {
 			tabBar = Tabs.package.tabBarViews[0];
 			tabBar.should.exist;
 			tabBar.getTabs().should.have.lengthOf(3);
-			Tabs.should.have.lengthOf(3);
+			
+			trackedTabCount = Tabs.length;
+			trackedTabCount.should.be.at.least(3);
 			
 			pane = atom.workspace.getActivePane();
 			editor = atom.workspace.buildTextEditor({autoHeight: false});
 			pane.addItem(editor);
 			
-			Tabs.should.have.lengthOf(3);
+			Tabs.should.have.lengthOf(trackedTabCount);
 			tabBar.getTabs().should.have.lengthOf(4);
 		});
 		
 		it("displays an icon after saving a new file", () => {
 			const tab = Tabs.tabForEditor(editor);
-			Tabs.should.have.lengthOf(3);
+			Tabs.should.have.lengthOf(trackedTabCount);
 			Tabs.tabsByElement.has(tab).should.be.false;
 			tabEl = tab.itemTitle;
 			tabEl.should.have.property("className", "title");
@@ -171,7 +174,7 @@ describe("Tabs", () => {
 			save(editor, "file.js");
 			return wait(400).then(() => {
 				tabEl.should.have.classes("title icon js-icon medium-yellow");
-				Tabs.should.have.lengthOf(4);
+				Tabs.should.have.lengthOf(trackedTabCount + 1);
 				Tabs.tabsByElement.has(tab).should.be.true;
 			});
 		});
