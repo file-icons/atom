@@ -1,7 +1,5 @@
 "use strict";
 
-const tmp     = require("tmp");
-const path    = require("path");
 const Options = require("../lib/options.js");
 const Tabs    = require("../lib/consumers/tabs.js");
 
@@ -16,6 +14,11 @@ const {
 	setTheme,
 	setup
 } = require("./utils/atom-specs.js");
+
+const {
+	move,
+	save
+} = require("./utils/file-tools.js");
 
 
 describe("Tabs", () => {
@@ -164,9 +167,8 @@ describe("Tabs", () => {
 			tabEl = tab.itemTitle;
 			tabEl.should.have.property("className", "title");
 			
-			const dir = tmp.dirSync();
-			editor.saveAs(path.join(dir.name, "file.js"));
-			return wait(20).then(() => {
+			save(editor, "file.js");
+			return wait(400).then(() => {
 				tabEl.should.have.classes("js-icon", "medium-yellow");
 				Tabs.should.have.lengthOf(4);
 				Tabs.tabsByElement.has(tab).should.be.true;
@@ -184,6 +186,17 @@ describe("Tabs", () => {
 			tabEl.should.not.have.classes("js-icon", "medium-yellow");
 			Options.set("tabPaneIcon", true);
 			tabEl.should.have.classes("js-icon", "medium-yellow");
+		});
+		
+		it("updates the icon when the file extension changes", () => {
+			tabEl.should.have.classes("js-icon", "medium-yellow");
+			move("file.js", "file.pl");
+			return wait(400).then(() => {
+				tabEl.should.have.classes("perl-icon", "medium-blue");
+				Options.set("coloured", false);
+				tabEl.should.have.class("perl-icon");
+				tabEl.should.not.have.class("medium-blue");
+			});
 		});
 	});
 	
