@@ -1,0 +1,5 @@
+Merge branch 'master' into v2
+
+# Conflicts:
+#	styles/file-icons.less
+#	styles/icons.less
