@@ -66,7 +66,7 @@ module.exports = {
 	},
 	
 	
-	waitForEvent(subject, event, timeout = 2000){
+	waitForEvent(subject, event, timeout = 1500){
 		return new Promise((resolve, reject) => {
 			const disposable = subject.emitter.on(event, value => {
 				disposable.dispose();
@@ -75,7 +75,7 @@ module.exports = {
 			
 			wait(timeout).then(() => {
 				disposable.dispose();
-				return reject(new Error(`Timed out waiting for ${event}`));
+				return reject(new Error(`Timed out waiting for event "${event}"`));
 			});
 		});
 	}

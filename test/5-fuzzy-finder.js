@@ -132,13 +132,100 @@ describe("Fuzzy-finder", () => {
 			});
 		});
 		
-		describe("When showing a filtered set of results", () => {
-			it("displays an icon beside each result", () => {
-				FuzzyFinder.filter("git");
+		describe("When filtering results", () => {
+			
+			// Avoid confusing errors or timeouts: check everything works first
+			before("Assert accurate reporting", () => {
+				const list = FuzzyFinder.getList("Project");
+				expect(list).to.exist.and.respondTo("populateList");
 				
-				return waitForEvent(FuzzyFinder, "list-refreshed").then(() => {
-					files = ls();
-					files[".gitignore"].should.have.classes("git-icon medium-red");
+				const filterView = list.filterEditorView;
+				expect(filterView).to.exist.and.respondTo("getModel");
+				
+				const editor = filterView.getModel();
+				expect(editor).to.exist.and.respondTo("setText");
+				
+				const nodes = Array.from(FuzzyFinder.iconNodes);
+				nodes.should.not.be.empty;
+				nodes[0].should.not.have.property("destroyed");
+				nodes[0].should.have.property("resource");
+				expect(nodes[0].resource).to.be.ok;
+				
+				editor.setText("e");
+				editor.getText().should.equal("e");
+				editor.setText("");
+				editor.getText().should.equal("");
+				list.populateList();
+				
+				return wait(100).then(() => {
+					nodes[0].should.have.property("destroyed");
+					nodes[0].destroyed.should.be.true;
+				});
+			});
+			
+			it("displays an icon beside each result", () => {
+				Options.set("defaultIconClass", undefined);
+				const base = "primary-line file icon ";
+				return chain([
+					() => FuzzyFinder.filter("m").then(() => assertIconClasses(ls(), [
+						["node_modules/.keep",    base + "git-icon medium-red"],
+						["markdown.md",           base + "markdown-icon medium-blue"],
+						["README.md",             base + "book-icon medium-blue"],
+						["image.gif",             base + "image-icon medium-yellow"],
+						["subfolder/almighty.c",  base + "c-icon medium-blue"],
+						["subfolder/markup.html", base + "html5-icon medium-orange"]
+					])),
+					
+					() => FuzzyFinder.filter("t").then(() => assertIconClasses(ls(), [
+						["text.txt",              base + "icon-file-text medium-blue"],
+						["la.tex",                base + "tex-icon medium-blue"],
+						["subfolder/script.js",   base + "js-icon medium-yellow"],
+						["data.json",             base + "database-icon medium-yellow"],
+						[".gitignore",            base + "git-icon medium-red"],
+						[".default-gear",         base + "gear-icon"],
+						[".default-config",       base + "config-icon"]
+					])),
+					
+					() => FuzzyFinder.filter("k").then(() => assertIconClasses(ls(), [
+						["package.json",          base + "npm-icon", "medium-red"],
+						["blank.file",            base + "default-icon"]
+					]))
+				]);
+			});
+			
+			it("displays monochrome icons if colours are disabled", () => {
+				Options.set("coloured", false);
+				return chain([
+					() => FuzzyFinder.filter("m").then(() => assertIconClasses(ls(), [
+						["node_modules/.keep",    "medium-red"],
+						["markdown.md",           "medium-blue"],
+						["README.md",             "medium-blue"],
+						["image.gif",             "medium-yellow"],
+						["subfolder/almighty.c",  "medium-blue"],
+						["subfolder/markup.html", "medium-orange"]
+					], true)),
+					
+					() => FuzzyFinder.filter("t").then(() => assertIconClasses(ls(), [
+						["text.txt",              "medium-blue"],
+						["la.tex",                "medium-blue"],
+						["subfolder/script.js",   "medium-yellow"],
+						["data.json",             "medium-yellow"],
+						[".gitignore",            "medium-red"]
+					], true))
+				]);
+			});
+			
+			it("uses the default icon-class if no icons match", () => {
+				Options.set("defaultIconClass", "foo-bar");
+				Options.set("coloured", true);
+				return FuzzyFinder.filter("blank").then(() => {
+					const blank = ls()["blank.file"];
+					expect(blank).to.exist;
+					blank.should.have.classes("foo-bar");
+					blank.should.not.have.class("default-icon");
+					Options.set("defaultIconClass", undefined);
+					blank.should.have.class("default-icon");
+					blank.should.not.have.class("foo-bar");
 				});
 			});
 		});
