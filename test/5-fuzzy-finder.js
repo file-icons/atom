@@ -2,44 +2,27 @@
 
 const FuzzyFinder = require("../lib/consumers/fuzzy-finder.js");
 const Options     = require("../lib/options.js");
-
-const {
-	chain,
-	wait
-} = require("../lib/utils/general.js");
-
-const {
-	activate,
-	assertIconClasses,
-	dispatch,
-	open,
-	setup,
-	setTheme,
-	waitForEvent
-} = require("./utils/atom-specs.js");
+require("./utils/atom-specs.js");
 
 
 describe("Fuzzy-finder", () => {
-	let workspace;
 	let files;
 	let list;
 	
-	setup("Activate packages", (done, fail) => {
-		workspace = atom.views.getView(atom.workspace);
-		open("fixtures/project");
+	before("Activate packages", () => {
+		setProject("fixtures/project");
 		
-		chain([
-			atom.workspace.open("markdown.md"),
+		return chain(
+			open("markdown.md"),
 			atom.themes.activateThemes(),
-			activate("file-icons", "fuzzy-finder"),
+			atom.packages.activatePackage("file-icons"),
+			atom.packages.activatePackage("fuzzy-finder"),
 			setTheme("atom-dark")
-		]).then(() => {
-			Options.set("coloured", true);
-			attachToDOM(workspace);
-			done();
-		}).catch(error => fail(error));
+		);
 	});
 	
+	
+	beforeEach(() => Options.set("coloured", true));
 	
 	const iconClasses = [
 		[".default-config", "primary-line file icon config-icon"],
@@ -76,7 +59,17 @@ describe("Fuzzy-finder", () => {
 				const panel = atom.workspace.panelForItem(list.spacePenView);
 				expect(panel).to.exist;
 				
-				return waitForEvent(FuzzyFinder, "list-refreshed").then(() => {
+				return new Promise((resolve, reject) => {
+					const event = "list-refreshed";
+					const disposable = FuzzyFinder.emitter.on(event, value => {
+						disposable.dispose();
+						resolve(value);
+					});
+					wait(1500).then(() => {
+						disposable.dispose();
+						return reject(new Error(`Timed out waiting for event "${event}"`));
+					});
+				}).then(() => {
 					files = ls();
 					files.should.have.length.of.at.least(1);
 					assertIconClasses(files, iconClasses);
@@ -84,12 +77,10 @@ describe("Fuzzy-finder", () => {
 			});
 			
 			it("displays file-icons in colour", () => {
-				Options.get("coloured").should.be.true;
 				assertIconClasses(files, colourClasses);
 			});
 			
 			it("displays monochrome icons if coloured icons are disabled", () => {
-				Options.get("coloured").should.be.true;
 				Options.set("coloured", false);
 				assertIconClasses(files, colourClasses, true);
 				assertIconClasses(files, iconClasses);
@@ -114,6 +105,8 @@ describe("Fuzzy-finder", () => {
 			});
 			
 			describe("If package settings are changed while open", () => {
+				before(() => setTheme("atom-dark"));
+				
 				it("updates icons if the setting is related", () => {
 					assertIconClasses(files, colourClasses);
 					Options.set("coloured", false);

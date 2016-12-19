@@ -1,55 +1,35 @@
 "use strict";
 
 const Options = require("../lib/options.js");
-
-const {
-	chain,
-	wait
-} = require("../lib/utils/general.js");
-
-const {
-	activate,
-	assertIconClasses,
-	open,
-	setTheme,
-	setup
-} = require("./utils/atom-specs.js");
-
-const {
-	ls,
-	expand,
-	select
-} = require("./utils/tree-tools.js");
+const {ls, expand, select} = require("./utils/tree-tools.js");
+require("./utils/atom-specs.js");
 
 
 describe("Tree-view", () => {
-	let workspace;
 	let treeView;
 	let files;
 	
-	setup("Activate packages", (done, fail) => {
-		workspace = atom.views.getView(atom.workspace);
-		open("fixtures/project");
+	before("Activate packages", () => {
+		setProject("fixtures/project");
 		
-		chain(
+		return chain(
 			atom.themes.activateThemes(),
-			activate("file-icons", "tree-view"),
+			atom.packages.activatePackage("file-icons"),
+			atom.packages.activatePackage("tree-view"),
 			setTheme("atom-dark")
 		).then(() => {
 			treeView = atom.workspace.getLeftPanels()[0].getItem()[0];
 			expect(treeView).to.exist.and.be.an.instanceof(HTMLElement);
 			ls.element = treeView;
-			attachToDOM(workspace);
 			files = ls();
-			done();
-		}).catch(error => fail(error));
+		});
 	});
+
 	
 	afterEach(() => {
 		files = ls();
 		select(null);
 	});
-	
 	
 	describe("Icon assignment", () => {
 		it("displays an icon beside each filename", () => {
@@ -112,7 +92,7 @@ describe("Tree-view", () => {
 
 	
 	describe("Colour assignment", () => {
-		beforeEach(() => {
+		before(() => {
 			const themes = atom.themes.getActiveThemeNames();
 			themes.should.include("atom-dark-ui").and.not.include("atom-light-ui");
 		});
@@ -149,12 +129,12 @@ describe("Tree-view", () => {
 		});
 		
 		it("uses different colours for Bower icons in light themes", () => {
-			files[".bowerrc"].should.have.class("medium-yellow");
-			files[".bowerrc"].should.not.have.class("medium-orange");
+			files[".bowerrc"].should.have.class("medium-orange");
+			files[".bowerrc"].should.not.have.class("medium-yellow");
 			
-			return setTheme("atom-light").then(_=> {
-				files[".bowerrc"].should.have.class("medium-orange");
-				files[".bowerrc"].should.not.have.class("medium-yellow");
+			return setTheme("atom-dark").then(_=> {
+				files[".bowerrc"].should.have.class("medium-yellow");
+				files[".bowerrc"].should.not.have.class("medium-orange");
 			});
 		});
 		

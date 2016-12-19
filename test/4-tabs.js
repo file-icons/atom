@@ -1,49 +1,31 @@
 "use strict";
 
 const Options = require("../lib/options.js");
-const Tabs    = require("../lib/consumers/tabs.js");
-
-const {
-	chain,
-	wait
-} = require("../lib/utils/general.js");
-
-const {
-	activate,
-	open,
-	setTheme,
-	setup
-} = require("./utils/atom-specs.js");
-
-const {
-	move,
-	save
-} = require("./utils/file-tools.js");
+const Tabs = require("../lib/consumers/tabs.js");
+const {move, save} = require("./utils/file-tools.js");
+require("./utils/atom-specs.js");
 
 
 describe("Tabs", () => {
-	let workspace;
 	let tabs;
 	
-	setup("Activate packages", (done, fail) => {
-		workspace = atom.views.getView(atom.workspace);
-		open("fixtures/project");
+	before("Activate packages", () => {
+		setProject("fixtures/project");
 		
-		chain(
-			atom.workspace.open(".bowerrc"),
-			atom.workspace.open("la.tex"),
-			atom.workspace.open("markdown.md"),
+		return chain(
+			open(".bowerrc"),
+			open("la.tex"),
+			open("markdown.md"),
 			atom.themes.activateThemes(),
-			activate("file-icons", "tabs"),
+			atom.packages.activatePackage("file-icons"),
+			atom.packages.activatePackage("tabs"),
 			setTheme("atom-dark")
 		).then(results => {
-			attachToDOM(workspace);
 			const tab = Tabs.tabForEditor(results.shift());
 			expect(tab).to.exist;
 			expect(tab.itemTitle).to.exist;
 			tabs = ls();
-			done();
-		}).catch(error => fail(error));
+		});
 	});
 	
 	
@@ -63,12 +45,12 @@ describe("Tabs", () => {
 		});
 		
 		it("uses different colours for Bower icons in light themes", () => {
-			tabs[".bowerrc"].should.have.classes("title icon medium-yellow");
-			tabs[".bowerrc"].should.not.have.class("medium-orange");
+			tabs[".bowerrc"].should.have.classes("title icon medium-orange");
+			tabs[".bowerrc"].should.not.have.class("medium-yellow");
 			
-			return setTheme("atom-light").then(_=> {
-				tabs[".bowerrc"].should.have.classes("title icon medium-orange");
-				tabs[".bowerrc"].should.not.have.class("medium-yellow");
+			return setTheme("atom-dark").then(_=> {
+				tabs[".bowerrc"].should.have.classes("title icon medium-yellow");
+				tabs[".bowerrc"].should.not.have.class("medium-orange");
 			});
 		});
 		
@@ -86,7 +68,7 @@ describe("Tabs", () => {
 		});
 		
 		it("doesn't change the icons of built-in views", () => {
-			return activate("settings-view").then(() => {
+			return atom.packages.activatePackage("settings-view").then(() => {
 				const view = atom.workspace.openSync("atom://config");
 				const tab = workspace.querySelector("li.tab[data-type=SettingsView]");
 				for(let i = 0; i < 2; ++i){
