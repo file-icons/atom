@@ -2,4 +2,4 @@
 --require chai/should
 --slide
 --slow 9999
---spec-pattern /main\.js$/
+--spec-pattern /\d+-\w+\.js$/

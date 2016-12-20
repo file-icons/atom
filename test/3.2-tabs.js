@@ -2,25 +2,20 @@
 
 const Options = require("../lib/options.js");
 const Tabs = require("../lib/consumers/tabs.js");
-const {move, save} = require("./utils/file-tools.js");
-require("./utils/atom-specs.js");
 
 
 describe("Tabs", () => {
+	const {move, save} = require("./utils/file-tools.js");
 	let tabs;
 	
-	before("Activate packages", () => {
-		atom.project.setPaths([resolvePath("fixtures/project")]);
-		
-		return chain(
-			open(".bowerrc"),
-			open("la.tex"),
+	before(() => {
+		return Promise.all([
+			open("package.json"),
 			open("markdown.md"),
-			atom.themes.activateThemes(),
-			atom.packages.activatePackage("file-icons"),
-			atom.packages.activatePackage("tabs"),
-			setTheme("atom-dark")
-		).then(results => {
+			open("la.tex"),
+			open("README.md"),
+			open(".bowerrc")
+		]).then(results => {
 			const tab = Tabs.tabForEditor(results.shift());
 			expect(tab).to.exist;
 			expect(tab.itemTitle).to.exist;
@@ -133,7 +128,7 @@ describe("Tabs", () => {
 		it("displays no icon when opening a blank editor", () => {
 			tabBar = Tabs.package.tabBarViews[0];
 			tabBar.should.exist;
-			tabBar.getTabs().should.have.lengthOf(3);
+			tabBar.getTabs().should.have.lengthOf(5);
 			
 			trackedTabCount = Tabs.length;
 			trackedTabCount.should.be.at.least(3);
@@ -143,7 +138,7 @@ describe("Tabs", () => {
 			pane.addItem(editor);
 			
 			Tabs.should.have.lengthOf(trackedTabCount);
-			tabBar.getTabs().should.have.lengthOf(4);
+			tabBar.getTabs().should.have.lengthOf(6);
 		});
 		
 		it("displays an icon after saving a new file", () => {

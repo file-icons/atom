@@ -3,28 +3,16 @@
 const {join, dirname} = require("path");
 const FindAndReplace  = require("../lib/consumers/find-and-replace.js");
 const Options         = require("../lib/options.js");
-require("./utils/atom-specs.js");
 
 
 describe("Find-and-replace", () => {
 	
-	before("Activate packages", () => {
-		atom.project.setPaths([resolvePath("fixtures/project")]);
-		
-		return chain(
-			open("markdown.md"),
-			open("package.json"),
-			open("la.tex"),
-			open("README.md"),
-			open(".bowerrc"),
-			atom.themes.activateThemes(),
-			atom.packages.activatePackage("file-icons"),
-			atom.packages.activatePackage("tabs"),
-			setTheme("atom-dark")
-		).then(() => {
-			const activationPromise = atom.packages.activatePackage("find-and-replace");
+	before("Activate package", () => {
+		return new Promise((resolve, reject) => {
+			const activationPromise = atom.packages.activatePackage("find-and-replace")
+				.then(() => resolve())
+				.catch(error => reject(error))
 			atom.commands.dispatch(workspace, "project-find:show");
-			return activationPromise;
 		}).then(() => {
 			FindAndReplace.active.should.be.true;
 			FindAndReplace.should.have.property("punchedMethods");

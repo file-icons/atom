@@ -2,35 +2,22 @@
 
 const ArchiveView = require("../lib/consumers/archive-view.js");
 const Options     = require("../lib/options.js");
-require("./utils/atom-specs.js");
 
 
 describe("Archive-view", () => {
 	let archiveTree = null;
 	let entries = [];
 	
-	before("Activate packages", () => {
-		atom.project.setPaths([resolvePath("fixtures")]);
-		
-		return chain(
-			atom.themes.activateThemes(),
-			atom.packages.activatePackage("file-icons"),
-			atom.packages.activatePackage("archive-view"),
-			setTheme("atom-dark")
-		).then(() => {
-			Options.set("coloured", true);
-			Options.set("defaultIconClass", "default-icon");
-		});
+	before("Resetting options", () => {
+		Options.set("coloured", true);
+		Options.set("defaultIconClass", "default-icon");
 	});
 	
-	
-	const ZIP_FILE_1 = "project/zipped-1.zip";
-	const ZIP_FILE_2 = "project/zipped-2.zip";	
 	
 	describe("When a zip-file is opened", () => {
 		it("shows icons for each of its contents", () => {
 			ArchiveView.entries.size.should.equal(0);
-			return open(ZIP_FILE_1)
+			return open("zipped-1.zip")
 				.then(() => wait(500))
 				.then(() => {
 					ArchiveView.entries.size.should.not.equal(0);
@@ -171,8 +158,8 @@ describe("Archive-view", () => {
 			
 			return chain(
 				atom.packages.activatePackage("tabs"),
-				() => open(ZIP_FILE_2),
-				() => open(ZIP_FILE_1),
+				() => open("zipped-2.zip"),
+				() => open("zipped-1.zip"),
 				() => wait(500)
 			).then(() => {
 				ArchiveView.entries.size.should.be.above(500);

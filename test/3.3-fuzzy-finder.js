@@ -2,25 +2,11 @@
 
 const FuzzyFinder = require("../lib/consumers/fuzzy-finder.js");
 const Options     = require("../lib/options.js");
-require("./utils/atom-specs.js");
 
 
 describe("Fuzzy-finder", () => {
 	let files;
 	let list;
-	
-	before("Activate packages", () => {
-		atom.project.setPaths([resolvePath("fixtures/project")]);
-		
-		return chain(
-			open("markdown.md"),
-			atom.themes.activateThemes(),
-			atom.packages.activatePackage("file-icons"),
-			atom.packages.activatePackage("fuzzy-finder"),
-			setTheme("atom-dark")
-		);
-	});
-	
 	
 	beforeEach(() => Options.set("coloured", true));
 	

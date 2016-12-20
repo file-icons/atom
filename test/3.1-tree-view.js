@@ -2,29 +2,18 @@
 
 const Options = require("../lib/options.js");
 const {ls, expand, select} = require("./utils/tree-tools.js");
-require("./utils/atom-specs.js");
 
 
 describe("Tree-view", () => {
 	let treeView;
 	let files;
 	
-	before("Activate packages", () => {
-		atom.project.setPaths([resolvePath("fixtures/project")]);
-		
-		return chain(
-			atom.themes.activateThemes(),
-			atom.packages.activatePackage("file-icons"),
-			atom.packages.activatePackage("tree-view"),
-			setTheme("atom-dark")
-		).then(() => {
-			treeView = atom.workspace.getLeftPanels()[0].getItem()[0];
-			expect(treeView).to.exist.and.be.an.instanceof(HTMLElement);
-			ls.element = treeView;
-			files = ls();
-		});
+	before(() => {
+		treeView = atom.workspace.getLeftPanels()[0].getItem()[0];
+		expect(treeView).to.exist.and.be.an.instanceof(HTMLElement);
+		ls.element = treeView;
+		files = ls();
 	});
-
 	
 	afterEach(() => {
 		files = ls();
