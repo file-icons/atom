@@ -1,7 +1,9 @@
 "use strict";
 
-const {isAbsolute, join} = require("path");
+const {lstatSync} = require("fs");
+const {isAbsolute, join, resolve} = require("path");
 const {chain, wait} = require("../../lib/utils/general.js");
+const {headless} = atom.getLoadSettings();
 Chai.should();
 
 
@@ -17,7 +19,9 @@ Object.assign(global, {
 		for(const [name, classes] of assertions){
 			if(!(name in nodes)){
 				Object.freeze(nodes);
-				console.error(`Node for %c${name}%c not found in list:`, "font-weight: bold", "", nodes);
+				headless
+					? console.error(`Node for "${name}" not found in list`)
+					: console.error(`Node for %c${name}%c not found in list:`, "font-weight: bold", "", nodes);
 				throw new ReferenceError(`Node for "${name}" not found`);
 			}
 			negate
@@ -30,7 +34,8 @@ Object.assign(global, {
 	open(path){
 		const projectPath = atom.project.rootDirectories[0].path;
 		path = path.split(/[\\\/]+/g);
-		path = join(__dirname, "..", projectPath, ...path);
+		path = resolve(__dirname, "..", projectPath, ...path);
+		lstatSync(path); // Raise an exception if file is missing
 		return atom.workspace.open(path);
 	},
 	

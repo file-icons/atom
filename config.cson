@@ -93,6 +93,7 @@ directoryIcons:
 	Git:
 		icon: "git"
 		match: /^\.git$/
+		colour: "medium-red"
 
 	GitHub:
 		icon: "github"
@@ -101,6 +102,7 @@ directoryIcons:
 	Meteor:
 		icon: "meteor"
 		match: /^\.meteor$/
+		colour: "dark-orange"
 
 	NodeJS:
 		icon: "node"
@@ -122,6 +124,7 @@ directoryIcons:
 	Vagrant:
 		icon: "vagrant"
 		match: ".vagrant"
+		colour: "medium-cyan"
 
 	Xcode:
 		icon: "appstore"
