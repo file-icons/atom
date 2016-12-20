@@ -10,7 +10,7 @@ describe("Tree-view", () => {
 	let files;
 	
 	before("Activate packages", () => {
-		setProject("fixtures/project");
+		atom.project.setPaths([resolvePath("fixtures/project")]);
 		
 		return chain(
 			atom.themes.activateThemes(),

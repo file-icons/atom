@@ -10,7 +10,7 @@ describe("Tabs", () => {
 	let tabs;
 	
 	before("Activate packages", () => {
-		setProject("fixtures/project");
+		atom.project.setPaths([resolvePath("fixtures/project")]);
 		
 		return chain(
 			open(".bowerrc"),

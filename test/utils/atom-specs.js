@@ -35,10 +35,10 @@ Object.assign(global, {
 	},
 	
 	
-	setProject(path){
+	resolvePath(path){
 		path = path.split(/[\\\/]+/g);
 		path = join(__dirname, "..", ...path);
-		atom.project.setPaths([path]);
+		return path;
 	},
 	
 	

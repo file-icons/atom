@@ -10,7 +10,7 @@ describe("Fuzzy-finder", () => {
 	let list;
 	
 	before("Activate packages", () => {
-		setProject("fixtures/project");
+		atom.project.setPaths([resolvePath("fixtures/project")]);
 		
 		return chain(
 			open("markdown.md"),
@@ -157,7 +157,7 @@ describe("Fuzzy-finder", () => {
 			});
 			
 			it("displays an icon beside each result", () => {
-				Options.set("defaultIconClass", undefined);
+				Options.set("defaultIconClass", "default-icon");
 				const base = "primary-line file icon ";
 				return chain([
 					() => FuzzyFinder.filter("m").then(() => assertIconClasses(ls(), [
@@ -216,7 +216,7 @@ describe("Fuzzy-finder", () => {
 					expect(blank).to.exist;
 					blank.should.have.classes("foo-bar");
 					blank.should.not.have.class("default-icon");
-					Options.set("defaultIconClass", undefined);
+					Options.set("defaultIconClass", "default-icon");
 					blank.should.have.class("default-icon");
 					blank.should.not.have.class("foo-bar");
 				});
