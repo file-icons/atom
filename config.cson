@@ -92,7 +92,7 @@ directoryIcons:
 
 	Git:
 		icon: "git"
-		match: /^\.git$/
+		match: /\.git$/
 		colour: "medium-red"
 
 	GitHub:
@@ -788,6 +788,7 @@ fileIcons:
 			[/^ld\.script$/i, "medium-orange"]
 			[".reek", "medium-red"]
 			[/config|settings|option|pref/i, null, priority: 0]
+			[/\.git[\/\\](config|info[\/\\]\w+)$/, "dark-red", matchPath: true]
 			[/^\/(private\/)?etc\/([^/]+\/)*[^/]*\.(cf|conf|ini)(\.default)?$/i, "dark-orange", matchPath: true]
 			[/^\/(private\/)?etc\/(aliases|auto_(home|master)|ftpusers|group|gettytab|hosts(\.equiv)?|manpaths|networks|paths|protocols|services|shells|sudoers|ttys)$/i,
 				"medium-maroon",
@@ -900,7 +901,7 @@ fileIcons:
 		generic: true
 		match: [
 			[/\.(h|geo|topo)?json$/i, "medium-yellow"]
-			[/\.ya?ml$/, "light-red"]
+			[/\.ya?ml$/i, "light-red"]
 			[".cson", "medium-maroon"]
 			[".json5", "dark-yellow", "json5"]
 			[".http", "medium-red"]
@@ -910,7 +911,7 @@ fileIcons:
 			[".proto", "dark-cyan", scope: "protobuf", alias: /^(protobuf|Protocol\s*Buffers?)$/i]
 			[".pytb", "medium-orange", scope: "python.traceback"]
 			[".pydeps", "dark-blue"]
-			[/\.pot?$/, "medium-red"]
+			[/\.pot?$/i, "medium-red"]
 			[".edn", "medium-purple"]
 			[".eam.fs", "dark-purple"]
 			[".qml", "medium-pink"]
@@ -922,6 +923,9 @@ fileIcons:
 			[/^mime\.types$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
 			["lib/icons/.icondb.js", "dark-red", matchPath: true]
+			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
+				priority: 2,
+				matchPath: true]
 		]
 
 	dBASE:
@@ -1259,8 +1263,8 @@ fileIcons:
 			[/^\.htaccess$/i, "medium-red"]
 			[/^\.htpasswd$/i, "medium-orange"]
 			[/^\.env\./i, "dark-green"]
-			[/^\.lesshintrc$/, "dark-yellow"]
-			[/^\.csscomb\.json$/, "medium-yellow"]
+			[/^\.lesshintrc$/i, "dark-yellow"]
+			[/^\.csscomb\.json$/i, "medium-yellow"]
 			[".csslintrc", "medium-yellow"]
 			[".jsbeautifyrc", "medium-yellow"]
 			[".jshintrc", "medium-yellow"]
@@ -2398,7 +2402,7 @@ fileIcons:
 	NPM:
 		icon: "npm"
 		priority: 2
-		match: /^(package\.json|\.npmignore|\.?npmrc|npm-debug\.log|npm-shrinkwrap\.json)$/
+		match: /^(package\.json|\.npmignore|\.?npmrc|npm-debug\.log|npm-shrinkwrap\.json)$/i
 		colour: "medium-red"
 
 	NSIS:
@@ -2432,7 +2436,7 @@ fileIcons:
 
 	Nunjucks:
 		icon: "nunjucks"
-		match: /\.(nunjucks|njk)$/
+		match: /\.(nunjucks|njk)$/i
 		colour: "dark-green"
 
 	"Objective-C":
@@ -2835,7 +2839,7 @@ fileIcons:
 		icon: "react"
 		priority: 2
 		match: [
-			[/^react(-[^.]*)?\.js$/, "dark-blue"]
+			[/^react(-[^.]*)?\.js$/i, "dark-blue"]
 			[".react.js", "auto-blue"]
 		]
 
@@ -3242,7 +3246,7 @@ fileIcons:
 		priority: 2
 		match: [
 			[/^\.stylelintrc(\.|$)/i, "medium-purple"]
-			[/^stylelint\.config\.js$/, "auto-yellow"]
+			[/^stylelint\.config\.js$/i, "auto-yellow"]
 			[".stylelintignore", "dark-blue"]
 		]
 
@@ -3355,6 +3359,7 @@ fileIcons:
 		match: [
 			[/\.te?xt$/i, "medium-blue", signature: /^\xEF\xBB\xBF|^\xFF\xFE/]
 			[/\.log$|^Terminal[-_\s]Saved[-_\s]Output$/i, "medium-maroon"]
+			[/\.git[\/\\]description$/, "dark-red", matchPath: true]
 			[".err", "medium-red"]
 			[".rtf", "dark-red"]
 			[/\.i?nfo$/i, "dark-blue"]
