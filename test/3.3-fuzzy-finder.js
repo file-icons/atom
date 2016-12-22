@@ -2,6 +2,7 @@
 
 const FuzzyFinder = require("../lib/consumers/fuzzy-finder.js");
 const Options     = require("../lib/options.js");
+const {headless}  = atom.getLoadSettings();
 
 
 describe("Fuzzy-finder", () => {
@@ -9,6 +10,18 @@ describe("Fuzzy-finder", () => {
 	let list;
 	
 	beforeEach(() => Options.set("coloured", true));
+	after(() => FuzzyFinder.close("file-finder"));
+	
+	// Stop cursor accidentally stealing focus as specs are running
+	if(!headless){
+		let onPress = event => {
+			event.stopImmediatePropagation();
+			event.preventDefault();
+			return false;
+		};
+		beforeEach(() => window.addEventListener("mousedown", onPress));
+		afterEach(() => window.removeEventListener("mousedown", onPress));
+	}
 	
 	const iconClasses = [
 		[".default-config", "primary-line file icon config-icon"],

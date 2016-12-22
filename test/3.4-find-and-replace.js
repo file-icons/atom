@@ -26,6 +26,8 @@ describe("Find-and-replace", () => {
 	
 	after(() => {
 		workspace.style.height = null;
+		if(FindAndReplace.package.projectFindPanel.visible)
+			atom.commands.dispatch(workspace, "project-find:toggle");
 	});
 	
 	describe("When opening the project-find view", () => {
