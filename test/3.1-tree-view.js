@@ -1,23 +1,25 @@
 "use strict";
 
+const TreeView = require("../lib/consumers/tree-view.js");
 const Options = require("../lib/options.js");
-const {ls, expand, select} = require("./utils/tree-tools.js");
-
+const ls = TreeView.ls.bind(TreeView);
 
 describe("Tree-view", () => {
-	let treeView;
+	let projectRoot;
+	let entriesList;
 	let files;
 	
 	before(() => {
-		treeView = atom.workspace.getLeftPanels()[0].getItem()[0];
-		expect(treeView).to.exist.and.be.an.instanceof(HTMLElement);
-		ls.element = treeView;
+		const treeView = atom.workspace.getLeftPanels()[0].getItem();
+		expect(treeView).to.exist.and.equal(TreeView.element);
+		projectRoot = treeView[0].querySelector(".project-root");
+		entriesList = projectRoot.lastElementChild;
 		files = ls();
 	});
 	
 	afterEach(() => {
 		files = ls();
-		select(null);
+		TreeView.select(null);
 	});
 	
 	describe("Icon assignment", () => {
@@ -51,15 +53,16 @@ describe("Tree-view", () => {
 		
 		it("retains the default directory-icon class", () => {
 			const defaults = "name icon icon-file-directory";
+			const header = projectRoot.firstElementChild.firstElementChild;
+			header.should.have.class(defaults);
 			assertIconClasses(files, [
-				[".",         defaults],
 				["subfolder", defaults],
 				["symlinks",  defaults]
 			]);
 		});
 		
 		it("shows icons for files in subdirectories", () => {
-			expand("subfolder");
+			TreeView.expand("subfolder");
 			assertIconClasses(ls(), [
 				["subfolder/almighty.c",  "name icon c-icon"],
 				["subfolder/fad.jsx",     "jsx-icon"],
@@ -69,7 +72,7 @@ describe("Tree-view", () => {
 		});
 		
 		unlessOnWindows.it("always uses a symlink icon to indicate symbolic links", () => {
-			expand("symlinks");
+			TreeView.expand("symlinks");
 			assertIconClasses(ls(), [
 				["symlinks/dat.a",        "icon-file-symlink-file"],
 				["symlinks/late.x",       "icon-file-symlink-file"],

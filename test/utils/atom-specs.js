@@ -17,7 +17,7 @@ Object.assign(global, {
 	
 	assertIconClasses(nodes, assertions, negate = false){
 		for(const [name, classes] of assertions){
-			if(!(name in nodes)){
+			if(!nodes[name]){
 				Object.freeze(nodes);
 				headless
 					? console.error(`Node for "${name}" not found in list`)
