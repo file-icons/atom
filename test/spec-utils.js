@@ -1,12 +1,14 @@
 "use strict";
 
 const {isAbsolute, join, resolve} = require("path");
-const {lstatSync}   = require("fs");
+const fs            = require("fs");
+const tmp           = require("tmp");
 const {headless}    = atom.getLoadSettings();
-const {chain, wait} = require("../../lib/utils/general.js");
-const FileRegistry  = require("../../lib/filesystem/file-registry.js");
-const Storage       = require("../../lib/storage.js");
+const {chain, wait} = require("../lib/utils/general.js");
+const FileRegistry  = require("../lib/filesystem/file-registry.js");
+const Storage       = require("../lib/storage.js");
 Chai.should();
+let tmpDir;
 
 
 before(() => {
@@ -36,15 +38,15 @@ Object.assign(global, {
 	open(path){
 		const projectPath = atom.project.rootDirectories[0].path;
 		path = path.split(/[\\\/]+/g);
-		path = resolve(__dirname, "..", projectPath, ...path);
-		lstatSync(path); // Raise an exception if file is missing
+		path = resolve(__dirname, projectPath, ...path);
+		fs.lstatSync(path); // Raise an exception if file is missing
 		return atom.workspace.open(path);
 	},
 	
 	
 	resolvePath(path){
 		path = path.split(/[\\\/]+/g);
-		path = join(__dirname, "..", ...path);
+		path = join(__dirname, ...path);
 		return path;
 	},
 	
@@ -74,5 +76,19 @@ Object.assign(global, {
 			atom.themes.emitter.emit("did-change-active-themes");
 			atom.packages.loadedPackages["file-icons"].reloadStylesheets();
 		}).then(() => wait(100));
+	},
+	
+	
+	save(editor, filename){
+		tmpDir   = tmpDir || tmp.dirSync();
+		filename = join(tmpDir.name, filename);
+		editor.saveAs(filename);
+	},
+	
+	move(from, to){
+		tmpDir = tmpDir || tmp.dirSync();
+		from   = join(tmpDir.name, from);
+		to     = join(tmpDir.name, to);
+		fs.renameSync(from, to);
 	}
 });

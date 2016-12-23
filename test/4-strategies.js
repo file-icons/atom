@@ -1,7 +1,7 @@
 "use strict";
 
 describe("Match strategies", () => {
-	require("./utils/atom-specs.js");
+	require("./spec-utils.js");
 	
 	before("Activate packages", () => {
 		atom.project.setPaths([resolvePath("fixtures/strategies")]);

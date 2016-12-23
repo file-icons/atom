@@ -5,7 +5,6 @@ const Tabs = require("../lib/consumers/tabs.js");
 
 
 describe("Tabs", () => {
-	const {move, save} = require("./utils/file-tools.js");
 	let tabs;
 	
 	before(() => {
