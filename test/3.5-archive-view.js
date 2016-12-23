@@ -60,16 +60,18 @@ describe("Archive-view", () => {
 			});
 			
 			it("shows the default icon-class for unrecognised filetypes", () => {
-				entries["FI-Config/.git/description"].should.have.classes("file icon default-icon");
-				entries["FI-Config/.git/description"].should.not.have.class("foo-bar");
+				const entry = entries["FI-Config/.git/objects/81/83c80a3e1311267a335e5e8d531a01f01c7555"];
+				
+				entry.should.have.classes("file icon default-icon");
+				entry.should.not.have.class("foo-bar");
 				
 				Options.set("defaultIconClass", "foo-bar");
-				entries["FI-Config/.git/description"].should.have.classes("file icon foo-bar");
-				entries["FI-Config/.git/description"].should.not.have.class("default-icon");
+				entry.should.have.classes("file icon foo-bar");
+				entry.should.not.have.class("default-icon");
 				
 				Options.set("defaultIconClass", "default-icon");
-				entries["FI-Config/.git/description"].should.have.classes("file icon default-icon");
-				entries["FI-Config/.git/description"].should.not.have.class("foo-bar");
+				entry.should.have.classes("file icon default-icon");
+				entry.should.not.have.class("foo-bar");
 			});
 		});
 		
