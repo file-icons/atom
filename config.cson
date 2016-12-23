@@ -71,6 +71,11 @@ noSuffix:     By default, icon names are suffixed with "-icon". Set noSuffix to 
 
 directoryIcons:
 
+	ArtText:
+		icon: "arttext"
+		match: /\.artx$/i
+		colour: "dark-purple"
+
 	Atom:
 		icon: "atom"
 		match: /^\.atom$/
@@ -1277,7 +1282,6 @@ fileIcons:
 			[".pairs", "dark-green"]
 			[".python-version", "dark-blue"]
 			[".lintstagedrc", "dark-orange"]
-			[/^nodemon\.json$|^\.nodemonignore$/i, "medium-green"]
 			[".indent.pro", "medium-blue", priority: 2]
 			[/^\./, null, priority: 0]
 		]
@@ -2392,6 +2396,12 @@ fileIcons:
 			[".nvmrc", "medium-green"]
 			[".node-version", "dark-green"]
 		]
+
+	Nodemon:
+		icon: "nodemon"
+		priority: 2
+		match: /^nodemon\.json$|^\.nodemonignore$/i
+		colour: "medium-green"
 
 	Normalize:
 		icon: "normalize"
