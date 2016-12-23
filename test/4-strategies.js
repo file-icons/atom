@@ -17,5 +17,6 @@ describe("Match strategies", () => {
 		]);
 	});
 	
-	require("./4.1-path.js");
+	// require("./4.1-path.js");
+	require("./4.2-usertype.js");
 });

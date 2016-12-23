@@ -19,7 +19,7 @@ describe("Tabs", () => {
 			const tab = Tabs.tabForEditor(results.shift());
 			expect(tab).to.exist;
 			expect(tab.itemTitle).to.exist;
-			tabs = ls();
+			tabs = Tabs.ls();
 		});
 	});
 	
@@ -181,16 +181,4 @@ describe("Tabs", () => {
 			});
 		});
 	});
-	
-	
-	function ls(){
-		const tabs = [];
-		for(const paneItem of atom.workspace.getPaneItems()){
-			const name = paneItem.getFileName();
-			const tab = Tabs.tabForEditor(paneItem);
-			tabs.push(tab);
-			Object.defineProperty(tabs, name, {value: tab.itemTitle});
-		}
-		return tabs;
-	}
 });
