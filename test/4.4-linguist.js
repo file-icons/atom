@@ -11,6 +11,7 @@ describe("Linguist-language attributes", () => {
 	let files;
 	
 	before(() => {
+		TreeView.collapse("signature");
 		TreeView.expand("linguist");
 		files = TreeView.ls();
 		files.should.not.be.empty;

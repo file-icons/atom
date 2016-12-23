@@ -11,8 +11,8 @@ describe("User-defined filetypes", () => {
 	let files, tabs;
 	
 	before(() => {
+		TreeView.collapse("path");
 		TreeView.expand("usertype");
-		TreeView.expand("usertype/symlinks");
 		files = TreeView.ls();
 		files.should.not.be.empty;
 		files.length.should.be.at.least(5);
@@ -143,9 +143,13 @@ describe("User-defined filetypes", () => {
 				["usertype/test.t",          treeIcon + "twig-icon medium-green"],
 				["usertype/test.tmMacro",    treeIcon + "sass-icon dark-pink"]
 			]);
+			
+			TreeView.expand("usertype/symlinks");
+			return wait(500);
 		});
 		
 		unlessOnWindows.it("updates the colour of symlinks targeting affected files", () => {
+			files = TreeView.ls();
 			assertIconClasses(files, [
 				["usertype/test.m",          treeIcon + "ruby-icon medium-red"],
 				["usertype/test.mm",         treeIcon + "perl-icon medium-blue"],

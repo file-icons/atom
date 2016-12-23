@@ -47,6 +47,7 @@ describe("File signatures", () => {
 	
 	
 	before(() => {
+		TreeView.collapse("usertype");
 		TreeView.expand("signature");
 		files = TreeView.ls();
 		files.should.not.be.empty;
