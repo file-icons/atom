@@ -145,6 +145,11 @@ fileIcons:
 			[".os", "medium-red"]
 		]
 
+	"1C MDO":
+		icon: "_1c-alt"
+		match: ".mdo"
+		colour: "auto-cyan"
+
 	ABAP:
 		icon: "abap"
 		scope: "abp"
