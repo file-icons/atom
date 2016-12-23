@@ -1,9 +1,11 @@
 "use strict";
 
-const {lstatSync} = require("fs");
 const {isAbsolute, join, resolve} = require("path");
+const {lstatSync}   = require("fs");
+const {headless}    = atom.getLoadSettings();
 const {chain, wait} = require("../../lib/utils/general.js");
-const {headless} = atom.getLoadSettings();
+const FileRegistry  = require("../../lib/filesystem/file-registry.js");
+const Storage       = require("../../lib/storage.js");
 Chai.should();
 
 
@@ -44,6 +46,16 @@ Object.assign(global, {
 		path = path.split(/[\\\/]+/g);
 		path = join(__dirname, "..", ...path);
 		return path;
+	},
+	
+	
+	resetIcons(){
+		FileRegistry.files.forEach(file => {
+			file.icon.destroy();
+			Storage.deletePath(file.path);
+		});
+		FileRegistry.reset();
+		FileRegistry.init();
 	},
 	
 	
