@@ -20,4 +20,5 @@ describe("Match strategies", () => {
 	require("./4.1-path.js");
 	require("./4.2-usertype.js");
 	require("./4.3-signature.js");
+	require("./4.4-linguist.js");
 });
