@@ -1660,7 +1660,7 @@ fileIcons:
 	Image:
 		icon: "image"
 		match: [
-			[".png", "medium-orange", signature: /^\x89PNG\r\n\x1A\n/]
+			[".png", "medium-orange", signature: /^.PNG\r\n\x1A\n/]
 			[".gif", "medium-yellow", signature: /^GIF8[97]a/]
 			[".jpg", "medium-green", signature: /^\xFF\xD8\xFF[\xDB\xE0\xE1]|(JFIF|Exif)\0|^\xCF\x84\x01|^\xFF\xD8.+\xFF\xD9$/]
 			[/\.tiff?$/i, "medium-red", signature: /^II\x2A\0|^MM\0\x2A/]
@@ -2637,7 +2637,7 @@ fileIcons:
 	PHP:
 		icon: "php"
 		match: [
-			[/\.php([st\d]|_cs)?$/i, "dark-blue", "php", signature: /^<\?php/]
+			[/\.php([st\d]|_cs)?$/i, "dark-blue", interpreter: "php", scope: "php", signature: /^<\?php/]
 			[/^Phakefile/, "dark-green"]
 		]
 
