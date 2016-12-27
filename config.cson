@@ -1,0 +1,3747 @@
+###
+
+PRIMARY CONFIGURATION FILE
+==========================
+
+icon:      An icon defined in `icons.less`.
+
+colour:    Optional icon colour. Must match one of the colour names defined in `colours.less`.
+
+match:     Pattern(s) to match against the filename. This may be a string, an array, or a regular expression.
+
+           String:
+               If passed a string, it's used to match the file's extension case-insensitively.
+               Therefore, passing ".json" is functionally equivalent to /\.json$/i, but spares
+               an author the tedium of writing out the latter. Regex characters are escaped so
+               names like ".c++" don't require backslashes (no need for ".c\+\+")
+
+           Array:
+               If passed an array, it's used to provide multiple colour variants for different
+               filenames/extensions. Each value is expected to be an array containing:
+
+                   0. Path-matching pattern (required)
+                   1. Colour name
+                   2. Additional properties, expressed as either an object literal or a string.
+                      Strings are treated as shorthand for setting alias, scope and interpreter
+                      properties to the same value.
+
+               Most contributors will only need to touch the first two elements.
+
+priority:  More than one pattern may match a filename. To ensure more specific patterns aren't overridden
+           by more general patterns, set the priority index to a value greater than 1. This property is
+           optional and defaults to 1 if omitted.
+
+NOTE: RegExp capturing groups are made non-capturing by the compiler. Backreferences will NOT work.
+
+
+ADVANCED PROPERTIES
+-------------------
+These are chiefly of interest only to the package's maintainers.
+
+alias:        There may be more than one way to write a language's name. For example, C++ may be referred to as
+              "cpp", C# as "csharp" or "c sharp", and so on. This property exists so modelines and .gitattributes
+              will match any of a language's acceptable names. It may be expressed as either a single string (case
+              insensitive), or a regular expression.
+
+generic:      Instructs the service not to use the rule's name as a language alias.
+
+scope:        Name of any TextMate grammars which trigger the icon when overriding a file's grammar. This may be
+              a string or regex; if provided the former, it's used to construct a case-insensitive pattern that's
+              checked against the end of the string (e.g., "js" will be treated as if /\.js$/i were written). Not
+              every grammar will/should change an icon, especially for very generic formats like JSON or YAML.
+
+interpreter:  Program name(s) to look for in hashbang lines. This may be a string or a regular expression, both
+              of which are matched against the program's name, instead of the entire hashbang line. E.g., /python/
+              will be tested against "python2", not "#!/usr/local/bin/python2". Matching is case-sensitive, and
+              strings are not converted into regular expressions the way other options are. Ergo, /python/ will
+              match "python2" but "python" would not.
+
+signature:    RegExp (not string) to match file signatures (aka, "magic numbers"). This is done as a last resort
+              when no paths are matched. Note the binary icon is always shown for files that contain null bytes.
+
+matchPath:    By default, matching is done using a file or directory's basename. Setting matchPath instructs the
+              service to match against an entity's full system-path instead. If the rule's match-pattern was supplied
+              as a string, its path separators are expanded to match both Windows and POSIX-style delimiters. That is,
+              "node_modules/.bin" becomes the same as writing /node_modules[\/\\]\.bin$/i.
+
+noSuffix:     By default, icon names are suffixed with "-icon". Set noSuffix to true if you need to specify an
+              icon class in its entirety (such as a default Atom icon). This should otherwise rarely be used.
+###
+
+
+directoryIcons:
+
+	ArtText:
+		icon: "arttext"
+		match: /\.artx$/i
+		colour: "dark-purple"
+
+	Atom:
+		icon: "atom"
+		match: /^\.atom$/
+		colour: "dark-green"
+
+	Bower:
+		icon: "bower"
+		match: /^bower[-_]components$/
+		colour: ["medium-yellow", "medium-orange"]
+
+	Dropbox:
+		icon: "dropbox"
+		match: /^(Dropbox|\.dropbox\.cache)$/
+		colour: "medium-blue"
+
+	Framework:
+		icon: "dylib"
+		match: ".framework"
+
+	Git:
+		icon: "git"
+		match: /\.git$/
+		colour: "medium-red"
+
+	GitHub:
+		icon: "github"
+		match: /^\.github$/
+
+	Meteor:
+		icon: "meteor"
+		match: /^\.meteor$/
+		colour: "dark-orange"
+
+	NodeJS:
+		icon: "node"
+		match: /^node_modules$/
+		colour: "medium-green"
+
+	Package:
+		icon: "package"
+		match: /^\.bundle$/i
+
+	SVN:
+		icon: "svn"
+		match: /^\.svn$/i
+
+	TextMate:
+		icon: "textmate"
+		match: ".tmBundle"
+
+	Vagrant:
+		icon: "vagrant"
+		match: ".vagrant"
+		colour: "medium-cyan"
+
+	Xcode:
+		icon: "appstore"
+		match: ".xcodeproj"
+
+
+fileIcons:
+
+	"1C":
+		icon: "_1c"
+		match: [
+			[".bsl", "medium-red", scope: "bsl", alias: "1C Enterprise"]
+			[".sdbl", "dark-orange", scope: "sdbl", alias: "1C Query"]
+			[".os", "dark-red"]
+		]
+
+	"1C MDO":
+		icon: "_1c-alt"
+		match: ".mdo"
+		colour: "auto-red"
+
+	ABAP:
+		icon: "abap"
+		scope: "abp"
+		match: ".abap"
+		colour: "medium-orange"
+
+	ActionScript: # Or Flash-related
+		icon: "as"
+		match: [
+			[".swf", "medium-blue"]
+			[".as", "medium-red", scope: /\.(flex-config|actionscript(\.\d+)?)$/i, alias: /^(ActionScript\s*3|as3)$/i]
+			[".jsfl", "auto-yellow"]
+			[".swc", "dark-red"]
+		]
+
+	Ada:
+		icon: "ada"
+		scope: "ada"
+		alias: /^(ada95|ada2005)$/i
+		match: /\.(ada|adb|ads)$/i
+		colour: "medium-blue"
+
+	"Adobe After Effects":
+		icon: "ae"
+		match: [
+			[".aep", "dark-pink"]
+			[".aet", "dark-purple"]
+		]
+
+	"Adobe Illustrator":
+		icon: "ai"
+		match: [
+			[".ai", "medium-orange"]
+			[".ait", "dark-orange"]
+		]
+
+	"Adobe InDesign":
+		icon: "indesign"
+		match: [
+			[".indd", "dark-pink"]
+			[".indl", "medium-purple"]
+			[".indt", "dark-purple"]
+			[".indb", "dark-blue"]
+			[".inx", "dark-purple"]
+			[".idml", "dark-pink"]
+		]
+
+	"Adobe Photoshop":
+		icon: "psd"
+		match: [
+			[".psd", "medium-blue", signature: /^8BPS/]
+			[".psb", "dark-purple"]
+		]
+
+	"Adobe Premiere":
+		icon: "premiere"
+		match: [
+			[".prproj", "dark-purple"]
+			[".prel", "medium-maroon"]
+			[".psq", "medium-purple"]
+		]
+
+	Alloy:
+		icon: "alloy"
+		scope: "alloy"
+		match: ".als"
+		colour: "medium-red"
+
+	"Alpine Linux":
+		icon: "alpine"
+		match: /(\.|^)APKBUILD$/
+		colour: "dark-blue"
+
+	AMPL:
+		icon: "ampl"
+		scope: "ampl"
+		match: ".ampl"
+		colour: "dark-maroon"
+
+	Angular:
+		icon: "angular"
+		priority: 2
+		match: /^angular[^.]*\.js$/i
+		colour: "medium-red"
+
+	"ANSI Weather":
+		icon: "sun"
+		match: ".ansiweatherrc"
+		colour: "auto-yellow"
+
+	"Ant Build System":
+		icon: "ant"
+		priority: 2
+		match: /^ant\.xml$|\.ant$/i
+		colour: "dark-pink"
+
+	ANTLR:
+		icon: "antlr"
+		match: [
+			[".g", "medium-red", "antlr"]
+			[".g4", "medium-orange"]
+		]
+
+	Apache:
+		icon: "apache"
+		priority: 2
+		match: [
+			[/^(apache2?|httpd).conf$/i, "medium-red"]
+			[".apacheconf", "dark-red", scope: "apache-config", alias: /^(aconf|ApacheConf)$/i]
+			[/^httpd\.conf/i, "medium-red", priority: 0]
+			["apache2/magic", "medium-purple", matchPath: true]
+			[".vhost", "dark-green"]
+			[".thrift", "medium-green"]
+		]
+
+	"API Blueprint":
+		icon: "api"
+		scope: "apib"
+		match: ".apib"
+		colour: "medium-blue"
+
+	APL:
+		icon: "apl"
+		match: [
+			[".apl", "dark-cyan", "apl"]
+			[".apl.history", "medium-maroon"]
+		]
+
+	Appcelerator:
+		icon: "appcelerator"
+		priority: 2
+		match: /^appcelerator\.js$/i
+		colour: "medium-red"
+
+	Apple:
+		icon: "apple"
+		match: [
+			[/\.(applescript|scpt)$/i, "medium-purple", scope: "applescript", alias: "osascript", interpreter: "osascript"]
+			[/^com\.apple\./, "medium-blue", priority: 0.5]
+		]
+
+	Appveyor:
+		icon: "appveyor"
+		priority: 2
+		match: /^appveyor\.yml$/i
+		colour: "medium-blue"
+
+	Arc:
+		icon: "arc"
+		match: ".arc"
+		colour: "medium-blue"
+
+	"Arch Linux":
+		icon: "archlinux"
+		priority: 2
+		match: [
+			[/^\.install$/, "dark-purple"]
+			[/^\.SRCINFO$/, "dark-maroon"]
+			[/^pacman\.conf$/, "dark-yellow"]
+			[/^pamac\.conf$/, "light-yellow"]
+			[/^PKGBUILD$/, "dark-cyan"]
+			["yaourtrc", "light-yellow"]
+		]
+
+	Arduino:
+		icon: "arduino"
+		scope: "arduino"
+		match: ".ino"
+		colour: "dark-cyan"
+
+	AsciiDoc:
+		icon: "asciidoc"
+		scope: "asciidoc"
+		match: /\.(ad|adoc|asc|asciidoc)$/i
+		colour: "medium-blue"
+
+	"ASP.net":
+		icon: "asp"
+		match: [
+			[".asp", "dark-blue", scope: "asp", alias: /^aspx(-vb)?$/]
+			[".asax", "medium-maroon"]
+			[".ascx", "dark-green"]
+			[".ashx", "medium-green"]
+			[".asmx", "dark-cyan"]
+			[".aspx", "medium-purple"]
+			[".axd", "medium-cyan"]
+		]
+
+	AspectJ:
+		icon: "eclipse"
+		match: ".aj"
+		colour: "medium-maroon"
+
+	Assembly: # Or binary
+		icon: "binary"
+		match: [
+			[/\.(l?a|[ls]?o|out|s|a51|n?asm|axf|elf|prx|puff|was[mt]|z80)$/i, "medium-red",
+				scope: /(^|\.)(a[rs]m|x86|z80|lc-?3|cpu12|x86asm|m68k|assembly|avr(dis)?asm|dasm)(\.|$)/i,
+				alias: /^n?asm$/i]
+			[".agc", "dark-blue", scope: "source.agc", alias: /^(Virtual\s*)?AGC$|^Apollo([-_\s]*11)?\s*Guidance\s*Computer$/i]
+			[".ko", "dark-green"]
+			[".lst", "medium-blue", "lst-cpu12"]
+			[/\.((c([+px]{2}?)?-?)?objdump|bin|dat|pak|pdb)$/i, "dark-orange"]
+			[".d-objdump", "dark-blue"]
+			[/\.gcode|\.gco/i, "medium-orange"]
+			[/\.rpy[bc]$/i, "medium-red"]
+			[/\.py[co]$/i, "dark-purple"]
+			[".swp", "dark-green", priority: 4]
+			[".DS_Store"]
+		]
+
+	ATS:
+		icon: "ats"
+		match: [
+			[".dats", "medium-red", scope: "ats", alias: "ats2"]
+			[".hats", "medium-blue"]
+			[".sats", "dark-yellow"]
+		]
+
+	Audacity:
+		icon: "audacity"
+		match: ".aup"
+		colour: "medium-yellow"
+
+	Audio:
+		icon: "audio"
+		match: [
+			[".mp3", "medium-red", signature: /^\xFF\xFB|^ID3/]
+			[".wav", "dark-yellow", signature: /^RIFF/]
+			[/\.(m4p|aac)$/i, "dark-cyan"]
+			[".aiff", "medium-purple"]
+			[".au", "medium-cyan"]
+			[".flac", "dark-red", signature: /^fLaC/]
+			[".m4a", "medium-cyan"]
+			[/\.(mpc|mp\+|mpp)$/i, "dark-green"]
+			[".oga", "dark-orange"]
+			[".opus", "dark-maroon"]
+			[/\.r[am]$/i, "dark-blue"]
+			[".wma", "medium-blue", signature: /^\x30\x26\xB2\x75\x8E\x66\xCF\x11\xA6\xD9\x00\xAA\x00\x62\xCE\x6C/]
+		]
+
+	Augeas:
+		icon: "augeas"
+		match: ".aug"
+		colour: "dark-orange"
+
+	AutoHotkey:
+		icon: "ahk"
+		match: [
+			[".ahk", "dark-blue", "ahk"]
+			[".ahkl", "dark-purple"]
+		]
+
+	AutoIt:
+		icon: "autoit"
+		scope: /(^|\.)autoit(\.|$)/i
+		alias: /^(AutoIt3|AutoItScript|au3)$/i
+		match: ".au3"
+		colour: "medium-purple"
+
+	AWK:
+		icon: "terminal"
+		match: [
+			[".awk", "medium-blue", "awk"]
+			[".gawk", "medium-red", "gawk"]
+			[".mawk", "medium-maroon", "mawk"]
+			[".nawk", "dark-green", "nawk"]
+			[".auk", "dark-cyan"]
+		]
+
+	Babel:
+		icon: "babel"
+		match: [
+			[/\.(babelrc|languagebabel|babel)$/i, "medium-yellow"]
+			[".babelignore", "dark-yellow"]
+		]
+
+	Backbone:
+		icon: "backbone"
+		priority: 2
+		match: /^backbone([-.]min|dev)?\.js$/i
+		colour: "dark-blue"
+
+	BibTeX:
+		icon: "bibtex"
+		match: [
+			[".cbx", "auto-red"]
+			[".bbx", "auto-orange"]
+			[".bib", "auto-yellow", "bibtex"]
+			[".bst", "auto-green"]
+		]
+
+	Bison:
+		icon: "gnu"
+		scope: "bison"
+		match: ".bison"
+		colour: "medium-red"
+
+	Blender:
+		icon: "blender"
+		match: [
+			[".blend", "medium-orange"]
+			[/\.blend\d+$/i, "dark-orange"]
+			[".bphys", "dark-blue"]
+		]
+
+	Bluespec:
+		icon: "bluespec"
+		scope: "bsv"
+		match: ".bsv"
+		colour: "dark-blue"
+
+	Boo:
+		icon: "boo"
+		scope: /\.boo(\.unity)?$/i
+		match: ".boo"
+		colour: "medium-green"
+
+	Boot:
+		icon: "boot"
+		match: [
+			[".boot"]
+			[/^Makefile\.boot$/i, "auto-green", priority: 2]
+		]
+
+	Bootstrap:
+		icon: "bootstrap"
+		priority: 2
+		match: [
+			[/^(custom\.)?bootstrap\S*\.js$/i,   "auto-yellow"]
+			[/^(custom\.)?bootstrap\S*\.css$/i,  "medium-blue"]
+			[/^(custom\.)?bootstrap\S*\.less$/i, "dark-blue"]
+			[/^(custom\.)?bootstrap\S*\.scss$/i, "light-pink"]
+			[/^(custom\.)?bootstrap\S*\.styl$/i, "medium-green"]
+		]
+
+	Bower:
+		icon: "bower"
+		priority: 2
+		match: /^(\.bowerrc|bower\.json|Bowerfile)$/i
+		colour: ["medium-yellow", "medium-orange"]
+
+	Brainfuck:
+		icon: "brain"
+		scope: /\.(bf|brainfuck)$/i
+		alias: /^(bf|Brainf\**ck)$/i
+		match: /\.bf?$/i
+		colour: "dark-pink"
+
+	Brakeman:
+		icon: "brakeman"
+		priority: 2
+		match: [
+			["brakeman.yml", "medium-red"]
+			[/^brakeman\.ignore$/i, "dark-red"]
+		]
+
+	Brewfile:
+		icon: "brew"
+		match: /^Brewfile$/
+		colour: "medium-orange"
+
+	Bro:
+		icon: "bro"
+		scope: "bro"
+		match: ".bro"
+		colour: "dark-cyan"
+
+	Broccoli:
+		icon: "broccoli"
+		priority: 2
+		match: /^Brocfile\./i
+		colour: "medium-green"
+
+	BYOND: # Dream Maker Script
+		icon: "byond"
+		scope: "dm"
+		alias: /^(DM|Dream\s*Maker(\s*Script)?)$/i
+		match: ".dm"
+		colour: "medium-blue"
+
+	C:
+		icon: "c"
+		match: [
+			[".c", "medium-blue", scope: "c", interpreter: "tcc"]
+			[".h", "medium-purple"]
+			[".cats", "medium-purple"]
+			[".idc", "medium-green"]
+			[".w", "medium-maroon"]
+			[".nc", "dark-blue"]
+			[".upc", "medium-cyan"]
+		]
+
+	"C++":
+		icon: "cpp"
+		match: [
+			[/\.c[+px]{2}$|\.cc$/i, "auto-blue", scope: "cpp", alias: /c[-_]?pp|cplusplus/i]
+			[/\.h[+px]{2}$/i, "auto-purple"]
+			[/\.[it]pp$/i, "auto-orange"]
+			[/\.(tcc|inl)$/i, "auto-red"]
+		]
+
+	"C#":
+		icon: "csharp"
+		scope: "cs"
+		alias: /^c\s*sharp$/i
+		match: ".cs"
+		colour: "auto-blue"
+
+	"C#-Script":
+		icon: "csscript"
+		scope: "csx"
+		match: ".csx"
+		colour: "dark-green"
+
+	Cabal:
+		icon: "cabal"
+		scope: "cabal"
+		match: ".cabal"
+		colour: "medium-cyan"
+
+	Cake:
+		icon: "cake"
+		scope: "cake"
+		match: ".cake"
+		colour: "medium-yellow"
+
+	Cakefile:
+		icon: "cakefile"
+		match: /^Cakefile$/
+		colour: "medium-red"
+
+	CakePHP:
+		icon: "cakephp"
+		match: ".ctp"
+		colour: "medium-red"
+
+	Cargo:
+		icon: "package"
+		priority: 2
+		match: [
+			["Cargo.toml", "light-orange"]
+			["Cargo.lock", "dark-orange"]
+		]
+
+	Ceylon:
+		icon: "ceylon"
+		match: ".ceylon"
+		colour: "medium-orange"
+
+	Chai:
+		icon: "chai"
+		priority: 2
+		match: /^chai\.([jt]sx?|es6?|coffee)$/i
+		colour: "auto-red"
+
+	Chapel:
+		icon: "chapel"
+		scope: "chapel"
+		alias: "chpl"
+		match: ".chpl"
+		colour: "medium-green"
+
+	ChartJS:
+		icon: "chartjs"
+		priority: 2
+		match: /^Chart\.js$/i
+		colour: "dark-pink"
+
+	Checklist:
+		icon: "checklist"
+		priority: 0
+		match: /TODO/
+		colour: "medium-yellow"
+
+	ChucK:
+		icon: "chuck"
+		scope: "chuck"
+		match: ".ck"
+		colour: "medium-green"
+
+	Chrome:
+		icon: "chrome"
+		match: ".crx"
+		colour: "medium-red"
+		signature: /^Cr24/
+
+	CircleCI:
+		icon: "circleci"
+		priority: 2
+		match: /^circle\.yml$/i
+		colour: "medium-green"
+
+	Cirru:
+		icon: "cirru"
+		scope: "cirru"
+		match: ".cirru"
+		colour: "auto-pink"
+
+	Clarion:
+		icon: "clarion"
+		scope: "clarion"
+		match: ".clw"
+		colour: "medium-orange"
+
+	Clean:
+		icon: "clean"
+		match: [
+			[".icl", "dark-cyan", "clean"]
+			[".dcl", "medium-cyan"]
+			[".abc", "medium-blue"]
+		]
+
+	Click:
+		icon: "click"
+		scope: "click"
+		alias: "Click!"
+		match: ".click"
+		colour: "medium-yellow"
+
+	CLIPS:
+		icon: "clips"
+		scope: "clips"
+		match: ".clp"
+		colour: "dark-green"
+
+	Clojure:
+		icon: "clojure"
+		match: [
+			[".clj", "auto-blue", "clojure"]
+			[".cl2", "auto-purple"]
+			[".cljc", "auto-green"]
+			[".cljx", "auto-red"]
+			[".hic", "auto-red"]
+		]
+
+	ClojureScript:
+		icon: "cljs"
+		match: /\.cljs(\.hl|cm)?$/i
+		colour: "auto-blue"
+
+	CMake:
+		icon: "cmake"
+		match: [
+			[".cmake", "medium-green", "cmake"]
+			[/^CMakeLists\.txt$/, "medium-red"]
+		]
+
+	CodeClimate:
+		icon: "cc"
+		priority: 2
+		match: ".codeclimate.yml"
+		colour: "medium-green"
+
+	Codecov:
+		icon: "codecov"
+		priority: 2
+		match: /^codecov\.ya?ml$/i
+		colour: "dark-pink"
+
+	CoffeeScript:
+		icon: "coffee"
+		match: [
+			[".coffee", "medium-maroon", scope: "coffee", alias: /^Coffee(-Script)?$/i, interpreter: "coffee"]
+			[".cjsx", "dark-maroon"]
+			[".coffee.ecr", "medium-cyan", priority: 2]
+			[".coffee.erb", "medium-red",  priority: 2]
+			[".litcoffee", "light-maroon", "litcoffee"]
+			[".iced", "medium-blue"]
+		]
+
+	ColdFusion:
+		icon: "cf"
+		match: [
+			[".cfc", "light-cyan", scope: "cfscript", alias: /^(CFC|CFScript)$/i]
+			[/\.cfml?$/i, "medium-cyan", scope: /\.cfml?$/i, alias: /^(cfml?|ColdFusion\s*HTML)$/i]
+		]
+
+	COLLADA:
+		icon: "khronos"
+		match: ".dae"
+		colour: "medium-orange"
+
+	"Common Lisp":
+		icon: "cl"
+		scope: "common-lisp"
+		alias: /^c?lisp$/i
+		interpreter: /^(c?lisp|sbcl|[ec]cl)$/
+		match: ".cl"
+		colour: "medium-orange"
+
+	Compass:
+		icon: "compass"
+		priority: 2
+		match: /^_?(compass|lemonade)\.scss$/i
+		colour: "medium-red"
+
+	"Component Pascal":
+		icon: "cp"
+		match: [
+			[".cp", "medium-maroon"]
+			[".cps", "dark-red"]
+		]
+
+	Composer:
+		icon: "composer"
+		priority: 2
+		match: [
+			[/^composer\.(json|lock)$/i, "medium-yellow"]
+			[/^composer\.phar$/i, "dark-blue"]
+		]
+
+	Compressed:
+		icon: "zip"
+		match: [
+			[/\.(zip|z|xz)$/i, null, signature: /^(\x50\x4B(\x03\x04|\x05\x06|\x07|\x08)|\x1F[\x9D\xA0]|BZh|RNC[\x01\x02]|\xD0\xCF\x11\xE0)/]
+			[".rar", "medium-blue", signature: /^Rar!\x1A\x07\x01?\0/]
+			[/\.t?gz$/i, "dark-blue", signature: /^\x1F\x8B/]
+			[/\.(lzo?|lzma|tlz|tar\.lzma)$/i, "medium-maroon", signature: /^LZIP/]
+			[".7z", "medium-maroon", signature: /^7z\xBC\xAF\x27\x1C/]
+			[".apk", "medium-red"]
+			[".tar", "dark-blue"]
+			[".bz2", "dark-cyan"]
+			[".iso", "medium-blue", signature: /^\x45\x52\x02\0{3}|^\x8B\x45\x52\x02/]
+			[".xpi", "medium-orange"]
+			[".gem", "medium-red"]
+			[".whl", "dark-blue"]
+			[".epub", "medium-green"]
+			[".jar", "dark-pink"]
+			[".war", "medium-purple"]
+			[".xar", "dark-orange", signature: /^xar!/]
+			[".egg", "light-orange"]
+		]
+
+	Config:
+		icon: "config"
+		generic: true
+		match: [
+			[/\.(ini|desktop|directory|cfg|conf|prefs)$/i, "medium-yellow", scope: "ini", alias: "dosini"]
+			[".properties", "medium-purple", scope: "java-properties"]
+			[".toml", "medium-green"]
+			[".ld", "dark-red"]
+			[".lds", "medium-red"]
+			[".opts", "medium-green"]
+			[".terminal", "dark-blue"]
+			[/^ld\.script$/i, "medium-orange"]
+			[".reek", "medium-red"]
+			[/config|settings|option|pref/i, null, priority: 0]
+			[/\.git[\/\\](config|info[\/\\]\w+)$/, "dark-red", matchPath: true]
+			[/^\/(private\/)?etc\/([^/]+\/)*[^/]*\.(cf|conf|ini)(\.default)?$/i, "dark-orange", matchPath: true]
+			[/^\/(private\/)?etc\/(aliases|auto_(home|master)|ftpusers|group|gettytab|hosts(\.equiv)?|manpaths|networks|paths|protocols|services|shells|sudoers|ttys)$/i,
+				"medium-maroon",
+				matchPath: true]
+		]
+
+	Coq:
+		icon: "coq"
+		scope: "coq"
+		match: ".coq"
+		colour: "medium-maroon"
+
+	Cordova:
+		icon: "cordova"
+		priority: 2
+		match: /^cordova([^.]*\.|-(\d\.)+)js$/i
+		colour: "light-blue"
+
+	Creole:
+		icon: "creole"
+		scope: "creole"
+		match: ".creole"
+		colour: "medium-blue"
+
+	Crystal:
+		icon: "crystal"
+		scope: "crystal"
+		interpreter: "crystal"
+		match: /\.e?cr$/i
+		colour: "medium-cyan"
+
+	Csound:
+		icon: "csound"
+		match: [
+			[".orc", "medium-maroon", scope: "csound", alias: "csound-orc"]
+			[".udo", "dark-orange"]
+			[".csd", "dark-maroon", scope: "csound-document", alias: "csound-csd"]
+			[".sco", "dark-blue", scope: "csound-score", alias: "csound-sco"]
+		]
+
+	CSS:
+		icon: "css3"
+		match: [
+			[".css", "medium-blue", "css"]
+			[".less", "dark-blue", "less"]
+		]
+
+	Cucumber:
+		icon: "cucumber"
+		scope: /(^|\.)(gherkin\.feature|cucumber\.steps)(\.|$)/i
+		alias: "gherkin"
+		match: ".feature"
+		colour: "medium-green"
+
+	CUDA:
+		icon: "nvidia"
+		match: [
+			[".cu", "medium-green", scope: /\.cuda(-c\+\+)?$/i]
+			[".cuh", "dark-green"]
+		]
+
+	Cython:
+		icon: "cython"
+		match: [
+			[".pyx", "medium-orange", scope: "cython", alias: "pyrex"]
+			[".pxd", "medium-blue"]
+			[".pxi", "dark-blue"]
+		]
+
+	D:
+		icon: "dlang"
+		scope: "d"
+		match: /\.di?$/i
+		colour: "medium-red"
+
+	D3:
+		icon: "d3"
+		priority: 2
+		match: /^d3(\.v\d+)?[^.]*\.js$/i
+		colour: "medium-orange"
+
+	Danmakufu:
+		icon: "yang"
+		scope: "danmakufu"
+		match: ".dnh"
+		colour: "medium-red"
+
+	"Darcs Patch":
+		icon: "darcs"
+		match: /\.d(arcs)?patch$/i
+		colour: "medium-green"
+
+	Dart:
+		icon: "dart"
+		scope: "dart"
+		match: ".dart"
+		colour: "medium-cyan"
+		interpreter: "dart"
+
+	Dashboard:
+		icon: "dashboard"
+		generic: true
+		match: [
+			[/\.s[kl]im$/i, "medium-orange", "slim"]
+			[".cpuprofile", "medium-green"]
+		]
+
+	Data:
+		icon: "database"
+		generic: true
+		match: [
+			[/\.(h|geo|topo)?json$/i, "medium-yellow"]
+			[/\.ya?ml$/i, "light-red"]
+			[".cson", "medium-maroon"]
+			[".json5", "dark-yellow", "json5"]
+			[".http", "medium-red"]
+			[".ndjson", "medium-orange"]
+			[".fea", "light-blue", scope: "opentype", alias: "afdko"]
+			[".json.eex", "medium-purple"]
+			[".proto", "dark-cyan", scope: "protobuf", alias: /^(protobuf|Protocol\s*Buffers?)$/i]
+			[".pytb", "medium-orange", scope: "python.traceback"]
+			[".pydeps", "dark-blue"]
+			[/\.pot?$/i, "medium-red"]
+			[".edn", "medium-purple"]
+			[".eam.fs", "dark-purple"]
+			[".qml", "medium-pink"]
+			[".qbs", "dark-pink"]
+			[".ston", "medium-maroon"]
+			[".ttl", "medium-cyan", scope: "turtle"]
+			[".rviz", "dark-blue"]
+			[".syntax", "medium-blue"]
+			[/^mime\.types$/i, "medium-maroon"]
+			[/^METADATA\.pb$/, "medium-red", priority: 2]
+			["lib/icons/.icondb.js", "dark-red", matchPath: true]
+			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
+				priority: 2,
+				matchPath: true]
+		]
+
+	dBASE:
+		icon: "dbase"
+		match: ".dbf"
+		colour: "medium-red"
+
+	Debian:
+		icon: "debian"
+		match: [
+			[".deb", "medium-red"]
+			[/^control$/, "dark-cyan"]
+			[/^rules$/, "medium-cyan"]
+		]
+
+	Diff:
+		icon: "diff"
+		scope: "diff"
+		alias: "udiff"
+		match: ".diff"
+		colour: "medium-orange"
+
+	"DNS Zone / CNAME":
+		icon: "earth"
+		match: [
+			[".zone", "medium-blue"]
+			[".arpa", "medium-green"]
+			[/^CNAME$/, "dark-blue"]
+		]
+
+	Docker:
+		icon: "docker"
+		match: [
+			[/^(Dockerfile|docker-compose)|\.docker(file|ignore)$/i, "dark-blue", scope: "dockerfile"]
+			[/^docker-sync\.yml$/i, "dark-orange", priority: 2]
+		]
+
+	Dogescript:
+		icon: "doge"
+		priority: 0 # Not much wow
+		match: ".djs"
+		colour: "medium-yellow"
+		scope: "dogescript"
+
+	Dojo:
+		icon: "dojo"
+		priority: 2
+		match: /^dojo\.js$/i
+		colour: "light-red"
+
+	Doxyfile:
+		icon: "doxygen"
+		scope: "doxygen"
+		match: /^Doxyfile$/
+		colour: "medium-blue"
+
+	"Dyalog APL":
+		icon: "dyalog"
+		match: ".dyalog"
+		colour: "medium-orange"
+		interpreter: "dyalog"
+
+	DyLib:
+		icon: "dylib"
+		match: /\.(dylib|bundle)$/i
+		colour: "medium-cyan"
+
+	E:
+		icon: "e"
+		match: /\.E$/
+		colour: "medium-green"
+		interpreter: "rune"
+
+	Eagle:
+		icon: "eagle"
+		match: [
+			[".sch", "medium-red"]
+			[".brd", "dark-red"]
+		]
+
+	eC:
+		icon: "ec"
+		match: [
+			[".ec", "dark-blue", "ec"]
+			[".eh", "dark-purple"]
+		]
+
+	Ecere:
+		icon: "ecere"
+		match: ".epj"
+		colour: "medium-blue"
+
+	Eclipse:
+		icon: "eclipse"
+		match: [
+			[/\.c?project$/, "dark-blue"]
+			[".classpath", "medium-red"]
+		]
+
+	EditorConfig:
+		icon: "editorconfig"
+		match: ".editorconfig"
+		colour: "medium-orange"
+		scope: "editorconfig"
+
+	Eiffel:
+		icon: "eiffel"
+		scope: "eiffel"
+		match: /\.e$/
+		colour: "medium-cyan"
+
+	Elixir:
+		icon: "elixir"
+		match: [
+			[".ex", "dark-purple", "elixir"]
+			[/\.(exs|eex)$/i, "medium-purple"]
+			[/mix\.exs?$/i, "light-purple"]
+		]
+
+	Elm:
+		icon: "elm"
+		scope: "elm"
+		match: ".elm"
+		colour: "medium-blue"
+
+	"Emacs Lisp":
+		icon: "emacs"
+		priority: 1.5
+		match: [
+			[/(^|\.)(el|_?emacs|spacemacs|emacs\.desktop|abbrev[-_]defs)$/i, "medium-purple", alias: "elisp", scope: "emacs.lisp", interpreter: "emacs"]
+			[/(^|\.)(elc|eld)$/i, "dark-purple"]
+			[".gnus", "medium-red"]
+			[".viper", "dark-green"]
+			[/^Project\.ede$/i, "medium-blue"]
+		]
+
+	Email:
+		icon: "at"
+		match: /^(authors|owners)$/i
+		colour: "auto-red"
+
+	Ember:
+		icon: "ember"
+		priority: 2
+		match: /^ember(\.|(-[^.]+)?-(\d+\.)+(debug\.)?)js$/i
+		colour: "medium-red"
+
+	EmberScript:
+		icon: "em"
+		scope: /\.ember(script)?$/i
+		match: ".emberscript"
+		colour: "medium-red"
+
+	Emblem:
+		icon: "mustache"
+		scope: "emblem"
+		match: /\.em(blem)?$/i
+		colour: "medium-blue"
+
+	EQ:
+		icon: "eq"
+		scope: "eq"
+		match: ".eq"
+		colour: "medium-orange"
+
+	Erlang:
+		icon: "erlang"
+		match: [
+			[".erl", "medium-red", scope: "erlang", interpreter: "escript"]
+			[".beam", "dark-red"]
+			[".hrl", "medium-maroon"]
+			[".xrl", "medium-green"]
+			[".yrl", "dark-green"]
+			[".app.src", "dark-maroon"]
+		]
+
+	ESLint:
+		icon: "eslint"
+		priority: 2
+		match: [
+			[/\.eslint(cache|ignore)$/i, "medium-purple"]
+			[/\.eslintrc(\.(js|json|ya?ml))?$/i, "light-purple"]
+		]
+
+	ExtJS:
+		icon: "extjs"
+		priority: 2
+		match: /\bExtjs(-ext)?\.js$/i
+		colour: "light-green"
+
+	Fabric:
+		icon: "fabfile"
+		priority: 2
+		match: /^fabfile\.py$/i
+		colour: "medium-blue"
+
+	Factor:
+		icon: "factor"
+		scope: "factor"
+		match: [
+			[".factor", "medium-orange"]
+			[".factor-rc", "dark-orange"]
+			[".factor-boot-rc", "medium-red"]
+		]
+
+	Fancy:
+		icon: "fancy"
+		match: [
+			[".fy", "dark-blue", "fancy"]
+			[".fancypack", "medium-blue"]
+			[/^Fakefile$/, "medium-green"]
+		]
+
+	Fantom:
+		icon: "fantom"
+		scope: /\.fan(tom)?$/i
+		match: ".fan"
+		colour: "medium-blue"
+
+	FBX:
+		icon: "fbx"
+		match: ".fbx"
+		colour: "medium-maroon"
+
+	Finder:
+		icon: "finder"
+		match: [
+			[/^Icon\r$/, "medium-blue"]
+			[".rsrc", "dark-blue"]
+		]
+
+	Flow:
+		icon: "flow"
+		match: /\.(flowconfig|js\.flow)$/i
+		colour: "medium-orange"
+
+	FLUX:
+		icon: "flux"
+		match: [
+			[".fx", "medium-blue"]
+			[".flux", "dark-blue"]
+		]
+
+	Font:
+		icon: "font"
+		match: [
+			[".woff2", "dark-blue", signature: /^wOF2/]
+			[".woff", "medium-blue", signature: /^wOFF/]
+			[".eot", "light-green"]
+			[".ttc", "dark-green"]
+			[".ttf", "medium-green"]
+			[".otf", "dark-yellow"]
+		]
+
+	FontForge:
+		icon: "ff"
+		match: [
+			[".pe", "medium-orange", scope: "source.fontforge", alias: "pfaedit", interpreter: "fontforge"]
+			[".sfd", "dark-blue", scope: "text.sfd"]
+		]
+
+	Fortran:
+		icon: "fortran"
+		match: [
+			[".f", "medium-maroon", scope: /\.fortran\.?(modern|punchcard)?$/i]
+			[".f90", "medium-green", scope: "fortran.free"]
+			[".f03", "medium-red"]
+			[".f08", "medium-blue"]
+			[".f77", "medium-maroon", scope: "fortran.fixed"]
+			[".f95", "dark-pink"]
+			[".for", "dark-cyan"]
+			[".fpp", "dark-yellow"]
+		]
+
+	FreeMarker:
+		icon: "freemarker"
+		scope: "ftl"
+		alias: "ftl"
+		match: ".ftl"
+		colour: "medium-blue"
+
+	Frege:
+		icon: "frege"
+		match: ".fr"
+		colour: "dark-red"
+
+	FSharp:
+		icon: "fsharp"
+		scope: "fsharp"
+		alias: "f#"
+		match: /\.fs[xi]?$/i
+		colour: "medium-blue"
+
+	"Fuel UX":
+		icon: "fuelux"
+		priority: 2
+		match: /^fuelux(\.min)?\.(css|js)$/i
+		colour: "auto-orange"
+
+	"GameMaker Language":
+		icon: "gml"
+		match: ".gml"
+		colour: "medium-green"
+
+	GAMS:
+		icon: "gams"
+		scope: /\.gams(-lst)?$/i
+		match: ".gms"
+		colour: "dark-red"
+
+	GAP:
+		icon: "gap"
+		match: [
+			[".gap", "auto-yellow", "gap"]
+			[".gi", "dark-blue"]
+			[".tst", "medium-orange"]
+		]
+
+	GDB:
+		icon: "gdb"
+		match: [
+			[".gdb", "auto-green", "gdb"]
+			["gdbinit", "auto-cyan"]
+		]
+
+	GDScript:
+		icon: "godot"
+		scope: "gdscript"
+		match: ".gd"
+		colour: "medium-blue"
+
+	Gear:
+		icon: "gear"
+		match: [
+			[/^\.htaccess$/i, "medium-red"]
+			[/^\.htpasswd$/i, "medium-orange"]
+			[/^\.env\./i, "dark-green"]
+			[/^\.lesshintrc$/i, "dark-yellow"]
+			[/^\.csscomb\.json$/i, "medium-yellow"]
+			[".csslintrc", "medium-yellow"]
+			[".jsbeautifyrc", "medium-yellow"]
+			[".jshintrc", "medium-yellow"]
+			[".coffeelintignore", "medium-maroon"]
+			[".jscsrc", "medium-yellow"]
+			[".module", "medium-blue"]
+			[".codoopts", "medium-maroon"]
+			[".yardopts", "medium-red"]
+			[".arcconfig", "dark-blue"]
+			[".pairs", "dark-green"]
+			[".python-version", "dark-blue"]
+			[".lintstagedrc", "dark-orange"]
+			[".indent.pro", "medium-blue", priority: 2]
+			[/^\./, null, priority: 0]
+		]
+
+	Gears:
+		icon: "gears"
+		match: ".dll"
+		colour: "dark-orange"
+		signature: /^PMOCCMOC/
+
+	Generic:
+		icon: "code"
+		generic: true
+		match: [
+			[".xml", "medium-blue", signature: /^<\?xml /]
+			[".rdf", "dark-red"]
+			[".config", "medium-blue"]
+			[/^_service$/, "medium-blue"]
+			[/^configure\.ac$/, "medium-red"]
+			[/^Settings\.StyleCop$/, "medium-green"]
+			[".4th", "medium-blue"]
+			[".abnf", "medium-green", "abnf"]
+			[".aepx", "medium-purple"]
+			[".agda", "dark-cyan"]
+			[".appxmanifest", "medium-orange"]
+			[".ash", "medium-cyan"]
+			[/\.asn1?$/i, "medium-cyan"]
+			[".axml", "dark-blue"]
+			[".befunge", "medium-orange"]
+			[".bmx", "dark-blue"]
+			[".bnf", "medium-maroon", "bnf"]
+			[".brs", "dark-blue", "brightscript"]
+			[".capnp", "dark-red", scope: "capnp", alias: /^(Cap[^\w\s]?n\s*Proto|capnp)$/i]
+			[".cbl", "medium-maroon"]
+			[".ccp", "dark-maroon"]
+			[".ccxml", "dark-blue"]
+			[".ch", "medium-red"]
+			[".clixml", "dark-blue"]
+			[".cob", "medium-maroon"]
+			[".cobol", "medium-maroon"]
+			[".cocci", "medium-blue"]
+			[".cpy", "dark-maroon"]
+			[".ct", "dark-pink"]
+			[".cw", "medium-red"]
+			[".cy", "dark-green"]
+			[".dita", "medium-purple"]
+			[".ditamap", "dark-purple"]
+			[".ditaval", "medium-green"]
+			[".dotsettings", "dark-red"]
+			[".dyl", "medium-blue"]
+			[".dylan", "medium-blue"]
+			[".ebnf", "medium-red", "ebnf"]
+			[".ecl", "medium-blue"]
+			[".eclxml", "dark-green"]
+			[".filters", "medium-pink"]
+			[".flex", "dark-red"]
+			[".forth", "medium-blue"]
+			[".frt", "dark-purple"]
+			[".fsh", "dark-red"]
+			[".fsproj", "dark-red"]
+			[".fth", "dark-blue"]
+			[".fun", "medium-orange"]
+			[".fxml", "medium-maroon"]
+			[".grace", "medium-purple"]
+			[".grxml", "dark-orange"]
+			[".iml", "medium-red"]
+			[".intr", "dark-blue"]
+			[".ivy", "dark-green"]
+			[".jelly", "medium-yellow"]
+			[".jflex", "medium-red"]
+			[".jsproj", "dark-yellow"]
+			[".lagda", "medium-cyan"]
+			[".launch", "medium-blue"]
+			[".lex", "medium-cyan"]
+			[".lid", "medium-purple"]
+			[".lol", "medium-pink"]
+			[".lp", "dark-purple"]
+			[".m4", "medium-red"]
+			[".manifest", "medium-blue"]
+			[".mask", "medium-red"]
+			[".mdpolicy", "dark-blue"]
+			[".menu", "medium-blue"]
+			[/\.ML$/, "medium-red"]
+			[/\.mq[45h]$/i, "dark-blue", scope: /(^|\.)mq[45](?=\.|$)/i]
+			[".mtml", "dark-blue"]
+			[".muf", "medium-orange"]
+			[".mumps", "medium-red"]
+			[".mxml", "dark-maroon"]
+			[".myt", "dark-blue"]
+			[".nproj", "medium-purple"]
+			[".odd", "light-green"]
+			[".ohm", "dark-yellow", "ohm"]
+			[".omgrofl", "dark-purple"]
+			[".osm", "dark-purple"]
+			[".pig", "medium-pink"]
+			[".plist", "dark-cyan", scope: "plist"]
+			[".prg", "medium-red"]
+			[".prw", "dark-red"]
+			[".props", "medium-cyan"]
+			[".psc1", "light-blue"]
+			[".pt", "medium-red"]
+			[".resx", "medium-cyan"]
+			[".rl", "medium-red"]
+			[".scxml", "light-cyan"]
+			[".sed", "dark-green"]
+			[/\.sgml?$/i, "dark-yellow"]
+			[".sig", "light-maroon"]
+			[".sml", "medium-red"]
+			[".smt", "light-blue", scope: "smt", interpreter: /boolector|cvc4|mathsat5|opensmt|smtinterpol|smt-rat|stp|verit|yices2|z3/]
+			[".smt2", "medium-cyan"]
+			[".srdf", "medium-blue"]
+			[".st", "medium-blue"]
+			[".storyboard", "medium-green"]
+			[".targets", "medium-red"]
+			[".tml", "dark-green"]
+			[".ui", "medium-blue"]
+			[".urdf", "dark-orange"]
+			[".ux", "light-orange"]
+			[".vsh", "medium-cyan"]
+			[".vxml", "light-purple"]
+			[".webidl", "medium-red"]
+			[".wisp", "dark-cyan"]
+			[".wsdl", "medium-red"]
+			[".wsf", "medium-blue"]
+			[".wxi", "light-orange"]
+			[".wxl", "light-maroon"]
+			[".wxs", "dark-purple"]
+			[".x3d", "medium-blue"]
+			[".xacro", "medium-red"]
+			[".xaml", "medium-blue"]
+			[".xib", "dark-purple"]
+			[".xlf", "dark-cyan"]
+			[".xliff", "medium-red"]
+			[".xmi", "medium-green"]
+			[".xproj", "dark-red"]
+			[".xsd", "dark-blue"]
+			[".xsl", "medium-cyan", "xsl"]
+			[".xslt", "dark-cyan"]
+			[".xul", "medium-orange"]
+			[".y", "dark-green"]
+			[".yacc", "medium-green"]
+			[".yy", "medium-cyan"]
+			[".zcml", "dark-pink"]
+		]
+
+	Genshi:
+		icon: "genshi"
+		scope: "genshi"
+		alias: /^xml\+(genshi|kid)$/i
+		match: ".kid"
+		colour: "medium-red"
+
+	Gentoo:
+		icon: "gentoo"
+		match: [
+			[".ebuild", "dark-cyan", scope: "ebuild"]
+			[".eclass", "medium-blue"]
+		]
+
+	Git:
+		icon: "git"
+		colour: "medium-red"
+		match: /^\.git|^\.keep$|\.mailmap$/i
+		scope: /\.git-(commit|config|rebase)$/i
+
+	"Git - Commit":
+		icon: "git-commit"
+		match: /^COMMIT_EDITMSG$/
+		colour: "medium-red"
+
+	"Git - Merge":
+		icon: "git-merge"
+		match: /^MERGE_(HEAD|MODE|MSG)$/
+		colour: "medium-red"
+
+	Glade:
+		icon: "glade"
+		match: ".glade"
+		colour: "medium-green"
+
+	Glyph:
+		icon: "pointwise"
+		match: ".glf"
+		colour: "medium-blue"
+
+	Glyphs:
+		icon: "glyphs"
+		match: ".glyphs"
+		colour: "medium-green"
+
+	GN:
+		icon: "gn"
+		match: [
+			[".gn", "dark-blue", "gn"]
+			[".gni", "medium-blue"]
+		]
+
+	GNU:
+		icon: "gnu"
+		match: /\.(gnu|gplv[23])$/i
+		colour: "auto-red"
+
+	Gnuplot:
+		icon: "graph"
+		scope: "gnuplot"
+		interpreter: "gnuplot"
+		match: /\.(gp|plo?t|gnuplot)$/i
+		colour: "medium-red"
+
+	Go:
+		icon: "go"
+		scope: /\.go(template)?$/i
+		match: ".go"
+		colour: "medium-blue"
+
+	Golo:
+		icon: "golo"
+		scope: "golo"
+		match: ".golo"
+		colour: "medium-orange"
+
+	Gosu:
+		icon: "gosu"
+		match: [
+			[".gs", "medium-blue", scope: /\.gosu(\.\d+)?$/i]
+			[".gst", "medium-green"]
+			[".gsx", "dark-green"]
+			[".vark", "dark-blue"]
+		]
+
+	Gradle:
+		icon: "gradle"
+		match: [
+			[".gradle", "medium-blue", scope: "gradle"]
+			["gradlew", "dark-purple"]
+		]
+
+	"Grammatical Framework":
+		icon: "gf"
+		match: ".gf"
+		colour: "medium-red"
+
+	GraphQL:
+		icon: "graphql"
+		match: [
+			[".graphql", "medium-pink", scope: "graphql"]
+			[".gql", "medium-purple"]
+		]
+
+	Graphviz:
+		icon: "graphviz"
+		match: [
+			[".gv", "medium-blue", scope: "dot"]
+			[".dot", "dark-cyan"]
+		]
+
+	Groovy:
+		icon: "groovy"
+		scope: "groovy"
+		alias: "gsp"
+		interpreter: "groovy"
+		match: /\.(groovy|grt|gtpl|gsp|gvy)$/i
+		colour: "light-blue"
+
+	Grunt:
+		icon: "grunt"
+		priority: 2
+		match: [
+			["gruntfile.js", "medium-yellow"]
+			["gruntfile.coffee", "medium-maroon"]
+		]
+
+	Gulp:
+		icon: "gulp"
+		priority: 2
+		match: [
+			["gulpfile.js", "medium-red"]
+			["gulpfile.coffee", "medium-maroon"]
+			["gulpfile.babel.js", "medium-red"]
+		]
+
+	Hack:
+		icon: "hack"
+		scope: "hack"
+		match: ".hh"
+		colour: "medium-orange"
+
+	Haml:
+		icon: "haml"
+		match: [
+			[".haml", "medium-yellow", "haml"]
+			[".hamlc", "medium-maroon", "hamlc"]
+		]
+
+	Harbour:
+		icon: "harbour"
+		scope: "harbour"
+		match: ".hb"
+		colour: "dark-blue"
+
+	"Hashicorp Configuration Language":
+		icon: "hashicorp"
+		scope: /(^|\.)(hcl|hashicorp)(\.|$)/i
+		match: ".hcl"
+		colour: "dark-purple"
+
+	Haskell:
+		icon: "haskell"
+		match: [
+			[".hs", "medium-purple", scope: "source.haskell", interpreter: "runhaskell"]
+			[".hsc", "medium-blue", scope: "hsc2hs"]
+			[".c2hs", "dark-purple", scope: "c2hs", alias: /^C2hs(\s*Haskell)?$/i]
+			[".lhs", "dark-blue", scope: "latex.haskell", alias: /^(lhaskell|lhs|Literate\s*Haskell)$/i]
+		]
+
+	Haxe:
+		icon: "haxe"
+		scope: /(^|\.)haxe(\.\d+)?$/i
+		match: /\.hx([sm]l|)?$/
+		colour: "medium-orange"
+
+	Heroku:
+		icon: "heroku"
+		match: [
+			[/^Procfile$/, "medium-purple"]
+			[".buildpacks", "light-purple"]
+			[/^\.vendor_urls$/, "dark-purple"]
+		]
+
+	HTML:
+		icon: "html5"
+		match: [
+			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /^(xhtml|htm)$/i]
+			[".cshtml", "medium-red"]
+			[".ejs", "medium-green"]
+			[".gohtml", "dark-blue", "gohtml"]
+			[".html.eex", "medium-purple"]
+			[".jsp", "medium-purple", scope: "jsp", alias: /^(jsp|Java\s*Server\s*Pages?)$/i]
+			[".kit", "medium-green"]
+			[".latte", "medium-red", "latte"]
+			[".phtml", "dark-blue"]
+			[".shtml", "medium-cyan"]
+			[".scaml", "dark-red", "scaml"]
+			[".swig", "medium-green", "swig"]
+			[".vash", "medium-red", "vash"]
+			[/\.html?\.ecr$/i, "medium-cyan", priority: 2]
+			[/\.(html?\.erb|rhtml)$/i, "medium-red", scope: "html.erb", priority: 2]
+		]
+
+	Hy:
+		icon: "hy"
+		scope: "hy"
+		alias: "hylang"
+		match: ".hy"
+		colour: "dark-blue"
+
+	IDL:
+		icon: "idl"
+		scope: "idl"
+		match: ".dlm"
+		colour: "medium-blue"
+
+	Idris:
+		icon: "idris"
+		match: [
+			[".idr", "dark-red", scope: /\.(idris|ipkg)$/i]
+			[".lidr", "medium-maroon"]
+		]
+
+	"IGOR Pro":
+		icon: "igorpro"
+		match: ".ipf"
+		alias: "igor"
+		colour: "dark-red"
+
+	Image:
+		icon: "image"
+		match: [
+			[".png", "medium-orange", signature: /^.PNG\r\n\x1A\n/]
+			[".gif", "medium-yellow", signature: /^GIF8[97]a/]
+			[".jpg", "medium-green", signature: /^\xFF\xD8\xFF[\xDB\xE0\xE1]|(JFIF|Exif)\0|^\xCF\x84\x01|^\xFF\xD8.+\xFF\xD9$/]
+			[/\.tiff?$/i, "medium-red", signature: /^II\x2A\0|^MM\0\x2A/]
+			[".ico", "medium-blue", signature: /^\0{2}\x01\0/]
+			[".webp", "dark-blue"]
+			[".apng", "medium-orange"]
+			[".bmp", "medium-red"]
+			[".bpg", "medium-red", signature: /^BPG\xFB/]
+			[".cin", "medium-orange", signature: /^\x80\x2A\x5F\xD7/]
+			[".cd5", "dark-green"]
+			[".cpc", "light-yellow"]
+			[".dcm", "medium-cyan"]
+			[".dds", "dark-green"]
+			[/\.djvu?$/i, "medium-purple", signature: /^AT&TFORM/]
+			[".dpx", "dark-orange", signature: /^(SDPX|XPDS)/]
+			[".ecw", "light-blue"]
+			[".exr", "dark-yellow", signature: /^v\/1\x01/]
+			[".fit", "medium-cyan"]
+			[".fits", "medium-cyan"]
+			[".flif", "dark-red", signature: /^FLIF/]
+			[".fts", "medium-cyan"]
+			[".hdp", "dark-red"]
+			[".hdr", "medium-blue"]
+			[".heic", "dark-red"]
+			[".heif", "dark-red"]
+			[".icns", "medium-pink"]
+			[".iff", "dark-blue"]
+			[".jpf", "dark-green"]
+			[".jps", "dark-cyan"]
+			[".jxr", "dark-red"]
+			[".lbm", "dark-blue"]
+			[".liff", "dark-blue"]
+			[".mpo", "medium-pink"]
+			[".nrrd", "dark-blue"]
+			[".ora", "medium-yellow"]
+			[".pbm", "medium-pink"]
+			[".pcx", "dark-blue"]
+			[".pgf", "light-red"]
+			[".pict", "light-purple"]
+			[".pxr", "medium-purple"]
+			[".raw", "dark-orange"]
+			[".sct", "light-blue"]
+			[".sgi", "medium-yellow"]
+			[".svgz", "medium-orange"]
+			[".tga", "dark-orange"]
+			[/\.vsdx?$/i, "dark-blue"]
+			[".wbm", "dark-maroon"]
+			[".wdp", "dark-red"]
+		]
+
+	"Inform 7":
+		icon: "inform7"
+		match: [
+			[".ni", "medium-blue", scope: /\.inform-?7?$/i, alias: "i7"]
+			[".i7x", "dark-blue"]
+		]
+
+	"Inno Setup":
+		icon: "inno"
+		scope: "inno"
+		match: ".iss"
+		colour: "dark-blue"
+
+	Io:
+		icon: "io"
+		scope: /^source\.io$/i
+		match: ".io"
+		colour: "dark-purple"
+		interpreter: "io"
+
+	Ioke:
+		icon: "ioke"
+		match: ".ik"
+		colour: "medium-red"
+		interpreter: "ioke"
+
+	Ionic:
+		icon: "ionic"
+		priority: 2
+		match: /^ionic\.project$/
+		colour: "medium-blue"
+
+	Isabelle:
+		icon: "isabelle"
+		match: [
+			[".thy", "dark-red", scope: "isabelle.theory"]
+			[/^ROOT$/, "dark-blue"]
+		]
+
+	J:
+		icon: "j"
+		scope: "j"
+		interpreter: "jconsole"
+		match: ".ijs"
+		colour: "light-blue"
+
+	Jade:
+		icon: "jade"
+		scope: "jade"
+		match: ".jade"
+		colour: "medium-red"
+
+	Jakefile:
+		icon: "jake"
+		match: [
+			[/^Jakefile$/, "auto-maroon"]
+			[".jake", "auto-yellow"]
+		]
+
+	Java:
+		icon: "java"
+		scope: "java"
+		match: ".java"
+		colour: "medium-purple"
+
+	JavaScript:
+		icon: "js"
+		match: [
+			[".js", "auto-yellow", scope: "js", alias: /^(js|node)$/i, interpreter: /^(node|iojs)$/]
+			["._js", "auto-orange"]
+			[".jsb", "auto-maroon"]
+			[".jsm", "auto-blue"]
+			[".jss", "auto-green"]
+			[".es6", "auto-yellow"]
+			[".es", "auto-yellow"]
+			[".mjs", "auto-blue"]
+			[".sjs", "auto-pink"]
+			[".ssjs", "auto-red"]
+			[".xsjs", "auto-purple"]
+			[".xsjslib", "auto-blue"]
+			[".dust", "auto-maroon"]
+			[".js.ecr", "medium-cyan", priority: 2]
+			[".js.erb", "medium-red", priority: 2]
+		]
+
+	Jenkins:
+		icon: "jenkins"
+		match: /^Jenkinsfile$/
+		colour: "auto-red"
+
+	Jinja:
+		icon: "jinja"
+		match: [
+			[".jinja", "dark-red", scope: "jinja", alias: /^(django|htmldjango|html\+django\/jinja|html\+jinja)$/i]
+			[".jinja2", "medium-red", alias: "jinja2"]
+		]
+
+	jQuery:
+		icon: "jquery"
+		priority: 2
+		match: /^jquery([-.](min|latest|\d\.\d+(\.\d+)?))*\.([jt]sx?|es6?|coffee|map)$/i
+		colour: "dark-blue"
+
+	"jQuery UI":
+		icon: "jqueryui"
+		priority: 2
+		match: /^jquery([-_.](ui[-_.](custom|dialog-?\w*)|effects)(\.[^.]*)?|[-.]?ui(-\d\.\d+(\.\d+)?)?(\.\w+)?)([-_.]?min|dev)?\.([jt]sx?|es6?|coffee|map|s?css|less|styl)$/i
+		colour: "dark-blue"
+
+	"JSON-LD":
+		icon: "jsonld"
+		match: ".jsonld"
+		colour: "medium-blue"
+
+	JSONiq:
+		icon: "sql"
+		scope: "jq"
+		match: ".jq"
+		colour: "medium-blue"
+
+	JSX:
+		icon: "jsx"
+		scope: "jsx"
+		match: ".jsx"
+		colour: "auto-blue"
+
+	Julia:
+		icon: "julia"
+		scope: "julia"
+		match: ".jl"
+		colour: "medium-purple"
+
+	"Jupyter Notebook":
+		icon: "jupyter"
+		match: [
+			[".ipynb", "dark-orange", scope: "ipynb", alias: /^(ipynb|(Jupyter|IPython)\s*Notebook)$/i]
+			[/^Notebook$/, "dark-cyan"]
+		]
+
+	Karma:
+		icon: "karma"
+		priority: 2
+		match: [
+			[/^karma\.conf\.js$/i, "medium-cyan"]
+			[/^karma\.conf\.coffee$/i, "medium-maroon"]
+		]
+
+	Keynote:
+		icon: "keynote"
+		match: [
+			[".keynote", "medium-blue"]
+			[".knt", "dark-blue"]
+		]
+
+	Kivy:
+		icon: "kivy"
+		scope: "kv"
+		match: ".kv"
+		colour: "dark-maroon"
+
+	KML:
+		icon: "earth"
+		match: ".kml"
+		colour: "medium-green"
+
+	Knockout:
+		icon: "knockout"
+		priority: 2
+		match: /^knockout[-.](\d+\.){3}(debug\.)?js$/i
+		colour: "medium-red"
+
+	Kotlin:
+		icon: "kotlin"
+		match: [
+			[".kt", "dark-blue", "kotlin"]
+			[".ktm", "medium-blue"]
+			[".kts", "medium-orange"]
+		]
+
+	KRL:
+		icon: "krl"
+		scope: "krl"
+		match: ".krl"
+		colour: "medium-blue"
+
+	LabVIEW:
+		icon: "labview"
+		match: ".lvproj"
+		colour: "dark-blue"
+
+	Laravel:
+		icon: "laravel"
+		scope: "php.blade"
+		match: ".blade.php"
+		colour: "medium-orange"
+
+	Lasso:
+		icon: "lasso"
+		match: [
+			[".lasso", "dark-blue", scope: "lasso", alias: "lassoscript"]
+			[".las", "dark-blue"]
+			[".lasso8", "medium-blue"]
+			[".lasso9", "medium-purple"]
+			[".ldml", "medium-red"]
+		]
+
+	Leaflet:
+		icon: "leaflet"
+		priority: 2
+		match: /^leaflet\.(draw-src|draw|spin|coordinates-(\d+\.)\d+\.\d+\.src)\.(js|css)$|^wicket-leaflet\.js$/i
+		colour: "medium-green"
+
+	Lean:
+		icon: "lean"
+		match: [
+			[".lean", "dark-purple", "lean"]
+			[".hlean", "dark-red"]
+		]
+
+	Leiningen:
+		icon: "lein"
+		priority: 2
+		match: "project.clj"
+
+	LFE:
+		icon: "lfe"
+		match: ".lfe"
+		colour: "dark-red"
+
+	LightWave3D:
+		icon: "lightwave"
+		match: [
+			[".lwo", "medium-red"]
+			[".lws", "medium-blue"]
+		]
+
+	Lisp:
+		icon: "lisp"
+		match: [
+			[".lsp", "medium-red", "newlisp"]
+			[".lisp", "dark-red", "lisp"]
+			[".l", "medium-maroon", interpreter: /picolisp|pil/]
+			[".nl", "medium-maroon"]
+			[".ny", "medium-blue"]
+			[".podsl", "medium-purple"]
+			[".sexp", "medium-blue"]
+		]
+
+	LiveScript:
+		icon: "ls"
+		match: [
+			[".ls", "medium-blue", scope: "livescript", alias: /^(ls|live-script)$/i]
+			["._ls", "dark-blue"]
+			[/^Slakefile$/, "medium-green"]
+		]
+
+	LLVM:
+		icon: "llvm"
+		match: [
+			[".ll", "dark-green", "llvm"]
+			[".clang-format", "auto-yellow"]
+		]
+
+	Logos:
+		icon: "mobile"
+		match: [
+			[".xm", "dark-blue", "logos"]
+			[".xi", "dark-red"]
+		]
+
+	Logtalk:
+		icon: "logtalk"
+		scope: "logtalk"
+		match: /\.(logtalk|lgt)$/i
+		colour: "medium-red"
+
+	LookML:
+		icon: "lookml"
+		match: ".lookml"
+		colour: "medium-purple"
+
+	LSL:
+		icon: "lsl"
+		match: [
+			[".lsl", "medium-cyan", "lsl"]
+			[".lslp", "dark-cyan"]
+		]
+
+	Lua:
+		icon: "lua"
+		match: [
+			[".lua", "medium-blue", "lua"]
+			[".pd_lua", "dark-blue"]
+			[".rbxs", "dark-purple"]
+			[".wlua", "dark-red"]
+		]
+
+	Makefile: # (Or similar build systems)
+		icon: "checklist"
+		match: [
+			[/^Makefile/, "medium-yellow", scope: "makefile", alias: /^(bsdmake|make|mf)$/i, interpreter: "make"]
+			[/\.(mk|mak|make)$/i, "medium-yellow"]
+			[/^BSDmakefile$/i, "medium-red"]
+			[/^GNUmakefile$/i, "medium-green"]
+			[/^Kbuild$/, "medium-blue"]
+			[/^makefile$/, "medium-yellow"]
+			[/^mkfile$/i, "medium-yellow"]
+			[".am", "medium-red"]
+			[".bb", "dark-blue"]
+			[/^DEPS$/, "dark-blue"]
+			[".mms", "medium-blue"]
+			[".mmk", "light-blue"]
+			[".pri", "dark-purple"]
+		]
+
+	Mako:
+		icon: "mako"
+		scope: "mako"
+		match: /\.mak?o$/i
+		colour: "dark-blue"
+
+	"Manual Page":
+		icon: "manpage"
+		match: [
+			[/\.(1([bcmsx]|has|in)?|[24568]|3(avl|bsm|3c|in|m|qt|x)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|n|nroff|pic|tmac|tmac-u|tr|troff)$/i, "dark-green"
+				scope: /\.[gt]?roff$/i
+				alias: /^([gtn]?roff|manpage)$/i
+				interpreter: /man|mandoc|([gnt]|dit)roff/i]
+			[/\.(rnh|rno|roff|run|runoff)$/i, "dark-maroon", "runoff"]
+			[/^tmac\.|^(mmn|mmt)$/i, "dark-green", priority: 2]
+		]
+
+	Mapbox:
+		icon: "mapbox"
+		scope: "mss"
+		alias: /^Carto(CSS)?$/i
+		match: ".mss"
+		colour: "medium-cyan"
+
+	Markdown:
+		icon: "markdown"
+		scope: "gfm"
+		match: /\.(md|mdown|markdown|mkd|mkdown|mkdn|rmd|ron)$/i
+		colour: "medium-blue"
+
+	Marko:
+		icon: "marko"
+		priority: 2
+		match: [
+			[".marko", "medium-blue", "marko"]
+			[".marko.js", "medium-maroon"]
+		]
+
+	Materialize:
+		icon: "materialize"
+		priority: 2
+		match: /^materialize(\.min)?\.(js|css)$/i
+		colour: "light-red"
+
+	Mathematica:
+		icon: "mathematica"
+		match: [
+			[".mathematica", "dark-red", scope: "mathematica", alias: "mma"]
+			[".cdf", "medium-red"]
+			[".ma", "medium-orange"]
+			[".mt", "medium-maroon"]
+			[".nb", "dark-orange"]
+			[".nbp", "dark-red"]
+			[".wl", "medium-yellow"]
+			[".wlt", "dark-yellow"]
+		]
+
+	MathJax:
+		icon: "mathjax"
+		priority: 2
+		match: /^MathJax[^.]*\.js$/i
+		colour: "dark-green"
+
+	MATLAB:
+		icon: "matlab"
+		scope: "matlab"
+		alias: "octave"
+		match: ".matlab"
+		colour: "medium-yellow"
+
+	Max:
+		icon: "max"
+		match: [
+			[".maxpat", "dark-purple"]
+			[".maxhelp", "medium-red"]
+			[".maxproj", "medium-blue"]
+			[".mxt", "medium-purple"]
+			[".pat", "medium-green"]
+		]
+
+	MAXScript: # Or 3DSMax-specific files
+		icon: "maxscript"
+		match: [
+			[".ms", "dark-blue", scope: "maxscript"]
+			[".mcr", "dark-purple"]
+			[".mce", "medium-red"]
+			[".max", "dark-cyan"]
+			[".3ds", "medium-cyan"]
+		]
+
+	Maya:
+		icon: "maya"
+		match: [
+			[".mb", "dark-cyan"]
+			[".mel", "dark-blue"]
+			[/\.mcf[ip]$/i, "dark-purple"]
+		]
+
+	MediaWiki:
+		icon: "mediawiki"
+		match: [
+			[".mediawiki", "medium-yellow", "mediawiki"]
+			[".wiki", "medium-orange"]
+		]
+
+	"Mention-bot config":
+		icon: "bullhorn"
+		match: /^\.mention-bot$/i
+		colour: "medium-orange"
+
+	Mercury:
+		icon: "mercury"
+		scope: "mercury"
+		interpreter: "mmi"
+		match: ".moo"
+		colour: "medium-cyan"
+
+	Metal:
+		icon: "metal"
+		match: ".metal"
+		colour: "dark-cyan"
+
+	"Microsoft Access":
+		icon: "access"
+		match: [
+			[".accda", "dark-maroon"]
+			[".accdb", "medium-maroon"]
+			[".accde", "medium-green"]
+			[".accdr", "medium-red"]
+			[".accdt", "dark-red"]
+			[".adn", "light-maroon"]
+			[".laccdb", "light-maroon"]
+			[".mdw", "dark-purple"]
+		]
+
+	"Microsoft Excel":
+		icon: "excel"
+		match: [
+			[".xls", "dark-orange"]
+			[".xlsx", "dark-green"]
+			[".xlsm", "medium-green"]
+			[".xlsb", "medium-red"]
+			[".xlt", "dark-cyan"]
+		]
+
+	"Microsoft OneNote":
+		icon: "onenote"
+		match: ".one"
+		colour: "dark-purple"
+
+	"Microsoft PowerPoint":
+		icon: "powerpoint"
+		match: [
+			[".pps", "dark-red"]
+			[".ppsx", "medium-orange"]
+			[".ppt", "dark-orange"]
+			[".pptx", "medium-red"]
+			[".potm", "medium-maroon"]
+		]
+
+	"Microsoft Word":
+		icon: "word"
+		match: [
+			[".doc", "medium-blue"]
+			[".docx", "dark-blue"]
+			[".docm", "medium-maroon"]
+			[".docxml", "dark-cyan"]
+			[".dotm", "dark-maroon"]
+			[".dotx", "medium-cyan"]
+			[".wri", "medium-orange"]
+		]
+
+	Minecraft:
+		icon: "minecraft"
+		scope: "forge-config"
+		match: /^mcmod\.info$/i
+		colour: "dark-green"
+
+	Mirah:
+		icon: "mirah"
+		match: [
+			[/\.dr?uby$/g, "medium-blue", "mirah"]
+			[/\.mir(ah)?$/g, "light-blue"]
+		]
+
+	Mocha:
+		icon: "mocha"
+		priority: 2
+		match: [
+			[/^mocha\.([jt]sx?|es6?|coffee)$/i, "medium-maroon"]
+			[/^mocha\.(s?css|less|styl)$/i, "medium-red"]
+			["mocha.opts", "light-maroon", priority: 2]
+		]
+
+	Model: # Or generic 3D asset
+		icon: "model"
+		generic: true
+		match: [
+			[".obj", "medium-red", scope: "wavefront.obj"]
+			[".mtl", "dark-blue",  scope: "wavefront.mtl"]
+			[".stl", "dark-green"]
+			[".u3d", "medium-orange"]
+		]
+
+	Modelica:
+		icon: "circle"
+		scope: /\.modelica(script)?$/i
+		match: ".mo"
+		colour: "light-red"
+
+	Modernizr:
+		icon: "modernizr"
+		priority: 2
+		match: /^modernizr([-\.]custom|-\d\.\d+)(\.\d+)?\.js$/i
+		colour: "medium-red"
+
+	"Modula-2":
+		icon: "modula2"
+		match: [
+			[".mod", "medium-blue", scope: /(^|\.)modula-?2(\.|$)/i]
+			[".def", "medium-green"]
+			[".m2", "medium-red"]
+		]
+
+	Monkey:
+		icon: "monkey"
+		scope: "monkey"
+		match: ".monkey"
+		colour: "medium-maroon"
+
+	MoonScript:
+		icon: "moon"
+		scope: "moon"
+		interpreter: "moon"
+		match: ".moon"
+		colour: "medium-yellow"
+
+	MooTools:
+		icon: "mootools"
+		priority: 2
+		match: /^mootools[^.]*\d+\.\d+(.\d+)?[^.]*\.js$/i
+		colour: "medium-purple"
+
+	mruby:
+		icon: "mruby"
+		match: ".mrb"
+		colour: "medium-red"
+		interpreter: "mruby"
+
+	mSQL:
+		icon: "msql"
+		match: ".dsql"
+		colour: "medium-purple"
+
+	MuPAD:
+		icon: "mupad"
+		match: ".mu"
+		colour: "medium-red"
+
+	Music:
+		icon: "music"
+		generic: true
+		match: [
+			[".chord", "medium-orange"]
+			[/\.midi?$/i, "dark-blue", signature: /^MThd/]
+
+			# LilyPond
+			[".ly", "medium-green", scope: /\.(At)?lilypond-/i, alias: /^Lily\s*Pond$/i]
+			[".ily", "dark-green"]
+
+			# Pure Data
+			[".pd", "dark-red"]
+		]
+
+	Mustache: # (Or Handlebars)
+		icon: "mustache"
+		scope: /(^|\.)(mustache|handlebars)(\.|$)/i
+		alias: /^(hbs|htmlbars|handlebars)$/i
+		match: /\.(hbs|handlebars|mustache)$/i
+		colour: "medium-orange"
+
+	NAnt:
+		icon: "nant"
+		scope: "nant-build"
+		match: ".build"
+		colour: "medium-orange"
+
+	"NCAR Command Language (NCL)":
+		icon: "earth"
+		scope: "ncl"
+		match: ".ncl"
+		colour: "medium-green"
+
+	Neko:
+		icon: "neko"
+		match: [
+			[".neko", "medium-orange", "neko"]
+			[/^run\.n$/, "dark-orange", priority: 2]
+		]
+
+	NetLinx:
+		icon: "amx"
+		match: [
+			[".axs", "medium-blue"]
+			[".axi", "dark-blue"]
+		]
+
+	NetLogo:
+		icon: "netlogo"
+		match: ".nlogo"
+		colour: "medium-red"
+
+	NewRelic:
+		icon: "newrelic"
+		priority: 2
+		match: /^newrelic\.yml/i
+		colour: "medium-cyan"
+
+	NGINX:
+		icon: "nginx"
+		priority: 2
+		match: [
+			[/^nginx\.conf$/i, "dark-green"]
+			[".nginxconf", "medium-green", scope: "nginx", alias: "nginx configuration file"]
+		]
+
+	Nib:
+		icon: "nib"
+		match: ".nib"
+		colour: "dark-orange"
+
+	Nimrod:
+		icon: "nimrod"
+		scope: "nim"
+		match: /\.nim(rod)?$/i
+		colour: "medium-green"
+
+	Ninja:
+		icon: "shuriken"
+		match: [
+			[".ninja", "medium-blue", "ninja"]
+			[".ninja.d", "dark-cyan", priority: 2]
+		]
+
+	Nit:
+		icon: "nit"
+		scope: "nit"
+		match: ".nit"
+		colour: "dark-green"
+
+	Nix:
+		icon: "nix"
+		scope: "nix"
+		alias: "nixos"
+		match: ".nix"
+		colour: "medium-cyan"
+
+	Nmap:
+		icon: "nmap"
+		scope: "nmap"
+		match: ".nse"
+		colour: "dark-blue"
+
+	NodeJS:
+		icon: "node"
+		match: [
+			[".njs", "medium-green"]
+			[".nvmrc", "medium-green"]
+			[".node-version", "dark-green"]
+		]
+
+	Nodemon:
+		icon: "nodemon"
+		priority: 2
+		match: /^nodemon\.json$|^\.nodemonignore$/i
+		colour: "medium-green"
+
+	Normalize:
+		icon: "normalize"
+		priority: 2
+		match: /^normalize\.(css|less|scss|styl)$/i
+		colour: "medium-red"
+
+	NPM:
+		icon: "npm"
+		priority: 2
+		match: /^(package\.json|\.npmignore|\.?npmrc|npm-debug\.log|npm-shrinkwrap\.json)$/i
+		colour: "medium-red"
+
+	NSIS:
+		icon: "nsis"
+		match: [
+			[".nsi", "medium-purple", "nsis"]
+			[".nsh", "dark-cyan"]
+		]
+
+	Nu:
+		icon: "recycle"
+		match: [
+			[".nu", "light-green", scope: "nu", alias: "nush", interpreter: "nush"]
+			[/^Nukefile$/, "dark-green"]
+		]
+
+	NuGet:
+		icon: "nuget"
+		match: [
+			[".nuspec", "medium-blue"]
+			[".pkgproj", "dark-purple"]
+		]
+
+	NumPy:
+		icon: "numpy"
+		match: [
+			[".numpy", "dark-blue"]
+			[".numpyw", "medium-blue"]
+			[".numsc", "medium-orange"]
+		]
+
+	Nunjucks:
+		icon: "nunjucks"
+		match: /\.(nunjucks|njk)$/i
+		colour: "dark-green"
+
+	"Objective-C":
+		icon: "objc"
+		match: [
+			[/\.mm?$/i, "medium-blue", scope: /\.objc(pp)?$/i, alias: /^(Obj-?C|ObjectiveC)(\+\+)?$/i]
+			[".pch", "dark-red"]
+			[".x", "dark-green"]
+		]
+
+	"Objective-J":
+		icon: "objj"
+		match: [
+			[".j", "dark-orange", scope: "objj", alias: /^(Obj-?J|ObjectiveJ)$/i]
+			[".sj", "dark-red"]
+		]
+
+	OCaml:
+		icon: "ocaml"
+		match: [
+			[".ml", "medium-orange", scope: "ocaml", interpreter: /ocaml(run|script)?/]
+			[".mli", "dark-orange"]
+			[".eliom", "medium-red"]
+			[".eliomi", "dark-red"]
+			[".ml4", "medium-green"]
+			[".mll", "dark-green", "ocamllex"]
+			[".mly", "dark-yellow", "menhir"]
+		]
+
+	OOC:
+		icon: "ooc"
+		scope: "ooc"
+		match: ".ooc"
+		colour: "medium-green"
+
+	Opa:
+		icon: "opa"
+		scope: "opa"
+		match: ".opa"
+		colour: "medium-blue"
+
+	OpenCL:
+		icon: "opencl"
+		scope: "opencl"
+		match: ".opencl"
+		colour: "medium-red"
+
+	"OpenEdge ABL":
+		icon: "progress"
+		scope: "abl"
+		alias: /^(progress|openedge|abl)$/i
+		match: ".p"
+		colour: "medium-red"
+
+	OpenOffice:
+		icon: "openoffice"
+		match: [
+			[".odt", "medium-blue"]
+			[".ott", "dark-blue"]
+			[".fodt", "dark-purple"]
+			[".ods", "medium-green"]
+			[".ots", "dark-green"]
+			[".fods", "dark-cyan"]
+			[".odp", "medium-purple"]
+			[".otp", "dark-pink"]
+			[".fodp", "medium-pink"]
+			[".odg", "medium-red"]
+			[".otg", "dark-red"]
+			[".fodg", "dark-orange"]
+			[".odf", "medium-maroon"]
+			[".odb", "light-pink"]
+		]
+
+	OpenSCAD:
+		icon: "scad"
+		match: [
+			[".scad", "medium-orange", scope: "scad"]
+			[".jscad", "medium-yellow"]
+		]
+
+	"Org-mode":
+		icon: "org"
+		match: ".org"
+		colour: "dark-green"
+
+	"OS X":
+		icon: "osx"
+		match: ".dmg"
+		colour: "medium-red"
+		signature: /^\x78\x01\x73\x0D\x62\x62\x60/
+
+	Ox:
+		icon: "ox"
+		match: [
+			[".ox", "auto-cyan", scope: "ox"]
+			[".oxh", "auto-green"]
+			[".oxo", "auto-blue"]
+		]
+
+	Oxygene:
+		icon: "oxygene"
+		scope: "oxygene"
+		match: ".oxygene"
+		colour: "auto-cyan"
+
+	Oz:
+		icon: "oz"
+		scope: "oz"
+		match: ".oz"
+		colour: "medium-yellow"
+
+	Pan:
+		icon: "pan"
+		match: ".pan"
+		colour: "medium-red"
+
+	Papyrus:
+		icon: "papyrus"
+		scope: /(^|\.)(papyrus\.skyrim|compiled-?papyrus|papyrus-assembly)(\.|$)/i
+		match: ".psc"
+		colour: "medium-green"
+
+	Parrot:
+		icon: "parrot"
+		match: [
+			[".parrot", "medium-green", interpreter: "parrot"]
+			[".pasm", "dark-green", scope: "parrot.pasm", alias: "pasm"]
+			[".pir",  "dark-blue",  scope: "parrot.pir",  alias: "pir"]
+		]
+
+	Pascal:
+		icon: "pascal"
+		match: [
+			[/\.pas(cal)?$/i, "medium-purple", scope: "pascal", interpreter: /pascal|instantfpc/]
+			[".dfm", "medium-blue"]
+			[".dpr", "dark-blue"]
+			[".lpr", "dark-purple"]
+		]
+
+	Patch:
+		icon: "patch"
+		match: ".patch"
+		colour: "medium-green"
+
+	PAWN:
+		icon: "pawn"
+		scope: "pwn"
+		match: ".pwn"
+		colour: "medium-orange"
+
+	PDF:
+		icon: "icon-file-pdf"
+		noSuffix: true
+		match: ".pdf"
+		colour: "medium-red"
+		signature: /^%PDF/
+
+	Perl:
+		icon: "perl"
+		match: [
+			[/\.p(er)?l$/i, "medium-blue", "perl"]
+			[".ph", "dark-purple"]
+			[".plx", "medium-purple"]
+			[".pm", "dark-blue"]
+			[".t", "medium-blue"]
+			[/\.(psgi|xs)$/i, "medium-red"]
+		]
+
+	Perl6:
+		icon: "perl6"
+		match: [
+			[".pl6", "medium-purple", scope: /(^|\.)perl6(fe)?(?=\.|$)/, alias: /^(pl6|Perl\s*6)$/i, interpreter: "perl6"]
+			[/\.[tp]6$|\.6pl$/i, "light-blue"]
+			[/\.(pm6|p6m)$/i, "dark-pink"]
+			[".6pm", "dark-cyan"]
+			[".nqp", "dark-purple"]
+			[".p6l", "medium-blue"]
+			[".pod6", "dark-green"]
+			[/^Rexfile$/, "medium-green"]
+		]
+
+	Phalcon:
+		icon: "phalcon"
+		scope: "volt"
+		match: ".volt"
+		colour: "medium-cyan"
+
+	PHP:
+		icon: "php"
+		match: [
+			[/\.php([st\d]|_cs)?$/i, "dark-blue", interpreter: "php", scope: "php", signature: /^<\?php/]
+			[/^Phakefile/, "dark-green"]
+		]
+
+	Pickle:
+		icon: "pickle"
+		match: ".pkl"
+		colour: "dark-cyan"
+
+	Pike:
+		icon: "pike"
+		match: [
+			[".pike", "dark-cyan", interpreter: "pike"]
+			[".pmod", "medium-blue"]
+		]
+
+	PLSQL:
+		icon: "sql"
+		scope: /\.plsql(\.oracle)?(\.|$)/i
+		match: /\.(pls|pck|pks|plb|plsql|pkb)$/i
+		colour: "medium-red"
+
+	POD:
+		icon: "pod"
+		match: ".pod"
+		colour: "dark-blue"
+
+	PogoScript:
+		icon: "pogo"
+		scope: "pogoscript"
+		match: ".pogo"
+		colour: "auto-orange"
+
+	Pony:
+		icon: "pony"
+		scope: "pony"
+		match: ".pony"
+		colour: "light-maroon"
+
+	PostCSS:
+		icon: "postcss"
+		match: [
+			[/\.p(ost)?css$/i, "dark-red", "postcss"]
+			[/\.sss$/i, "dark-pink", "sugarss"]
+			[".postcssrc", "auto-orange"]
+			[/\bpostcss\.config\.js$/i, "auto-yellow", priority: 2]
+		]
+
+	PostScript:
+		icon: "postscript"
+		match: [
+			[".ps", "medium-red", scope: "postscript", alias: "postscr", signature: /^%!PS/]
+			[".eps", "medium-orange"]
+			[".pfa", "dark-blue"]
+			[".pfb", "dark-maroon"]
+			[".afm", "medium-green"]
+		]
+
+	"POV-Ray SDL":
+		icon: "povray"
+		match: ".pov"
+		colour: "dark-blue"
+
+	PowerBuilder:
+		icon: "powerbuilder"
+		match: [
+			[".pbl", "medium-blue"]
+			[".pbt", "dark-blue"]
+			[".srw", "medium-red"]
+			[".sru", "medium-orange"]
+			[".srp", "medium-maroon"]
+			[".sra", "medium-blue"]
+			[".srj", "medium-purple"]
+		]
+
+	PowerShell:
+		icon: "powershell"
+		match: [
+			[".ps1", "medium-blue", scope: "powershell", alias: "posh"]
+			[".psd1", "dark-blue"]
+			[".psm1", "medium-purple"]
+			[".ps1xml", "dark-purple"]
+		]
+
+	Print:
+		icon: "print"
+		match: ".ppd"
+		colour: "dark-cyan"
+
+	Processing:
+		icon: "processing"
+		scope: "processing"
+		match: ".pde"
+		colour: "dark-blue"
+
+	Prolog:
+		icon: "prolog"
+		match: [
+			[".pro", "medium-blue", scope: "prolog", interpreter: "swipl"]
+			[".prolog", "medium-cyan"]
+			[".yap", "medium-purple", interpreter: "yap"]
+		]
+
+	"Propeller Spin":
+		icon: "propeller"
+		scope: "spin"
+		match: ".spin"
+		colour: "medium-orange"
+
+	Protractor:
+		icon: "protractor"
+		priority: 2
+		match: /^protractor\.conf\./i
+		colour: "medium-red"
+
+	Pug:
+		icon: "pug"
+		match: [
+			[".pug", "medium-red", scope: "pug"]
+			[/^\.pug-lintrc/i, "medium-orange", priority: 2]
+		]
+
+	Puppet:
+		icon: "puppet"
+		match: [
+			[".pp", "medium-purple", "puppet"]
+			["Modulefile", "dark-blue"]
+		]
+
+	PureBasic:
+		icon: "purebasic"
+		match: [
+			[".pb", "medium-red", "purebasic"]
+			[".pbi", "dark-orange"]
+		]
+
+	PureScript:
+		icon: "purescript"
+		scope: "purescript"
+		match: ".purs"
+		colour: "dark-purple"
+
+	Python:
+		icon: "python"
+		match: [
+			[".py", "dark-blue", scope: "python", alias: "rusthon", interpreter: /python[\d.]*/]
+			[".bzl", "dark-blue"]
+			[".ipy", "medium-blue"]
+			[".isolate", "dark-green"]
+			[".pep", "medium-orange", "pep8"]
+			[".gyp", "medium-green"]
+			[".gypi", "dark-green"]
+			[".pyde", "medium-orange"]
+			[".pyp", "dark-purple"]
+			[".pyt", "dark-green"]
+			[".py3", "dark-blue"]
+			[".pyw", "medium-maroon"]
+			[".tac", "dark-pink"]
+			[".wsgi", "dark-red"]
+			[".xpy", "auto-yellow"]
+			[".rpy", "medium-pink", scope: "renpy", alias: /^Ren'?Py$/i]
+			[/\.?(pypirc|pythonrc|python-venv)$/i, "dark-blue"]
+			[/^(BUCK|BUILD|SConstruct|SConscript)$/, "dark-green"]
+			[/^(Snakefile|WATCHLISTS)$/, "medium-green"]
+			[/^wscript$/, "dark-maroon"]
+		]
+
+	R:
+		icon: "r"
+		scope: "r"
+		alias: /^(Rscript|splus|Rlang)$/i
+		interpreter: "Rscript"
+		match: /\.(r|Rprofile|rsx|rd)$/i
+		colour: "medium-blue"
+
+	Racket:
+		icon: "racket"
+		match: [
+			[".rkt", "medium-red", "racket"]
+			[".rktd", "medium-blue"]
+			[".rktl", "light-red"]
+			[".scrbl", "dark-blue", "scribble"]
+		]
+
+	RAML:
+		icon: "raml"
+		scope: "raml"
+		match: ".raml"
+		colour: "medium-cyan"
+
+	Raphael:
+		icon: "raphael"
+		priority: 2
+		match: /^raphael(\.min|\.no-deps)*\.js$/i
+		colour: "medium-orange"
+
+	Rascal:
+		icon: "rascal"
+		scope: "rascal"
+		match: ".rsc"
+		colour: "medium-yellow"
+
+	RDoc:
+		icon: "rdoc"
+		scope: "rdoc"
+		match: ".rdoc"
+		colour: "medium-red"
+
+	React:
+		icon: "react"
+		priority: 2
+		match: [
+			[/^react(-[^.]*)?\.js$/i, "dark-blue"]
+			[".react.js", "auto-blue"]
+		]
+
+	Readme:
+		icon: "book"
+		match: [
+			[/^README(\b|_)|^(licen[sc]es?|(read|readme|click|delete|keep|test)\.me)$|\.(readme|1st)$/i, "medium-blue", priority: 2]
+			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copying|hacking|history|install|maintainers|manifest|more\.stuff|projects|revision|terms|thanks)$/i, "dark-blue", priority: 2]
+			[/\b(changelog|copying(v?\d)?|install|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
+			[/^news([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
+		]
+
+	REALbasic:
+		icon: "xojo"
+		match: [
+			[".rbbas", "medium-green"]
+			[".rbfrm", "dark-green"]
+			[".rbmnu", "dark-cyan"]
+			[".rbres", "medium-cyan"]
+			[".rbtbar", "medium-blue"]
+			[".rbuistate", "dark-blue"]
+		]
+
+	Reason:
+		icon: "reason"
+		match: [
+			[".re", "medium-red", "reason"]
+			[".rei", "medium-orange"]
+		]
+
+	Rebol:
+		icon: "rebol"
+		match: [
+			[/\.reb(ol)?$/i, "dark-green", "rebol"]
+			[".r2", "dark-red"]
+			[".r3", "dark-blue"]
+		]
+
+	Red:
+		icon: "red"
+		match: [
+			[".red", "medium-red", scope: "red", alias: "red/system"]
+			[".reds", "light-red"]
+		]
+
+	"Red Hat":
+		icon: "red-hat"
+		match: [
+			[".rpm", "medium-red"]
+			[".spec", "dark-red"]
+		]
+
+	RegExp:
+		icon: "regex"
+		match: /\.regexp?$/i
+		colour: "medium-green"
+		scope: /(\.|^)regexp?(\.|$)/i
+
+	RenderScript:
+		icon: "android"
+		match: ".rsh"
+		colour: "dark-maroon"
+
+	RequireJS:
+		icon: "requirejs"
+		priority: 2
+		match: /^require([-.]min|dev)?\.js$/i
+		colour: "medium-blue"
+
+	reStructuredText:
+		icon: "rst"
+		scope: "restructuredtext"
+		alias: /^re?st$/i
+		match: /\.re?st(\.txt)?$/i
+		colour: "dark-blue"
+
+	REXX:
+		icon: "rexx"
+		match: [
+			[/\.rexx?$/i, "medium-red", scope: "rexx", interpreter: /rexx|regina/i]
+			[".pprx", "medium-blue"]
+		]
+
+	Riemann:
+		icon: "clojure"
+		priority: 2
+		match: /^riemann\.config$/i
+		colour: "auto-maroon"
+
+	RiotJS:
+		icon: "riot"
+		scope: "riot"
+		match: ".tag"
+		colour: "medium-red"
+
+	RobotFramework:
+		icon: "robot"
+		match: ".robot"
+		colour: "medium-purple"
+
+	Rollup:
+		icon: "rollup"
+		priority: 2
+		match: /^rollup\.config\./i
+		colour: "medium-red"
+
+	Rouge:
+		icon: "clojure"
+		match: ".rg"
+		colour: "medium-red"
+
+	RSS:
+		icon: "rss"
+		match: ".rss"
+		colour: "medium-orange"
+
+	Ruby:
+		icon: "ruby"
+		match: [
+			[/\.(rb|ru|ruby|erb|gemspec|god|mspec|pluginspec|podspec|rabl|rake|opal)$/i, "medium-red"
+				scope: "ruby"
+				alias: /^(rbx?|rake|jruby|macruby)$/i
+				interpreter: /(mac|j)?ruby|rake|rbx/]
+			[/^\.?(irbrc|gemrc|pryrc|rspec|ruby-(gemset|version))$/i, "medium-red"]
+			[/^(Appraisals|(Rake|Gem|[bB]uild|Berks|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(\.lock)?)$/, "medium-red"]
+			[/\.(jbuilder|rbuild|rb[wx]|builder)$/i, "dark-red"]
+			["_spec.rb", "light-green"]
+			[/^rails$/, "medium-red"]
+			[".watchr", "dark-yellow"]
+		]
+
+	Rust:
+		icon: "rust"
+		match: [
+			[".rs", "medium-maroon", "rust"]
+			[".rlib", "light-maroon"]
+		]
+
+	Sage:
+		icon: "sage"
+		match: [
+			[".sage", "medium-blue", "sage"]
+			[".sagews", "dark-blue"]
+		]
+
+	SaltStack:
+		icon: "saltstack"
+		scope: "salt"
+		alias: /^Salt(State)?$/i
+		match: ".sls"
+		colour: "auto-blue"
+
+	SAS:
+		icon: "sas"
+		scope: "sas"
+		match: ".sas"
+		colour: "medium-blue"
+
+	Sass:
+		icon: "sass"
+		match: [
+			[".scss", "light-pink", "scss"]
+			[".sass", "dark-pink", "sass"]
+		]
+
+	SBT:
+		icon: "sbt"
+		match: ".sbt"
+		colour: "dark-purple"
+
+	Scala:
+		icon: "scala"
+		scope: "scala"
+		interpreter: "scala"
+		match: /\.(sc|scala)$/i
+		colour: "medium-red"
+
+	Scheme:
+		icon: "scheme"
+		match: [
+			[".scm", "medium-red", scope: "scheme", interpreter: /guile|bigloo|chicken/]
+			[".sld", "medium-blue"]
+			[".sps", "medium-purple"]
+		]
+
+	Scilab:
+		icon: "scilab"
+		match: [
+			[".sci", "dark-purple", "scilab"]
+			[".sce", "dark-blue"]
+			[".tst", "dark-cyan"]
+		]
+
+	Scrutinizer:
+		icon: "scrutinizer"
+		priority: 2
+		match: ".scrutinizer.yml"
+		colour: "dark-blue"
+
+	Secret:
+		icon: "secret"
+		match: ".secret"
+
+	Self:
+		icon: "self"
+		scope: "self"
+		match: ".self"
+		colour: "dark-blue"
+
+	Sencha:
+		icon: "sencha"
+		priority: 2
+		match: /^sencha(\.min)?\.js$/i
+		colour: "light-green"
+
+	"Seperated-value files":
+		icon: "graph"
+		generic: true
+		match: [
+			[".csv", "light-red", scope: /(^|\.)csv(\.semicolon)?(\.|$)/i]
+			[/\.(tab|tsv)$/i, "light-green"]
+			[".dif", "medium-green"]
+			[".slk", "medium-cyan"]
+		]
+
+	"Service Fabric":
+		icon: "sf"
+		match: ".sfproj"
+		colour: "light-orange"
+
+	Shell:
+		icon: "terminal"
+		generic: true
+		match: [
+			[/\.(sh|rc|bats|bash|tool|install|command)$/i, "medium-purple"
+				scope: "shell"
+				alias: /^(sh|shell|Shell-?Script|Bash)$/i
+				interpreter: /bash|sh|zsh|rc/]
+			[/^(\.?bash(rc|[-_]?(profile|login|logout|history|prompt))|_osc|config|install-sh|PKGBUILD)$/i, "dark-purple"]
+			[".ksh", "dark-yellow"]
+			[".sh-session", "auto-yellow"
+				scope: "shell-session"
+				alias: /^(Bash|Shell|Sh)[-\s]*(Session|Console)$/i]
+			[/\.zsh(-theme|_history)?$|^\.?(antigen|zpreztorc|zlogin|zlogout|zprofile|zshenv|zshrc)$/i, "medium-blue"]
+			[/\.fish$|^\.fishrc$/i, "medium-green", "fish"]
+			[".inputrc", "medium-red"]
+			[".tmux", "medium-blue"]
+			[/^(configure|config\.(guess|rpath|status|sub)|depcomp|libtool|compile)$/, "medium-red"]
+			[/^\/(private\/)?etc\/([^/]+\/)*(profile$|nanorc$|rc\.|csh\.)/i, "dark-purple", matchPath: true]
+			[/rc/i, "medium-purple", priority: -1]
+			[".tcsh", "medium-green"]
+			[".csh", "medium-yellow"]
+		]
+
+	Shen:
+		icon: "shen"
+		match: ".shen"
+		colour: "dark-cyan"
+
+	Shopify:
+		icon: "shopify"
+		match: ".liquid"
+		colour: "medium-green"
+
+	Sigils:
+		icon: "sigils"
+		match: ".sigils"
+		colour: "dark-red"
+
+	SilverStripe:
+		icon: "silverstripe"
+		scope: /(^|\.)ss(template)?(\.|$)/i
+		match: ".ss"
+		colour: "medium-blue"
+
+	Sketch:
+		icon: "sketch"
+		match: ".sketch"
+		colour: "medium-orange"
+
+	Slash:
+		icon: "slash"
+		scope: "slash"
+		match: ".sl"
+		colour: "dark-blue"
+
+	Smali:
+		icon: "android"
+		scope: "smali"
+		match: ".smali"
+		colour: "medium-green"
+
+	Smarty:
+		icon: "smarty"
+		scope: "smarty"
+		match: ".tpl"
+		colour: "auto-yellow"
+
+	"Snap SVG":
+		icon: "snapsvg"
+		priority: 2
+		match: /^snap\.svg([-.]min)?\.js$/i
+		colour: "medium-cyan"
+
+	Snyk:
+		icon: "snyk"
+		match: ".snyk"
+		colour: "dark-purple"
+
+	SourcePawn:
+		icon: "clojure"
+		alias: "sourcemod"
+		match: /\.(sma|sp)$/i
+		colour: "auto-yellow"
+		scope: "sp"
+
+	"Source Map":
+		icon: "sourcemap"
+		priority: 2
+		match: [
+			[".css.map", "medium-blue"]
+			[".js.map", "auto-yellow"]
+		]
+
+	SPARQL:
+		icon: "sparql"
+		match: [
+			[".sparql", "medium-blue", scope: "rq"]
+			[".rq", "dark-blue"]
+		]
+
+	SQF:
+		icon: "sqf"
+		match: [
+			[".sqf", "dark-maroon", "sqf"]
+			[".hqf", "dark-red"]
+		]
+
+	SQL:
+		icon: "sql"
+		scope: "sql"
+		match: /\.(sql|ddl|udf|viw|db2|prc)$/i
+
+	SQLite:
+		icon: "sqlite"
+		match: [
+			[".sqlite", "medium-blue"]
+			[".sqlite3", "dark-blue"]
+			[".db", "medium-purple"]
+			[".db3", "dark-purple"]
+		]
+
+	Squirrel:
+		icon: "squirrel"
+		scope: "nut"
+		match: ".nut"
+		colour: "medium-maroon"
+
+	"SSH keys":
+		icon: "key"
+		match: [
+			[".pub", "medium-yellow"]
+			[".pem", "medium-orange"]
+			[".key", "medium-blue"]
+			[".crt", "medium-blue"]
+			[".der", "medium-purple"]
+			[/^id_rsa/, "medium-red"]
+			[/\.glyphs\d*License$/i, "medium-green"]
+			[/^(master\.)?passwd$/i, "dark-green"]
+			[/^git-credential-osxkeychain$/i, "medium-green"]
+		]
+
+	Stan:
+		icon: "stan"
+		scope: "stan"
+		match: ".stan"
+		colour: "medium-red"
+
+	Stata:
+		icon: "stata"
+		match: [
+			[".do", "medium-blue", "stata"]
+			[".ado", "dark-blue"]
+			[".doh", "light-blue"]
+			[".ihlp", "medium-cyan"]
+			[".mata", "dark-cyan", "mata"]
+			[".matah", "light-cyan"]
+			[".sthlp", "medium-purple"]
+		]
+
+	Storyist:
+		icon: "storyist"
+		match: ".story"
+		colour: "medium-blue"
+
+	Strings:
+		icon: "strings"
+		scope: "strings"
+		match: ".strings"
+		colour: "medium-red"
+
+	Stylelint:
+		icon: "stylelint"
+		priority: 2
+		match: [
+			[/^\.stylelintrc(\.|$)/i, "medium-purple"]
+			[/^stylelint\.config\.js$/i, "auto-yellow"]
+			[".stylelintignore", "dark-blue"]
+		]
+
+	Stylus:
+		icon: "stylus"
+		scope: "stylus"
+		match: ".styl"
+		colour: "medium-green"
+
+	"Sublime Text":
+		icon: "sublime"
+		match: [
+			[/\.(stTheme|sublime[-_](build|commands|completions|keymap|macro|menu|mousemap|project|settings|theme|workspace|metrics|session|snippet))$/i, "medium-orange"]
+			[".sublime-syntax", "dark-orange"]
+		]
+
+	SuperCollider:
+		icon: "scd"
+		scope: "supercollider"
+		interpreter: /sclang|scsynth/
+		match: ".scd"
+		colour: "medium-red"
+
+	SVG:
+		icon: "svg"
+		scope: "svg"
+		match: ".svg"
+		colour: "dark-yellow"
+
+	Swift:
+		icon: "swift"
+		scope: "swift"
+		match: ".swift"
+		colour: "medium-green"
+
+	SystemVerilog:
+		icon: "sysverilog"
+		match: [
+			[".sv", "auto-blue"]
+			[".svh", "auto-green"]
+			[".vh", "auto-cyan"]
+		]
+
+	"Table of Contents":
+		icon: "toc"
+		scope: "toc"
+		priority: 2
+		match: ".toc"
+		colour: "auto-cyan"
+
+	Tagfile: # CTags
+		icon: "tag"
+		match: [
+			[/\.?c?tags$/i, "medium-blue"]
+			[/\.gemtags/i, "medium-red"]
+		]
+
+	Tcl:
+		icon: "tcl"
+		match: [
+			[".tcl", "dark-orange", scope: "tcl", interpreter: /tclsh|wish/]
+			[".adp", "medium-orange"]
+			[".tm", "medium-red"]
+		]
+
+	Tea:
+		icon: "coffee"
+		scope: "tea"
+		match: ".tea"
+		colour: "medium-orange"
+
+	"Template Toolkit":
+		icon: "tt"
+		match: [
+			[/\.tt2?$/i, "medium-blue"]
+			[".tt3", "medium-purple"]
+		]
+
+	Tern:
+		icon: "tern"
+		match: ".tern-project"
+		colour: "medium-blue"
+
+	Terraform:
+		icon: "terraform"
+		scope: /\.terra(form)?$/i
+		match: /\.tf(vars)?$/i
+		colour: "dark-purple"
+
+	TeX:
+		icon: "tex"
+		match: [
+			[".tex", "auto-blue", scope: /(^|\.)latex(\.|$)/i, alias: "latex"]
+			[".ltx", "auto-blue"]
+			[".aux", "auto-green"]
+			[".sty", "auto-red", scope: /(^|\.)tex(\.|$)/i]
+			[".dtx", "auto-maroon"]
+			[".cls", "auto-orange"]
+			[".ins", "auto-green"]
+			[".lbx", "auto-blue"]
+			[".mkiv", "auto-orange"]
+			[".mkvi", "auto-orange"]
+			[".mkii", "auto-orange"]
+			[".texi", "auto-red"]
+		]
+
+	Text:
+		icon: "icon-file-text"
+		noSuffix: true
+		match: [
+			[/\.te?xt$/i, "medium-blue", signature: /^\xEF\xBB\xBF|^\xFF\xFE/]
+			[/\.log$|^Terminal[-_\s]Saved[-_\s]Output$/i, "medium-maroon"]
+			[/\.git[\/\\]description$/, "dark-red", matchPath: true]
+			[".err", "medium-red"]
+			[".rtf", "dark-red"]
+			[/\.i?nfo$/i, "dark-blue"]
+			[".ans", "dark-orange"]
+			[".etx", "medium-yellow"]
+			[".irclog", "medium-blue"]
+			[".msg", "medium-orange"]
+			[".no", "medium-red"]
+			[".srt", "medium-purple"]
+			[".sub", "dark-purple"]
+			[/^(bug-report|fdl|for-release|tests)$/i, "medium-red"]
+			[/\.(utxt|utf8)$/i, "medium-cyan"]
+			[".weechatlog", "medium-green"]
+			[".uof", "dark-red"]
+			[".uot", "medium-blue"]
+			[".uos", "medium-green"]
+			[".uop", "medium-purple"]
+		]
+
+	Textile:
+		icon: "textile"
+		scope: "textile"
+		match: ".textile"
+		colour: "medium-orange"
+
+	TextMate:
+		icon: "textmate"
+		match: [
+			[".tmcg", "dark-green"]
+			[".tmLanguage", "dark-purple"]
+			[".tmCommand", "medium-blue"]
+			[".tmPreferences", "dark-blue"]
+			[".tmSnippet", "dark-orange"]
+			[".tmTheme", "medium-pink"]
+			[".tmMacro", "medium-maroon"]
+			[".yaml-tmlanguage", "medium-orange"]
+			[".JSON-tmLanguage", "medium-purple"]
+		]
+
+	Thor:
+		icon: "thor"
+		match: [
+			[".thor", "medium-orange"]
+			[/^Thorfile$/i, "dark-orange"]
+		]
+
+	"TI-BASIC":
+		icon: "calc"
+		match: [
+			[/\.8xp(\.txt)?$/i, "medium-maroon", priority: 2]
+			[/\.8xk(\.txt)?$/i, "dark-red", priority: 2]
+		]
+
+	Travis:
+		icon: "travis"
+		priority: 2
+		match: /^\.travis/i
+		colour: "medium-red"
+
+	TSX: # React/Typescript
+		icon: "tsx"
+		scope: "tsx"
+		match: ".tsx"
+		colour: "light-blue"
+
+	Turing:
+		icon: "turing"
+		scope: "turing"
+		match: ".tu"
+		colour: "medium-red"
+
+	Twig:
+		icon: "twig"
+		scope: "twig"
+		match: ".twig"
+		colour: "medium-green"
+
+	TXL:
+		icon: "txl"
+		scope: "txl"
+		match: ".txl"
+		colour: "medium-orange"
+
+	TypeDoc:
+		icon: "typedoc"
+		priority: 2
+		match: /^typedoc\.json$/i
+		colour: "dark-purple"
+
+	TypeScript:
+		icon: "ts"
+		scope: "ts"
+		alias: /^(ts|Type[-\s]*Script)$/i
+		match: ".ts"
+		colour: "medium-blue"
+
+	Typings:
+		icon: "typings"
+		priority: 2
+		match: /^typings\.json$/i
+		colour: "medium-maroon"
+
+	UIKit:
+		icon: "uikit"
+		priority: 2
+		match: /^uikit(\.min)?\.js$/i
+		colour: "medium-blue"
+
+	Unity3D:
+		icon: "unity3d"
+		match: [
+			[".anim", "dark-blue", "shaderlab"]
+			[".asset", "dark-green"]
+			[".mat", "medium-red"]
+			[".meta", "dark-red"]
+			[".prefab", "dark-cyan"]
+			[".unity", "medium-blue"]
+			[".unityproj", "medium-maroon"]
+		]
+
+	Uno:
+		icon: "uno"
+		match: ".uno"
+		colour: "dark-blue"
+
+	UnrealScript:
+		icon: "unreal"
+		scope: "uc"
+		match: ".uc"
+
+	URL:
+		icon: "link"
+		match: ".url"
+		colour: "dark-blue"
+
+	UrWeb:
+		icon: "urweb"
+		match: [
+			[".ur", "medium-maroon", scope: "ur", alias: /^Ur(\/Web)?$/i]
+			[".urs", "dark-blue"]
+		]
+
+	V8:
+		icon: "v8"
+		match: /^([dv]8|v8[-_.][^.]*|mksnapshot|mkpeephole)$/i
+		colour: "medium-blue"
+		priority: 0
+
+	Vagrant:
+		icon: "vagrant"
+		match: /^Vagrantfile$/i
+		colour: "medium-cyan"
+
+	Vala:
+		icon: "gnome"
+		match: [
+			[".vala", "medium-purple", "vala"]
+			[".vapi", "dark-purple"]
+		]
+
+	VCL: # (Varnish Configuration Language)
+		icon: "varnish"
+		scope: /(^|\.)(varnish|vcl)(\.|$)/i
+		match: ".vcl"
+		colour: "dark-blue"
+
+	Verilog:
+		icon: "verilog"
+		match: [
+			[".v", "dark-green", "verilog"]
+			[".veo", "medium-red"]
+		]
+
+	VHDL:
+		icon: "vhdl"
+		match: [
+			[".vhdl", "dark-green", "vhdl"]
+			[".vhd", "medium-green"]
+			[".vhf", "dark-blue"]
+			[".vhi", "medium-blue"]
+			[".vho", "dark-purple"]
+			[".vhs", "medium-purple"]
+			[".vht", "dark-red"]
+			[".vhw", "dark-orange"]
+		]
+
+	Videos:
+		icon: "video"
+		match: [
+			[/\.3gpp?$/i, "medium-blue", signature: /^.{4}ftyp3g/]
+			[".avi", "medium-blue", signature: /^MLVI/]
+			[".mp4", "dark-blue"]
+			[".mov", "medium-cyan"]
+			[".mkv", "medium-purple"]
+			[".h264", "dark-green"]
+			[".webm", "dark-blue", signature: /^\x1A\x45\xDF\xA3/]
+			[".wmv", "dark-purple"]
+			[".ogv", "dark-orange"]
+			[".ogg", "medium-orange", signature: /^OggS/]
+			[".m4v", "dark-yellow"]
+			[".mpg", "dark-red"]
+			[".mpeg", "medium-red"]
+			[".ogm", "dark-red"]
+		]
+
+	Vim:
+		icon: "vim"
+		match: [
+			[/\.(vim|n?vimrc)$/i, "medium-green", scope: "viml", alias: /^(VimL?|NVim|Vim\s*Script)$/i, interpreter: /Vim?/i]
+			[/^[gn_]?vim(rc|info)$/i, "dark-green"]
+		]
+
+	"Visual Studio":
+		icon: "vs"
+		match: [
+			[/\.(vba?|fr[mx]|bas)$/i, "medium-blue", scope: "vbnet", alias: /^vb\.?net$/i]
+			[".vbhtml", "medium-red"]
+			[".vbs", "medium-green"]
+			[".csproj", "dark-blue"]
+			[".vbproj", "dark-red"]
+			[/\.vcx?proj$/i, "dark-purple"]
+			[".vssettings", "dark-green"]
+			[".builds", "medium-maroon"]
+			[".sln", "medium-orange"]
+		]
+
+	Vue:
+		icon: "vue"
+		scope: "vue"
+		match: ".vue"
+		colour: "light-green"
+
+	"Web Ontology Language":
+		icon: "owl"
+		match: ".owl"
+		colour: "dark-blue"
+
+	Webpack:
+		icon: "webpack"
+		priority: 2
+		match: [
+			[/webpack\.config\./i, "medium-blue"]
+			[/^webpackfile\.js$/i, "medium-blue"]
+		]
+
+	Wercker:
+		icon: "wercker"
+		priority: 2
+		match: /^wercker\.ya?ml$/i
+		colour: "medium-purple"
+
+	Windows:
+		icon: "windows"
+		generic: true
+		match: [
+			[".bat", "medium-purple", scope: /(^|\.)(bat|dosbatch)(\.|$)/i, alias: /^(bat|(DOS|Win)?Batch)$/i]
+			[".cmd", "medium-purple"]
+			[/\.(exe|com|msi)$/i]
+			[".reg", "medium-blue"]
+		]
+
+	"Windows shortcut":
+		icon: "link"
+		priority: 3
+		match: ".lnk"
+		colour: "medium-blue"
+
+	X10:
+		icon: "x10"
+		scope: "x10"
+		alias: "xten"
+		match: ".x10"
+		colour: "light-maroon"
+
+	X11:
+		icon: "x11"
+		match: /\.X(authority|clients|initrc|profile|resources|session-errors|screensaver)$/i
+		colour: "medium-orange"
+
+	XC:
+		icon: "xmos"
+		match: ".xc"
+		colour: "medium-orange"
+
+	Xcode:
+		icon: "appstore"
+		match: /\.(pbxproj|pbxuser|mode\dv\3|xcplugindata|xcrequiredplugins)$/i
+		colour: "medium-blue"
+
+	Xojo:
+		icon: "xojo"
+		match: [
+			[".xojo_code", "medium-green"]
+			[".xojo_menu", "medium-blue"]
+			[".xojo_report", "medium-red"]
+			[".xojo_script", "dark-green"]
+			[".xojo_toolbar", "dark-purple"]
+			[".xojo_window", "dark-cyan"]
+		]
+
+	XPages:
+		icon: "xpages"
+		match: [
+			[".xsp-config", "medium-blue"]
+			[".xsp.metadata", "dark-blue"]
+		]
+
+	XProc:
+		icon: "xmos"
+		match: [
+			[".xpl", "dark-blue"]
+			[".xproc", "medium-purple"]
+		]
+
+	XQuery:
+		icon: "sql"
+		scope: "xq"
+		match: /\.(xquery|xq|xql|xqm|xqy)$/i
+		colour: "dark-red"
+
+	Xtend:
+		icon: "xtend"
+		scope: "xtend"
+		match: ".xtend"
+		colour: "dark-purple"
+
+	YANG:
+		icon: "yang"
+		scope: "yang"
+		match: ".yang"
+		colour: "medium-yellow"
+
+	Yarn:
+		icon: "yarn"
+		match: /^yarn\.lock$/i
+		colour: "medium-blue"
+		priority: 2
+
+	Yeoman:
+		icon: "yeoman"
+		priority: 2
+		match: ".yo-rc.json"
+		colour: "medium-cyan"
+
+	YUI:
+		icon: "yui"
+		priority: 2
+		match: /^(yahoo-|yui)[^.]*\.js$/i
+		colour: "dark-blue"
+
+	ZBrush:
+		icon: "zbrush"
+		match: ".zpr"
+		colour: "dark-purple"
+
+	Zephir:
+		icon: "zephir"
+		match: ".zep"
+		colour: "medium-pink"
+
+	Zimpl:
+		icon: "zimpl"
+		match: /\.(zimpl|zmpl|zpl)$/i
+		colour: "medium-orange"
+
+
+# Local Variables:
+# atom-auto-compile: lib/icons/.icondb.js
+# End:

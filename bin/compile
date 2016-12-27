@@ -1,0 +1,132 @@
+#!/usr/bin/env node
+"use strict";
+
+// Called from Atom
+if(process.connected && "function" === typeof global.emit){
+	module.exports = (source, target) => {
+		const path = require("path");
+		const fs = require("fs");
+		
+		let CoffeeScript = null;
+		let IconCompiler = null;
+		let sourceData   = null;
+		
+		/* ERROR: NPM modules not installed */
+		try{ CoffeeScript = require("coffee-script"); }
+		catch(e){ die(0x40, e); }
+		
+		/* ERROR: Package source files not found */
+		try{
+			const pieces = "../lib/icons/icon-compiler.js".split(/\//);
+			const pathTo = path.join(__dirname, ...pieces);
+			IconCompiler = require(pathTo);
+		} catch(e){ die(0x41, e); }
+		
+		/* EROR: Source file not found or inaccessible */
+		try{ sourceData = fs.readFileSync(source); }
+		catch(e){ die(0x42, e); }
+		
+		/* ERROR: Target path not readable or writable */
+		try{ fs.closeSync(fs.openSync(target, "a+")); }
+		catch(e){ die(0x43, e); }
+		
+		/* ERROR: Badly-formed CoffeeScript source */
+		try{ sourceData = CoffeeScript.eval(sourceData.toString()); }
+		catch(e){ die(0x44, e); }
+		
+		const result = IconCompiler.compileConfigData(sourceData);
+		fs.writeFileSync(target, result);
+		global.emit("compile:done");
+		
+		function die(code, error = {}){
+			const {stack, message, name} = error;
+			const detail = error.toString();
+			console.error({stack, message, name, detail});
+			process.exit(code);
+		}
+	};
+}
+
+// Executed from command-line
+else{
+	const fs           = require("fs");
+	const path         = require("path");
+	const getOpts      = require("get-options");
+	const IconCompiler = require("../lib/icons/icon-compiler.js");
+	const {options, argv} = getOpts(process.argv.slice(2), {
+		"-h, -?, --help": ""
+	});
+	
+	if(options.help){
+		printHelp();
+		process.exit(0);
+	}
+	
+	const unrecognisedOption = argv.find(a => /^-/.test(a));
+	if(unrecognisedOption){
+		process.stderr.write(makeSpiffy("Unknown option: ") + unrecognisedOption + "\n");
+		printHelp(true);
+		process.exit(1);
+	}
+	
+	if(!argv[0] && process.stdin.isTTY){
+		printHelp(true);
+		process.exit(1);
+	}
+	
+	new Promise((resolve, reject) => {
+		if(!process.stdin.isTTY){
+			let input = "";
+			process.stdin.setEncoding("UTF8");
+			process.stdin.on("readable", () => {
+				const chunk = process.stdin.read();
+				null !== chunk ? input += chunk : resolve(input);
+			})
+		}
+		else fs.readFile(argv[0], (error, data) => error
+			? reject(error)
+			: resolve(data.toString()));
+	}).then(data => {
+		const output = IconCompiler.compileConfigData(data, true);
+		process.stdout.write(output);
+	}).catch(error => {
+		console.error(error);
+		process.exit(1);
+	});
+	
+	
+	function printHelp(short = false){
+		if(short){
+			const usage = "Usage: compile [--help] input.cson > output.js\n";
+			process.stderr.write(makeSpiffy(usage));
+			return;
+		}
+		const help = `
+			Usage: compile [-h|-?|--help] <input>
+			
+			Examples:
+				compile config.cson
+				compile < config.cson > output.js`
+			.replace(/^\n+/, "")
+			.replace(/\t+/gm, "")
+			.replace(/^(?=compile)/gm, "    ")
+			+ "\n";
+		process.stderr.write(makeSpiffy(help));
+	}
+	
+	
+	function makeSpiffy(input){
+		if(!process.stderr.isTTY)
+			return input;
+		
+		const bold   = "\x1B[1m";
+		const plain  = "\x1B[0m";
+		const italic = "\x1B[4m";
+		
+		return input
+			.replace(/^([^:]+:\s+)/gm, `${bold}$1${plain}`)
+			.replace(/(\s+|\||\[)(-\?|-{1,2}\w+[-\w]*)(?=[\s|\]]|$)/g, `$1${bold}$2${plain}`)
+			.replace(/<([-\w]+)>/g, `<${italic}$1${plain}>`)
+			.replace(/(\s+)(\S+\.(?:cson|js)\b)/g, `$1${italic}$2${plain}`)
+	}
+}
