@@ -3,10 +3,15 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unreleased]
----------------------
+
+[2.0.0] - 2016-12-29
+--------------------
 ### Added
-- **Support:** Vash templates (`.vash`), XHTML (`.xhtml`), CSS and Javascript source maps (`.css.map`, `.js.map`)
+- **New features:** Hashbang detection, modeline recognition, and much more.
+[Please consult the release notes for full details](https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0).
+- **New icons:** ArtText (`.artx` folders), Electron, FFmpeg, GN (`.gn`, `.gni`), ICU, libuv, Ninja (`.ninja`), Nodemon (`nodemon.json`, `.nodemonignore`), Rascal (`.rsc`), V8
+- **Support:** HTML (`.vash`, `.xhtml`), Source maps (`.css.map`, `.js.map`)
+
 
 [1.7.25] - 2016-11-13
 ---------------------
@@ -914,7 +919,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.25...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.0...HEAD
+[2.0.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0
 [1.7.25]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.25
 [1.7.24]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.24
 [1.7.23]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.23
