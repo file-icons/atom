@@ -43,16 +43,13 @@ Consult the package stylesheets to see what classes are used:
 
 #### Examples
 
-* Resize an icon:
-	~~~css
+* **Resize an icon:**
+	~~~less
 	.html5-icon:before{
 		font-size: 18px;
 	}
-	~~~
-
-
-* Resize an icon in tab-pane only:
-	~~~css
+	
+	// Resize in tab-pane only:
 	.tab > .html5-icon:before{
 		font-size: 18px;
 		top: 3px;
@@ -60,7 +57,7 @@ Consult the package stylesheets to see what classes are used:
 	~~~
 
 
-* Choose your own shades of orange:
+* **Choose your own shades of orange:**
 	~~~css
 	.dark-orange   { color: #6a1e05; }
 	.medium-orange { color: #b8743d; }
@@ -68,7 +65,7 @@ Consult the package stylesheets to see what classes are used:
 	~~~
 
 
-* Replace PHP's elephant icon with its original blue shield:
+* **Bring back PHP's blue-shield icon:**
 	~~~css
 	.php-icon:before{
 		font-family: MFizz;
@@ -77,16 +74,17 @@ Consult the package stylesheets to see what classes are used:
 	~~~
 
 
-* Change the icon a certain filetype uses:
-
-	~~~less
-	// Files
+* **Assign icons by file extension:**
+	~~~css
 	.icon[data-name$=".js"]:before{
 		font-family: Devicons;
 		content: "\E64E";
 	}
-	
-	// Directories
+	~~~
+
+
+* **Assign icons to directories:**
+	~~~less
 	.directory > .header > .icon{
 		
 		&[data-path$=".atom/packages"]:before{
@@ -97,20 +95,27 @@ Consult the package stylesheets to see what classes are used:
 	~~~
 
 
+
 Troubleshooting
 ---------------
 
-* **A file's icon has stopped updating:**  
-It's a caching issue. Do the following:
-	1. Open the command palette: <kbd>Cmd/Ctrl + Shift + P</kbd>
-	2. Run `file-icons:clear-cache`.
-	3. Reload the window, or restart Atom.
+**A file's icon has stopped updating:**  
+It's probably a caching issue. Do the following:
+1. Open the command palette: <kbd>Cmd/Ctrl + Shift + P</kbd>
+2. Run `file-icons:clear-cache`
+3. Reload the window, or restart Atom
 
-* **The tree-view's files look [like this][6]:**  
-Your stylesheet probably needs updating. Since [v2.0](https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0),
-CSS classes are used instead of Less mixins, which means you should delete any mixins or `@import` lines:
 
-```diff
+**The tree-view's files are borked and [look like this][6].**  
+If you haven't restarted Atom since upgrading to [File-Icons v2][v2.0], do so now.
+
+If restarting doesn't help, your stylesheet probably needs updating. See below.
+
+
+**My stylesheet has errors since updating:**  
+As of [v2.0][], classes are used for displaying icons instead of mixins. Delete lines like these from your stylesheet:
+
+~~~diff
 -@import "packages/file-icons/styles/icons";
 -@import "packages/file-icons/styles/items";
 -@{pane-tab-selector},
@@ -121,16 +126,39 @@ CSS classes are used instead of Less mixins, which means you should delete any m
 +		content: "\E602";
 	}
 }
-```
+~~~
 
-If something else is happening, please [file an issue][7] with relevant screenshots.
+Instead of `@pane-tab…` variables, use `.tab > .icon[data-path]`:
+
+~~~diff
+-@pane-tab-selector,
+-@pane-tab-temp-selector,
+-@pane-tab-override {
++.tab > .icon {
+ 	&[data-path$=".to.file"] {
+ 		
+ 	}
+}
+~~~
+
+These CSS classes are no longer used, so delete them:
+
+~~~diff
+-.file-icons-force-show-icons,
+-.file-icons-tab-pane-icon,
+-.file-icons-on-changes
+~~~
+
+
+**It's something else.**  
+Please [file an issue][7]. Include screenshots if necessary.
+
 
 
 Acknowledgements
 ----------------
 Wouldn't have even tried to make this if it weren't for [sommerper/filetype-color][8].
 Also thanks to all the [contributors][9].
-
 
 
 [Referenced links]: ____________________________________________________
@@ -141,3 +169,4 @@ Also thanks to all the [contributors][9].
 [7]: https://github.com/DanBrooker/file-icons/issues/new
 [8]: https://github.com/sommerper/filetype-color
 [9]: https://github.com/DanBrooker/file-icons/graphs/contributors
+[v2.0]: https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0
