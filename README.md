@@ -101,6 +101,7 @@ Troubleshooting
 
 **A file's icon has stopped updating:**  
 It's probably a caching issue. Do the following:
+
 1. Open the command palette: <kbd>Cmd/Ctrl + Shift + P</kbd>
 2. Run `file-icons:clear-cache`
 3. Reload the window, or restart Atom
