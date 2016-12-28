@@ -7,6 +7,8 @@ Before editing the config, make sure you've installed the devDependencies:
 
 	apm install file-icons
 
+You're also encouraged to run package specs, particularly if you've changed existing icons.
+
 **NOTE:**  
 Changes to the config require a compilation step. The package does this automatically,
 but the results won't be visible until the window's been reloaded. Remember to include
