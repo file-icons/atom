@@ -275,7 +275,7 @@ fileIcons:
 	APL:
 		icon: "apl"
 		match: [
-			[".apl", "dark-cyan", "apl"]
+			[".apl", "dark-cyan", "apl", signature: /[⌶-⍺]/]
 			[".apl.history", "medium-maroon"]
 		]
 
@@ -2048,7 +2048,8 @@ fileIcons:
 			[/\.(1([bcmsx]|has|in)?|[24568]|3(avl|bsm|3c|in|m|qt|x)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|n|nroff|pic|tmac|tmac-u|tr|troff)$/i, "dark-green"
 				scope: /\.[gt]?roff$/i
 				alias: /^([gtn]?roff|manpage)$/i
-				interpreter: /man|mandoc|([gnt]|dit)roff/i]
+				interpreter: /man|mandoc|([gnt]|dit)roff/i
+				signature: /^\.TH[ \t]+(?:\S+)|^'\\" [tre]+(?=\s|$)/]
 			[/\.(rnh|rno|roff|run|runoff)$/i, "dark-maroon", "runoff"]
 			[/^tmac\.|^(mmn|mmt)$/i, "dark-green", priority: 2]
 		]
