@@ -353,7 +353,7 @@ fileIcons:
 			[".agc", "dark-blue", scope: "source.agc", alias: /^(Virtual\s*)?AGC$|^Apollo([-_\s]*11)?\s*Guidance\s*Computer$/i]
 			[".ko", "dark-green"]
 			[".lst", "medium-blue", "lst-cpu12"]
-			[/\.((c([+px]{2}?)?-?)?objdump|bin|dat|pak|pdb)$/i, "dark-orange"]
+			[/\.((c([+px]{2}?)?-?)?objdump|bsdiff|bin|dat|pak|pdb)$/i, "dark-orange"]
 			[".d-objdump", "dark-blue"]
 			[/\.gcode|\.gco/i, "medium-orange"]
 			[/\.rpy[bc]$/i, "medium-red"]
@@ -379,17 +379,18 @@ fileIcons:
 		icon: "audio"
 		match: [
 			[".mp3", "medium-red", signature: /^\xFF\xFB|^ID3/]
-			[".wav", "dark-yellow", signature: /^RIFF/]
-			[/\.(m4p|aac)$/i, "dark-cyan"]
-			[".aiff", "medium-purple"]
-			[".au", "medium-cyan"]
+			[".wav", "dark-yellow", signature: /^RIFF(?!.+WEBP)/]
+			[/\.(aac|ac3|m4p)$/i, "dark-cyan", signature: /^\x0Bw/]
+			[/\.aif[fc]?$/i, "medium-purple", signature: /^FORM.{4}AIFF/]
+			[".au", "medium-cyan", signature: /^\.snd|^dns\./]
 			[".flac", "dark-red", signature: /^fLaC/]
-			[".m4a", "medium-cyan"]
-			[/\.(mpc|mp\+|mpp)$/i, "dark-green"]
-			[".oga", "dark-orange"]
-			[".opus", "dark-maroon"]
-			[/\.r[am]$/i, "dark-blue"]
-			[".wma", "medium-blue", signature: /^\x30\x26\xB2\x75\x8E\x66\xCF\x11\xA6\xD9\x00\xAA\x00\x62\xCE\x6C/]
+			[/\.f4[ab]$/i, "medium-red", signature: /^FLV\x01\x04/]
+			[".m4a", "medium-cyan", signature: /^.{4}ftypM4A/]
+			[/\.(mpc|mp\+)$/i, "dark-green", signature: /^MPCK/]
+			[".oga", "dark-orange"] # Shares .ogg sig
+			[".opus", "dark-maroon", signature: /OpusHead/]
+			[/\.r[am]$/i, "dark-blue", signature: /^\.RMF/]
+			[".wma", "medium-blue"] # Shares .asf sig
 		]
 
 	Augeas:
@@ -933,6 +934,7 @@ fileIcons:
 			[".syntax", "medium-blue"]
 			[/^mime\.types$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
+			[/[\///]Magdir[\///][^\///]+$/, "dark-red", matchPath: true]
 			["lib/icons/.icondb.js", "dark-red", matchPath: true]
 			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
 				priority: 2,
@@ -1067,7 +1069,7 @@ fileIcons:
 		priority: 1.5
 		match: [
 			[/(^|\.)(el|_?emacs|spacemacs|emacs\.desktop|abbrev[-_]defs)$/i, "medium-purple", alias: "elisp", scope: "emacs.lisp", interpreter: "emacs"]
-			[/(^|\.)(elc|eld)$/i, "dark-purple"]
+			[/(^|\.)(elc|eld)$/i, "dark-purple", signature: /^;ELC\x17\0{3}/]
 			[".gnus", "medium-red"]
 			[".viper", "dark-green"]
 			[/^Project\.ede$/i, "medium-blue"]
@@ -1185,10 +1187,12 @@ fileIcons:
 		match: [
 			[".woff2", "dark-blue", signature: /^wOF2/]
 			[".woff", "medium-blue", signature: /^wOFF/]
-			[".eot", "light-green"]
-			[".ttc", "dark-green"]
-			[".ttf", "medium-green"]
-			[".otf", "dark-yellow"]
+			[".eot", "light-green", signature: /^.{34}LP/]
+			[".ttc", "dark-green", signature: /^ttcf/]
+			[".ttf", "medium-green", signature: /^\0\x01\0{3}/]
+			[".otf", "dark-yellow", signature: /^OTTO.*\0/]
+			[".pfb", "dark-red"]
+			[".pfm", "medium-red"]
 		]
 
 	FontForge:
@@ -1666,40 +1670,39 @@ fileIcons:
 	Image:
 		icon: "image"
 		match: [
-			[".png", "medium-orange", signature: /^.PNG\r\n\x1A\n/]
+			[/\.a?png$/i, "medium-orange", signature: /^.PNG\r\n\x1A\n/]
 			[".gif", "medium-yellow", signature: /^GIF8[97]a/]
 			[".jpg", "medium-green", signature: /^\xFF\xD8\xFF[\xDB\xE0\xE1]|(JFIF|Exif)\0|^\xCF\x84\x01|^\xFF\xD8.+\xFF\xD9$/]
-			[/\.tiff?$/i, "medium-red", signature: /^II\x2A\0|^MM\0\x2A/]
 			[".ico", "medium-blue", signature: /^\0{2}\x01\0/]
-			[".webp", "dark-blue"]
-			[".apng", "medium-orange"]
-			[".bmp", "medium-red"]
+			[".webp", "dark-blue", signature: /^RIFF.{4}WEBPVP8/]
+			[".bmp", "medium-red", signature: /^BM/]
 			[".bpg", "medium-red", signature: /^BPG\xFB/]
 			[".cin", "medium-orange", signature: /^\x80\x2A\x5F\xD7/]
-			[".cd5", "dark-green"]
+			[".cd5", "dark-green", signature: /^_CD5\x10\0/]
 			[".cpc", "light-yellow"]
-			[".dcm", "medium-cyan"]
-			[".dds", "dark-green"]
+			[".cr2", "medium-orange", signature: /^II\*\0\x10\0{3}CR/]
+			[".dcm", "medium-pink", signature: /^.{128}DICM/]
+			[".dds", "dark-green", signature: /^DDS \|\0{3}/]
 			[/\.djvu?$/i, "medium-purple", signature: /^AT&TFORM/]
 			[".dpx", "dark-orange", signature: /^(SDPX|XPDS)/]
 			[".ecw", "light-blue"]
 			[".exr", "dark-yellow", signature: /^v\/1\x01/]
-			[".fit", "medium-cyan"]
-			[".fits", "medium-cyan"]
+			[/\.fits?$/i, "medium-cyan", signature: /^SIMPLE  =/]
 			[".flif", "dark-red", signature: /^FLIF/]
 			[".fts", "medium-cyan"]
 			[".hdp", "dark-red"]
-			[".hdr", "medium-blue"]
+			[".hdr", "medium-blue", signature: /^#\?RADIANCE\n/]
 			[".heic", "dark-red"]
 			[".heif", "dark-red"]
-			[".icns", "medium-pink"]
+			[".icns", "medium-pink", signature: /^icns/]
 			[".iff", "dark-blue"]
-			[".jpf", "dark-green"]
+			[/\.(jp[f2xm]|j2c|mj2)$/i, "dark-green", signature: /^\0{3}\fjP {2}/]
 			[".jps", "dark-cyan"]
 			[".jxr", "dark-red"]
 			[".lbm", "dark-blue"]
 			[".liff", "dark-blue"]
 			[".mpo", "medium-pink"]
+			[".mng", "medium-orange", signature: /^.MNG\r\n\x1A\n/]
 			[".nrrd", "dark-blue"]
 			[".ora", "medium-yellow"]
 			[".pbm", "medium-pink"]
@@ -1711,7 +1714,8 @@ fileIcons:
 			[".sct", "light-blue"]
 			[".sgi", "medium-yellow"]
 			[".svgz", "medium-orange"]
-			[".tga", "dark-orange"]
+			[".tga", "dark-orange", signature: /TRUEVISION-XFILE\.\0$/]
+			[/\.tiff?$/i, "medium-red", signature: /^II\x2A\0|^MM\0\x2A/]
 			[/\.vsdx?$/i, "dark-blue"]
 			[".wbm", "dark-maroon"]
 			[".wdp", "dark-red"]
@@ -2190,6 +2194,7 @@ fileIcons:
 			[".ppt", "dark-orange"]
 			[".pptx", "medium-red"]
 			[".potm", "medium-maroon"]
+			[".mpp", "dark-green"]
 		]
 
 	"Microsoft Word":
@@ -2697,7 +2702,6 @@ fileIcons:
 			[".ps", "medium-red", scope: "postscript", alias: "postscr", signature: /^%!PS/]
 			[".eps", "medium-orange"]
 			[".pfa", "dark-blue"]
-			[".pfb", "dark-maroon"]
 			[".afm", "medium-green"]
 		]
 
@@ -2727,7 +2731,7 @@ fileIcons:
 			[".ps1xml", "dark-purple"]
 		]
 
-	Print:
+	Printer:
 		icon: "print"
 		match: ".ppd"
 		colour: "dark-cyan"
@@ -3379,7 +3383,9 @@ fileIcons:
 			[".err", "medium-red"]
 			[".rtf", "dark-red"]
 			[/\.i?nfo$/i, "dark-blue"]
+			[".abt", "dark-purple"]
 			[".ans", "dark-orange"]
+			[".brf", "medium-maroon"]
 			[".etx", "medium-yellow"]
 			[".irclog", "medium-blue"]
 			[".msg", "medium-orange"]
@@ -3422,12 +3428,12 @@ fileIcons:
 			[/^Thorfile$/i, "dark-orange"]
 		]
 
-	"TI-BASIC":
+	"TI Graphics Calculator":
 		icon: "calc"
-		match: [
-			[/\.8xp(\.txt)?$/i, "medium-maroon", priority: 2]
-			[/\.8xk(\.txt)?$/i, "dark-red", priority: 2]
-		]
+		priority: 2
+		match: /\.8x[pk](\.txt)?$/i
+		colour: "medium-maroon"
+		signature: /^\*\*TI[789]\d\*\*/
 
 	Travis:
 		icon: "travis"
@@ -3562,23 +3568,19 @@ fileIcons:
 			[".vhw", "dark-orange"]
 		]
 
-	Videos:
+	Video:
 		icon: "video"
 		match: [
 			[/\.3gpp?$/i, "medium-blue", signature: /^.{4}ftyp3g/]
+			[/\.(mp4|m4v|h264)$/i, "dark-blue", signature: /^.{4}ftyp/]
 			[".avi", "medium-blue", signature: /^MLVI/]
-			[".mp4", "dark-blue"]
-			[".mov", "medium-cyan"]
-			[".mkv", "medium-purple"]
-			[".h264", "dark-green"]
+			[".mov", "medium-cyan", signature: /^.{4}moov/]
+			[".mkv", "medium-purple", signature: /^\x1AEß£\x93B\x82\x88matroska/]
+			[".flv", "medium-red", signature: /^FLV\x01/]
 			[".webm", "dark-blue", signature: /^\x1A\x45\xDF\xA3/]
-			[".wmv", "dark-purple"]
-			[".ogv", "dark-orange"]
-			[".ogg", "medium-orange", signature: /^OggS/]
-			[".m4v", "dark-yellow"]
-			[".mpg", "dark-red"]
-			[".mpeg", "medium-red"]
-			[".ogm", "dark-red"]
+			[/\.mpe?g$/i, "medium-red", signature: /^\0{2}\x01[\xB3\xBA]/]
+			[/\.(asf|wmv)$/i, "dark-purple", signature: /^0&²u\x8EfÏ\x11¦Ù\0ª\0bÎl/]
+			[/\.(ogm|og[gv])$/i, "medium-orange", signature: /^OggS/]
 		]
 
 	Vim:
