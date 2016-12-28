@@ -1,96 +1,143 @@
-# If you've just updated and your icons are all messed up, please restart Atom before filing an issue.
+File Icons
+==========
+File-specific icons in Atom for improved visual grepping.
 
-Some of the underlying icon fonts have updated and rearranged their icons, a restart will fix this.
+<img alt="Icon previews" src="./preview.png" width="850" />
 
-## Installing
-#### On the command line:
-```ssh
-apm install file-icons
-```
-#### On Atom:
-Go to `Preferences > Install`, search for `file-icons` and install it.
+Supports the following packages:
 
-# file-icons
+* [`tree-view`](https://atom.io/packages/tree-view)
+* [`tabs`](https://atom.io/packages/tabs)
+* [`fuzzy-finder`](https://atom.io/packages/fuzzy-finder)
+* [`find-and-replace`](https://atom.io/packages/find-and-replace)
+* [`archive-view`](https://atom.io/packages/archive-view)
 
-Adds file specific icons to atom for improved visual grepping. Works with Tree View and Fuzzy Finder and Tabs.
 
-![Screenshot](https://raw.githubusercontent.com/DanBrooker/file-icons/master/preview.png)
+Installation
+------------
+Open **Settings** → **Install** and search for `file-icons`.
 
-A number of icons and colours are provided by default for a range of common file types.
-If you have file that you would like custom icons for you can easily add this yourself.
+Alternatively, install through command-line:
 
-Icons are now specified via CSS (Less) only.
+	apm install file-icons
 
-## No Colours
 
-Disable colours in the settings.
+Customisation
+-------------
+Everything is handled using CSS classes. Use your [stylesheet][1] to change or tweak icons.
 
-## Unity Theme
+Consult the package stylesheets to see what classes are used:
 
-By default the Unity theme hides icons, you can force to show the icons in the settings
+* **Icons:**   [`styles/icons.less`](./styles/icons.less)
+* **Colours:** [`styles/colours.less`](./styles/colours.less)
+* **Fonts:**   [`styles/fonts.less`](./styles/fonts.less)
 
-# Customisation
-The following CSS can be added to your user stylesheet to customise files with the `.rb` file extension:
 
-```less
-@import "packages/file-icons/styles/colors"; // to use the colours
-@import "packages/file-icons/styles/icons";  // to use the defined icons
-```
+#### Icon reference
+* [**File-Icons**](https://github.com/Alhadis/FileIcons/blob/master/charmap.md) 
+* [**FontAwesome**](http://fontawesome.io/cheatsheet/)
+* [**Mfizz**](https://github.com/Alhadis/MFixx/blob/master/charmap.md)
+* [**Devicons**](https://github.com/Alhadis/DevOpicons/blob/master/charmap.md)
 
-```less
-@import "packages/file-icons/styles/items";
-@{pane-tab-selector}, .icon-file-text {
-  &[data-name$=".rb"]          { .medium-red;             } // Colours icon and filename
-  &[data-name$=".rb"]:before   { .ruby-icon; .medium-red; } // Colours icon only
+
+
+#### Examples
+
+* Resize an icon:
+	~~~css
+	.html5-icon:before{
+		font-size: 18px;
+	}
+	~~~
+
+
+* Resize an icon in tab-pane only:
+	~~~css
+	.tab > .html5-icon:before{
+		font-size: 18px;
+		top: 3px;
+	}
+	~~~
+
+
+* Choose your own shades of orange:
+	~~~css
+	.dark-orange   { color: #6a1e05; }
+	.medium-orange { color: #b8743d; }
+	.light-orange  { color: #cf9b67; }
+	~~~
+
+
+* Replace PHP's elephant icon with its original blue shield:
+	~~~css
+	.php-icon:before{
+		font-family: MFizz;
+		content: "\f147";
+	}
+	~~~
+
+
+* Change the icon a certain filetype uses:
+
+	~~~less
+	// Files
+	.icon[data-name$=".js"]:before{
+		font-family: Devicons;
+		content: "\E64E";
+	}
+	
+	// Directories
+	.directory > .header > .icon{
+		
+		&[data-path$=".atom/packages"]:before{
+			font-family: "Octicons Regular";
+			content: "\f0c4";
+		}
+	}
+	~~~
+
+
+Troubleshooting
+---------------
+
+* **A file's icon has stopped updating:**  
+It's a caching issue. Do the following:
+	1. Open the command palette: <kbd>Cmd/Ctrl + Shift + P</kbd>
+	2. Run `file-icons:clear-cache`.
+	3. Reload the window, or restart Atom.
+
+* **The tree-view's files look [like this][6]:**  
+Your stylesheet probably needs updating. Since [v2.0](https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0),
+CSS classes are used instead of Less mixins, which means you should delete any mixins or `@import` lines:
+
+```diff
+-@import "packages/file-icons/styles/icons";
+-@import "packages/file-icons/styles/items";
+-@{pane-tab-selector},
+.icon-file-directory {
+	&[data-name=".git"]:before {
+-		.git-icon;
++		font-family: Devicons;
++		content: "\E602";
+	}
 }
 ```
 
-Folders
-```less
-@import "packages/file-icons/styles/items";
-@{pane-tab-selector}, .icon-file-directory {
-  &[data-name=".git"]:before { .git-icon; }
-}
-```
-
-## Icons
-Icons are located at `./stylesheets/icons.less`. You can create a custom CSS class and express its code through `content: "\fxxx";`. Octicons is the default icon's class.
-
-```less
-.ruby-icon { content: "\f047"; }
-```
-
-## Fonts
-Some custom fonts are already provided
-* [FontAwesome](http://fortawesome.github.io/Font-Awesome/)(`.fa`)
-* [FontMfizz](http://fizzed.com/oss/font-mfizz)(`.mf`)
-* [Icomoon](https://icomoon.io/)(`.iconmoon`)
-* [Devicons](http://vorillaz.github.io/devicons/)(`.devicons`)
-
-```less
-.coffee-icon { .fa; content: "\f0f4"; }
-```
-
-## Colours
-
-Colours are from the [Base16](https://github.com/chriskempson/base16) colour palette. CSS classes used to apply color follow its primary 8 (eight) colours and 3 (three) variants:
-
-  * Red, Green, Yellow, Blue, Maroon, Purple, Orange, Cyan.
-  * Light, Medium, Dark.
-
-Medium is colour provided by Base16. Light is medium lightened 15%. Dark is medium darkened 15%. In order to "construct" a CSS class color, you provide its variant followed by a dash (-).
-
-```less
-.light-red;
-.medium-blue;
-.dark-maroon;
-```
-
-# Changelog
-See [CHANGELOG.md](CHANGELOG.md).
+If something else is happening, please [file an issue][7] with relevant screenshots.
 
 
-# Acknowledgments
+Acknowledgements
+----------------
+Wouldn't have even tried to make this if it weren't for [sommerper/filetype-color][8].
+Also thanks to all the [contributors][9].
 
-Wouldn't have even tried to make this if it weren't for [sommerper/filetype-color](https://github.com/sommerper/filetype-color)
-Also thanks to all the [contributors](https://github.com/DanBrooker/file-icons/graphs/contributors).
+
+
+[Referenced links]: ____________________________________________________
+[1]: http://flight-manual.atom.io/using-atom/sections/basic-customization/#style-tweaks
+[4]: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+[5]: https://github.com/Alhadis/DevOpicons/blob/master/charmap.md#JavaScript
+[6]: https://cloud.githubusercontent.com/assets/714197/21516010/4b79a8a8-cd39-11e6-8394-1e3ab778af92.png
+[7]: https://github.com/DanBrooker/file-icons/issues/new
+[8]: https://github.com/sommerper/filetype-color
+[9]: https://github.com/DanBrooker/file-icons/graphs/contributors

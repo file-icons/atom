@@ -1,3 +1,9 @@
+Adding support for a new filetype
+=================================
+
+Refer to [`config.cson`](config.cson) for instructions on defining a new icon-to-filetype mapping.
+
+
 Adding new icons to the package
 ===============================
 
@@ -24,6 +30,3 @@ Preserve the existing format so readers can grep what they're looking for when s
 		That way, there's a clearer distinction between introducing an entirely new icon, and simply extending the scope of an existing one.
 	</dd>
 </dl>
-
-Before publishing a release, remember to replace `[Unreleased]` with the name of the version you're cutting.
-Make sure to specify a new comparison link at the bottom of the changelog.
