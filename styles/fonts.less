@@ -1,53 +1,31 @@
 @font-face {
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  src: url("atom://file-icons/resources/fonts/fontawesome.woff2") format("woff2");
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	src: url("atom://file-icons/fonts/fontawesome.woff2");
 }
 
 @font-face {
-  font-family: FontMfizz;
-  src: url("atom://file-icons/resources/fonts/mfizz.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+	font-family: Mfizz;
+	src: url("atom://file-icons/fonts/mfixx.woff2");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: icomoon;
-  src: url("atom://file-icons/resources/fonts/icomoon.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: devicons;
-  src: url("atom://file-icons/resources/fonts/devicons.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+	font-family: Devicons;
+	src: url("atom://file-icons/fonts/devopicons.woff2");
+	font-weight: normal;
+	font-style: normal;
 }
 
 
 // Package-specific font for custom icon additions
-@custom-font-path: "atom://file-icons/resources/fonts/file-icons-v1.7.25.woff2";
+@custom-font-path: "atom://file-icons/fonts/file-icons.woff2";
 
 @font-face {
-  font-family: "file-icons";
-  src: url(@custom-font-path) format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-// Kept for backwards compatibility only
-@font-face {
-  font-family: "iconsxd";
-  src: url(@custom-font-path) format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "tex";
-  src: url(@custom-font-path) format("woff2");
-  font-weight: normal;
-  font-style: normal;
+	font-family: file-icons;
+	src: url(@custom-font-path);
+	font-weight: normal;
+	font-style: normal;
 }
