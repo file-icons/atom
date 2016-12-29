@@ -4,7 +4,7 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
+[2.0.2] - 2016-12-30
 --------------------
 ### Added
 - **Support:** [[`#470`][]] `source.octave` as a MATLAB scope
@@ -945,7 +945,8 @@ Fixed breakage at startup when run on Windows.
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.1...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.2...HEAD
+[2.0.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.2
 [2.0.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.1
 [2.0.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0
 [1.7.25]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.25
