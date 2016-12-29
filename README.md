@@ -2,7 +2,7 @@ File Icons
 ==========
 File-specific icons in Atom for improved visual grepping.
 
-<img alt="Icon previews" src="./preview.png" width="850" />
+<img alt="Icon previews" width="850" src="https://raw.githubusercontent.com/DanBrooker/file-icons/master/preview.png" />
 
 Supports the following packages:
 
