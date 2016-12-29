@@ -4,6 +4,24 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+--------------------
+### Added
+- **Support:** [[`#470`][]] `source.octave` as a MATLAB scope
+
+### Fixed
+- [[`#470`][]] Lack of support for user-defined filetypes with leading dots
+- Failing file-signature specs
+
+[`#470`]: https://github.com/DanBrooker/file-icons/issues/470
+
+
+
+[2.0.1] - 2016-12-30
+--------------------
+Fixed breakage at startup when run on Windows.
+
+
 [2.0.0] - 2016-12-30
 --------------------
 ### Added
@@ -919,7 +937,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.0...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.1...HEAD
+[2.0.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.1
 [2.0.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0
 [1.7.25]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.25
 [1.7.24]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.24
