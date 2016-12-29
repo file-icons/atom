@@ -11,9 +11,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - [[`#470`][]] Lack of support for user-defined filetypes with leading dots
+- [[`#472`][]] Tree-view hidden at startup
 - Failing file-signature specs
 
 [`#470`]: https://github.com/DanBrooker/file-icons/issues/470
+[`#472`]: https://github.com/DanBrooker/file-icons/issues/472
 
 
 
