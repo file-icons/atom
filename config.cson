@@ -2102,7 +2102,7 @@ fileIcons:
 
 	MATLAB:
 		icon: "matlab"
-		scope: "matlab"
+		scope: /\.(matlab|octave)$/i
 		alias: "octave"
 		match: ".matlab"
 		colour: "medium-yellow"
