@@ -12,10 +12,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [[`#470`][]] Lack of support for user-defined filetypes with leading dots
 - [[`#472`][]] Tree-view hidden at startup
+- [[`#473`][]] Sporadic breakage when switching project windows
 - Failing file-signature specs
 
+### Currently working on
+- [[`#471`][]] Icons not showing in Nuclide file-tree
+
 [`#470`]: https://github.com/DanBrooker/file-icons/issues/470
+[`#471`]: https://github.com/DanBrooker/file-icons/issues/471
 [`#472`]: https://github.com/DanBrooker/file-icons/issues/472
+[`#473`]: https://github.com/DanBrooker/file-icons/issues/473
 
 
 
