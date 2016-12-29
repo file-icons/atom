@@ -4,7 +4,7 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[2.0.0] - 2016-12-29
+[2.0.0] - 2016-12-30
 --------------------
 ### Added
 - **New features:** Hashbang detection, modeline recognition, and much more.
