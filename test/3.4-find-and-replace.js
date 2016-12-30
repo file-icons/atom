@@ -28,7 +28,8 @@ describe("Find-and-replace", () => {
 		Options.set("coloured", true);
 		Options.set("colourChangedOnly", false);
 		workspace.style.height = null;
-		if(FindAndReplace.package.projectFindPanel.visible)
+		const {projectFindPanel} = FindAndReplace.package.mainModule;
+		if(projectFindPanel.visible)
 			atom.commands.dispatch(workspace, "project-find:toggle");
 	});
 	
