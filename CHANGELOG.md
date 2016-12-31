@@ -3,6 +3,11 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[unreleased] - yyyy-mm-dd
+--------------------
+### Fixed
+- [[`#476`][]] Failed to activate the file-icons package At Cannot delete property '/tmp/file-outside-project-dirs.txt'
+
 
 [2.0.2] - 2016-12-30
 --------------------
