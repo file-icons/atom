@@ -2,7 +2,7 @@
 
 const Options          = require("../lib/options.js");
 const LinguistStrategy = require("../lib/service/strategies/linguist-strategy.js");
-const FileRegistry     = require("../lib/filesystem/file-registry.js");
+const FileSystem       = require("../lib/filesystem/filesystem.js");
 const TreeView         = require("../lib/consumers/tree-view.js");
 const Tabs             = require("../lib/consumers/tabs.js");
 

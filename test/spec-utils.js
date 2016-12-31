@@ -7,7 +7,7 @@ const rimraf        = require("rimraf");
 const inSpecMode    = atom.inSpecMode();
 const {headless}    = atom.getLoadSettings();
 const {chain, wait, bindMethods, collectStrings} = require("../lib/utils/general.js");
-const FileRegistry  = require("../lib/filesystem/file-registry.js");
+const FileSystem    = require("../lib/filesystem/filesystem.js");
 const TreeView      = require("../lib/consumers/tree-view.js");
 const Storage       = require("../lib/storage.js");
 
@@ -151,12 +151,12 @@ function replaceText(find, replace){
  * at runtime unless you have a thing for interesting and random breakage.
  */
 function resetIcons(){
-	FileRegistry.files.forEach(file => {
-		file.icon.destroy();
-		Storage.deletePath(file.path);
+	FileSystem.paths.forEach(resource => {
+		resource.icon.destroy();
+		Storage.deletePath(resource.path);
 	});
-	FileRegistry.reset();
-	FileRegistry.init();
+	FileSystem.reset();
+	FileSystem.init();
 }
 
 
@@ -206,7 +206,7 @@ function rm(path){
 	path = resolvePath(path);
 	try{
 		fs.unlinkSync(path);
-		FileRegistry.get(path).destroy();
+		FileSystem.get(path).destroy();
 	} finally{ }
 }
 
