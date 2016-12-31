@@ -141,7 +141,6 @@ describe("Path", () => {
 		});
 		
 		it("doesn't confuse them with directories ending in file extensions", () => {
-			dirs["git.git/nope.js"].isDirectory.should.be.true;
 			dirs["git.git/nope.js"].should.have.classes(base + "icon-file-directory");
 			dirs["git.git/nope.js"].should.not.have.class("js-icon");
 		});

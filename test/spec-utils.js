@@ -1,12 +1,12 @@
 "use strict";
 
-const {isAbsolute, join, resolve} = require("path");
+const {isAbsolute, join, resolve, sep} = require("path");
 const fs            = require("fs");
 const tmp           = require("tmp");
 const rimraf        = require("rimraf");
 const inSpecMode    = atom.inSpecMode();
 const {headless}    = atom.getLoadSettings();
-const {chain, wait, bindMethods, collectStrings} = require("../lib/utils/general.js");
+const {chain, wait, bindMethods, findBasePath, collectStrings} = require("../lib/utils/general.js");
 const FileSystem    = require("../lib/filesystem/filesystem.js");
 const TreeView      = require("../lib/consumers/tree-view.js");
 const Storage       = require("../lib/storage.js");
@@ -329,4 +329,33 @@ function unzip(from, to){
 			.pipe(unzip.Extract({path: to}))
 			.on("close", () => done());
 	});
+}
+
+
+/**
+ * Return a list of each currently visible tree-view entry.
+ *
+ * @todo Delete this. Use Chai.
+ * @return {Array}
+ */
+TreeView.ls = function(){
+	const entries = Object.defineProperties([], {
+		files:       { get(){ return this.filter(resource => !resource.isDirectory); }},
+		directories: { get(){ return this.filter(resource =>  resource.isDirectory); }}
+	});
+	
+	const paths = [];
+	const icons = [];
+	
+	for(const el of TreeView.element[0].querySelectorAll(".entry")){
+		entries.push(el);
+		paths.push(el.getPath());
+		icons.push(el.directoryName || el.fileName);
+	}
+	const basePath = findBasePath(paths) + sep;
+	paths.forEach((path, index) => {
+		path = path.replace(basePath, "");
+		entries[path] = icons[index];
+	});
+	return entries;
 }

@@ -1,7 +1,5 @@
 "use strict";
 
-const {sep} = require("path");
-const {findBasePath} = require("../lib/utils/general.js");
 const TreeView = require("../lib/consumers/tree-view.js");
 const Options = require("../lib/options.js");
 
@@ -10,6 +8,7 @@ describe("Tree-view", () => {
 	let projectRoot;
 	let entriesList;
 	let entries;
+	const ls = () => (entries = TreeView.ls());
 	
 	before(() => {
 		const treeView = atom.workspace.getLeftPanels()[0].getItem();
@@ -252,34 +251,4 @@ describe("Tree-view", () => {
 			entries["symlinks/empty.file"].should.not.have.class("icon-file-code");
 		});
 	});
-	
-
-
-	/**
-	 * Return a list of each currently visible tree-view entry.
-	 *
-	 * @todo Delete this. Use Chai.
-	 * @return {Array}
-	 */
-	function ls(){
-		entries = Object.defineProperties([], {
-			files:       { get(){ return this.filter(resource => !resource.isDirectory); }},
-			directories: { get(){ return this.filter(resource =>  resource.isDirectory); }}
-		});
-		
-		const paths = [];
-		const icons = [];
-		
-		for(const el of TreeView.element[0].querySelectorAll(".entry")){
-			entries.push(el);
-			paths.push(el.getPath());
-			icons.push(el.directoryName || el.fileName);
-		}
-		const basePath = findBasePath(paths) + sep;
-		paths.forEach((path, index) => {
-			path = path.replace(basePath, "");
-			entries[path] = icons[index];
-		});
-		return entries;
-	}
 });
