@@ -4,6 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------------
+### Fixed
+- [[`#478`][]] Occasional breakage when opening TreeView on Arch Linux
+
+[`#478`]: https://github.com/DanBrooker/file-icons/issues/478
+
+
 [2.0.3] - 2017-01-01
 --------------------
 ### Added
