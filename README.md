@@ -155,6 +155,46 @@ These CSS classes are no longer used, so delete them:
 Please [file an issue][7]. Include screenshots if necessary.
 
 
+Integration with other packages
+-------------------------------
+If you're a package author, you can integrate File-Icons using Atom's services API:
+
+First, add this to your `package.json` file:
+
+```json
+"consumedServices": {
+	"file-icons.element-icons": {
+		"versions": {
+			"1.0.0": "consumeElementIcons"
+		}
+	}
+}
+```
+
+Secondly, add a function named `consumeElementIcons` (or whatever you named it) to your package's main export:
+
+```js
+let addIconToElement;
+module.exports.consumeElementIcons = function(func){
+	addIconToElement = func;
+};
+```
+
+Then call the function it gets passed to display icons in the DOM:
+
+```js
+let fileIcon = document.querySelector("li.file-entry > span.icon");
+addIconToElement(fileIcon, "/path/to/file.txt");
+```
+
+The returned value is a [`Disposable`][10] which clears the icon from memory once it's no longer needed:
+
+```js
+const disposable = addIconToElement(fileIcon, "/path/to/file.txt");
+fileIcon.onDestroy(() => disposable.dispose());
+```
+
+
 
 Acknowledgements
 ----------------
@@ -170,4 +210,5 @@ Also thanks to all the [contributors][9].
 [7]: https://github.com/DanBrooker/file-icons/issues/new
 [8]: https://github.com/sommerper/filetype-color
 [9]: https://github.com/DanBrooker/file-icons/graphs/contributors
+[10]: https://atom.io/docs/api/latest/Disposable
 [v2.0]: https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0
