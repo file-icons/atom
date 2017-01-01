@@ -194,6 +194,13 @@ const disposable = addIconToElement(fileIcon, "/path/to/file.txt");
 fileIcon.onDestroy(() => disposable.dispose());
 ```
 
+**NOTE:** Remember to remove any default icon-classes before calling the service handler.
+
+```diff
+ let fileIcon = document.querySelector("li.file-entry > span.icon");
++fileIcon.classList.remove("icon-file-text");
+ const disposable = addIconToElement(fileIcon, "/path/to/file.txt");
+```
 
 
 Acknowledgements
