@@ -4,6 +4,21 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[2.0.3] - 2017-01-01
+--------------------
+### Added
+- Icon service to [enable integration with third-party packages][served].
+
+### Removed
+- Use of Atom's built-in icon service.
+
+### Fixed
+- [[`#476`][]] Exception thrown deserialising external file-paths
+
+[`#476`]: https://github.com/DanBrooker/file-icons/issues/470
+[served]: https://github.com/DanBrooker/file-icons#integration-with-other-packages
+
+
 [2.0.2] - 2016-12-30
 --------------------
 ### Added
@@ -945,7 +960,8 @@ Fixed breakage at startup when run on Windows.
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.2...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.3...HEAD
+[2.0.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.3
 [2.0.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.2
 [2.0.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.1
 [2.0.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0
