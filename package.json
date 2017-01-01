@@ -1,109 +1,111 @@
 {
-	"name": "file-icons",
-	"main": "lib/main.js",
-	"version": "2.0.2",
-	"private": true,
-	"description": "Assign file extension icons and colours for improved visual grepping",
-	"repository": "https://github.com/DanBrooker/file-icons",
-	"bugs": "https://github.com/DanBrooker/file-icons/issues",
-	"homepage": "https://github.com/DanBrooker/file-icons",
-	"license": "MIT",
-	"engines": {"atom": ">1.11.0"},
-	"atomTestRunner": "./node_modules/.bin/atom-mocha",
-	"atom-mocha": {
-		"interactive": {
-			"mocha": {
-				"bail": true
-			}
-		}
-	},
-	"dependencies": {
-		"micromatch": "*"
-	},
-	"devDependencies": {
-		"atom-mocha": "*",
-		"get-options": "*",
-		"coffee-script": "*",
-		"rimraf": "*",
-		"unzip": "*",
-		"tmp": "*"
-	},
-	"providedServices": {
-		"file-icons.element-icons": {
-			"versions": {
-				"1.0.0": "provideService"
-			}
-		}
-	},
-	"configSchema": {
-		"coloured": {
-			"type": "boolean",
-			"default": true,
-			"description": "Untick this for colourless icons",
-			"order": 1
-		},
-		"onChanges": {
-			"type": "boolean",
-			"default": false,
-			"title": "Only colour when changed",
-			"description": "Show different icon colours for modified files only. Requires that project be a Git repository.",
-			"order": 2
-		},
-		"tabPaneIcon": {
-			"type": "boolean",
-			"default": true,
-			"title": "Show icons in file tabs",
-			"order": 3
-		},
-		"defaultIconClass": {
-			"type": "string",
-			"default": "default-icon",
-			"title": "Default icon class",
-			"description": "CSS class added to files that lack an icon.",
-			"order": 4
-		},
-		"strategies": {
-			"type": "object",
-			"title": "Match strategies",
-			"description": "Advanced settings for dynamic icon assignment.",
-			"order": 5,
-			"properties": {
-				"grammar": {
-					"type": "boolean",
-					"default": true,
-					"order": 1,
-					"title": "Change on grammar override",
-					"description": "Change a file's icon when manually setting its language."
-				},
-				"hashbangs": {
-					"type": "boolean",
-					"default": true,
-					"order": 2,
-					"title": "Check hashbangs",
-					"description": "Allow lines like `#!/usr/bin/perl` to affect icons."
-				},
-				"modelines": {
-					"type": "boolean",
-					"default": true,
-					"order": 3,
-					"title": "Check modelines",
-					"description": "Allow [Vim](http://vim.wikia.com/wiki/Modeline_magic) and [Emacs](https://www.gnu.org/software/emacs/manual/html_node/emacs/Specifying-File-Variables.html#Specifying-File-Variables) modelines to change icons."
-				},
-				"usertypes": {
-					"type": "boolean",
-					"default": true,
-					"order": 4,
-					"title": "Use custom file-types",
-					"description": "Respect the user's [custom language-type settings](http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-language-recognition)."
-				},
-				"linguist": {
-					"type": "boolean",
-					"default": true,
-					"order": 5,
-					"title": "Use .gitattributes",
-					"description": "Honour [`linguist-language`](https://github.com/github/linguist#using-gitattributes) attributes in local `.gitattributes` files."
-				}
-			}
-		}
-	}
+  "name": "file-icons",
+  "main": "lib/main.js",
+  "version": "0.11.4",
+  "private": true,
+  "description": "Assign file extension icons and colours for improved visual grepping",
+  "repository": "https://github.com/DanBrooker/file-icons",
+  "bugs": "https://github.com/DanBrooker/file-icons/issues",
+  "homepage": "https://github.com/DanBrooker/file-icons",
+  "license": "MIT",
+  "engines": {
+    "atom": ">1.11.0"
+  },
+  "atomTestRunner": "./node_modules/.bin/atom-mocha",
+  "atom-mocha": {
+    "interactive": {
+      "mocha": {
+        "bail": true
+      }
+    }
+  },
+  "dependencies": {
+    "micromatch": "*"
+  },
+  "devDependencies": {
+    "atom-mocha": "*",
+    "get-options": "*",
+    "coffee-script": "*",
+    "rimraf": "*",
+    "unzip": "*",
+    "tmp": "*"
+  },
+  "providedServices": {
+    "file-icons.element-icons": {
+      "versions": {
+        "1.0.0": "provideService"
+      }
+    }
+  },
+  "configSchema": {
+    "coloured": {
+      "type": "boolean",
+      "default": true,
+      "description": "Untick this for colourless icons",
+      "order": 1
+    },
+    "onChanges": {
+      "type": "boolean",
+      "default": false,
+      "title": "Only colour when changed",
+      "description": "Show different icon colours for modified files only. Requires that project be a Git repository.",
+      "order": 2
+    },
+    "tabPaneIcon": {
+      "type": "boolean",
+      "default": true,
+      "title": "Show icons in file tabs",
+      "order": 3
+    },
+    "defaultIconClass": {
+      "type": "string",
+      "default": "default-icon",
+      "title": "Default icon class",
+      "description": "CSS class added to files that lack an icon.",
+      "order": 4
+    },
+    "strategies": {
+      "type": "object",
+      "title": "Match strategies",
+      "description": "Advanced settings for dynamic icon assignment.",
+      "order": 5,
+      "properties": {
+        "grammar": {
+          "type": "boolean",
+          "default": true,
+          "order": 1,
+          "title": "Change on grammar override",
+          "description": "Change a file's icon when manually setting its language."
+        },
+        "hashbangs": {
+          "type": "boolean",
+          "default": true,
+          "order": 2,
+          "title": "Check hashbangs",
+          "description": "Allow lines like `#!/usr/bin/perl` to affect icons."
+        },
+        "modelines": {
+          "type": "boolean",
+          "default": true,
+          "order": 3,
+          "title": "Check modelines",
+          "description": "Allow [Vim](http://vim.wikia.com/wiki/Modeline_magic) and [Emacs](https://www.gnu.org/software/emacs/manual/html_node/emacs/Specifying-File-Variables.html#Specifying-File-Variables) modelines to change icons."
+        },
+        "usertypes": {
+          "type": "boolean",
+          "default": true,
+          "order": 4,
+          "title": "Use custom file-types",
+          "description": "Respect the user's [custom language-type settings](http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-language-recognition)."
+        },
+        "linguist": {
+          "type": "boolean",
+          "default": true,
+          "order": 5,
+          "title": "Use .gitattributes",
+          "description": "Honour [`linguist-language`](https://github.com/github/linguist#using-gitattributes) attributes in local `.gitattributes` files."
+        }
+      }
+    }
+  }
 }
