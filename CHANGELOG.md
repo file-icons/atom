@@ -7,7 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------------
 ### Fixed
-- [[`#478`][]] Occasional breakage when opening TreeView on Arch Linux
+- [[`#478`][]] Occasional breakage opening `tree-view` on Arch Linux
+- Icons reverted when changing certain `tree-view` settings
 
 [`#478`]: https://github.com/DanBrooker/file-icons/issues/478
 
