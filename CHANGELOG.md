@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
--------------------
+[2.0.4] - 2017-01-02
+--------------------
 ### Fixed
 - [[`#478`][]] Occasional breakage opening `tree-view` on Arch Linux
 - Icons reverted when changing certain `tree-view` settings
@@ -969,7 +969,8 @@ Fixed breakage at startup when run on Windows.
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.3...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.4...HEAD
+[2.0.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.4
 [2.0.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.3
 [2.0.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.2
 [2.0.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.1
