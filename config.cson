@@ -2987,7 +2987,7 @@ fileIcons:
 			[/^\.?(irbrc|gemrc|pryrc|rspec|ruby-(gemset|version))$/i, "medium-red"]
 			[/^(Appraisals|(Rake|Gem|[bB]uild|Berks|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(\.lock)?)$/, "medium-red"]
 			[/\.(jbuilder|rbuild|rb[wx]|builder)$/i, "dark-red"]
-			["_spec.rb", "light-green"]
+			["_spec.rb", "light-green", priority: 2]
 			[/^rails$/, "medium-red"]
 			[".watchr", "dark-yellow"]
 		]

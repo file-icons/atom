@@ -4,6 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+--------------------
+### Fixed
+- [[`#483`][]] Wrong colour used for `_spec.rb` files
+
+[`#483`]: https://github.com/DanBrooker/file-icons/issues/483
+
+
 [2.0.4] - 2017-01-02
 --------------------
 ### Fixed
