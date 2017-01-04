@@ -33,6 +33,11 @@
 			"versions": {
 				"1.0.0": "provideService"
 			}
+		},
+		"atom.file-icons": {
+			"versions": {
+				"1.0.0": "suppressFOUC"
+			}
 		}
 	},
 	"configSchema": {
