@@ -12,10 +12,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#489`][]] Wrong icon used for Dockerfiles
 - [[`#491`][]] Error thrown for empty pathname
 
-[`#481`]: https://github.com/DanBrooker/file-icons/issues/481
-[`#483`]: https://github.com/DanBrooker/file-icons/issues/483
-[`#489`]: https://github.com/DanBrooker/file-icons/issues/489
-[`#491`]: https://github.com/DanBrooker/file-icons/issues/491
+[`#481`]: https://github.com/file-icons/atom/issues/481
+[`#483`]: https://github.com/file-icons/atom/issues/483
+[`#489`]: https://github.com/file-icons/atom/issues/489
+[`#491`]: https://github.com/file-icons/atom/issues/491
 
 
 [2.0.4] - 2017-01-02
@@ -24,7 +24,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#478`][]] Occasional breakage opening `tree-view` on Arch Linux
 - Icons reverted when changing certain `tree-view` settings
 
-[`#478`]: https://github.com/DanBrooker/file-icons/issues/478
+[`#478`]: https://github.com/file-icons/atom/issues/478
 
 
 [2.0.3] - 2017-01-01
@@ -38,8 +38,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [[`#476`][]] Exception thrown deserialising external file-paths
 
-[`#476`]: https://github.com/DanBrooker/file-icons/issues/470
-[served]: https://github.com/DanBrooker/file-icons#integration-with-other-packages
+[`#476`]: https://github.com/file-icons/atom/issues/470
+[served]: https://github.com/file-icons/atom#integration-with-other-packages
 
 
 [2.0.2] - 2016-12-30
@@ -56,10 +56,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Currently working on
 - [[`#471`][]] Icons not showing in Nuclide file-tree
 
-[`#470`]: https://github.com/DanBrooker/file-icons/issues/470
-[`#471`]: https://github.com/DanBrooker/file-icons/issues/471
-[`#472`]: https://github.com/DanBrooker/file-icons/issues/472
-[`#473`]: https://github.com/DanBrooker/file-icons/issues/473
+[`#470`]: https://github.com/file-icons/atom/issues/470
+[`#471`]: https://github.com/file-icons/atom/issues/471
+[`#472`]: https://github.com/file-icons/atom/issues/472
+[`#473`]: https://github.com/file-icons/atom/issues/473
 
 
 
@@ -72,7 +72,7 @@ Fixed breakage at startup when run on Windows.
 --------------------
 ### Added
 - **New features:** Hashbang detection, modeline recognition, and much more.
-[Please consult the release notes for full details](https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0).
+[Please consult the release notes for full details](https://github.com/file-icons/atom/releases/tag/v2.0.0).
 - **New icons:** ArtText (`.artx` folders), Electron, FFmpeg, GN (`.gn`, `.gni`), ICU, libuv, Ninja (`.ninja`), Nodemon (`nodemon.json`, `.nodemonignore`), Rascal (`.rsc`), V8
 - **Support:** HTML (`.vash`, `.xhtml`), Source maps (`.css.map`, `.js.map`)
 
@@ -113,8 +113,8 @@ Fixed breakage at startup when run on Windows.
 - **New icons:** Glyphs (`.glyphs`), Yarn (`yarn.lock`)
 
 ### Fixed
-- [[`#435`](https://github.com/DanBrooker/file-icons/issues/435)] Icon of [`markdown-preview`] misaligned after reloading
-- [[`#437`](https://github.com/DanBrooker/file-icons/issues/437)] Ambiguous wording of package settings
+- [[`#435`](https://github.com/file-icons/atom/issues/435)] Icon of [`markdown-preview`] misaligned after reloading
+- [[`#437`](https://github.com/file-icons/atom/issues/437)] Ambiguous wording of package settings
 
 [`markdown-preview`]: https://github.com/atom/markdown-preview
 
@@ -126,7 +126,7 @@ Fixed breakage at startup when run on Windows.
 - **Support:** Git (`.keep`), `.vagrant` folders
 
 ### Fixed
-- [[`#429`](https://github.com/DanBrooker/file-icons/issues/429)] Tab-icon colours not obeying value of user's _"Changed only"_ setting.
+- [[`#429`](https://github.com/file-icons/atom/issues/429)] Tab-icon colours not obeying value of user's _"Changed only"_ setting.
 
 
 [1.7.20] - 2016-10-04
@@ -169,7 +169,7 @@ Fixed breakage at startup when run on Windows.
 - Laravel icon is now orange, as per their logo
 
 ### Fixed
-- [[`#400`](https://github.com/DanBrooker/file-icons/issues/400)] Laravel icon too small in Atom Material UI
+- [[`#400`](https://github.com/file-icons/atom/issues/400)] Laravel icon too small in Atom Material UI
 
 
 [1.7.16] - 2016-07-05
@@ -189,10 +189,10 @@ Fixed breakage at startup when run on Windows.
 - **Support:** Atom (`.atom`), Bower (`bower_components`), Debian (`control`, `rules`), Red Hat (`.spec`), Webpack (`webpackfile.js`)
 
 ### Changed
-- [[`#381`](https://github.com/DanBrooker/file-icons/issues/381)] Erosion removed from Vagrant icon
+- [[`#381`](https://github.com/file-icons/atom/issues/381)] Erosion removed from Vagrant icon
 
 ### Fixed
-- [[`#390`](https://github.com/DanBrooker/file-icons/issues/390)] Directory icons now respect user's *"Colour only when changed"* setting
+- [[`#390`](https://github.com/file-icons/atom/issues/390)] Directory icons now respect user's *"Colour only when changed"* setting
 
 
 [1.7.14] - 2016-06-10
@@ -228,7 +228,7 @@ Fixed breakage at startup when run on Windows.
 - Alternative solid-coloured icons for TypeScript (`\02A6`), TSX (`\E9E7`) and JSX (`\E9E6`). To use them, copy their codepoints into your stylesheet.
 
 ### Changed
-- [[`#366`](https://github.com/DanBrooker/file-icons/issues/366)] Default icon changed to a blank page instead of a text file. This is more format-neutral, and makes "true" text formats easier to spot.
+- [[`#366`](https://github.com/file-icons/atom/issues/366)] Default icon changed to a blank page instead of a text file. This is more format-neutral, and makes "true" text formats easier to spot.
 - Restricted text-file icons to the following formats: `.ans`, `.err`, `.etx`, `.irclog`, `.log`, `.msg`, `.nfo`, `.rtf`, `.srt`, `.sub`, `.text`, `.txt`, `.uof`, `.uop`, `.uos`, `.uot`, `.utf8`, `.utxt`, `.weechatlog`
 - APL icon replaced with the more recognisable [grade up symbol](http://www.fileformat.info/info/unicode/char/234b/index.htm).
 - Cakefile class-name changed from `.cake` to `.cakefile` to accommodate C#'s "cake"
@@ -258,7 +258,7 @@ Fixed breakage at startup when run on Windows.
 - **Support:** APL (`.apl.history`), Binary (`.swp`), Config files (`.apl.ascii`), Manual pages (`mmn`, `mmt`, `tmac.`), Stylelint (`.stylelintignore`)
 
 ### Fixed
-- [[`#352`](https://github.com/DanBrooker/file-icons/issues/352)] Reverted fix for modified files with yellow icons
+- [[`#352`](https://github.com/file-icons/atom/issues/352)] Reverted fix for modified files with yellow icons
 - Babel icon now shows for all `.babel` files
 
 
@@ -276,7 +276,7 @@ Fixed breakage at startup when run on Windows.
 - Prolog files now use a dedicated icon instead of a generic one
 
 ### Fixed
-- [[`#341`](https://github.com/DanBrooker/file-icons/issues/341)] Yellow icons no longer share same colour as modification indicator
+- [[`#341`](https://github.com/file-icons/atom/issues/341)] Yellow icons no longer share same colour as modification indicator
 - `.eslintrc.js` files are no longer overridden by JS icon
 
 
@@ -284,11 +284,11 @@ Fixed breakage at startup when run on Windows.
 --------------------
 ### Added
 - **New icons:** Cabal, eC, MuPAD, OOC, Opa, OpenEdge ABL, Ox, Oxygene, Oz, Pan, Papyrus, Parrot, PAWN, Pickle, Pike, PogoScript, Pony, POV-Ray SDL, Propeller Spin, Puppet, PureBasic, PureScript, Racket, RDoc, REALbasic/Xojo, Rebol, Red, reStructuredText, RobotFramework, Sage, Scheme, Scilab, Self, Shen, Slash, SQF, Stan, Stata, SuperCollider, SystemVerilog, Textile, TextMate, Turing, TXL, Uno, UnrealScript, UrWeb, Varnish, VHDL, X10, XMOS, XPages, Xtend, Zephir, Zimpl
-- **Support:** [Over +120 new extensions added](https://github.com/DanBrooker/file-icons/releases/tag/v1.7.8)
+- **Support:** [Over +120 new extensions added](https://github.com/file-icons/atom/releases/tag/v1.7.8)
 
 ### Changed
-- [[`#339`](https://github.com/DanBrooker/file-icons/issues/339)] `.toc` files now use a more generic-looking icon
-- [[`93e705d`](https://github.com/DanBrooker/file-icons/commit/93e705d4d)] Fixed advance widths of icons with portrait-sized dimensions
+- [[`#339`](https://github.com/file-icons/atom/issues/339)] `.toc` files now use a more generic-looking icon
+- [[`93e705d`](https://github.com/file-icons/atom/commit/93e705d4d)] Fixed advance widths of icons with portrait-sized dimensions
 - Size and alignment corrections made to Boot, ClojureScript, Elm, Ionic, JSX, Leiningen, nginx and React icons
 
 ### Removed
@@ -302,7 +302,7 @@ Fixed breakage at startup when run on Windows.
 - **Support:** Certificate files (`.crt`, `.key`), GraphQL (`.gql`), JFlex (`.flex`, `.jflex`), JSONiq (`.jq`), Lex (`.lex`), Logos (`.x`, `.xm`, `.xi`), M (`.mumps`), Modelica (`.mo`), Module Management Systems (`.mmk`, `.mms`), MoonScript (`.moon`), MUF (`.muf`), Myghty (`.myt`), NCL (`.ncl`), Nu (`.nu`), Pure Data (`.pd`), QMake (`.pri`), Unity3D assets (`.anim`, `.asset`, `.mat`, `.meta`, `.prefab`, `.unity`)
 
 ### Fixed
-- [[`#336`](https://github.com/DanBrooker/file-icons/issues/336)] Errors thrown for users of the [`sublime-panes`](https://atom.io/packages/sublime-panes) package
+- [[`#336`](https://github.com/file-icons/atom/issues/336)] Errors thrown for users of the [`sublime-panes`](https://atom.io/packages/sublime-panes) package
 
 
 [1.7.6] - 2016-04-22
@@ -312,8 +312,8 @@ Fixed breakage at startup when run on Windows.
 - **Support:** Composer (`composer.phar`), Cycript (`.cy`), DNS Zones (`.arpa`, `.zone`), Dust (`.dust`), Dylan (`.dylan`, `.dyl`, `.intr`, `.lid`), ECL (`.ecl`, `.eclxml`), Formatted (`.eam.fs`), Forth (`.4th`, `.fth`, `.forth`, `.frt`), G-code (`.gco`, `.gcode`), Grace (`.grace`), Graph Modelling Language (`.gml`)
 
 ### Changed
-- [[`#331`](https://github.com/DanBrooker/file-icons/issues/331)] Generic config icon now used for `.conf` files instead of nginx logo
-- [[`#199`](https://github.com/DanBrooker/file-icons/issues/199)] Python icon is now blue instead of orange
+- [[`#331`](https://github.com/file-icons/atom/issues/331)] Generic config icon now used for `.conf` files instead of nginx logo
+- [[`#199`](https://github.com/file-icons/atom/issues/199)] Python icon is now blue instead of orange
 - Visual Basic files now distinguished by Visual Studio icon
 
 
@@ -322,7 +322,7 @@ Fixed breakage at startup when run on Windows.
 ### Added
 - New selector variable to override tab-icons in user stylesheets
 - **New icons:** AMPL, Ceylon, Chapel, Cirru, Clarion, Dogescript, Fabric, IDL, Jakefile, JSON-LD, LFE, MediaWiki, Nmap, Nunjucks, Tcl, OWL, Phalcon, PostScript, SAS, SPARQL, Verilog, YANG
-- **Support:** [Over +150](https://github.com/DanBrooker/file-icons/releases/tag/v1.7.5#support) new extensions and filenames added
+- **Support:** [Over +150](https://github.com/file-icons/atom/releases/tag/v1.7.5#support) new extensions and filenames added
 
 ### Changed
 - Font Awesome updated to [4.6.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.6.1)
@@ -339,7 +339,7 @@ Fixed breakage at startup when run on Windows.
 - **Support:** AGS, ApacheConf (`.apacheconf`, `.vhost`), Befunge, BitBake, BlitzMax, Brightscript, C2hs, Cap'n Proto, COBOL, `.csx`, Extra extensions for C, C++ and Erlang, Haskell `.hsc` files, HTTP, Jenkins, JSONLD, TeX `.aux` files, TopoJSON
 
 ### Fixed
-- [[`#296`](https://github.com/DanBrooker/file-icons/issues/296)] Material UI resets size adjustments applied to icons
+- [[`#296`](https://github.com/file-icons/atom/issues/296)] Material UI resets size adjustments applied to icons
 
 
 [1.7.3] - 2016-04-17
@@ -360,8 +360,8 @@ Fixed breakage at startup when run on Windows.
 - Support for numerous GNU Automake/Autoconf files
 
 ### Fixed
-- [[`#193`](https://github.com/DanBrooker/file-icons/issues/193)] Tab icons now update when changing file extensions
-- [[`#316`](https://github.com/DanBrooker/file-icons/issues/316)] Newly-saved files now display icons in tab
+- [[`#193`](https://github.com/file-icons/atom/issues/193)] Tab icons now update when changing file extensions
+- [[`#316`](https://github.com/file-icons/atom/issues/316)] Newly-saved files now display icons in tab
 
 
 [1.7.1] - 2016-04-05
@@ -371,8 +371,8 @@ Fixed breakage at startup when run on Windows.
 - **Support:** `.jsbeautifyrc`, `.coffeelintignore`, additional Makefile names (`mkfile`, `Kbuild`, `GNUmakefile`), `.Rmd`
 
 ### Fixed
-- [[`#310`](https://github.com/DanBrooker/file-icons/issues/310)] Go icon replaced with something clearer
-- [[`#311`](https://github.com/DanBrooker/file-icons/issues/311)] Lowercase `makefile` no longer matches any filename
+- [[`#310`](https://github.com/file-icons/atom/issues/310)] Go icon replaced with something clearer
+- [[`#311`](https://github.com/file-icons/atom/issues/311)] Lowercase `makefile` no longer matches any filename
 - Changelog now displays properly in Atom's Markdown preview
 
 
@@ -417,13 +417,13 @@ Fixed breakage at startup when run on Windows.
 - **New icons:** LLVM assembly (`.ll`)
 
 ### Fixed
-- [[`#271`](https://github.com/DanBrooker/file-icons/issues/271)] Tab icons misaligned in files opened by Remote-Edit
+- [[`#271`](https://github.com/file-icons/atom/issues/271)] Tab icons misaligned in files opened by Remote-Edit
 
 
 [1.6.18] - 2016-03-06
 ---------------------
 ### Fixed
-- [[`#296`](https://github.com/DanBrooker/file-icons/issues/296)] Riot tag too large in Atom Material theme's tree view
+- [[`#296`](https://github.com/file-icons/atom/issues/296)] Riot tag too large in Atom Material theme's tree view
 
 
 [1.6.17] - 2016-03-01
@@ -433,8 +433,8 @@ Fixed breakage at startup when run on Windows.
 - NPM icon changed to use block-shaped "n" used by npmjs.com
 
 ### Fixed
-- [[`#284`](https://github.com/DanBrooker/file-icons/issues/284)] Pattern matching used for task runner config files
-- [[`#246`](https://github.com/DanBrooker/file-icons/issues/246)] Text-file icons not showing in Flatland Dark UI theme
+- [[`#284`](https://github.com/file-icons/atom/issues/284)] Pattern matching used for task runner config files
+- [[`#246`](https://github.com/file-icons/atom/issues/246)] Text-file icons not showing in Flatland Dark UI theme
 
 
 [1.6.16] - 2016-02-27
@@ -475,8 +475,8 @@ Fixed breakage at startup when run on Windows.
 - Font Awesome updated to [4.4](https://github.com/FortAwesome/Font-Awesome/releases/tag/v4.4.0)
 
 ### Fixed
-- [[`#239`](https://github.com/DanBrooker/file-icons/issues/239)] Bottom border of inactive tabs hidden/incomplete
-- [[`#248`](https://github.com/DanBrooker/file-icons/issues/248)] Incorrect alignment/centring of React/JSX icon
+- [[`#239`](https://github.com/file-icons/atom/issues/239)] Bottom border of inactive tabs hidden/incomplete
+- [[`#248`](https://github.com/file-icons/atom/issues/248)] Incorrect alignment/centring of React/JSX icon
 
 
 
@@ -688,7 +688,7 @@ Fixed breakage at startup when run on Windows.
 - **Support:** Nodemon
 
 ### Fixed
-- [[`#103`](https://github.com/DanBrooker/file-icons/issues/103)] Tab icons for Settings and Release Notes disappearing
+- [[`#103`](https://github.com/file-icons/atom/issues/103)] Tab icons for Settings and Release Notes disappearing
 
 
 
@@ -712,7 +712,7 @@ Fixed breakage at startup when run on Windows.
 [1.4.6] - 2015-01-15
 --------------------
 ### Fixed
-- [[`#104`](https://github.com/DanBrooker/file-icons/issues/104)] Updated core selectors to use new custom elements
+- [[`#104`](https://github.com/file-icons/atom/issues/104)] Updated core selectors to use new custom elements
 
 ### Changed
 - Updated minimum compatible Atom version to 0.171.0
@@ -819,7 +819,7 @@ Fixed breakage at startup when run on Windows.
 [1.3.2] - 2014-08-01
 --------------------
 ### Fixed
-- [[`#57`](https://github.com/DanBrooker/file-icons/issues/57)] Console error causing dev tools to open when reloading window
+- [[`#57`](https://github.com/file-icons/atom/issues/57)] Console error causing dev tools to open when reloading window
 
 
 
@@ -834,7 +834,7 @@ Fixed breakage at startup when run on Windows.
 - Font smoothing to improve icon appearance on Mac OS
 
 ### Changed
-- [[`#54`](https://github.com/DanBrooker/file-icons/issues/54)] Reverted CoffeeScript to use pre-1.3.0 icon
+- [[`#54`](https://github.com/file-icons/atom/issues/54)] Reverted CoffeeScript to use pre-1.3.0 icon
 - Reverted C and C++ files to use generic icons
 
 
@@ -881,7 +881,7 @@ Fixed breakage at startup when run on Windows.
 [1.2.4] - 2014-06-29
 --------------------
 ### Fixed
-- [[`#30`](https://github.com/DanBrooker/file-icons/issues/30)] Text of active tab vertically misaligned
+- [[`#30`](https://github.com/file-icons/atom/issues/30)] Text of active tab vertically misaligned
 
 
 
@@ -937,14 +937,14 @@ Fixed breakage at startup when run on Windows.
 [1.0.2] - 2014-05-28
 --------------------
 ### Fixed
-- [[`#7`](https://github.com/DanBrooker/file-icons/issues/7)] Incorrectly-centred icons
+- [[`#7`](https://github.com/file-icons/atom/issues/7)] Incorrectly-centred icons
 
 
 
 [1.0.1] - 2014-05-26
 --------------------
 ### Fixed
-- [[`#6`](https://github.com/DanBrooker/file-icons/issues/6)]:
+- [[`#6`](https://github.com/file-icons/atom/issues/6)]:
           Console error when opening a project in dev mode
 
 
@@ -983,95 +983,95 @@ Fixed breakage at startup when run on Windows.
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.5...HEAD
-[2.0.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.5
-[2.0.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.4
-[2.0.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.3
-[2.0.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.2
-[2.0.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.1
-[2.0.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.0
-[1.7.25]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.25
-[1.7.24]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.24
-[1.7.23]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.23
-[1.7.22]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.22
-[1.7.21]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.21
-[1.7.20]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.20
-[1.7.19]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.19
-[1.7.18]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.18
-[1.7.17]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.17
-[1.7.16]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.16
-[1.7.15]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.15
-[1.7.14]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.14
-[1.7.13]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.13
-[1.7.12]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.12
-[1.7.11]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.11
-[1.7.10]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.10
-[1.7.9]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.9
-[1.7.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.8
-[1.7.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.7
-[1.7.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.6
-[1.7.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.5
-[1.7.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.4
-[1.7.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.3
-[1.7.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.2
-[1.7.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.1
-[1.7.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.0
-[1.6.21]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.21
-[1.6.20]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.20
-[1.6.19]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.19
-[1.6.18]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.18
-[1.6.17]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.17
-[1.6.16]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.16
-[1.6.15]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.15
-[1.6.14]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.14
-[1.6.13]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.13
-[1.6.12]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.12
-[1.6.11]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.11
-[1.6.10]: https://github.com/DanBrooker/file-icons/releases/tag/v1.6.10
-[1.6.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.8
-[1.6.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.7
-[1.6.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.6
-[1.6.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.5
-[1.6.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.3
-[1.6.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.6.1
-[1.5.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.8
-[1.5.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.7
-[1.5.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.6
-[1.5.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.5
-[1.5.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.4
-[1.5.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.3
-[1.5.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.2
-[1.5.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.1
-[1.5.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.5.0
-[1.4.11]: https://github.com/DanBrooker/file-icons/releases/tag/v1.4.11
-[1.4.10]: https://github.com/DanBrooker/file-icons/releases/tag/v1.4.10
-[1.4.9]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.9
-[1.4.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.8
-[1.4.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.7
-[1.4.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.6
-[1.4.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.5
-[1.4.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.4
-[1.4.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.3
-[1.4.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.2
-[1.4.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.1
-[1.4.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.4.0
-[1.3.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.6
-[1.3.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.5
-[1.3.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.4
-[1.3.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.3
-[1.3.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.2
-[1.3.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.1
-[1.3.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.3.0
-[1.2.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.6
-[1.2.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.5
-[1.2.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.4
-[1.2.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.3
-[1.2.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.2
-[1.2.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.1
-[1.2.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.2.0
-[1.1.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.1.0
-[1.0.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.0.2
-[1.0.1]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.0.1
-[1.0.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.0.0
-[0.3.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v0.3.0
-[0.2.0]:  https://github.com/DanBrooker/file-icons/releases/tag/v0.2.0
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.5...HEAD
+[2.0.5]:  https://github.com/file-icons/atom/releases/tag/v2.0.5
+[2.0.4]:  https://github.com/file-icons/atom/releases/tag/v2.0.4
+[2.0.3]:  https://github.com/file-icons/atom/releases/tag/v2.0.3
+[2.0.2]:  https://github.com/file-icons/atom/releases/tag/v2.0.2
+[2.0.1]:  https://github.com/file-icons/atom/releases/tag/v2.0.1
+[2.0.0]:  https://github.com/file-icons/atom/releases/tag/v2.0.0
+[1.7.25]: https://github.com/file-icons/atom/releases/tag/v1.7.25
+[1.7.24]: https://github.com/file-icons/atom/releases/tag/v1.7.24
+[1.7.23]: https://github.com/file-icons/atom/releases/tag/v1.7.23
+[1.7.22]: https://github.com/file-icons/atom/releases/tag/v1.7.22
+[1.7.21]: https://github.com/file-icons/atom/releases/tag/v1.7.21
+[1.7.20]: https://github.com/file-icons/atom/releases/tag/v1.7.20
+[1.7.19]: https://github.com/file-icons/atom/releases/tag/v1.7.19
+[1.7.18]: https://github.com/file-icons/atom/releases/tag/v1.7.18
+[1.7.17]: https://github.com/file-icons/atom/releases/tag/v1.7.17
+[1.7.16]: https://github.com/file-icons/atom/releases/tag/v1.7.16
+[1.7.15]: https://github.com/file-icons/atom/releases/tag/v1.7.15
+[1.7.14]: https://github.com/file-icons/atom/releases/tag/v1.7.14
+[1.7.13]: https://github.com/file-icons/atom/releases/tag/v1.7.13
+[1.7.12]: https://github.com/file-icons/atom/releases/tag/v1.7.12
+[1.7.11]: https://github.com/file-icons/atom/releases/tag/v1.7.11
+[1.7.10]: https://github.com/file-icons/atom/releases/tag/v1.7.10
+[1.7.9]:  https://github.com/file-icons/atom/releases/tag/v1.7.9
+[1.7.8]:  https://github.com/file-icons/atom/releases/tag/v1.7.8
+[1.7.7]:  https://github.com/file-icons/atom/releases/tag/v1.7.7
+[1.7.6]:  https://github.com/file-icons/atom/releases/tag/v1.7.6
+[1.7.5]:  https://github.com/file-icons/atom/releases/tag/v1.7.5
+[1.7.4]:  https://github.com/file-icons/atom/releases/tag/v1.7.4
+[1.7.3]:  https://github.com/file-icons/atom/releases/tag/v1.7.3
+[1.7.2]:  https://github.com/file-icons/atom/releases/tag/v1.7.2
+[1.7.1]:  https://github.com/file-icons/atom/releases/tag/v1.7.1
+[1.7.0]:  https://github.com/file-icons/atom/releases/tag/v1.7.0
+[1.6.21]: https://github.com/file-icons/atom/releases/tag/v1.6.21
+[1.6.20]: https://github.com/file-icons/atom/releases/tag/v1.6.20
+[1.6.19]: https://github.com/file-icons/atom/releases/tag/v1.6.19
+[1.6.18]: https://github.com/file-icons/atom/releases/tag/v1.6.18
+[1.6.17]: https://github.com/file-icons/atom/releases/tag/v1.6.17
+[1.6.16]: https://github.com/file-icons/atom/releases/tag/v1.6.16
+[1.6.15]: https://github.com/file-icons/atom/releases/tag/v1.6.15
+[1.6.14]: https://github.com/file-icons/atom/releases/tag/v1.6.14
+[1.6.13]: https://github.com/file-icons/atom/releases/tag/v1.6.13
+[1.6.12]: https://github.com/file-icons/atom/releases/tag/v1.6.12
+[1.6.11]: https://github.com/file-icons/atom/releases/tag/v1.6.11
+[1.6.10]: https://github.com/file-icons/atom/releases/tag/v1.6.10
+[1.6.8]:  https://github.com/file-icons/atom/releases/tag/v1.6.8
+[1.6.7]:  https://github.com/file-icons/atom/releases/tag/v1.6.7
+[1.6.6]:  https://github.com/file-icons/atom/releases/tag/v1.6.6
+[1.6.5]:  https://github.com/file-icons/atom/releases/tag/v1.6.5
+[1.6.3]:  https://github.com/file-icons/atom/releases/tag/v1.6.3
+[1.6.1]:  https://github.com/file-icons/atom/releases/tag/v1.6.1
+[1.5.8]:  https://github.com/file-icons/atom/releases/tag/v1.5.8
+[1.5.7]:  https://github.com/file-icons/atom/releases/tag/v1.5.7
+[1.5.6]:  https://github.com/file-icons/atom/releases/tag/v1.5.6
+[1.5.5]:  https://github.com/file-icons/atom/releases/tag/v1.5.5
+[1.5.4]:  https://github.com/file-icons/atom/releases/tag/v1.5.4
+[1.5.3]:  https://github.com/file-icons/atom/releases/tag/v1.5.3
+[1.5.2]:  https://github.com/file-icons/atom/releases/tag/v1.5.2
+[1.5.1]:  https://github.com/file-icons/atom/releases/tag/v1.5.1
+[1.5.0]:  https://github.com/file-icons/atom/releases/tag/v1.5.0
+[1.4.11]: https://github.com/file-icons/atom/releases/tag/v1.4.11
+[1.4.10]: https://github.com/file-icons/atom/releases/tag/v1.4.10
+[1.4.9]:  https://github.com/file-icons/atom/releases/tag/v1.4.9
+[1.4.8]:  https://github.com/file-icons/atom/releases/tag/v1.4.8
+[1.4.7]:  https://github.com/file-icons/atom/releases/tag/v1.4.7
+[1.4.6]:  https://github.com/file-icons/atom/releases/tag/v1.4.6
+[1.4.5]:  https://github.com/file-icons/atom/releases/tag/v1.4.5
+[1.4.4]:  https://github.com/file-icons/atom/releases/tag/v1.4.4
+[1.4.3]:  https://github.com/file-icons/atom/releases/tag/v1.4.3
+[1.4.2]:  https://github.com/file-icons/atom/releases/tag/v1.4.2
+[1.4.1]:  https://github.com/file-icons/atom/releases/tag/v1.4.1
+[1.4.0]:  https://github.com/file-icons/atom/releases/tag/v1.4.0
+[1.3.6]:  https://github.com/file-icons/atom/releases/tag/v1.3.6
+[1.3.5]:  https://github.com/file-icons/atom/releases/tag/v1.3.5
+[1.3.4]:  https://github.com/file-icons/atom/releases/tag/v1.3.4
+[1.3.3]:  https://github.com/file-icons/atom/releases/tag/v1.3.3
+[1.3.2]:  https://github.com/file-icons/atom/releases/tag/v1.3.2
+[1.3.1]:  https://github.com/file-icons/atom/releases/tag/v1.3.1
+[1.3.0]:  https://github.com/file-icons/atom/releases/tag/v1.3.0
+[1.2.6]:  https://github.com/file-icons/atom/releases/tag/v1.2.6
+[1.2.5]:  https://github.com/file-icons/atom/releases/tag/v1.2.5
+[1.2.4]:  https://github.com/file-icons/atom/releases/tag/v1.2.4
+[1.2.3]:  https://github.com/file-icons/atom/releases/tag/v1.2.3
+[1.2.2]:  https://github.com/file-icons/atom/releases/tag/v1.2.2
+[1.2.1]:  https://github.com/file-icons/atom/releases/tag/v1.2.1
+[1.2.0]:  https://github.com/file-icons/atom/releases/tag/v1.2.0
+[1.1.0]:  https://github.com/file-icons/atom/releases/tag/v1.1.0
+[1.0.2]:  https://github.com/file-icons/atom/releases/tag/v1.0.2
+[1.0.1]:  https://github.com/file-icons/atom/releases/tag/v1.0.1
+[1.0.0]:  https://github.com/file-icons/atom/releases/tag/v1.0.0
+[0.3.0]:  https://github.com/file-icons/atom/releases/tag/v0.3.0
+[0.2.0]:  https://github.com/file-icons/atom/releases/tag/v0.2.0
