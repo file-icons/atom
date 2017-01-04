@@ -19,7 +19,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [2.0.6] - 2017-01-04
 --------------------
-Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
+Updated URLs to use new GitHub [organization](https://github.com/file-icons).
 
 
 [2.0.5] - 2017-01-04
