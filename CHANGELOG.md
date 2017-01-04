@@ -4,7 +4,7 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
+[2.0.5] - 2017-01-04
 --------------------
 ### Fixed
 - [[`#481`][]] Rendering issue in Fuzzy-Finder
@@ -983,7 +983,8 @@ Fixed breakage at startup when run on Windows.
 Initial release.
 
 
-[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.4...HEAD
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v2.0.5...HEAD
+[2.0.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.5
 [2.0.4]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.4
 [2.0.3]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.3
 [2.0.2]:  https://github.com/DanBrooker/file-icons/releases/tag/v2.0.2
