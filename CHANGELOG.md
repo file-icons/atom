@@ -4,7 +4,7 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
+[2.0.7] - 2017-01-04
 --------------------
 ### Fixed
 - [[`#492`][]] Breakage with `yosemate-ui`
@@ -1002,7 +1002,8 @@ Contributors should take heed of the new [submission process](https://github.com
 Initial release.
 
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.6...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.7...HEAD
+[2.0.7]:  https://github.com/file-icons/atom/releases/tag/v2.0.7
 [2.0.6]:  https://github.com/file-icons/atom/releases/tag/v2.0.6
 [2.0.5]:  https://github.com/file-icons/atom/releases/tag/v2.0.5
 [2.0.4]:  https://github.com/file-icons/atom/releases/tag/v2.0.4
