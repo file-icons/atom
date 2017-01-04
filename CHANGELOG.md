@@ -8,8 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 --------------------
 ### Fixed
 - [[`#483`][]] Wrong colour used for `_spec.rb` files
+- [[`#489`][]] Wrong icon used for Dockerfiles
 
 [`#483`]: https://github.com/DanBrooker/file-icons/issues/483
+[`#489`]: https://github.com/DanBrooker/file-icons/issues/489
 
 
 [2.0.4] - 2017-01-02
