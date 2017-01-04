@@ -8,8 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 --------------------
 ### Fixed
 - [[`#492`][]] Breakage with `yosemate-ui`
+- [[`#493`][]] Breakage for repositories with unreadable paths
 
 [`#492`]: https://github.com/file-icons/atom/issues/492
+[`#493`]: https://github.com/file-icons/atom/issues/493
 
 
 [2.0.6] - 2017-01-04
