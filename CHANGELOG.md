@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#492`][]] Breakage with `yosemate-ui`
 - [[`#493`][]] Breakage for repositories with unreadable paths
 - [[`#494`][]] Tree-view hidden at startup (for real this time)
+- Breakage if creating file with name matching a deleted folder
 
 [`#492`]: https://github.com/file-icons/atom/issues/492
 [`#493`]: https://github.com/file-icons/atom/issues/493
