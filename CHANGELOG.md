@@ -4,6 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+--------------------
+### Fixed
+- [[`#492`][]] Breakage with `yosemate-ui`
+
+[`#492`]: https://github.com/file-icons/atom/issues/492
+
+
 [2.0.6] - 2017-01-04
 --------------------
 Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
