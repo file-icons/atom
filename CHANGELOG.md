@@ -10,10 +10,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#481`][]] Rendering issue in Fuzzy-Finder
 - [[`#483`][]] Wrong colour used for `_spec.rb` files
 - [[`#489`][]] Wrong icon used for Dockerfiles
+- [[`#491`][]] Error thrown for empty pathname
 
 [`#481`]: https://github.com/DanBrooker/file-icons/issues/481
 [`#483`]: https://github.com/DanBrooker/file-icons/issues/483
 [`#489`]: https://github.com/DanBrooker/file-icons/issues/489
+[`#491`]: https://github.com/DanBrooker/file-icons/issues/491
 
 
 [2.0.4] - 2017-01-02
