@@ -40,7 +40,6 @@ Consult the package stylesheets to see what classes are used:
 * [**Devicons**](https://github.com/Alhadis/DevOpicons/blob/master/charmap.md)
 
 
-
 #### Examples
 
 * **Resize an icon:**
@@ -205,8 +204,8 @@ fileIcon.onDestroy(() => disposable.dispose());
 
 Acknowledgements
 ----------------
-Wouldn't have even tried to make this if it weren't for [sommerper/filetype-color][8].
-Also thanks to all the [contributors][9].
+Originally based on [sommerper/filetype-color][8], but now sporting a shiny new file-icons API in `v2` thanks to [Alhadis][11]!
+Also thanks to all the [contributors][9]
 
 
 [Referenced links]: ____________________________________________________
@@ -218,4 +217,5 @@ Also thanks to all the [contributors][9].
 [8]: https://github.com/sommerper/filetype-color
 [9]: https://github.com/file-icons/atom/graphs/contributors
 [10]: https://atom.io/docs/api/latest/Disposable
+[11]: https://github.com/Alhadis
 [v2.0]: https://github.com/file-icons/atom/releases/tag/v2.0.0
