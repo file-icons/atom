@@ -9,9 +9,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [[`#492`][]] Breakage with `yosemate-ui`
 - [[`#493`][]] Breakage for repositories with unreadable paths
+- [[`#494`][]] Tree-view hidden at startup (for real this time)
 
 [`#492`]: https://github.com/file-icons/atom/issues/492
 [`#493`]: https://github.com/file-icons/atom/issues/493
+[`#494`]: https://github.com/file-icons/atom/issues/494
 
 
 [2.0.6] - 2017-01-04
