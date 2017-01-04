@@ -4,6 +4,11 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[2.0.6] - 2017-01-04
+--------------------
+Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
+
+
 [2.0.5] - 2017-01-04
 --------------------
 ### Fixed
@@ -83,7 +88,7 @@ Fixed breakage at startup when run on Windows.
 - **New icons:** Rollup (new logo), SilverStripe (`.ss`)
 - [[`435769b`]]: Copies of Octicons noticeably affected by Atom 1.13's [upgrade to Octicons 4.4.0]: `Settings`, `Dashboard`, `Tag`, `Terminal`, `Video`
 
-[`435769b`]: https://github.com/Alhadis/FileIcons/commit/435769bbc5d14f11352d9c633a60ebd5d3cf2142
+[`435769b`]: https://github.com/file-icons/source/commit/435769bbc5d14f11352d9c633a60ebd5d3cf2142
 [upgrade to Octicons 4.4.0]: https://github.com/atom/atom/pull/13138
 
 ### Changed
@@ -136,7 +141,7 @@ Fixed breakage at startup when run on Windows.
 - **Support:** Emacs Lisp (`.eld`, `.gnus`, `.viper`, `Project.ede`, `_emacs`, `abbrev_defs`), Generic (`.asn`, `.asn1`), TextMate (`.tmcg`), TI-BASIC (`.8xp`, `.8xk`, `.8xp.txt`, `.8xk.txt`)
 
 ### Changed
-- Pug icon improved; previous icon retained at [`U+E9D0`](https://github.com/Alhadis/FileIcons/blob/master/charmap.md#E9D0)
+- Pug icon improved; previous icon retained at [`U+E9D0`](https://github.com/file-icons/source/blob/master/charmap.md#E9D0)
 
 
 [1.7.19] - 2016-08-28
@@ -179,7 +184,8 @@ Fixed breakage at startup when run on Windows.
 - **Support:** BibTeX (`.bst`), NPM (`npm-shrinkwrap.json`), Yeoman (`.yo-rc.json`)
 
 ### Changed
-- New procedure for adding icons - a [separate repository](https://github.com/Alhadis/FileIcons) now manages the package's icon-font. Contributors should take heed of the new [submission process]((https://github.com/Alhadis/FileIcons#adding-new-icons).
+- New procedure for adding icons - a [separate repository](https://github.com/file-icons/source) now manages the package's icon-font.
+Contributors should take heed of the new [submission process](https://github.com/file-icons/source#adding-new-icons).
 
 
 [1.7.15] - 2016-06-17
@@ -983,7 +989,8 @@ Fixed breakage at startup when run on Windows.
 Initial release.
 
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.5...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.6...HEAD
+[2.0.6]:  https://github.com/file-icons/atom/releases/tag/v2.0.6
 [2.0.5]:  https://github.com/file-icons/atom/releases/tag/v2.0.5
 [2.0.4]:  https://github.com/file-icons/atom/releases/tag/v2.0.4
 [2.0.3]:  https://github.com/file-icons/atom/releases/tag/v2.0.3

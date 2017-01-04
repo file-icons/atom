@@ -50,6 +50,6 @@ Preserve the existing format so readers can grep what they're looking for when s
 [1]: config.cson
 [2]: lib/icons/.icondb.js
 [3]: https://github.com/file-icons/atom/issues/new
-[4]: https://github.com/Alhadis/FileIcons
-[5]: https://github.com/Alhadis/FileIcons#adding-new-icons
+[4]: https://github.com/file-icons/source
+[5]: https://github.com/file-icons/source#adding-new-icons
 [6]: CHANGELOG.md

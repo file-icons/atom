@@ -34,7 +34,7 @@ Consult the package stylesheets to see what classes are used:
 
 
 #### Icon reference
-* [**File-Icons**](https://github.com/Alhadis/FileIcons/blob/master/charmap.md) 
+* [**File-Icons**](https://github.com/file-icons/source/blob/master/charmap.md) 
 * [**FontAwesome**](http://fontawesome.io/cheatsheet/)
 * [**Mfizz**](https://github.com/Alhadis/MFixx/blob/master/charmap.md)
 * [**Devicons**](https://github.com/Alhadis/DevOpicons/blob/master/charmap.md)
