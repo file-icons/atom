@@ -1637,6 +1637,7 @@ fileIcons:
 			[".scaml", "dark-red", "scaml"]
 			[".swig", "medium-green", "swig"]
 			[".vash", "medium-red", "vash"]
+			[".dtml", "medium-blue", "dtml"]
 			[/\.html?\.ecr$/i, "medium-cyan", priority: 2]
 			[/\.(html?\.erb|rhtml)$/i, "medium-red", scope: "html.erb", priority: 2]
 		]

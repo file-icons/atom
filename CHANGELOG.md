@@ -4,6 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+--------------------
+### Added
+- [[`#501`][]] Support for DTML files
+
+[`#501`]: https://github.com/file-icons/atom/issues/501
+
+
 [2.0.7] - 2017-01-04
 --------------------
 ### Fixed
