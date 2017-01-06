@@ -91,6 +91,11 @@ directoryIcons:
 		match: /^(Dropbox|\.dropbox\.cache)$/
 		colour: "medium-blue"
 
+	Emacs:
+		icon: "emacs"
+		match: /^\.emacs\.d$/
+		colour: "medium-purple"
+
 	Framework:
 		icon: "dylib"
 		match: ".framework"
@@ -1072,6 +1077,7 @@ fileIcons:
 			[/(^|\.)(elc|eld)$/i, "dark-purple", signature: /^;ELC\x17\0{3}/]
 			[".gnus", "medium-red"]
 			[".viper", "dark-green"]
+			[/^Cask$/, "dark-blue"]
 			[/^Project\.ede$/i, "medium-blue"]
 		]
 
@@ -3202,8 +3208,14 @@ fileIcons:
 
 	SQL:
 		icon: "sql"
-		scope: "sql"
-		match: /\.(sql|ddl|udf|viw|db2|prc)$/i
+		match: [
+			[/\.(my)?sql$/i, "medium-orange", "sql"]
+			[".ddl", "medium-blue"]
+			[".udf", "medium-green"]
+			[".viw", "dark-cyan"]
+			[".prc", "dark-blue"]
+			[".db2", "medium-purple"]
+		]
 
 	SQLite:
 		icon: "sqlite"

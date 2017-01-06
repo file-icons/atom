@@ -7,7 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 --------------------
 ### Added
+- Colour for SQL filetypes
 - [[`#501`][]] Support for DTML files
+- **Support:** Emacs (`Cask`, `.emacs.d` folders), SQL (`.mysql`)
 
 [`#501`]: https://github.com/file-icons/atom/issues/501
 
