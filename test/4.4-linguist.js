@@ -58,9 +58,7 @@ describe("Linguist-language attributes", () => {
 		});
 	});
 	
-	when("language attributes are changed", function(){
-		this.timeout(30000);
-		
+	when("language attributes are changed", () =>
 		it("updates affected files", () => chain([
 			() => open(".gitattributes"),
 			() => replaceText(/Erlang/, "Eiffel"),
@@ -84,6 +82,7 @@ describe("Linguist-language attributes", () => {
 			
 			() => replaceText(/APL/, "IDL"),
 			() => {
+				files = TreeView.ls();
 				files["a.feather"].should.have.classes(base + "apache-icon dark-red");
 				files["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
 				files["not-js.es.swp"].should.have.classes(base + "idl-icon medium-blue");
@@ -92,6 +91,7 @@ describe("Linguist-language attributes", () => {
 			
 			() => revert(),
 			() => {
+				files = TreeView.ls();
 				files["a.feather"].should.have.classes(base + "apache-icon dark-red");
 				files["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
 				files["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
@@ -99,6 +99,7 @@ describe("Linguist-language attributes", () => {
 			
 			() => replaceText(/Erlang|APL/g, "Java"),
 			() => {
+				files = TreeView.ls();
 				files["not-js.es"].should.have.classes(base     + "java-icon medium-purple");
 				files["not-js.es.swp"].should.have.classes(base + "java-icon medium-purple");
 				files["not-js.es"].should.not.have.classes("erlang-icon medium-red");
@@ -107,6 +108,7 @@ describe("Linguist-language attributes", () => {
 			
 			() => revert(),
 			() => {
+				files = TreeView.ls();
 				files["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
 				files["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
 				Tabs.closeAll();
@@ -115,6 +117,7 @@ describe("Linguist-language attributes", () => {
 			() => open("perl/.gitattributes"),
 			() => replaceText(/Perl6/, "Prolog"),
 			() => {
+				files = TreeView.ls();
 				files["perl/butterfly.pl"].should.have.classes(base + "prolog-icon medium-blue");
 				files["perl/butterfly.pl"].should.not.have.classes("perl6-icon medium-purple");
 				files["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
@@ -122,6 +125,7 @@ describe("Linguist-language attributes", () => {
 			
 			() => revert(),
 			() => {
+				files = TreeView.ls();
 				files["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
 				files["perl/butterfly.pl"].should.not.have.classes("prolog-icon medium-blue");
 				files["perl/butterfly.pl"].should.have.classes("perl6-icon medium-purple");
@@ -129,6 +133,7 @@ describe("Linguist-language attributes", () => {
 			
 			() => replaceText(/Perl6?/gm, "Prolog"),
 			() => {
+				files = TreeView.ls();
 				files["perl/butterfly.pl"].should.have.classes(base + "prolog-icon medium-blue");
 				files["perl/camel.pl6"].should.have.classes(base + "prolog-icon medium-blue");
 				files["perl/camel.pl6"].should.not.not.have.class("perl-icon");
@@ -137,13 +142,13 @@ describe("Linguist-language attributes", () => {
 			
 			() => revert(),
 			() => {
+				files = TreeView.ls();
 				files["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
 				files["perl/butterfly.pl"].should.have.classes(base + "perl6-icon medium-purple");
 				files["perl/camel.pl6"].should.not.not.have.class("prolog-icon");
 				files["perl/butterfly.pl"].should.not.not.have.classes("prolog-icon medium-blue");
 			}
-		]))
-	});
+		])));
 	
 	
 	when("the strategy is disabled", () => {

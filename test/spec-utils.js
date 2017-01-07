@@ -138,9 +138,7 @@ function replaceText(find, replace){
 		});
 		editor.save();
 	})
-	// HACK: This shouldn't be necessary.
-	.then(() => TreeView.collapse())
-	.then(() => TreeView.expand());
+	.then(() => TreeView.refreshHack());
 }
 
 
@@ -192,8 +190,7 @@ function revert(steps = 1){
 			editor.undo();
 		editor.save();
 	})
-	.then(() => TreeView.collapse())
-	.then(() => TreeView.expand());
+	.then(() => TreeView.refreshHack());
 }
 
 
@@ -358,4 +355,21 @@ TreeView.ls = function(){
 		entries[path] = icons[index];
 	});
 	return entries;
+}
+
+
+/**
+ * HACK: Pointlessly toggle root folder in an attempt to refresh entry-icons.
+ *
+ * Stupid kludge which shouldn't be necessary, but hey, here we are.
+ *
+ * @param {*} value
+ * @return {Promise}
+ * @private
+ */
+TreeView.refreshHack = function(value){
+	return Promise.resolve()
+		.then(() => wait(50).then(() => TreeView.collapse()))
+		.then(() => wait(50).then(() => TreeView.expand()))
+		.then(() => wait(90).then(() => Promise.resolve(value)));
 }

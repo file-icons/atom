@@ -1,7 +1,8 @@
 "use strict";
 
-describe("Match strategies", () => {
+describe("Match strategies", function(){
 	require("./spec-utils.js");
+	this.timeout(30000);
 	
 	before("Activate packages", () => {
 		return chain([

@@ -57,6 +57,8 @@ describe("Interpreter directives", () => {
 		Tabs.closeAll();
 	});
 	
+	beforeEach(() => files = TreeView.ls());
+	
 	const defaults = [
 		["astral1",        "default-icon"],
 		["astral2",        "default-icon"],

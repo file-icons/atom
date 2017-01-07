@@ -100,11 +100,15 @@ describe("Modelines", () => {
 		it("updates its icon to match", () => {
 			return open("mode-java")
 				.then(ed => replaceText(/Java/, "Python"))
-				.then(() => wait(500))
-				.then(() => files["mode-java"].should.have.classes("python-icon dark-blue"))
+				.then(() => {
+					files = TreeView.ls();
+					files["mode-java"].should.have.classes("python-icon dark-blue");
+				})
 				.then(() => revert())
-				.then(() => wait(500))
-				.then(() => files["mode-java"].should.have.classes("java-icon medium-purple"));
+				.then(() => {
+					files = TreeView.ls();
+					files["mode-java"].should.have.classes("java-icon medium-purple");
+				});
 		});
 	});
 	
