@@ -184,7 +184,7 @@ describe("Path", () => {
 		
 		it("tests paths before testing filenames", () => {
 			files["git.git/config"].should.have.classes(base + "config-icon dark-red");
-			files["git.git/config"].should.not.have.classes("terminal-icon dark-purple");			
+			files["git.git/config"].should.not.have.classes("terminal-icon dark-purple");
 		});
 	});
 	
@@ -202,6 +202,13 @@ describe("Path", () => {
 			files["suffix.tpl"].should.have.classes(base       + "smarty-icon medium-yellow");
 			files["suffix.tpl"].should.not.have.classes("php-icon dark-blue");
 			files["suffix.php.tpl"].should.not.have.classes("smarty-icon medium-yellow");
+		});
+		
+		it('avoids resorting to "guesswork" patterns', () => {
+			files["news.tpl"].should.have.classes(base + "smarty-icon  medium-yellow");
+			files["news"].should.have.classes(base     + "book-icon    dark-blue");
+			files["news"].should.not.have.classes(       "smarty-icon  medium-yellow");
+			files["news.tpl"].should.not.have.classes(   "book-icon    dark-blue");
 		});
 	});
 });

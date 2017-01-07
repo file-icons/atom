@@ -11,7 +11,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#501`][]] Support for DTML files
 - **Support:** Emacs (`Cask`, `.emacs.d` folders), SQL (`.mysql`)
 
+### Fixed
+- [[`#505`][]] Wrong icons used for certain `.tpl` files
+
 [`#501`]: https://github.com/file-icons/atom/issues/501
+[`#505`]: https://github.com/file-icons/atom/issues/505
 
 
 [2.0.7] - 2017-01-04
