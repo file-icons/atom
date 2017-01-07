@@ -334,6 +334,51 @@ describe("Utilities", () => {
 			expect(cd2.disposed).to.be.true;
 		});
 		
+		it("allows disposables to be used as keys", () => {
+			let calledIt          = false;
+			let toldYou           = false;
+			const disposableKey   = new Disposable(() => calledIt = true);
+			const disposableValue = new Disposable(() => toldYou  = true);
+			const map = new MappedDisposable([ [disposableKey, disposableValue] ]);
+			
+			expect(map.size).to.equal(1);
+			expect(calledIt).to.be.false;
+			expect(toldYou).to.be.false;
+			expect(disposableKey.disposed).to.be.false;
+			expect(disposableValue.disposed).to.be.false;
+			
+			map.dispose();
+			expect(map.size).to.equal(0);
+			expect(disposableKey.disposed).to.be.true;
+			expect(disposableValue.disposed).to.be.true;
+			expect(calledIt).to.be.true;
+			expect(toldYou).to.be.true;
+		});
+		
+		it("calls a key's dispose() method when disposing it", () => {
+			let foo = false;
+			let bar = false;
+			const fooDis = new Disposable(() => foo = true);
+			const barDat = new Disposable(() => bar = true);
+			const map = new MappedDisposable();
+			map.set("foo", fooDis);
+			map.set("bar", barDat);
+			
+			expect(map.size).to.equal(2);
+			expect(foo).to.be.false;
+			expect(bar).to.be.false;
+			expect(fooDis.disposed).to.be.false;
+			expect(barDat.disposed).to.be.false;
+			
+			map.dispose("foo");
+			expect(map.size).to.equal(1);
+			expect(foo).to.be.true;
+			expect(bar).to.be.false;
+			expect(fooDis.disposed).to.be.true;
+			expect(barDat.disposed).to.be.false;
+			expect(map.has("foo")).to.be.false;
+		});
+		
 		it("allows disposables to be removed from keys", () => {
 			const key = {};
 			const cd1 = new CompositeDisposable();
