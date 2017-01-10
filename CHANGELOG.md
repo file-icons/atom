@@ -7,14 +7,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 --------------------
 ### Added
-- Colour for SQL filetypes
+- [[`#471`][]] Partial Nuclide support. See [facebook/nuclide#951][].
 - [[`#501`][]] Support for DTML files
+- Colour for SQL filetypes
 - **Support:** Emacs (`Cask`, `.emacs.d` folders), SQL (`.mysql`)
 
 ### Fixed
 - [[`#505`][]] Wrong icons used for certain `.tpl` files
 - [[`#506`][]] Error thrown when changing project paths in Nuclide
 
+[facebook/nuclide#951]: https://github.com/facebook/nuclide/issues/951#issuecomment-271536602
+[`#471`]: https://github.com/file-icons/atom/issues/471#issuecomment-271532231
 [`#501`]: https://github.com/file-icons/atom/issues/501
 [`#505`]: https://github.com/file-icons/atom/issues/505
 [`#506`]: https://github.com/file-icons/atom/issues/506
