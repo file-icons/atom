@@ -152,7 +152,7 @@ describe("Tabs", () => {
 		after(() => rm(name));
 		
 		it("shows a tab without an icon", () => {
-			tabBar = Tabs.package.tabBarViews[0];
+			tabBar = Tabs.packageModule.tabBarViews[0];
 			tabBar.should.exist;
 			tabBar.getTabs().should.have.lengthOf(5);
 			
