@@ -13,9 +13,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - [[`#505`][]] Wrong icons used for certain `.tpl` files
+- [[`#506`][]] Error thrown when changing project paths in Nuclide
 
 [`#501`]: https://github.com/file-icons/atom/issues/501
 [`#505`]: https://github.com/file-icons/atom/issues/505
+[`#506`]: https://github.com/file-icons/atom/issues/506
 
 
 [2.0.7] - 2017-01-04
