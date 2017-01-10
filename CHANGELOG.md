@@ -4,6 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+--------------------
+### Fixed
+- [[`#509`][]] Breakage with hashbangs with `#!/usr/bin/env` but no interpreter
+
+[`#509`]: https://github.com/file-icons/atom/issues/509
+
+
 [2.0.8] - 2017-01-11
 --------------------
 ### Added
