@@ -29,7 +29,7 @@ describe("Linguist-language attributes", () => {
 	
 	
 	when("a folder contains a .gitattributes file", () => {
-		it("its full content is scanned for `linguist-language` attributes", () => {
+		it("scans its full content for `linguist-language` attributes", () => {
 			const attrFile = FileSystem.get(resolvePath(".gitattributes"));
 			attrFile.isDataComplete.should.be.true;
 			attrFile.watchingSystem.should.be.true;
