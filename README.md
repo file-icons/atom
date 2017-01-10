@@ -42,7 +42,8 @@ Consult the package stylesheets to see what classes are used:
 
 #### Examples
 
-* **Resize an icon:**
+* <a name="resize-an-icon"></a>
+**Resize an icon:**
 	~~~less
 	.html5-icon:before{
 		font-size: 18px;
@@ -56,7 +57,8 @@ Consult the package stylesheets to see what classes are used:
 	~~~
 
 
-* **Choose your own shades of orange:**
+* <a name="choose-your-own-shades-of-orange"></a>
+**Choose your own shades of orange:**
 	~~~css
 	.dark-orange   { color: #6a1e05; }
 	.medium-orange { color: #b8743d; }
@@ -64,7 +66,8 @@ Consult the package stylesheets to see what classes are used:
 	~~~
 
 
-* **Bring back PHP's blue-shield icon:**
+* <a name="bring-back-the-blue-shield-php-icon"></a>
+**Bring back PHP's blue-shield icon:**
 	~~~css
 	.php-icon:before{
 		font-family: MFizz;
@@ -73,7 +76,8 @@ Consult the package stylesheets to see what classes are used:
 	~~~
 
 
-* **Assign icons by file extension:**
+* <a name="assign-icons-by-file-extension"></a>
+**Assign icons by file extension:**
 	~~~css
 	.icon[data-name$=".js"]:before{
 		font-family: Devicons;
@@ -82,7 +86,8 @@ Consult the package stylesheets to see what classes are used:
 	~~~
 
 
-* **Assign icons to directories:**
+* <a name="assign-icons-to-directories"></a>
+**Assign icons to directories:**
 	~~~less
 	.directory > .header > .icon{
 		
@@ -98,7 +103,8 @@ Consult the package stylesheets to see what classes are used:
 Troubleshooting
 ---------------
 
-**A file's icon has stopped updating:**  
+<a name="an-icon-has-stopped-updating"></a>
+**An icon has stopped updating:**  
 It's probably a caching issue. Do the following:
 
 1. Open the command palette: <kbd>Cmd/Ctrl + Shift + P</kbd>
@@ -106,12 +112,14 @@ It's probably a caching issue. Do the following:
 3. Reload the window, or restart Atom
 
 
-**The tree-view's files are borked and [look like this][6].**  
+<a name="the-tree-views-files-are-borked"></a>
+**The tree-view's files are borked and [look like this][6]:**  
 If you haven't restarted Atom since upgrading to [File-Icons v2][v2.0], do so now.
 
 If restarting doesn't help, your stylesheet probably needs updating. See below.
 
 
+<a name="my-stylesheet-has-errors-since-updating"></a>
 **My stylesheet has errors since updating:**  
 As of [v2.0][], classes are used for displaying icons instead of mixins. Delete lines like these from your stylesheet:
 
