@@ -30,7 +30,6 @@ module.exports = {
 	move,
 	open,
 	replaceText,
-	resetIcons,
 	resolvePath,
 	revert,
 	rm,
@@ -141,21 +140,6 @@ function replaceText(find, replace){
 	.then(() => TreeView.refreshHack());
 }
 
-
-/**
- * Crudely wipe currently-cached icon data.
- *
- * Used for testing the existence of cached info. NEVER wipe icon objects
- * at runtime unless you have a thing for interesting and random breakage.
- */
-function resetIcons(){
-	FileSystem.paths.forEach(resource => {
-		resource.icon.destroy();
-		Storage.deletePath(resource.path);
-	});
-	FileSystem.reset();
-	FileSystem.init();
-}
 
 
 /**

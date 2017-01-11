@@ -83,30 +83,4 @@ describe("File signatures", () => {
 			});
 		});
 	});
-	
-	
-	// TODO: Find a better way to assert cached data; resetIcons now seems screwed
-	describe.skip("When header-scanning strategies are disabled", () => {
-		it("does not send IO requests for missing data", () => {
-			Options.set("modelines", false);
-			Options.set("hashbangs", false);
-			TreeView.collapse();
-			resetIcons();
-			TreeView.expand();
-			files = TreeView.ls();
-			assertIconClasses(files, defaults);
-		});
-		
-		it("loads data when such strategies are re-enabled", () => {
-			return wait(delay).then(() => {
-				assertIconClasses(files, defaults);
-				Options.set("modelines", true);
-				Options.set("hashbangs", true);
-				return wait(delay);
-			}).then(() => {
-				assertIconClasses(files, sigIcons);
-				assertIconClasses(files, defaults, true);
-			});
-		});
-	});
 });
