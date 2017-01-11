@@ -84,17 +84,22 @@ describe("User-assigned grammars", () => {
 		const editorView = atom.views.getView(atom.workspace.getActiveTextEditor());
 		atom.commands.dispatch(editorView, "grammar-selector:show");
 		
-		return new Promise(resolve => {
+		return new Promise((resolve, reject) => {
 			const intervalID = setInterval(() => {
-				const panels = atom.workspace.getModalPanels();
-				if(!panels.length) return;
-				const selector = panels.find(panel => {
-					const element = panel.item[0] || panel.item.element;
-					return element.classList.contains("grammar-selector");
-				});
-				if(selector){
+				try{
+					const panels = atom.workspace.getModalPanels();
+					if(!panels.length) return;
+					const selector = panels.find(panel => {
+						const element = panel.item[0] || panel.item.element || panel.item;
+						return element.classList.contains("grammar-selector");
+					});
+					if(selector){
+						clearInterval(intervalID);
+						resolve(selector.item);
+					}
+				} catch(error){
 					clearInterval(intervalID);
-					resolve(selector.item);
+					reject(error);
 				}
 			}, 100);
 		}).then(grammarList => {
