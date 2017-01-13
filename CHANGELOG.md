@@ -7,10 +7,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 --------------------
 ### Fixed
+- [[`#497`][]] Tree-view not showing when adding new project in empty window
 - [[`#509`][]] Breakage with hashbangs with `#!/usr/bin/env` but no interpreter
+- [[`#514`][]] Breakage if `document.styleSheets` is null
 - Submodule icons not showing
 
+[`#497`]: https://github.com/file-icons/atom/issues/497
 [`#509`]: https://github.com/file-icons/atom/issues/509
+[`#514`]: https://github.com/file-icons/atom/issues/514
 
 
 [2.0.8] - 2017-01-11
