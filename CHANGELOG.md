@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 --------------------
 ### Fixed
 - [[`#509`][]] Breakage with hashbangs with `#!/usr/bin/env` but no interpreter
+- Submodule icons not showing
 
 [`#509`]: https://github.com/file-icons/atom/issues/509
 
