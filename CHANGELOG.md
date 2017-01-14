@@ -4,6 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+--------------------
+### Fixed
+- [[`#518`][]] Repo icons missing on Windows
+
+[`#518`]: https://github.com/file-icons/atom/issues/509
+
+
 [2.0.9] - 2017-01-13
 --------------------
 ### Fixed
