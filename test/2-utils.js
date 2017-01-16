@@ -245,7 +245,7 @@ describe("Utilities", () => {
 					const stat = statify(Object.assign({}, plainStats, {mode}));
 					expect(stat.mode, methodName).to.equal(mode);
 					expect(stat[methodName], methodName).to.be.a("function");
-					expect(stat[methodName](), `${methodName}(${mode})`).to.be.true;
+					expect(stat[methodName](), `${methodName}(${mode})`).to.be.a("boolean");
 				}
 			});
 		});
