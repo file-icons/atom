@@ -11,7 +11,7 @@
 	"engines": {
 		"atom": ">1.11.0"
 	},
-	"atomTestRunner": "./node_modules/.bin/atom-mocha",
+	"atomTestRunner": "atom-mocha",
 	"atom-mocha": {
 		"interactive": {
 			"mocha": {
@@ -23,7 +23,7 @@
 		"micromatch": "*"
 	},
 	"devDependencies": {
-		"atom-mocha": "*",
+		"atom-mocha": ">=2.0.0",
 		"get-options": "*",
 		"coffee-script": "*",
 		"rimraf": "*",
