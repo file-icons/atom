@@ -9,10 +9,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [[`#502`][]] Sporadic breakage with fixing tab-classes
 - [[`#518`][]] Repo icons missing on Windows
-- Icon cache reset between sessions on Windows
+- [[`#519`][]] Error thrown at startup or when installed
+- Icon cache resetting between sessions on Windows
 
 [`#502`]: https://github.com/file-icons/atom/issues/502
-[`#518`]: https://github.com/file-icons/atom/issues/509
+[`#518`]: https://github.com/file-icons/atom/issues/518
+[`#519`]: https://github.com/file-icons/atom/issues/519
 
 
 [2.0.9] - 2017-01-13
