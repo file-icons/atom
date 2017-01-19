@@ -12,13 +12,6 @@
 		"atom": ">1.11.0"
 	},
 	"atomTestRunner": "atom-mocha",
-	"atom-mocha": {
-		"interactive": {
-			"mocha": {
-				"bail": false
-			}
-		}
-	},
 	"dependencies": {
 		"micromatch": "*"
 	},
