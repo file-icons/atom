@@ -23,7 +23,7 @@
 		"micromatch": "*"
 	},
 	"devDependencies": {
-		"atom-mocha": ">=2.0.0",
+		"atom-mocha": ">=2.0.1",
 		"get-options": "*",
 		"coffee-script": "*",
 		"rimraf": "*",
