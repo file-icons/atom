@@ -7,8 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 --------------------
 ### Fixed
+- [[`#502`][]] Sporadic breakage with fixing tab-classes
 - [[`#518`][]] Repo icons missing on Windows
 
+[`#502`]: https://github.com/file-icons/atom/issues/502
 [`#518`]: https://github.com/file-icons/atom/issues/509
 
 
