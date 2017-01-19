@@ -9,11 +9,7 @@ describe("Archive-view", () => {
 	let archiveTree = null;
 	let entries = [];
 	
-	before("Resetting options", () => {
-		Options.set("coloured", true);
-		Options.set("defaultIconClass", "default-icon");
-	});
-	
+	before(() => resetOptions());
 	
 	when("a zip-file is opened", () => {
 		it("shows icons for each of its contents", () => {
@@ -270,7 +266,7 @@ describe("Archive-view", () => {
 		for(const entryNode of entryNodes){
 			const entry = ArchiveView.entryNodes.get(entryNode.spacePenView);
 			if(!entry) continue;
-			const {path}  = entry.entry;
+			const path  = entry.entry.path.replace(/\\/g, "/");
 			results[path] = entryNode.querySelector(".icon");
 			results.push(entryNode);
 		}

@@ -8,8 +8,11 @@ const inSpecMode    = atom.inSpecMode();
 const {headless}    = atom.getLoadSettings();
 const {chain, wait, bindMethods, findBasePath, collectStrings} = require("../lib/utils/general.js");
 const FileSystem    = require("../lib/filesystem/filesystem.js");
+const FuzzyFinder   = require("../lib/consumers/fuzzy-finder.js");
+const Tabs          = require("../lib/consumers/tabs.js");
 const TreeView      = require("../lib/consumers/tree-view.js");
 const Storage       = require("../lib/storage.js");
+const Options       = require("../lib/options.js");
 
 let unpacking       = null;
 let tmpDir          = null;
@@ -30,6 +33,7 @@ module.exports = {
 	move,
 	open,
 	replaceText,
+	resetOptions,
 	resolvePath,
 	revert,
 	rm,
@@ -141,6 +145,22 @@ function replaceText(find, replace){
 }
 
 
+/** Restore each package setting to its default value. */
+function resetOptions(){
+	if(!Options.configNames)
+		return; // Not initialised
+	const schema = atom.config.getSchema("file-icons").properties;
+	Options.set("coloured",          schema.coloured.default);
+	Options.set("colourChangedOnly", schema.onChanges.default);
+	Options.set("defaultIconClass",  schema.defaultIconClass.default);
+	Options.set("tabPaneIcon",       schema.tabPaneIcon.default);
+	Options.set("grammar",           schema.strategies.properties.grammar.default);
+	Options.set("hashbangs",         schema.strategies.properties.hashbangs.default);
+	Options.set("modelines",         schema.strategies.properties.modelines.default);
+	Options.set("usertypes",         schema.strategies.properties.usertypes.default);
+	Options.set("linguist",          schema.strategies.properties.linguist.default);
+}
+
 
 /**
  * Resolve a path relative to the currently-active project fixture.
@@ -238,6 +258,7 @@ function setTheme(...names){
  * @return {Promise}
  */
 function setup(name, opts = {}){
+	resetOptions();
 	const {
 		postSetup = [],
 		symlinks,
@@ -313,12 +334,7 @@ function unzip(from, to){
 }
 
 
-/**
- * Return a list of each currently visible tree-view entry.
- *
- * @todo Delete this. Use Chai.
- * @return {Array}
- */
+// TODO: Delete this crap.
 TreeView.ls = function(){
 	const entries = Object.defineProperties([], {
 		files:       { get(){ return this.filter(resource => !resource.isDirectory); }},
@@ -335,10 +351,32 @@ TreeView.ls = function(){
 	}
 	const basePath = findBasePath(paths) + sep;
 	paths.forEach((path, index) => {
-		path = path.replace(basePath, "");
+		path = path.replace(basePath, "").replace(/\\/g, "/");
 		entries[path] = icons[index];
 	});
 	return entries;
+}
+Tabs.ls = function(){
+	const tabs = [];
+	for(const paneItem of atom.workspace.getPaneItems()){
+		const name = paneItem.getFileName();
+		const tab = this.tabForEditor(paneItem);
+		tabs.push(tab);
+		Object.defineProperty(tabs, name, {value: tab.itemTitle});
+	}
+	return tabs;
+}
+FuzzyFinder.ls = function(list = null){
+	list = list || FuzzyFinder.currentList[0];
+	const result = [];
+	const items = list.querySelectorAll(".list-group > li");
+	for(const item of items){
+		const value = item.querySelector(".primary-line");
+		result.push(value);
+		const path = value.dataset.path.replace(/\\/g, "/");
+		Object.defineProperty(result, path, {value});
+	}
+	return result;
 }
 
 

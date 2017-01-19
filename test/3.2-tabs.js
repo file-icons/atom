@@ -8,6 +8,7 @@ describe("Tabs", () => {
 	let tabs;
 	
 	before(() => {
+		resetOptions();
 		return Promise.all([
 			open("package.json"),
 			open("markdown.md"),

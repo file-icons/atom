@@ -11,6 +11,7 @@ describe("Tree-view", () => {
 	const ls = () => (entries = TreeView.ls());
 	
 	before(() => {
+		resetOptions();
 		const treeView = atom.workspace.getLeftPanels()[0].getItem();
 		expect(treeView).to.exist.and.equal(TreeView.element);
 		projectRoot = treeView[0].querySelector(".project-root");
@@ -119,6 +120,7 @@ describe("Tree-view", () => {
 					
 					describe("If the file is modified", () =>
 						it("shows a coloured icon", () => {
+							Options.set("coloured", true);
 							entries["status-modified.pl"].should.have.class("medium-blue");
 							entries["status-new.pl"].should.have.class("medium-blue");
 							Options.set("coloured", false);
@@ -206,14 +208,9 @@ describe("Tree-view", () => {
 			});
 		});
 		
-		when("it doesn't match an icon", () => {
-			it("shows the built-in icon-class", () => {
-				assertIconClasses(entries, [
-					["subfolder", "name icon icon-file-directory"],
-					["symlinks",  "name icon icon-file-directory"]
-				]);
-			});
-		});
+		when("it doesn't match an icon", () =>
+			it("shows the built-in icon-class", () =>
+				entries["subfolder"].should.have.class("name icon icon-file-directory")));
 	});
 
 

@@ -4,15 +4,13 @@ const FuzzyFinder = require("../lib/consumers/fuzzy-finder.js");
 const Options     = require("../lib/options.js");
 const specUtils   = require("./spec-utils.js");
 
-// TODO: Drop the `ls()` crap for something more consistent
-const ls = FuzzyFinder.ls.bind(FuzzyFinder);
-
+const ls = (...args) => FuzzyFinder.ls(...args);
 
 describe("Fuzzy-finder", () => {
 	let files;
 	let list;
 	
-	beforeEach(() => Options.set("coloured", true));
+	beforeEach(() => resetOptions());
 	after(() => FuzzyFinder.close("file-finder"));
 	
 	const iconClasses = [

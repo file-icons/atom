@@ -15,7 +15,7 @@
 	"atom-mocha": {
 		"interactive": {
 			"mocha": {
-				"bail": true
+				"bail": false
 			}
 		}
 	},
