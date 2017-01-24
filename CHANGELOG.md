@@ -4,6 +4,14 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+---------------------
+### Fixed
+- [[`#525`][]] Breakage at startup on Windows
+
+[`#525`]: https://github.com/file-icons/atom/issues/525
+
+
 [2.0.10] - 2017-01-20
 ---------------------
 ### Fixed
