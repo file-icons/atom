@@ -1289,7 +1289,7 @@ fileIcons:
 			[".csslintrc", "medium-yellow"]
 			[".jsbeautifyrc", "medium-yellow"]
 			[".jshintrc", "medium-yellow"]
-			[".htmlhintrc", "medium-yellow"]
+			[".htmlhintrc", "medium-red"]
 			[".coffeelintignore", "medium-maroon"]
 			[".jscsrc", "medium-yellow"]
 			[".module", "medium-blue"]
