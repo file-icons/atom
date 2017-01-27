@@ -7,7 +7,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unreleased]
 ---------------------
 ### Added
-- **Support:** Gear (`.htmlhintrc`)
+- **Support:** Gear (`.htmlhintrc`), NodeJS (`.node`)
+
+### Fixed
+- [[`#528`][]] Deleted files not cleared from memory on Windows
+- [[`#530`][]] Error thrown after deactivating package
+- Errors thrown when deactivating/reactivating package
+
+[`#528`]: https://github.com/file-icons/atom/issues/528
+[`#530`]: https://github.com/file-icons/atom/issues/530
 
 
 [2.0.12] - 2017-01-24
