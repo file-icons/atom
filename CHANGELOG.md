@@ -4,7 +4,7 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unreleased]
+[2.0.13] - 2017-01-28
 ---------------------
 ### Added
 - **Support:** Gear (`.htmlhintrc`), NodeJS (`.node`)
@@ -1074,7 +1074,8 @@ Contributors should take heed of the new [submission process](https://github.com
 Initial release.
 
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.12...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.13...HEAD
+[2.0.13]: https://github.com/file-icons/atom/releases/tag/v2.0.13
 [2.0.12]: https://github.com/file-icons/atom/releases/tag/v2.0.12
 [2.0.11]: https://github.com/file-icons/atom/releases/tag/v2.0.11
 [2.0.10]: https://github.com/file-icons/atom/releases/tag/v2.0.10
