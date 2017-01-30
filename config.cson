@@ -3119,6 +3119,7 @@ fileIcons:
 			[".tmux", "medium-blue"]
 			[/^(configure|config\.(guess|rpath|status|sub)|depcomp|libtool|compile)$/, "medium-red"]
 			[/^\/(private\/)?etc\/([^/]+\/)*(profile$|nanorc$|rc\.|csh\.)/i, "dark-purple", matchPath: true]
+			[".profile", "dark-purple"]
 			[".tcsh", "medium-green"]
 			[".csh", "medium-yellow"]
 		]
