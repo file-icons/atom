@@ -3455,7 +3455,7 @@ fileIcons:
 	TextMate:
 		icon: "textmate"
 		match: [
-			[".tmcg", "dark-green"]
+			[".tmcg", "medium-green", scope: "tmcg"]
 			[".tmLanguage", "dark-purple"]
 			[".tmCommand", "medium-blue"]
 			[".tmPreferences", "dark-blue"]
