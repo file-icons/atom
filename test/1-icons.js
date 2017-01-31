@@ -225,8 +225,8 @@ describe("Icon database", () => {
 					colour: "medium-blue"
 				}
 			});
-			expect(icons[0].lang).to.eql(/^AsciiDoc$/i);
-			expect(icons[1].lang).to.eql(/^JavaScript$|^Ecmascript$/i);
+			expect(icons[0].lang).to.eql(/^Ascii[\W_ \t]?D[0o]c$/i);
+			expect(icons[1].lang).to.eql(/^Java[\W_ \t]?Script$|^Ecmascript$/i);
 		});
 		
 		
