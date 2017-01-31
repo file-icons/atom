@@ -86,6 +86,10 @@ directoryIcons:
 		match: /^bower[-_]components$/
 		colour: ["medium-yellow", "medium-orange"]
 
+	Chef:
+		icon: "chef"
+		match: /\.chef$/
+
 	Dropbox:
 		icon: "dropbox"
 		match: /^(Dropbox|\.dropbox\.cache)$/
@@ -244,6 +248,12 @@ fileIcons:
 		priority: 2
 		match: /^angular[^.]*\.js$/i
 		colour: "medium-red"
+
+	Ansible:
+		icon: "ansible"
+		priority: 2
+		match: /(^|\.)ansible(\.ya?ml)?$/i
+		colour: "dark-blue"
 
 	"ANSI Weather":
 		icon: "sun"
@@ -407,6 +417,12 @@ fileIcons:
 		match: ".aug"
 		colour: "dark-orange"
 
+	Aurelia:
+		icon: "aurelia"
+		priority: 2
+		match: /^aurelia\.json$/i
+		colour: "dark-pink"
+
 	AutoHotkey:
 		icon: "ahk"
 		match: [
@@ -459,6 +475,11 @@ fileIcons:
 		match: ".bison"
 		colour: "medium-red"
 
+	bitHound:
+		icon: "bithound"
+		match: ".bithoundrc"
+		colour: "medium-red"
+
 	Blender:
 		icon: "blender"
 		match: [
@@ -495,6 +516,7 @@ fileIcons:
 			[/^(custom\.)?bootstrap\S*\.less$/i, "dark-blue"]
 			[/^(custom\.)?bootstrap\S*\.scss$/i, "light-pink"]
 			[/^(custom\.)?bootstrap\S*\.styl$/i, "medium-green"]
+			[".bootstraprc", "medium-orange"]
 		]
 
 	Bower:
@@ -534,6 +556,25 @@ fileIcons:
 		priority: 2
 		match: /^Brocfile\./i
 		colour: "medium-green"
+
+	Brunch:
+		icon: "brunch"
+		priority: 2
+		match: /^brunch-config\.(js|coffee|ts)$/i
+		colour: "medium-green"
+
+	Buck:
+		icon: "buck"
+		match: [
+			[/\.buckconfig$/i, "medium-blue"]
+			[/^BUCK$/, "dark-blue"]
+		]
+
+	Bundler:
+		icon: "bundler"
+		priority: 2
+		match: /^Gemfile(\.lock)?$/i
+		colour: "auto-blue"
 
 	BYOND: # Dream Maker Script
 		icon: "byond"
@@ -636,6 +677,11 @@ fileIcons:
 		match: /TODO/
 		colour: "medium-yellow"
 
+	Chef:
+		icon: "chef"
+		match: /^chefignore$|^(Berks|Policy)file(\.lock)?$/i
+		colour: "auto-orange"
+
 	ChucK:
 		icon: "chuck"
 		scope: "chuck"
@@ -709,6 +755,12 @@ fileIcons:
 			[/^CMakeLists\.txt$/, "medium-red"]
 		]
 
+	COBOL:
+		icon: "cobol"
+		match: /\.(cob|ccp|cbl|cobol|cpy)$/i
+		colour: "auto-blue"
+		scope: "cobol"
+
 	CodeClimate:
 		icon: "cc"
 		priority: 2
@@ -720,6 +772,10 @@ fileIcons:
 		priority: 2
 		match: /^codecov\.ya?ml$/i
 		colour: "dark-pink"
+
+	CodeKit:
+		icon: "codekit"
+		match: /(^config)?\.codekit\d*$/i
 
 	CoffeeScript:
 		icon: "coffee"
@@ -963,6 +1019,13 @@ fileIcons:
 			[/^rules$/, "medium-cyan"]
 		]
 
+	Delphi: # Pascal IDE
+		icon: "delphi"
+		match: [
+			[".dfm", "medium-red"]
+			[".dpr", "medium-orange"]
+		]
+
 	Diff:
 		icon: "diff"
 		scope: "diff"
@@ -985,6 +1048,12 @@ fileIcons:
 			[/^docker-sync\.yml$/i, "dark-orange", priority: 2]
 		]
 
+	Doclets:
+		icon: "doclets"
+		priority: 2
+		match: /\.doclets\.ya?ml$/i
+		colour: ["light-green", "medium-green"]
+
 	Dogescript:
 		icon: "doge"
 		priority: 0 # Not much wow
@@ -1003,6 +1072,12 @@ fileIcons:
 		scope: "doxygen"
 		match: /^Doxyfile$/
 		colour: "medium-blue"
+
+	Drone:
+		icon: "drone"
+		priority: 2
+		match: /\.drone\.ya?ml$/i
+		colour: "medium-cyan"
 
 	"Dyalog APL":
 		icon: "dyalog"
@@ -1337,15 +1412,10 @@ fileIcons:
 			[".bnf", "medium-maroon", "bnf"]
 			[".brs", "dark-blue", "brightscript"]
 			[".capnp", "dark-red", scope: "capnp", alias: /^(Cap[^\w\s]?n\s*Proto|capnp)$/i]
-			[".cbl", "medium-maroon"]
-			[".ccp", "dark-maroon"]
 			[".ccxml", "dark-blue"]
 			[".ch", "medium-red"]
 			[".clixml", "dark-blue"]
-			[".cob", "medium-maroon"]
-			[".cobol", "medium-maroon"]
 			[".cocci", "medium-blue"]
-			[".cpy", "dark-maroon"]
 			[".ct", "dark-pink"]
 			[".cw", "medium-red"]
 			[".cy", "dark-green"]
@@ -1478,6 +1548,12 @@ fileIcons:
 		icon: "git-merge"
 		match: /^MERGE_(HEAD|MODE|MSG)$/
 		colour: "medium-red"
+
+	GitLab:
+		icon: "gitlab"
+		priority: 2
+		colour: "medium-orange"
+		match: /^\.gitlab-ci\.ya?ml$/i
 
 	Glade:
 		icon: "glade"
@@ -1625,6 +1701,11 @@ fileIcons:
 		scope: /(^|\.)haxe(\.\d+)?$/i
 		match: /\.hx([sm]l|)?$/
 		colour: "medium-orange"
+
+	HaxeDevelop:
+		icon: "haxedevelop"
+		match: ".hxproj"
+		colour: "auto-blue"
 
 	Heroku:
 		icon: "heroku"
@@ -1794,6 +1875,12 @@ fileIcons:
 			[".jake", "auto-yellow"]
 		]
 
+	Jasmine:
+		icon: "jasmine"
+		priority: 2
+		match: /^\.?jasmine\.json$|^jasmine\.([-\w]+\.)?(js|ts|coffee)$/i
+		colour: "auto-purple"
+
 	Java:
 		icon: "java"
 		scope: "java"
@@ -1831,6 +1918,12 @@ fileIcons:
 		icon: "jenkins"
 		match: /^Jenkinsfile$/
 		colour: "auto-red"
+
+	Jest:
+		icon: "jest"
+		priority: 2
+		match: /^jest(\.config)?\.json$/i
+		colour: "medium-red"
 
 	Jinja:
 		icon: "jinja"
@@ -1895,6 +1988,12 @@ fileIcons:
 			[".keynote", "medium-blue"]
 			[".knt", "dark-blue"]
 		]
+
+	KitchenCI:
+		icon: "kitchenci"
+		priority: 2
+		match: /^\.?kitchen\.ya?ml$/i
+		colour: "medium-green"
 
 	Kivy:
 		icon: "kivy"
@@ -1961,6 +2060,12 @@ fileIcons:
 			[".hlean", "dark-red"]
 		]
 
+	Lerna:
+		icon: "lerna"
+		priority: 2
+		match: /^lerna\.json$/i
+		colour: "auto-blue"
+
 	Leiningen:
 		icon: "lein"
 		priority: 2
@@ -1977,6 +2082,12 @@ fileIcons:
 			[".lwo", "medium-red"]
 			[".lws", "medium-blue"]
 		]
+
+	Lime:
+		icon: "lime"
+		match: ".hxp"
+		colour: "medium-green"
+		priority: 1.5
 
 	Lisp:
 		icon: "lisp"
@@ -2123,8 +2234,7 @@ fileIcons:
 
 	MATLAB:
 		icon: "matlab"
-		scope: /\.(matlab|octave)$/i
-		alias: "octave"
+		scope: "matlab"
 		match: ".matlab"
 		colour: "medium-yellow"
 
@@ -2202,6 +2312,11 @@ fileIcons:
 			[".xlsb", "medium-red"]
 			[".xlt", "dark-cyan"]
 		]
+
+	"Microsoft InfoPath":
+		icon: "infopath"
+		match: /\.(infopathxml|xsn|xsf|xtp2)$/i
+		colour: "dark-purple"
 
 	"Microsoft OneNote":
 		icon: "onenote"
@@ -2516,6 +2631,12 @@ fileIcons:
 			[".mly", "dark-yellow", "menhir"]
 		]
 
+	Octave:
+		icon: "octave"
+		match: ".octave"
+		colour: "medium-orange"
+		scope: "octave"
+
 	OOC:
 		icon: "ooc"
 		scope: "ooc"
@@ -2628,8 +2749,6 @@ fileIcons:
 		icon: "pascal"
 		match: [
 			[/\.pas(cal)?$/i, "medium-purple", scope: "pascal", interpreter: /pascal|instantfpc/]
-			[".dfm", "medium-blue"]
-			[".dpr", "dark-blue"]
 			[".lpr", "dark-purple"]
 		]
 
@@ -2687,6 +2806,12 @@ fileIcons:
 			[/\.php([st\d]|_cs)?$/i, "dark-blue", interpreter: "php", scope: "php", signature: /^<\?php/]
 			[/^Phakefile/, "dark-green"]
 		]
+
+	PHPUnit:
+		icon: "phpunit"
+		priority: 2
+		match: /^phpunit\.xml$/i
+		colour: "medium-purple"
 
 	Pickle:
 		icon: "pickle"
@@ -2846,7 +2971,7 @@ fileIcons:
 			[".xpy", "auto-yellow"]
 			[".rpy", "medium-pink", scope: "renpy", alias: /^Ren'?Py$/i]
 			[/\.?(pypirc|pythonrc|python-venv)$/i, "dark-blue"]
-			[/^(BUCK|BUILD|SConstruct|SConscript)$/, "dark-green"]
+			[/^(BUILD|SConstruct|SConscript)$/, "dark-green"]
 			[/^(Snakefile|WATCHLISTS)$/, "medium-green"]
 			[/^wscript$/, "dark-maroon"]
 		]
@@ -3008,6 +3133,11 @@ fileIcons:
 		match: ".rg"
 		colour: "medium-red"
 
+	RSpec:
+		icon: "rspec"
+		match: ".rspec"
+		colour: "medium-red"
+
 	RSS:
 		icon: "rss"
 		match: ".rss"
@@ -3020,8 +3150,8 @@ fileIcons:
 				scope: "ruby"
 				alias: /^(rbx?|rake|jruby|macruby)$/i
 				interpreter: /(mac|j)?ruby|rake|rbx/]
-			[/^\.?(irbrc|gemrc|pryrc|rspec|ruby-(gemset|version))$/i, "medium-red"]
-			[/^(Appraisals|(Rake|Gem|[bB]uild|Berks|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(\.lock)?)$/, "medium-red"]
+			[/^\.?(irbrc|gemrc|pryrc|ruby-(gemset|version))$/i, "medium-red"]
+			[/^(Appraisals|(Rake|[bB]uild|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(\.lock)?)$/, "medium-red"]
 			[/\.(jbuilder|rbuild|rb[wx]|builder)$/i, "dark-red"]
 			["_spec.rb", "light-green", priority: 2]
 			[/^rails$/, "medium-red"]
@@ -3127,6 +3257,11 @@ fileIcons:
 		match: ".sfproj"
 		colour: "light-orange"
 
+	Sequelize:
+		icon: "sequelize"
+		match: /\.sequelizerc$/i
+		colour: "auto-blue"
+
 	Shell:
 		icon: "terminal"
 		generic: true
@@ -3155,6 +3290,18 @@ fileIcons:
 		icon: "shen"
 		match: ".shen"
 		colour: "dark-cyan"
+
+	Shipit:
+		icon: "shipit"
+		priority: 2
+		match: /^shipitfile(\b.+)?\.js$/i
+		colour: "medium-orange"
+
+	Shippable:
+		icon: "shippable"
+		priority: 2
+		match: /^shippable\.ya?ml$/i
+		colour: "medium-cyan"
 
 	Shopify:
 		icon: "shopify"
@@ -3338,6 +3485,14 @@ fileIcons:
 		scope: "svg"
 		match: ".svg"
 		colour: "dark-yellow"
+
+	Swagger:
+		icon: "swagger"
+		colour: "medium-green"
+		match: [
+			[/^swagger\.json$/i, "medium-green", priority: 2]
+			[/^.swagger-codegen-ignore$/i, "dark-green"]
+		]
 
 	Swift:
 		icon: "swift"

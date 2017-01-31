@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
+- **New icons:** Ansible, Aurelia, bitHound, Brunch, Buck, Bundler, CakePHP (updated logo), Chef, COBOL, CodeKit, Delphi, Doclets, DoneJS, Drone, GitLab, HaxeDevelop, Jasmine, Jest, KitchenCI, Lerna, Lime, Microsoft InfoPath, Nuclide, Octave, PHPUnit, Redux, RSpec, Sequelize, Shipit, Shippable, Swagger, Template Toolkit, Twig 
 - **Support:** Erlang (`Emakefile`), GraphViz (`.plantuml`, `.iuml`, `.puml`, `.pu`), Jekyll (`_config.yml`, `.nojekyll`), MkDocs (`mkdocs.yml`), Paket (Various `paket.*` configs, `.paket` folders), Process IDs (`.pid`), Puppet (`.epp`), Tcl (`.exp`), Terminal (`.profile`), Visual Studio (`.vscodeignore`, `.vsix`, `.vssettings.json`, `.vscode` folders), Yarn (`.yarnrc`, `.yarn-metadata.json`, `.yarn-integrity`, `.yarnclean`), WeChat (`.wxml`, `.wxss`)
 
 
