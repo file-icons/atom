@@ -3670,6 +3670,13 @@ fileIcons:
 			[/^webpackfile\.js$/i, "medium-blue"]
 		]
 
+	WeChat:
+		icon: "wechat"
+		match: [
+			[".wxml", "medium-green", alias: "WeiXin"]
+			[".wxss", "medium-blue"]
+		]
+
 	Wercker:
 		icon: "wercker"
 		priority: 2
