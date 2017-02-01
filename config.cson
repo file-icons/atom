@@ -264,6 +264,7 @@ fileIcons:
 		icon: "ant"
 		priority: 2
 		match: /^ant\.xml$|\.ant$/i
+		scope: /^text\.xml\.ant$/i
 		colour: "dark-pink"
 
 	ANTLR:
@@ -864,6 +865,7 @@ fileIcons:
 			[".terminal", "dark-blue"]
 			[/^ld\.script$/i, "medium-orange"]
 			[".reek", "medium-red"]
+			[/^\.?XCompose$/, "medium-cyan", "xcompose"]
 			[/config|settings|option|pref/i, null, priority: 0]
 			[/\.git[\/\\](config|info[\/\\]\w+)$/, "dark-red", matchPath: true]
 			[/^\/(private\/)?etc\/([^/]+\/)*[^/]*\.(cf|conf|ini)(\.default)?$/i, "dark-orange", matchPath: true]
@@ -1139,7 +1141,7 @@ fileIcons:
 		match: [
 			[".ex", "dark-purple", "elixir"]
 			[/\.(exs|eex)$/i, "medium-purple"]
-			[/mix\.exs?$/i, "light-purple"]
+			[/^mix\.(exs?|lock)$/i, "light-purple"]
 		]
 
 	Elm:
@@ -1199,6 +1201,7 @@ fileIcons:
 			[".yrl", "dark-green"]
 			[".app.src", "dark-maroon"]
 			[/^Emakefile$/, "dark-green"]
+			[/^rebar(\.config)?\.lock$/i, "medium-red"]
 		]
 
 	ESLint:
@@ -1673,6 +1676,7 @@ fileIcons:
 		match: [
 			[".haml", "medium-yellow", "haml"]
 			[".hamlc", "medium-maroon", "hamlc"]
+			[".haml.deface", "medium-red"]
 		]
 
 	Harbour:
@@ -1718,7 +1722,7 @@ fileIcons:
 	HTML:
 		icon: "html5"
 		match: [
-			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /^(xhtml|htm)$/i]
+			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /^(xhtml|htm)$/i, signature: /^<!DOCTYPE html>/i]
 			[".cshtml", "medium-red"]
 			[".ejs", "medium-green"]
 			[".gohtml", "dark-blue", "gohtml"]
@@ -1731,9 +1735,10 @@ fileIcons:
 			[".scaml", "dark-red", "scaml"]
 			[".swig", "medium-green", "swig"]
 			[".vash", "medium-red", "vash"]
+			[".xht", "medium-maroon"]
 			[".dtml", "medium-blue", "dtml"]
 			[/\.html?\.ecr$/i, "medium-cyan", priority: 2]
-			[/\.(html?\.erb|rhtml)$/i, "medium-red", scope: "html.erb", priority: 2]
+			[/\.(html?\.erb(\.deface)?|rhtml)$/i, "medium-red", scope: "html.erb", priority: 2]
 		]
 
 	Hy:
@@ -1966,6 +1971,7 @@ fileIcons:
 		scope: "julia"
 		match: ".jl"
 		colour: "medium-purple"
+		interpreter: "julia"
 
 	"Jupyter Notebook":
 		icon: "jupyter"
@@ -2034,7 +2040,7 @@ fileIcons:
 	Laravel:
 		icon: "laravel"
 		scope: "php.blade"
-		match: ".blade.php"
+		match: /\.blade(\.php)?$/i
 		colour: "medium-orange"
 
 	Lasso:
@@ -2157,9 +2163,11 @@ fileIcons:
 			[/\.(mk|mak|make)$/i, "medium-yellow"]
 			[/^BSDmakefile$/i, "medium-red"]
 			[/^GNUmakefile$/i, "medium-green"]
+			[/^makefile\.sco$/i, "medium-red"]
 			[/^Kbuild$/, "medium-blue"]
 			[/^makefile$/, "medium-yellow"]
 			[/^mkfile$/i, "medium-yellow"]
+			[/^\.?qmake$/i, "dark-blue"]
 			[".am", "medium-red"]
 			[".bb", "dark-blue"]
 			[/^DEPS$/, "dark-blue"]
@@ -3028,8 +3036,8 @@ fileIcons:
 	Readme:
 		icon: "book"
 		match: [
-			[/^README(\b|_)|^(licen[sc]es?|(read|readme|click|delete|keep|test)\.me)$|\.(readme|1st)$/i, "medium-blue", priority: 2]
-			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copying|hacking|history|install|maintainers|manifest|more\.stuff|projects|revision|terms|thanks)$/i, "dark-blue", priority: 2]
+			[/^README(\b|_)|^(licen[sc]es?(\.mysql)?|(read|readme|click|delete|keep|test)\.me)$|\.(readme|1st)$/i, "medium-blue", priority: 2]
+			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copying(\.regex)?|hacking|history|install|maintainers|manifest|more\.stuff|projects|revision|terms|thanks)$/i, "dark-blue", priority: 2]
 			[/\b(changelog|copying(v?\d)?|install|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
 			[/^news([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
 		]
@@ -3269,7 +3277,7 @@ fileIcons:
 			[/\.(sh|rc|bats|bash|tool|install|command)$/i, "medium-purple"
 				scope: "shell"
 				alias: /^(sh|shell|Shell-?Script|Bash)$/i
-				interpreter: /bash|sh|zsh|rc/]
+				interpreter: /^(bash|sh|zsh|rc)$/]
 			[/^(\.?bash(rc|[-_]?(profile|login|logout|history|prompt))|_osc|config|install-sh|PKGBUILD)$/i, "dark-purple"]
 			[".ksh", "dark-yellow"]
 			[".sh-session", "auto-yellow"
@@ -3277,10 +3285,12 @@ fileIcons:
 				alias: /^(Bash|Shell|Sh)[-\s]*(Session|Console)$/i]
 			[/\.zsh(-theme|_history)?$|^\.?(antigen|zpreztorc|zlogin|zlogout|zprofile|zshenv|zshrc)$/i, "medium-blue"]
 			[/\.fish$|^\.fishrc$/i, "medium-green", "fish"]
+			[/^\.?(login|profile)$/, "medium-red"]
 			[".inputrc", "medium-red"]
 			[".tmux", "medium-blue"]
 			[/^(configure|config\.(guess|rpath|status|sub)|depcomp|libtool|compile)$/, "medium-red"]
 			[/^\/(private\/)?etc\/([^/]+\/)*(profile$|nanorc$|rc\.|csh\.)/i, "dark-purple", matchPath: true]
+			[/^\.?cshrc$/i, "medium-orange"]
 			[".profile", "dark-purple"]
 			[".tcsh", "medium-green"]
 			[".csh", "medium-yellow"]
@@ -3390,6 +3400,7 @@ fileIcons:
 			[".udf", "medium-green"]
 			[".viw", "dark-cyan"]
 			[".prc", "dark-blue"]
+			[".cql", "dark-blue"]
 			[".db2", "medium-purple"]
 		]
 
@@ -3786,7 +3797,7 @@ fileIcons:
 	Vim:
 		icon: "vim"
 		match: [
-			[/\.(vim|n?vimrc)$/i, "medium-green", scope: "viml", alias: /^(VimL?|NVim|Vim\s*Script)$/i, interpreter: /Vim?/i]
+			[/\.(vim|[gn]?vimrc)$/i, "medium-green", scope: "viml", alias: /^(VimL?|NVim|Vim\s*Script)$/i, interpreter: /Vim?/i]
 			[/^[gn_]?vim(rc|info)$/i, "dark-green"]
 		]
 
