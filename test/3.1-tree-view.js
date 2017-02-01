@@ -211,6 +211,24 @@ describe("Tree-view", () => {
 		when("it doesn't match an icon", () =>
 			it("shows the built-in icon-class", () =>
 				entries["subfolder"].should.have.class("name icon icon-file-directory")));
+		
+		when("it contains a submodule", () => {
+			it("shows the default icon for submodules", () => {
+				TreeView.expand(".bundle");
+				console.dir(atom.project.getRepositories());
+				assertIconClasses(ls(), [
+					[".bundle/node_modules",    "name icon icon-file-submodule"],
+					[".bundle/submodule-1",     "name icon icon-file-submodule"],
+					[".bundle/submodule-2",     "name icon icon-file-submodule"],
+					[".bundle/syntax.tmbundle", "name icon icon-file-submodule"]
+				]);
+			});
+			
+			it("doesn't show icons that match its name", () => {
+				entries[".bundle/node_modules"].should.not.have.classes("node-icon");
+				entries[".bundle/syntax.tmbundle"].should.not.have.class("textmate-icon");
+			});
+		});
 	});
 
 
