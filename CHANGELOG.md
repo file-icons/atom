@@ -4,8 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-[Unpublished]
----------------------
+[2.0.14] - [2017-02-03]
+-----------------------
 ### Added
 - **33 new icons:** Ansible, Aurelia, bitHound, Brunch, Buck, Bundler, CakePHP (updated logo), Chef, COBOL, CodeKit, Delphi, Doclets, DoneJS, Drone, GitLab, HaxeDevelop, Jasmine, Jest, KitchenCI, Lerna, Lime, Microsoft InfoPath, Nuclide, Octave, PHPUnit, Redux, RSpec, Sequelize, Shipit, Shippable, Swagger, Template Toolkit, Twig
 - **Support:** Blade (`.blade`), Erlang (`Emakefile`), GraphViz (`.plantuml`, `.iuml`, `.puml`, `.pu`), Jekyll (`_config.yml`, `.nojekyll`), MkDocs (`mkdocs.yml`), Paket (Various `paket.*` configs, `.paket` folders), Process IDs (`.pid`), Puppet (`.epp`), Tcl (`.exp`), Terminal (`.profile`), Visual Studio (`.vscodeignore`, `.vsix`, `.vssettings.json`, `.vscode` folders), Yarn (`.yarnrc`, `.yarn-metadata.json`, `.yarn-integrity`, `.yarnclean`), WeChat (`.wxml`, `.wxss`)
@@ -1090,7 +1090,8 @@ Contributors should take heed of the new [submission process](https://github.com
 Initial release.
 
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.13...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.14...HEAD
+[2.0.14]: https://github.com/file-icons/atom/releases/tag/v2.0.14
 [2.0.13]: https://github.com/file-icons/atom/releases/tag/v2.0.13
 [2.0.12]: https://github.com/file-icons/atom/releases/tag/v2.0.12
 [2.0.11]: https://github.com/file-icons/atom/releases/tag/v2.0.11
