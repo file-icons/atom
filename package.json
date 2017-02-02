@@ -13,7 +13,8 @@
 	},
 	"atomTestRunner": "atom-mocha",
 	"dependencies": {
-		"micromatch": "*"
+		"micromatch": "*",
+		"print": "*"
 	},
 	"devDependencies": {
 		"atom-mocha": ">=2.0.1",
