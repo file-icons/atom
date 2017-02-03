@@ -2137,7 +2137,7 @@ fileIcons:
 
 	LookML:
 		icon: "lookml"
-		match: ".lookml"
+		match: /\.(lookml|lkml)$/i
 		colour: "medium-purple"
 
 	LSL:

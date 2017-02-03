@@ -4,6 +4,12 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[Unpublished]
+-------------
+### Added
+- **Support:** LookML (`.lkml`)
+
+
 [2.0.14] - [2017-02-03]
 -----------------------
 ### Added
