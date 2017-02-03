@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
-- **Support:** LookML (`.lkml`)
+- **Support:** LookML (`.lkml`), SQL (`.hql`)
 
 
 [2.0.14] - [2017-02-03]

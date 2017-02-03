@@ -3398,6 +3398,7 @@ fileIcons:
 			[/\.(my)?sql$/i, "medium-orange", "sql"]
 			[".ddl", "medium-blue"]
 			[".udf", "medium-green"]
+			[".hql", "medium-red"]
 			[".viw", "dark-cyan"]
 			[".prc", "dark-blue"]
 			[".cql", "dark-blue"]
