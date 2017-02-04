@@ -210,7 +210,7 @@ describe("Find-and-replace", () => {
 	
 	function search(...args){
 		return FindAndReplace.search(...args)
-			.then(() => wait(100))
+			.then(() => wait(500))
 			.then(() => {
 				files = [];
 				const items = workspace.querySelectorAll(".results-view > .path");

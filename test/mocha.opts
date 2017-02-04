@@ -1,5 +1,4 @@
 --auto-it
 --require chai/should
---slide
 --slow 9999
 --spec-pattern /[\\\/]\d+-\w+\.js$/

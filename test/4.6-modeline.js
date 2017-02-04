@@ -24,7 +24,7 @@ describe("Modelines", () => {
 			files = TreeView.ls();
 			files.should.not.be.empty;
 			files.length.should.be.at.least(22);
-			return wait(500);
+			return wait(1500);
 		}
 	]));
 	
@@ -65,8 +65,10 @@ describe("Modelines", () => {
 	when("encountering files containing modelines", () => {
 		const fn = () => {
 			for(let i = 0; i < 10; ++i){
-				files[`mode-c++${ i || ""}`].should.have.classes(base + "cpp-icon  medium-blue");
-				files[`mode-ruby${i || ""}`].should.have.classes(base + "ruby-icon medium-red");
+				const cpp  = `mode-c++${ i || ""}`;
+				const ruby = `mode-ruby${i || ""}`;
+				expect(files[cpp],  `Node ${cpp}`).to.have.classes(base  + "cpp-icon  medium-blue");
+				expect(files[ruby], `Node ${ruby}`).to.have.classes(base + "ruby-icon medium-red");
 			}
 			files["mode-js"].should.have.classes(base        + "js-icon     medium-yellow");
 			files["mode-java"].should.have.classes(base      + "java-icon   medium-purple");
@@ -126,7 +128,7 @@ describe("Modelines", () => {
 					items["subdir/abc125"].should.have.classes("default-icon");
 					items["subdir/abc126"].should.have.classes("default-icon");
 				})
-				.then(() => wait(200))
+				.then(() => wait(300))
 				.then(() => {
 					items = FuzzyFinder.ls();
 					items["subdir/abc123"].should.have.classes("emacs-icon   medium-purple");

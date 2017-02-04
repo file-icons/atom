@@ -69,8 +69,8 @@ function assertIconClasses(nodes, assertions, negate = false){
 		}
 		classes = collectStrings(classes).join(" ");
 		negate
-			? nodes[name].should.not.have.class(classes)
-			: nodes[name].should.have.class(classes);
+			? expect(nodes[name], `Node ${name}`).not.to.have.class(classes)
+			: expect(nodes[name], `Node ${name}`).to.have.class(classes);
 	}
 }
 
@@ -246,7 +246,7 @@ function setTheme(...names){
 		atom.themes.loadBaseStylesheets();
 		atom.themes.emitter.emit("did-change-active-themes");
 		atom.packages.loadedPackages["file-icons"].reloadStylesheets();
-	}).then(() => wait(100));
+	}).then(() => wait(500));
 }
 
 

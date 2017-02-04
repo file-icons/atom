@@ -1,10 +1,10 @@
 "use strict";
 
-describe("Atom packages", () => {
+describe("Atom packages", function(){
 	require("./spec-utils.js");
+	this.timeout(0);
 	
-	before("Activate packages", function(){
-		this.timeout(0);
+	before("Activate packages", () => {
 		return chain([
 			() => setup("3-packages", {
 				symlinks: [

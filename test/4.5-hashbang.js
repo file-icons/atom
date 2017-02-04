@@ -48,7 +48,7 @@ describe("Interpreter directives", () => {
 			files.should.not.be.empty;
 			files.length.should.be.at.least(23);
 			assertIconClasses(files, defaults);
-			return wait(500);
+			return wait(1500);
 		}
 	]));
 	
@@ -134,7 +134,7 @@ describe("Interpreter directives", () => {
 	});
 
 
-	when("the hashbang is valid but matches nothing", () => {
+	unlessOnWindows.describe("When the hashbang is valid but matches nothing", () => {
 		it("shows the terminal-icon if the file is executable", () => {
 			files["unknown1"].should.have.classes(base + "terminal-icon medium-purple");
 		});
@@ -207,7 +207,7 @@ describe("Interpreter directives", () => {
 					items = FuzzyFinder.ls();
 					items["subdir/erlang.tho"]  .should.have.classes("default-icon");
 					items["subdir/haskell.tho"] .should.have.classes("default-icon");
-					return wait(200);
+					return wait(300);
 				}).then(() => {
 					items = FuzzyFinder.ls();
 					items["subdir/erlang.tho"]  .should.not  .have.classes("default-icon");

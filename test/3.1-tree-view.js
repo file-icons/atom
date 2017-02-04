@@ -215,7 +215,6 @@ describe("Tree-view", () => {
 		when("it contains a submodule", () => {
 			it("shows the default icon for submodules", () => {
 				TreeView.expand(".bundle");
-				console.dir(atom.project.getRepositories());
 				assertIconClasses(ls(), [
 					[".bundle/node_modules",    "name icon icon-file-submodule"],
 					[".bundle/submodule-1",     "name icon icon-file-submodule"],

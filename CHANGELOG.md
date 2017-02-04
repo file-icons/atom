@@ -9,6 +9,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **Support:** LookML (`.lkml`), SQL (`.hql`)
 
+### Fixed
+- `linguist-language` strategy not working on Windows
+
 
 [2.0.14] - [2017-02-03]
 -----------------------
