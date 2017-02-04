@@ -336,9 +336,11 @@ function unzip(from, to){
 
 // TODO: Delete this crap.
 TreeView.ls = function(){
+	let rootDirectory = null;
 	const entries = Object.defineProperties([], {
 		files:       { get(){ return this.filter(resource => !resource.isDirectory); }},
-		directories: { get(){ return this.filter(resource =>  resource.isDirectory); }}
+		directories: { get(){ return this.filter(resource =>  resource.isDirectory); }},
+		["."]:       { get(){ return rootDirectory && rootDirectory.directoryName; }}
 	});
 	
 	const paths = [];
@@ -348,6 +350,8 @@ TreeView.ls = function(){
 		entries.push(el);
 		paths.push(el.getPath());
 		icons.push(el.directoryName || el.fileName);
+		if(null === rootDirectory && el.classList.contains("project-root"))
+			rootDirectory = el;
 	}
 	const basePath = findBasePath(paths) + sep;
 	paths.forEach((path, index) => {

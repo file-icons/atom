@@ -105,7 +105,10 @@ describe("Tree-view", () => {
 					]);
 				}));
 			
-			when("in a Git repository", () =>
+			when("in a Git repository", () => {
+				it("shows the default repo-icon for the root directory", () =>
+					entries["."].className.should.equal("name icon icon-repo"));
+				
 				when(`the "Only colour when changed" setting is enabled`, () => {
 					describe("If the file is unmodified", () =>
 						it("doesn't show a coloured icon", () => {
@@ -130,7 +133,8 @@ describe("Tree-view", () => {
 							entries["status-modified.pl"].should.have.class("medium-blue");
 							entries["status-new.pl"].should.have.class("medium-blue");
 						}));
-				}));
+				})
+			});
 			
 			when("in a light-coloured theme", () => {
 				before(() => Options.set("colourChangedOnly", false));
