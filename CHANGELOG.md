@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - `linguist-language` strategy not working on Windows
 - Missing repository icons on Windows. Seriously this time.
 - Cached icons being lost between sessions on Windows
+- Icons not cleared from memory when closing `find-and-replace`
 
 
 [2.0.14] - [2017-02-03]

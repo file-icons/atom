@@ -207,6 +207,21 @@ describe("Find-and-replace", () => {
 	});
 	
 	
+	when("closing the project-find view", () => {
+		it("removes icon-nodes from memory", () => {
+			const {iconNodes} = FindAndReplace;
+			const firstNode   = [...iconNodes].shift();
+			const lastNode    = [...iconNodes].pop();
+			iconNodes.size.should.be.above(0);
+			atom.workspace.destroyActivePaneItem();
+			iconNodes.size.should.equal(0);
+			firstNode.destroyed.should.be.true;
+			lastNode.destroyed.should.be.true;
+			expect(firstNode.element).to.be.null;
+			expect(lastNode.element).to.be.null;
+		});
+	});
+	
 	
 	function search(...args){
 		return FindAndReplace.search(...args)
