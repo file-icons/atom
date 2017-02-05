@@ -153,9 +153,9 @@ describe("Fuzzy-finder", () => {
 				
 				const nodes = Array.from(FuzzyFinder.iconNodes);
 				nodes.should.not.be.empty;
-				nodes[0].should.not.have.property("destroyed");
-				nodes[0].should.have.property("resource");
-				expect(nodes[0].resource).to.be.ok;
+				const [node] = nodes;
+				expect(node.destroyed).to.be.false;
+				expect(node.resource).to.be.ok;
 				
 				editor.setText("e");
 				editor.getText().should.equal("e");
@@ -164,8 +164,7 @@ describe("Fuzzy-finder", () => {
 				list.populateList();
 				
 				return wait(100).then(() => {
-					nodes[0].should.have.property("destroyed");
-					nodes[0].destroyed.should.be.true;
+					node.destroyed.should.be.true;
 				});
 			});
 			

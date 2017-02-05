@@ -269,4 +269,54 @@ describe("Tree-view", () => {
 			entries["symlinks/empty.file"].should.not.have.class("icon-file-code");
 		});
 	});
+	
+	
+	when("an entry is hidden", () => {
+		let rootEntry, firstEntry;
+		let rootIcon,  firstIcon;
+		let classLists = {};
+		let entries;
+		
+		before(() => {
+			entries = TreeView.entries;
+			entries.size.should.be.above(1);
+			[rootEntry, firstEntry] = entries.values();
+			rootIcon = rootEntry.iconNode;
+			firstIcon = firstEntry.iconNode;
+			rootEntry.destroyed.should.be.false;
+			rootIcon.destroyed.should.be.false;
+			firstIcon.destroyed.should.be.false;
+			firstEntry.destroyed.should.be.false;
+			for(const entry of entries.values())
+				classLists[entry.path] = entry.className;
+		});
+		
+		it("gets released from memory", () => {
+			TreeView.collapse();
+			entries.size.should.equal(1);
+			expect([...entries.values()][0]).to.equal(rootEntry);
+			expect(rootEntry.iconNode).to.equal(rootIcon);
+			expect(firstEntry.destroyed).to.be.true;
+			expect(firstEntry.source).to.be.null;
+			expect(firstEntry.element).to.be.null;
+			expect(firstEntry.iconNode).to.be.null;
+			expect(firstEntry.classList).to.be.null;
+			expect(firstEntry.className).to.be.null;
+			expect(firstEntry.isExpanded).to.be.false;
+		});
+		
+		when("it gets displayed again", () =>
+			it("uses a new TreeEntry", () => {
+				TreeView.expand();
+				entries.size.should.be.above(1);
+				[rootEntry, firstEntry] = entries.values();
+				expect(rootEntry.iconNode).to.equal(rootIcon);
+				expect(firstEntry.iconNode).to.be.ok.and.not.to.equal(firstIcon);
+				expect(firstEntry.destroyed).to.be.false;
+				const newClassLists = {};
+				for(const {className, path} of entries.values())
+					newClassLists[path] = className;
+				expect(classLists).to.eql(newClassLists);
+			}));
+	});
 });
