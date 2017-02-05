@@ -10,10 +10,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** LookML (`.lkml`), SQL (`.hql`)
 
 ### Fixed
+- [[`#537`][]] Error thrown for [`atom-svn`](https://atom.io/packages/svn) users
 - `linguist-language` strategy not working on Windows
 - Missing repository icons on Windows. Seriously this time.
 - Cached icons being lost between sessions on Windows
 - Icons not cleared from memory when closing `find-and-replace`
+
+[`#537`]: https://github.com/file-icons/atom/issues/537
 
 
 [2.0.14] - [2017-02-03]
