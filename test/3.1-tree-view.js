@@ -14,7 +14,7 @@ describe("Tree-view", () => {
 		resetOptions();
 		const treeView = atom.workspace.getLeftPanels()[0].getItem();
 		expect(treeView).to.exist.and.equal(TreeView.element);
-		projectRoot = treeView[0].querySelector(".project-root");
+		projectRoot = (treeView[0] || treeView.element).querySelector(".project-root");
 		entriesList = projectRoot.lastElementChild;
 		ls();
 	});

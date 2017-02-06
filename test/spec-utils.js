@@ -346,7 +346,8 @@ TreeView.ls = function(){
 	const paths = [];
 	const icons = [];
 	
-	for(const el of TreeView.element[0].querySelectorAll(".entry")){
+	const tree = TreeView.element;
+	for(const el of (tree[0] || tree.element).querySelectorAll(".entry")){
 		entries.push(el);
 		paths.push(el.getPath());
 		icons.push(el.directoryName || el.fileName);
@@ -371,7 +372,7 @@ Tabs.ls = function(){
 	return tabs;
 }
 FuzzyFinder.ls = function(list = null){
-	list = list || FuzzyFinder.currentList[0];
+	list = list || FuzzyFinder.currentList[0] || FuzzyFinder.currentList.element;
 	const result = [];
 	const items = list.querySelectorAll(".list-group > li");
 	for(const item of items){

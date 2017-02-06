@@ -37,33 +37,34 @@ describe("Fuzzy-finder", () => {
 	
 	when("the file-finder is opened", () => {
 		when("showing the first set of results", () => {
-			it("displays an icon beside each search result", () => {
+			before("Waiting for `list-refreshed` event", () => {
 				const selector = ".fuzzy-finder.select-list";
 				list = workspace.querySelector(selector);
 				expect(list).not.to.exist;
 				
 				FuzzyFinder.maxItems = Infinity;
 				FuzzyFinder.open("file-finder");
-				list = workspace.querySelector(selector);
-				expect(list).to.exist;
-				const panel = atom.workspace.panelForItem(list.spacePenView);
-				expect(panel).to.exist;
 				
-				return new Promise((resolve, reject) => {
-					const event = "list-refreshed";
-					const disposable = FuzzyFinder.emitter.on(event, value => {
-						disposable.dispose();
-						resolve(value);
+				return new Promise(done => {
+					wait(150).then(() => {
+						list = workspace.querySelector(selector);
+						expect(list).to.exist;
+						const panel = FuzzyFinder.jQueryRemoved
+							? atom.workspace.getModalPanels().find(p => p.item.element === list)
+							: atom.workspace.panelForItem(list.spacePenView);
+						expect(panel).to.exist;
+						FuzzyFinder.onListRefreshed(value => done(value));
+						
+						// HACK: Event not dispatched for atom/fuzzy-finder#273 branch
+						setTimeout(() => FuzzyFinder.emit("list-refreshed"), 10);
 					});
-					wait(1500).then(() => {
-						disposable.dispose();
-						return reject(new Error(`Timed out waiting for event "${event}"`));
-					});
-				}).then(() => {
-					files = ls(list);
-					files.should.have.length.of.at.least(1);
-					assertIconClasses(files, iconClasses);
 				});
+			});
+			
+			it("displays an icon beside each search result", () => {
+				files = ls(list);
+				files.should.have.length.of.at.least(1);
+				assertIconClasses(files, iconClasses);
 			});
 			
 			it("displays file-icons in colour", () => {
@@ -143,13 +144,25 @@ describe("Fuzzy-finder", () => {
 			// Avoid confusing errors or timeouts: check everything works first
 			before("Assert accurate reporting", () => {
 				const list = FuzzyFinder.getList("Project");
-				expect(list).to.exist.and.respondTo("populateList");
+				expect(list).to.exist;
+				let editor, populate;
 				
-				const filterView = list.filterEditorView;
-				expect(filterView).to.exist.and.respondTo("getModel");
+				if(FuzzyFinder.jQueryRemoved){
+					list.should.have.property("selectListView");
+					list.selectListView.should.respondTo("didChangeQuery");
+					populate = () => list.selectListView.didChangeQuery();
+					expect(list.selectListView.refs).to.exist.and.have.property("queryEditor");
+					editor = list.selectListView.refs.queryEditor;
+				}
 				
-				const editor = filterView.getModel();
-				expect(editor).to.exist.and.respondTo("setText");
+				else{
+					list.should.respondTo("populateList");
+					populate = () => list.populateList();
+					const filterView = list.filterEditorView;
+					expect(filterView).to.exist.and.respondTo("getModel");
+					editor = filterView.getModel();
+					expect(editor).to.exist.and.respondTo("setText");
+				}
 				
 				const nodes = Array.from(FuzzyFinder.iconNodes);
 				nodes.should.not.be.empty;
@@ -161,7 +174,7 @@ describe("Fuzzy-finder", () => {
 				editor.getText().should.equal("e");
 				editor.setText("");
 				editor.getText().should.equal("");
-				list.populateList();
+				populate();
 				
 				return wait(100).then(() => {
 					node.destroyed.should.be.true;
