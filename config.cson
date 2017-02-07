@@ -118,6 +118,10 @@ directoryIcons:
 		match: /^\.meteor$/
 		colour: "dark-orange"
 
+	Mercurial:
+		icon: "hg"
+		match: /^\.hg$/
+
 	NodeJS:
 		icon: "node"
 		match: /^node_modules$/
@@ -169,6 +173,14 @@ fileIcons:
 		scope: "abp"
 		match: ".abap"
 		colour: "medium-orange"
+
+	ABIF:
+		icon: "abif"
+		match: [
+			[".abif", "medium-blue", signature: /^ABIF/]
+			[".ab1", "medium-green"]
+			[".fsa", "medium-red"]
+		]
 
 	ActionScript: # Or Flash-related
 		icon: "as"
@@ -746,7 +758,7 @@ fileIcons:
 
 	ClojureScript:
 		icon: "cljs"
-		match: /\.cljs(\.hl|cm)?$/i
+		match: /\.cljs(cm)?$/i
 		colour: "auto-blue"
 
 	CMake:
@@ -1135,6 +1147,12 @@ fileIcons:
 		scope: "eiffel"
 		match: /\.e$/
 		colour: "medium-cyan"
+
+	EJS:
+		icon: "ejs"
+		match: ".ejs"
+		colour: "medium-green"
+		scope: "text.html.js"
 
 	Elixir:
 		icon: "elixir"
@@ -1719,12 +1737,16 @@ fileIcons:
 			[/^\.vendor_urls$/, "dark-purple"]
 		]
 
+	Hoplon:
+		icon: "hoplon"
+		match: ".hl"
+		colour: "medium-red"
+
 	HTML:
 		icon: "html5"
 		match: [
 			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /^(xhtml|htm)$/i, signature: /^<!DOCTYPE html>/i]
 			[".cshtml", "medium-red"]
-			[".ejs", "medium-green"]
 			[".gohtml", "dark-blue", "gohtml"]
 			[".html.eex", "medium-purple"]
 			[".jsp", "medium-purple", scope: "jsp", alias: /^(jsp|Java\s*Server\s*Pages?)$/i]
@@ -1994,6 +2016,11 @@ fileIcons:
 			[".keynote", "medium-blue"]
 			[".knt", "dark-blue"]
 		]
+
+	KiCad:
+		icon: "kicad"
+		colour: "dark-blue"
+		match: ".kicad_pcb"
 
 	KitchenCI:
 		icon: "kitchenci"
@@ -2833,6 +2860,12 @@ fileIcons:
 			[".pmod", "medium-blue"]
 		]
 
+	PlatformIO:
+		icon: "platformio"
+		priority: 2
+		match: /^platformio\.ini$/i
+		colour: "medium-orange"
+
 	PLSQL:
 		icon: "sql"
 		scope: /\.plsql(\.oracle)?(\.|$)/i
@@ -2849,6 +2882,12 @@ fileIcons:
 		scope: "pogoscript"
 		match: ".pogo"
 		colour: "auto-orange"
+
+	Polymer:
+		icon: "polymer"
+		priority: 2
+		match: /^polymer\.json$/i
+		colour: "medium-purple"
 
 	Pony:
 		icon: "pony"
@@ -3111,6 +3150,13 @@ fileIcons:
 		match: [
 			[/\.rexx?$/i, "medium-red", scope: "rexx", interpreter: /rexx|regina/i]
 			[".pprx", "medium-blue"]
+		]
+
+	Rhino3D:
+		icon: "rhino"
+		match: [
+			[".3dm", "medium-blue"]
+			[".rvb", "medium-green", "rhino"]
 		]
 
 	Riemann:
@@ -3802,6 +3848,11 @@ fileIcons:
 			[/^[gn_]?vim(rc|info)$/i, "dark-green"]
 		]
 
+	VirtualBox:
+		icon: "virtualbox"
+		match: /\.vbox(-prev)?$/i
+		colour: "auto-blue"
+
 	"Visual Studio":
 		icon: "vs"
 		match: [
@@ -3816,6 +3867,19 @@ fileIcons:
 			[/\.vscodeignore(\.json)?$/i, "medium-blue", priority: 2]
 			[".builds", "medium-maroon"]
 			[".sln", "medium-orange"]
+		]
+
+	VMware:
+		icon: "vmware"
+		match: [
+			[".vmdk", "auto-orange"]
+			[".nvram", "auto-blue"]
+			[".vmsd", "medium-green"]
+			[".vmsn", "medium-green"]
+			[".vmss", "auto-blue"]
+			[".vmtm", "auto-red"]
+			[".vmx", "auto-orange"]
+			[".vmxf", "auto-orange"]
 		]
 
 	Vue:

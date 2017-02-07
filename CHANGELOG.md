@@ -9,16 +9,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 -------------
 ### Added
+- **New icons:** ABIF (`.abif`, `.ab1`, `.fsa`), EJS (`.ejs`), Hoplon (`.hl`), KiCad (`.kicad_pcb`), Mercurial (`.hg`), PlatformIO (`platformio.ini`), Polymer (`polymer.json`), Rhino3D (`.3dm`, `.rvb`), VirtualBox (`.vbox`), VMware (`.vmdk,` `.nvram`, `.vmsd`, `.vmsn`, `.vmss`, `.vmtm`, `.vmx`, `.vmxf`)
 - **Support:** LookML (`.lkml`), SQL (`.hql`)
 
 ### Fixed
-- [[`#537`][]] Error thrown for [`atom-svn`](https://atom.io/packages/svn) users
-- [[`#540`][]] Error thrown for [`atom-ng`](https://atom.io/packages/atom-hg) users
+- [[`#537`][], [`#540`][]] Errors thrown for [`atom-svn`](https://atom.io/packages/svn) and [`atom-ng`](https://atom.io/packages/atom-hg) users
 - `linguist-language` strategy not working on Windows
 - Missing cache and repository icons on Windows. Seriously this time.
 - Icons not cleared from memory when closing `find-and-replace`
 
 [`#537`]: https://github.com/file-icons/atom/issues/537
+[`#540`]: https://github.com/file-icons/atom/issues/540
 
 
 [2.0.14] - 2017-02-03
