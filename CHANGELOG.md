@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -------------
 ### Added
 - **Support:** LookML (`.lkml`), SQL (`.hql`)
+- **New:** Polymer.json
 
 ### Fixed
 - [[`#537`][]] Error thrown for [`atom-svn`](https://atom.io/packages/svn) users

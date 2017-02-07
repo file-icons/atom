@@ -2850,6 +2850,11 @@ fileIcons:
 		match: ".pogo"
 		colour: "auto-orange"
 
+	"Polymer.json":
+		icon: "polymer"
+		match: "polymer.json"
+		color: "purple"
+
 	Pony:
 		icon: "pony"
 		scope: "pony"
