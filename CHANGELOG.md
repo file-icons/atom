@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - [[`#537`][]] Error thrown for [`atom-svn`](https://atom.io/packages/svn) users
+- [[`#540`][]] Error thrown for [`atom-ng`](https://atom.io/packages/atom-hg) users
 - `linguist-language` strategy not working on Windows
 - Missing cache and repository icons on Windows. Seriously this time.
 - Icons not cleared from memory when closing `find-and-replace`
