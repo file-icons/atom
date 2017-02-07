@@ -3,11 +3,11 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.14...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.15...HEAD
 
 
-[Unpublished]
--------------
+[2.0.15] - 2017-02-08
+---------------------
 ### Added
 - **New icons:** ABIF (`.abif`, `.ab1`, `.fsa`), EJS (`.ejs`), Hoplon (`.hl`), KiCad (`.kicad_pcb`), Mercurial (`.hg`), PlatformIO (`platformio.ini`), Polymer (`polymer.json`), Rhino3D (`.3dm`, `.rvb`), VirtualBox (`.vbox`), VMware (`.vmdk,` `.nvram`, `.vmsd`, `.vmsn`, `.vmss`, `.vmtm`, `.vmx`, `.vmxf`)
 - **Support:** LookML (`.lkml`), SQL (`.hql`)
@@ -19,6 +19,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Missing cache and repository icons on Windows. Seriously this time.
 - Icons not cleared from memory when closing `find-and-replace`
 
+[2.0.15]: https://github.com/file-icons/atom/releases/tag/v2.0.15
 [`#537`]: https://github.com/file-icons/atom/issues/537
 [`#540`]: https://github.com/file-icons/atom/issues/540
 [`#541`]: https://github.com/file-icons/atom/issues/541
