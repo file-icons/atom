@@ -2900,7 +2900,7 @@ fileIcons:
 		match: [
 			[/\.p(ost)?css$/i, "dark-red", "postcss"]
 			[/\.sss$/i, "dark-pink", "sugarss"]
-			[".postcssrc", "auto-orange"]
+			[/\.postcssrc(\.(js|json|ya?ml))?$/i, "auto-orange"]
 			[/\bpostcss\.config\.js$/i, "auto-yellow", priority: 2]
 		]
 
