@@ -2232,6 +2232,7 @@ fileIcons:
 		icon: "markdown"
 		scope: "gfm"
 		match: /\.(md|mdown|markdown|mkd|mkdown|mkdn|rmd|ron)$/i
+		alias: /^(CommonMark|GFM|Pandoc)$|\bMarkdown\b/i
 		colour: "medium-blue"
 
 	Marko:
