@@ -2230,8 +2230,8 @@ fileIcons:
 
 	Markdown:
 		icon: "markdown"
-		scope: "gfm"
-		match: /\.(md|mdown|markdown|mkd|mkdown|mkdn|rmd|ron)$/i
+		scope: /(^|\.)[gp]fm|markdown(\.|$)/i
+		match: /\.(md|mdown|markdown|mkd|mkdown|mkdn|rmd|ron|pmd)$/i
 		alias: /^(CommonMark|GFM|Pandoc)$|\bMarkdown\b/i
 		colour: "medium-blue"
 
