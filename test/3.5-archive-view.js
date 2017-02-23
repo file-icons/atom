@@ -33,7 +33,7 @@ describe("Archive-view", () => {
 				["zipped/.npmignore",           base + "npm-icon",       "medium-red"],
 				["zipped/.travis.yml",          base + "travis-icon",    "medium-red"],
 				["zipped/chai.js",              base + "chai-icon",      "medium-red"],
-				["zipped/docs.roff",            base + "manpage-icon",   "dark-maroon"],
+				["zipped/docs.roff",            base + "manpage-icon",   "dark-green"],
 				["zipped/file.ico",             base + "image-icon",     "medium-blue"],
 				["zipped/karma.conf.js",        base + "karma-icon",     "medium-cyan"],
 				["zipped/markup.md",            base + "markdown-icon",  "medium-blue"],
