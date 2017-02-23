@@ -31,7 +31,6 @@ priority:  More than one pattern may match a filename. To ensure more specific p
            by more general patterns, set the priority index to a value greater than 1. This property is
            optional and defaults to 1 if omitted.
 
-NOTE: RegExp capturing groups are made non-capturing by the compiler. Backreferences will NOT work.
 
 
 ADVANCED PROPERTIES
@@ -3949,7 +3948,7 @@ fileIcons:
 
 	Xcode:
 		icon: "appstore"
-		match: /\.(pbxproj|pbxuser|mode\dv\3|xcplugindata|xcrequiredplugins)$/i
+		match: /\.(pbxproj|pbxuser|mode\dv3|xcplugindata|xcrequiredplugins)$/i
 		colour: "medium-blue"
 
 	Xojo:
