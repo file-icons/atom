@@ -3637,6 +3637,7 @@ fileIcons:
 			[".mkvi", "auto-orange"]
 			[".mkii", "auto-orange"]
 			[".texi", "auto-red"]
+			[/^hyphen(ex)?\.(cs|den|det|fr|sv|us)$/, "auto-red", priority: 2]
 		]
 
 	Text:
