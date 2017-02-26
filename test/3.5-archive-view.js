@@ -264,7 +264,7 @@ describe("Archive-view", () => {
 		const results = [];
 		const entryNodes = archiveTree.querySelectorAll("li.entry");
 		for(const entryNode of entryNodes){
-			const entry = ArchiveView.entryNodes.get(entryNode.spacePenView);
+			const entry = ArchiveView.entryNodes.get(entryNode.spacePenView || entryNode);
 			if(!entry) continue;
 			const path  = entry.entry.path.replace(/\\/g, "/");
 			results[path] = entryNode.querySelector(".icon");
