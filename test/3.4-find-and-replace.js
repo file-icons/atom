@@ -17,7 +17,7 @@ describe("Find-and-replace", () => {
 			atom.commands.dispatch(workspace, "project-find:show");
 		}).then(() => {
 			FindAndReplace.active.should.be.true;
-			workspace.style.height = "1000px";
+			workspace.style.height = "5000px";
 			
 			const packagePath = atom.packages.activePackages["find-and-replace"].mainModulePath;
 			const resultsPane = require(join(dirname(packagePath), "project", "results-pane"));
@@ -228,8 +228,10 @@ describe("Find-and-replace", () => {
 			.then(() => wait(500))
 			.then(() => {
 				files = [];
-				const items = workspace.querySelectorAll(".results-view > .path");
-				for(const item of items){
+				const selector = FindAndReplace.jQueryRemoved
+					? ".results-view li.path:not([data-path=fake-file-path])"
+					: ".results-view > .path";
+				for(const item of workspace.querySelectorAll(selector)){
 					const pathDetails = item.querySelector(".path-details");
 					const name = pathDetails.querySelector(".path-name").textContent;
 					const icon = pathDetails.querySelector(".icon");
