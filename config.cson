@@ -254,6 +254,12 @@ fileIcons:
 		match: ".ampl"
 		colour: "dark-maroon"
 
+	AngelScript:
+		icon: "angelscript"
+		alias: "AngelCode"
+		match: /\.(acs|angelscript)$/i
+		colour: "auto-blue"
+
 	Angular:
 		icon: "angular"
 		priority: 2
@@ -472,6 +478,19 @@ fileIcons:
 		match: /^backbone([-.]min|dev)?\.js$/i
 		colour: "dark-blue"
 
+	Bazel:
+		icon: "bazel"
+		match: [
+			[/^(BUILD|WORKSPACE)$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
+			[".bzl", "dark-blue", alias: "Skylark", scope: /(^|\.)(bzl|skylark)(\.|$)/i]
+		]
+
+	BEM:
+		icon: "bem"
+		priority: 2
+		match: /\.bemjson(\.js)?$/i
+		colour: "medium-maroon"
+
 	BibTeX:
 		icon: "bibtex"
 		match: [
@@ -634,6 +653,12 @@ fileIcons:
 		scope: "cabal"
 		match: ".cabal"
 		colour: "medium-cyan"
+
+	Caddy:
+		icon: "caddy"
+		match: /^Caddyfile($|[-.])/i
+		priority: 2
+		colour: "dark-blue"
 
 	Cake:
 		icon: "cake"
@@ -1039,6 +1064,20 @@ fileIcons:
 			[".dpr", "medium-orange"]
 		]
 
+	"D★Mark":
+		icon: "icon-star"
+		match: ".dmark"
+		colour: "dark-red"
+		alias: /^d[_\W]?mark$/i
+		noSuffix: true
+
+	DeviceTree:
+		icon: "devicetree"
+		match: [
+			[".dts", "medium-purple", scope: "dts", alias: "DeviceTree Source"]
+			[".dtsi", "medium-orange"]
+		]
+
 	Diff:
 		icon: "diff"
 		scope: "diff"
@@ -1319,6 +1358,13 @@ fileIcons:
 			[".f95", "dark-pink"]
 			[".for", "dark-cyan"]
 			[".fpp", "dark-yellow"]
+		]
+
+	Franca:
+		icon: "franca"
+		match: [
+			[/\.fi?dl$/i, "medium-orange", alias: "Franca IDL", scope: "fidl"]
+			[".fdepl", "medium-maroon", alias: "Franca Deployment", scope: "fdepl"]
 		]
 
 	FreeMarker:
@@ -1965,6 +2011,13 @@ fileIcons:
 			[".jinja2", "medium-red", alias: "jinja2"]
 		]
 
+	Jison:
+		icon: "jison"
+		match: [
+			[".jison", "medium-blue", "jison"]
+			[".jisonlex", "medium-cyan", "JisonLex"]
+		]
+
 	jQuery:
 		icon: "jquery"
 		priority: 2
@@ -2328,6 +2381,13 @@ fileIcons:
 		match: ".moo"
 		colour: "medium-cyan"
 
+	Meson:
+		icon: "meson"
+		priority: 2
+		match: /^(meson\.build|meson_options\.txt)$/i
+		colour: "medium-green"
+		scope: "meson"
+
 	Metal:
 		icon: "metal"
 		match: ".metal"
@@ -2395,12 +2455,26 @@ fileIcons:
 		match: /^mcmod\.info$/i
 		colour: "dark-green"
 
+	MiniZinc:
+		icon: "minizinc"
+		match: [
+			[".mzn", "medium-blue", "mzn"]
+			[".dzn", "dark-blue", alias: "MiniZinc Data"]
+		]
+
 	Mirah:
 		icon: "mirah"
 		match: [
 			[/\.dr?uby$/g, "medium-blue", "mirah"]
 			[/\.mir(ah)?$/g, "light-blue"]
 		]
+
+	Miranda:
+		icon: "miranda"
+		priority: 0.5
+		match: ".m"
+		scope: "miranda"
+		colour: "medium-red"
 
 	MkDocs:
 		icon: "book-alt"
@@ -2503,6 +2577,12 @@ fileIcons:
 		alias: /^(hbs|htmlbars|handlebars)$/i
 		match: /\.(hbs|handlebars|mustache)$/i
 		colour: "medium-orange"
+
+	Nanoc:
+		icon: "nanoc"
+		priority: 2
+		match: /^\.?nanoc\.ya?ml$/i
+		colour: "medium-red"
 
 	NAnt:
 		icon: "nant"
@@ -2762,6 +2842,12 @@ fileIcons:
 		match: ".oz"
 		colour: "medium-yellow"
 
+	P4:
+		icon: "p4"
+		match: ".p4"
+		scope: "p4"
+		colour: "dark-purple"
+
 	Paket:
 		icon: "package"
 		priority: 2
@@ -3010,7 +3096,6 @@ fileIcons:
 		icon: "python"
 		match: [
 			[".py", "dark-blue", scope: "python", alias: "rusthon", interpreter: /python[\d.]*/]
-			[".bzl", "dark-blue"]
 			[".ipy", "medium-blue"]
 			[".isolate", "dark-green"]
 			[".pep", "medium-orange", "pep8"]
@@ -3026,7 +3111,7 @@ fileIcons:
 			[".xpy", "auto-yellow"]
 			[".rpy", "medium-pink", scope: "renpy", alias: /^Ren'?Py$/i]
 			[/\.?(pypirc|pythonrc|python-venv)$/i, "dark-blue"]
-			[/^(BUILD|SConstruct|SConscript)$/, "dark-green"]
+			[/^(SConstruct|SConscript)$/, "dark-green"]
 			[/^(Snakefile|WATCHLISTS)$/, "medium-green"]
 			[/^wscript$/, "dark-maroon"]
 		]
@@ -3896,6 +3981,12 @@ fileIcons:
 		scope: "vue"
 		match: ".vue"
 		colour: "light-green"
+
+	Watchman:
+		icon: "watchman"
+		priority: 2
+		match: /\.watchmanconfig$|^watchman\.json$/i
+		colour: "medium-blue"
 
 	"Web Ontology Language":
 		icon: "owl"
