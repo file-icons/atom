@@ -6,11 +6,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.0.16...HEAD
 
 
+[Unpublished]
+---------------------
+### Added
+- **Support:** PostCSS (`.postcssrc.{js,json,yaml}`)
+
+
 [2.0.16] - 2017-02-27
 ---------------------
 ### Added
 - **New icons:** AngelScript (`.acs`, `.angelscript`), Bazel (`.bzl`, `BUILD`, `WORKSPACE`), BEM (`.bemjson.js`), Caddy (`Caddyfile`), DeviceTree (`.dts`, `.dtsi`), Franca (`.fdl`, `.fidl`, `.fdepl`), Jison (`.jison`, `.jisonlex`), Meson (`meson.build`, `meson_options.txt`), MiniZinc (`.mzn`, `.dzn`), Miranda (`.m`), Nanoc (`.nanoc.yaml`), P4 (`.p4`), Watchman (`.watchmanconfig`, `watchman.json`)
-- **Support:** Generic code (`.bc`, `.dtd`, `.fo`, `.fidl`, `.stellaris`, `.spthy`, `.wlp4`), Markdown (`.gfm`, `.pfm`), PostCSS (`.postcssrc.{js, json, yaml}`)
+- **Support:** Generic code (`.bc`, `.dtd`, `.fo`, `.fidl`, `.stellaris`, `.spthy`, `.wlp4`), Markdown (`.gfm`, `.pfm`)
 
 [2.0.16]: https://github.com/file-icons/atom/releases/tag/v2.0.16
 
