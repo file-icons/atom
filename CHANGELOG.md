@@ -12,6 +12,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** PostCSS (`.postcssrc.{js,json,yaml}`)
 - Commands to toggle package settings: `file-icons:toggle-changed-only`, `file-icons:toggle-tab-icons` (no default keybindings).
 
+### Fixed
+- [[`#550`][]]: Switching projects in [`project-plus`][+stahp] broke connection with `tree-view` entries. Files quit refreshing and directories reverted to default-icons.
+- [`Tabs`][] not clearing memory when switching projects in [`project-plus`][+stahp].
+
+[`Tabs`]: https://github.com/file-icons/atom/commit/b3051db1d
+[+stahp]: https://atom.io/packages/project-plus
+[`#550`]: https://github.com/file-icons/atom/issues/550
+
 
 [2.0.16] - 2017-02-27
 ---------------------
