@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ---------------------
 ### Added
 - **Support:** PostCSS (`.postcssrc.{js,json,yaml}`)
+- Commands to toggle package settings: `file-icons:toggle-changed-only`, `file-icons:toggle-tab-icons` (no default keybindings).
 
 
 [2.0.16] - 2017-02-27
