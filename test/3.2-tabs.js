@@ -129,6 +129,27 @@ describe("Tabs", () => {
 			});
 		});
 		
+		when("a tab is opened while disabled", () =>
+			it("doesn't display an icon", () => {
+				const classes = "bower-icon medium-yellow";
+				tabs[".bowerrc"].should.have.classes(classes);
+				Options.set("tabPaneIcon", false);
+				tabs[".bowerrc"].should.not.have.classes(classes);
+				
+				atom.workspace.destroyActivePaneItem();
+				tabs = Tabs.ls();
+				expect(tabs[".bowerrc"]).not.to.exist;
+				
+				atom.commands.dispatch(atom.views.getView(atom.workspace), "pane:reopen-closed-item");
+				return wait(100).then(() => {
+					tabs = Tabs.ls();
+					expect(tabs[".bowerrc"]).to.exist;
+					tabs[".bowerrc"].should.not.have.classes(classes);
+					Options.set("tabPaneIcon", true);
+					tabs[".bowerrc"].should.have.classes(classes);
+				});
+			}));
+		
 		when("tab-icons are re-enabled", () => {
 			it("displays icons using correct, up-to-date settings", () => {
 				tabs["markdown.md"].should.have.classes("title icon medium-blue");
