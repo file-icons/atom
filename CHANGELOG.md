@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.16...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.17...HEAD
 
 
-[Unpublished]
+[2.0.17] - 2017-03-01
 ---------------------
 ### Added
 - **New icons:** ESDoc (`esdoc.json`), JSONT (`.jsont`), Twine (`.tw`), and Phoenix (`phoenix.{ex,js}`)
@@ -18,6 +18,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#550`][]]: Switching projects in [`project-plus`][+stahp] broke connection with `tree-view` entries. Files quit refreshing and directories reverted to default-icons.
 - [`Tabs`][] not clearing memory when switching projects in [`project-plus`][+stahp].
 
+[2.0.17]: https://github.com/file-icons/atom/releases/tag/v2.0.17
 [`Tabs`]: https://github.com/file-icons/atom/commit/b3051db1d
 [+stahp]: https://atom.io/packages/project-plus
 [`#550`]: https://github.com/file-icons/atom/issues/550
