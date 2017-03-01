@@ -1260,6 +1260,12 @@ fileIcons:
 			[/^rebar(\.config)?\.lock$/i, "medium-red"]
 		]
 
+	ESDoc:
+		icon: "esdoc"
+		priority: 2
+		match: /^\.?esdoc\.json$/i
+		colour: "medium-red"
+
 	ESLint:
 		icon: "eslint"
 		priority: 2
@@ -2942,6 +2948,14 @@ fileIcons:
 		match: /^phpunit\.xml$/i
 		colour: "medium-purple"
 
+	Phoenix:
+		icon: "phoenix"
+		priority: 3
+		match: [
+			[/^phoenix\.ex$/i, "medium-red"]
+			[/^phoenix\.js$/i, "medium-orange"]
+		]
+
 	Pickle:
 		icon: "pickle"
 		match: ".pkl"
@@ -3524,6 +3538,13 @@ fileIcons:
 			[".rq", "dark-blue"]
 		]
 
+	SquareSpace: # JSON Templates
+		icon: "squarespace"
+		match: ".jsont"
+		scope: "jsont"
+		colour: "dark-purple"
+		alias: /^(json[-_]?t|json[-_\s]?template)$/i
+
 	SQF:
 		icon: "sqf"
 		match: [
@@ -3810,6 +3831,14 @@ fileIcons:
 		scope: "twig"
 		match: ".twig"
 		colour: "medium-green"
+
+	TwineScript:
+		icon: "twine"
+		scope: "tw"
+		match: ".tw"
+		colour: "medium-blue"
+		alias: "SugarCube"
+		interpreter: /^(Twine|Twee)$/i
 
 	TXL:
 		icon: "txl"

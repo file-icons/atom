@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
+- **New icons:** ESDoc (`esdoc.json`), JSONT (`.jsont`), Twine (`.tw`), and Phoenix (`phoenix.{ex,js}`)
 - **Support:** PostCSS (`.postcssrc.{js,json,yaml}`)
 - Commands to toggle package settings: `file-icons:toggle-changed-only`, `file-icons:toggle-tab-icons` (no default keybindings).
 
