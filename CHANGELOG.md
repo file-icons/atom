@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Commands to toggle package settings: `file-icons:toggle-changed-only`, `file-icons:toggle-tab-icons` (no default keybindings).
 
 ### Fixed
+- [[`#550`][]]: Icons still displayed in tabs after disabling `tabPaneIcon` setting
 - [[`#550`][]]: Switching projects in [`project-plus`][+stahp] broke connection with `tree-view` entries. Files quit refreshing and directories reverted to default-icons.
 - [`Tabs`][] not clearing memory when switching projects in [`project-plus`][+stahp].
 
