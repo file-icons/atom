@@ -112,6 +112,10 @@ directoryIcons:
 		icon: "github"
 		match: /^\.github$/
 
+	GitLab:
+		icon: "gitlab"
+		match: /^\.gitlab$/
+
 	Meteor:
 		icon: "meteor"
 		match: /^\.meteor$/
@@ -1631,10 +1635,8 @@ fileIcons:
 	GitLab:
 		icon: "gitlab"
 		priority: 2
-		match: [
-			[/^\.gitlab$/]
-			[/^\.gitlab-ci\.yml$/, "medium-orange"]
-		]
+		match: /^\.gitlab-ci\.yml$/
+		colour: "medium-orange"
 
 	Glade:
 		icon: "glade"
