@@ -1631,8 +1631,10 @@ fileIcons:
 	GitLab:
 		icon: "gitlab"
 		priority: 2
-		colour: "medium-orange"
-		match: /^\.gitlab-ci\.ya?ml$/i
+		match: [
+			[/^\.gitlab$/]
+			[/^\.gitlab-ci\.yml$/, "medium-orange"]
+		]
 
 	Glade:
 		icon: "glade"
