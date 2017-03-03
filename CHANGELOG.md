@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.0.17...HEAD
 
 
+[Unpublished]
+---------------------
+### Added
+- **Support:** GitLab (`.gitlab`), Stylus (`.stylus`)
+
+
 [2.0.17] - 2017-03-01
 ---------------------
 ### Added

@@ -3639,7 +3639,7 @@ fileIcons:
 	Stylus:
 		icon: "stylus"
 		scope: "stylus"
-		match: ".styl"
+		match: /\.(styl|stylus)$/i
 		colour: "medium-green"
 
 	"Sublime Text":
