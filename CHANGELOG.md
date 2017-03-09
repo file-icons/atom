@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **Support:** GitLab (`.gitlab`), Stylus (`.stylus`)
+- **Support:** GitLab (`.gitlab`), SourcePawn (`.inc`), Stylus (`.stylus`)
 
 
 [2.0.17] - 2017-03-01

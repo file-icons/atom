@@ -48,7 +48,7 @@ describe("Modelines", () => {
 		["mode-java",      "default-icon"],
 		["mode-js",        "default-icon"],
 		["mode-coffee.pl", "perl-icon medium-blue"],
-		["mode-php.inc",   "default-icon"],
+		["mode-php.inc",   "clojure-icon medium-green"],
 		["mode-ruby",      "default-icon"],
 		["mode-ruby1",     "default-icon"],
 		["mode-ruby2",     "default-icon"],

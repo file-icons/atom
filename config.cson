@@ -3522,10 +3522,10 @@ fileIcons:
 
 	SourcePawn:
 		icon: "clojure"
-		alias: "sourcemod"
-		match: /\.(sma|sp)$/i
-		colour: "auto-yellow"
-		scope: "sp"
+		match: [
+			[/\.(sma|sp)$/i, "auto-yellow", scope: "sp", alias: "sourcemod"]
+			[".inc", "medium-green"]
+		]
 
 	"Source Map":
 		icon: "sourcemap"
