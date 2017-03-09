@@ -288,7 +288,7 @@ describe("Tree-view", () => {
 			firstIcon.destroyed.should.be.false;
 			firstEntry.destroyed.should.be.false;
 			for(const entry of entries.values())
-				classLists[entry.path] = entry.className;
+				classLists[entry.path] = entry.className.split(/\s+/g).sort().join(" ");
 		});
 		
 		it("gets released from memory", () => {
@@ -315,7 +315,7 @@ describe("Tree-view", () => {
 				expect(firstEntry.destroyed).to.be.false;
 				const newClassLists = {};
 				for(const {className, path} of entries.values())
-					newClassLists[path] = className;
+					newClassLists[path] = className.split(/\s+/g).sort().join(" ");
 				expect(classLists).to.eql(newClassLists);
 			}));
 	});
