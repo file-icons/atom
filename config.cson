@@ -2018,7 +2018,7 @@ fileIcons:
 		icon: "jinja"
 		match: [
 			[".jinja", "dark-red", scope: "jinja", alias: /^(django|htmldjango|html\+django\/jinja|html\+jinja)$/i]
-			[".jinja2", "medium-red", alias: "jinja2"]
+			[/\.j(inja)?2$/i, "medium-red", alias: "jinja2"]
 		]
 
 	Jison:
