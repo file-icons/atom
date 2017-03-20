@@ -13,6 +13,7 @@
 	},
 	"atomTestRunner": "atom-mocha",
 	"dependencies": {
+		"@alhadis/utils": "*",
 		"micromatch": "*",
 		"print": "*"
 	},
