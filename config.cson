@@ -3079,7 +3079,7 @@ fileIcons:
 	Protractor:
 		icon: "protractor"
 		priority: 2
-		match: /^protractor\.conf\./i
+		match: /^protractor\.(conf|config)\./i
 		colour: "medium-red"
 
 	Pug:
