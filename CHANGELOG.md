@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **Support:** GitLab (`.gitlab`), Jinja2 (`.j2`), SourcePawn (`.inc`), Stylus (`.stylus`)
+- **Support:** GitLab (`.gitlab`), Jinja2 (`.j2`), Karma (`karma.config.*`), Protractor (`protractor.config.*`), SourcePawn (`.inc`), Stylus (`.stylus`)
 
 
 [2.0.17] - 2017-03-01
