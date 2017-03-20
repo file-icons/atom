@@ -9,7 +9,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **Support:** GitLab (`.gitlab`), Jinja2 (`.j2`), Karma (`karma.config.*`), Protractor (`protractor.config.*`), SourcePawn (`.inc`), Stylus (`.stylus`)
+- **New icons:** Alex (`.alexrc`, `.alexignore`), Antwar (`antwar.{conf|config}.`), CodeShip (`codeship-*.yml`), MarkdownLint (`.markdownlintrc`), PM2 (`ecosystem.{config|conf}.*`), Proselint (`.proselintrc`), Tests folder (unassigned), Test-files (CoffeeScript: , Generic code, JavaScript, Perl, Python, React/JSX/TSX, Ruby, and TypeScript) (`{spec|test}/*.{spec|test}.{js|rb|pl…}`), Webpack (updated logo)
+- **Support:** GitLab (`.gitlab`), Jinja2 (`.j2`), Karma (`karma.config.*`), Protractor (`protractor.config.*`), SourcePawn (`.inc`), Stylus (`.stylus`), Webpack (`webpack.conf.*`)
+
+### Changed
+- Webpack icon updated to use [official branding][Webpack-Logo]. The old icon is retained at [`U+E91E`](https://github.com/file-icons/source/blob/master/charmap.md#E91E).
+
+[Webpack-Logo]: https://github.com/webpack/webpack.js.org/blob/7370b06/assets/icon-square-big.svg
+
 
 
 [2.0.17] - 2017-03-01
