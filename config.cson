@@ -2075,8 +2075,8 @@ fileIcons:
 		icon: "karma"
 		priority: 2
 		match: [
-			[/^karma\.conf\.js$/i, "medium-cyan"]
-			[/^karma\.conf\.coffee$/i, "medium-maroon"]
+			[/^karma\.conf(ig)?\.js$/i, "medium-cyan"]
+			[/^karma\.conf(ig)?\.coffee$/i, "medium-maroon"]
 		]
 
 	Keynote:
@@ -3079,7 +3079,7 @@ fileIcons:
 	Protractor:
 		icon: "protractor"
 		priority: 2
-		match: /^protractor\.conf\./i
+		match: /^protractor\.(conf|config)\./i
 		colour: "medium-red"
 
 	Pug:
