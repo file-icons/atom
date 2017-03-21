@@ -15,6 +15,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Webpack icon updated to use [official branding][Webpack-Logo]. The old icon is retained at [`U+E91E`](https://github.com/file-icons/source/blob/master/charmap.md#E91E).
 
+### Fixed
+- Character maps, borked by some recent change to GitHub Markdown's HTML-parsing
+
 [Webpack-Logo]: https://github.com/webpack/webpack.js.org/blob/7370b06/assets/icon-square-big.svg
 
 
