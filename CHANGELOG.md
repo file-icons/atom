@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** GitLab (`.gitlab`), Jinja2 (`.j2`), Karma (`karma.config.*`), Protractor (`protractor.config.*`), SourcePawn (`.inc`), Stylus (`.stylus`), Webpack (`webpack.conf.*`)
 
 ### Changed
+- Filesystem APIs moved to [a dedicated repository](https://github.com/Alhadis/Atom-FS) for further development. Users should continue to report errors to `file-icons` as normal.
 - Webpack icon updated to use [official branding][Webpack-Logo]. The old icon is retained at [`U+E91E`](https://github.com/file-icons/source/blob/master/charmap.md#E91E).
 
 ### Fixed
