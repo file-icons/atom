@@ -43,10 +43,10 @@ describe("User-defined filetypes", () => {
 		it("displays the icon of the language the type is mapped to", () => {
 			files["test.m"]  .should.have.classes(treeIcon + "objc-icon medium-blue");
 			files["test.mm"] .should.have.classes(treeIcon + "objc-icon medium-blue");
-			files["test.t"]  .should.have.classes(treeIcon + "perl-icon medium-blue");
+			files["test.t"]  .should.have.classes(treeIcon + "test-perl-icon medium-blue");
 			tabs["test.m"]   .should.have.classes(tabIcon  + "objc-icon medium-blue");
 			tabs["test.mm"]  .should.have.classes(tabIcon  + "objc-icon medium-blue");
-			tabs["test.t"]   .should.have.classes(tabIcon  + "perl-icon medium-blue");
+			tabs["test.t"]   .should.have.classes(tabIcon  + "test-perl-icon medium-blue");
 			atom.config.set("core.customFileTypes", {
 				"source.matlab": ["m"],
 				"text.roff":    ["mm"],
@@ -192,7 +192,7 @@ describe("User-defined filetypes", () => {
 				assertIconClasses(files, [
 					["test.m",          treeIcon + "objc-icon medium-blue"],
 					["test.mm",         treeIcon + "objc-icon medium-blue"],
-					["test.t",          treeIcon + "perl-icon medium-blue"],
+					["test.t",          treeIcon + "test-perl-icon medium-blue"],
 					["test.stTheme",    treeIcon + "sublime-icon medium-orange"],
 					["test.tmMacro",    treeIcon + "textmate-icon medium-maroon"],
 					["symlinks/test-1", treeIcon + "icon-file-symlink-file medium-blue"],
@@ -230,13 +230,13 @@ describe("User-defined filetypes", () => {
 			Options.set("usertypes", false);
 			files["test.m"]       .should.have.classes(treeIcon + "objc-icon     medium-blue");
 			files["test.mm"]      .should.have.classes(treeIcon + "objc-icon     medium-blue");
-			files["test.t"]       .should.have.classes(treeIcon + "perl-icon     medium-blue");
+			files["test.t"]       .should.have.classes(treeIcon + "test-perl-icon medium-blue");
 			files["test.m"]       .should.not.have.classes(       "matlab-icon   medium-yellow");
 			files["test.mm"]      .should.not.have.classes(       "manpage-icon  dark-green");
 			files["test.t"]       .should.not.have.classes(       "turing-icon   medium-red");
 			tabs["test.m"]        .should.have.classes(tabIcon  + "objc-icon     medium-blue");
 			tabs["test.mm"]       .should.have.classes(tabIcon  + "objc-icon     medium-blue");
-			tabs["test.t"]        .should.have.classes(tabIcon  + "perl-icon     medium-blue");
+			tabs["test.t"]        .should.have.classes(tabIcon  + "test-perl-icon medium-blue");
 			tabs["test.m"]        .should.not.have.classes(       "matlab-icon   medium-yellow");
 			tabs["test.mm"]       .should.not.have.classes(       "manpage-icon  dark-green");
 			tabs["test.t"]        .should.not.have.classes(       "turing-icon   medium-red");
@@ -285,7 +285,7 @@ describe("User-defined filetypes", () => {
 				assertIconClasses(files, [
 					["test.m",       treeIcon + "objc-icon      medium-blue"],
 					["test.mm",      treeIcon + "objc-icon      medium-blue"],
-					["test.t",       treeIcon + "perl-icon      medium-blue"],
+					["test.t",       treeIcon + "test-perl-icon medium-blue"],
 					["test.stTheme", treeIcon + "sublime-icon   medium-orange"],
 					["test.tmMacro", treeIcon + "textmate-icon  medium-maroon"]
 				]);
