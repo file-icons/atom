@@ -3,7 +3,17 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.0...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.1...HEAD
+
+
+[v2.1.1] - 2017-03-22
+---------------------
+Replaced scoped dependency with [unscoped and republished version](https://www.npmjs.com/package/alhadis.utils).
+
+An `apm` bug with handling scoped NPM modules [`#702`](https://github.com/atom/apm/issues/702) blocked [v2.1.0][] from submission to [atom.io](https://atom.io/packages/file-icons).
+
+[v2.1.1]: https://github.com/file-icons/atom/releases/tag/v2.1.1
+
 
 
 [v2.1.0] - 2017-03-21
