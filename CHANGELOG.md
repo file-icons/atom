@@ -9,8 +9,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Fixed
+- [[`#568`][]]: Exception thrown when installing package
 - [[`#571`][]]: Test-icons not applied to files in test-folder subdirectories
 
+[`#568`]: https://github.com/file-icons/atom/issues/568
 [`#571`]: https://github.com/file-icons/atom/issues/571
 
 
