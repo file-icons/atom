@@ -3771,42 +3771,42 @@ fileIcons:
 		icon: "test-coffee"
 		priority: 1.5
 		matchPath: true
-		match: /([\\\x2F])(test|spec)s?\1((?!\1).)+[._-](spec|test)s?\.(coffee|iced)$/i
+		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.(coffee|iced)$/i
 		colour: "auto-maroon"
 
 	"Test, JavaScript":
 		icon: "test-js"
 		priority: 1.5
 		matchPath: true
-		match: /([\\\x2F])(test|spec)s?\1((?!\1).)+[._-](spec|test)s?\.([_ms]?js|js[bms]|es\d*)$/i
+		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.([_ms]?js|js[bms]|es\d*)$/i
 		colour: "auto-yellow"
 
 	"Test, Perl":
 		icon: "test-perl"
 		match: [
 			[".t", "auto-blue"]
-			[/([\\\x2F])(test|spec)s?\1((?!\1).)+[._-](spec|test)s?\.p(er)?l$/i, "auto-blue", priority: 1.5, matchPath: true]
+			[/([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.p(er)?l$/i, "auto-blue", priority: 1.5, matchPath: true]
 		]
 
 	"Test, Python":
 		icon: "test-python"
 		priority: 1.5
 		matchPath: true
-		match: /([\\\x2F])(test|spec)s?\1((?!\1).)+[._-](spec|test)s?\.py(3|thon)?$/i
+		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.py(3|thon)?$/i
 		colour: "dark-blue"
 
 	"Test, React":
 		icon: "test-react"
 		priority: 1.5
 		matchPath: true
-		match: /([\\\x2F])(test|spec)s?\1((?!\1).)+[._-](spec|test)s?\.(jsx|react\.js)$/i
+		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.(jsx|react\.js)$/i
 		colour: "auto-blue"
 
 	"Test, Ruby":
 		icon: "test-ruby"
 		priority: 2
 		matchPath: true
-		match: /([\\\x2F])(test|spec)s?\1((?!\1).)+[._-](spec|test)s?\.rb$/i
+		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.rb$/i
 		colour: "auto-red"
 
 	"Test, TypeScript":
@@ -3814,8 +3814,8 @@ fileIcons:
 		priority: 1.5
 		matchPath: true
 		match: [
-			[/([\\\x2F])(test|spec)s?\1((?!\1).)+[._-](spec|test)s?\.ts$/i, "auto-blue"]
-			[/([\\\x2F])(test|spec)s?\1((?!\1).)+[._-](spec|test)s?\.tsx$/i, ["light-blue", "medium-blue"]]
+			[/([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.ts$/i, "auto-blue"]
+			[/([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.tsx$/i, ["light-blue", "medium-blue"]]
 		]
 
 	TeX:

@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.1...HEAD
 
 
+[Unpublished]
+---------------------
+### Fixed
+- [[`#571`][]]: Test-icons not applied to files in test-folder subdirectories
+
+[`#571`]: https://github.com/file-icons/atom/issues/571
+
+
 [v2.1.1] - 2017-03-22
 ---------------------
 Replaced scoped dependency with [unscoped and republished version](https://www.npmjs.com/package/alhadis.utils).
