@@ -3,15 +3,16 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.1...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.2...HEAD
 
 
-[Unpublished]
+[v2.1.2] - 2017-03-30
 ---------------------
 ### Fixed
 - [[`#568`][]]: Exception thrown when installing package
 - [[`#571`][]]: Test-icons not applied to files in test-folder subdirectories
 
+[v2.1.2]: https://github.com/file-icons/atom/releases/tag/v2.1.2
 [`#568`]: https://github.com/file-icons/atom/issues/568
 [`#571`]: https://github.com/file-icons/atom/issues/571
 
