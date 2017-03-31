@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.2...HEAD
 
 
+[Unpublished]
+---------------------
+### Added
+- **Support:** Webpack (`webpack.*.conf`)
+
+
 [v2.1.2] - 2017-03-30
 ---------------------
 ### Fixed
