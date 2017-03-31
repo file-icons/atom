@@ -2511,6 +2511,12 @@ fileIcons:
 		scope: "miranda"
 		colour: "medium-red"
 
+	MJML:
+		icon: "mjml"
+		match: ".mjml"
+		scope: "mjml"
+		colour: "medium-red"
+
 	MkDocs:
 		icon: "book-alt"
 		priority: 2
