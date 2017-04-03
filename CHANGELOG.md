@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **New icons:** MJML (`.mjml`)
+- **New icons:** BinTray (`.bintray.json`), Brotli (`.br`), MJML (`.mjml`), NXC (`.nxc`), WebAssembly (`.wasm`, `.wast`, `.wat`)
 - **Support:** Webpack (`webpack.*.conf`)
 
 

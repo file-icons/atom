@@ -401,7 +401,7 @@ fileIcons:
 	Assembly: # Or binary
 		icon: "binary"
 		match: [
-			[/\.(l?a|[ls]?o|out|s|a51|n?asm|axf|elf|prx|puff|was[mt]|z80)$/i, "medium-red",
+			[/\.(l?a|[ls]?o|out|s|a51|n?asm|axf|elf|prx|puff|z80)$/i, "medium-red",
 				scope: /(^|\.)(a[rs]m|x86|z80|lc-?3|cpu12|x86asm|m68k|assembly|avr(dis)?asm|dasm)(\.|$)/i,
 				alias: /^n?asm$/i]
 			[".agc", "dark-blue", scope: "source.agc", alias: /^(Virtual\s*)?AGC$|^Apollo([-_\s]*11)?\s*Guidance\s*Computer$/i]
@@ -517,6 +517,12 @@ fileIcons:
 			[".bst", "auto-green"]
 		]
 
+	BinTray:
+		icon: "bintray"
+		match: /^\.bintray\.json$/i
+		priority: 2
+		colour: "medium-green"
+
 	Bison:
 		icon: "gnu"
 		scope: "bison"
@@ -604,6 +610,11 @@ fileIcons:
 		priority: 2
 		match: /^Brocfile\./i
 		colour: "medium-green"
+
+	Brotli:
+		icon: "brotli"
+		match: ".br"
+		colour: "medium-orange"
 
 	Brunch:
 		icon: "brunch"
@@ -2768,6 +2779,12 @@ fileIcons:
 		match: /\.(nunjucks|njk)$/i
 		colour: "dark-green"
 
+	NXC: # Not eXactly C
+		icon: "nxc"
+		match: ".nxc"
+		scope: "nxc"
+		colour: "medium-orange"
+
 	"Objective-C":
 		icon: "objc"
 		match: [
@@ -4112,6 +4129,13 @@ fileIcons:
 		priority: 2
 		match: /\.watchmanconfig$|^watchman\.json$/i
 		colour: "medium-blue"
+
+	WebAssembly:
+		icon: "wasm"
+		match: [
+			[/\.was?t$/i, "medium-blue", scope: /(^|\.)was[mt](\.|$)/i, alias: /^was[mt]$/i]
+			[".wasm", "medium-red"]
+		]
 
 	"Web Ontology Language":
 		icon: "owl"
