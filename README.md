@@ -103,6 +103,15 @@ Consult the package stylesheets to see what classes are used:
 Troubleshooting
 ---------------
 
+<a name="error-after-installing"></a>
+**I see this error after installing:**  
+> _"Cannot read property 'onDidChangeIcon' of undefined"_  
+
+A restart is needed to complete installation. Reload the window, or restart Atom.
+
+If this doesn't help, [please file an issue][7].
+
+
 <a name="an-icon-has-stopped-updating"></a>
 **An icon has stopped updating:**  
 It's probably a caching issue. Do the following:
@@ -117,6 +126,17 @@ It's probably a caching issue. Do the following:
 If you haven't restarted Atom since upgrading to [File-Icons v2][v2.0], do so now.
 
 If restarting doesn't help, your stylesheet probably needs updating. See below.
+
+
+<a name="the-tree-view-keeps-opening-by-itself"></a>
+**The tree-view keeps opening by itself when opening a project window:**  
+1. Open the dev-tools: **View** → **Developer** → **Toggle Developer Tools**
+2. Click the **Console** tab
+3. Run the following line, then restart Atom:
+
+~~~js
+atom.config.set("file-icons.revealTreeView", false);
+~~~
 
 
 <a name="my-stylesheet-has-errors-since-updating"></a>

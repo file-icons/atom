@@ -12,6 +12,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** BinTray (`.bintray.json`), Brotli (`.br`), MJML (`.mjml`), NXC (`.nxc`), WebAssembly (`.wasm`, `.wast`, `.wat`)
 - **Support:** Webpack (`webpack.*.conf`)
 
+### Fixed
+- [[`#580`][]]: Obscure conflict with [`tree-view-autoresize`](https://github.com/lexcast/tree-view-autoresize) package
+
+[`#580`]: https://github.com/file-icons/atom/issues/580
+
+
 
 [v2.1.2] - 2017-03-30
 ---------------------
