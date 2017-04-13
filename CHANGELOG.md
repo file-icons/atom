@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.2...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.3...HEAD
 
 
-[Unpublished]
+[v2.1.3] - 2017-04-13
 ---------------------
 ### Added
 - **New icons:** BinTray (`.bintray.json`), Brotli (`.br`), DOM, MJML (`.mjml`), NASM (`.nasm`), NXC (`.nxc`), WebAssembly (`.wasm`, `.wast`, `.wat`), Yasm
@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#580`][]]: Obscure conflict with [`tree-view-autoresize`](https://github.com/lexcast/tree-view-autoresize) package
 - [[`#581`][]]: Errors thrown when opening remote directories containing a `.gitattributes` file
 
+[v2.1.3]: https://github.com/file-icons/atom/releases/tag/v2.1.3
 [`#580`]: https://github.com/file-icons/atom/issues/580
 [`#581`]: https://github.com/file-icons/atom/issues/581
 
