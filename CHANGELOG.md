@@ -14,8 +14,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - [[`#580`][]]: Obscure conflict with [`tree-view-autoresize`](https://github.com/lexcast/tree-view-autoresize) package
+- [[`#581`][]]: Errors thrown when opening remote directories containing a `.gitattributes` file
 
 [`#580`]: https://github.com/file-icons/atom/issues/580
+[`#581`]: https://github.com/file-icons/atom/issues/581
 
 
 
