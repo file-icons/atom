@@ -3691,7 +3691,7 @@ fileIcons:
 		match: [
 			[/^\.stylelintrc(\.|$)/i, "medium-purple"]
 			[/^stylelint\.config\.js$/i, "auto-yellow"]
-			[".stylelintignore", "dark-blue"]
+			[/\.stylelint(ignore|cache)$/i, "dark-blue"]
 		]
 
 	Stylus:
