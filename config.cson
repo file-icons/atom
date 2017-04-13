@@ -401,9 +401,9 @@ fileIcons:
 	Assembly: # Or binary
 		icon: "binary"
 		match: [
-			[/\.(l?a|[ls]?o|out|s|a51|n?asm|axf|elf|prx|puff|z80)$/i, "medium-red",
+			[/\.(l?a|[ls]?o|out|s|a51|asm|axf|elf|prx|puff|z80)$/i, "medium-red",
 				scope: /(^|\.)(a[rs]m|x86|z80|lc-?3|cpu12|x86asm|m68k|assembly|avr(dis)?asm|dasm)(\.|$)/i,
-				alias: /^n?asm$/i]
+				alias: /^(asm(68k|h8300)?|[ft]asm|v?masm)$/i]
 			[".agc", "dark-blue", scope: "source.agc", alias: /^(Virtual\s*)?AGC$|^Apollo([-_\s]*11)?\s*Guidance\s*Computer$/i]
 			[".ko", "dark-green"]
 			[".lst", "medium-blue", "lst-cpu12"]
@@ -2641,6 +2641,11 @@ fileIcons:
 		scope: "nant-build"
 		match: ".build"
 		colour: "medium-orange"
+
+	NASM: # Netwide Assembler
+		icon: "nasm"
+		match: ".nasm"
+		colour: "dark-blue"
 
 	"NCAR Command Language (NCL)":
 		icon: "earth"

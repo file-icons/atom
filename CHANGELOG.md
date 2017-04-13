@@ -9,8 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **New icons:** BinTray (`.bintray.json`), Brotli (`.br`), MJML (`.mjml`), NXC (`.nxc`), WebAssembly (`.wasm`, `.wast`, `.wat`)
-- **Support:** Webpack (`webpack.*.conf`)
+- **New icons:** BinTray (`.bintray.json`), Brotli (`.br`), DOM, MJML (`.mjml`), NASM (`.nasm`), NXC (`.nxc`), WebAssembly (`.wasm`, `.wast`, `.wat`), Yasm
+- **Support:** Stylelint (`.stylelintcache`), Webpack (`webpack.*.conf`)
 
 ### Fixed
 - [[`#580`][]]: Obscure conflict with [`tree-view-autoresize`](https://github.com/lexcast/tree-view-autoresize) package
