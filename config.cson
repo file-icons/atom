@@ -89,6 +89,10 @@ directoryIcons:
 		icon: "chef"
 		match: /\.chef$/
 
+	CircleCI:
+		icon: "circleci"
+		match: /^\.circleci$/
+
 	Dropbox:
 		icon: "dropbox"
 		match: /^(Dropbox|\.dropbox\.cache)$/
