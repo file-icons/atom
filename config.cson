@@ -2064,6 +2064,13 @@ fileIcons:
 			[".jisonlex", "medium-cyan", "JisonLex"]
 		]
 
+	Jolie:
+		icon: "jolie"
+		match: [
+			[".ol", "dark-pink", "jolie"]
+			[".iol", "medium-red"]
+		]
+
 	jQuery:
 		icon: "jquery"
 		priority: 2
@@ -2637,6 +2644,12 @@ fileIcons:
 		match: /\.(hbs|handlebars|mustache)$/i
 		colour: "medium-orange"
 
+	Nano:
+		icon: "nano"
+		match: ".nanorc"
+		colour: "medium-blue"
+		scope: /\.nanorc(?=\.|$)/i
+
 	Nanoc:
 		icon: "nanoc"
 		priority: 2
@@ -2968,6 +2981,13 @@ fileIcons:
 		match: ".pdf"
 		colour: "medium-red"
 		signature: /^%PDF/
+
+	PegJS:
+		icon: "peg"
+		match: [
+			[".pegjs", "medium-red", "pegjs"]
+			[".pegcoffee", "medium-maroon", "pegcoffee"]
+		]
 
 	Perl:
 		icon: "perl"
@@ -4203,6 +4223,11 @@ fileIcons:
 		icon: "x11"
 		match: /\.X(authority|clients|initrc|profile|resources|session-errors|screensaver)$/i
 		colour: "medium-orange"
+
+	Xamarin:
+		icon: "xamarin"
+		match: ".workbook"
+		colour: "light-blue"
 
 	XC:
 		icon: "xmos"

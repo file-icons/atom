@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
+- **New icons:** Jolie (`.ol`, `.iol`), Nano (`.nanorc`), PegJS (`.pegjs`, `.pegcoffee`), Xamarin (`.workbook`)
 - **Support:** 3D Assets (`.shader`), Circle CI (`.circleci` directories), Jest (`.js.snap`), Markdown (`.mdwn`), Python (`.pyi`)
 
 ### Fixed
