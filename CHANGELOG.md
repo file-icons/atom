@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **Support:** Circle CI (`.circleci` directories)
+- **Support:** 3D Assets (`.shader`), Circle CI (`.circleci` directories), Jest (`.js.snap`), Markdown (`.mdwn`), Python (`.pyi`)
 
 ### Fixed
 - [[`#590`][]]: Unhandled exception thrown from [`project-plus`][`Tabs`] fix.

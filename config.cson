@@ -2045,8 +2045,10 @@ fileIcons:
 	Jest:
 		icon: "jest"
 		priority: 2
-		match: /^jest(\.config)?\.json$/i
-		colour: "medium-red"
+		match: [
+			[/^jest(\.config)?\.json$/i, "medium-red"]
+			[".js.snap", "auto-yellow"]
+		]
 
 	Jinja:
 		icon: "jinja"
@@ -2335,7 +2337,7 @@ fileIcons:
 	Markdown:
 		icon: "markdown"
 		scope: /(^|\.)[gp]fm|markdown(\.|$)/i
-		match: /\.(md|mdown|markdown|mkd|mkdown|mkdn|rmd|ron|pmd)$/i
+		match: /\.(md|mdown|markdown|mkd|mkdown|mdwn|mkdn|rmd|ron|pmd)$/i
 		alias: /^(CommonMark|GFM|Pandoc)$|\bMarkdown\b/i
 		colour: "medium-blue"
 
@@ -2553,6 +2555,7 @@ fileIcons:
 		match: [
 			[".obj", "medium-red", scope: "wavefront.obj"]
 			[".mtl", "dark-blue",  scope: "wavefront.mtl"]
+			[".shader", "medium-cyan", alias: "ShaderLab", scope: /\.(shader(code|lab)|cg)(?=\.|$)/i]
 			[".stl", "dark-green"]
 			[".u3d", "medium-orange"]
 		]
@@ -2620,7 +2623,7 @@ fileIcons:
 			[/\.midi?$/i, "dark-blue", signature: /^MThd/]
 
 			# LilyPond
-			[".ly", "medium-green", scope: /\.(At)?lilypond-/i, alias: /^Lily\s*Pond$/i]
+			[".ly", "medium-green", scope: /\.(At)?lilypond/i, alias: /^Lily\s*Pond$/i]
 			[".ily", "dark-green"]
 
 			# Pure Data
@@ -3191,6 +3194,7 @@ fileIcons:
 			[".pyp", "dark-purple"]
 			[".pyt", "dark-green"]
 			[".py3", "dark-blue"]
+			[".pyi", "medium-blue"]
 			[".pyw", "medium-maroon"]
 			[".tac", "dark-pink"]
 			[".wsgi", "dark-red"]
