@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.3...HEAD
 
 
+[Unpublished]
+---------------------
+### Fixed
+- [[`#590`][]]: Unhandled exception thrown from [`project-plus`][`Tabs`] fix.
+
+[`#590`]: https://github.com/file-icons/atom/issues/590
+
+
 [v2.1.3] - 2017-04-13
 ---------------------
 ### Added
