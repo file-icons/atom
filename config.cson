@@ -2563,6 +2563,7 @@ fileIcons:
 			[".obj", "medium-red", scope: "wavefront.obj"]
 			[".mtl", "dark-blue",  scope: "wavefront.mtl"]
 			[".shader", "medium-cyan", alias: "ShaderLab", scope: /\.(shader(code|lab)|cg)(?=\.|$)/i]
+			[".cginc", "dark-cyan"]
 			[".stl", "dark-green"]
 			[".u3d", "medium-orange"]
 		]

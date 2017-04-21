@@ -10,11 +10,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ---------------------
 ### Added
 - **New icons:** Jolie (`.ol`, `.iol`), Nano (`.nanorc`), PegJS (`.pegjs`, `.pegcoffee`), Xamarin (`.workbook`)
-- **Support:** 3D Assets (`.shader`), Circle CI (`.circleci` directories), Jest (`.js.snap`), Markdown (`.mdwn`), Python (`.pyi`)
+- **Support:** 3D Assets (`.cginc`, `.shader`), Circle CI (`.circleci` directories), Jest (`.js.snap`), Markdown (`.mdwn`), Python (`.pyi`)
 
 ### Fixed
+- [[`#586`][]]: Classes not removed when disposing of `addIconToElement` disposable
 - [[`#590`][]]: Unhandled exception thrown from [`project-plus`][`Tabs`] fix.
 
+[`#586`]: https://github.com/file-icons/atom/issues/586
 [`#590`]: https://github.com/file-icons/atom/issues/590
 
 
