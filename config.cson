@@ -4135,6 +4135,8 @@ fileIcons:
 			[/\.vcx?proj$/i, "dark-purple"]
 			[/\.vssettings(\.json)?$/i, "dark-green", priority: 2]
 			[/\.vscodeignore(\.json)?$/i, "medium-blue", priority: 2]
+			[".vstemplate", "medium-purple"]
+			[".vsixmanifest", "dark-orange"]
 			[".builds", "medium-maroon"]
 			[".sln", "medium-orange"]
 		]
