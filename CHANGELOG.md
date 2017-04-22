@@ -13,9 +13,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** 3D Assets (`.cginc`, `.shader`), Circle CI (`.circleci` directories), Jest (`.js.snap`), Markdown (`.mdwn`), Python (`.pyi`)
 
 ### Fixed
+- [[`#559`][]]: Occasional error thrown when opening `fuzzy-finder`
 - [[`#586`][]]: Classes not removed when disposing of `addIconToElement` disposable
 - [[`#590`][]]: Unhandled exception thrown from [`project-plus`][`Tabs`] fix.
 
+[`#559`]: https://github.com/file-icons/atom/issues/559
 [`#586`]: https://github.com/file-icons/atom/issues/586
 [`#590`]: https://github.com/file-icons/atom/issues/590
 
