@@ -737,7 +737,7 @@ fileIcons:
 	ChartJS:
 		icon: "chartjs"
 		priority: 2
-		match: /^Chart\.js$/i
+		match: /^Chart(\.bundle)?(\.min)?\.js$/i
 		colour: "dark-pink"
 
 	Checklist:
