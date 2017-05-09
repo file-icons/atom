@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.4...HEAD
 
 
+[Unpublished]
+---------------------
+### Added
+- **Support:** ChartJS (`chart.{bundle,min}.js`), NPM (`package-lock.json`)
+
+
+
 [v2.1.4] - 2017-04-26
 ---------------------
 ### Added
