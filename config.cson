@@ -93,10 +93,10 @@ directoryIcons:
 		icon: "circleci"
 		match: /^\.circleci$/
 
-  Docker:
+	Docker:
 		icon: "docker"
-    match: /^\.docker$/
-    colour: "dark-blue"
+		match: /^\.docker$/
+		colour: "dark-blue"
 
 	Dropbox:
 		icon: "dropbox"
