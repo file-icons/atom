@@ -1218,6 +1218,12 @@ fileIcons:
 		colour: "medium-orange"
 		scope: "editorconfig"
 
+	Edge:
+		icon: "edge"
+		match: ".edge"
+		colour: "dark-orange"
+		scope: /\.html.edge$/
+
 	Eiffel:
 		icon: "eiffel"
 		scope: "eiffel"
@@ -1357,6 +1363,13 @@ fileIcons:
 		match: [
 			[/^Icon\r$/, "medium-blue"]
 			[".rsrc", "dark-blue"]
+		]
+
+	Firebase:
+		icon: "firebase"
+		match: [
+			[/^firebase\.json$/i, "medium-yellow", priority: 2]
+			[".firebaserc", "medium-orange"]
 		]
 
 	Flow:
@@ -1546,7 +1559,6 @@ fileIcons:
 			[".fo", "medium-red", "fasto"]
 			[".forth", "medium-blue"]
 			[".frt", "dark-purple"]
-			[".fsh", "dark-red"]
 			[".fsproj", "dark-red"]
 			[".fth", "dark-blue"]
 			[".fun", "medium-orange"]
@@ -1608,7 +1620,6 @@ fileIcons:
 			[".ui", "medium-blue"]
 			[".urdf", "dark-orange"]
 			[".ux", "light-orange"]
-			[".vsh", "medium-cyan"]
 			[".vxml", "light-purple"]
 			[".webidl", "medium-red"]
 			[".wisp", "dark-cyan"]
@@ -2563,6 +2574,10 @@ fileIcons:
 			[".obj", "medium-red", scope: "wavefront.obj"]
 			[".mtl", "dark-blue",  scope: "wavefront.mtl"]
 			[".shader", "medium-cyan", alias: "ShaderLab", scope: /\.(shader(code|lab)|cg)(?=\.|$)/i]
+			[/\.geo(m|metry)?$/i, "medium-red"]
+			[".comp", "medium-purple"]
+			[".tesc", "medium-green"]
+			[".tese", "medium-green"]
 			[".cginc", "dark-cyan"]
 			[".stl", "dark-green"]
 			[".u3d", "medium-orange"]
@@ -2868,6 +2883,20 @@ fileIcons:
 		alias: /^(progress|openedge|abl)$/i
 		match: ".p"
 		colour: "medium-red"
+
+	"OpenGL Shading Language":
+		icon: "opengl"
+		alias: /^(GLSL|GLslang)$/i
+		match: /\.(glslv?|gsh|gshader)$/i
+		colour: "dark-cyan"
+		scope: "glsl"
+
+	"OpenGL Vertex Shader":
+		icon: "vertex"
+		match: [
+			[/\.(vert|vrx|vertex|vsh(ader)?)$/i, "medium-blue", alias: /^Vertex[-_\s]*(Shader|Program)?$/i]
+			[/\.(fra?g|fp|fsh|fshader)$/i, "medium-red", alias: /^Fragment[-_\s]*(Shader|Program)?$/i]
+		]
 
 	OpenOffice:
 		icon: "openoffice"
@@ -3583,6 +3612,21 @@ fileIcons:
 		match: ".sketch"
 		colour: "medium-orange"
 
+	"SketchUp LayOut":
+		icon: "sketchup-lo"
+		match: ".layout"
+		colour: "auto-red"
+
+	"SketchUp Make":
+		icon: "sketchup-mk"
+		match: ".skp"
+		colour: "medium-red"
+
+	"SketchUp Style Builder":
+		icon: "sketchup-sb"
+		match: ".style"
+		colour: "auto-red"
+
 	Slash:
 		icon: "slash"
 		scope: "slash"
@@ -4172,6 +4216,11 @@ fileIcons:
 			[/\.was?t$/i, "medium-blue", scope: /(^|\.)was[mt](\.|$)/i, alias: /^was[mt]$/i]
 			[".wasm", "medium-red"]
 		]
+
+	WebGL:
+		icon: "webgl"
+		match: ".webgl"
+		colour: "dark-red"
 
 	"Web Ontology Language":
 		icon: "owl"
