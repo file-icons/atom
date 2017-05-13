@@ -3,14 +3,16 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.4...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.5...HEAD
 
 
-[Unpublished]
+[v2.1.5] - 2017-05-13
 ---------------------
 ### Added
 - **New icons:** Edge (`.edge`), Firebase (`.firebaserc`, `firebase.json`), GLSL (`.glsl`, `.glslv`, `.gsh`, `.gshader`), Vertex/Fragment Shader (`.fp`, `.frag`, `.frg`, `.fsh`, `.fshader`, `.vert`, `.vertex`, `.vrx`, `.vsh`), SketchUp LayOut (`.layout`), SketchUp Make (`.skp`), SketchUp Style Builder (`.style`), WebGL (`.webgl`)
 - **Support:** 3D Asset (`.comp`, `.geo{m,metry}`, `.tesc`, `.tese`), ChartJS (`chart.{bundle,min}.js`), NPM (`package-lock.json`)
+
+[v2.1.5]: https://github.com/file-icons/atom/releases/tag/v2.1.5
 
 
 
