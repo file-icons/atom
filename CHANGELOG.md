@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icons:** Edge (`.edge`), Firebase (`.firebaserc`, `firebase.json`), GLSL (`.glsl`, `.glslv`, `.gsh`, `.gshader`), Vertex/Fragment Shader (`.fp`, `.frag`, `.frg`, `.fsh`, `.fshader`, `.vert`, `.vertex`, `.vrx`, `.vsh`), SketchUp LayOut (`.layout`), SketchUp Make (`.skp`), SketchUp Style Builder (`.style`), WebGL (`.webgl`)
 - **Support:** 3D Asset (`.comp`, `.geo{m,metry}`, `.tesc`, `.tese`), ChartJS (`chart.{bundle,min}.js`), NPM (`package-lock.json`)
+- **Support:** Docker (`.docker` directories)
 
 [v2.1.5]: https://github.com/file-icons/atom/releases/tag/v2.1.5
 
