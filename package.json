@@ -1,7 +1,7 @@
 {
 	"name": "file-icons",
 	"main": "lib/main.js",
-	"version": "2.1.4",
+	"version": "2.1.5",
 	"private": true,
 	"description": "Assign file extension icons and colours for improved visual grepping",
 	"repository": "https://github.com/file-icons/atom",
