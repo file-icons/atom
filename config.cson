@@ -2090,7 +2090,7 @@ fileIcons:
 	jQuery:
 		icon: "jquery"
 		priority: 2
-		match: /^jquery([-.](min|latest|\d\.\d+(\.\d+)?))*\.([jt]sx?|es6?|coffee|map)$/i
+		match: /^jquery([-.](latest|min|slim|\d\.\d+(\.\d+)?))*\.([jt]sx?|es6?|coffee|map)$/i
 		colour: "dark-blue"
 
 	"jQuery UI":
