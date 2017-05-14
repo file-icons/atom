@@ -625,6 +625,11 @@ fileIcons:
 		match: ".br"
 		colour: "medium-orange"
 
+	Browserslist:
+		icon: "browserslist"
+		match: /^(browserslist|\.browserslistrc)$/i
+		colour: "medium-orange"
+
 	Brunch:
 		icon: "brunch"
 		priority: 2
@@ -1167,6 +1172,12 @@ fileIcons:
 		scope: "doxygen"
 		match: /^Doxyfile$/
 		colour: "medium-blue"
+
+	Dragula:
+		icon: "dragula"
+		priority: 2
+		match: /^dragula(\.min)?\.(js|css)$/i
+		colour: "dark-purple"
 
 	Drone:
 		icon: "drone"
@@ -2090,7 +2101,7 @@ fileIcons:
 	jQuery:
 		icon: "jquery"
 		priority: 2
-		match: /^jquery([-.](latest|min|slim|\d\.\d+(\.\d+)?))*\.([jt]sx?|es6?|coffee|map)$/i
+		match: /^jquery([-.](min|latest|slim|\d\.\d+(\.\d+)?))*\.([jt]sx?|es6?|coffee|map)$/i
 		colour: "dark-blue"
 
 	"jQuery UI":
@@ -2607,6 +2618,18 @@ fileIcons:
 			[".def", "medium-green"]
 			[".m2", "medium-red"]
 		]
+
+	Moment:
+		icon: "moment"
+		priority: 2
+		match: /^moment(-with-locales)?(\.min)?\.js$/i
+		colour: "medium-cyan"
+
+	"Moment Timezone":
+		icon: "moment-tz"
+		priority: 2
+		match: /^moment-timezone(-with-data)?(-\d{4}-\d{4})?(\.min)?\.js$/i
+		colour: "dark-blue"
 
 	Monkey:
 		icon: "monkey"

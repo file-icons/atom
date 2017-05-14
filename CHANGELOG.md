@@ -9,7 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **Support:** Docker (`.docker` directories)
+- **New icons:** Browserslist (`browserslist`, `.browserslistrc`), Dragula (`dragula.{js,css}`), Moment (`moment.js`), Moment Timezone (`moment-timezone.js`)
+- **Support:** Docker (`.docker` directories), jQuery (`jquery.slim.js`)
 
 
 
