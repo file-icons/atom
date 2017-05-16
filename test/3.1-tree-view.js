@@ -2,6 +2,7 @@
 
 const TreeView = require("../lib/consumers/tree-view.js");
 const Options = require("../lib/options.js");
+const UI = require("../lib/ui.js");
 
 
 describe("Tree-view", () => {
@@ -12,7 +13,9 @@ describe("Tree-view", () => {
 	
 	before(() => {
 		resetOptions();
-		const treeView = atom.workspace.getLeftPanels()[0].getItem();
+		const treeView = UI.hasDocks
+			? atom.workspace.getLeftDock().getPaneItems()[0]
+			: atom.workspace.getLeftPanels()[0].getItem();
 		expect(treeView).to.exist.and.equal(TreeView.element);
 		projectRoot = (treeView[0] || treeView.element).querySelector(".project-root");
 		entriesList = projectRoot.lastElementChild;

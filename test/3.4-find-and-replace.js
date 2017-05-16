@@ -19,8 +19,8 @@ describe("Find-and-replace", () => {
 			FindAndReplace.active.should.be.true;
 			workspace.style.height = "5000px";
 			
-			const packagePath = atom.packages.activePackages["find-and-replace"].mainModulePath;
-			const resultsPane = require(join(dirname(packagePath), "project", "results-pane"));
+			const packagePath = atom.packages.activePackages["find-and-replace"].path;
+			const resultsPane = require(join(packagePath, "lib", "project", "results-pane"));
 			FindAndReplace.resultsURI.should.equal(resultsPane.URI);
 			expect(FindAndReplace.disposables.get("punched-methods")).to.be.ok;
 		});

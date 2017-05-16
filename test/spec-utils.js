@@ -364,6 +364,7 @@ TreeView.ls = function(){
 Tabs.ls = function(){
 	const tabs = [];
 	for(const paneItem of atom.workspace.getPaneItems()){
+		if(!paneItem.getFileName) continue;
 		const name = paneItem.getFileName();
 		const tab = this.tabForEditor(paneItem);
 		tabs.push(tab);
