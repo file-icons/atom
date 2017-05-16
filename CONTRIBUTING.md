@@ -38,7 +38,6 @@ Preserve the existing format so readers can grep what they're looking for when s
 		This should be used for icons that are quite literally <em>new</em>.
 		This may be a custom glyph, or provided by an existing icon file.
 	</dd>
-	
 	<dt>Support:</dt>
 	<dd>
 		If you're adding support for a new format or filename/extension that uses an existing icon, file it under "Support".
