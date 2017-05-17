@@ -1083,6 +1083,7 @@ fileIcons:
 			[".ttl", "medium-cyan", scope: "turtle"]
 			[".rviz", "dark-blue"]
 			[".syntax", "medium-blue"]
+			[/^pkginfo$/, "medium-blue"]
 			[/^mime\.types$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
 			[/[\/\\](?:magic[\/\\]Magdir|file[\/\\]magic)[\/\\][-.\w]+$/i, "dark-red", matchPath: true]
@@ -2326,6 +2327,7 @@ fileIcons:
 		icon: "checklist"
 		match: [
 			[/^Makefile/, "medium-yellow", scope: "makefile", alias: /^(bsdmake|make|mf)$/i, interpreter: "make"]
+			[/^mk\.config$/, "medium-green", priority: 2]
 			[/\.(mk|mak|make)$/i, "medium-yellow"]
 			[/^BSDmakefile$/i, "medium-red"]
 			[/^GNUmakefile$/i, "medium-green"]
@@ -2351,14 +2353,14 @@ fileIcons:
 	"Manual Page":
 		icon: "manpage"
 		match: [
-			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|n|nroff|pic|roff?|tmac|tmac-u|tr|troff)$/i, "dark-green"
-				scope: /\.[gt]?roff$/i
-				alias: /^([gtn]?roff|manpage)$/i
+			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|pic|roff?|tmac|tmac-u|tr|troff)$/i, "dark-green"
+				scope: /\.[gtn]?roff$/i
+				alias: /^([gtn]?roff|man(page|doc)?|mdoc)$/i
 				interpreter: /man|mandoc|([gnt]|dit)roff/i
-				signature: /^\.TH[ \t]+(?:\S+)|^'\\" [tre]+(?=\s|$)|^\.so[ \t]+man(\w+)\/.+\.\1(?=\s|$)/]
+				signature: /^\.TH[ \t]+(?:\S+)|^'\\" [tre]+(?=\s|$)|^\.so[ \t]+man(\w+)\/.+\.\1(?=\s|$)|^\.(EQ|PS|cstart)\n|^\x27{3}\t\\\x22 /]
 			[/\.(rnh|rno|run|runoff)$/i, "dark-maroon", "runoff"]
 			[/^tmac\.|^(mmn|mmt)$/i, "dark-green", priority: 2]
-			[/([\\\/])man(\w+)\1[^\\\/]+\.\2$/, "dark-green", matchPath: true]
+			[/([\\\/])(?:man(\w+)\1[^\\\/]+\.\2|(?:tmac|eqnchar)\.d\1(?:ms\.)?[^\\\/.]+(?:\.in)?)$/, "dark-green", matchPath: true]
 		]
 
 	Mapbox:
@@ -3336,8 +3338,8 @@ fileIcons:
 	Readme:
 		icon: "book"
 		match: [
-			[/^README(\b|_)|^(licen[sc]es?(\.mysql)?|(read|readme|click|delete|keep|test)\.me)$|\.(readme|1st)$/i, "medium-blue", priority: 2]
-			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copying(\.regex)?|hacking|history|install|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks)$/i, "dark-blue", priority: 2]
+			[/^README(\b|_)|^(licen[sc]es?(\.mysql)?|(read|readme|click|delete|keep|test)\.me)$|\.(readme|1st|licen[sc]es?)$/i, "medium-blue", priority: 2]
+			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copying(\.regex)?|hacking|history|install|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks)(_gr)?$/i, "dark-blue", priority: 2]
 			[/\b(changelog|copying(v?\d)?|install|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
 			[/^news([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
 		]
