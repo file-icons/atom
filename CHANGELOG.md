@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.5...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.6...HEAD
 
 
-[Unpublished]
+[v2.1.6] - 2017-05-18
 ---------------------
 ### Added
 - **New icons:** Browserslist (`browserslist`, `.browserslistrc`), Dragula (`dragula.{js,css}`), Moment (`moment.js`), Moment Timezone (`moment-timezone.js`)
@@ -14,6 +14,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Tab-icons squashed by [`atom/one-light-ui#100`](https://github.com/atom/one-light-ui/pull/100)
+
+[v2.1.6]: https://github.com/file-icons/atom/releases/tag/v2.1.6
 
 
 [v2.1.5] - 2017-05-13
