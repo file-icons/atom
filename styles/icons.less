@@ -16,6 +16,17 @@
 // Avoid enforcing fixed-width icons in tabs
 .tab > .icon:before { width: auto; }
 
+// ... unless the theme uses proportional units
+.theme-one-dark-ui,
+.theme-one-light-ui{
+	.tab-bar .tab > .title.icon:before{
+		font-size: 1.1em;
+		margin-right: .3em;
+		width: 1em;
+		top: auto;
+	}
+}
+
 // Turn off antialiasing for macOS
 .thicken{
 	-webkit-font-smoothing: subpixel-antialiased;

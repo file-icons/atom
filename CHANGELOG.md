@@ -12,6 +12,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** Browserslist (`browserslist`, `.browserslistrc`), Dragula (`dragula.{js,css}`), Moment (`moment.js`), Moment Timezone (`moment-timezone.js`)
 - **Support:** Docker (`.docker` directories), jQuery (`jquery.slim.js`)
 
+### Fixed
+- Tab-icons squashed by [`atom/one-light-ui#100`](https://github.com/atom/one-light-ui/pull/100)
 
 
 [v2.1.5] - 2017-05-13
