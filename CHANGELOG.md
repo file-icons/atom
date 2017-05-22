@@ -4,6 +4,9 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.6...HEAD
+---------------------
+### Added
+- **Support:** FlowType (`.flow`)
 
 
 [v2.1.6] - 2017-05-18

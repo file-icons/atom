@@ -1391,7 +1391,7 @@ fileIcons:
 
 	Flow:
 		icon: "flow"
-		match: /\.(flowconfig|js\.flow)$/i
+		match: /\.(flowconfig|js\.flow|flow)$/i
 		colour: "medium-orange"
 
 	FLUX:
