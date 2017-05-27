@@ -2075,7 +2075,7 @@ fileIcons:
 		priority: 2
 		match: [
 			[/^jest(\.config)?\.json$/i, "medium-red"]
-			[".js.snap", "auto-yellow"]
+			[/\.jsx?\.snap$/i, "auto-yellow"]
 		]
 
 	Jinja:
