@@ -11,6 +11,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **Support:** FlowType (`.flow`), Jest (`.jsx.snap`)
 
+### Fixed
+- [[`#606`][]]: Wrong icon shown for TypeScript executables
+
+[`#606`]: https://github.com/file-icons/atom/issues/606
+
 
 
 [v2.1.6] - 2017-05-18

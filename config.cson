@@ -4079,6 +4079,7 @@ fileIcons:
 		alias: /^(ts|Type[-\s]*Script)$/i
 		match: ".ts"
 		colour: "medium-blue"
+		interpreter: /\b(tsc|ts-node)$/
 
 	Typings:
 		icon: "typings"
