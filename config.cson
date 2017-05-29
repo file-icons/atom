@@ -2135,6 +2135,13 @@ fileIcons:
 		colour: "medium-purple"
 		interpreter: "julia"
 
+	Junos:
+		icon: "junos"
+		match: ".jos"
+		colour: "medium-cyan"
+		alias: /^(Juniper\W*)Jun\s*os(\W*Config)?$/i
+		scope: "junos"
+
 	"Jupyter Notebook":
 		icon: "jupyter"
 		match: [
@@ -2535,6 +2542,22 @@ fileIcons:
 			[".dotm", "dark-maroon"]
 			[".dotx", "medium-cyan"]
 			[".wri", "medium-orange"]
+		]
+
+	"Microsoft Visio":
+		icon: "visio"
+		match: [
+			[".vsdx", "dark-blue"]
+			[".vdw", "dark-purple"]
+			[".vdx", "medium-red"]
+			[".vsd", "medium-blue"]
+			[".vsdm", "dark-maroon"]
+			[".vsw", "medium-green"]
+			[".vsx", "dark-red"]
+			[".vtx", "dark-red"]
+			[".vrd", "medium-cyan"]
+			[".vsl", "medium-orange"]
+			[/\.vs[st][mx]?$/i, "dark-blue"]
 		]
 
 	Minecraft:
@@ -3879,6 +3902,13 @@ fileIcons:
 		scope: "tea"
 		match: ".tea"
 		colour: "medium-orange"
+
+	Telegram:
+		icon: "telegram"
+		match: ".tl"
+		scope: "tl"
+		colour: "medium-blue"
+		alias: /Type\s*Language/i
 
 	"Template Toolkit":
 		icon: "tt"
