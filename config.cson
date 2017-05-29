@@ -1594,7 +1594,7 @@ fileIcons:
 			[".lid", "medium-purple"]
 			[".lol", "medium-pink"]
 			[".lp", "dark-purple"]
-			[".m4", "medium-red"]
+			[".m4", "medium-red", "m4"]
 			[".manifest", "medium-blue"]
 			[".mask", "medium-red"]
 			[".mdpolicy", "dark-blue"]
