@@ -112,6 +112,17 @@ A restart is needed to complete installation. Reload the window, or restart Atom
 If this doesn't help, [please file an issue][7].
 
 
+<a name="npm-error-when-installing"></a>
+**Installation halts with an `npm` error:**  
+> _npm ERR! cb() never called!_  
+
+There might be a corrupted download in your local cache.
+Delete `~/.atom/.apm`, then try again:
+
+	rm -rf ~/.atom/.apm
+	apm install --production file-icons
+
+
 <a name="an-icon-has-stopped-updating"></a>
 **An icon has stopped updating:**  
 It's probably a caching issue. Do the following:
