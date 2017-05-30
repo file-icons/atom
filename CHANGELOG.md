@@ -9,8 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **New icons:** Junos (`.jos`), Visio (`.vdw`, `.vdx`, `.vrd`, `.vsd`, `.vsdm`, `.vsdx`, `.vsl`, `.vss`, `.vssm`, `.vssx`, `.vst`, `.vstm`, `.vstx`, `.vsw`, `.vsx`, `.vtx`), Telegram (`.tl`)
-- **Support:** FlowType (`.flow`), Jest (`.jsx.snap`)
+- **New icons:** Junos (`.jos`), Telegram (`.tl`), Visio (`.vdw`, `.vdx`, `.vrd`, `.vsd`, `.vsdm`, `.vsdx`, `.vsl`, `.vss`, `.vssm`, `.vssx`, `.vst`, `.vstm`, `.vstx`, `.vsw`, `.vsx`, `.vtx`)
+- **Support:** FlowType (`.flow`), Jest (`.jsx.snap`), NodeJS (`BUNDLED_NODE_VERSION`)
 
 ### Fixed
 - [[`#606`][]]: Wrong icon shown for TypeScript executables

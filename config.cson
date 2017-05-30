@@ -2819,6 +2819,7 @@ fileIcons:
 			[".nvmrc", "medium-green"]
 			[".node", "dark-green"]
 			[".node-version", "dark-green"]
+			[/^BUNDLED_NODE_VERSION$/, "dark-green"]
 		]
 
 	Nodemon:
