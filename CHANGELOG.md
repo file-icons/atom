@@ -3,18 +3,19 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.6...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.7...HEAD
 
 
-[Unpublished]
+[v2.1.7] - 2017-05-31
 ---------------------
 ### Added
-- **New icons:** Junos (`.jos`), Telegram (`.tl`), Visio (`.vdw`, `.vdx`, `.vrd`, `.vsd`, `.vsdm`, `.vsdx`, `.vsl`, `.vss`, `.vssm`, `.vssx`, `.vst`, `.vstm`, `.vstx`, `.vsw`, `.vsx`, `.vtx`)
+- **New icons:** Browserslist (updated version), Junos (`.jos`), Telegram (`.tl`), Visio (`.vdw`, `.vdx`, `.vrd`, `.vsd`, `.vsdm`, `.vsdx`, `.vsl`, `.vss`, `.vssm`, `.vssx`, `.vst`, `.vstm`, `.vstx`, `.vsw`, `.vsx`, `.vtx`)
 - **Support:** FlowType (`.flow`), Jest (`.jsx.snap`), NodeJS (`BUNDLED_NODE_VERSION`)
 
 ### Fixed
 - [[`#606`][]]: Wrong icon shown for TypeScript executables
 
+[v2.1.7]: https://github.com/file-icons/atom/releases/tag/v2.1.7
 [`#606`]: https://github.com/file-icons/atom/issues/606
 
 
