@@ -273,7 +273,7 @@ An `apm` bug with handling scoped NPM modules [`#702`](https://github.com/atom/a
 
 [2.0.6] - 2017-01-04
 --------------------
-Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
+Updated URLs to use new GitHub [organization](https://github.com/file-icons).
 
 [2.0.6]:  https://github.com/file-icons/atom/releases/tag/v2.0.6
 
