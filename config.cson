@@ -827,6 +827,12 @@ fileIcons:
 		match: /\.cljs(cm)?$/i
 		colour: "auto-blue"
 
+	"Closure Template":
+		icon: "closure-tpl"
+		match: ".soy"
+		colour: "medium-blue"
+		scope: /^text\.html\.soy$/
+
 	CMake:
 		icon: "cmake"
 		match: [

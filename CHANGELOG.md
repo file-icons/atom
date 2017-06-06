@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.7...HEAD
 
 
+[Unpublished]
+---------------------
+### Added
+- **New icons:** Closure Template (`.soy`)
+
+
+
 [v2.1.7] - 2017-05-31
 ---------------------
 ### Added
