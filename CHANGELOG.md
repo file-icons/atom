@@ -11,6 +11,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icons:** Closure Template (`.soy`)
 
+### Fixed
+- [[`#610`][]]: Exception thrown on Windows when opening `archive-view`
+
+[`#610`]: https://github.com/file-icons/atom/issues/610
+
 
 
 [v2.1.7] - 2017-05-31
