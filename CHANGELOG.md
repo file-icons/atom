@@ -13,8 +13,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - [[`#610`][]]: Exception thrown on Windows when opening `archive-view`
+- [[`#616`][]]: Webpack icon not shown for filenames containing dashes
 
 [`#610`]: https://github.com/file-icons/atom/issues/610
+[`#616`]: https://github.com/file-icons/atom/issues/616
 
 
 
