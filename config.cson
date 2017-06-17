@@ -4299,7 +4299,7 @@ fileIcons:
 		icon: "webpack"
 		priority: 2
 		match: [
-			[/webpack(\.\w+)*\.conf(ig)?\./i, "medium-blue"]
+			[/webpack(\.[\w\-]+)*\.conf(ig)?\./i, "medium-blue"]
 			[/^webpackfile\.js$/i, "medium-blue"]
 		]
 
