@@ -163,8 +163,8 @@ describe("Interpreter directives", () => {
 		afterEach(() => open("crystal").then(ed => {
 			if(editor){
 				editor.revertToCheckpoint(checkpoint);
-				editor.save();
-				atom.commands.dispatch(ed.editorElement, "core:close");
+				(editor.save() || Promise.resolve()).then(() =>
+					atom.commands.dispatch(ed.editorElement, "core:close"));
 			}
 		}));
 		

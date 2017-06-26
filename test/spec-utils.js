@@ -131,16 +131,17 @@ function open(path){
  */
 function replaceText(find, replace){
 	return new Promise(resolve => {
+		const handler = () => {resolve(); done.dispose()};
 		const editor = atom.workspace.getActiveTextEditor();
-		const done = editor.onDidStopChanging(() => {
-			resolve();
-			done.dispose();
-		});
+		const done = editor.onDidStopChanging(handler);
 		editor.transact(100, () => {
 			editor.scan(find, args => args.replace(replace));
 		});
-		editor.save();
+		const saveResult = editor.save();
+		if(saveResult && saveResult instanceof Promise)
+			saveResult.then(handler);
 	})
+	.then(() => wait(100))
 	.then(() => TreeView.refreshHack());
 }
 
@@ -185,14 +186,14 @@ function resolvePath(path){
  */
 function revert(steps = 1){
 	return new Promise(resolve => {
+		const handler = () => {resolve(); done.dispose()};
 		const editor = atom.workspace.getActiveTextEditor();
-		const done = editor.onDidStopChanging(() => {
-			resolve();
-			done.dispose();
-		});
+		const done = editor.onDidStopChanging(handler);
 		for(let i = 0; i < steps; ++i)
 			editor.undo();
-		editor.save();
+		const saved = editor.save();
+		if(saved && saved instanceof Promise)
+			handler.call();
 	})
 	.then(() => TreeView.refreshHack());
 }
