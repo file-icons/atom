@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.7...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.8...HEAD
 
 
-[Unpublished]
+[v2.1.8] - 2017-06-26
 ---------------------
 ### Added
 - **New icons:** Closure Template (`.soy`), EasyBuild (`.eb`), Ring (`.ring`), Solidity (`.sol`, `.solidity`)
@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#616`][]]: Webpack icon not shown for filenames containing dashes
 - [[`#618`][]]: Unexplained TypeError thrown for outdated Atom installs
 
+[v2.1.8]: https://github.com/file-icons/atom/releases/tag/v2.1.8
 [`#610`]: https://github.com/file-icons/atom/issues/610
 [`#616`]: https://github.com/file-icons/atom/issues/616
 [`#618`]: https://github.com/file-icons/atom/issues/618
