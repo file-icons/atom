@@ -1216,6 +1216,11 @@ fileIcons:
 			[".brd", "dark-red"]
 		]
 
+	EasyBuild:
+		icon: "easybuild"
+		match: ".eb"
+		colour: "dark-blue"
+
 	eC:
 		icon: "ec"
 		match: [
@@ -3458,6 +3463,12 @@ fileIcons:
 		match: /^riemann\.config$/i
 		colour: "auto-maroon"
 
+	Ring:
+		icon: "ring"
+		match: ".ring"
+		colour: "medium-purple"
+		scope: "ring"
+
 	RiotJS:
 		icon: "riot"
 		scope: "riot"
@@ -3715,6 +3726,12 @@ fileIcons:
 		icon: "snyk"
 		match: ".snyk"
 		colour: "dark-purple"
+
+	Solidity:
+		icon: "solidity"
+		match: /\.sol(idity)?$/i
+		scope: "solidity"
+		colour: "dark-cyan"
 
 	SourcePawn:
 		icon: "clojure"

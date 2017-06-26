@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **New icons:** Closure Template (`.soy`)
+- **New icons:** Closure Template (`.soy`), EasyBuild (`.eb`), Ring (`.ring`), Solidity (`.sol`, `.solidity`)
 
 ### Fixed
 - [[`#610`][]]: Exception thrown on Windows when opening `archive-view`
