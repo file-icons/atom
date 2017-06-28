@@ -54,7 +54,8 @@ else{
 	const getOpts      = require("get-options");
 	const IconCompiler = require("../lib/icons/icon-compiler.js");
 	const {options, argv} = getOpts(process.argv.slice(2), {
-		"-h, -?, --help": ""
+		"-a, --auto": "",
+		"-h, -?, --help": "",
 	});
 	
 	if(options.help){
@@ -69,12 +70,31 @@ else{
 		process.exit(1);
 	}
 	
-	if(!argv[0] && process.stdin.isTTY){
+	if(options.auto)
+		new Promise((resolve, reject) => {
+			const inputPath = path.resolve(__dirname, "..", "config.cson");
+			fs.readFile(inputPath, (error, data) => error
+				? reject(error)
+				: resolve(data.toString()));
+		}).then(data => {
+			const outputData = IconCompiler.compileConfigData(data, true);
+			const outputPath = path.resolve(__dirname, "..", "lib", "icons", ".icondb.js");
+			return new Promise((resolve, reject) => {
+				fs.writeFile(outputPath, outputData, error => {
+					error ? reject(error) : resolve();
+				});
+			});
+		}).catch(error => {
+			console.error(error);
+			process.exit(1);
+		});
+	
+	else if(!argv[0] && process.stdin.isTTY){
 		printHelp(true);
 		process.exit(1);
 	}
 	
-	new Promise((resolve, reject) => {
+	else new Promise((resolve, reject) => {
 		if(!process.stdin.isTTY){
 			let input = "";
 			process.stdin.setEncoding("UTF8");
@@ -97,16 +117,18 @@ else{
 	
 	function printHelp(short = false){
 		if(short){
-			const usage = "Usage: compile [--help] input.cson > output.js\n";
+			const usage = "Usage: compile [--auto] [--help] input.cson > output.js\n";
 			process.stderr.write(makeSpiffy(usage));
 			return;
 		}
 		const help = `
-			Usage: compile [-h|-?|--help] <input>
+			Usage: compile [-a|--auto] [-h|-?|--help] <input>
 			
 			Examples:
 				compile config.cson
-				compile < config.cson > output.js`
+				compile < config.cson > output.js
+				compile ../config.cson > ../lib/icons/.icondb.js
+				compile --auto # Shortcut to recompile package's config`
 			.replace(/^\n+/, "")
 			.replace(/\t+/gm, "")
 			.replace(/^(?=compile)/gm, "    ")
