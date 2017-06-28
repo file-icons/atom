@@ -3959,6 +3959,13 @@ fileIcons:
 		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.(coffee|iced)$/i
 		colour: "auto-maroon"
 
+	"Test, Generic":
+		icon: "test-generic"
+		priority: 1.5
+		matchPath: true
+		match: /([\\\x2F])t\1t\d+(?:(?!\1).)+\.sh$/i
+		colour: "medium-green"
+
 	"Test, JavaScript":
 		icon: "test-js"
 		priority: 1.5
@@ -3970,6 +3977,7 @@ fileIcons:
 		icon: "test-perl"
 		match: [
 			[".t", "auto-blue"]
+			[/([\\\x2F])t\1(?:(?!\1).)+\.t$/i, "auto-blue", priority: 1.5, matchPath: true]
 			[/([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.p(er)?l$/i, "auto-blue", priority: 1.5, matchPath: true]
 		]
 

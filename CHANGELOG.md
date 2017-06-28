@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **Support:** Visual Studio (`.njsproj`)
+- **Support:** Unit tests (`t/*.sh`, `t/*.t`), Visual Studio (`.njsproj`)
 
 
 
