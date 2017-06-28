@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.8...HEAD
 
 
+[Unpublished]
+---------------------
+### Added
+- **Support:** Visual Studio (`.njsproj`)
+
+
+
 [v2.1.8] - 2017-06-26
 ---------------------
 ### Added
