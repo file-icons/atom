@@ -4268,6 +4268,7 @@ fileIcons:
 			[".vsixmanifest", "dark-orange"]
 			[".builds", "medium-maroon"]
 			[".sln", "medium-orange"]
+			[".njsproj", "light-red"]
 		]
 
 	VMware:
