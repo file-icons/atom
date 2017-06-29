@@ -3164,7 +3164,7 @@ fileIcons:
 		match: /^ecosystem.conf(ig)?./i
 		colour: "medium-blue"
 
-	POD:
+	Pod:
 		icon: "pod"
 		match: ".pod"
 		colour: "dark-blue"
