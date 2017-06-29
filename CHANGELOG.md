@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ---------------------
 ### Added
 - **New icons:** Pod (`.pod`)
-- **Support:** TypeScript tests (`*.{spec|test}.{ts,tsx}`), Unit tests (`t/*.sh`, `t/*.t`), Visual Studio (`.njsproj`)
+- **Support:** Jest (`jest.config.js`), TypeScript tests (`*.{spec|test}.{ts,tsx}`), Unit tests (`t/*.sh`, `t/*.t`), Visual Studio (`.njsproj`)
 
 ### Changed
 - Perl icon changed to use the Perl onion
