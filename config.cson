@@ -2085,7 +2085,7 @@ fileIcons:
 		icon: "jest"
 		priority: 2
 		match: [
-			[/^jest(\.config)?\.json$/i, "medium-red"]
+			[/^jest(\.config)?\.js(on)?$/i, "medium-red"]
 			[/\.jsx?\.snap$/i, "auto-yellow"]
 		]
 
