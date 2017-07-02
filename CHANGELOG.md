@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **New icons:** Pod (`.pod`)
+- **New icons:** CPAN (`cpanfile`, `META.{yml,json}`), Pod (`.pod`)
 - **Support:** Jest (`jest.config.js`), TypeScript tests (`*.{spec|test}.{ts,tsx}`), Unit tests (`t/*.sh`, `t/*.t`), Visual Studio (`.njsproj`)
 
 ### Changed

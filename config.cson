@@ -976,6 +976,14 @@ fileIcons:
 		match: /^cordova([^.]*\.|-(\d\.)+)js$/i
 		colour: "light-blue"
 
+	CPAN:
+		icon: "cpan"
+		match: [
+			[/^cpanfile$/i, "dark-blue"]
+			[/^META\.yml$/, "medium-red", priority: 2]
+			[/^META\.json$/, "auto-yellow", priority: 2]
+		]
+
 	Creole:
 		icon: "creole"
 		scope: "creole"
