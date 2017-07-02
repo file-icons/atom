@@ -1573,6 +1573,7 @@ fileIcons:
 			[".brs", "dark-blue", "brightscript"]
 			[".capnp", "dark-red", scope: "capnp", alias: /^(Cap[^\w\s]?n\s*Proto|capnp)$/i]
 			[".ccxml", "dark-blue"]
+			[".cgi", "medium-red"]
 			[".ch", "medium-red"]
 			[".clixml", "dark-blue"]
 			[".cocci", "medium-blue"]
@@ -1589,6 +1590,7 @@ fileIcons:
 			[".ebnf", "medium-red", "ebnf"]
 			[".ecl", "medium-blue"]
 			[".eclxml", "dark-green"]
+			[".fcgi", "medium-blue"]
 			[".fidl", "medium-pink", "fidl"]
 			[".filters", "medium-pink"]
 			[".flex", "dark-red"]
@@ -3096,6 +3098,7 @@ fileIcons:
 		icon: "perl"
 		match: [
 			[/\.p(er)?l$/i, "medium-blue", alias: /^C?Perl$/i, scope: "perl", interpreter: /^c?perl[\d.]*$/]
+			[".al", "dark-blue"]
 			[".ph", "dark-purple"]
 			[".plx", "medium-purple"]
 			[".pm", "dark-blue"]
