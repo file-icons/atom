@@ -3047,6 +3047,7 @@ fileIcons:
 		icon: "pan"
 		match: ".pan"
 		colour: "medium-red"
+		scope: /^source.pan$/
 
 	Papyrus:
 		icon: "papyrus"
@@ -3974,10 +3975,10 @@ fileIcons:
 
 	"Test, Generic":
 		icon: "test-generic"
-		priority: 1.5
-		matchPath: true
-		match: /([\\\x2F])t\1t\d+(?:(?!\1).)+\.sh$/i
-		colour: "medium-green"
+		match: [
+			[/([\\\x2F])t\1t\d+(?:(?!\1).)+\.sh$/i, "medium-green", matchPath: true, priority: 1.5]
+			[".xspec", "dark-green"]
+		]
 
 	"Test, JavaScript":
 		icon: "test-js"
