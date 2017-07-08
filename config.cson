@@ -2494,6 +2494,15 @@ fileIcons:
 		match: /^\.mention-bot$/i
 		colour: "medium-orange"
 
+	Mercurial:
+		icon: "hg"
+		match: [
+			[/^\.hgignore$/i, "medium-cyan"]
+			[/^\.?hgrc$/i, "dark-cyan"]
+			[/^\.hgsub$/i, "dark-blue"]
+			[/\.hgsubstate$/i, "medium-red"]
+		]
+
 	Mercury:
 		icon: "mercury"
 		scope: "mercury"
@@ -3928,6 +3937,7 @@ fileIcons:
 		match: [
 			[/\.?c?tags$/i, "medium-blue"]
 			[/\.gemtags/i, "medium-red"]
+			[/\.hgtags$|^localtags$/i, "medium-cyan"]
 			[".pid", "medium-orange"]
 		]
 

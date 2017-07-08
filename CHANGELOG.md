@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ---------------------
 ### Added
 - **New icons:** CPAN (`cpanfile`, `META.{yml,json}`), Pod (`.pod`)
-- **Support:** C (`.xpm`), Generic code (`.cgi`, `.fcgi`), Jest (`jest.config.js`), Maps (`.map`), Perl (`.al`), Shell-scripts (`.mksh`, `.pdksh`), TypeScript tests (`*.{spec|test}.{ts,tsx}`), Unit tests (`t/*.sh`, `t/*.t`, `.xspec`), Visual Studio (`.njsproj`)
+- **Support:** C (`.xpm`), Generic code (`.cgi`, `.fcgi`), Jest (`jest.config.js`), Maps (`.map`), Mercurial (`.hgignore`, `.hgrc`, `.hgsub`, `.hgsubstate`), Perl (`.al`), Shell-scripts (`.mksh`, `.pdksh`), Tagfiles (`.hgtags`, `localtags`), TypeScript tests (`*.{spec|test}.{ts,tsx}`), Unit tests (`t/*.sh`, `t/*.t`, `.xspec`), Visual Studio (`.njsproj`)
 
 ### Changed
 - Perl icon changed to use the Perl onion
