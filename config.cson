@@ -425,6 +425,12 @@ fileIcons:
 			[".DS_Store"]
 		]
 
+	Atoum:
+		icon: "atoum"
+		match: /^\.?atoum(\.[^.]+)*\.php/i
+		colour: "medium-blue"
+		priority: 2
+
 	ATS:
 		icon: "ats"
 		match: [
@@ -510,6 +516,12 @@ fileIcons:
 			[/^(BUILD|WORKSPACE)$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
 			[".bzl", "dark-blue", alias: "Skylark", scope: /(^|\.)(bzl|skylark)(\.|$)/i]
 		]
+
+	Behat:
+		icon: "behat"
+		match: /^behat(\.[^.]+)*\.ya?ml$/i
+		colour: "medium-cyan"
+		priority: 2
 
 	BEM:
 		icon: "bem"
@@ -1029,6 +1041,11 @@ fileIcons:
 			[".cuh", "dark-green"]
 		]
 
+	cURL:
+		icon: "curl"
+		match: /^\.curlrc$/i
+		colour: "dark-blue"
+
 	Cython:
 		icon: "cython"
 		match: [
@@ -1410,6 +1427,12 @@ fileIcons:
 			[/^firebase\.json$/i, "medium-yellow", priority: 2]
 			[".firebaserc", "medium-orange"]
 		]
+
+	Flask:
+		icon: "flask"
+		priority: 1.5
+		match: /^flask([-_.].*)\.py$/i
+		colour: "dark-blue"
 
 	Flow:
 		icon: "flow"
@@ -4118,6 +4141,12 @@ fileIcons:
 		match: /\.8x[pk](\.txt)?$/i
 		colour: "medium-maroon"
 		signature: /^\*\*TI[789]\d\*\*/
+
+	tmux:
+		icon: "tmux"
+		match: /(\.|_|^)tmux\.conf$/i
+		colour: "medium-green"
+		scope: "tmux"
 
 	Travis:
 		icon: "travis"

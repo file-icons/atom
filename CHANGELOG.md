@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **New icons:** CPAN (`cpanfile`, `META.{yml,json}`), Pod (`.pod`)
+- **New icons:** Atoum (`.atoum.php`), Behat (`behat.yml`), CPAN (`cpanfile`, `META.{yml,json}`), cURL (`.curlrc`), Flask (`flask{.*}.py`), Pod (`.pod`), tmux (`.tmux.conf`)
 - **Support:** C (`.xpm`), Generic code (`.cgi`, `.fcgi`), Jest (`jest.config.js`), Maps (`.map`), Mercurial (`.hgignore`, `.hgrc`, `.hgsub`, `.hgsubstate`), Perl (`.al`), Shell-scripts (`.mksh`, `.pdksh`), Tagfiles (`.hgtags`, `localtags`), TypeScript tests (`*.{spec|test}.{ts,tsx}`), Unit tests (`t/*.sh`, `t/*.t`, `.xspec`), Visual Studio (`.njsproj`)
 
 ### Changed
