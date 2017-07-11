@@ -3938,7 +3938,7 @@ fileIcons:
 		icon: "swift"
 		scope: "swift"
 		match: ".swift"
-		colour: "medium-green"
+		colour: "medium-orange"
 
 	SystemVerilog:
 		icon: "sysverilog"

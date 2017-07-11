@@ -14,6 +14,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Perl icon changed to use the Perl onion
+- [[`#627`][]]: Swift icons now orange-coloured instead of green
+
+[`#627`]: https://github.com/file-icons/atom/issues/627
 
 
 
