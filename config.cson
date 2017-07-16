@@ -996,6 +996,7 @@ fileIcons:
 			[/^cpanfile$/i, "dark-blue"]
 			[/^META\.yml$/, "medium-red", priority: 2]
 			[/^META\.json$/, "auto-yellow", priority: 2]
+			[/^MANIFEST\.SKIP$/, "medium-maroon"]
 		]
 
 	Creole:
