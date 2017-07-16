@@ -3,22 +3,23 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.8...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.9...HEAD
 
 
-[Unpublished]
+[v2.1.9] - 2017-07-16
 ---------------------
 ### Added
 - **New icons:** Atoum (`.atoum.php`), Behat (`behat.yml`), CPAN (`cpanfile`, `MANIFEST.SKIP`, `META.{yml,json}`), cURL (`.curlrc`), Flask (`flask{.*}.py`), Pod (`.pod`), tmux (`.tmux.conf`)
 - **Support:** C (`.xpm`), Generic code (`.cgi`, `.fcgi`), Jest (`jest.config.js`), Maps (`.map`), Mercurial (`.hgignore`, `.hgrc`, `.hgsub`, `.hgsubstate`), Perl (`.al`), Shell-scripts (`.mksh`, `.pdksh`), Tagfiles (`.hgtags`, `localtags`), TypeScript tests (`*.{spec|test}.{ts,tsx}`), Unit tests (`t/*.sh`, `t/*.t`, `.xspec`), Visual Studio (`.njsproj`)
-- `.tdy` and `.tidy` to ignored file-extensions, used by [**perltidy**(1)][tidy].
+- `.tdy` and `.tidy` to ignored file-extensions, used by [perltidy(1)][pltidy].
 
 ### Changed
 - Perl icon changed to use the Perl onion
 - [[`#627`][]]: Swift icons now orange-coloured instead of green
 
+[v2.1.9]: https://github.com/file-icons/atom/releases/tag/v2.1.9
+[pltidy]: http://perltidy.sourceforge.net/perltidy.html#examples
 [`#627`]: https://github.com/file-icons/atom/issues/627
-[tidy]:   http://perltidy.sourceforge.net/perltidy.html#examples
 
 
 
