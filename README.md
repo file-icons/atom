@@ -4,13 +4,15 @@ File-specific icons in Atom for improved visual grepping.
 
 <img alt="Icon previews" width="850" src="https://raw.githubusercontent.com/file-icons/atom/6714706f268e257100e03c9eb52819cb97ad570b/preview.png" />
 
-Supports the following packages:
+Supports the following core packages:
 
 * [`tree-view`](https://atom.io/packages/tree-view)
 * [`tabs`](https://atom.io/packages/tabs)
 * [`fuzzy-finder`](https://atom.io/packages/fuzzy-finder)
 * [`find-and-replace`](https://atom.io/packages/find-and-replace)
 * [`archive-view`](https://atom.io/packages/archive-view)
+
+An API is offered for packages not listed above. See the [integration steps][13] for more info.
 
 
 Installation
@@ -40,63 +42,59 @@ Consult the package stylesheets to see what classes are used:
 * [**Devicons**](https://github.com/file-icons/DevOpicons/blob/master/charmap.md)
 
 
-#### Examples
+### Examples ####################################################################
 
-* <a name="resize-an-icon"></a>
-**Resize an icon:**
-	~~~less
-	.html5-icon:before{
-		font-size: 18px;
+#### Resize an icon
+~~~less
+.html5-icon:before{
+	font-size: 18px;
+}
+
+// Resize in tab-pane only:
+.tab > .html5-icon:before{
+	font-size: 18px;
+	top: 3px;
+}
+~~~
+
+
+#### Choose your own shades of orange
+~~~css
+.dark-orange   { color: #6a1e05; }
+.medium-orange { color: #b8743d; }
+.light-orange  { color: #cf9b67; }
+~~~
+
+
+#### Bring back PHP's blue-shield icon
+~~~css
+.php-icon:before{
+	font-family: MFizz;
+	content: "\f147";
+}
+~~~
+
+
+#### Assign icons by file extension
+The following examples use [attribute selectors][12] to target specific pathnames:
+
+~~~css
+.icon[data-name$=".js"]:before{
+	font-family: Devicons;
+	content: "\E64E";
+}
+~~~
+
+
+#### Assign icons to directories
+~~~less
+.directory > .header > .icon{
+	&[data-path$=".atom/packages"]:before{
+		font-family: "Octicons Regular";
+		content: "\f0c4";
 	}
-	
-	// Resize in tab-pane only:
-	.tab > .html5-icon:before{
-		font-size: 18px;
-		top: 3px;
-	}
-	~~~
-
-
-* <a name="choose-your-own-shades-of-orange"></a>
-**Choose your own shades of orange:**
-	~~~css
-	.dark-orange   { color: #6a1e05; }
-	.medium-orange { color: #b8743d; }
-	.light-orange  { color: #cf9b67; }
-	~~~
-
-
-* <a name="bring-back-the-blue-shield-php-icon"></a>
-**Bring back PHP's blue-shield icon:**
-	~~~css
-	.php-icon:before{
-		font-family: MFizz;
-		content: "\f147";
-	}
-	~~~
-
-
-* <a name="assign-icons-by-file-extension"></a>
-**Assign icons by file extension:**
-	~~~css
-	.icon[data-name$=".js"]:before{
-		font-family: Devicons;
-		content: "\E64E";
-	}
-	~~~
-
-
-* <a name="assign-icons-to-directories"></a>
-**Assign icons to directories:**
-	~~~less
-	.directory > .header > .icon{
-		
-		&[data-path$=".atom/packages"]:before{
-			font-family: "Octicons Regular";
-			content: "\f0c4";
-		}
-	}
-	~~~
+}
+~~~
 
 
 
@@ -104,27 +102,31 @@ Troubleshooting
 ---------------
 
 <a name="error-after-installing"></a>
-**I see this error after installing:**  
-> _"Cannot read property 'onDidChangeIcon' of undefined"_  
+#### I see this error after installing:
+> _"Cannot read property 'onDidChangeIcon' of undefined"_
 
 A restart is needed to complete installation. Reload the window, or restart Atom.
 
 If this doesn't help, [please file an issue][7].
 
 
+
 <a name="npm-error-when-installing"></a>
-**Installation halts with an `npm` error:**  
-> _npm ERR! cb() never called!_  
+#### Installation halts with an `npm` error:
+> _npm ERR! cb() never called!_
 
 There might be a corrupted download in your local cache.
 Delete `~/.atom/.apm`, then try again:
 
-	rm -rf ~/.atom/.apm
-	apm install --production file-icons
+~~~shell
+rm -rf ~/.atom/.apm
+apm install --production file-icons
+~~~
+
 
 
 <a name="an-icon-has-stopped-updating"></a>
-**An icon has stopped updating:**  
+#### An icon has stopped updating:
 It's probably a caching issue. Do the following:
 
 1. Open the command palette: <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
@@ -132,15 +134,18 @@ It's probably a caching issue. Do the following:
 3. Reload the window, or restart Atom
 
 
+
 <a name="the-tree-views-files-are-borked"></a>
-**The tree-view's files are borked and [look like this][6]:**  
+#### The tree-view's files are borked and [look like this][6]:
 If you haven't restarted Atom since upgrading to [File-Icons v2][v2.0], do so now.
 
 If restarting doesn't help, your stylesheet probably needs updating. See below.
 
 
+
 <a name="the-tree-view-keeps-opening-by-itself"></a>
-**The tree-view keeps opening by itself when opening a project window:**  
+#### The tree-view keeps opening by itself when opening a project window:
+
 1. Open the dev-tools: **View** → **Developer** → **Toggle Developer Tools**
 2. Click the **Console** tab
 3. Run the following line, then restart Atom:
@@ -150,8 +155,9 @@ atom.config.set("file-icons.revealTreeView", false);
 ~~~
 
 
+
 <a name="my-stylesheet-has-errors-since-updating"></a>
-**My stylesheet has errors since updating:**  
+#### My stylesheet has errors since updating:
 As of [v2.0][], classes are used for displaying icons instead of mixins. Delete lines like these from your stylesheet:
 
 ~~~diff
@@ -167,6 +173,7 @@ As of [v2.0][], classes are used for displaying icons instead of mixins. Delete 
 }
 ~~~
 
+
 Instead of `@pane-tab…` variables, use `.tab > .icon[data-path]`:
 
 ~~~diff
@@ -180,6 +187,7 @@ Instead of `@pane-tab…` variables, use `.tab > .icon[data-path]`:
 }
 ~~~
 
+
 These CSS classes are no longer used, so delete them:
 
 ~~~diff
@@ -189,13 +197,14 @@ These CSS classes are no longer used, so delete them:
 ~~~
 
 
-**It's something else.**  
+#### It's something else.
 Please [file an issue][7]. Include screenshots if necessary.
 
 
+
 Integration with other packages
--------------------------------
-If you're a package author, you can integrate File-Icons using Atom's services API:
+-----------------------------------------------------------------------------------
+If you're a package author, you can integrate File-Icons using Atom's services API.
 
 First, add this to your `package.json` file:
 
@@ -232,7 +241,7 @@ const disposable = addIconToElement(fileIcon, "/path/to/file.txt");
 fileIcon.onDestroy(() => disposable.dispose());
 ```
 
-**NOTE:** Remember to remove any default icon-classes before calling the service handler.
+**NOTE:** Remember to remove any default icon-classes *before* calling the service handler!
 
 ```diff
  let fileIcon = document.querySelector("li.file-entry > span.icon");
@@ -242,19 +251,21 @@ fileIcon.onDestroy(() => disposable.dispose());
 
 
 Acknowledgements
-----------------
-Originally based on [sommerper/filetype-color][8], but now sporting a shiny new file-icons API in `v2` thanks to [Alhadis][11]!
-Also thanks to all the [contributors][9]
+------------------------------------------------------------------------------------------
+Originally based on [sommerper/filetype-color][8], but now sporting a shiny new file-icons
+API in `v2` thanks to [Alhadis][11]! Also thanks to all the [contributors][9].
 
 
 [Referenced links]: ____________________________________________________
-[1]: http://flight-manual.atom.io/using-atom/sections/basic-customization/#style-tweaks
+[1]: https://flight-manual.atom.io/using-atom/sections/basic-customization/#style-tweaks
 [4]: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
-[5]: https://github.com/Alhadis/DevOpicons/blob/master/charmap.md#JavaScript
+[5]: https://github.com/file-icons/DevOpicons/blob/master/charmap.md#JavaScript
 [6]: https://cloud.githubusercontent.com/assets/714197/21516010/4b79a8a8-cd39-11e6-8394-1e3ab778af92.png
 [7]: https://github.com/file-icons/atom/issues/new
 [8]: https://github.com/sommerper/filetype-color
 [9]: https://github.com/file-icons/atom/graphs/contributors
 [10]: https://atom.io/docs/api/latest/Disposable
 [11]: https://github.com/Alhadis
+[12]: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+[13]: https://github.com/file-icons/atom#integration-with-other-packages
 [v2.0]: https://github.com/file-icons/atom/releases/tag/v2.0.0
