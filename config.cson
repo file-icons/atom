@@ -2768,7 +2768,7 @@ fileIcons:
 		icon: "mustache"
 		scope: /(^|\.)(mustache|handlebars)(\.|$)/i
 		alias: /^(hbs|htmlbars|handlebars)$/i
-		match: /\.(hbs|handlebars|mustache)$/i
+		match: /\.(hbs|handlebars|(mu)?stache)$/i
 		colour: "medium-orange"
 
 	Nano:

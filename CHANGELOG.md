@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.9...HEAD
 
 
+[Unpublished]
+---------------------
+### Added
+- **Support:** Moustache (`*.stache`)
+
+
+
 [v2.1.9] - 2017-07-16
 ---------------------
 ### Added
