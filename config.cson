@@ -808,6 +808,7 @@ fileIcons:
 			[".gbo", "dark-blue"]
 			[".gbp", "dark-red"]
 			[".drl", "dark-blue"]
+			[".dsn", "dark-cyan"]
 		]
 
 	Cirru:
@@ -1446,6 +1447,7 @@ fileIcons:
 		match: [
 			[/^firebase\.json$/i, "medium-yellow", priority: 2]
 			[".firebaserc", "medium-orange"]
+			[".bolt", "medium-red"]
 		]
 
 	Flask:
