@@ -792,6 +792,24 @@ fileIcons:
 		match: /^circle\.yml$/i
 		colour: "medium-green"
 
+	"Circuit Board":
+		icon: "icon-circuit-board"
+		noSuffix: true
+		generic: true
+		match: [
+			[".pcb", "medium-green"]
+			[".gbr", "medium-red", "gerber"]
+			[".gtl", "medium-blue"]
+			[".gbl", "medium-cyan"]
+			[".gbs", "medium-orange"]
+			[".gto", "medium-maroon"]
+			[".gts", "dark-maroon"]
+			[".gtp", "dark-orange"]
+			[".gbo", "dark-blue"]
+			[".gbp", "dark-red"]
+			[".drl", "dark-blue"]
+		]
+
 	Cirru:
 		icon: "cirru"
 		scope: "cirru"
@@ -1243,6 +1261,7 @@ fileIcons:
 		match: [
 			[".sch", "medium-red"]
 			[".brd", "dark-red"]
+			[".eup", "medium-red"]
 		]
 
 	EasyBuild:
@@ -2215,8 +2234,13 @@ fileIcons:
 
 	KiCad:
 		icon: "kicad"
-		colour: "dark-blue"
-		match: ".kicad_pcb"
+		match: [
+			[".kicad_pcb", "dark-blue"]
+			[".kicad_pcb-bak", "dark-red"]
+			[".kicad_mod", "medium-green"]
+			[".kicad_wks", "medium-cyan"]
+			[/^fp-lib-table$/i, "dark-blue"]
+		]
 
 	KitchenCI:
 		icon: "kitchenci"
@@ -4094,10 +4118,13 @@ fileIcons:
 			[".abt", "dark-purple"]
 			[".ans", "dark-orange"]
 			[".brf", "medium-maroon"]
+			[".dri", "medium-blue"]
 			[".etx", "medium-yellow"]
+			[".gpi", "medium-red"]
 			[".irclog", "medium-blue"]
 			[".msg", "medium-orange"]
 			[".no", "medium-red"]
+			[".rpt", "medium-maroon"]
 			[".srt", "medium-purple"]
 			[".sub", "dark-purple"]
 			[/^(bug-report|fdl|for-release|tests)$/i, "medium-red"]

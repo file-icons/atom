@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
-- **Support:** Moustache (`*.stache`)
+- **Support:** Eagle (`.eup`), KiCad (`.kicad_pcb-bak`, `.kicad_mod`, `.kicad_wks`, `fp-lib-table`), Moustache (`*.stache`), Printed Circuit Boards (`.pcb`, `.gbr`, `.gtl`, `.gbl`, `.gbs`, `.gto`, `.gts`, `.gtp`, `.gbo`, `.gbp`, `.drl`), Text (`.dri`, `.gpi`, `.rpt`)
 
 
 
@@ -141,7 +141,7 @@ An `apm` bug with handling scoped NPM modules [`#702`](https://github.com/atom/a
 [v2.1.0] - 2017-03-21
 ---------------------
 ### Added
-- **New icons:** Alex (`.alexrc`, `.alexignore`), Antwar (`antwar.{conf|config}.`), CodeShip (`codeship-*.yml`), MarkdownLint (`.markdownlintrc`), PM2 (`ecosystem.{config|conf}.*`), Proselint (`.proselintrc`), Tests folder (unassigned), Test-files (CoffeeScript: , Generic code, JavaScript, Perl, Python, React/JSX/TSX, Ruby, and TypeScript) (`{spec|test}/*.{spec|test}.{js|rb|pl…}`), Webpack (updated logo)
+- **New icons:** Alex (`.alexrc`, `.alexignore`), Antwar (`antwar.{conf|config}.`), CodeShip (`codeship-*.yml`), MarkdownLint (`.markdownlintrc`), PM2 (`ecosystem.{config|conf}.*`), Proselint (`.proselintrc`), Tests folder (unassigned), Test-files (CoffeeScript, Generic code, JavaScript, Perl, Python, React/JSX/TSX, Ruby, and TypeScript) (`{spec|test}/*.{spec|test}.{js|rb|pl…}`), Webpack (updated logo)
 - **Support:** GitLab (`.gitlab`), Jinja2 (`.j2`), Karma (`karma.config.*`), Protractor (`protractor.config.*`), SourcePawn (`.inc`), Stylus (`.stylus`), Webpack (`webpack.conf.*`)
 
 ### Changed
