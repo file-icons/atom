@@ -797,6 +797,8 @@ fileIcons:
 		noSuffix: true
 		generic: true
 		match: [
+			[".brd", "dark-green"]
+			[".sch", "medium-red"]
 			[".pcb", "medium-green"]
 			[".gbr", "medium-red", "gerber"]
 			[".gtl", "medium-blue"]
@@ -809,6 +811,14 @@ fileIcons:
 			[".gbp", "dark-red"]
 			[".drl", "dark-blue"]
 			[".dsn", "dark-cyan"]
+			[".gko", "medium-red"]
+			[".gpt", "medium-yellow"]
+			[".gpb", "dark-yellow"]
+			[/\.gm\d+$/i, "medium-green"]
+			[/\.g[0-9]+$/i, "dark-blue", priority: 0.5]
+			[/^PCB\.[0-9]+(\.backup~?)?$/, "dark-green", priority: 0.5]
+			[".fab", "dark-red"]
+			[".pho", "dark-cyan"]
 		]
 
 	Cirru:
@@ -1259,11 +1269,9 @@ fileIcons:
 
 	Eagle:
 		icon: "eagle"
-		match: [
-			[".sch", "medium-red"]
-			[".brd", "dark-red"]
-			[".eup", "medium-red"]
-		]
+		match: ".eup"
+		colour: "medium-red"
+		scope: "eagle"
 
 	EasyBuild:
 		icon: "easybuild"
