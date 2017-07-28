@@ -1455,8 +1455,13 @@ fileIcons:
 		match: [
 			[/^firebase\.json$/i, "medium-yellow", priority: 2]
 			[".firebaserc", "medium-orange"]
-			[".bolt", "medium-red"]
 		]
+
+	"Firebase Bolt":
+		icon: "firebase-bolt"
+		match: ".bolt"
+		colour: "medium-yellow"
+		scope: "bolt"
 
 	Flask:
 		icon: "flask"

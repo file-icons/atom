@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ---------------------
 ### Added
+- **New icons:** Firebase Bolt (`.bolt`)
 - **Support:** Eagle (`.eup`), Firebase (`.bolt`), KiCad (`.kicad_pcb-bak`, `.kicad_mod`, `.kicad_wks`, `fp-lib-table`), Moustache (`*.stache`), Printed Circuit Boards (`.pcb`, `.gbr`, `.gtl`, `.gbl`, `.gbs`, `.gto`, `.gts`, `.gtp`, `.gbo`, `.gbp`, `.drl`, `.dsn`, `.fab`, `.gko`, `.gpt`, `.gpb`, `.pho`, `.{g,gm}[0-9]+`), Text (`.dri`, `.gpi`, `.rpt`)
 
 ### Changed
