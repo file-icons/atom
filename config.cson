@@ -338,7 +338,7 @@ fileIcons:
 	APL:
 		icon: "apl"
 		match: [
-			[".apl", "dark-cyan", "apl", signature: /[⌶-⍺]/]
+			[".apl", "dark-cyan", interpreter: /^(gnu[-._]?)?aplx?$/i, scope: "apl", signature: /[⌶-⍺]/]
 			[".apl.history", "medium-maroon"]
 		]
 
