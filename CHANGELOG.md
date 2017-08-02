@@ -10,10 +10,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ---------------------
 ### Added
 - **New icons:** Firebase Bolt (`.bolt`)
-- **Support:** Apache (`httpd{.+}*.conf`), Eagle (`.eup`), Firebase (`.bolt`), KiCad (`.kicad_pcb-bak`, `.kicad_mod`, `.kicad_wks`, `fp-lib-table`), Moustache (`*.stache`), nginx (`nginx{.+}*.conf`), Printed Circuit Boards (`.pcb`, `.gbr`, `.gtl`, `.gbl`, `.gbs`, `.gto`, `.gts`, `.gtp`, `.gbo`, `.gbp`, `.drl`, `.dsn`, `.fab`, `.gko`, `.gpt`, `.gpb`, `.pho`, `.{g,gm}[0-9]+`), Text (`.dri`, `.gpi`, `.rpt`)
+- **Support:** Apache (`httpd{.+}*.conf`), Eagle (`.eup`), Firebase (`.bolt`), KiCad (`.kicad_pcb-bak`, `.kicad_mod`, `.kicad_wks`, `fp-lib-table`), MarkdownLint (`.mdlrc`, `.mdlrc.style.rb`), Moustache (`*.stache`), nginx (`nginx{.+}*.conf`), Printed Circuit Boards (`.pcb`, `.gbr`, `.gtl`, `.gbl`, `.gbs`, `.gto`, `.gts`, `.gtp`, `.gbo`, `.gbp`, `.drl`, `.dsn`, `.fab`, `.gko`, `.gpt`, `.gpb`, `.pho`, `.{g,gm}[0-9]+`), Text (`.dri`, `.gpi`, `.rpt`)
 
 ### Changed
 - Eagle icon replaced by generic circuit-board for `.brd` (Board) and `.sch` (Schematic) files.
+- MarkdownLint icon reduced in scale slightly
 
 
 

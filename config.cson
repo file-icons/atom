@@ -2474,9 +2474,11 @@ fileIcons:
 
 	MarkdownLint:
 		icon: "markdownlint"
-		match: ".markdownlintrc"
-		colour: "dark-green"
-		interpreter: "mdl"
+		match: [
+			[".markdownlintrc", "dark-green", interpreter: "mdl"]
+			[/^\.?mdlrc(\.style)?\.rb$/i, "medium-red"]
+			[/^\.?mdlrc$/i, "dark-cyan"]
+		]
 
 	Marko:
 		icon: "marko"
