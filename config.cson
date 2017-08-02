@@ -321,7 +321,7 @@ fileIcons:
 		icon: "apache"
 		priority: 2
 		match: [
-			[/^(apache2?|httpd).conf$/i, "medium-red"]
+			[/^(apache2?|httpd)(\.[-\w]+)*.conf$/i, "medium-red"]
 			[".apacheconf", "dark-red", scope: "apache-config", alias: /^(aconf|ApacheConf)$/i]
 			[/^httpd\.conf/i, "medium-red", priority: 0]
 			["apache2/magic", "medium-purple", matchPath: true]
@@ -2868,7 +2868,7 @@ fileIcons:
 		icon: "nginx"
 		priority: 2
 		match: [
-			[/^nginx\.conf$/i, "dark-green"]
+			[/^nginx(\.[-\w]+)*\.conf$/i, "dark-green"]
 			[".nginxconf", "medium-green", scope: "nginx", alias: "nginx configuration file"]
 		]
 
