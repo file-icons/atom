@@ -818,6 +818,7 @@ fileIcons:
 			[/\.g[0-9]+$/i, "dark-blue", priority: 0.5]
 			[/^PCB\.[0-9]+(\.backup~?)?$/, "dark-green", priority: 0.5]
 			[".fab", "dark-red"]
+			[".net", "dark-blue"]
 			[".pho", "dark-cyan"]
 		]
 
@@ -887,6 +888,12 @@ fileIcons:
 		match: /\.(cob|ccp|cbl|cobol|cpy)$/i
 		colour: "auto-blue"
 		scope: "cobol"
+
+	Codacy:
+		icon: "codacy"
+		match: /\.codacy\.ya?ml$/i
+		priority: 2
+		colour: "dark-blue"
 
 	CodeClimate:
 		icon: "cc"
@@ -1018,6 +1025,17 @@ fileIcons:
 		priority: 2
 		match: /^cordova([^.]*\.|-(\d\.)+)js$/i
 		colour: "light-blue"
+
+	Corel:
+		icon: "corel"
+		match: /\.(cmx|ccx)$/i
+		colour: "medium-blue"
+
+	CorelDRAW:
+		icon: "coreldraw"
+		match: /\.(cdrx?|cdt)$/i
+		colour: "medium-green"
+		signature: /^RIFF.{4}CDR.{1,2}vrsn/
 
 	CPAN:
 		icon: "cpan"
@@ -1707,6 +1725,8 @@ fileIcons:
 			[".sed", "dark-green"]
 			[/\.sgml?$/i, "dark-yellow"]
 			[".sig", "light-maroon"]
+			[".sk", "light-blue", signature: /^##Sketch 1 2/]
+			[/\.sk[12]$/i, "medium-blue", alias: "Skencil", signature: /^##sK1 /]
 			[".sml", "medium-red"]
 			[".smt", "light-blue", scope: "smt", interpreter: /boolector|cvc4|mathsat5|opensmt|smtinterpol|smt-rat|stp|verit|yices2|z3/]
 			[".smt2", "medium-cyan"]
@@ -1759,6 +1779,15 @@ fileIcons:
 		match: [
 			[".ebuild", "dark-cyan", scope: "ebuild"]
 			[".eclass", "medium-blue"]
+		]
+
+	GIMP:
+		icon: "gimp"
+		match: [
+			[".xcf", "medium-red"]
+			[".ggr", "medium-orange"]
+			[".gih", "medium-maroon"]
+			[".vbr", "medium-cyan"]
 		]
 
 	Git:
@@ -1944,6 +1973,11 @@ fileIcons:
 			[/^\.vendor_urls$/, "dark-purple"]
 		]
 
+	HewlettPackard:
+		icon: "hp"
+		match: ".hpgl"
+		colour: "medium-blue"
+
 	Hoplon:
 		icon: "hoplon"
 		match: ".hl"
@@ -2008,6 +2042,7 @@ fileIcons:
 			[".bpg", "medium-red", signature: /^BPG\xFB/]
 			[".cin", "medium-orange", signature: /^\x80\x2A\x5F\xD7/]
 			[".cd5", "dark-green", signature: /^_CD5\x10\0/]
+			[".cgm", "medium-orange"]
 			[".cpc", "light-yellow"]
 			[".cr2", "medium-orange", signature: /^II\*\0\x10\0{3}CR/]
 			[".dcm", "medium-pink", signature: /^.{128}DICM/]
@@ -2016,6 +2051,7 @@ fileIcons:
 			[".dpx", "dark-orange", signature: /^(SDPX|XPDS)/]
 			[".ecw", "light-blue"]
 			[".exr", "dark-yellow", signature: /^v\/1\x01/]
+			[".fig", "dark-orange"]
 			[/\.fits?$/i, "medium-cyan", signature: /^SIMPLE  =/]
 			[".flif", "dark-red", signature: /^FLIF/]
 			[".fts", "medium-cyan"]
@@ -2047,7 +2083,9 @@ fileIcons:
 			[/\.tiff?$/i, "medium-red", signature: /^II\x2A\0|^MM\0\x2A/]
 			[/\.vsdx?$/i, "dark-blue"]
 			[".wbm", "dark-maroon"]
+			[/\.(wmf|emf|wmz|apm)$/i, "medium-red", signature: /^[\x01\x02]\0\t\0|^×ÍÆ\x9A/]
 			[".wdp", "dark-red"]
+			[".xwd", "dark-purple"]
 		]
 
 	"Inform 7":
@@ -2382,6 +2420,7 @@ fileIcons:
 		match: [
 			[".ll", "dark-green", "llvm"]
 			[".clang-format", "auto-yellow"]
+			[/^ubsan\.blacklist$/i, "auto-red"]
 		]
 
 	Logos:
@@ -3228,6 +3267,11 @@ fileIcons:
 		icon: "pickle"
 		match: ".pkl"
 		colour: "dark-cyan"
+
+	Pipenv:
+		icon: "pipenv"
+		match: /^Pipfile(\.lock)?$/i
+		colour: "dark-blue"
 
 	Pike:
 		icon: "pike"
@@ -4192,6 +4236,11 @@ fileIcons:
 		match: /(\.|_|^)tmux\.conf$/i
 		colour: "medium-green"
 		scope: "tmux"
+
+	TortoiseSVN:
+		icon: "tortoise"
+		match: /^.tgitconfig$/i
+		colour: "medium-red"
 
 	Travis:
 		icon: "travis"
