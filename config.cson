@@ -4067,10 +4067,10 @@ fileIcons:
 
 	Telegram:
 		icon: "telegram"
-		match: ".tl"
-		scope: "tl"
-		colour: "medium-blue"
-		alias: /Type\s*Language/i
+		match: [
+			[".tl", "medium-blue", scope: "tl", alias: /Type\s*Language/i]
+			[".xps", "light-blue"] # Microsoft XPS Viewer: Unrelated, but similar icon
+		]
 
 	"Template Toolkit":
 		icon: "tt"
