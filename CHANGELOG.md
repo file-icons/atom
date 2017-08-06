@@ -3,11 +3,11 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.9...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.10...HEAD
 
 
-[Unpublished]
----------------------
+[v2.1.10] - 2017-08-06
+----------------------
 ### Added
 - **New icons:** Cairo, Codacy (`.codacy.yml`), Corel (`.cmx`, `.ccx`), CorelDRAW (`.cdr`, `.cdrx`, `.cdt`), Firebase Bolt (`.bolt`), Ghostscript, GIMP (`.xcf`, `.ggr`, `.gih`, `.vbr`), Graphite, HewlettPackard (`.hpgl`), Inkscape, OpenCV, Pipenv (`Pipfile`, `Pipfile.lock`), TortoiseSVN (`.tgitconfig`)
 - **Support:** Apache (`httpd{.+}*.conf`), Eagle (`.eup`), Generic code (`.sk`, `.sk{1,2}`), Images (`.cgm`, `.fig`, `.wmf`, `.emf`, `.wmz`, `.apm`, `.xwd`), KiCad (`.kicad_pcb-bak`, `.kicad_mod`, `.kicad_wks`, `fp-lib-table`), LLVM (`ubsan.blacklist`), MarkdownLint (`.mdlrc`, `.mdlrc.style.rb`), Moustache (`*.stache`), nginx (`nginx{.+}*.conf`), Printed Circuit Boards (`.pcb`, `.gbr`, `.gtl`, `.gbl`, `.gbs`, `.gto`, `.gts`, `.gtp`, `.gbo`, `.gbp`, `.drl`, `.dsn`, `.fab`, `.gko`, `.gpt`, `.gpb`, `.net`, `.pho`, `.{g,gm}[0-9]+`), Text (`.dri`, `.gpi`, `.rpt`), XML Page Specification (`.xps`)
@@ -15,6 +15,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Eagle icon replaced by generic circuit-board for `.brd` (Board) and `.sch` (Schematic) files.
 - MarkdownLint icon reduced in scale slightly
+
+[v2.1.10]: https://github.com/file-icons/atom/releases/tag/v2.1.10
 
 
 
