@@ -1787,6 +1787,7 @@ fileIcons:
 			[".xcf", "medium-red"]
 			[".ggr", "medium-orange"]
 			[".gih", "medium-maroon"]
+			[".gpl", "medium-green"]
 			[".vbr", "medium-cyan"]
 		]
 

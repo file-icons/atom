@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.10...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support:** GIMP (`.gpl`)
+
+
 [v2.1.10] - 2017-08-06
 ----------------------
 ### Added
