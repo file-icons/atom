@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** GIMP (`.gpl`)
 - **Support:** Minecraft Function (`.mcfunction`)
 - **Support:** Minecraft pack info (`pack.mcmeta`)
+- **Support:** Minecraft image info (`.png.mcmeta`)
 
 
 
