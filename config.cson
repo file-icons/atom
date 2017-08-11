@@ -2705,6 +2705,7 @@ fileIcons:
 			[/^mcmod\.info$/i,"dark-green",{scope:"forge-config"}]
 			[".mcfunction","light-green"]
 			[/^pack\.mcmeta$/i,"dark-green"]
+			[/\.png\.mcmeta$/, "dark-green"]
 		]
 
 	MiniZinc:
