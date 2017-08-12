@@ -9,7 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** GIMP (`.gpl`)
+- **Support:** GIMP (`.gpl`), Minecraft (`.mcfunction`, `pack.mcmeta`, `.png.mcmeta`)
+
 
 
 [v2.1.10] - 2017-08-06

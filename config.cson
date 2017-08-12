@@ -2701,9 +2701,12 @@ fileIcons:
 
 	Minecraft:
 		icon: "minecraft"
-		scope: "forge-config"
-		match: /^mcmod\.info$/i
-		colour: "dark-green"
+		match: [
+			[/^mcmod\.info$/i, "dark-green", scope: "forge-config"]
+			[".mcfunction", "light-green"]
+			[/^pack\.mcmeta$/i, "dark-green"]
+			[/\.png\.mcmeta$/, "dark-green"]
+		]
 
 	MiniZinc:
 		icon: "minizinc"
