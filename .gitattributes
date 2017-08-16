@@ -1,3 +1,6 @@
 /lib/icons/.icondb.js linguist-vendored
 /preview.png export-ignore
 /test/ export-ignore
+
+# Force Windows-style newlines for batchfiles
+*.cmd text eol=crlf

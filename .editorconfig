@@ -10,3 +10,6 @@ indent_size = 4
 
 [config.cson]
 trim_trailing_whitespace = true
+
+[*.cmd]
+end_of_line = crlf
