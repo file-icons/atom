@@ -11,6 +11,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **Support:** GIMP (`.gpl`), Minecraft (`.mcfunction`, `pack.mcmeta`, `.png.mcmeta`)
 
+### Fixed
+- Regression with reading contents of opened text-buffers
+
 
 
 [v2.1.10] - 2017-08-06
