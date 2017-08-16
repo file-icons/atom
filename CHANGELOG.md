@@ -12,7 +12,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** GIMP (`.gpl`), Minecraft (`.mcfunction`, `pack.mcmeta`, `.png.mcmeta`)
 
 ### Fixed
+- [[`#639`][]]: Rare exception thrown when loading `.gitattributes` files
 - Regression with reading contents of opened text-buffers
+
+[`#639`]: https://github.com/file-icons/atom/issues/639
 
 
 
