@@ -4127,7 +4127,7 @@ fileIcons:
 		icon: "test-python"
 		priority: 1.5
 		matchPath: true
-		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.py(3|thon)?$/i
+		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1(((?!\1).)+[._-](?:spec|test)s?|(?:spec|test)s?[._-].+)\.py(3|thon)?$/i
 		colour: "dark-blue"
 
 	"Test, React":
