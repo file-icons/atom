@@ -1367,7 +1367,7 @@ fileIcons:
 
 	Email:
 		icon: "at"
-		match: /^(authors|owners)$/i
+		match: /^(authors|(code)?owners)$/i
 		colour: "auto-red"
 
 	Ember:

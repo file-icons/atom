@@ -9,7 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Python tests (`{tests,test}/test_*.py`)
+- **Support:** Email/Author lists (`CODEOWNERS`), Python tests (`{tests,test}/test_*.py`)
+
 
 
 [v2.1.11] - 2017-08-17
