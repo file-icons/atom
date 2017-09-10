@@ -3340,7 +3340,7 @@ fileIcons:
 			[".ps", "medium-red", scope: "postscript", alias: "postscr", signature: /^%!PS/]
 			[".eps", "medium-orange"]
 			[".pfa", "dark-blue"]
-			[".afm", "medium-green"]
+			[".afm", "medium-green", signature: /^\s*StartFontMetrics\s+(\d+\.\d+)/]
 		]
 
 	"POV-Ray SDL":
