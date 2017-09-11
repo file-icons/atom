@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Email/Author lists (`CODEOWNERS`), Python tests (`{tests,test}/test_*.py`)
+- **Support:** Checklist (`todo.txt`), Email/Author lists (`CODEOWNERS`), Python tests (`{tests,test}/test_*.py`)
 
 ### Fixed
 - Patched `tree-view` consumer in preparation for [`atom/tree-view#1169`](https://github.com/atom/tree-view/pull/1169)

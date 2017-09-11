@@ -765,9 +765,10 @@ fileIcons:
 
 	Checklist:
 		icon: "checklist"
-		priority: 0
-		match: /TODO/
-		colour: "medium-yellow"
+		match: [
+			[/TODO/, "medium-yellow", priority: 0]
+			[/^todo.txt$/i, "medium-green", priority: 2, scope: /^text\.(gfm-)?todotxt$/i]
+		]
 
 	Chef:
 		icon: "chef"
