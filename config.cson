@@ -162,7 +162,7 @@ directoryIcons:
 
 	Xcode:
 		icon: "appstore"
-		match: ".xcodeproj"
+		match: /\.(xcodeproj|xcworkspace)$/i
 
 
 fileIcons:
@@ -1664,6 +1664,7 @@ fileIcons:
 			[".ash", "medium-cyan"]
 			[/\.asn1?$/i, "medium-cyan"]
 			[".axml", "dark-blue"]
+			[".bal", "dark-green", scope: "ballerina"]
 			[".bc", "dark-red", "baan"]
 			[".befunge", "medium-orange"]
 			[".bmx", "dark-blue"]
