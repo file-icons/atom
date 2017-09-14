@@ -739,6 +739,12 @@ fileIcons:
 			["Cargo.lock", "dark-orange"]
 		]
 
+	Carthage:
+		icon: "carthage"
+		match: /^Cartfile(\.|$)/
+		colour: "dark-pink"
+		priority: 2
+
 	Ceylon:
 		icon: "ceylon"
 		match: ".ceylon"
@@ -889,6 +895,11 @@ fileIcons:
 		match: /\.(cob|ccp|cbl|cobol|cpy)$/i
 		colour: "auto-blue"
 		scope: "cobol"
+
+	CocoaPods:
+		icon: "cocoapods"
+		match: ".podspec"
+		colour: "medium-red"
 
 	Codacy:
 		icon: "codacy"
@@ -1175,6 +1186,12 @@ fileIcons:
 				priority: 2,
 				matchPath: true]
 		]
+
+	DataWeave:
+		icon: "dataweave"
+		match: ".dwl"
+		colour: "auto-blue"
+		scope: /\.data-?weave/
 
 	dBASE:
 		icon: "dbase"
@@ -2971,6 +2988,11 @@ fileIcons:
 		match: /^nodemon\.json$|^\.nodemonignore$/i
 		colour: "medium-green"
 
+	Nomad:
+		icon: "nomad"
+		match: ".nomad"
+		colour: "medium-green"
+
 	Normalize:
 		icon: "normalize"
 		priority: 2
@@ -3434,6 +3456,12 @@ fileIcons:
 		scope: "purescript"
 		match: ".purs"
 		colour: "dark-purple"
+
+	PyPi:
+		icon: "pypi"
+		match: /^requirements\.in$/i
+		colour: "dark-blue"
+		priority: 2
 
 	Python:
 		icon: "python"
@@ -3970,6 +3998,12 @@ fileIcons:
 			[".matah", "light-cyan"]
 			[".sthlp", "medium-purple"]
 		]
+
+	Stencil:
+		icon: "stencil"
+		match: ".stencil"
+		colour: "medium-orange"
+		scope: "stencil"
 
 	Storyist:
 		icon: "storyist"

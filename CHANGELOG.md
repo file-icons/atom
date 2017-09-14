@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **New icons:** Carthage (`Cartfile.*`), CocoaPods (`.podspec`), DataWeave (`.dwl`), Nomad (`.nomad`), PyPi (`requirements.in`), Stencil (`.stencil`)
 - **Support:** Checklist (`todo.txt`), Email/Author lists (`CODEOWNERS`), Python tests (`{tests,test}/test_*.py`)
 
 ### Fixed
