@@ -13,6 +13,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** Checklist (`todo.txt`), Email/Author lists (`CODEOWNERS`), Generic (`.bal`), Python tests (`{tests,test}/test_*.py`), Xcode (`.xcworkspace`)
 
 ### Fixed
+- Buggy handling of `.gitattributes` files where unrelated lines preceded a `linguist-language` assignment
+- `.gitattributes` patterns pointing to project's base directory (`/*.file`) matched nothing
 - Patched `tree-view` consumer in preparation for [`atom/tree-view#1169`](https://github.com/atom/tree-view/pull/1169)
 
 

@@ -149,14 +149,20 @@ describe("Interpreter directives", () => {
 	when("the file's hashbang is modified", () => {
 		let editor, checkpoint, crystal, crystalLink;
 		
+		const relink = (delay = 100) => wait(delay).then(() => {
+			files       = TreeView.ls();
+			crystal     = files["crystal"];
+			crystalLink = files["symlinks/test-4"];
+			return Promise.resolve(files);
+		});
+		
 		beforeEach(() => {
 			return open("crystal").then(ed => {
 				editor      = ed;
 				checkpoint  = editor.createCheckpoint();
-				crystal     = files["crystal"];
-				crystalLink = files["symlinks/test-4"];
-				crystal.should.have.classes("crystal-icon medium-cyan");
-				unlessOnWindows(_=> crystalLink.should.have.classes("medium-cyan"));
+				return relink(10)
+					.then(() => crystal.should.have.classes("crystal-icon medium-cyan"))
+					.then(() => unlessOnWindows(() => crystalLink.should.have.classes("medium-cyan")));
 			});
 		});
 		
@@ -171,12 +177,12 @@ describe("Interpreter directives", () => {
 		
 		when("the new hashbang is valid", () => {
 			it("updates its icon", () => {
-				replaceText(/crystal$/m, "ruby");
-				return wait(100)
+				return replaceText(/crystal$/m, "ruby")
+					.then(() => relink())
 					.then(() => crystal.should.have.classes("ruby-icon medium-red"))
 					.then(() => unlessOnWindows(_=> crystalLink.should.have.classes("medium-red")))
 					.then(() => replaceText(/ruby$/m, "mruby"))
-					.then(() => wait(100))
+					.then(() => relink())
 					.then(() => crystal.should.have.class("mruby-icon").and.not.have.class("ruby-icon"))
 					.then(() => unlessOnWindows(_=> crystalLink.should.have.classes("medium-red")));
 			});
@@ -186,11 +192,11 @@ describe("Interpreter directives", () => {
 		when("a valid hashbang is invalidated by an edit", () => {
 			it("removes the icon that was being displayed", () => {
 				crystal.should.have.classes("crystal-icon medium-cyan");
-				replaceText(/^/m, "A".repeat(20));
-				return wait(300)
+				return replaceText(/^/m, "A".repeat(20))
+					.then(() => relink(300))
 					.then(() => crystal.should.have.classes("default-icon"))
 					.then(() => replaceText(/^A+/, "#!"))
-					.then(() => wait(100))
+					.then(() => relink())
 					.then(() => crystal.should.have.classes("crystal-icon medium-cyan"));
 			});
 		});

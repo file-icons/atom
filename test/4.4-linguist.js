@@ -21,7 +21,9 @@ describe("Linguist-language attributes", () => {
 		}
 	]));
 	
-	after(() => {
+	after(function(...args){
+		if(this._runnable.parent.bail && +document.querySelector("#mocha-failures").dataset.value)
+			return;
 		const editor = atom.workspace.getActiveTextEditor();
 		editor && revert(editor);
 		Tabs.closeAll();
@@ -73,6 +75,7 @@ describe("Linguist-language attributes", () => {
 			
 			() => revert(),
 			() => {
+				files = TreeView.ls();
 				files["a.feather"].should.have.classes(base + "apache-icon dark-red");
 				files["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
 				files["not-js.es"].should.not.have.classes("eiffel-icon medium-cyan");
