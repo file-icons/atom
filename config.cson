@@ -1820,7 +1820,7 @@ fileIcons:
 
 	"Git - Commit":
 		icon: "git-commit"
-		match: /^COMMIT_EDITMSG$/
+		match: /^(ATOM_)?COMMIT_EDITMSG$/
 		colour: "medium-red"
 
 	"Git - Merge":

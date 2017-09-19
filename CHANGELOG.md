@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Carthage (`Cartfile.*`), CocoaPods (`.podspec`), DataWeave (`.dwl`), Nomad (`.nomad`), PyPi (`requirements.in`), Stencil (`.stencil`)
-- **Support:** Checklist (`todo.txt`), Compressed files (`.wgt`), Config (`buildozer.spec`), Email/Author lists (`CODEOWNERS`), Generic (`.bal`), Python tests (`{tests,test}/test_*.py`), Terraform (`.tf.json`), Xcode (`.xcworkspace`)
+- **Support:** Checklist (`todo.txt`), Compressed files (`.wgt`), Config (`buildozer.spec`), Email/Author lists (`CODEOWNERS`), Generic (`.bal`), Git commit messages (`ATOM_COMMIT_EDITMSG`), Python tests (`{tests,test}/test_*.py`), Terraform (`.tf.json`), Xcode (`.xcworkspace`)
 
 ### Fixed
 - Buggy handling of `.gitattributes` files where unrelated lines preceded a `linguist-language` assignment
