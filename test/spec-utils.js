@@ -25,6 +25,23 @@ if(inSpecMode){
 			? document.body.appendChild(global.workspace)
 			: attachToDOM(global.workspace);
 	});
+	
+	// FIXME: Incorrigible hack which shouldn't exist.
+	const UI = require("../lib/ui.js");
+	const {getThemeColour} = UI;
+	UI.getThemeColour = function(){
+		const [uiTheme] = atom.config.get("core.themes").filter(name => /-ui$/.test(name));
+		switch(uiTheme){
+			case "atom-light-ui": return [238, 238, 238];
+			case "atom-dark-ui":  return [48,  48,  48 ];
+			case "one-dark-ui":   return [43,  43,  43 ];
+			case "one-light-ui":  return [240, 240, 240];
+			case "seti-ui":       return [21,  25,  27 ];
+			case "dash-ui":       return [13,  16,  19 ];
+			case "aesthetic-ui":  return [255, 255, 255];
+			default: return getThemeColour.call(UI);
+		}
+	};
 }
 
 
