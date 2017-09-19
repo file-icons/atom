@@ -228,9 +228,9 @@ describe("Find-and-replace", () => {
 			.then(() => wait(500))
 			.then(() => {
 				files = [];
-				const selector = FindAndReplace.jQueryRemoved
-					? ".results-view li.path:not([data-path=fake-file-path])"
-					: ".results-view > .path";
+				const selector = false === FindAndReplace.jQueryRemoved
+					? ".results-view > .path"
+					: ".results-view li.path:not([data-path=fake-file-path])";
 				for(const item of workspace.querySelectorAll(selector)){
 					const pathDetails = item.querySelector(".path-details");
 					const name = pathDetails.querySelector(".path-name").textContent;
@@ -238,6 +238,6 @@ describe("Find-and-replace", () => {
 					files.push(item);
 					Object.defineProperty(files, name.replace(/\\/g, "/"), {value: icon});
 				}
-			}).catch(e => reject(e));
+			});
 	}
 });

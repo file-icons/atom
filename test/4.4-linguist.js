@@ -22,8 +22,11 @@ describe("Linguist-language attributes", () => {
 	]));
 	
 	after(function(...args){
-		if(this._runnable.parent.bail && +document.querySelector("#mocha-failures").dataset.value)
-			return;
+		if(this._runnable.parent.bail){
+			const counter = document.querySelector("#mocha-failures");
+			if(counter && +counter.dataset.value)
+				return;
+		}
 		const editor = atom.workspace.getActiveTextEditor();
 		editor && revert(editor);
 		Tabs.closeAll();

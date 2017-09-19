@@ -21,7 +21,9 @@ if(inSpecMode){
 	Chai.should();
 	before(() => {
 		global.workspace = atom.views.getView(atom.workspace);
-		attachToDOM(global.workspace);
+		headless
+			? document.body.appendChild(global.workspace)
+			: attachToDOM(global.workspace);
 	});
 }
 
@@ -38,6 +40,7 @@ module.exports = {
 	revert,
 	rm,
 	rmrf,
+	snapshot,
 	setTheme,
 	setup,
 	wait
@@ -72,6 +75,25 @@ function assertIconClasses(nodes, assertions, negate = false){
 			? expect(nodes[name], `Node ${name}`).not.to.have.class(classes)
 			: expect(nodes[name], `Node ${name}`).to.have.class(classes);
 	}
+}
+
+
+/**
+ * Synchronously write the DOM's current HTML state to a file.
+ *
+ * @param {String} path - Path to write output to
+ * @param {Element} [root=document.documentElement]
+ * @private
+ */
+function snapshot(path, root = null){
+	root = null === root
+		? document.documentElement
+		: HTMLDocument === root.constructor
+			? root.lastElementChild
+			: root;
+	const {HOME} = process.env;
+	if(HOME) path = path.replace(/^~\//, `${HOME}/`);
+	fs.writeFileSync(resolve(path), root.outerHTML);
 }
 
 
