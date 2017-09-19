@@ -824,6 +824,7 @@ fileIcons:
 			[/\.gm\d+$/i, "medium-green"]
 			[/\.g[0-9]+$/i, "dark-blue", priority: 0.5]
 			[/^PCB\.[0-9]+(\.backup~?)?$/, "dark-green", priority: 0.5]
+			[/\.(cir|ckt|struct|tech)$/i, "dark-green", scope: "spice", interpreter: "ngspice"]
 			[".fab", "dark-red"]
 			[".net", "dark-blue"]
 			[".pho", "dark-cyan"]
