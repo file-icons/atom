@@ -999,6 +999,7 @@ fileIcons:
 			[".epub", "medium-green"]
 			[".jar", "dark-pink"]
 			[".war", "medium-purple"]
+			[".wgt", "medium-blue"]
 			[".xar", "dark-orange", signature: /^xar!/]
 			[".egg", "light-orange"]
 		]
@@ -1017,6 +1018,7 @@ fileIcons:
 			[/^ld\.script$/i, "medium-orange"]
 			[".reek", "medium-red"]
 			[/^\.?XCompose$/, "medium-cyan", "xcompose"]
+			[/^buildozer\.spec$/i, "dark-blue", priority: 2]
 			[/config|settings|option|pref/i, null, priority: 0]
 			[/\/dev[-\w]+\/([^\/]+\/)*(DESC|Foundry|download|symbolmap)(\.in|\.proto)?$/, "dark-green", matchPath: true, priority: 1.5]
 			[/\.git[\/\\](config|info[\/\\]\w+)$/, "dark-red", matchPath: true]
@@ -2308,7 +2310,7 @@ fileIcons:
 	KiCad:
 		icon: "kicad"
 		match: [
-			[".kicad_pcb", "dark-blue"]
+			[".kicad_pcb", "dark-blue", scope: /^source\.pcb\.board$|\.kicad(?=$|\.)/]
 			[".kicad_pcb-bak", "dark-red"]
 			[".kicad_mod", "medium-green"]
 			[".kicad_wks", "medium-cyan"]
@@ -2439,7 +2441,7 @@ fileIcons:
 		icon: "llvm"
 		match: [
 			[".ll", "dark-green", "llvm"]
-			[".clang-format", "auto-yellow"]
+			[/\.clang-(format|tidy)$/i, "auto-yellow"]
 			[/^ubsan\.blacklist$/i, "auto-red"]
 		]
 
@@ -4126,9 +4128,10 @@ fileIcons:
 
 	Terraform:
 		icon: "terraform"
-		scope: /\.terra(form)?$/i
-		match: /\.tf(vars)?$/i
-		colour: "dark-purple"
+		match: [
+			[/\.tf(vars)?$/i, "dark-purple", scope: /\.terra(form)?$/i]
+			[".tf.json", "medium-yellow", priority: 2]
+		]
 
 	"Test, CoffeeScript":
 		icon: "test-coffee"
