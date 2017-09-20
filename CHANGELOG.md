@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.12...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **New icons:** Backup (`.bak`, `.old`, `.orig`)
+
+
 [v2.1.12] - 2017-09-19
 ----------------------
 ### Added
