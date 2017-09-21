@@ -510,6 +510,10 @@ fileIcons:
 		match: /^backbone([-.]min|dev)?\.js$/i
 		colour: "dark-blue"
 
+	Backup:
+		icon: "backup"
+		match: /\.(bak|old|orig)$/
+
 	Bazel:
 		icon: "bazel"
 		match: [
