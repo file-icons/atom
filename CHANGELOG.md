@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Backup (`.bak`, `.old`, `.orig`)
+- **Support:** Ionic (`ionic.config.json`)
 
 
 [v2.1.12] - 2017-09-19
