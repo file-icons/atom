@@ -12,6 +12,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** Backup (`.bak`, `.old`, `.orig`)
 - **Support:** Ionic (`ionic.config.json`)
 
+### Changed
+- `file-icons-coloured` class added to `body` element when coloured icons are enabled
+
+
 
 [v2.1.12] - 2017-09-19
 ----------------------
