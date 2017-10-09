@@ -12,6 +12,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** Backup (`.bak`, `.old`, `.orig`)
 - **Support:** Ionic (`ionic.config.json`)
 
+### Fixed
+- `tree-view` icons not updating if project is opened by adding a folder to a blank workspace window.
+
 ### Changed
 - `file-icons-coloured` class added to `body` element when coloured icons are enabled
 
