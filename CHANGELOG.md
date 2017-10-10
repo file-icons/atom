@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Backup (`.bak`, `.old`, `.orig`)
+- **New icons:** Backup (`.bak`, `.old`, `.orig`), IcoMoon (`icomoon{.*}.json`), Q/Kdb+ (`.k`, `.q`)
 - **Support:** Ionic (`ionic.config.json`)
 
 ### Fixed

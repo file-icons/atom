@@ -2045,6 +2045,12 @@ fileIcons:
 		match: ".dlm"
 		colour: "medium-blue"
 
+	IcoMoon:
+		icon: "icomoon"
+		match: /^icomoon(\.[-\w]+)*\.json$/i
+		colour: "medium-purple"
+		priority: 2
+
 	Idris:
 		icon: "idris"
 		match: [
@@ -3495,6 +3501,13 @@ fileIcons:
 			[/^(SConstruct|SConscript)$/, "dark-green"]
 			[/^(Snakefile|WATCHLISTS)$/, "medium-green"]
 			[/^wscript$/, "dark-maroon"]
+		]
+
+	"Q/Kdb+":
+		icon: "kx"
+		match: [
+			[".q", "medium-blue", scope: /^source\.q$/]
+			[".k", "dark-purple", scope: /^source\.k4$/]
 		]
 
 	R:
