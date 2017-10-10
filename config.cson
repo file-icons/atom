@@ -278,6 +278,7 @@ fileIcons:
 		icon: "angelscript"
 		alias: "AngelCode"
 		match: /\.(acs|angelscript)$/i
+		scope: /^source\.angelscript$/
 		colour: "auto-blue"
 
 	Angular:
@@ -3505,6 +3506,7 @@ fileIcons:
 
 	"Q/Kdb+":
 		icon: "kx"
+		alias: /^Kdb\s*\+$/
 		match: [
 			[".q", "medium-blue", scope: /^source\.q$/]
 			[".k", "dark-purple", scope: /^source\.k4$/]
