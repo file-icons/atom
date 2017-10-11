@@ -1997,7 +1997,7 @@ fileIcons:
 	Heroku:
 		icon: "heroku"
 		match: [
-			[/^Procfile$/, "medium-purple"]
+			[/^(Proc|Apt)file$/, "medium-purple"]
 			[".buildpacks", "light-purple"]
 			[/^\.vendor_urls$/, "dark-purple"]
 		]
