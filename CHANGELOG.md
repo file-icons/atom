@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.12...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.13...HEAD
 
 
-[Unpublished]
+[v2.1.13] - 2017-10-11
 ----------------------
 ### Added
 - **New icons:** Backup (`.bak`, `.old`, `.orig`), IcoMoon (`icomoon{.*}.json`), Q/Kdb+ (`.k`, `.q`)
@@ -17,6 +17,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - `file-icons-coloured` class added to `body` element when coloured icons are enabled
+
+[v2.1.13]: https://github.com/file-icons/atom/releases/tag/v2.1.13
 
 
 
