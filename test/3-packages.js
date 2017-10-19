@@ -5,6 +5,8 @@ describe("Atom packages", function(){
 	this.timeout(0);
 	
 	before("Activate packages", () => {
+		atom.workspace.observeTextEditors(editor =>
+			editor.shouldPromptToSave = () => false);
 		return chain([
 			() => setup("3-packages", {
 				symlinks: [
