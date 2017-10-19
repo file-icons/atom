@@ -4247,6 +4247,7 @@ fileIcons:
 			[".etx", "medium-yellow"]
 			[".gpi", "medium-red"]
 			[".irclog", "medium-blue"]
+			[".more", "medium-purple"]
 			[".msg", "medium-orange"]
 			[".no", "medium-red"]
 			[".rpt", "medium-maroon"]
