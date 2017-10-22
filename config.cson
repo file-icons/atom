@@ -647,6 +647,12 @@ fileIcons:
 		match: /^(browserslist|\.browserslistrc)$/i
 		colour: "medium-orange"
 
+	BrowserSync:
+		icon: "browsersync"
+		priority: 2
+		match: /^(bs-config|browser-sync)\.(js|json)$/i
+		colour: "medium-red"
+
 	Brunch:
 		icon: "brunch"
 		priority: 2

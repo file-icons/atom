@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.13...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **New icons:** Browsersync (`bs-config.js`, `browser-sync.js`)
+
+
+
 [v2.1.13] - 2017-10-11
 ----------------------
 ### Added
