@@ -2130,6 +2130,12 @@ fileIcons:
 			[".xwd", "dark-purple"]
 		]
 
+	Imba:
+		icon: "imba"
+		match: ".imba"
+		colour: "medium-purple"
+		scope: /\.imba$/
+
 	"Inform 7":
 		icon: "inform7"
 		match: [
