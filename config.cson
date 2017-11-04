@@ -2133,7 +2133,7 @@ fileIcons:
 	Imba:
 		icon: "imba"
 		match: ".imba"
-		colour: "medium-purple"
+		colour: "medium-blue"
 		scope: /\.imba$/
 
 	"Inform 7":
