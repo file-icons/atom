@@ -1192,6 +1192,7 @@ fileIcons:
 			[".ttl", "medium-cyan", scope: "turtle"]
 			[".rviz", "dark-blue"]
 			[".syntax", "medium-blue"]
+			[".webmanifest", "medium-blue"]
 			[/^pkginfo$/, "medium-blue"]
 			[/^mime\.types$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
