@@ -726,6 +726,11 @@ fileIcons:
 		priority: 2
 		colour: "dark-blue"
 
+	Caffe:
+		icon: "caffe"
+		match: ".caffemodel"
+		colour: "medium-maroon"
+
 	Cake:
 		icon: "cake"
 		scope: "cake"

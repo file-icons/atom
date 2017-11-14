@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Browsersync (`bs-config.js`, `browser-sync.js`), Imba (`.imba`)
+- **New icons:** Browsersync (`bs-config.js`, `browser-sync.js`), Caffe (`.caffemodel`), Imba (`.imba`)
 - **Support:** Checklist (`.todo`, `.taskpaper`), Data (`.webmanifest`)
 
 
