@@ -518,7 +518,7 @@ fileIcons:
 	Bazel:
 		icon: "bazel"
 		match: [
-			[/^(BUILD|WORKSPACE)$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
+			[/^(BUILD|WORKSPACE)(.[Bb][Aa][Zz][Ee][Ll])?$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
 			[".bzl", "dark-blue", alias: "Skylark", scope: /(^|\.)(bzl|skylark)(\.|$)/i]
 		]
 
