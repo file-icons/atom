@@ -81,7 +81,7 @@ describe("Path", () => {
 				["git.git/case/ignored.Js",   base + "js-icon       medium-yellow"],
 				["git.git/case/ignored.pHP",  base + "php-icon      dark-blue"],
 				["git.git/case/ignored.rB",   base + "ruby-icon     medium-red"],
-				["git.git/case/ignored.yaML", base + "database-icon light-red"]
+				["git.git/case/ignored.yaML", base + "yaml-icon     medium-red"]
 			]);
 		});
 		

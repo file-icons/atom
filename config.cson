@@ -1177,7 +1177,6 @@ fileIcons:
 		generic: true
 		match: [
 			[/\.(h|geo|topo)?json$/i, "medium-yellow"]
-			[/\.ya?ml$/i, "light-red"]
 			[".cson", "medium-maroon"]
 			[".json5", "dark-yellow", "json5"]
 			[".http", "medium-red"]
@@ -1195,7 +1194,6 @@ fileIcons:
 			[".qbs", "dark-pink"]
 			[".ston", "medium-maroon"]
 			[".ttl", "medium-cyan", scope: "turtle"]
-			[".rviz", "dark-blue"]
 			[".syntax", "medium-blue"]
 			[".webmanifest", "medium-blue"]
 			[/^pkginfo$/, "medium-blue"]
@@ -3427,6 +3425,12 @@ fileIcons:
 			[".ps1xml", "dark-purple"]
 		]
 
+	Prettier:
+		icon: "prettier"
+		priority: 2
+		match: /\.prettierrc(\.(js|json|ya?ml))?$|^prettier\.config\.js$/i
+		colour: "auto-cyan"
+
 	Printer:
 		icon: "print"
 		match: ".ppd"
@@ -4656,6 +4660,13 @@ fileIcons:
 		scope: "xtend"
 		match: ".xtend"
 		colour: "dark-purple"
+
+	YAML:
+		icon: "yaml"
+		match: [
+			[/\.ya?ml$/i, "medium-red", "yaml"]
+			[".rviz", "dark-blue"]
+		]
 
 	YANG:
 		icon: "yang"
