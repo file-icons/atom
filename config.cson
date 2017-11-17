@@ -728,8 +728,10 @@ fileIcons:
 
 	Caffe:
 		icon: "caffe"
-		match: ".caffemodel"
-		colour: "medium-maroon"
+		match: [
+			[".caffemodel", "medium-maroon"]
+			[".solverstate", "medium-green"]
+		]
 
 	Cake:
 		icon: "cake"
@@ -1177,6 +1179,7 @@ fileIcons:
 		match: [
 			[/\.s[kl]im$/i, "medium-orange", "slim"]
 			[".cpuprofile", "medium-green"]
+			[".cloc", "medium-blue"]
 		]
 
 	Data:
@@ -1298,7 +1301,7 @@ fileIcons:
 	Doxyfile:
 		icon: "doxygen"
 		scope: "doxygen"
-		match: /^Doxyfile$/
+		match: /^\.?Doxyfile$/i
 		colour: "medium-blue"
 
 	Dragula:
