@@ -9,8 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Browsersync (`bs-config.js`, `browser-sync.js`), Caffe (`.caffemodel`), Imba (`.imba`), Prettier (`.prettierrc.{js,json,yaml,yml}`), YAML (`.yml`, `.yaml`, `.rviz`)
-- **Support:** Bazel (`BUILD.bazel`), Checklist (`.todo`, `.taskpaper`), Data (`.webmanifest`)
+- **New icons:** Browsersync (`bs-config.js`, `browser-sync.js`), Caffe (`.caffemodel`), CWL (`.cwl`), Imba (`.imba`), Prettier (`.prettierrc.{js,json,yaml,yml}`), Reek (`.reek`), YAML (`.yml`, `.yaml`), YARA (`.yar`, `.yara`)
+- **Support:** 3D Asset (`.rviz`, `.vcg`), Bazel (`BUILD.bazel`), Checklist (`.todo`, `.taskpaper`), Data (`.webmanifest`)
 
 
 

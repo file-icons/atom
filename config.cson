@@ -1034,7 +1034,6 @@ fileIcons:
 			[".opts", "medium-green"]
 			[".terminal", "dark-blue"]
 			[/^ld\.script$/i, "medium-orange"]
-			[".reek", "medium-red"]
 			[/^\.?XCompose$/, "medium-cyan", "xcompose"]
 			[/^buildozer\.spec$/i, "dark-blue", priority: 2]
 			[/config|settings|option|pref/i, null, priority: 0]
@@ -1125,6 +1124,14 @@ fileIcons:
 		icon: "curl"
 		match: /^\.curlrc$/i
 		colour: "dark-blue"
+
+	CWL:
+		icon: "cwl"
+		match: ".cwl"
+		colour: "dark-red"
+		alias: "Common Workflow Language"
+		interpreter: "cwl-runner"
+		scope: "cwl"
 
 	Cython:
 		icon: "cython"
@@ -2815,6 +2822,7 @@ fileIcons:
 			[".cginc", "dark-cyan"]
 			[".stl", "dark-green"]
 			[".u3d", "medium-orange"]
+			[/\.(rviz|vcg)$/i, "dark-blue", "rviz"]
 		]
 
 	Modelica:
@@ -3632,6 +3640,11 @@ fileIcons:
 			[".rpm", "medium-red"]
 			[".spec", "dark-red"]
 		]
+
+	Reek:
+		icon: "reek"
+		match: ".reek"
+		colour: "medium-red"
 
 	RegExp:
 		icon: "regex"
@@ -4663,16 +4676,21 @@ fileIcons:
 
 	YAML:
 		icon: "yaml"
-		match: [
-			[/\.ya?ml$/i, "medium-red", "yaml"]
-			[".rviz", "dark-blue"]
-		]
+		match: /\.ya?ml$/i
+		colour: "medium-red"
 
 	YANG:
 		icon: "yang"
 		scope: "yang"
 		match: ".yang"
 		colour: "medium-yellow"
+
+	YARA:
+		icon: "yara"
+		match: /\.yara?$/i
+		colour: "medium-red"
+		scope: /\.yara$/
+		interpreter: "yara"
 
 	Yarn:
 		icon: "yarn"
