@@ -12,6 +12,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** Browsersync (`bs-config.js`, `browser-sync.js`), Caffe (`.caffemodel`, `.solverstate`), CWL (`.cwl`), Imba (`.imba`), Prettier (`.prettierrc.{js,json,yaml,yml}`), Reek (`.reek`), YAML (`.yml`, `.yaml`), YARA (`.yar`, `.yara`)
 - **Support:** 3D Asset (`.rviz`, `.vcg`), Bazel (`BUILD.bazel`), Checklist (`.todo`, `.taskpaper`), Dashboard (`.cloc`), Data (`.webmanifest`), Doxygen (`.Doxygen`)
 
+### Fixed
+- [[`#657`][]]: Strange clipping of circular icons on High Sierra
+
+[`#657`]: https://github.com/file-icons/atom/issues/657
+
 
 
 [v2.1.13] - 2017-10-11
