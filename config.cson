@@ -359,7 +359,7 @@ fileIcons:
 	Appveyor:
 		icon: "appveyor"
 		priority: 2
-		match: /^appveyor\.yml$/i
+		match: /^\.?appveyor\.yml$/i
 		colour: "medium-blue"
 
 	Arc:
