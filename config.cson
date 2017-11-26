@@ -3710,6 +3710,12 @@ fileIcons:
 		match: ".robot"
 		colour: "medium-purple"
 
+	Robots:
+		icon: "robots"
+		match: /^robots\.txt$/i
+		colour: "dark-cyan"
+		priority: 2
+
 	Rollup:
 		icon: "rollup"
 		priority: 2

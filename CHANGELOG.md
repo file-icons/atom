@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.14...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **New icons:** Robots (`robots.txt`)
+- **Support:** AppVeyor (`.appveyor.yml`)
+
+
+
 [v2.1.14] - 2017-11-20
 ----------------------
 ### Added
