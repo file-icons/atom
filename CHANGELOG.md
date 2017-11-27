@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Robots (`robots.txt`)
-- **Support:** AppVeyor (`.appveyor.yml`)
+- **Support:** AppVeyor (`.appveyor.yml`), Bundler (`.gemfile`), Data (`.hson`)
 
 
 
