@@ -19,7 +19,7 @@
 		"print": "*"
 	},
 	"devDependencies": {
-		"atom-mocha": ">=2.0.1",
+		"atom-mocha": ">=2.0.3",
 		"get-options": "*",
 		"coffee-script": "*",
 		"rimraf": "*",
