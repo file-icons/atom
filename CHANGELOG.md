@@ -3,14 +3,20 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.14...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.15...HEAD
 
 
-[Unpublished]
+[v2.1.15] - 2017-12-15
 ----------------------
 ### Added
 - **New icons:** Robots (`robots.txt`)
 - **Support:** AppVeyor (`.appveyor.yml`), Bundler (`.gemfile`), Data (`.hson`)
+
+### Fixed
+- [[`#685`][]]: Error thrown when displaying MRU list with a blank tab open
+
+[v2.1.15]: https://github.com/file-icons/atom/releases/tag/v2.1.15
+[`#685`]: https://github.com/file-icons/atom/issues/685
 
 
 
