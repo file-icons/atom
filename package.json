@@ -14,7 +14,7 @@
 	"atomTestRunner": "atom-mocha",
 	"dependencies": {
 		"atom-fs": "v0.1.4",
-		"alhadis.utils": "v0.1.2",
+		"alhadis.utils": "v0.1.3",
 		"micromatch": "*",
 		"print": "*"
 	},
