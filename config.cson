@@ -501,7 +501,7 @@ fileIcons:
 	Babel:
 		icon: "babel"
 		match: [
-			[/\.(babelrc|languagebabel|babel)$/i, "medium-yellow"]
+			[/\.(babelrc|babelrc\.js|languagebabel|babel)$/i, "medium-yellow"]
 			[".babelignore", "dark-yellow"]
 		]
 
