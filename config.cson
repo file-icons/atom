@@ -2340,6 +2340,7 @@ fileIcons:
 		match: [
 			[/^karma\.conf(ig)?\.js$/i, "medium-cyan"]
 			[/^karma\.conf(ig)?\.coffee$/i, "medium-maroon"]
+			[/^karma\.conf(ig)?\.ts$/i, "medium-cyan"]
 		]
 
 	Keynote:
