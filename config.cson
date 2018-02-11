@@ -4413,6 +4413,12 @@ fileIcons:
 		match: /^typings\.json$/i
 		colour: "medium-maroon"
 
+	TypoScript:
+		icon: "typo3"
+		match: /\.(typoscript|tsconfig)$/i
+		colour: "medium-orange"
+		alias: "typo3"
+
 	UIKit:
 		icon: "uikit"
 		priority: 2
