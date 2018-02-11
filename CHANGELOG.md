@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.16...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support:** Babel (`.babelrc.js`), Karma (`karma.conf.ts`), Ruby (`Appfile`), TypoScript (`.typoscript`, `.tsconfig`)
+
+
 [v2.1.16] - 2018-01-19
 ----------------------
 ### Fixed
