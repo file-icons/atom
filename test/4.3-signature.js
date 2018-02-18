@@ -1,6 +1,7 @@
 "use strict";
 
-const TreeView = require("../lib/consumers/tree-view.js");
+const {assertIconClasses, setup, wait} = require("./utils");
+const TreeView = require("./utils/tree-view.js");
 const Options = require("../lib/options.js");
 
 
@@ -8,17 +9,13 @@ describe("File signatures", function(){
 	this.timeout(0);
 	let files;
 	
-	before("Extracting fixtures", () => {
-		return chain([
-			() => setup("4.3-signature"),
-			() => {
-				files = TreeView.ls();
-				files.should.not.be.empty;
-				files.length.should.be.at.least(15);
-				Options.set("hashbangs", true);
-				Options.set("modelines", true);
-			}
-		]);
+	before("Extracting fixtures", async () => {
+		await setup("4.3-signature");
+		TreeView.refresh();
+		TreeView.entries.should.not.be.empty;
+		TreeView.entries.should.have.lengthOf.at.least(15);
+		Options.set("hashbangs", true);
+		Options.set("modelines", true);
 	});
 	
 	
@@ -37,7 +34,7 @@ describe("File signatures", function(){
 		["postscript", "default-icon"],
 		["tag1",       "default-icon"],
 		["tag2",       "default-icon"],
-		["zipped1",    "default-icon"]
+		["zipped1",    "default-icon"],
 	];
 	const base = "name icon ";
 	const sigIcons = [
@@ -55,31 +52,29 @@ describe("File signatures", function(){
 		["postscript", base + "postscript-icon medium-red"],
 		["tag1",       base + "code-icon medium-blue"],
 		["tag2",       base + "php-icon dark-blue"],
-		["zipped1",    base + "zip-icon"]
+		["zipped1",    base + "zip-icon"],
 	];
 	
 	
 	when("no other pattern matches a file", () => {
-		it("checks its header for a recognised signature", () => {
+		it("checks its header for a recognised signature", async () => {
 			assertIconClasses(files, defaults);
-			return wait(1500).then(() => {
-				assertIconClasses(files, defaults, true);
-				assertIconClasses(files, sigIcons);
-			});
+			await wait(1500);
+			assertIconClasses(files, defaults, true);
+			assertIconClasses(files, sigIcons);
 		});
 		
-		it("caches every signature it recognises", () => {
+		it("caches every signature it recognises", async () => {
 			TreeView.collapse();
 			TreeView.expand();
-			files = TreeView.ls();
-			files.should.not.be.empty;
-			files.length.should.be.at.least(15);
+			TreeView.refresh();
+			TreeView.entries.should.not.be.empty;
+			TreeView.entries.length.should.be.at.least(15);
+			assertIconClasses(TreeView.entries, sigIcons);
+			assertIconClasses(TreeView.entries, defaults, true);
+			await wait(1500);
 			assertIconClasses(files, sigIcons);
 			assertIconClasses(files, defaults, true);
-			return wait(1500).then(() => {
-				assertIconClasses(files, sigIcons);
-				assertIconClasses(files, defaults, true);
-			});
 		});
 	});
 });

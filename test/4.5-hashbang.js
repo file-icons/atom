@@ -1,23 +1,23 @@
 "use strict";
 
-const FuzzyFinder = require("../lib/consumers/fuzzy-finder.js");
-const TreeView    = require("../lib/consumers/tree-view.js");
-const Tabs        = require("../lib/consumers/tabs.js");
+const {assertIconClasses, open, replaceText, setup, wait} = require("./utils");
+const FuzzyFinder = require("./utils/fuzzy-finder.js");
+const TreeView    = require("./utils/tree-view.js");
+const Tabs        = require("./utils/tabs.js");
 const Options     = require("../lib/options.js");
 
 
 describe("Interpreter directives", () => {
 	const base = "name icon ";
-	let files;
 	
-	before(() => chain([
-		() => setup("4.5-hashbang", {
+	before(async () => {
+		await setup("4.5-hashbang", {
 			symlinks: [
 				["astral1", "test-1"],
 				["node",    "test-2"],
 				["perl",    "test-3"],
 				["crystal", "test-4"],
-				["ruby",    "test-5"]
+				["ruby",    "test-5"],
 			],
 			chmod: [
 				["astral1",            0o755],
@@ -40,24 +40,23 @@ describe("Interpreter directives", () => {
 				["shell2",             0o755],
 				["subdir/erlang.tho",  0o755],
 				["subdir/haskell.tho", 0o755],
-				["unknown1",           0o755]
+				["unknown1",           0o755],
 			]
-		}),
-		() => {
-			files = TreeView.ls();
-			files.should.not.be.empty;
-			files.length.should.be.at.least(23);
-			assertIconClasses(files, defaults);
-			return wait(1500);
-		}
-	]));
+		});
+		
+		TreeView.refresh();
+		TreeView.entries.should.not.be.empty;
+		TreeView.entries.should.have.lengthOf.at.least(23);
+		assertIconClasses(TreeView.entries, defaults);
+		await wait(1500);
+	});
 	
 	after(() => {
 		FuzzyFinder.close("file-finder");
 		Tabs.closeAll();
 	});
 	
-	beforeEach(() => files = TreeView.ls());
+	beforeEach(() => TreeView.refresh());
 	
 	const defaults = [
 		["astral1",        "default-icon"],
@@ -106,8 +105,8 @@ describe("Interpreter directives", () => {
 	
 	when("a file contains a hashbang pattern", () => {
 		it("displays the icon if pattern is valid", () => {
-			assertIconClasses(files, shebangedIcons);
-			unlessOnWindows(() => assertIconClasses(files, [
+			assertIconClasses(TreeView.entries, shebangedIcons);
+			unlessOnWindows(() => assertIconClasses(TreeView.entries, [
 				["symlinks/test-1", "icon-file-symlink-file medium-purple"],
 				["symlinks/test-2", "icon-file-symlink-file medium-yellow"],
 				["symlinks/test-3", "icon-file-symlink-file medium-blue"],
@@ -117,7 +116,7 @@ describe("Interpreter directives", () => {
 		});
 		
 		it("does nothing if the pattern is invalid", () => {
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.entries, [
 				["nada",  base + "default-icon"],
 				["nada2", base + "default-icon"],
 				["nada3", base + "default-icon"],
@@ -126,7 +125,7 @@ describe("Interpreter directives", () => {
 		});
 		
 		it("identifies hashbangs in files containing multibyte characters", () => {
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.entries, [
 				["astral1",  base + "emacs-icon    medium-purple"],
 				["astral2",  base + "terminal-icon medium-purple"]
 			]);
@@ -136,12 +135,12 @@ describe("Interpreter directives", () => {
 
 	unlessOnWindows.describe("When the hashbang is valid but matches nothing", () => {
 		it("shows the terminal-icon if the file is executable", () => {
-			files["unknown1"].should.have.classes(base + "terminal-icon medium-purple");
+			TreeView.entries["unknown1"].should.have.classes(base + "terminal-icon medium-purple");
 		});
 		
 		it("uses no icon if the file is not executable", () => {
-			files["unknown2"].should.have.classes(base + "default-icon");
-			files["unknown2"].should.not.have.classes("terminal-icon medium-purple");
+			TreeView.entries["unknown2"].should.have.classes(base + "default-icon");
+			TreeView.entries["unknown2"].should.not.have.classes("terminal-icon medium-purple");
 		});
 	});
 	
@@ -149,121 +148,109 @@ describe("Interpreter directives", () => {
 	when("the file's hashbang is modified", () => {
 		let editor, checkpoint, crystal, crystalLink;
 		
-		const relink = (delay = 100) => wait(delay).then(() => {
-			files       = TreeView.ls();
-			crystal     = files["crystal"];
-			crystalLink = files["symlinks/test-4"];
-			return Promise.resolve(files);
+		const relink = async (delay = 100) => {
+			await wait(delay);
+			TreeView.refresh();
+			crystal     = TreeView.entries["crystal"];
+			crystalLink = TreeView.entries["symlinks/test-4"];
+		};
+		
+		beforeEach(async () => {
+			editor = await open("crystal");
+			checkpoint  = editor.createCheckpoint();
+			await relink(10);
+			crystal.should.have.classes("crystal-icon medium-cyan");
+			crystalLink.should.have.classes("medium-cyan");
 		});
 		
-		beforeEach(() => {
-			return open("crystal").then(ed => {
-				editor      = ed;
-				checkpoint  = editor.createCheckpoint();
-				return relink(10)
-					.then(() => crystal.should.have.classes("crystal-icon medium-cyan"))
-					.then(() => unlessOnWindows(() => crystalLink.should.have.classes("medium-cyan")));
-			});
-		});
-		
-		afterEach(() => open("crystal").then(ed => {
+		afterEach(async () => {
+			editor = await open("crystal");
 			if(editor){
 				editor.revertToCheckpoint(checkpoint);
-				(editor.save() || Promise.resolve()).then(() =>
-					atom.commands.dispatch(ed.editorElement, "core:close"));
+				await editor.save();
+				atom.commands.dispatch(editor.editorElement, "core:close");
 			}
-		}));
+		});
 		
 		
 		when("the new hashbang is valid", () => {
-			it("updates its icon", () => {
-				return replaceText(/crystal$/m, "ruby")
-					.then(() => relink())
-					.then(() => crystal.should.have.classes("ruby-icon medium-red"))
-					.then(() => unlessOnWindows(_=> crystalLink.should.have.classes("medium-red")))
-					.then(() => replaceText(/ruby$/m, "mruby"))
-					.then(() => relink())
-					.then(() => crystal.should.have.class("mruby-icon").and.not.have.class("ruby-icon"))
-					.then(() => unlessOnWindows(_=> crystalLink.should.have.classes("medium-red")));
+			it("updates its icon", async () => {
+				await replaceText(/crystal$/m, "ruby");
+				await relink();
+				crystal.should.have.classes("ruby-icon medium-red");
+				crystalLink.should.have.classes("medium-red");
+				await replaceText(/ruby$/m, "mruby");
+				await relink();
+				crystal.should.have.class("mruby-icon").and.not.have.class("ruby-icon");
+				crystalLink.should.have.classes("medium-red");
 			});
 		});
 		
 		
 		when("a valid hashbang is invalidated by an edit", () => {
-			it("removes the icon that was being displayed", () => {
+			it("removes the icon that was being displayed", async () => {
 				crystal.should.have.classes("crystal-icon medium-cyan");
-				return replaceText(/^/m, "A".repeat(20))
-					.then(() => relink(300))
-					.then(() => crystal.should.have.classes("default-icon"))
-					.then(() => replaceText(/^A+/, "#!"))
-					.then(() => relink())
-					.then(() => crystal.should.have.classes("crystal-icon medium-cyan"));
+				await replaceText(/^/m, "A".repeat(20));
+				await relink(300);
+				crystal.should.have.classes("default-icon");
+				await replaceText(/^A+/, "#!");
+				await relink();
+				crystal.should.have.classes("crystal-icon medium-cyan");
 			});
 		});
 	});
 	
 	
 	when("the Fuzzy-Finder lists files which contain hashbangs", () => {
-		it("updates its icons to show the interpreter icons", () => {
-			let items;
-			return FuzzyFinder
-				.open("file-finder")
-				.filter(".tho", "file-finder")
-				.then(() => {
-					items = FuzzyFinder.ls();
-					items["subdir/erlang.tho"]  .should.have.classes("default-icon");
-					items["subdir/haskell.tho"] .should.have.classes("default-icon");
-					return wait(300);
-				}).then(() => {
-					items = FuzzyFinder.ls();
-					items["subdir/erlang.tho"]  .should.not  .have.classes("default-icon");
-					items["subdir/haskell.tho"] .should.not  .have.classes("default-icon");
-					items["subdir/erlang.tho"]  .should      .have.classes("erlang-icon medium-red");
-					items["subdir/haskell.tho"] .should      .have.classes("haskell-icon medium-purple");
-				});
+		it("updates its icons to show the interpreter icons", async () => {
+			await FuzzyFinder.open("file-finder").filter(".tho", "file-finder");
+			FuzzyFinder.refresh();
+			FuzzyFinder.entries["subdir/erlang.tho"]  .should.have.classes("default-icon");
+			FuzzyFinder.entries["subdir/haskell.tho"] .should.have.classes("default-icon");
+			await wait(300);
+			FuzzyFinder.refresh();
+			FuzzyFinder.entries["subdir/erlang.tho"]  .should.not  .have.classes("default-icon");
+			FuzzyFinder.entries["subdir/haskell.tho"] .should.not  .have.classes("default-icon");
+			FuzzyFinder.entries["subdir/erlang.tho"]  .should      .have.classes("erlang-icon medium-red");
+			FuzzyFinder.entries["subdir/haskell.tho"] .should      .have.classes("haskell-icon medium-purple");
 		});
 		
 		it("shares what it finds with the Tree-View", () => {
 			FuzzyFinder.close("file-finder");
 			TreeView.expand("subdir");
-			files = TreeView.ls();
-			files["subdir/erlang.tho"].should.have.classes("erlang-icon medium-red");
-			files["subdir/haskell.tho"].should.have.classes("haskell-icon medium-purple");
+			TreeView.refresh();
+			TreeView.entries["subdir/erlang.tho"].should.have.classes("erlang-icon medium-red");
+			TreeView.entries["subdir/haskell.tho"].should.have.classes("haskell-icon medium-purple");
 		});
 	});
 	
 	
-	when("the strategy is disabled", () => {
-		let items;
-		
-		it("removes every icon that matched a hashbang", () => {
+	when("the strategy is disabled", async () => {
+		it("removes every icon that matched a hashbang", async () => {
 			Options.set("hashbangs", false);
-			assertIconClasses(files, defaults);
+			assertIconClasses(FuzzyFinder.entries, defaults);
 			FuzzyFinder.open("file-finder");
-			return FuzzyFinder.filter(".tho").then(() => {
-				items = FuzzyFinder.ls();
-				items["subdir/erlang.tho"]   .should.have.classes("default-icon");
-				items["subdir/haskell.tho"]  .should.have.classes("default-icon");
-				items["subdir/erlang.tho"]   .should.not.have.classes("erlang-icon medium-red");
-				items["subdir/haskell.tho"]  .should.not.have.classes("haskell-icon medium-purple");
-			});
+			await FuzzyFinder.filter(".tho");
+			FuzzyFinder.refresh();
+			FuzzyFinder.entries["subdir/erlang.tho"]   .should.have.classes("default-icon");
+			FuzzyFinder.entries["subdir/haskell.tho"]  .should.have.classes("default-icon");
+			FuzzyFinder.entries["subdir/erlang.tho"]   .should.not.have.classes("erlang-icon medium-red");
+			FuzzyFinder.entries["subdir/haskell.tho"]  .should.not.have.classes("haskell-icon medium-purple");
 		});
 		
 		when("the strategy is re-enabled", () => {
-			it("shows the icons again", () => {
+			it("shows the icons again", async () => {
 				Options.set("hashbangs", true);
-				return wait(100).then(() => {
-					files = TreeView.ls();
-					assertIconClasses(files, shebangedIcons);
-					FuzzyFinder.open("file-finder");
-					return FuzzyFinder.filter(".tho").then(_=> {
-						items = FuzzyFinder.ls();
-						items["subdir/erlang.tho"]   .should.have.classes("erlang-icon medium-red");
-						items["subdir/haskell.tho"]  .should.have.classes("haskell-icon medium-purple");
-						items["subdir/erlang.tho"]   .should.not.have.classes("default-icon");
-						items["subdir/haskell.tho"]  .should.not.have.classes("default-icon");
-					});
-				});
+				await wait(100);
+				TreeView.refresh();
+				assertIconClasses(FuzzyFinder.entries, shebangedIcons);
+				FuzzyFinder.open("file-finder");
+				await FuzzyFinder.filter(".tho");
+				FuzzyFinder.refresh();
+				FuzzyFinder.entries["subdir/erlang.tho"]   .should.have.classes("erlang-icon medium-red");
+				FuzzyFinder.entries["subdir/haskell.tho"]  .should.have.classes("haskell-icon medium-purple");
+				FuzzyFinder.entries["subdir/erlang.tho"]   .should.not.have.classes("default-icon");
+				FuzzyFinder.entries["subdir/haskell.tho"]  .should.not.have.classes("default-icon");
 			});
 		});
 	});

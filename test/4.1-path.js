@@ -1,26 +1,20 @@
 "use strict";
 
-const TreeView = require("../lib/consumers/tree-view.js");
-const Options  = require("../lib/options.js");
+const {assertIconClasses, setup} = require("./utils");
+const TreeView = require("./utils/tree-view.js");
 
 
 describe("Path", () => {
-	let files, dirs;
-	
-	before("Extracting fixtures", function(){
+	before("Extracting fixtures", async function(){
 		this.timeout(0);
-		return chain([
-			() => setup("4.1-path"),
-			() => {
-				TreeView.expand("frameworks");
-				TreeView.expand("git.git");
-				TreeView.expand("git.git/case");
-				TreeView.expand("git.git/nope.js");
-				files = dirs = TreeView.ls();
-				files.should.not.be.empty;
-				files.length.should.be.at.least(700);
-			}
-		]);
+		await setup("4.1-path");
+		TreeView.expand("frameworks");
+		TreeView.expand("git.git");
+		TreeView.expand("git.git/case");
+		TreeView.expand("git.git/nope.js");
+		TreeView.refresh();
+		TreeView.files.should.not.be.empty;
+		TreeView.files.should.have.lengthOf.at.least(700);
 	});
 	
 	
@@ -28,7 +22,7 @@ describe("Path", () => {
 	
 	when("choosing the first pattern to match", () => {
 		it("starts with rules of higher priority", () => {
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.files, [
 				[".coffee.erb.swp",          base + "binary-icon     dark-green"],
 				[".yo-rc.json",              base + "yeoman-icon     medium-cyan"],
 				["composer.json",            base + "composer-icon   medium-yellow"],
@@ -49,7 +43,7 @@ describe("Path", () => {
 				["yarn.lock",                base + "yarn-icon       medium-blue"]
 			]);
 			
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.files, [
 				[".coffee.erb.swp",          "gear-icon coffee-icon ruby-icon"],
 				[".yo-rc.json",              "database-icon medium-yellow"],
 				["composer.json",            "database-icon"],
@@ -75,7 +69,7 @@ describe("Path", () => {
 
 	when("matching file extensions", () => {
 		it("matches them case-insensitively by default", () => {
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.files, [
 				["git.git/case/ignored.CsS",  base + "css3-icon     medium-blue"],
 				["git.git/case/ignored.hTmL", base + "html5-icon    medium-orange"],
 				["git.git/case/ignored.Js",   base + "js-icon       medium-yellow"],
@@ -86,13 +80,13 @@ describe("Path", () => {
 		});
 		
 		it("respects rules with case-sensitive patterns", () => {
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.files, [
 				["e.E",                       base + "e-icon        medium-green"],
 				["eiffel.e",                  base + "eiffel-icon   medium-cyan"],
 				["git.git/case/obeyed-1.e",   base + "eiffel-icon   medium-cyan"],
 				["git.git/case/obeyed-2.E",   base + "e-icon        medium-green"]
 			]);
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.files, [
 				["e.E",                       "eiffel-icon          medium-cyan"],
 				["eiffel.e",                  "e-icon               medium-green"],
 				["git.git/case/obeyed-1.e",   "e-icon               medium-green"],
@@ -102,7 +96,7 @@ describe("Path", () => {
 		});
 		
 		it("doesn't replace icons of well-known frameworks", () => {
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.files, [
 				["frameworks/angular.js",                base + "angular-icon       medium-red"],
 				["frameworks/appcelerator.js",           base + "appcelerator-icon  medium-red"],
 				["frameworks/backbone.min.js",           base + "backbone-icon      dark-blue"],
@@ -141,20 +135,20 @@ describe("Path", () => {
 		});
 		
 		it("doesn't confuse them with directories ending in file extensions", () => {
-			dirs["git.git/nope.js"].should.have.classes(base + "icon-file-directory");
-			dirs["git.git/nope.js"].should.not.have.class("js-icon");
+			TreeView.directories["git.git/nope.js"].should.have.classes(base + "icon-file-directory");
+			TreeView.directories["git.git/nope.js"].should.not.have.class("js-icon");
 		});
 		
 		it("doesn't match file extensions in the middle of a filename", () => {
-			files["git.git/nope.js/1.html.js.null"].should.have.classes(base + "default-icon");
-			files["git.git/nope.js/1.html.js.null"].should.not.have.class("js-icon");
+			TreeView.files["git.git/nope.js/1.html.js.null"].should.have.classes(base + "default-icon");
+			TreeView.files["git.git/nope.js/1.html.js.null"].should.not.have.class("js-icon");
 		});
 	});
 	
 	
 	when("matching directory names", () => {
 		it("matches them accurately", () => {
-			assertIconClasses(dirs, [
+			assertIconClasses(TreeView.directories, [
 				["colours",           base + "icon-file-directory"],
 				[".bundle",           base + "package-icon"],
 				[".framework",        base + "dylib-icon"],
@@ -168,47 +162,47 @@ describe("Path", () => {
 		});
 		
 		it("doesn't confuse them with matching filenames", () => {
-			files["git.git/nope.js/Dropbox"].should.not.have.classes("dropbox-icon medium-blue");
-			files["git.git/nope.js/Dropbox"].should.have.class("default-icon");
+			TreeView.files["git.git/nope.js/Dropbox"].should.not.have.classes("dropbox-icon medium-blue");
+			TreeView.files["git.git/nope.js/Dropbox"].should.have.class("default-icon");
 		});
 	});
 	
 	
 	when("a rule has `matchPath` enabled", () => {
 		it("tests its pattern against entire system-paths", () => {
-			files["git.git/HEAD"].should.have.classes(base + "database-icon medium-red");
-			files["git.git/HEAD"].should.not.have.class("default-icon");
-			files["git.git/description"].should.have.classes(base + "icon-file-text dark-red");
-			files["git.git/description"].should.not.have.class("default-icon");
+			TreeView.files["git.git/HEAD"].should.have.classes(base + "database-icon medium-red");
+			TreeView.files["git.git/HEAD"].should.not.have.class("default-icon");
+			TreeView.files["git.git/description"].should.have.classes(base + "icon-file-text dark-red");
+			TreeView.files["git.git/description"].should.not.have.class("default-icon");
 		});
 		
 		it("tests paths before testing filenames", () => {
-			files["git.git/config"].should.have.classes(base + "config-icon dark-red");
-			files["git.git/config"].should.not.have.classes("terminal-icon dark-purple");
+			TreeView.files["git.git/config"].should.have.classes(base + "config-icon dark-red");
+			TreeView.files["git.git/config"].should.not.have.classes("terminal-icon dark-purple");
 		});
 	});
 	
 	
 	when("matching a filename with an ambiguous extension", () => {
 		it("tests the pattern against the filtered version", () => {
-			files["suffix.jsx.inc"].should.have.classes(base   + "jsx-icon   medium-blue");
-			files["suffix.js.dist"].should.have.classes(base   + "js-icon    medium-yellow");
-			files["suffix.html.tmpl"].should.have.classes(base + "html5-icon medium-orange");
-			files["suffix.jsx.inc"].should.not.have.classes("php-icon default-icon");
+			TreeView.files["suffix.jsx.inc"].should.have.classes(base   + "jsx-icon   medium-blue");
+			TreeView.files["suffix.js.dist"].should.have.classes(base   + "js-icon    medium-yellow");
+			TreeView.files["suffix.html.tmpl"].should.have.classes(base + "html5-icon medium-orange");
+			TreeView.files["suffix.jsx.inc"].should.not.have.classes("php-icon default-icon");
 		});
 		
 		it("then tests the unfiltered filename if nothing matched", () => {
-			files["suffix.php.tpl"].should.have.classes(base   + "php-icon dark-blue");
-			files["suffix.tpl"].should.have.classes(base       + "smarty-icon medium-yellow");
-			files["suffix.tpl"].should.not.have.classes("php-icon dark-blue");
-			files["suffix.php.tpl"].should.not.have.classes("smarty-icon medium-yellow");
+			TreeView.files["suffix.php.tpl"].should.have.classes(base   + "php-icon dark-blue");
+			TreeView.files["suffix.tpl"].should.have.classes(base       + "smarty-icon medium-yellow");
+			TreeView.files["suffix.tpl"].should.not.have.classes("php-icon dark-blue");
+			TreeView.files["suffix.php.tpl"].should.not.have.classes("smarty-icon medium-yellow");
 		});
 		
 		it('avoids resorting to "guesswork" patterns', () => {
-			files["news.tpl"].should.have.classes(base + "smarty-icon  medium-yellow");
-			files["news"].should.have.classes(base     + "book-icon    dark-blue");
-			files["news"].should.not.have.classes(       "smarty-icon  medium-yellow");
-			files["news.tpl"].should.not.have.classes(   "book-icon    dark-blue");
+			TreeView.files["news.tpl"].should.have.classes(base + "smarty-icon  medium-yellow");
+			TreeView.files["news"].should.have.classes(base     + "book-icon    dark-blue");
+			TreeView.files["news"].should.not.have.classes(       "smarty-icon  medium-yellow");
+			TreeView.files["news.tpl"].should.not.have.classes(   "book-icon    dark-blue");
 		});
 	});
 });

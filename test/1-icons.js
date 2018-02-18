@@ -1,15 +1,7 @@
 "use strict";
 
-const fs           = require("fs");
-const path         = require("path");
-const print        = require("print");
-const CoffeeScript = require("coffee-script");
-
-const Icon         = require("../lib/icons/icon.js");
-const IconCompiler = require("../lib/icons/icon-compiler.js");
-
-
 describe("Icon database", () => {
+	const IconCompiler = require("../lib/icons/icon-compiler.js");
 	
 	describe("Definition", () => {
 		
@@ -74,7 +66,7 @@ describe("Icon database", () => {
 			const icons = IconCompiler.compileList({
 				"abcXYZ": {match: ".a", noFuzz: true, scope: "xyz"}
 			});
-			expect("abc-xyz").to.not.match(icons[0].match)
+			expect("abc-xyz").to.not.match(icons[0].match);
 		});
 		
 		
@@ -146,8 +138,8 @@ describe("Icon database", () => {
 					b: {match: "C:\\foo\\bar.txt", matchPath: true},
 					c: {match: /over\/kill\.ott/, matchPath: true}
 				});
-				expect(icons[0].match).to.eql(/foo[\\\/]bar\.txt$/i);
-				expect(icons[1].match).to.eql(/C:[\\\/]foo[\\\/]bar\.txt$/i);
+				expect(icons[0].match).to.eql(/foo[\\/]bar\.txt$/i);
+				expect(icons[1].match).to.eql(/C:[\\/]foo[\\/]bar\.txt$/i);
 				expect("over\\kill.ott").not.to.match(icons[2].match);
 			});
 			

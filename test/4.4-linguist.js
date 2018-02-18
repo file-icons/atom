@@ -3,25 +3,23 @@
 const {FileSystem}     = require("atom-fs");
 const Options          = require("../lib/options.js");
 const LinguistStrategy = require("../lib/service/strategies/linguist-strategy.js");
-const TreeView         = require("../lib/consumers/tree-view.js");
-const Tabs             = require("../lib/consumers/tabs.js");
+const {assertIconClasses, replaceText, resolvePath, revert, setup} = require("./utils");
+const TreeView         = require("./utils/tree-view.js");
+const Tabs             = require("./utils/tabs.js");
 
 
 describe("Linguist-language attributes", () => {
 	const base = "name icon ";
-	let files;
 	
-	before(() => chain([
-		() => setup("4.4-linguist"),
-		() => {
-			TreeView.visible = true;
-			files = TreeView.ls();
-			files.should.not.be.empty;
-			files.length.should.be.at.least(3);
-		}
-	]));
+	before(async () => {
+		await setup("4.4-linguist");
+		TreeView.visible = true;
+		TreeView.refresh();
+		TreeView.entries.should.not.be.empty;
+		TreeView.entries.should.have.lengthOf.at.least(3);
+	});
 	
-	after(function(...args){
+	after(function(){
 		if(this._runnable.parent.bail){
 			const counter = document.querySelector("#mocha-failures");
 			if(counter && +counter.dataset.value)
@@ -44,17 +42,17 @@ describe("Linguist-language attributes", () => {
 	
 	when("language attributes are present", () => {
 		it("applies them to affected file paths", () => {
-			files["a.feather"].should.have.classes(base + "apache-icon dark-red");
-			files["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
-			files["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
-			files["not-js.es"].should.not.have.class("js-icon medium-yellow");
-			files["not-js.es.swp"].should.not.have.class("erlang-icon medium-red");
+			TreeView.entries["a.feather"].should.have.classes(base + "apache-icon dark-red");
+			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
+			TreeView.entries["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
+			TreeView.entries["not-js.es"].should.not.have.class("js-icon medium-yellow");
+			TreeView.entries["not-js.es.swp"].should.not.have.class("erlang-icon medium-red");
 		});
 		
 		it("resolves paths relative to the file which defines them", () => {
 			TreeView.expand("perl");
-			files = TreeView.ls();
-			assertIconClasses(files, [
+			TreeView.refresh();
+			assertIconClasses(TreeView.entries, [
 				["not-js.es",         base + "erlang-icon medium-red"],
 				["not-js.es.swp",     base + "apl-icon    dark-cyan"],
 				["perl/butterfly.pl", base + "perl6-icon  medium-purple"],
@@ -64,109 +62,90 @@ describe("Linguist-language attributes", () => {
 	});
 	
 	when("language attributes are changed", () =>
-		it("updates affected files", () => chain([
-			() => open(".gitattributes"),
-			() => replaceText(/Erlang/, "Eiffel"),
-			() => {
-				files = TreeView.ls();
-				files["a.feather"].should.have.classes(base + "apache-icon dark-red");
-				files["not-js.es"].should.have.classes(base + "eiffel-icon medium-cyan");
-				files["not-js.es"].should.not.have.classes("js-icon medium-yellow");
-				files["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
-				files["not-js.es"].should.not.have.classes("erlang-icon medium-red");
-			},
+		it("updates affected files", async () => {
+			await open(".gitattributes");
+			await replaceText(/Erlang/, "Eiffel");
 			
-			() => revert(),
-			() => {
-				files = TreeView.ls();
-				files["a.feather"].should.have.classes(base + "apache-icon dark-red");
-				files["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
-				files["not-js.es"].should.not.have.classes("eiffel-icon medium-cyan");
-				files["not-js.es"].should.not.have.classes("js-icon medium-yellow");
-				files["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
-			},
+			TreeView.refresh();
+			TreeView.entries["a.feather"].should.have.classes(base + "apache-icon dark-red");
+			TreeView.entries["not-js.es"].should.have.classes(base + "eiffel-icon medium-cyan");
+			TreeView.entries["not-js.es"].should.not.have.classes("js-icon medium-yellow");
+			TreeView.entries["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
+			TreeView.entries["not-js.es"].should.not.have.classes("erlang-icon medium-red");
 			
-			() => replaceText(/APL/, "IDL"),
-			() => {
-				files = TreeView.ls();
-				files["a.feather"].should.have.classes(base + "apache-icon dark-red");
-				files["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
-				files["not-js.es.swp"].should.have.classes(base + "idl-icon medium-blue");
-				files["not-js.es.swp"].should.not.have.classes("apl-icon dark-cyan");
-			},
+			await revert();
+			TreeView.refresh();
+			TreeView.entries["a.feather"].should.have.classes(base + "apache-icon dark-red");
+			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
+			TreeView.entries["not-js.es"].should.not.have.classes("eiffel-icon medium-cyan");
+			TreeView.entries["not-js.es"].should.not.have.classes("js-icon medium-yellow");
+			TreeView.entries["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
 			
-			() => revert(),
-			() => {
-				files = TreeView.ls();
-				files["a.feather"].should.have.classes(base + "apache-icon dark-red");
-				files["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
-				files["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
-			},
+			await replaceText(/APL/, "IDL");
+			TreeView.refresh();
+			TreeView.entries["a.feather"].should.have.classes(base + "apache-icon dark-red");
+			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
+			TreeView.entries["not-js.es.swp"].should.have.classes(base + "idl-icon medium-blue");
+			TreeView.entries["not-js.es.swp"].should.not.have.classes("apl-icon dark-cyan");
 			
-			() => replaceText(/Erlang|APL/g, "Java"),
-			() => {
-				files = TreeView.ls();
-				files["not-js.es"].should.have.classes(base     + "java-icon medium-purple");
-				files["not-js.es.swp"].should.have.classes(base + "java-icon medium-purple");
-				files["not-js.es"].should.not.have.classes("erlang-icon medium-red");
-				files["not-js.es.swp"].should.not.have.classes("apl-icon dark-cyan");
-			},
+			await revert();
+			TreeView.refresh();
+			TreeView.entries["a.feather"].should.have.classes(base + "apache-icon dark-red");
+			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
+			TreeView.entries["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
 			
-			() => revert(),
-			() => {
-				files = TreeView.ls();
-				files["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
-				files["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
-				Tabs.closeAll();
-			},
+			await replaceText(/Erlang|APL/g, "Java");
+			TreeView.refresh();
+			TreeView.entries["not-js.es"].should.have.classes(base + "java-icon medium-purple");
+			TreeView.entries["not-js.es.swp"].should.have.classes(base + "java-icon medium-purple");
+			TreeView.entries["not-js.es"].should.not.have.classes("erlang-icon medium-red");
+			TreeView.entries["not-js.es.swp"].should.not.have.classes("apl-icon dark-cyan");
 			
-			() => open("perl/.gitattributes"),
-			() => replaceText(/Perl6/, "Prolog"),
-			() => {
-				files = TreeView.ls();
-				files["perl/butterfly.pl"].should.have.classes(base + "prolog-icon medium-blue");
-				files["perl/butterfly.pl"].should.not.have.classes("perl6-icon medium-purple");
-				files["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
-			},
+			await revert();
+			TreeView.refresh();
+			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
+			TreeView.entries["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
+			Tabs.closeAll();
 			
-			() => revert(),
-			() => {
-				files = TreeView.ls();
-				files["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
-				files["perl/butterfly.pl"].should.not.have.classes("prolog-icon medium-blue");
-				files["perl/butterfly.pl"].should.have.classes("perl6-icon medium-purple");
-			},
+			await open("perl/.gitattributes");
+			await replaceText(/Perl6/, "Prolog");
+			TreeView.refresh();
+			TreeView.entries["perl/butterfly.pl"].should.have.classes(base + "prolog-icon medium-blue");
+			TreeView.entries["perl/butterfly.pl"].should.not.have.classes("perl6-icon medium-purple");
+			TreeView.entries["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
 			
-			() => replaceText(/Perl6?/gm, "Prolog"),
-			() => {
-				files = TreeView.ls();
-				files["perl/butterfly.pl"].should.have.classes(base + "prolog-icon medium-blue");
-				files["perl/camel.pl6"].should.have.classes(base + "prolog-icon medium-blue");
-				files["perl/camel.pl6"].should.not.not.have.class("perl-icon");
-				files["perl/butterfly.pl"].should.not.have.classes("perl6-icon medium-purple");
-			},
+			await revert();
+			TreeView.refresh();
+			TreeView.entries["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
+			TreeView.entries["perl/butterfly.pl"].should.not.have.classes("prolog-icon medium-blue");
+			TreeView.entries["perl/butterfly.pl"].should.have.classes("perl6-icon medium-purple");
 			
-			() => revert(),
-			() => {
-				files = TreeView.ls();
-				files["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
-				files["perl/butterfly.pl"].should.have.classes(base + "perl6-icon medium-purple");
-				files["perl/camel.pl6"].should.not.not.have.class("prolog-icon");
-				files["perl/butterfly.pl"].should.not.not.have.classes("prolog-icon medium-blue");
-			}
-		])));
+			await replaceText(/Perl6?/gm, "Prolog");
+			TreeView.refresh();
+			TreeView.entries["perl/butterfly.pl"].should.have.classes(base + "prolog-icon medium-blue");
+			TreeView.entries["perl/camel.pl6"].should.have.classes(base + "prolog-icon medium-blue");
+			TreeView.entries["perl/camel.pl6"].should.not.not.have.class("perl-icon");
+			TreeView.entries["perl/butterfly.pl"].should.not.have.classes("perl6-icon medium-purple");
+			
+			await revert();
+			TreeView.refresh();
+			TreeView.entries["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
+			TreeView.entries["perl/butterfly.pl"].should.have.classes(base + "perl6-icon medium-purple");
+			TreeView.entries["perl/camel.pl6"].should.not.not.have.class("prolog-icon");
+			TreeView.entries["perl/butterfly.pl"].should.not.not.have.classes("prolog-icon medium-blue");
+		}));
 	
 	
 	when("the strategy is disabled", () => {
 		it("restores affected icons", () => {
 			Options.set("linguist", false);
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.entries, [
 				["not-js.es",         base + "js-icon     medium-yellow"],
 				["not-js.es.swp",     base + "binary-icon dark-green"],
 				["perl/butterfly.pl", base + "perl-icon   medium-blue"],
 				["perl/camel.pl6",    base + "perl6-icon  medium-purple"]
 			]);
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.entries, [
 				["not-js.es",         "erlang-icon medium-red"],
 				["not-js.es.swp",     "apl-icon    dark-cyan"],
 				["perl/butterfly.pl", "perl6-icon  medium-purple"],
@@ -176,13 +155,13 @@ describe("Linguist-language attributes", () => {
 		
 		it("applies them again if the strategy is re-enabled", () => {
 			Options.set("linguist", true);
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.entries, [
 				["not-js.es",         "js-icon     medium-yellow"],
 				["not-js.es.swp",     "binary-icon dark-green"],
 				["perl/butterfly.pl", "perl-icon   medium-blue"],
 				["perl/camel.pl6",    "perl6-icon  medium-purple"]
 			], true);
-			assertIconClasses(files, [
+			assertIconClasses(TreeView.entries, [
 				["not-js.es",         base + "erlang-icon medium-red"],
 				["not-js.es.swp",     base + "apl-icon    dark-cyan"],
 				["perl/butterfly.pl", base + "perl6-icon  medium-purple"],

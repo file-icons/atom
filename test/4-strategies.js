@@ -1,20 +1,18 @@
 "use strict";
 
 describe("Match strategies", function(){
-	require("./spec-utils.js");
+	const {setTheme} = require("./utils");
 	this.timeout(30000);
 	
-	before("Activate packages", () => {
-		return chain([
-			() => atom.themes.activateThemes(),
-			() => atom.packages.activatePackage("file-icons"),
-			() => atom.packages.activatePackage("tree-view"),
-			() => atom.packages.activatePackage("tabs"),
-			() => atom.packages.activatePackage("fuzzy-finder"),
-			() => atom.packages.activatePackage("archive-view"),
-			() => atom.packages.activatePackage("status-bar"),
-			() => setTheme("atom-dark")
-		]);
+	before("Activate packages", async () => {
+		await atom.themes.activateThemes();
+		await atom.packages.activatePackage("file-icons");
+		await atom.packages.activatePackage("tree-view");
+		await atom.packages.activatePackage("tabs");
+		await atom.packages.activatePackage("fuzzy-finder");
+		await atom.packages.activatePackage("archive-view");
+		await atom.packages.activatePackage("status-bar");
+		await setTheme("atom-dark");
 	});
 	
 	require("./4.1-path.js");

@@ -1,0 +1,64 @@
+#!/bin/sh
+
+# Parse switches
+fix=
+while [ "$1" ]; do
+	case $1 in
+		-h|--help|-\?)
+			printf 'Usage: %s [-h|--help] [-f|--fix]\n' "$0"
+			exit 0 ;;
+		-f|--fix)
+			fix=1 ;;
+		--)
+			shift
+			break ;;
+		-*)
+			printf '%s: unknown option: %s\n' "${0##*/}" "$1"
+			exit 1 ;;
+		*) break ;;
+	esac
+	shift
+done
+
+# Check that dependencies are available
+for dep in eslint node perl; do
+	command -v $dep 2>&1 >/dev/null || {
+		>&2 printf '%s: `%s` needed but not found in $PATH.\n' "${0##*/}" $dep
+		exit 1
+	}
+done
+unset dep
+
+# Print an activity message to standard output
+notice(){
+	BOLD=; RESET=;
+	[ -t 1 ] && command -v tput 2>&1 >/dev/null && {
+		BOLD=`tput bold`
+		RESET=`tput sgr0`
+	}
+	printf '%s==> %s%s\n' "$BOLD_ON" "$@" "$BOLD_OFF"
+}
+
+# Start doing what this script was written to do
+cd "${0%/*}/.."
+notice 'Linting JavaScript'
+{ find test -name '*.js' | xargs -n1 node -c; } &&
+eslint --config .eslintrc.json lib test || exit $?
+
+# Lint CSON the hard way
+notice 'Linting CSON'
+perl -E '
+	while(<>){
+		chomp;
+		unless (2 .. /^###$/m) {
+			$@ .= "\tline $.:\tSpace touching tab\n"    if m/\t /;
+			$@ .= "\tline $.:\tReal tabs only please\n" if m/^ +/;
+			$@ .= "\tline $.:\tTrailing whitespace\n"   if m/\h$/;
+		}
+	}
+	print "Errors in $ARGV:\n$@" and exit 1 if $@;
+' config.cson || exit $?
+
+# Yeah, all good
+notice 'No errors found'
+exit 0

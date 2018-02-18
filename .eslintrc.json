@@ -1,0 +1,51 @@
+{
+	"extends": "eslint:recommended",
+	"env": {
+		"atomtest": true,
+		"browser": true,
+		"es6": true,
+		"mocha": true,
+		"node": true
+	},
+	"globals": {
+		"atom": true,
+		"attachToDOM": true,
+		"Chai": true,
+		"expect": true,
+		"when": true,
+		"unlessOnWindows": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2017,
+		"sourceType": "module"
+	},
+	"rules": {
+		"indent": [
+			"warn",
+			"tab",
+			{
+				"ignoreComments": true,
+				"SwitchCase": 1
+			}
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"no-console": 0,
+		"no-empty": 0,
+		"quotes": [
+			"error",
+			"double",
+			{"avoidEscape": true}
+		],
+		"semi": [
+			"warn",
+			"always"
+		],
+		"spaced-comment": [
+			"error",
+			"always"
+		]
+	}
+}
