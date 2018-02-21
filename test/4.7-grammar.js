@@ -1,6 +1,6 @@
 "use strict";
 
-const {setup}     = require("./utils");
+const {condition, open, setup} = require("./utils");
 const TreeView    = require("./utils/tree-view.js");
 const Tabs        = require("./utils/tabs.js");
 const Options     = require("../lib/options.js");
@@ -31,9 +31,11 @@ describe("User-assigned grammars", () => {
 		it("updates the icon to match", async () => {
 			TreeView.entries["markup.html"].should.have.classes(base + "html5-icon medium-orange");
 			TreeView.entries["markup.md"].should.have.classes(base + "markdown-icon medium-blue");
+			
 			await setLanguage("source.coffee");
 			TreeView.entries["markup.html"].should.not.have.classes("html5-icon medium-orange");
 			TreeView.entries["markup.html"].should.have.classes(base + "coffee-icon medium-maroon");
+			
 			await open("markup.md");
 			await setLanguage("source.python");
 			TreeView.entries["markup.md"].should.have.classes(base + "python-icon dark-blue");
@@ -70,34 +72,21 @@ describe("User-assigned grammars", () => {
 	});
 	
 	
-	function setLanguage(scope){
-		const editorView = atom.views.getView(atom.workspace.getActiveTextEditor());
-		atom.commands.dispatch(editorView, "grammar-selector:show");
-		
-		return new Promise((resolve, reject) => {
-			const intervalID = setInterval(() => {
-				try{
-					const panels = atom.workspace.getModalPanels();
-					if(!panels.length) return;
-					const selector = panels.find(panel => {
-						const element = panel.item.element || panel.item;
-						return element.classList.contains("grammar-selector");
-					});
-					if(selector){
-						clearInterval(intervalID);
-						resolve(selector.item);
-					}
-				} catch(error){
-					clearInterval(intervalID);
-					reject(error);
-				}
-			}, 100);
-		}).then(grammarList => {
-			const grammar = atom.grammars.grammarsByScopeName[scope];
-			grammarList.props
-				? grammarList.props.didConfirmSelection(grammar)
-				: grammarList.confirmed(grammar);
-			return Promise.resolve(grammar);
+	async function openGrammarSelector(){
+		const editor = atom.workspace.getActiveTextEditor();
+		atom.commands.dispatch(editor.getElement(), "grammar-selector:show");
+		return condition(() => {
+			const selector = atom.workspace.getModalPanels().find(panel => {
+				const {element} = panel.item || {};
+				return element && element.matches(".grammar-selector");
+			});
+			return selector && selector.item;
 		});
+	}
+	
+	async function setLanguage(scope){
+		const grammar = atom.grammars.grammarForScopeName(scope);
+		(await openGrammarSelector()).props.didConfirmSelection(grammar);
+		return grammar;
 	}
 });

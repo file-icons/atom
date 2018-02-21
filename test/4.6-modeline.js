@@ -1,6 +1,6 @@
 "use strict";
 
-const {assertIconClasses, replaceText, revert, setup, wait} = require("./utils");
+const {assertIconClasses, open, replaceText, revert, setup, wait} = require("./utils");
 const FuzzyFinder = require("./utils/fuzzy-finder.js");
 const TreeView    = require("./utils/tree-view.js");
 const Tabs        = require("./utils/tabs.js");
@@ -27,7 +27,7 @@ describe("Modelines", () => {
 	});
 	
 	after(() => {
-		FuzzyFinder.close("file-finder");
+		FuzzyFinder.close();
 		Tabs.closeAll();
 	});
 	
@@ -61,7 +61,7 @@ describe("Modelines", () => {
 	
 	
 	when("encountering files containing modelines", () => {
-		const fn = () => {
+		const fn = async () => {
 			for(let i = 0; i < 10; ++i){
 				const cpp  = `mode-c++${ i || ""}`;
 				const ruby = `mode-ruby${i || ""}`;
@@ -72,13 +72,15 @@ describe("Modelines", () => {
 			TreeView.entries["mode-java"].should.have.classes(base      + "java-icon   medium-purple");
 			TreeView.entries["mode-coffee.pl"].should.have.classes(base + "coffee-icon medium-maroon");
 			TreeView.entries["mode-php.inc"].should.have.classes(base   + "php-icon    dark-blue");
-			unlessOnWindows(() => assertIconClasses(TreeView.entries, [
+			TreeView.expand("symlinks");
+			await wait(500);
+			assertIconClasses(TreeView.entries, [
 				["symlinks/test-1", "icon-file-symlink-file medium-maroon"],
 				["symlinks/test-2", "icon-file-symlink-file dark-blue"],
 				["symlinks/test-3", "icon-file-symlink-file medium-red"],
 				["symlinks/test-4", "icon-file-symlink-file medium-blue"],
 				["symlinks/test-5", "icon-file-symlink-file medium-yellow"]
-			]));
+			]);
 		};
 		
 		it("displays icons of modelines which match languages", () => fn());
@@ -93,7 +95,7 @@ describe("Modelines", () => {
 			TreeView.collapse();
 			TreeView.expand();
 			TreeView.refresh();
-			fn();
+			return fn();
 		});
 	});
 	
@@ -113,15 +115,12 @@ describe("Modelines", () => {
 	
 	when("the Fuzzy-Finder lists results which contain modelines", () => {
 		it("updates icons as files are scanned", async () => {
-			FuzzyFinder.open("file-finder");
-			await FuzzyFinder.filter("abc12", "file-finder");
-			FuzzyFinder.refresh();
+			await FuzzyFinder.filter("abc12");
 			FuzzyFinder.entries["subdir/abc123"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc124"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc125"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc126"].should.have.classes("default-icon");
 			await wait(300);
-			FuzzyFinder.refresh();
 			FuzzyFinder.entries["subdir/abc123"].should.have.classes("emacs-icon medium-purple");
 			FuzzyFinder.entries["subdir/abc124"].should.have.classes("apl-icon dark-cyan");
 			FuzzyFinder.entries["subdir/abc125"].should.have.classes("manpage-icon dark-green");
@@ -139,14 +138,13 @@ describe("Modelines", () => {
 			Options.set("modelines", false);
 			assertIconClasses(TreeView.entries, defaults);
 			for(let i = 0; i < 10; ++i){
-				FuzzyFinder.entries[`mode-c++${ i || ""}`].should.not.have.classes("cpp-icon medium-blue");
-				FuzzyFinder.entries[`mode-ruby${i || ""}`].should.not.have.classes("ruby-icon medium-red");
+				TreeView.entries[`mode-c++${ i || ""}`].should.not.have.classes("cpp-icon medium-blue");
+				TreeView.entries[`mode-ruby${i || ""}`].should.not.have.classes("ruby-icon medium-red");
 			}
-			FuzzyFinder.entries["mode-js"].should.not.have.classes("js-icon medium-yellow");
-			FuzzyFinder.entries["mode-java"].should.not.have.classes("java-icon medium-purple");
-			FuzzyFinder.entries["mode-coffee.pl"].should.not.have.classes("coffee-icon medium-maroon");
-			FuzzyFinder.entries["mode-php.inc"].should.not.have.classes("php-icon dark-blue");
-			FuzzyFinder.refresh();
+			TreeView.entries["mode-js"].should.not.have.classes("js-icon medium-yellow");
+			TreeView.entries["mode-java"].should.not.have.classes("java-icon medium-purple");
+			TreeView.entries["mode-coffee.pl"].should.not.have.classes("coffee-icon medium-maroon");
+			TreeView.entries["mode-php.inc"].should.not.have.classes("php-icon dark-blue");
 			FuzzyFinder.entries["subdir/abc123"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc124"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc125"].should.have.classes("default-icon");
@@ -161,14 +159,13 @@ describe("Modelines", () => {
 			it("shows the icons again", () => {
 				Options.set("modelines", true);
 				for(let i = 0; i < 10; ++i){
-					FuzzyFinder.entries[`mode-c++${ i || ""}`].should.have.classes(base + "cpp-icon  medium-blue");
-					FuzzyFinder.entries[`mode-ruby${i || ""}`].should.have.classes(base + "ruby-icon medium-red");
+					TreeView.entries[`mode-c++${ i || ""}`].should.have.classes(base + "cpp-icon  medium-blue");
+					TreeView.entries[`mode-ruby${i || ""}`].should.have.classes(base + "ruby-icon medium-red");
 				}
-				FuzzyFinder.entries["mode-js"].should.have.classes(base        + "js-icon medium-yellow");
-				FuzzyFinder.entries["mode-java"].should.have.classes(base      + "java-icon medium-purple");
-				FuzzyFinder.entries["mode-coffee.pl"].should.have.classes(base + "coffee-icon medium-maroon");
-				FuzzyFinder.entries["mode-php.inc"].should.have.classes(base   + "php-icon dark-blue");
-				FuzzyFinder.refresh();
+				TreeView.entries["mode-js"].should.have.classes(base        + "js-icon medium-yellow");
+				TreeView.entries["mode-java"].should.have.classes(base      + "java-icon medium-purple");
+				TreeView.entries["mode-coffee.pl"].should.have.classes(base + "coffee-icon medium-maroon");
+				TreeView.entries["mode-php.inc"].should.have.classes(base   + "php-icon dark-blue");
 				FuzzyFinder.entries["subdir/abc123"].should.have.classes("emacs-icon medium-purple");
 				FuzzyFinder.entries["subdir/abc124"].should.have.classes("apl-icon dark-cyan");
 				FuzzyFinder.entries["subdir/abc125"].should.have.classes("manpage-icon dark-green");

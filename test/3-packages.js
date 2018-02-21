@@ -2,7 +2,7 @@
 
 describe("Atom packages", function(){
 	const {setTheme, setup} = require("./utils");
-	this.timeout(0);
+	this.timeout(30000);
 	
 	before("Activate packages", async () => {
 		atom.workspace.observeTextEditors(editor =>
@@ -25,8 +25,8 @@ describe("Atom packages", function(){
 		await setTheme("atom-dark");
 	});
 	
-	// require("./3.1-tree-view.js");
-	// require("./3.2-tabs.js");
+	require("./3.1-tree-view.js");
+	require("./3.2-tabs.js");
 	require("./3.3-fuzzy-finder.js");
 	require("./3.4-find-and-replace.js");
 	require("./3.5-archive-view.js");

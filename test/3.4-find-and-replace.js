@@ -6,21 +6,20 @@ const Options         = require("../lib/options.js");
 
 
 describe("Find-and-replace", () => {
-	let workspace;
-	
-	before("Activate package", async () => {
+	beforeEach(async () =>
+		await FindAndReplace.activation);
+
+	before(() => {
 		resetOptions();
-		await atom.packages.activatePackage("find-and-replace");
-		workspace = atom.views.getView(atom.workspace);
-		atom.commands.dispatch(workspace, "project-find:show");
-		workspace.style.height = "5000px";
+		FindAndReplace.activate();
 	});
 	
 	after(() => {
 		Options.set("coloured", true);
 		Options.set("colourChangedOnly", false);
+		const workspace = atom.views.getView(atom.workspace);
 		workspace.style.height = null;
-		const {projectFindPanel} = FindAndReplace.getMain();
+		const {projectFindPanel} = FindAndReplace.main;
 		if(projectFindPanel.visible)
 			atom.commands.dispatch(workspace, "project-find:toggle");
 	});

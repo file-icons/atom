@@ -148,7 +148,7 @@ describe("User-defined filetypes", () => {
 			]);
 		});
 		
-		unlessOnWindows.it("updates the colour of symlinks targeting affected files", async () => {
+		it("updates the colour of symlinks targeting affected files", async () => {
 			TreeView.expand("symlinks");
 			await wait(500);
 			TreeView.refresh();

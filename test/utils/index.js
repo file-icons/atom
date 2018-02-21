@@ -39,6 +39,7 @@ if(atom.inSpecMode()){
 
 module.exports = {
 	assertIconClasses,
+	condition,
 	getTempDir,
 	move,
 	open,
@@ -80,6 +81,35 @@ function assertIconClasses(nodes, assertions, negate = false){
 		negate
 			? expect(nodes[name], `Node ${name}`).not.to.have.class(classes)
 			: expect(nodes[name], `Node ${name}`).to.have.class(classes);
+	}
+}
+
+
+/**
+ * Return a {@link Promise} that resolves once a condition is met.
+ *
+ * @async
+ * @example await condition(() => window.height < 80)
+ * @param {Function} predicate - A callback that returns `true` to indicate successful criteria.
+ * @param {Object} [options={}] - Optional settings, described below.
+ * @param {Number} [options.pollRate=100] - How many milliseconds to wait before checking again.
+ * @param {Number} [timeoutDuration=3000] - Maximum amount of time to wait before rejecting.
+ * @param {String} [timeoutMessage="Timed out waiting for condition"] - Text used by timeout errors
+ * @return {Promise}
+ */
+async function condition(predicate, options = {}){
+	const start = Date.now();
+	const {
+		pollRate = 100,
+		timeoutDuration = 3000,
+		timeoutMessage = "Timed out waiting for condition",
+	} = options;
+	for(;;){
+		const result = await predicate();
+		if(result) return result;
+		if(Date.now() - start > timeoutDuration)
+			throw new Error(timeoutMessage);
+		await new Promise($ => setTimeout($, pollRate));
 	}
 }
 
@@ -169,8 +199,10 @@ async function replaceText(find, replace){
 
 /** Restore each package setting to its default value. */
 function resetOptions(){
-	if(!Options.configNames)
+	if(!atom.packages.isPackageActive("file-icons"))
 		return; // Not initialised
+	if(!Options.configNames)
+		Options.init();
 	const schema = atom.config.getSchema("file-icons").properties;
 	Options.set("coloured",          schema.coloured.default);
 	Options.set("colourChangedOnly", schema.onChanges.default);

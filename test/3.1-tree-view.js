@@ -231,7 +231,7 @@ describe("Tree-view", () => {
 	});
 
 
-	unlessOnWindows.describe("When a symbolic link is displayed", () => {
+	when("a symbolic link is displayed", () => {
 		before(() => {
 			Options.set("defaultIconClass", "default-icon");
 			TreeView.expand("symlinks");

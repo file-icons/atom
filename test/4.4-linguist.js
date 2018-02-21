@@ -3,7 +3,7 @@
 const {FileSystem}     = require("atom-fs");
 const Options          = require("../lib/options.js");
 const LinguistStrategy = require("../lib/service/strategies/linguist-strategy.js");
-const {assertIconClasses, replaceText, resolvePath, revert, setup} = require("./utils");
+const {assertIconClasses, open, replaceText, resolvePath, revert, setup, wait} = require("./utils");
 const TreeView         = require("./utils/tree-view.js");
 const Tabs             = require("./utils/tabs.js");
 
@@ -65,6 +65,7 @@ describe("Linguist-language attributes", () => {
 		it("updates affected files", async () => {
 			await open(".gitattributes");
 			await replaceText(/Erlang/, "Eiffel");
+			await wait(150);
 			
 			TreeView.refresh();
 			TreeView.entries["a.feather"].should.have.classes(base + "apache-icon dark-red");
@@ -74,6 +75,7 @@ describe("Linguist-language attributes", () => {
 			TreeView.entries["not-js.es"].should.not.have.classes("erlang-icon medium-red");
 			
 			await revert();
+			await wait(150);
 			TreeView.refresh();
 			TreeView.entries["a.feather"].should.have.classes(base + "apache-icon dark-red");
 			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
@@ -82,6 +84,7 @@ describe("Linguist-language attributes", () => {
 			TreeView.entries["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
 			
 			await replaceText(/APL/, "IDL");
+			await wait(150);
 			TreeView.refresh();
 			TreeView.entries["a.feather"].should.have.classes(base + "apache-icon dark-red");
 			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
@@ -89,12 +92,14 @@ describe("Linguist-language attributes", () => {
 			TreeView.entries["not-js.es.swp"].should.not.have.classes("apl-icon dark-cyan");
 			
 			await revert();
+			await wait(150);
 			TreeView.refresh();
 			TreeView.entries["a.feather"].should.have.classes(base + "apache-icon dark-red");
 			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
 			TreeView.entries["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
 			
 			await replaceText(/Erlang|APL/g, "Java");
+			await wait(150);
 			TreeView.refresh();
 			TreeView.entries["not-js.es"].should.have.classes(base + "java-icon medium-purple");
 			TreeView.entries["not-js.es.swp"].should.have.classes(base + "java-icon medium-purple");
@@ -102,6 +107,7 @@ describe("Linguist-language attributes", () => {
 			TreeView.entries["not-js.es.swp"].should.not.have.classes("apl-icon dark-cyan");
 			
 			await revert();
+			await wait(150);
 			TreeView.refresh();
 			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
 			TreeView.entries["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
@@ -109,18 +115,21 @@ describe("Linguist-language attributes", () => {
 			
 			await open("perl/.gitattributes");
 			await replaceText(/Perl6/, "Prolog");
+			await wait(150);
 			TreeView.refresh();
 			TreeView.entries["perl/butterfly.pl"].should.have.classes(base + "prolog-icon medium-blue");
 			TreeView.entries["perl/butterfly.pl"].should.not.have.classes("perl6-icon medium-purple");
 			TreeView.entries["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
 			
 			await revert();
+			await wait(150);
 			TreeView.refresh();
 			TreeView.entries["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
 			TreeView.entries["perl/butterfly.pl"].should.not.have.classes("prolog-icon medium-blue");
 			TreeView.entries["perl/butterfly.pl"].should.have.classes("perl6-icon medium-purple");
 			
 			await replaceText(/Perl6?/gm, "Prolog");
+			await wait(150);
 			TreeView.refresh();
 			TreeView.entries["perl/butterfly.pl"].should.have.classes(base + "prolog-icon medium-blue");
 			TreeView.entries["perl/camel.pl6"].should.have.classes(base + "prolog-icon medium-blue");
@@ -128,6 +137,7 @@ describe("Linguist-language attributes", () => {
 			TreeView.entries["perl/butterfly.pl"].should.not.have.classes("perl6-icon medium-purple");
 			
 			await revert();
+			await wait(150);
 			TreeView.refresh();
 			TreeView.entries["perl/camel.pl6"].should.have.classes(base + "perl-icon medium-blue");
 			TreeView.entries["perl/butterfly.pl"].should.have.classes(base + "perl6-icon medium-purple");

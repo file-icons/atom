@@ -7,12 +7,10 @@ const Options = require("../lib/options.js");
 
 describe("File signatures", function(){
 	this.timeout(0);
-	let files;
 	
 	before("Extracting fixtures", async () => {
 		await setup("4.3-signature");
 		TreeView.refresh();
-		TreeView.entries.should.not.be.empty;
 		TreeView.entries.should.have.lengthOf.at.least(15);
 		Options.set("hashbangs", true);
 		Options.set("modelines", true);
@@ -58,23 +56,22 @@ describe("File signatures", function(){
 	
 	when("no other pattern matches a file", () => {
 		it("checks its header for a recognised signature", async () => {
-			assertIconClasses(files, defaults);
+			assertIconClasses(TreeView.entries, defaults);
 			await wait(1500);
-			assertIconClasses(files, defaults, true);
-			assertIconClasses(files, sigIcons);
+			assertIconClasses(TreeView.entries, defaults, true);
+			assertIconClasses(TreeView.entries, sigIcons);
 		});
 		
 		it("caches every signature it recognises", async () => {
 			TreeView.collapse();
 			TreeView.expand();
 			TreeView.refresh();
-			TreeView.entries.should.not.be.empty;
 			TreeView.entries.length.should.be.at.least(15);
 			assertIconClasses(TreeView.entries, sigIcons);
 			assertIconClasses(TreeView.entries, defaults, true);
 			await wait(1500);
-			assertIconClasses(files, sigIcons);
-			assertIconClasses(files, defaults, true);
+			assertIconClasses(TreeView.entries, sigIcons);
+			assertIconClasses(TreeView.entries, defaults, true);
 		});
 	});
 });

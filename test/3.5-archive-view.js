@@ -14,7 +14,6 @@ describe("Archive-view", () => {
 		it("shows icons for each of its contents", async () => {
 			await open("zipped-1.zip");
 			await wait(500);
-			ArchiveView.refresh();
 		});
 		
 		when("a file is displayed", () => {

@@ -1,12 +1,11 @@
 "use strict";
 
-const {assertIconClasses, resetOptions, setTheme, wait} = require("./utils");
+const {assertIconClasses, resetOptions, setTheme} = require("./utils");
 const FuzzyFinder = require("./utils/fuzzy-finder.js");
 const Options     = require("../lib/options.js");
 
 describe("Fuzzy-finder", () => {
 	beforeEach(() => resetOptions());
-	after(() => FuzzyFinder.close("project-view"));
 	
 	const iconClasses = [
 		[".default-config", "primary-line file icon config-icon"],
@@ -29,27 +28,46 @@ describe("Fuzzy-finder", () => {
 		["markdown.md",     "medium-blue"]
 	];
 	
+	before("Running sanity checks", async () => {
+		expect(atom.packages.isPackageActive("fuzzy-finder")).to.be.true;
+		const {mainModule} = atom.packages.activePackages["fuzzy-finder"];
+		const projectList = mainModule.createProjectView();
+		
+		expect(projectList).to.exist;
+		projectList.should.have.property("selectListView");
+		projectList.selectListView.should.respondTo("didChangeQuery");
+		expect(projectList.selectListView.refs).to.exist.and.have.property("queryEditor");
+		
+		await FuzzyFinder.open();
+		expect(projectList.panel).to.exist;
+		expect(projectList.panel.isVisible()).to.be.true;
+		await FuzzyFinder.close();
+		expect(projectList.panel).to.exist;
+		expect(projectList.panel.isVisible()).to.be.false;
+		await FuzzyFinder.open();
+		
+		const inputField = projectList.selectListView.refs.queryEditor;
+		inputField.setText("e");
+		inputField.getText().should.equal("e");
+		inputField.setText("");
+		inputField.getText().should.equal("");
+		
+		await FuzzyFinder.filter("e");
+		inputField.getText().should.equal("e");
+		
+		const filteredEntries = FuzzyFinder.entries;
+		filteredEntries.should.have.lengthOf.at.least(1);
+		await FuzzyFinder.filter("");
+		FuzzyFinder.entries.should.have.lengthOf.at.least(1).and.not.eql(filteredEntries);
+	});
 	
 	when("the file-finder is opened", () => {
 		when("showing the first set of results", () => {
-			before("Waiting for `list-refreshed` event", async () => {
-				await FuzzyFinder.open("project-list");
-				FuzzyFinder.refresh();
-				const workspace = atom.views.getView(atom.workspace);
-				const list = workspace.querySelector(".fuzzy-finder.select-list");
-				expect(list).to.exist;
-				const panel = atom.workspace.getModalPanels().find(p => p.item.element === list);
-				expect(panel).to.exist;
-			});
+			it("displays an icon beside each search result", () =>
+				assertIconClasses(FuzzyFinder.entries, iconClasses));
 			
-			it("displays an icon beside each search result", () => {
-				FuzzyFinder.entries.should.have.lengthOf.at.least(1);
-				assertIconClasses(FuzzyFinder.entries, iconClasses);
-			});
-			
-			it("displays file-icons in colour", () => {
-				assertIconClasses(FuzzyFinder.entries, colourClasses);
-			});
+			it("displays file-icons in colour", () =>
+				assertIconClasses(FuzzyFinder.entries, colourClasses));
 			
 			it("displays monochrome icons if coloured icons are disabled", () => {
 				Options.set("coloured", false);
@@ -85,15 +103,17 @@ describe("Fuzzy-finder", () => {
 			
 			it("uses the correct colour for motif-sensitive icons", async () => {
 				Options.set("colourChangedOnly", false);
-				FuzzyFinder.entries[".bowerrc"].should.have.class("medium-yellow");
-				FuzzyFinder.entries[".bowerrc"].should.not.have.class("medium-orange");
-				FuzzyFinder.entries["la.tex"].should.have.class("medium-blue");
-				FuzzyFinder.entries["la.tex"].should.not.have.class("dark-blue");
+				let {entries} = FuzzyFinder;
+				entries[".bowerrc"].should.have.class("medium-yellow");
+				entries[".bowerrc"].should.not.have.class("medium-orange");
+				entries["la.tex"].should.have.class("medium-blue");
+				entries["la.tex"].should.not.have.class("dark-blue");
 				await setTheme("atom-light");
-				FuzzyFinder.entries[".bowerrc"].should.have.class("medium-orange");
-				FuzzyFinder.entries[".bowerrc"].should.not.have.class("medium-yellow");
-				FuzzyFinder.entries["la.tex"].should.have.class("dark-blue");
-				FuzzyFinder.entries["la.tex"].should.not.have.class("medium-blue");
+				entries = FuzzyFinder.entries;
+				entries[".bowerrc"].should.have.class("medium-orange");
+				entries[".bowerrc"].should.not.have.class("medium-yellow");
+				entries["la.tex"].should.have.class("dark-blue");
+				entries["la.tex"].should.not.have.class("medium-blue");
 			});
 			
 			describe("If package settings are changed while open", () => {
@@ -118,23 +138,6 @@ describe("Fuzzy-finder", () => {
 		});
 		
 		when("filtering results", () => {
-			
-			// Avoid confusing errors or timeouts: check everything works first
-			before("Assert accurate reporting", async () => {
-				const list = FuzzyFinder.projectView;
-				expect(list).to.exist;
-				list.should.have.property("selectListView");
-				list.selectListView.should.respondTo("didChangeQuery");
-				expect(list.selectListView.refs).to.exist.and.have.property("queryEditor");
-				const editor = list.selectListView.refs.queryEditor;
-				editor.setText("e");
-				editor.getText().should.equal("e");
-				editor.setText("");
-				editor.getText().should.equal("");
-				list.selectListView.didChangeQuery();
-				await wait(100);
-			});
-			
 			it("displays an icon beside each result", async () => {
 				Options.set("defaultIconClass", "default-icon");
 				const base = "primary-line file icon ";
@@ -191,11 +194,9 @@ describe("Fuzzy-finder", () => {
 				await FuzzyFinder.filter("blank");
 				const blank = FuzzyFinder.entries["blank.file"];
 				expect(blank).to.exist;
-				blank.should.have.classes("foo-bar");
-				blank.should.not.have.class("default-icon");
+				blank.should.have.classes("foo-bar").and.not.have.class("default-icon");
 				Options.set("defaultIconClass", "default-icon");
-				blank.should.have.class("default-icon");
-				blank.should.not.have.class("foo-bar");
+				blank.should.have.class("default-icon").and.not.have.class("foo-bar");
 			});
 		});
 	});

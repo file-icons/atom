@@ -91,7 +91,10 @@ module.exports = {
 		if(!isAbsolute(path))
 			path = join(atom.project.getPaths()[0], path);
 		const dir = this.view.entryForPath(path);
-		dir && dir.isExpanded !== open && dir.click();
+		if(dir && dir.isExpanded !== open){
+			dir.click();
+			this.refresh();
+		}
 	},
 	
 	

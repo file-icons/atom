@@ -52,7 +52,7 @@ describe("Interpreter directives", () => {
 	});
 	
 	after(() => {
-		FuzzyFinder.close("file-finder");
+		FuzzyFinder.close();
 		Tabs.closeAll();
 	});
 	
@@ -104,15 +104,17 @@ describe("Interpreter directives", () => {
 	
 	
 	when("a file contains a hashbang pattern", () => {
-		it("displays the icon if pattern is valid", () => {
+		it("displays the icon if pattern is valid", async () => {
+			TreeView.expand("symlinks");
+			await wait(500);
 			assertIconClasses(TreeView.entries, shebangedIcons);
-			unlessOnWindows(() => assertIconClasses(TreeView.entries, [
+			assertIconClasses(TreeView.entries, [
 				["symlinks/test-1", "icon-file-symlink-file medium-purple"],
 				["symlinks/test-2", "icon-file-symlink-file medium-yellow"],
 				["symlinks/test-3", "icon-file-symlink-file medium-blue"],
 				["symlinks/test-4", "icon-file-symlink-file medium-cyan"],
 				["symlinks/test-5", "icon-file-symlink-file medium-red"]
-			]));
+			]);
 		});
 		
 		it("does nothing if the pattern is invalid", () => {
@@ -133,7 +135,7 @@ describe("Interpreter directives", () => {
 	});
 
 
-	unlessOnWindows.describe("When the hashbang is valid but matches nothing", () => {
+	when("the hashbang is valid but matches nothing", () => {
 		it("shows the terminal-icon if the file is executable", () => {
 			TreeView.entries["unknown1"].should.have.classes(base + "terminal-icon medium-purple");
 		});
@@ -157,7 +159,7 @@ describe("Interpreter directives", () => {
 		
 		beforeEach(async () => {
 			editor = await open("crystal");
-			checkpoint  = editor.createCheckpoint();
+			checkpoint = editor.createCheckpoint();
 			await relink(10);
 			crystal.should.have.classes("crystal-icon medium-cyan");
 			crystalLink.should.have.classes("medium-cyan");
@@ -203,12 +205,10 @@ describe("Interpreter directives", () => {
 	
 	when("the Fuzzy-Finder lists files which contain hashbangs", () => {
 		it("updates its icons to show the interpreter icons", async () => {
-			await FuzzyFinder.open("file-finder").filter(".tho", "file-finder");
-			FuzzyFinder.refresh();
+			await FuzzyFinder.filter(".tho");
 			FuzzyFinder.entries["subdir/erlang.tho"]  .should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/haskell.tho"] .should.have.classes("default-icon");
 			await wait(300);
-			FuzzyFinder.refresh();
 			FuzzyFinder.entries["subdir/erlang.tho"]  .should.not  .have.classes("default-icon");
 			FuzzyFinder.entries["subdir/haskell.tho"] .should.not  .have.classes("default-icon");
 			FuzzyFinder.entries["subdir/erlang.tho"]  .should      .have.classes("erlang-icon medium-red");
@@ -216,7 +216,7 @@ describe("Interpreter directives", () => {
 		});
 		
 		it("shares what it finds with the Tree-View", () => {
-			FuzzyFinder.close("file-finder");
+			FuzzyFinder.close();
 			TreeView.expand("subdir");
 			TreeView.refresh();
 			TreeView.entries["subdir/erlang.tho"].should.have.classes("erlang-icon medium-red");
@@ -229,9 +229,7 @@ describe("Interpreter directives", () => {
 		it("removes every icon that matched a hashbang", async () => {
 			Options.set("hashbangs", false);
 			assertIconClasses(FuzzyFinder.entries, defaults);
-			FuzzyFinder.open("file-finder");
 			await FuzzyFinder.filter(".tho");
-			FuzzyFinder.refresh();
 			FuzzyFinder.entries["subdir/erlang.tho"]   .should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/haskell.tho"]  .should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/erlang.tho"]   .should.not.have.classes("erlang-icon medium-red");
@@ -243,10 +241,8 @@ describe("Interpreter directives", () => {
 				Options.set("hashbangs", true);
 				await wait(100);
 				TreeView.refresh();
-				assertIconClasses(FuzzyFinder.entries, shebangedIcons);
-				FuzzyFinder.open("file-finder");
+				assertIconClasses(TreeView.entries, shebangedIcons);
 				await FuzzyFinder.filter(".tho");
-				FuzzyFinder.refresh();
 				FuzzyFinder.entries["subdir/erlang.tho"]   .should.have.classes("erlang-icon medium-red");
 				FuzzyFinder.entries["subdir/haskell.tho"]  .should.have.classes("haskell-icon medium-purple");
 				FuzzyFinder.entries["subdir/erlang.tho"]   .should.not.have.classes("default-icon");
