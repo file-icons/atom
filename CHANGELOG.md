@@ -15,10 +15,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#704`][]]: Icons changing incorrectly when opening certain filetypes (see below).
 
 ### Removed <sub><br>(for [Atom 1.24.0][] and [Atom 1.25.0-beta0][] users only)</sub>
-Disabled support for updating a icons when overriding a file's grammar.
-A [core regression][atom#16747] in Atom 1.24.0 disrupted the feature and caused it to [change certain icons][`#704`] uncontrollably.
-Other versions of Atom are unaffected — upgrading to the next release will restore the feature.
-If you disabled it as a [workaround](https://github.com/file-icons/atom/issues/704#issuecomment-365812634), it can now be re-enabled.
+Disabled support for updating icons when changing a file's grammar.
+A [regression][atom#16747] introduced in Atom 1.24.0 broke the feature and caused it to [change certain icons][`#704`] uncontrollably.
+Other versions of Atom are affected — installing the next release will restore the broken feature automatically.
+**If you disabled the grammar-strategy as a workaround for this issue, you can now re-enable it.**
 
 [atom#16747]: https://github.com/atom/atom/issues/16747
 [Atom 1.24.0]: https://github.com/atom/atom/releases/tag/v1.24.0
