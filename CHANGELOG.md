@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** Babel (`.babelrc.js`), Karma (`karma.conf.ts`), Ruby (`Appfile`), TypoScript (`.typoscript`, `.tsconfig`)
 
 ### Fixed
+- [[`#698`][]]: Sporadic breakage on Linux
 - [[`#704`][]]: Icons changing incorrectly when opening certain filetypes (see below).
 
 ### Removed <sub><br>(for [Atom 1.24.0][] and [Atom 1.25.0-beta0][] users only)</sub>
@@ -23,6 +24,7 @@ Other versions of Atom are affected — installing the next release will restore
 [atom#16747]: https://github.com/atom/atom/issues/16747
 [Atom 1.24.0]: https://github.com/atom/atom/releases/tag/v1.24.0
 [Atom 1.25.0-beta0]: https://github.com/atom/atom/releases/tag/v1.25.0-beta0
+[`#698`]: https://github.com/file-icons/atom/issues/698
 [`#704`]: https://github.com/file-icons/atom/issues/704#issuecomment-366134001
 
 
