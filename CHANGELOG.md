@@ -9,7 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Babel (`.babelrc.js`), Karma (`karma.conf.ts`), Ruby (`Appfile`), TypoScript (`.typoscript`, `.tsconfig`)
+- **New icons:** Avro (`.avcs`, `.avdl`, `.avcs`), Brotli (updated), CoNLL (`.conll`, `.conllu`), Nextflow (`.nf`, `nextflow.config`), Spacemacs (`.spacemacs`)
+- **Support:** Android (`.webarchivexml`), Archive file (`.maff`), Babel (`.babelrc.js`), Firefox OS (`.webapp`), HTML (`.mht`, `.mhtml`), Karma (`karma.conf.ts`), Ruby (`Appfile`), Safari Webarchives (`.webarchive`), Scala (`.kojo`), TypoScript (`.typoscript`, `.tsconfig`)
 
 ### Fixed
 - Broken auto-compilation when updating `config.cson`
@@ -22,11 +23,11 @@ A [regression][atom#16747] introduced in Atom 1.24.0 broke the feature and cause
 Other versions of Atom are affected — installing the next release will restore the broken feature automatically.
 **If you disabled the grammar-strategy as a workaround for this issue, you can now re-enable it.**
 
-[atom#16747]: https://github.com/atom/atom/issues/16747
-[Atom 1.24.0]: https://github.com/atom/atom/releases/tag/v1.24.0
+[atom#16747]:        https://github.com/atom/atom/issues/16747
+[Atom 1.24.0]:       https://github.com/atom/atom/releases/tag/v1.24.0
 [Atom 1.25.0-beta0]: https://github.com/atom/atom/releases/tag/v1.25.0-beta0
-[`#698`]: https://github.com/file-icons/atom/issues/698
-[`#704`]: https://github.com/file-icons/atom/issues/704#issuecomment-366134001
+[`#698`]:            https://github.com/file-icons/atom/issues/698
+[`#704`]:            https://github.com/file-icons/atom/issues/704#issuecomment-366134001
 
 
 
