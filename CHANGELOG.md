@@ -3,13 +3,13 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.16...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.17...HEAD
 
 
-[Unpublished]
+[v2.1.17] - 2018-02-23
 ----------------------
 ### Added
-- **New icons:** Avro (`.avcs`, `.avdl`, `.avcs`), Brotli (updated), CoNLL (`.conll`, `.conllu`), Nextflow (`.nf`, `nextflow.config`), Spacemacs (`.spacemacs`)
+- **New icons:** Avro (`.avcs`, `.avdl`, `.avcs`), Brotli (updated), CoNLL (`.conll`, `.conllu`), glTF (`.gltf`), Nextflow (`.nf`, `nextflow.config`), Spacemacs (`.spacemacs`)
 - **Support:** Android (`.webarchivexml`), Archive file (`.maff`), Babel (`.babelrc.js`), Firefox OS (`.webapp`), HTML (`.mht`, `.mhtml`), Karma (`karma.conf.ts`), Ruby (`Appfile`), Safari Webarchives (`.webarchive`), Scala (`.kojo`), SSH-related (`.ssh/*`), TypoScript (`.typoscript`, `.tsconfig`)
 
 ### Fixed
@@ -23,6 +23,7 @@ A [regression][atom#16747] introduced in Atom 1.24.0 broke the feature and cause
 Other versions of Atom are affected — installing the next release will restore the broken feature automatically.
 **If you disabled the grammar-strategy as a workaround for this issue, you can now re-enable it.**
 
+[v2.1.17]:           https://github.com/file-icons/atom/releases/tag/v2.1.17
 [atom#16747]:        https://github.com/atom/atom/issues/16747
 [Atom 1.24.0]:       https://github.com/atom/atom/releases/tag/v1.24.0
 [Atom 1.25.0-beta0]: https://github.com/atom/atom/releases/tag/v1.25.0-beta0
