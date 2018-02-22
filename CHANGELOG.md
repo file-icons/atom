@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Avro (`.avcs`, `.avdl`, `.avcs`), Brotli (updated), CoNLL (`.conll`, `.conllu`), Nextflow (`.nf`, `nextflow.config`), Spacemacs (`.spacemacs`)
-- **Support:** Android (`.webarchivexml`), Archive file (`.maff`), Babel (`.babelrc.js`), Firefox OS (`.webapp`), HTML (`.mht`, `.mhtml`), Karma (`karma.conf.ts`), Ruby (`Appfile`), Safari Webarchives (`.webarchive`), Scala (`.kojo`), SSH keys (`.ssh/*`), TypoScript (`.typoscript`, `.tsconfig`)
+- **Support:** Android (`.webarchivexml`), Archive file (`.maff`), Babel (`.babelrc.js`), Firefox OS (`.webapp`), HTML (`.mht`, `.mhtml`), Karma (`karma.conf.ts`), Ruby (`Appfile`), Safari Webarchives (`.webarchive`), Scala (`.kojo`), SSH-related (`.ssh/*`), TypoScript (`.typoscript`, `.tsconfig`)
 
 ### Fixed
 - Broken auto-compilation when updating `config.cson`
