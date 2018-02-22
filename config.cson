@@ -1240,6 +1240,7 @@ fileIcons:
 			[/\.(ldj|ldjson|jsonl)$/, "dark-orange", "jsonl"]
 			[/[\/\\](?:magic[\/\\]Magdir|file[\/\\]magic)[\/\\][-.\w]+$/i, "dark-red", matchPath: true]
 			[/(\\|\/)dev[-\w]+\1(?:[^\\\/]+\1)*(?!DESC|NOTES)(?:[A-Z][-A-Z]*)(?:\.in)?$/, "medium-green", matchPath: true]
+			[/\.ssh[\/\\](authorized_keys|known_hosts)$/, "medium-green", matchPath: true]
 			["lib/icons/.icondb.js", "dark-red", matchPath: true]
 			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
 				priority: 2,
@@ -4099,6 +4100,7 @@ fileIcons:
 			[/\.glyphs\d*License$/i, "medium-green"]
 			[/^(master\.)?passwd$/i, "dark-green"]
 			[/^git-credential-osxkeychain$/i, "medium-green"]
+			[/\.ssh[\/\\][^/\\\s]+$/, "dark-blue", matchPath: true, priority: 0]
 		]
 
 	Stan:
