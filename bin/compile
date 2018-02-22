@@ -17,12 +17,13 @@ if(process.connected && "function" === typeof global.emit){
 		
 		/* ERROR: Package source files not found */
 		try{
+			const {join, resolve} = path;
 			const pieces = "../lib/icons/icon-compiler.js".split(/\//);
-			const pathTo = path.join(__dirname, ...pieces);
+			const pathTo = resolve(join(__dirname, ...pieces));
 			IconCompiler = require(pathTo);
 		} catch(e){ die(0x41, e); }
 		
-		/* EROR: Source file not found or inaccessible */
+		/* ERROR: Source file not found or inaccessible */
 		try{ sourceData = fs.readFileSync(source); }
 		catch(e){ die(0x42, e); }
 		
@@ -39,9 +40,7 @@ if(process.connected && "function" === typeof global.emit){
 		global.emit("compile:done");
 		
 		function die(code, error = {}){
-			const {stack, message, name} = error;
-			const detail = error.toString();
-			console.error({stack, message, name, detail});
+			console.error(error);
 			process.exit(code);
 		}
 	};

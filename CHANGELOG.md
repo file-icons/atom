@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** Babel (`.babelrc.js`), Karma (`karma.conf.ts`), Ruby (`Appfile`), TypoScript (`.typoscript`, `.tsconfig`)
 
 ### Fixed
+- Broken auto-compilation when updating `config.cson`
 - [[`#698`][]]: Sporadic breakage on Linux
 - [[`#704`][]]: Icons changing incorrectly when opening certain filetypes (see below).
 
