@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.17...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support:** Swagger (`swagger.yaml`, `swagger.yml`)
+
+
+
 [v2.1.17] - 2018-02-23
 ----------------------
 ### Added
