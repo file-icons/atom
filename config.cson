@@ -4178,7 +4178,7 @@ fileIcons:
 		icon: "swagger"
 		colour: "medium-green"
 		match: [
-			[/^swagger\.json$/i, "medium-green", priority: 2]
+			[/^swagger\.(json|yaml|yml)$/i, "medium-green", priority: 2]
 			[/^.swagger-codegen-ignore$/i, "dark-green"]
 		]
 
