@@ -70,6 +70,10 @@ noSuffix:     By default, icon names are suffixed with "-icon". Set noSuffix to 
 
 directoryIcons:
 
+	"App Store":
+		icon: "appstore"
+		match: /\.(app|xcodeproj|xcworkspace)$/i
+
 	ArtText:
 		icon: "arttext"
 		match: /\.artx$/i
@@ -110,7 +114,7 @@ directoryIcons:
 
 	Framework:
 		icon: "dylib"
-		match: ".framework"
+		match: /\.(appex|framework|ideplugin)$/i
 
 	Git:
 		icon: "git"
@@ -159,10 +163,6 @@ directoryIcons:
 	"Visual Studio":
 		icon: "vs"
 		match: /^\.vscode$/i
-
-	Xcode:
-		icon: "appstore"
-		match: /\.(xcodeproj|xcworkspace)$/i
 
 
 fileIcons:
@@ -432,8 +432,13 @@ fileIcons:
 			[/\.rpy[bc]$/i, "medium-red"]
 			[/\.py[co]$/i, "dark-purple"]
 			[".swp", "dark-green", priority: 4]
-			[".DS_Store"]
 		]
+
+	Atom:
+		icon: "atom"
+		match: /\.atomproject\.[jc]son$/i
+		colour: "dark-green"
+		priority: 2
 
 	Atoum:
 		icon: "atoum"
@@ -502,16 +507,6 @@ fileIcons:
 		match: /\.av(cs|sc|dl)$/i
 		colour: "medium-blue"
 		scope: /(^|\.)avro(-idl)?(\.|$)/i
-
-	AWK:
-		icon: "terminal"
-		match: [
-			[".awk", "medium-blue", "awk"]
-			[".gawk", "medium-red", "gawk"]
-			[".mawk", "medium-maroon", "mawk"]
-			[".nawk", "dark-green", "nawk"]
-			[".auk", "dark-cyan"]
-		]
 
 	Babel:
 		icon: "babel"
@@ -1039,6 +1034,7 @@ fileIcons:
 			[".wgt", "medium-blue"]
 			[".xar", "dark-orange", signature: /^xar!/]
 			[".egg", "light-orange"]
+			[".sit", "medium-blue", signature: /^SIT[!D]/]
 		]
 
 	Config:
@@ -1235,10 +1231,11 @@ fileIcons:
 			[".schema", "dark-blue", priority: 0.25]
 			[".syntax", "medium-blue"]
 			[".webmanifest", "medium-blue"]
-			[/^pkginfo$/, "medium-blue"]
-			[/^mime\.types$/i, "medium-maroon"]
+			[/^pkginfo$/i, "medium-blue"]
+			[/^(mime\.types|fstab)$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
 			[/\.(ldj|ldjson|jsonl)$/, "dark-orange", "jsonl"]
+			[/^magic\.mgc$/i, "medium-purple", signature: /^\xF1\x1E\x04\x1C|^\x1C\x04\x1E\xF1/]
 			[/[\/\\](?:magic[\/\\]Magdir|file[\/\\]magic)[\/\\][-.\w]+$/i, "dark-red", matchPath: true]
 			[/(\\|\/)dev[-\w]+\1(?:[^\\\/]+\1)*(?!DESC|NOTES)(?:[A-Z][-A-Z]*)(?:\.in)?$/, "medium-green", matchPath: true]
 			[/\.ssh[\/\\](authorized_keys|known_hosts)$/, "medium-green", matchPath: true]
@@ -1328,6 +1325,12 @@ fileIcons:
 		priority: 2
 		match: /^dojo\.js$/i
 		colour: "light-red"
+
+	Download:
+		icon: "download"
+		match: ".crdownload"
+		colour: "dark-blue"
+		priority: 0.5
 
 	Doxyfile:
 		icon: "doxygen"
@@ -1545,6 +1548,8 @@ fileIcons:
 		match: [
 			[/^Icon\r$/, "medium-blue"]
 			[".rsrc", "dark-blue"]
+			[/^\._./, "dark-blue", priority: 0, signature: /^\0\x05\x16[\0\x07]/]
+			[".DS_Store", "dark-cyan", priority: 0, signature: /^\0{3}\x1Bud1\0/]
 		]
 
 	Firebase:
@@ -2499,6 +2504,14 @@ fileIcons:
 		match: ".hxp"
 		colour: "medium-green"
 		priority: 1.5
+
+	Link:
+		icon: "link"
+		match: [
+			[".url", "dark-blue"]
+			[".lnk", "medium-blue", priority: 3, alias: "Windows shortcut", signature: /^L\0{3}\x01\x14\x02\0{5}\xC0\0{6}F/]
+			[/\.alias$/, "medium-blue", priority: 3, alias: "macOS alias", signature: /^book\0{4}mark\0{4}/]
+		]
 
 	Lisp:
 		icon: "lisp"
@@ -3933,6 +3946,11 @@ fileIcons:
 			[".profile", "dark-purple"]
 			[".tcsh", "medium-green"]
 			[".csh", "medium-yellow"]
+			[".awk", "medium-blue", "awk"]
+			[".gawk", "medium-red", "gawk"]
+			[".mawk", "medium-maroon", "mawk"]
+			[".nawk", "dark-green", "nawk"]
+			[".auk", "dark-cyan"]
 		]
 
 	Shen:
@@ -4506,11 +4524,6 @@ fileIcons:
 		scope: "uc"
 		match: ".uc"
 
-	URL:
-		icon: "link"
-		match: ".url"
-		colour: "dark-blue"
-
 	UrWeb:
 		icon: "urweb"
 		match: [
@@ -4680,12 +4693,6 @@ fileIcons:
 			[/\.(exe|com|msi)$/i]
 			[".reg", "medium-blue"]
 		]
-
-	"Windows shortcut":
-		icon: "link"
-		priority: 3
-		match: ".lnk"
-		colour: "medium-blue"
 
 	Workbox:
 		icon: "workbox"

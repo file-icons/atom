@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Tipe (`.tipe`), Workbox (`workbox-config.js`)
-- **Support:** Swagger (`swagger.yaml`, `swagger.yml`)
+- **Support:** App Store (`.app` folders), Archive (`.sit`), Atom (`.atomproject.{json, cson}`), Data (`fstab`, `magic.mgc`), Download (`.crdownload`), Dylibs (`.appex` and `.ideplugin` folders), Finder (`.DS_Store`, `._*`), Swagger (`swagger.yaml`, `swagger.yml`)
 
 
 
