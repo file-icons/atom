@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **New icons:** Tipe (`.tipe`), Workbox (`workbox-config.js`)
 - **Support:** Swagger (`swagger.yaml`, `swagger.yml`)
 
 

@@ -4398,6 +4398,11 @@ fileIcons:
 		colour: "medium-maroon"
 		signature: /^\*\*TI[789]\d\*\*/
 
+	Tipe:
+		icon: "tipe"
+		match: ".tipe"
+		colour: "medium-cyan"
+
 	tmux:
 		icon: "tmux"
 		match: /(\.|_|^)tmux\.conf$/i
@@ -4681,6 +4686,12 @@ fileIcons:
 		priority: 3
 		match: ".lnk"
 		colour: "medium-blue"
+
+	Workbox:
+		icon: "workbox"
+		priority: 2
+		match: /^workbox-config\.js$/i
+		colour: "medium-orange"
 
 	X10:
 		icon: "x10"
