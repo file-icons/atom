@@ -12,6 +12,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** Tipe (`.tipe`), Workbox (`workbox-config.js`)
 - **Support:** App Store (`.app` folders), Archive (`.sit`), Atom (`.atomproject.{json, cson}`), Data (`fstab`, `magic.mgc`), Download (`.crdownload`), Dylibs (`.appex` and `.ideplugin` folders), Finder (`.DS_Store`, `._*`), Swagger (`swagger.yaml`, `swagger.yml`)
 
+### Fixed
+- [[`#716`][]]: Exception thrown from null filesystem reference
+
+[`#716`]: https://github.com/file-icons/atom/issues/716
 
 
 [v2.1.17] - 2018-02-23
