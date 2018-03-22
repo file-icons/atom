@@ -432,6 +432,7 @@ fileIcons:
 			[/\.rpy[bc]$/i, "medium-red"]
 			[/\.py[co]$/i, "dark-purple"]
 			[".swp", "dark-green", priority: 4]
+			[/^\.rnd$/i, "dark-blue"]
 		]
 
 	Atom:
@@ -1047,7 +1048,8 @@ fileIcons:
 			[".ld", "dark-red"]
 			[".lds", "medium-red"]
 			[".opts", "medium-green"]
-			[".terminal", "dark-blue"]
+			[/^mimeapps\.list$/i, "medium-blue"]
+			[/(\.|^)terminal(rc)?$/i, "dark-blue"]
 			[/^ld\.script$/i, "medium-orange"]
 			[/^\.?XCompose$/, "medium-cyan", "xcompose"]
 			[/^buildozer\.spec$/i, "dark-blue", priority: 2]
@@ -1235,6 +1237,7 @@ fileIcons:
 			[/^(mime\.types|fstab)$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
 			[/\.(ldj|ldjson|jsonl)$/, "dark-orange", "jsonl"]
+			[/\.(irb-history|lesshst|wget-hsts)$/i, "medium-red"]
 			[/^magic\.mgc$/i, "medium-purple", signature: /^\xF1\x1E\x04\x1C|^\x1C\x04\x1E\xF1/]
 			[/[\/\\](?:magic[\/\\]Magdir|file[\/\\]magic)[\/\\][-.\w]+$/i, "dark-red", matchPath: true]
 			[/(\\|\/)dev[-\w]+\1(?:[^\\\/]+\1)*(?!DESC|NOTES)(?:[A-Z][-A-Z]*)(?:\.in)?$/, "medium-green", matchPath: true]
@@ -1883,9 +1886,10 @@ fileIcons:
 
 	Git:
 		icon: "git"
-		colour: "medium-red"
-		match: /^\.git|^\.keep$|\.mailmap$/i
-		scope: /\.git-(commit|config|rebase)$/i
+		match: [
+			[/^\.git|^\.keep$|\.mailmap$/i, "medium-red", scope: /\.git-(commit|config|rebase)$/i]
+			[/\.git(ignore|config|attributes)$/i, "medium-red", priority: 0.5]
+		]
 
 	"Git - Commit":
 		icon: "git-commit"
@@ -1934,6 +1938,14 @@ fileIcons:
 		icon: "gnu"
 		match: /\.(gnu|gplv[23])$/i
 		colour: "auto-red"
+
+	GNOME:
+		icon: "gnome"
+		match: [
+			[".vala", "medium-purple", "vala"]
+			[".vapi", "dark-purple"]
+			[/\.gtk/, null, priority: 0.25]
+		]
 
 	Gnuplot:
 		icon: "graph"
@@ -2523,6 +2535,7 @@ fileIcons:
 			[".ny", "medium-blue"]
 			[".podsl", "medium-purple"]
 			[".sexp", "medium-blue"]
+			[".sbclrc", "dark-purple"]
 		]
 
 	LiveScript:
@@ -3181,9 +3194,11 @@ fileIcons:
 
 	Octave:
 		icon: "octave"
-		match: ".octave"
-		colour: "medium-orange"
-		scope: "octave"
+		match: [
+			[".octave", "medium-orange", scope: "octave"]
+			[".octave_hist", "medium-orange"]
+			[".octaverc", "dark-orange"]
+		]
 
 	OOC:
 		icon: "ooc"
@@ -3614,7 +3629,7 @@ fileIcons:
 		scope: "r"
 		alias: /^(Rscript|splus|Rlang)$/i
 		interpreter: "Rscript"
-		match: /\.(r|Rprofile|rsx|rd)$/i
+		match: /\.(r|Rprofile|Rhistory|rsx|rd)$/i
 		colour: "medium-blue"
 
 	Racket:
@@ -4237,6 +4252,8 @@ fileIcons:
 			[".adp", "medium-orange"]
 			[".tm", "medium-red"]
 			[".exp", "dark-blue"]
+			[/^\.tkcvs/i, "medium-cyan"]
+			[/^\.tkdiffrc$/, "dark-red"]
 		]
 
 	Tea:
@@ -4425,6 +4442,7 @@ fileIcons:
 		icon: "tmux"
 		match: /(\.|_|^)tmux\.conf$/i
 		colour: "medium-green"
+		priority: 2
 		scope: "tmux"
 
 	TortoiseSVN:
@@ -4533,21 +4551,15 @@ fileIcons:
 
 	V8:
 		icon: "v8"
-		match: /^([dv]8|v8[-_.][^.]*|mksnapshot|mkpeephole)$/i
-		colour: "medium-blue"
-		priority: 0
+		match: [
+			[/^([dv]8|v8[-_.][^.]*|mksnapshot|mkpeephole)$/i, "medium-blue", priority: 0]
+			[/^\.v8flags\b/, "medium-blue"]
+		]
 
 	Vagrant:
 		icon: "vagrant"
 		match: /^Vagrantfile$/i
 		colour: "medium-cyan"
-
-	Vala:
-		icon: "gnome"
-		match: [
-			[".vala", "medium-purple", "vala"]
-			[".vapi", "dark-purple"]
-		]
 
 	VCL: # (Varnish Configuration Language)
 		icon: "varnish"
@@ -4558,7 +4570,7 @@ fileIcons:
 	Verilog:
 		icon: "verilog"
 		match: [
-			[".v", "dark-green", "verilog"]
+			[".v", "dark-green", scope: "verilog", interpreter: /^(vvp|iverilog)$/i]
 			[".veo", "medium-red"]
 		]
 
@@ -4594,7 +4606,7 @@ fileIcons:
 		icon: "vim"
 		match: [
 			[/\.(vim|[gn]?vimrc)$/i, "medium-green", scope: "viml", alias: /^(VimL?|NVim|Vim\s*Script)$/i, interpreter: /Vim?/i]
-			[/^[gn_]?vim(rc|info)$/i, "dark-green"]
+			[/^[.gn_]?vim(rc|info)$/i, "dark-green"]
 		]
 
 	VirtualBox:
@@ -4709,7 +4721,7 @@ fileIcons:
 
 	X11:
 		icon: "x11"
-		match: /\.X(authority|clients|initrc|profile|resources|session-errors|screensaver)$/i
+		match: /\.X(authority|clients|initrc|inputrc|profile|resources|session-errors|screensaver)$/i
 		colour: "medium-orange"
 
 	Xamarin:

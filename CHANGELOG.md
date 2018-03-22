@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Tipe (`.tipe`), Workbox (`workbox-config.js`)
-- **Support:** App Store (`.app` folders), Archive (`.sit`), Atom (`.atomproject.{json, cson}`), Data (`fstab`, `magic.mgc`), Download (`.crdownload`), Dylibs (`.appex` and `.ideplugin` folders), Finder (`.DS_Store`, `._*`), Swagger (`swagger.yaml`, `swagger.yml`)
+- **Support:** App Store (`.app` folders), Archive (`.sit`), Atom (`.atomproject.{json, cson}`), Binary (`.rnd`), Config (`mimeapps.list`, `terminalrc`), Data (`fstab`, `magic.mgc`, `.irb-history`, `.lesshst`, `.wget-hsts`), Download (`.crdownload`), Dylibs (`.appex` and `.ideplugin` folders), Finder (`.DS_Store`, `._*`), GNOME (`.gtkrc`), Lisp (`.sbclrc`), Octave (`.octave_hist`, `.octaverc`), R (`.Rhistory`), Swagger (`swagger.yaml`, `swagger.yml`), Tcl (`.tkcvs`, `.tkdiffrc`), V8 (`.v8flags*`), Vim (`.viminfo`), X11 (`.xinput`)
 
 ### Fixed
 - [[`#716`][]]: Exception thrown from null filesystem reference
