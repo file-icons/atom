@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.17...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.18...HEAD
 
 
-[Unpublished]
+[v2.1.18] - 2018-03-22
 ----------------------
 ### Added
 - **New icons:** Tipe (`.tipe`), Workbox (`workbox-config.js`)
@@ -15,7 +15,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [[`#716`][]]: Exception thrown from null filesystem reference
 
+[v2.1.18]: https://github.com/file-icons/atom/releases/tag/v2.1.18
 [`#716`]: https://github.com/file-icons/atom/issues/716
+
 
 
 [v2.1.17] - 2018-02-23
