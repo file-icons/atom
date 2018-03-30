@@ -3517,8 +3517,10 @@ fileIcons:
 	Prettier:
 		icon: "prettier"
 		priority: 2
-		match: /\.prettierrc(\.(js|json|ya?ml))?$|^prettier\.config\.js$/i
-		colour: "auto-cyan"
+		match: [
+			[/\.prettierrc(\.(js|json|ya?ml))?$|^prettier\.config\.js$/i, "auto-cyan"]
+			[".prettierignore", "dark-yellow"]
+		]
 
 	Printer:
 		icon: "print"
