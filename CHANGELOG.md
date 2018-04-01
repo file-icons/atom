@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.18...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support:** JavaScript (`.es5`, `.es7`), Prettier (`.prettierignore`)
+
+
+
 [v2.1.18] - 2018-03-22
 ----------------------
 ### Added
