@@ -3507,7 +3507,7 @@ fileIcons:
 	PowerShell:
 		icon: "powershell"
 		match: [
-			[".ps1", "medium-blue", scope: "powershell", alias: "posh"]
+			[".ps1", "medium-blue", scope: "powershell", alias: "posh", interpreter: "pwsh"]
 			[".psd1", "dark-blue"]
 			[".psm1", "medium-purple"]
 			[".ps1xml", "dark-purple"]
