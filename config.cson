@@ -4212,7 +4212,7 @@ fileIcons:
 		icon: "swagger"
 		colour: "medium-green"
 		match: [
-			[/^swagger\.(json|yaml|yml)$/i, "medium-green", priority: 2]
+			[/^(openapi|swagger)\.(json|yaml|yml)$/i, "medium-green", priority: 2]
 			[/^.swagger-codegen-ignore$/i, "dark-green"]
 		]
 
