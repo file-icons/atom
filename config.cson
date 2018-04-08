@@ -1442,7 +1442,7 @@ fileIcons:
 		icon: "emacs"
 		priority: 1.5
 		match: [
-			[/(^|\.)(el|_?emacs|emacs\.desktop|abbrev[-_]defs)$/i, "medium-purple", alias: "elisp", scope: "emacs.lisp", interpreter: "emacs"]
+			[/(^|\.)(el|_?emacs|emacs\.desktop|abbrev[-_]defs)$/i, "medium-purple", alias: "elisp", scope: "emacs.lisp", interpreter: /^(x?emacs)$/]
 			[/(^|\.)(elc|eld)$/i, "dark-purple", signature: /^;ELC\x17\0{3}/]
 			[".gnus", "medium-red"]
 			[".viper", "dark-green"]
@@ -1815,7 +1815,7 @@ fileIcons:
 			[".resx", "medium-cyan"]
 			[".rl", "medium-red"]
 			[".scxml", "light-cyan"]
-			[".sed", "dark-green"]
+			[".sed", "dark-green", scope: "sed", interpreter: /^([gs]?sed|minised)$/]
 			[/\.sgml?$/i, "dark-yellow"]
 			[".sig", "light-maroon"]
 			[".sk", "light-blue", signature: /^##Sketch 1 2/]
