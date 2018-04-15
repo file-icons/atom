@@ -3610,6 +3610,7 @@ fileIcons:
 			[".tac", "dark-pink"]
 			[".wsgi", "dark-red"]
 			[".xpy", "auto-yellow"]
+			[".smk", "medium-green"]
 			[".rpy", "medium-pink", scope: "renpy", alias: /^Ren'?Py$/i]
 			[/\.?(pypirc|pythonrc|python-venv)$/i, "dark-blue"]
 			[/^(SConstruct|SConscript)$/, "dark-green"]
