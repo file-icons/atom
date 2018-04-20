@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **New icons:** Bitmap font (`.bdf`, `.fnt`, `.fon`, `.pcf`, `.psf`, `.psftx`, `.snf`), Vector font (replaces existing font-icon), V8 Turbofan
 - **Support:** JavaScript (`.es5`, `.es7`), Mocha (`mocha.min.js`), Normalize (`normalize.min.css`), PowerShell (`pwsh` executables), Prettier (`.prettierignore`), Snakefile (`.smk`)
 
 
