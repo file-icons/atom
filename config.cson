@@ -2874,8 +2874,8 @@ fileIcons:
 		icon: "mocha"
 		priority: 2
 		match: [
-			[/^mocha\.([jt]sx?|es6?|coffee)$/i, "medium-maroon"]
-			[/^mocha\.(s?css|less|styl)$/i, "medium-red"]
+			[/^mocha(\.min)?\.([jt]sx?|es6?|coffee)$/i, "medium-maroon"]
+			[/^mocha(\.min)?\.(s?css|less|styl)$/i, "medium-red"]
 			["mocha.opts", "light-maroon", priority: 2]
 		]
 
@@ -3115,7 +3115,7 @@ fileIcons:
 	Normalize:
 		icon: "normalize"
 		priority: 2
-		match: /^normalize\.(css|less|scss|styl)$/i
+		match: /^normalize(\.min)?\.(css|less|scss|styl)$/i
 		colour: "medium-red"
 
 	NPM:
