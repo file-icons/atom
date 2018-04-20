@@ -143,7 +143,7 @@ describe("Fuzzy-finder", () => {
 				const base = "primary-line file icon ";
 				await FuzzyFinder.filter("m");
 				assertIconClasses(FuzzyFinder.entries, [
-					["node_modules/.keep",    base + "git-icon medium-red"],
+					[".gitmodules",           base + "git-icon medium-red"],
 					["markdown.md",           base + "markdown-icon medium-blue"],
 					["README.md",             base + "book-icon medium-blue"],
 					["image.gif",             base + "image-icon medium-yellow"],
@@ -171,7 +171,7 @@ describe("Fuzzy-finder", () => {
 				Options.set("coloured", false);
 				await FuzzyFinder.filter("m");
 				assertIconClasses(FuzzyFinder.entries, [
-					["node_modules/.keep",    "medium-red"],
+					[".gitmodules",           "medium-red"],
 					["markdown.md",           "medium-blue"],
 					["README.md",             "medium-blue"],
 					["image.gif",             "medium-yellow"],
