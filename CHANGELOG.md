@@ -3,15 +3,16 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.18...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.19...HEAD
 
 
-[Unpublished]
+[v2.1.19] - 2018-04-25
 ----------------------
 ### Added
 - **New icons:** Bitmap font (`.bdf`, `.fnt`, `.fon`, `.pcf`, `.psf`, `.psftx`, `.snf`), Vector font (replaces existing font-icon), V8 Turbofan
 - **Support:** JavaScript (`.es5`, `.es7`), Mocha (`mocha.min.js`), Normalize (`normalize.min.css`), PowerShell (`pwsh` executables), Prettier (`.prettierignore`), Snakefile (`.smk`)
 
+[v2.1.19]: https://github.com/file-icons/atom/releases/tag/v2.1.19
 
 
 [v2.1.18] - 2018-03-22
