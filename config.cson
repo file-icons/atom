@@ -1560,7 +1560,10 @@ fileIcons:
 		icon: "firebase"
 		match: [
 			[/^firebase\.json$/i, "medium-yellow", priority: 2]
-			[/^firestore\.rules?$/i, "medium-orange", scope: /\bsource\.fire(store|rules)(?=\\.|$)/i]
+			[/^firestore\.rules?$/i, "medium-orange",
+				alias: "firerules"
+				scope: /\bsource\.fire(store|rules)(?=\\.|$)/i,
+				signature: /^service\s+cloud\.firestore\s+{/]
 			[".firebaserc", "medium-orange"]
 		]
 
