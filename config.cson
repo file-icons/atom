@@ -1560,6 +1560,7 @@ fileIcons:
 		icon: "firebase"
 		match: [
 			[/^firebase\.json$/i, "medium-yellow", priority: 2]
+			[/^firestore\.rules?$/i, "medium-orange", scope: /\bsource\.fire(store|rules)(?=\\.|$)/i]
 			[".firebaserc", "medium-orange"]
 		]
 
@@ -3538,6 +3539,12 @@ fileIcons:
 		icon: "print"
 		match: ".ppd"
 		colour: "dark-cyan"
+
+	PROS:
+		icon: "pros"
+		match: /^project\.pros$/i
+		colour: "medium-orange"
+		priority: 1.5;
 
 	Processing:
 		icon: "processing"

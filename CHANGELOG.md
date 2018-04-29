@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.19...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **New icons:** PROS (`project.pros`)
+- **Support:** Firebase (`firestore.rules`)
+
+
+
 [v2.1.19] - 2018-04-25
 ----------------------
 ### Added
