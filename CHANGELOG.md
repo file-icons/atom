@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** PROS (`project.pros`)
-- **Support:** Firebase (`firestore.rules`), XDG files (`*.xdg`)
+- **Support:** Firebase (`firestore.rules`), XML (`*.rdg`)
 
 
 
