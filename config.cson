@@ -2109,6 +2109,12 @@ fileIcons:
 		match: ".hl"
 		colour: "medium-red"
 
+	HoundCI:
+		icon: "houndci"
+		match: /\.hound\.ya?ml$/i
+		colour: "medium-purple"
+		priority: 2
+
 	HTML:
 		icon: "html5"
 		match: [

@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Go (rebranded), PROS (`project.pros`)
+- **New icons:** Go (rebranded), HoundCI (`.hound.yml`), PROS (`project.pros`)
 - **Support:** Firebase (`firestore.rules`), XML (`*.rdg`)
 
 ### Changed
