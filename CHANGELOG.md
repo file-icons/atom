@@ -9,8 +9,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** PROS (`project.pros`)
+- **New icons:** Go (rebranded), PROS (`project.pros`)
 - **Support:** Firebase (`firestore.rules`), XML (`*.rdg`)
+
+### Changed
+- [[`#728`][]]: Replaced Go's gopher with [newly branded logo][gologo].
+
+[gologo]: https://blog.golang.org/go-brand
+[`#728`]: https://github.com/file-icons/atom/issues/728
 
 
 
