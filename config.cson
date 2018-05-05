@@ -3865,6 +3865,7 @@ fileIcons:
 		match: [
 			[".rs", "medium-maroon", "rust"]
 			[".rlib", "light-maroon"]
+			[/^rust-toolchain$/, "medium-red"]
 		]
 
 	Safari:
