@@ -746,6 +746,15 @@ fileIcons:
 			[".solverstate", "medium-green"]
 		]
 
+	Caffe2:
+		icon: "caffe2"
+		priority: 2
+		match: [
+			[".caffe2model", "dark-blue"]
+			[/^(init|predict)_net\.pb$/i, "dark-blue"]
+			[/^(deploy|solver|train_val)\.prototxt$/i, "medium-purple"]
+		]
+
 	Cake:
 		icon: "cake"
 		scope: "cake"
@@ -1289,6 +1298,11 @@ fileIcons:
 			[".dtsi", "medium-orange"]
 		]
 
+	Dia:
+		icon: "dia"
+		match: ".dia"
+		colour: "auto-cyan"
+
 	Diff:
 		icon: "diff"
 		scope: "diff"
@@ -1827,7 +1841,6 @@ fileIcons:
 			[".mxml", "dark-maroon"]
 			[".myt", "dark-blue"]
 			[".natvis", "dark-green"]
-			[".nproj", "medium-purple"]
 			[".odd", "light-green"]
 			[".ohm", "dark-yellow", "ohm"]
 			[".omgrofl", "dark-purple"]
@@ -1867,9 +1880,6 @@ fileIcons:
 			[/\.wlp(4|ppp)$/i, "medium-blue", "wlp4"]
 			[".wsdl", "medium-red"]
 			[".wsf", "medium-blue"]
-			[".wxi", "light-orange"]
-			[".wxl", "light-maroon"]
-			[".wxs", "dark-purple"]
 			[".x3d", "medium-blue"]
 			[".xacro", "medium-red"]
 			[".xaml", "medium-blue"]
@@ -3048,6 +3058,11 @@ fileIcons:
 		match: ".ncl"
 		colour: "medium-green"
 
+	NDepend:
+		icon: "ndepend"
+		match: /\.nd?proj$/i
+		colour: "medium-blue"
+
 	Neko:
 		icon: "neko"
 		match: [
@@ -3604,6 +3619,12 @@ fileIcons:
 			[".pug", "medium-red", scope: "pug"]
 			[/^\.pug-lintrc/i, "medium-orange", priority: 2]
 		]
+
+	PullApprove:
+		icon: "pullapprove"
+		match: /^\.?pullapprove\.ya?ml$/i
+		colour: "dark-blue"
+		priority: 2
 
 	Puppet:
 		icon: "puppet"
@@ -4482,6 +4503,12 @@ fileIcons:
 		match: ".tipe"
 		colour: "medium-cyan"
 
+	"TLA+":
+		icon: "tla"
+		match: ".tla"
+		colour: "medium-maroon"
+		scope: "tla"
+
 	tmux:
 		icon: "tmux"
 		match: /(\.|_|^)tmux\.conf$/i
@@ -4702,6 +4729,13 @@ fileIcons:
 		match: /\.watchmanconfig$|^watchman\.json$/i
 		colour: "medium-blue"
 
+	WDL:
+		icon: "wdl"
+		match: ".wdl"
+		colour: "medium-blue"
+		alias: "Workflow Description Language"
+		scope: /(^|\.)wdl(?=$|\.)/i
+
 	WebAssembly:
 		icon: "wasm"
 		match: [
@@ -4748,6 +4782,16 @@ fileIcons:
 			[".cmd", "medium-purple"]
 			[/\.(exe|com|msi)$/i]
 			[".reg", "medium-blue"]
+		]
+
+	WiX:
+		icon: "wix"
+		match: [
+			[".wixproj", "medium-orange"]
+			[".wixobj", "medium-red"]
+			[".wxs", "dark-purple"]
+			[".wxi", "auto-orange"]
+			[".wxl", "auto-maroon"]
 		]
 
 	Workbox:
