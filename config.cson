@@ -1264,7 +1264,7 @@ fileIcons:
 		icon: "debian"
 		match: [
 			[".deb", "medium-red"]
-			[/^control$/, "dark-cyan"]
+			[/(^|\.)(control|dsc)$/, "dark-cyan", scope: "deb-control"]
 			[/^rules$/, "medium-cyan"]
 		]
 
@@ -3716,6 +3716,7 @@ fileIcons:
 			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copying(\.regex)?|hacking|history|install|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks|warnings)(_\w+)?$/i, "dark-blue", priority: 2]
 			[/\b(changelog|copying(v?\d)?|install|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
 			[/^news([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
+			[".changes", "medium-blue"]
 		]
 
 	REALbasic:
@@ -3754,7 +3755,7 @@ fileIcons:
 	"Red Hat":
 		icon: "red-hat"
 		match: [
-			[".rpm", "medium-red"]
+			[/\.rpm(macros)?$/i, "medium-red"]
 			[".spec", "dark-red"]
 		]
 
