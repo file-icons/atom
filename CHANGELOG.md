@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Go (rebranded), HoundCI (`.hound.yml`), PROS (`project.pros`)
-- **Support:** Debian (`.control`, `.dsc`) Firebase (`firestore.rules`), Readmes (`.changes`), RPM (`.rpmmacros`), Rust (`rust-toolchain`), VSCode (`.vcxproj.filters`), XML (`.admx`, `.cscfg`, `.natvis`, `.proj`, `.rdg`)
+- **Support:** Debian (`.control`, `.dsc`) Electron (`.compilerc`, `.compilerc.json`), Firebase (`firestore.rules`), Readmes (`.changes`), RPM (`.rpmmacros`), Rust (`rust-toolchain`), VSCode (`.vcxproj.filters`), XML (`.admx`, `.cscfg`, `.natvis`, `.proj`, `.rdg`)
 
 ### Changed
 - [[`#728`][]]: Replaced Go's gopher with [newly branded logo][gologo].

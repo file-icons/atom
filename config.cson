@@ -1425,6 +1425,12 @@ fileIcons:
 		colour: "medium-green"
 		scope: "text.html.js"
 
+	Electron:
+		icon: "electron"
+		match: /\.compilerc(\.json)?$/i
+		colour: "dark-blue"
+		priority: 2
+
 	Elixir:
 		icon: "elixir"
 		match: [
