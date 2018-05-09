@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.20...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support** Esoteric JavaScript extensions (`.htc`, `.jscript`, `.jse`, `.jslib`, `.jspre`, `.pac`, `.pjs`, `.snap`)
+
+
+
 [v2.1.20] - 2018-05-09
 ----------------------
 ### Added
