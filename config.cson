@@ -3070,6 +3070,12 @@ fileIcons:
 			[/^run\.n$/, "dark-orange", priority: 2]
 		]
 
+	Neo4J:
+		icon: "neo4j"
+		match: /\.cyp(her)?$/i
+		colour: "auto-blue"
+		scope: "neo4j"
+
 	NetLinx:
 		icon: "amx"
 		match: [

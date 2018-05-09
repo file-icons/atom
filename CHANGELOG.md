@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Caffe2 (`.caffe2model`, `{init,predict}_net.pb`, `{deploy,solver,train_val}.prototxt`), Dia (`.dia`), Go (rebranded), HoundCI (`.hound.yml`), NDepend (`.ndproj`, `.nproj`), PROS (`project.pros`), PullApprove (`.pullapprove.yml`), TLA+ (`.tla`), WDL (`.wdl`), WiX (`.wixproj`, `.wixobj`, `.wxs`, `.wxi`, `.wxl`)
+- **New icons:** Caffe2 (`.caffe2model`, `{init,predict}_net.pb`, `{deploy,solver,train_val}.prototxt`), Dia (`.dia`), Go (rebranded), HoundCI (`.hound.yml`), NDepend (`.ndproj`, `.nproj`), Neo4J (`.cyp`, `.cypher`), PROS (`project.pros`), PullApprove (`.pullapprove.yml`), TLA+ (`.tla`), WDL (`.wdl`), WiX (`.wixproj`, `.wixobj`, `.wxs`, `.wxi`, `.wxl`)
 - **Support:** Data (`.prototxt`, `.pbtxt`), Debian (`.control`, `.dsc`) Electron (`.compilerc`, `.compilerc.json`), Firebase (`firestore.rules`), Readmes (`.changes`), RPM (`.rpmmacros`), Rust (`rust-toolchain`), Tests (`.test`, `.test.js`), VSCode (`.vcxproj.filters`), XML (`.admx`, `.cscfg`, `.natvis`, `.proj`, `.rdg`)
 
 ### Changed
