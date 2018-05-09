@@ -4373,10 +4373,10 @@ fileIcons:
 
 	"Test, JavaScript":
 		icon: "test-js"
-		priority: 1.5
-		matchPath: true
-		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.([_ms]?js|js[bms]|es\d*)$/i
-		colour: "auto-yellow"
+		match: [
+			[/([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.([_ms]?js|js[bms]|es\d*)$/i, "auto-yellow", priority: 1.5, matchPath: true]
+			[".test.js", "auto-yellow", priority: 1.5]
+		]
 
 	"Test, Perl":
 		icon: "test-perl"
