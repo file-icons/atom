@@ -10,6 +10,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **Support** Esoteric JavaScript extensions (`.htc`, `.jscript`, `.jse`, `.jslib`, `.jspre`, `.pac`, `.pjs`, `.snap`)
+- [[`#734`][]]: Test-icons to test-files that end with `.test` or `.spec` before the file extension. Previously, this effect was limited to `.test.js` files located inside a `specs` or `tests` directory.
+
+[`#734`]: https://github.com/file-icons/atom/issues/734
 
 
 

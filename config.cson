@@ -4372,10 +4372,9 @@ fileIcons:
 
 	"Test, CoffeeScript":
 		icon: "test-coffee"
-		priority: 1.5
-		matchPath: true
-		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.(coffee|iced)$/i
+		match: /[._-](spec|test)s?\.((lit)?coffee|iced|cjsx)$/i
 		colour: "auto-maroon"
+		priority: 1.5
 
 	"Test, Generic":
 		icon: "test-generic"
@@ -4387,10 +4386,9 @@ fileIcons:
 
 	"Test, JavaScript":
 		icon: "test-js"
-		match: [
-			[/([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.([_ms]?js|js[bms]|es\d*)$/i, "auto-yellow", priority: 1.5, matchPath: true]
-			[".test.js", "auto-yellow", priority: 1.5]
-		]
+		match: /[._-](spec|test)s?\.([_ms]?js|js[bms]|es\d*)$/i
+		colour: "auto-yellow"
+		priority: 1.5
 
 	"Test, Perl":
 		icon: "test-perl"
@@ -4402,24 +4400,23 @@ fileIcons:
 
 	"Test, Python":
 		icon: "test-python"
-		priority: 1.5
-		matchPath: true
-		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1(((?!\1).)+[._-](?:spec|test)s?|(?:spec|test)s?[._-].+)\.py(3|thon)?$/i
-		colour: "dark-blue"
+		match: [
+			[/[._-](spec|test)s?\.py(3|thon)?/i, "dark-blue", priority: 1.5]
+			[/([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1(((?!\1).)+[._-](?:spec|test)s?|(?:spec|test)s?[._-].+)\.py(3|thon)?$/i, "dark-blue", priority: 1.5, matchPath: true]
+		]
 
 	"Test, React":
 		icon: "test-react"
 		priority: 1.5
-		matchPath: true
-		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.(jsx|react\.js)$/i
+		match: /[._-](spec|test)s?\.(jsx|react\.js)$/
 		colour: "auto-blue"
 
 	"Test, Ruby":
 		icon: "test-ruby"
-		priority: 2
-		matchPath: true
-		match: /([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.rb$/i
-		colour: "auto-red"
+		match: [
+			[/[._-](spec|test)s?\.(rb|ruby)$/i, "auto-red", priority: 2]
+			[/([\\\x2F])(t|tests?|specs?)\1+(?:(?!\1).)*\.(rb|ruby)$/, "auto-red", priority: 2, matchPath: true]
+		]
 
 	"Test, TypeScript":
 		icon: "test-ts"
