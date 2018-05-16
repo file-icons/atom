@@ -702,7 +702,8 @@ fileIcons:
 			[".w", "medium-maroon"]
 			[".nc", "dark-blue"]
 			[".upc", "medium-cyan"]
-			[".xpm", "medium-green"]
+			[".xbm", "medium-orange", alias: "X BitMap"]
+			[".xpm", "medium-green", alias: "X PixMap"]
 		]
 
 	"C++":
