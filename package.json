@@ -13,18 +13,19 @@
 	},
 	"atomTestRunner": "atom-mocha",
 	"dependencies": {
-		"atom-fs": "v0.1.4",
 		"alhadis.utils": "v0.1.3",
+		"atom-fs": "v0.1.4",
+		"lru-cache": "^4.1.3",
 		"micromatch": "*",
 		"print": ">=v1.1.0"
 	},
 	"devDependencies": {
-		"atom-mocha": ">=v2.0.5",
-		"get-options": "*",
+		"atom-mocha": "^2.0.5",
 		"coffee-script": "*",
+		"get-options": "*",
 		"rimraf": "*",
-		"unzip": "*",
-		"tmp": "*"
+		"tmp": "*",
+		"unzip": "*"
 	},
 	"providedServices": {
 		"file-icons.element-icons": {
