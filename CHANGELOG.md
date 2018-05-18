@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.20...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.21...HEAD
 
 
-[Unpublished]
+[v2.1.21] - 2018-05-18
 ----------------------
 ### Added
 - **Support** C (`.xbm`, `.xpm`), Configs (`fontforge/hotkeys/*`), JavaScript (`.htc`, `.jscript`, `.jse`, `.jslib`, `.jspre`, `.pac`, `.pjs`, `.snap`), Maps (`.cidmap`)
@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [[`#661`][]]: Serialised storage state growing without bound
 
+[v2.1.21]: https://github.com/file-icons/atom/releases/tag/v2.1.21
 [`#661`]: https://github.com/file-icons/atom/issues/661
 [`#734`]: https://github.com/file-icons/atom/issues/734
 
