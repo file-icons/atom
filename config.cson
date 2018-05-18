@@ -1066,6 +1066,7 @@ fileIcons:
 			[/^buildozer\.spec$/i, "dark-blue", priority: 2]
 			[/config|settings|option|pref/i, null, priority: 0]
 			[/\/dev[-\w]+\/([^\/]+\/)*(DESC|Foundry|download|symbolmap)(\.in|\.proto)?$/, "dark-green", matchPath: true, priority: 1.5]
+			[/[\/\\]fontforge[\/\\]hotkeys[\/\\][^\/\\]+/i, "dark-blue", matchPath: true, priority: 0.75, scope: /fontforge.hotkeys/i]
 			[/\.git[\/\\](config|info[\/\\]\w+)$/, "dark-red", matchPath: true]
 			[/(^|[\/\\])\.ssh[\/\\]config$/, "dark-blue", matchPath: true, priority: 1.5]
 			[/^\/(private\/)?etc\/([^/]+\/)*[^/]*\.(cf|conf|ini)(\.default)?$/i, "dark-orange", matchPath: true]
@@ -2680,6 +2681,16 @@ fileIcons:
 			[/([\\\/])(?:man(\w+)\1[^\\\/]+\.\2|(?:tmac|eqnchar)\.d\1(?:ms\.)?[^\\\/.]+(?:\.in)?)$/, "dark-green", matchPath: true]
 		]
 
+	Map:
+		icon: "sourcemap"
+		priority: 2
+		match: [
+			[".css.map", "medium-blue"]
+			[".js.map", "auto-yellow"]
+			[".cidmap", "medium-orange", "cidmap"]
+			[".map", "dark-blue", priority: 0.5]
+		]
+
 	Mapbox:
 		icon: "mapbox"
 		scope: "mss"
@@ -4135,15 +4146,6 @@ fileIcons:
 		match: [
 			[/\.(sma|sp)$/i, "auto-yellow", scope: "sp", alias: "sourcemod"]
 			[".inc", "medium-green"]
-		]
-
-	"Source Map":
-		icon: "sourcemap"
-		priority: 2
-		match: [
-			[".css.map", "medium-blue"]
-			[".js.map", "auto-yellow"]
-			[".map", "dark-blue", priority: 0.5]
 		]
 
 	Spacemacs:

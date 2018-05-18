@@ -9,9 +9,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support** C (`.xbm`, `.xpm`), Esoteric JavaScript extensions (`.htc`, `.jscript`, `.jse`, `.jslib`, `.jspre`, `.pac`, `.pjs`, `.snap`)
+- **Support** C (`.xbm`, `.xpm`), Configs (`fontforge/hotkeys/*`), JavaScript (`.htc`, `.jscript`, `.jse`, `.jslib`, `.jspre`, `.pac`, `.pjs`, `.snap`), Maps (`.cidmap`)
 - [[`#734`][]]: Test-icons to test-files that end with `.test` or `.spec` before the file extension. Previously, this effect was limited to `.test.js` files located inside a `specs` or `tests` directory.
 
+### Fixed
+- [[`#661`][]]: Serialised storage state growing without bound
+
+[`#661`]: https://github.com/file-icons/atom/issues/661
 [`#734`]: https://github.com/file-icons/atom/issues/734
 
 
