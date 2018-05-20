@@ -1634,7 +1634,7 @@ fileIcons:
 	"Font, Bitmap":
 		icon: "font-bitmap"
 		match: [
-			[/\.psfu?$/i, "medium-cyan", signature: /^\x72\xB5\x4A\x86/]
+			[/\.psfu?$/i, "medium-cyan", signature: /^\x72\xB5\x4A\x86|^6\x04/]
 			[".pcf", "medium-orange", signature: /^\x01FCP/]
 			[".psftx", "dark-blue"]
 			[".bdf", "medium-red"]
