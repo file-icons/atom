@@ -6,6 +6,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.21...HEAD
 
 
+Unpublished
+----------------------
+### Added
+- [[`#39`][]]: Support for [Styled Components][]
+- Signature-support for version 1 PS Screen Fonts
+- Troubleshooting docs to explain [`#739`][].
+
+[Styled Components]: https://github.com/styled-components
+[`#39`]:  https://github.com/file-icons/source/issues/39
+[`#739`]: https://github.com/file-icons/atom/issues/739
+
+
+
 [v2.1.21] - 2018-05-18
 ----------------------
 ### Added
