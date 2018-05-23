@@ -4255,6 +4255,16 @@ fileIcons:
 		match: ".strings"
 		colour: "medium-red"
 
+	StyledComponent:
+		icon: "nailpolish"
+		priority: 2
+		match: [
+			[".sc.js", "medium-yellow", scope: /^styled$/]
+			[".sc.jsx", "auto-blue"]
+			[".sc.ts", "medium-blue"]
+			[".sc.tsx", "light-blue"]
+		]
+
 	Stylelint:
 		icon: "stylelint"
 		priority: 2

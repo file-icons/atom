@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Unpublished
 ----------------------
 ### Added
+- **Support:** Styled Components (`.sc.js`, `.sc.jsx`, `.sc.ts`, `.sc.tsx`)
 - [[`#39`][]]: Support for [Styled Components][]
 - Signature-support for version 1 PS Screen Fonts
 - Troubleshooting docs to explain [`#739`][].
