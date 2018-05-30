@@ -2473,7 +2473,7 @@ fileIcons:
 	KitchenCI:
 		icon: "kitchenci"
 		priority: 2
-		match: /^\.?kitchen\.ya?ml$/i
+		match: /^\.?kitchen(\.[-\w]*)*\.ya?ml$/i
 		colour: "medium-green"
 
 	Kivy:
