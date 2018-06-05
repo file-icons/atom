@@ -2671,15 +2671,28 @@ fileIcons:
 	"Manual Page":
 		icon: "manpage"
 		match: [
-			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|pic|roff?|tmac|tmac-u|tr|troff(rc)?)$/i
+			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|pic|roff?|tmac|tmac-u|tr|troff)$/i
 				"dark-green"
 				scope: /\.[gtn]?roff$/i
 				alias: /^([gtn]?roff|man(page|doc)?|mdoc)$/i
 				interpreter: /man|mandoc|([gnt]|dit)?roff/i
-				signature: /^\.TH[ \t]+(?:\S+)|^'\\" [tre]+(?=\s|$)|^\.so[ \t]+man(\w+)\/.+\.\1(?=\s|$)|^\.(EQ|PS|cstart)\n|^\x27{3}\t\\\x22 /]
+				signature: /// ^
+					( '\\"\ [tre]+(?=\s|$)
+					| \.TH[\ \t]+(?:\S+)
+					| \.so[\ \t]+man(\w+)/.+\.\1($|\s)
+					| \.(EQ|PS|cstart)\n
+					| ('+\t?|\.\t)\\"\s
+					) ///m]
 			[/\.(rnh|rno|run|runoff)$/i, "dark-maroon", "runoff"]
+			[/(^|\.)((troff|eqn)rc(-end)?)$/i, "dark-green"]
 			[/^tmac\.|^(mmn|mmt|toc\.entries)$/i, "dark-green", priority: 2]
-			[/([\\\/])(?:man(\w+)\1[^\\\/]+\.\2|(?:tmac|eqnchar)\.d\1(?:ms\.)?[^\\\/.]+(?:\.in)?)$/, "dark-green", matchPath: true]
+			[///
+				(\\|/)
+				(?: man(\w+)\1[^\\/]+\.\2
+				| (?:tmac|eqnchar)\.d\1(?:ms\.)?[^\\/.]+(?:\.in)?
+				| picasso\1(?:defs\.\w+|disclaimer)
+				)$
+			///, "dark-green", matchPath: true]
 		]
 
 	Map:
