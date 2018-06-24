@@ -2938,9 +2938,10 @@ fileIcons:
 
 	MJML:
 		icon: "mjml"
-		match: ".mjml"
-		scope: "mjml"
-		colour: "medium-red"
+		match: [
+			[".mjml", "medium-red", "mjml"]
+			[".mjmlslim", "medium-orange"]
+		]
 
 	MkDocs:
 		icon: "book-alt"
