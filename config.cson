@@ -2146,6 +2146,7 @@ fileIcons:
 			[".html.eex", "medium-purple"]
 			[".jsp", "medium-purple", scope: "jsp", alias: /^(jsp|Java\s*Server\s*Pages?)$/i]
 			[".kit", "medium-green"]
+			[".isml", "medium-blue", "isml"]
 			[".latte", "medium-red", "latte"]
 			[".phtml", "dark-blue"]
 			[".shtml", "medium-cyan"]
