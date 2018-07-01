@@ -1565,6 +1565,18 @@ fileIcons:
 		match: ".fan"
 		colour: "medium-blue"
 
+	FASTA:
+		icon: "dna"
+		match: [
+			[/\.(fasta|fas?|seq|fsa)$/i, "medium-purple", "fasta"]
+			[/\.(fastq|fq)$/i, "medium-green", "fastq"]
+			[/\.(faa|mpfa)$/i, "medium-orange"]
+			[".fna", "medium-pink"]
+			[".ffn", "medium-red"]
+			[".frn", "medium-blue"]
+			[".sam", "dark-yellow"]
+		]
+
 	FBX:
 		icon: "fbx"
 		match: ".fbx"
@@ -2795,6 +2807,11 @@ fileIcons:
 			[".mel", "dark-blue"]
 			[/\.mcf[ip]$/i, "dark-purple"]
 		]
+
+	MDX:
+		icon: "mdx"
+		match: ".mdx"
+		colour: "medium-orange"
 
 	MediaWiki:
 		icon: "mediawiki"
