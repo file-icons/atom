@@ -1653,6 +1653,8 @@ fileIcons:
 			[".fnt", "medium-blue"]
 			[".fon", "dark-red"]
 			[".snf", "dark-orange"]
+			[".flf", "medium-red", signature: /^flf/, alias: "FIGlet font file"]
+			[".tlf", "medium-orange", signature: /^tlf/, alias: "TOIlet font file"]
 		]
 
 	FontForge:
