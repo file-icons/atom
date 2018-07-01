@@ -10,10 +10,13 @@ Unpublished
 ----------------------
 ### Added
 - **New icons:** FASTA (`.fasta`, `.fa`, `.fastq`, `.fq`, `.fna`, `.faa`, `.ffn`, `.sam`), MDX (`.mdx`)
-- **Support:** HTML (`*.isml`), KitchenCI (`.kitchen.*.yml`), Manpages (`troffrc`, `eqnrc`), MJML (`.mjmlslim`), Styled Components (`.sc.js`, `.sc.jsx`, `.sc.ts`, `.sc.tsx`)
+- **Support:** HTML (`*.isml`), Inkscape (`.inx`), KitchenCI (`.kitchen.*.yml`), Manpages (`troffrc`, `eqnrc`), MJML (`.mjmlslim`), Styled Components (`.sc.js`, `.sc.jsx`, `.sc.ts`, `.sc.tsx`)
 - [[`#39`][]]: Support for [Styled Components][]
 - Signature-support for version 1 PS Screen Fonts
 - Troubleshooting docs to explain [`#739`][].
+
+### Changed
+- `.inx` extension now associated with Inkscape, not InDesign
 
 [Styled Components]: https://github.com/styled-components
 [`#39`]:  https://github.com/file-icons/source/issues/39

@@ -231,7 +231,6 @@ fileIcons:
 			[".indl", "medium-purple"]
 			[".indt", "dark-purple"]
 			[".indb", "dark-blue"]
-			[".inx", "dark-purple"]
 			[".idml", "dark-pink"]
 		]
 
@@ -2275,6 +2274,11 @@ fileIcons:
 			[".ni", "medium-blue", scope: /\.inform-?7?$/i, alias: "i7"]
 			[".i7x", "dark-blue"]
 		]
+
+	Inkscape:
+		icon: "inkscape"
+		match: ".inx"
+		colour: "dark-purple"
 
 	"Inno Setup":
 		icon: "inno"
