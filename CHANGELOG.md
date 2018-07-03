@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.21...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.22...HEAD
 
 
-Unpublished
+[v2.1.22] - 2018-07-03
 ----------------------
 ### Added
 - **New icons:** FASTA (`.fasta`, `.fa`, `.fastq`, `.fq`, `.fna`, `.faa`, `.ffn`, `.sam`), MDX (`.mdx`)
@@ -18,6 +18,7 @@ Unpublished
 ### Changed
 - `.inx` extension now associated with Inkscape, not InDesign
 
+[v2.1.22]: https://github.com/file-icons/atom/releases/tag/v2.1.22
 [Styled Components]: https://github.com/styled-components
 [`#39`]:  https://github.com/file-icons/source/issues/39
 [`#739`]: https://github.com/file-icons/atom/issues/739
