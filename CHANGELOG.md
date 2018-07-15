@@ -6,6 +6,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.22...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- [[`#748`][]]: Significantly better support for [Webpack configs][], which no longer require `config` or `conf` to be part of the filename.
+
+[Webpack configs]: https://webpack.js.org/guides/production/
+[`#748`]: https://github.com/file-icons/atom/issues/748
+
+
+
 [v2.1.22] - 2018-07-03
 ----------------------
 ### Added
