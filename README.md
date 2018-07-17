@@ -260,10 +260,18 @@ fileIcon.onDestroy(() => disposable.dispose());
 ```
 
 
+Backers
+------------------------------------------------------------------------------------------
+If you enjoy these icons, help support the project by [becoming a backer][20]. Huge thanks
+to our current backers for their generous support:
+
+<a title="Tipe" href="https://tipe.io/"><img alt="Tipe" height="32" src="https://camo.githubusercontent.com/cc8c116a0174ba6f6884fda5415ccd232173d0c7/68747470733a2f2f63646e2e746970652e696f2f746970652f746970652d3130323478313032342e706e67"/></a>
+
+
 Acknowledgements
 ------------------------------------------------------------------------------------------
-Originally based on [sommerper/filetype-color][8], but now sporting a shiny new file-icons
-API in `v2` thanks to [Alhadis][11]! Also thanks to all the [contributors][9].
+`v1` was originally based on [sommerper/filetype-color][8]. `v2` was completely rewritten.
+Both versions owe their success to innumerable [contributions][9] from the Atom community.
 
 
 [Referenced links]: ____________________________________________________
@@ -284,4 +292,5 @@ API in `v2` thanks to [Alhadis][11]! Also thanks to all the [contributors][9].
 [17]: https://atom.io/packages/linter-solidity
 [18]: https://atom.io/packages/language-solidity
 [19]: https://github.com/file-icons/atom/issues/708#issuecomment-366959765
+[20]: https://opencollective.com/file-icons/#support
 [v2.0]: https://github.com/file-icons/atom/releases/tag/v2.0.0
