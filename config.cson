@@ -298,8 +298,18 @@ fileIcons:
 	Ansible:
 		icon: "ansible"
 		priority: 2
-		match: /(^|\.)ansible(\.ya?ml)?$/i
-		colour: "dark-blue"
+		match: [
+			[/(^|\.)ansible(\.ya?ml)?$/i, "dark-cyan", scope: /^source\.ansible([.-]advanced)?$/i]
+			[/([\\/])roles\1[^\\/]+\1(?:tasks|handlers)\1.*\.ya?ml$/i, "dark-cyan", matchPath: true]
+			[/([\\/])(?:group_vars|host_vars)\1.*\.ya?ml$/i, "dark-cyan", matchPath: true]
+		]
+
+	"Ansible Vault":
+		icon: "lock"
+		priority: 2
+		match: /(^|\.)vault\.ya?ml$/i
+		signature: /^\$ANSIBLE_VAULT;/;
+		colour: "dark-cyan"
 
 	"ANSI Weather":
 		icon: "sun"
