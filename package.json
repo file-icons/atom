@@ -13,7 +13,6 @@
 	},
 	"atomTestRunner": "atom-mocha",
 	"dependencies": {
-		"alhadis.utils": "v0.1.3",
 		"atom-fs": "v0.1.4",
 		"lru-cache": "^4.1.3",
 		"micromatch": "*",
