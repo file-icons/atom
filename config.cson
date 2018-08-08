@@ -4056,6 +4056,12 @@ fileIcons:
 			[".slk", "medium-cyan"]
 		]
 
+	Serverless:
+		icon: "serverless"
+		match: /(^|\.)serverless\.ya?ml$/i
+		colour: "medium-red"
+		priority: 2
+
 	"Service Fabric":
 		icon: "sf"
 		match: ".sfproj"

@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **New icons:** Serverless (`serverless.yml`)
 - [[`#748`][]]: Significantly better support for [Webpack configs][], which no longer require `config` or `conf` to be part of the filename.
 
 [Webpack configs]: https://webpack.js.org/guides/production/
