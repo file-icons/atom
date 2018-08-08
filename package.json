@@ -15,8 +15,7 @@
 	"dependencies": {
 		"atom-fs": "v0.1.4",
 		"lru-cache": "^4.1.3",
-		"micromatch": "*",
-		"print": ">=v1.1.0"
+		"micromatch": "*"
 	},
 	"devDependencies": {
 		"atom-mocha": "^2.0.5",
