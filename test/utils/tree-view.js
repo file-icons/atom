@@ -1,6 +1,6 @@
 "use strict";
 
-const {findBasePath} = require("alhadis.utils");
+const {findBasePath} = require("../../lib/utils.js");
 const {isAbsolute, join, sep} = require("path");
 let entries = [];
 

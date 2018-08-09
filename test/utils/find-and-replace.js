@@ -1,6 +1,6 @@
 "use strict";
 
-const {isRegExp, wait} = require("alhadis.utils");
+const {isRegExp, wait} = require("../../lib/utils.js");
 let activation = null;
 
 module.exports = {
