@@ -4994,8 +4994,3 @@ fileIcons:
 		icon: "zimpl"
 		match: /\.(zimpl|zmpl|zpl)$/i
 		colour: "medium-orange"
-
-
-# Local Variables:
-# atom-auto-compile: lib/icons/.icondb.js
-# End:

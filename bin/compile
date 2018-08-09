@@ -1,153 +1,105 @@
 #!/usr/bin/env node
 "use strict";
 
-// Called from Atom
-if(process.connected && "function" === typeof global.emit){
-	module.exports = (source, target) => {
-		const path = require("path");
-		const fs = require("fs");
-		
-		let CoffeeScript = null;
-		let IconCompiler = null;
-		let sourceData   = null;
-		
-		/* ERROR: NPM modules not installed */
-		try{ CoffeeScript = require("coffee-script"); }
-		catch(e){ die(0x40, e); }
-		
-		/* ERROR: Package source files not found */
-		try{
-			const {join, resolve} = path;
-			const pieces = "../lib/icons/icon-compiler.js".split(/\//);
-			const pathTo = resolve(join(__dirname, ...pieces));
-			IconCompiler = require(pathTo);
-		} catch(e){ die(0x41, e); }
-		
-		/* ERROR: Source file not found or inaccessible */
-		try{ sourceData = fs.readFileSync(source); }
-		catch(e){ die(0x42, e); }
-		
-		/* ERROR: Target path not readable or writable */
-		try{ fs.closeSync(fs.openSync(target, "a+")); }
-		catch(e){ die(0x43, e); }
-		
-		/* ERROR: Badly-formed CoffeeScript source */
-		try{ sourceData = CoffeeScript.eval(sourceData.toString()); }
-		catch(e){ die(0x44, e); }
-		
-		const result = IconCompiler.compileConfigData(sourceData);
-		fs.writeFileSync(target, result);
-		global.emit("compile:done");
-		
-		function die(code, error = {}){
-			console.error(error);
-			process.exit(code);
-		}
-	};
+const fs           = require("fs");
+const path         = require("path");
+const getOpts      = require("get-options");
+const IconCompiler = require("../lib/icons/icon-compiler.js");
+const {options, argv} = getOpts(process.argv.slice(2), {
+	"-a, --auto": "",
+	"-h, -?, --help": "",
+});
+
+if(options.help){
+	printHelp();
+	process.exit(0);
 }
 
-// Executed from command-line
-else{
-	const fs           = require("fs");
-	const path         = require("path");
-	const getOpts      = require("get-options");
-	const IconCompiler = require("../lib/icons/icon-compiler.js");
-	const {options, argv} = getOpts(process.argv.slice(2), {
-		"-a, --auto": "",
-		"-h, -?, --help": "",
-	});
-	
-	if(options.help){
-		printHelp();
-		process.exit(0);
-	}
-	
-	const unrecognisedOption = argv.find(a => /^-/.test(a));
-	if(unrecognisedOption){
-		process.stderr.write(makeSpiffy("Unknown option: ") + unrecognisedOption + "\n");
-		printHelp(true);
-		process.exit(1);
-	}
-	
-	if(options.auto)
-		new Promise((resolve, reject) => {
-			const inputPath = path.resolve(__dirname, "..", "config.cson");
-			fs.readFile(inputPath, (error, data) => error
-				? reject(error)
-				: resolve(data.toString()));
-		}).then(data => {
-			const outputData = IconCompiler.compileConfigData(data, true);
-			const outputPath = path.resolve(__dirname, "..", "lib", "icons", ".icondb.js");
-			return new Promise((resolve, reject) => {
-				fs.writeFile(outputPath, outputData, error => {
-					error ? reject(error) : resolve();
-				});
-			});
-		}).catch(error => {
-			console.error(error);
-			process.exit(1);
-		});
-	
-	else if(!argv[0] && process.stdin.isTTY){
-		printHelp(true);
-		process.exit(1);
-	}
-	
-	else new Promise((resolve, reject) => {
-		if(!process.stdin.isTTY){
-			let input = "";
-			process.stdin.setEncoding("UTF8");
-			process.stdin.on("readable", () => {
-				const chunk = process.stdin.read();
-				null !== chunk ? input += chunk : resolve(input);
-			})
-		}
-		else fs.readFile(argv[0], (error, data) => error
+const unrecognisedOption = argv.find(a => /^-/.test(a));
+if(unrecognisedOption){
+	process.stderr.write(makeSpiffy("Unknown option: ") + unrecognisedOption + "\n");
+	printHelp(true);
+	process.exit(1);
+}
+
+if(options.auto)
+	new Promise((resolve, reject) => {
+		const inputPath = path.resolve(__dirname, "..", "config.cson");
+		fs.readFile(inputPath, (error, data) => error
 			? reject(error)
 			: resolve(data.toString()));
 	}).then(data => {
-		const output = IconCompiler.compileConfigData(data, true);
-		process.stdout.write(output);
+		const outputData = IconCompiler.compileConfigData(data, true);
+		const outputPath = path.resolve(__dirname, "..", "lib", "icons", ".icondb.js");
+		return new Promise((resolve, reject) => {
+			fs.writeFile(outputPath, outputData, error => {
+				error ? reject(error) : resolve();
+			});
+		});
 	}).catch(error => {
 		console.error(error);
 		process.exit(1);
 	});
-	
-	
-	function printHelp(short = false){
-		if(short){
-			const usage = "Usage: compile [--auto] [--help] input.cson > output.js\n";
-			process.stderr.write(makeSpiffy(usage));
-			return;
-		}
-		const help = `
-			Usage: compile [-a|--auto] [-h|-?|--help] <input>
-			
-			Examples:
-				compile config.cson
-				compile < config.cson > output.js
-				compile ../config.cson > ../lib/icons/.icondb.js
-				compile --auto # Shortcut to recompile package's config`
-			.replace(/^\n+/, "")
-			.replace(/\t+/gm, "")
-			.replace(/^(?=compile)/gm, "    ")
-			+ "\n";
-		process.stderr.write(makeSpiffy(help));
+
+else if(!argv[0] && process.stdin.isTTY){
+	printHelp(true);
+	process.exit(1);
+}
+
+else new Promise((resolve, reject) => {
+	if(!process.stdin.isTTY){
+		let input = "";
+		process.stdin.setEncoding("UTF8");
+		process.stdin.on("readable", () => {
+			const chunk = process.stdin.read();
+			null !== chunk ? input += chunk : resolve(input);
+		});
 	}
-	
-	
-	function makeSpiffy(input){
-		if(!process.stderr.isTTY)
-			return input;
-		
-		const bold   = "\x1B[1m";
-		const plain  = "\x1B[0m";
-		const italic = "\x1B[4m";
-		
-		return input
-			.replace(/^([^:]+:\s+)/gm, `${bold}$1${plain}`)
-			.replace(/(\s+|\||\[)(-\?|-{1,2}\w+[-\w]*)(?=[\s|\]]|$)/g, `$1${bold}$2${plain}`)
-			.replace(/<([-\w]+)>/g, `<${italic}$1${plain}>`)
-			.replace(/(\s+)(\S+\.(?:cson|js)\b)/g, `$1${italic}$2${plain}`)
+	else fs.readFile(argv[0], (error, data) => error
+		? reject(error)
+		: resolve(data.toString()));
+}).then(data => {
+	const output = IconCompiler.compileConfigData(data, true);
+	process.stdout.write(output);
+}).catch(error => {
+	console.error(error);
+	process.exit(1);
+});
+
+
+function printHelp(short = false){
+	if(short){
+		const usage = "Usage: compile [--auto] [--help] input.cson > output.js\n";
+		process.stderr.write(makeSpiffy(usage));
+		return;
 	}
+	const help = `
+		Usage: compile [-a|--auto] [-h|-?|--help] <input>
+		
+		Examples:
+			compile config.cson
+			compile < config.cson > output.js
+			compile ../config.cson > ../lib/icons/.icondb.js
+			compile --auto # Shortcut to recompile package's config`
+		.replace(/^\n+/, "")
+		.replace(/\t+/gm, "")
+		.replace(/^(?=compile)/gm, "    ")
+		+ "\n";
+	process.stderr.write(makeSpiffy(help));
+}
+
+
+function makeSpiffy(input){
+	if(!process.stderr.isTTY)
+		return input;
+	
+	const bold   = "\x1B[1m";
+	const plain  = "\x1B[0m";
+	const italic = "\x1B[4m";
+	
+	return input
+		.replace(/^([^:]+:\s+)/gm, `${bold}$1${plain}`)
+		.replace(/(\s+|\||\[)(-\?|-{1,2}\w+[-\w]*)(?=[\s|\]]|$)/g, `$1${bold}$2${plain}`)
+		.replace(/<([-\w]+)>/g, `<${italic}$1${plain}>`)
+		.replace(/(\s+)(\S+\.(?:cson|js)\b)/g, `$1${italic}$2${plain}`);
 }
