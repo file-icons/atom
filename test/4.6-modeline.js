@@ -120,7 +120,7 @@ describe("Modelines", () => {
 			FuzzyFinder.entries["subdir/abc124"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc125"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc126"].should.have.classes("default-icon");
-			await wait(300);
+			await wait(500);
 			FuzzyFinder.entries["subdir/abc123"].should.have.classes("emacs-icon medium-purple");
 			FuzzyFinder.entries["subdir/abc124"].should.have.classes("apl-icon dark-cyan");
 			FuzzyFinder.entries["subdir/abc125"].should.have.classes("manpage-icon dark-green");

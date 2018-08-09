@@ -362,7 +362,7 @@ async function setup(name, opts = {}){
  * @return {Promise}
  */
 function unzip(from, to){
-	const unzip = require("unzip");
+	const unzip = require("unzipper");
 	return new Promise(done => {
 		fs.createReadStream(from)
 			.pipe(unzip.Extract({path: to}))

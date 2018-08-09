@@ -11,10 +11,9 @@ module.exports = {
 	get entries(){
 		const entries = [];
 		const workspace = atom.views.getView(atom.workspace);
-		for(const item of workspace.querySelectorAll(".results-view li.path[data-path]")){
-			const pathDetails = item.querySelector(".path-details");
-			const name = pathDetails.querySelector(".path-name").textContent;
-			const icon = pathDetails.querySelector(".icon");
+		for(const item of workspace.querySelectorAll(".results-view .path-row[data-file-path]")){
+			const name = item.querySelector(".path-name").textContent;
+			const icon = item.querySelector(".icon");
 			entries.push(item);
 			Object.defineProperty(entries, name.replace(/\\/g, "/"), {value: icon});
 		}

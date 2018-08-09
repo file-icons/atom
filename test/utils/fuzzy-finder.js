@@ -56,5 +56,5 @@ async function filter(query){
 	const {selectListView} = getView();
 	selectListView.refs.queryEditor.setText(query);
 	await selectListView.update({maxResults: null});
-	await wait(100);
+	await wait(300);
 }

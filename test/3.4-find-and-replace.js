@@ -1,6 +1,6 @@
 "use strict";
 
-const {assertIconClasses, resetOptions, setTheme} = require("./utils");
+const {assertIconClasses, resetOptions, setTheme, wait} = require("./utils");
 const FindAndReplace  = require("./utils/find-and-replace.js");
 const Options         = require("../lib/options.js");
 
@@ -109,6 +109,7 @@ describe("Find-and-replace", () => {
 			it("uses no colours if colours are disabled", async () => {
 				await FindAndReplace.search("23");
 				Options.get("coloured").should.be.true;
+				await wait(100);
 				FindAndReplace.entries["la.tex"].should.have.classes("tex-icon dark-blue");
 				FindAndReplace.entries["la.tex"].should.not.have.class("medium-blue");
 				FindAndReplace.entries["subfolder/script.js"].should.have.classes("js-icon dark-yellow");
