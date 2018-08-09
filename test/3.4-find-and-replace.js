@@ -7,7 +7,7 @@ const Options         = require("../lib/options.js");
 
 describe("Find-and-replace", () => {
 	beforeEach(async () =>
-		await FindAndReplace.activation);
+		FindAndReplace.activation);
 
 	before(() => {
 		resetOptions();

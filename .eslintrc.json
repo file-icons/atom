@@ -20,11 +20,20 @@
 		"sourceType": "module"
 	},
 	"rules": {
+		"eqeqeq": [
+			"error",
+			"smart"
+		],
+		"eol-last": [
+			"error",
+			"always"
+		],
 		"indent": [
-			"warn",
+			"error",
 			"tab",
 			{
 				"ignoreComments": true,
+				"VariableDeclarator": 0,
 				"SwitchCase": 1
 			}
 		],
@@ -32,6 +41,13 @@
 			"error",
 			"unix"
 		],
+		"no-fallthrough": [
+			"error",
+			{"commentPattern": "[Ff]alls?[-\\s]?through"}
+		],
+		"no-return-await": "error",
+		"no-case-declarations": 0,
+		"no-cond-assign": 0,
 		"no-console": 0,
 		"no-empty": 0,
 		"quotes": [
@@ -40,12 +56,17 @@
 			{"avoidEscape": true}
 		],
 		"semi": [
-			"warn",
+			"error",
 			"always"
 		],
 		"spaced-comment": [
 			"error",
 			"always"
+		],
+		"yoda": [
+			"error",
+			"always",
+			{"onlyEquality": true}
 		]
 	}
 }

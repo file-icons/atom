@@ -72,7 +72,7 @@ module.exports = {
 	 */
 	select(path = null){
 		if(!this.view) return;
-		(!path || path === ".")
+		(!path || "." === path)
 			? this.view.deselect(this.view.getSelectedEntries())
 			: this.view.selectEntryForPath(path);
 	},
