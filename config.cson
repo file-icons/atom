@@ -249,6 +249,11 @@ fileIcons:
 			[".psq", "medium-purple"]
 		]
 
+	"Affinity Designer":
+		icon: "affinity"
+		match: ".afdesign"
+		colour: "medium-blue"
+
 	Alex:
 		icon: "alex"
 		match: [
@@ -2188,6 +2193,7 @@ fileIcons:
 		icon: "hy"
 		scope: "hy"
 		alias: "hylang"
+		interpreter: "hy"
 		match: ".hy"
 		colour: "dark-blue"
 
@@ -2221,7 +2227,7 @@ fileIcons:
 		match: [
 			[/\.a?png$/i, "medium-orange", signature: /^.PNG\r\n\x1A\n/]
 			[".gif", "medium-yellow", signature: /^GIF8[97]a/]
-			[".jpg", "medium-green", signature: /^\xFF\xD8\xFF[\xDB\xE0\xE1]|(JFIF|Exif)\0|^\xCF\x84\x01|^\xFF\xD8.+\xFF\xD9$/]
+			[/\.jpe?g$/i, "medium-green", signature: /^\xFF\xD8\xFF[\xDB\xE0\xE1]|(JFIF|Exif)\0|^\xCF\x84\x01|^\xFF\xD8.+\xFF\xD9$/]
 			[".ico", "medium-blue", signature: /^\0{2}\x01\0/]
 			[".webp", "dark-blue", signature: /^RIFF.{4}WEBPVP8/]
 			[".bmp", "medium-red", signature: /^BM/]
@@ -2272,6 +2278,13 @@ fileIcons:
 			[/\.(wmf|emf|wmz|apm)$/i, "medium-red", signature: /^[\x01\x02]\0\t\0|^×ÍÆ\x9A/]
 			[".wdp", "dark-red"]
 			[".xwd", "dark-purple"]
+
+			# Pixelmator's native formats
+			[".pxm", "medium-orange"]
+			[".pxb", "medium-red"]
+			[".pxg", "auto-cyan"]
+			[".pxls", "medium-pink"]
+			[".pxs", "medium-blue"]
 		]
 
 	Imba:
@@ -2569,6 +2582,13 @@ fileIcons:
 		match: [
 			[".lean", "dark-purple", "lean"]
 			[".hlean", "dark-red"]
+		]
+
+	Lektor:
+		icon: "lektor"
+		match: [
+			[".lr", "dark-purple"]
+			[".lektorproject", "medium-orange"]
 		]
 
 	Lerna:
@@ -3028,6 +3048,16 @@ fileIcons:
 			[".mod", "medium-blue", scope: /(^|\.)modula-?2(\.|$)/i]
 			[".def", "medium-green"]
 			[".m2", "medium-red"]
+		]
+
+	"Modula-3":
+		icon: "modula3"
+		match: [
+			[".i3", "medium-blue", scope: /(^|\.)modula-?3(\.|$)/i]
+			[".ig", "medium-green"]
+			[".m3", "dark-blue"]
+			[".mg", "dark-green"]
+			[/^m3(makefile|overrides)$/i, "medium-red", "quake"]
 		]
 
 	Moment:
@@ -3540,6 +3570,15 @@ fileIcons:
 		icon: "pickle"
 		match: ".pkl"
 		colour: "dark-cyan"
+
+	"PICO-8":
+		icon: "pico8"
+		match: ".p8"
+		colour: "medium-red"
+		alias: /^pico\W8$/i
+		interpreter: "pico-8"
+		signature: /^pico-8 cartridge \/\/ http:\/\/www\.pico-8\.com$/
+		scope: "p8"
 
 	Pipenv:
 		icon: "pipenv"

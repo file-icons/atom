@@ -9,8 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Serverless (`serverless.yml`)
-- **Support:** Ansible (`*/roles/*/{tasks,handlers}/*.yml`, `/{group,host}_vars/*.yml`)
+- **New icons:** Affinity Designer (`.afdesign`), Lektor (`.lr`, `.lektorproject`), Modula-3/Quake (`.i3`, `.ig`, `.m3`, `.mg`, `m3makefile`, `m3overrides`), PICO-8 (`.p8`), Serverless (`serverless.yml`)
+- **Support:** Ansible (`*/roles/*/{tasks,handlers}/*.yml`, `/{group,host}_vars/*.yml`), Images (`*.jpeg`, `.pxm`, `.pxb`, `.pxg`, `.pxls`, `.pxs`)
 - [[`#748`][]]: Significantly better support for [Webpack configs][], which no longer require `config` or `conf` to be part of the filename.
 
 [Webpack configs]: https://webpack.js.org/guides/production/
