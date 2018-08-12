@@ -253,6 +253,7 @@ fileIcons:
 		icon: "affinity"
 		match: ".afdesign"
 		colour: "medium-blue"
+		signature: /^\0\xFFKA\n\0\0\0nsrP#Inf/
 
 	Alex:
 		icon: "alex"
@@ -2475,10 +2476,10 @@ fileIcons:
 
 	Junos:
 		icon: "junos"
-		match: ".jos"
-		colour: "medium-cyan"
-		alias: /^(Juniper\W*)Jun\s*os(\W*Config)?$/i
-		scope: "junos"
+		match: [
+			[".jos", "medium-cyan", scope: "junos", alias: /^(Juniper\W*)Jun\s*os(\W*Config)?$/i]
+			[".slax", "medium-blue", "slax"]
+		]
 
 	"Jupyter Notebook":
 		icon: "jupyter"
