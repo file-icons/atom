@@ -3,16 +3,17 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.22...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.23...HEAD
 
 
-[Unpublished]
+[v2.1.23]
 ----------------------
 ### Added
 - **New icons:** Affinity Designer (`.afdesign`), Lektor (`.lr`, `.lektorproject`), Modula-3/Quake (`.i3`, `.ig`, `.m3`, `.mg`, `m3makefile`, `m3overrides`), PICO-8 (`.p8`), Serverless (`serverless.yml`)
 - **Support:** Ansible (`*/roles/*/{tasks,handlers}/*.yml`, `/{group,host}_vars/*.yml`), Junos (`*.slax`), Images (`.jpeg`, `.pxm`, `.pxb`, `.pxg`, `.pxls`, `.pxs`)
 - [[`#748`][]]: Significantly better support for [Webpack configs][], which no longer require `config` or `conf` to be part of the filename.
 
+[v2.1.23]: https://github.com/file-icons/atom/releases/tag/v2.1.23
 [Webpack configs]: https://webpack.js.org/guides/production/
 [`#748`]: https://github.com/file-icons/atom/issues/748
 
