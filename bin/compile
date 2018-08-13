@@ -21,6 +21,13 @@ if(unrecognisedOption){
 	process.exit(1);
 }
 
+// Bail out if needed dependencies are missing
+if(!fs.existsSync(path.resolve(__dirname, "..", "node_modules", "coffee-script"))){
+	process.stderr.write("devDependencies are missing. Run `apm install file-icons`, then try again\n");
+	process.exit(1);
+}
+
+
 // No arguments passed or input piped through; recompile package config automatically
 if(!argv[0] && process.stdin.isTTY)
 	new Promise((resolve, reject) => {
