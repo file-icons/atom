@@ -3,19 +3,10 @@ Adding support for a new filetype
 
 Refer to [`config.cson`][1] for instructions on defining a new icon-to-filetype mapping.
 
-Before editing the config, make sure you've installed the devDependencies:
-
-	apm install file-icons
-
-You're also encouraged to run package specs, particularly if you've changed existing icons.
-
-**NOTE:**  
-Changes to the config require a compilation step. The package does this automatically,
-but the results won't be visible until the window's been reloaded. Remember to include
-both [`config.cson`][1] and [`lib/icons/.icondb.js`][2] in your pull request.
-
-If the latter isn't being updated, please [file an issue][3].
-
+Changes to the config require a compilation step. If you're submitting them through GitHub,
+you can ignore this (maintainers will handle this). If you've linked a fork of this package
+locally, you'll need to run [`bin/compile`][7] before your changes become visible in your
+workspace.
 
 
 Adding new icons to the package
@@ -56,3 +47,4 @@ Preserve the existing format so readers can grep what they're looking for when s
 [4]: https://github.com/file-icons/source
 [5]: https://github.com/file-icons/source/issues/new
 [6]: CHANGELOG.md
+[7]: https://github.com/file-icons/atom/blob/master/bin/compile
