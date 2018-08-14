@@ -3,14 +3,15 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.23...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.24...HEAD
 
 
-[Unpublished]
+[v2.1.24]
 ----------------------
 ### Fixed
 - [[`#753`][]]: Startup breakage for users running Atom 1.23.3
 
+[v2.1.24]: https://github.com/file-icons/atom/releases/tag/v2.1.24
 [`#753`]: https://github.com/file-icons/atom/issues/753#issuecomment-412749410
 
 
