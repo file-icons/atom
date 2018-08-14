@@ -6,6 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.23...HEAD
 
 
+[Unpublished]
+----------------------
+### Fixed
+- [[`#753`][]]: Startup breakage for users running Atom 1.23.3
+
+[`#753`]: https://github.com/file-icons/atom/issues/753#issuecomment-412749410
+
+
+
 [v2.1.23]
 ----------------------
 ### Added
