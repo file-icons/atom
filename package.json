@@ -9,7 +9,7 @@
 	"homepage": "https://github.com/file-icons/atom",
 	"license": "MIT",
 	"engines": {
-		"atom": ">=1.23.1"
+		"atom": ">=1.25.0"
 	},
 	"atomTestRunner": "atom-mocha",
 	"dependencies": {

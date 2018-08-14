@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.24...HEAD
 
 
+[Unpublished]
+----------------------
+### Changed
+- Increased minimum required Atom version to v1.25.0
+
+
+
 [v2.1.24]
 ----------------------
 ### Fixed
