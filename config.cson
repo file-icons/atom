@@ -1261,6 +1261,7 @@ fileIcons:
 			[".schema", "dark-blue", priority: 0.25]
 			[".syntax", "medium-blue"]
 			[".webmanifest", "medium-blue"]
+			[/\.yas(nippet)?$/i, "medium-green", alias: /(YA)?Snippet/i, scope: /^source\.yasnippet$/i]
 			[/^pkginfo$/i, "medium-blue"]
 			[/^(mime\.types|fstab)$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
