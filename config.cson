@@ -1081,6 +1081,7 @@ fileIcons:
 			[/^\.?XCompose$/, "medium-cyan", "xcompose"]
 			[/^buildozer\.spec$/i, "dark-blue", priority: 2]
 			[/config|settings|option|pref/i, null, priority: 0]
+			[".flc", "medium-green", alias: "FIGlet control", scope: /^source\.figlet-control$/i, signature: /^flc2a/]
 			[/\/dev[-\w]+\/([^\/]+\/)*(DESC|Foundry|download|symbolmap)(\.in|\.proto)?$/, "dark-green", matchPath: true, priority: 1.5]
 			[/[\/\\]fontforge[\/\\]hotkeys[\/\\][^\/\\]+/i, "dark-blue", matchPath: true, priority: 0.75, scope: /fontforge.hotkeys/i]
 			[/\.git[\/\\](config|info[\/\\]\w+)$/, "dark-red", matchPath: true]

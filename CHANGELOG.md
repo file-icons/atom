@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Data (`.yasnippet`, `.yas`), Readmes (`FAQ`, `*.faq`)
+- **Support:** Data (`.yasnippet`, `.yas`), INI (`.flc`), Readmes (`FAQ`, `*.faq`)
 
 ### Changed
 - Increased minimum required Atom version to v1.25.0
