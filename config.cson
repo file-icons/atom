@@ -3652,6 +3652,7 @@ fileIcons:
 			[".eps", "medium-orange"]
 			[".pfa", "dark-blue"]
 			[".afm", "medium-green", signature: /^\s*StartFontMetrics\s+(\d+\.\d+)/]
+			[".gsf", "dark-orange"]
 		]
 
 	"POV-Ray SDL":
