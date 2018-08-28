@@ -306,7 +306,8 @@ fileIcons:
 		priority: 2
 		match: [
 			[/(^|\.)ansible(\.ya?ml)?$/i, "dark-cyan", scope: /^source\.ansible([.-]advanced)?$/i]
-			[/([\\/])roles\1[^\\/]+\1(?:tasks|handlers)\1.*\.ya?ml$/i, "dark-cyan", matchPath: true]
+			[/([\\/])roles\1[^\\/]+\1(?:tasks|handlers|tests)\1.*\.ya?ml$/i, "dark-cyan", matchPath: true]
+			[/([\\/])roles\1[^\\/]+\1(?:defaults|vars|meta)\1.*\.ya?ml$/i, "light-cyan", matchPath: true]
 			[/([\\/])(?:group_vars|host_vars)\1.*\.ya?ml$/i, "dark-cyan", matchPath: true]
 		]
 
