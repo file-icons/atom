@@ -1537,7 +1537,7 @@ fileIcons:
 	ESDoc:
 		icon: "esdoc"
 		priority: 2
-		match: /^\.?esdoc\.json$/i
+		match: /^\.?esdoc\.js(on)?$/i
 		colour: "medium-red"
 
 	ESLint:
