@@ -1082,7 +1082,7 @@ fileIcons:
 			[/^\.?XCompose$/, "medium-cyan", "xcompose"]
 			[/^buildozer\.spec$/i, "dark-blue", priority: 2]
 			[/config|settings|option|pref/i, null, priority: 0]
-			[".flc", "medium-green", alias: "FIGlet control", scope: /^source\.figlet-control$/i, signature: /^flc2a/]
+			[".flc", "medium-green", alias: "FIGlet control", scope: /^source\.figctrl$/i, signature: /^flc2a/]
 			[/\/dev[-\w]+\/([^\/]+\/)*(DESC|Foundry|download|symbolmap)(\.in|\.proto)?$/, "dark-green", matchPath: true, priority: 1.5]
 			[/[\/\\]fontforge[\/\\]hotkeys[\/\\][^\/\\]+/i, "dark-blue", matchPath: true, priority: 0.75, scope: /fontforge.hotkeys/i]
 			[/\.git[\/\\](config|info[\/\\]\w+)$/, "dark-red", matchPath: true]
@@ -1264,6 +1264,8 @@ fileIcons:
 			[".syntax", "medium-blue"]
 			[".webmanifest", "medium-blue"]
 			[/\.yas(nippet)?$/i, "medium-green", alias: /(YA)?Snippet/i, scope: /^source\.yasnippet$/i]
+			[/(^|\.)fonts\.(dir|scale|alias)$/i, "medium-red", scope: /^source\.fontdir$/i]
+			[/(^|\.)encodings\.dir$/i, "medium-orange"]
 			[/^pkginfo$/i, "medium-blue"]
 			[/^(mime\.types|fstab)$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
@@ -1672,8 +1674,8 @@ fileIcons:
 			[".fnt", "medium-blue"]
 			[".fon", "dark-red"]
 			[".snf", "dark-orange"]
-			[".flf", "medium-red", signature: /^flf/, alias: "FIGlet font file"]
-			[".tlf", "medium-orange", signature: /^tlf/, alias: "TOIlet font file"]
+			[".flf", "medium-red", signature: /^flf/, alias: /FIG(let|font)/i, scope: /^source\.figfont$/i]
+			[".tlf", "medium-orange", signature: /^tlf/, alias: /\bTOIlet(\s*font\b)?/i]
 		]
 
 	FontForge:
