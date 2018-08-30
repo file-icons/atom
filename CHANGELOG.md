@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Ansible (`*/roles/*/{defaults,vars,tests,meta}/*.yml`), ESDoc (`esdoc.js`) Data (`.yasnippet`, `.yas`), INI (`.flc`), PostScript (`.gsf`), Readmes (`FAQ`, `*.faq`)
+- **Support:** Ansible (`*/roles/*/{defaults,vars,tests,meta}/*.yml`), Data (`.yasnippet`, `.yas`, `figmagic`), ESDoc (`esdoc.js`), INI (`.flc`), PostScript (`.gsf`), Readmes (`FAQ`, `*.faq`)
 
 ### Changed
 - Increased minimum required Atom version to v1.25.0
