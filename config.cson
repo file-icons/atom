@@ -307,16 +307,17 @@ fileIcons:
 		match: [
 			[/(^|\.)ansible(\.ya?ml)?$/i, "dark-cyan", scope: /^source\.ansible([.-]advanced)?$/i]
 			[/([\\/])roles\1[^\\/]+\1(?:tasks|handlers|tests)\1.*\.ya?ml$/i, "dark-cyan", matchPath: true]
-			[/([\\/])roles\1[^\\/]+\1(?:defaults|vars|meta)\1.*\.ya?ml$/i, "light-cyan", matchPath: true]
-			[/([\\/])(?:group_vars|host_vars)\1.*\.ya?ml$/i, "dark-cyan", matchPath: true]
+			[/([\\/])roles\1[^\\/]+\1(?:defaults|vars|meta)\1.*\.ya?ml$/i, "dark-blue", matchPath: true]
+			[/([\\/])(?:group_vars|host_vars)\1.*\.ya?ml$/i, "dark-blue", matchPath: true]
 		]
 
 	"Ansible Vault":
 		icon: "lock"
-		priority: 2
-		match: /(^|\.)vault\.ya?ml$/i
+		priority: 4
+		match: /(^|.*(\.|-|\/))vault\.ya?ml$$/i
+		matchPath: true
 		signature: /^\$ANSIBLE_VAULT;/;
-		colour: "dark-cyan"
+		colour: "dark-blue"
 
 	"ANSI Weather":
 		icon: "sun"
