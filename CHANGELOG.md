@@ -26,7 +26,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-[v2.1.24]
+[v2.1.24] - 2018-08-14
 ----------------------
 ### Fixed
 - [[`#753`][]]: Startup breakage for users running Atom 1.23.3
@@ -36,7 +36,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-[v2.1.23]
+[v2.1.23] - 2018-08-13
 ----------------------
 ### Added
 - **New icons:** Affinity Designer (`.afdesign`), Lektor (`.lr`, `.lektorproject`), Modula-3/Quake (`.i3`, `.ig`, `.m3`, `.mg`, `m3makefile`, `m3overrides`), PICO-8 (`.p8`), Serverless (`serverless.yml`)
