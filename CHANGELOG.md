@@ -14,6 +14,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Increased minimum required Atom version to v1.25.0
 
+### Fixed
+- [[`#754`][]]: Exception thrown from nulled service disposable
+
+[`#754`]: https://github.com/file-icons/atom/issues/754
+
 
 
 [v2.1.24]
