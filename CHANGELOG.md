@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Increased minimum required Atom version to v1.25.0
+- Upgraded dependencies to [`atom-fs@0.1.6`][] and [`mapped-disposable@1.0.2`][]
 
 ### Fixed
 - [[`#721`][]]: Exception thrown when registering symbolic links
@@ -20,6 +21,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [`#721`]: https://github.com/file-icons/atom/issues/721
 [`#754`]: https://github.com/file-icons/atom/issues/754
+[`atom-fs@0.1.6`]: https://github.com/file-icons/Atom-FS/releases/tag/v0.1.6
+[`mapped-disposable@1.0.2`]: https://github.com/file-icons/MappedDisposable/releases/tag/v1.0.2
 
 
 
