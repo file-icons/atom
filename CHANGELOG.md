@@ -15,8 +15,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Increased minimum required Atom version to v1.25.0
 
 ### Fixed
+- [[`#721`][]]: Exception thrown when registering symbolic links
 - [[`#754`][]]: Exception thrown from nulled service disposable
 
+[`#721`]: https://github.com/file-icons/atom/issues/721
 [`#754`]: https://github.com/file-icons/atom/issues/754
 
 
