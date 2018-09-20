@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.24...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.25...HEAD
 
 
-[Unpublished]
+[v2.1.25] - 2018-09-21
 ----------------------
 ### Added
 - **Support:** Ansible (`*/roles/*/{defaults,vars,tests,meta}/*.yml`), Data (`.yasnippet`, `.yas`, `figmagic`), ESDoc (`esdoc.js`), INI (`.flc`), PostScript (`.gsf`), Readmes (`FAQ`, `*.faq`)
@@ -19,6 +19,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#721`][]]: Exception thrown when registering symbolic links
 - [[`#754`][]]: Exception thrown from nulled service disposable
 
+[v2.1.25]: https://github.com/file-icons/atom/releases/tag/v2.1.25
 [`#721`]: https://github.com/file-icons/atom/issues/721
 [`#754`]: https://github.com/file-icons/atom/issues/754
 [`atom-fs@0.1.6`]: https://github.com/file-icons/Atom-FS/releases/tag/v0.1.6
