@@ -2125,9 +2125,10 @@ fileIcons:
 
 	"Hashicorp Configuration Language":
 		icon: "hashicorp"
-		scope: /(^|\.)(hcl|hashicorp)(\.|$)/i
-		match: ".hcl"
-		colour: "dark-purple"
+		match: [
+			[".hcl", "dark-purple", scope: /(^|\.)(hcl|hashicorp)(\.|$)/i]
+			[".workflow", "medium-cyan"]
+		]
 
 	Haskell:
 		icon: "haskell"

@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** MarkdownLint (`.markdownlint`, `.markdownlintrc.*`)
+- **Support:** HCP (`.workflow`), MarkdownLint (`.markdownlint`, `.markdownlintrc.*`)
 
 
 
