@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.25...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support:** MarkdownLint (`.markdownlint`, `.markdownlintrc.*`)
+
+
+
 [v2.1.25] - 2018-09-21
 ----------------------
 ### Added

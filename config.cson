@@ -2779,7 +2779,7 @@ fileIcons:
 	MarkdownLint:
 		icon: "markdownlint"
 		match: [
-			[".markdownlintrc", "dark-green", interpreter: "mdl"]
+			[/^\.markdownlint/i, "dark-green", interpreter: "mdl", priority: 2]
 			[/^\.?mdlrc(\.style)?\.rb$/i, "medium-red"]
 			[/^\.?mdlrc$/i, "dark-cyan"]
 		]
