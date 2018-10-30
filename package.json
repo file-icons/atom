@@ -28,7 +28,7 @@
 		"unzipper": "^0.9.2"
 	},
 	"scripts": {
-		"lint": "eslint . && coffeelint -q config.cson",
+		"lint": "npx eslint . && npx coffeelint -q config.cson",
 		"test": "atom -t ./test/"
 	},
 	"providedServices": {
