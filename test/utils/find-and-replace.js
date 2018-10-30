@@ -57,7 +57,7 @@ module.exports = {
 			? view.findEditor.getModel()
 			: view.findEditor;
 		editor.setText(string);
-		view.model.search(string, paths, "", {caseSensitive, useRegex});
+		await view.model.search(string, paths, "", {caseSensitive, useRegex});
 		
 		const uri = "atom://find-and-replace/project-results";
 		const openOpts = {activateItem: true, activatePane: true};

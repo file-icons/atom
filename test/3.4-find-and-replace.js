@@ -14,14 +14,14 @@ describe("Find-and-replace", () => {
 		FindAndReplace.activate();
 	});
 	
-	after(() => {
+	after(async () => {
 		Options.set("coloured", true);
 		Options.set("colourChangedOnly", false);
 		const workspace = atom.views.getView(atom.workspace);
 		workspace.style.height = null;
 		const {projectFindPanel} = FindAndReplace.main;
 		if(projectFindPanel.visible)
-			atom.commands.dispatch(workspace, "project-find:toggle");
+			await atom.commands.dispatch(workspace, "project-find:toggle");
 	});
 	
 	when("opening the project-find view", () => {
@@ -109,7 +109,7 @@ describe("Find-and-replace", () => {
 			it("uses no colours if colours are disabled", async () => {
 				await FindAndReplace.search("23");
 				Options.get("coloured").should.be.true;
-				await wait(100);
+				await wait(500);
 				FindAndReplace.entries["la.tex"].should.have.classes("tex-icon dark-blue");
 				FindAndReplace.entries["la.tex"].should.not.have.class("medium-blue");
 				FindAndReplace.entries["subfolder/script.js"].should.have.classes("js-icon dark-yellow");
@@ -137,6 +137,7 @@ describe("Find-and-replace", () => {
 		when("package settings change", () => {
 			it("displays monochrome icons if colours are disabled", async () => {
 				await FindAndReplace.search(/ABC/);
+				await wait(250);
 				classes.forEach(([name, ...classes]) => {
 					const [icon, colour] = classes;
 					if(!colour) return;

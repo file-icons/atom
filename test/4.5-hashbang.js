@@ -170,7 +170,7 @@ describe("Interpreter directives", () => {
 			if(editor){
 				editor.revertToCheckpoint(checkpoint);
 				await editor.save();
-				atom.commands.dispatch(editor.editorElement, "core:close");
+				await atom.commands.dispatch(editor.editorElement, "core:close");
 			}
 		});
 		

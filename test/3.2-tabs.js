@@ -141,12 +141,12 @@ describe("Tabs", () => {
 				Options.set("tabPaneIcon", false);
 				Tabs.list[".bowerrc"].should.not.have.classes(classes);
 				
-				atom.workspace.destroyActivePaneItem();
+				await atom.workspace.destroyActivePaneItem();
 				Tabs.refresh();
 				expect(Tabs.list[".bowerrc"]).not.to.exist;
 				
 				const workspace = atom.views.getView(atom.workspace);
-				atom.commands.dispatch(workspace, "pane:reopen-closed-item");
+				await atom.commands.dispatch(workspace, "pane:reopen-closed-item");
 				await wait(100);
 				Tabs.refresh();
 				

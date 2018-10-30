@@ -74,7 +74,7 @@ describe("User-assigned grammars", () => {
 	
 	async function openGrammarSelector(){
 		const editor = atom.workspace.getActiveTextEditor();
-		atom.commands.dispatch(editor.getElement(), "grammar-selector:show");
+		await atom.commands.dispatch(editor.getElement(), "grammar-selector:show");
 		return condition(() => {
 			const selector = atom.workspace.getModalPanels().find(panel => {
 				const {element} = panel.item || {};
