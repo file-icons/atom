@@ -13,7 +13,7 @@ describe("Fuzzy-finder", () => {
 		[".bowerrc",        "primary-line file icon bower-icon"],
 		[".gitignore",      "primary-line file icon git-icon"],
 		["README.md",       "primary-line file icon book-icon"],
-		["data.json",       "primary-line file icon database-icon"],
+		["data.json",       "primary-line file icon json-icon"],
 		["image.gif",       "primary-line file icon image-icon"],
 		["la.tex",          "primary-line file icon tex-icon"],
 		["markdown.md",     "primary-line file icon markdown-icon"]
@@ -22,7 +22,7 @@ describe("Fuzzy-finder", () => {
 		[".bowerrc",        "medium-yellow"],
 		[".gitignore",      "medium-red"],
 		["README.md",       "medium-blue"],
-		["data.json",       "medium-yellow"],
+		["data.json",       "medium-cyan"],
 		["image.gif",       "medium-yellow"],
 		["la.tex",          "medium-blue"],
 		["markdown.md",     "medium-blue"]
@@ -155,7 +155,7 @@ describe("Fuzzy-finder", () => {
 					["text.txt",              base + "icon-file-text medium-blue"],
 					["la.tex",                base + "tex-icon medium-blue"],
 					["subfolder/script.js",   base + "js-icon medium-yellow"],
-					["data.json",             base + "database-icon medium-yellow"],
+					["data.json",             base + "json-icon medium-cyan"],
 					[".gitignore",            base + "git-icon medium-red"],
 					[".default-gear",         base + "gear-icon"],
 					[".default-config",       base + "config-icon"]

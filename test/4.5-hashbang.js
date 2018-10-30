@@ -205,9 +205,8 @@ describe("Interpreter directives", () => {
 	
 	when("the Fuzzy-Finder lists files which contain hashbangs", () => {
 		it("updates its icons to show the interpreter icons", async () => {
+			FuzzyFinder.close();
 			await FuzzyFinder.filter(".tho");
-			FuzzyFinder.entries["subdir/erlang.tho"]  .should.have.classes("default-icon");
-			FuzzyFinder.entries["subdir/haskell.tho"] .should.have.classes("default-icon");
 			await wait(300);
 			FuzzyFinder.entries["subdir/erlang.tho"]  .should.not  .have.classes("default-icon");
 			FuzzyFinder.entries["subdir/haskell.tho"] .should.not  .have.classes("default-icon");

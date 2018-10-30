@@ -101,7 +101,7 @@ async function condition(predicate, options = {}){
 	const start = Date.now();
 	const {
 		pollRate = 100,
-		timeoutDuration = 3000,
+		timeoutDuration = 15000,
 		timeoutMessage = "Timed out waiting for condition",
 	} = options;
 	for(;;){

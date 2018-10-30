@@ -24,7 +24,6 @@ describe("Path", () => {
 		it("starts with rules of higher priority", () => {
 			assertIconClasses(TreeView.files, [
 				[".coffee.erb.swp",          base + "binary-icon     dark-green"],
-				[".yo-rc.json",              base + "yeoman-icon     medium-cyan"],
 				["composer.json",            base + "composer-icon   medium-yellow"],
 				["Gruntfile.js",             base + "grunt-icon      medium-yellow"],
 				["Gulpfile.js",              base + "gulp-icon       medium-red"],
@@ -45,8 +44,7 @@ describe("Path", () => {
 			
 			assertIconClasses(TreeView.files, [
 				[".coffee.erb.swp",          "gear-icon coffee-icon ruby-icon"],
-				[".yo-rc.json",              "database-icon medium-yellow"],
-				["composer.json",            "database-icon"],
+				["composer.json",            "json-icon"],
 				["Gruntfile.js",             "js-icon"],
 				["Gulpfile.js",              "js-icon medium-yellow dark-yellow"],
 				["javascript.js.coffee.erb", "js-icon ruby-icon html5-icon"],
@@ -58,7 +56,7 @@ describe("Path", () => {
 				["run.n",                    "manpage-icon lisp-icon dark-green"],
 				["stylelint.config.js",      "js-icon config-icon"],
 				["ti.8xp.txt",               "icon-file-text medium-blue"],
-				["typings.json",             "database-icon"],
+				["typings.json",             "json-icon"],
 				["webpack.config.js",        "js-icon config-icon"],
 				["wercker.yml",              "database-icon"],
 				["yarn.lock",                "database-icon"]

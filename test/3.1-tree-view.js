@@ -25,7 +25,7 @@ describe("Tree-view", () => {
 		["subfolder/markup.html", "medium-orange"],
 		["subfolder/script.js",   "medium-yellow"],
 		[".gitignore",            "medium-red"],
-		["data.json",             "medium-yellow"],
+		["data.json",             "medium-cyan"],
 		["image.gif",             "medium-yellow"],
 		["markdown.md",           "medium-blue"],
 		["package.json",          "medium-red"],
@@ -41,7 +41,7 @@ describe("Tree-view", () => {
 					[".default-config", "name icon"],
 					[".default-gear",   "gear-icon"],
 					[".gitignore",      "git-icon"],
-					["data.json",       "database-icon"],
+					["data.json",       "json-icon"],
 					["image.gif",       "image-icon"],
 					["markdown.md",     "markdown-icon"],
 					["package.json",    "npm-icon"],
@@ -73,7 +73,7 @@ describe("Tree-view", () => {
 					TreeView.refresh();
 					assertIconClasses(TreeView.entries, [
 						[".gitignore",   "medium-red"],
-						["data.json",    "medium-yellow"],
+						["data.json",    "medium-cyan"],
 						["image.gif",    "medium-yellow"],
 						["markdown.md",  "medium-blue"],
 						["package.json", "medium-red"],

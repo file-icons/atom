@@ -62,21 +62,12 @@ describe("User-defined filetypes", () => {
 		});
 		
 		it("only uses icons with an assigned scope-type", () => {
-			TreeView.entries["test.stTheme"]  .should.have.classes(treeIcon + "sublime-icon  medium-orange");
 			TreeView.entries["test.tmMacro"]  .should.have.classes(treeIcon + "textmate-icon medium-maroon");
-			Tabs.list["test.stTheme"]         .should.have.classes(tabIcon  + "sublime-icon  medium-orange");
 			Tabs.list["test.tmMacro"]         .should.have.classes(tabIcon  + "textmate-icon medium-maroon");
-			atom.config.set("core.customFileTypes", {
-				"source.json": ["stTheme"],
-				"text.xml": ["tmMacro"],
-			});
-			TreeView.entries["test.stTheme"]  .should.have.classes(treeIcon + "sublime-icon  medium-orange");
+			atom.config.set("core.customFileTypes", {"text.xml": ["tmMacro"]});
 			TreeView.entries["test.tmMacro"]  .should.have.classes(treeIcon + "textmate-icon medium-maroon");
-			Tabs.list["test.stTheme"]         .should.have.classes(tabIcon  + "sublime-icon  medium-orange");
 			Tabs.list["test.tmMacro"]         .should.have.classes(tabIcon  + "textmate-icon medium-maroon");
-			TreeView.entries["test.stTheme"]  .should.not.have.classes("database-icon medium-yellow");
 			TreeView.entries["test.tmMacro"]  .should.not.have.classes("code-icon medium-blue");
-			Tabs.list["test.stTheme"]         .should.not.have.classes("database-icon medium-yellow");
 			Tabs.list["test.tmMacro"]         .should.not.have.classes("code-icon medium-blue");
 		});
 	});

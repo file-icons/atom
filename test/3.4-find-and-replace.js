@@ -30,7 +30,7 @@ describe("Find-and-replace", () => {
 			[".default-gear",         "gear-icon"],
 			["blank.file",            "default-icon"],
 			[".bowerrc",              "bower-icon",     "medium-yellow"],
-			["data.json",             "database-icon",  "medium-yellow"],
+			["data.json",             "json-icon",      "medium-cyan"],
 			["la.tex",                "tex-icon",       "medium-blue"],
 			["markdown.md",           "markdown-icon",  "medium-blue"],
 			["package.json",          "npm-icon",       "medium-red"],
