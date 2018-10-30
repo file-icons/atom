@@ -7,6 +7,7 @@ const path          = require("path");
 const {headless}    = atom.getLoadSettings();
 const {FileSystem}  = require("atom-fs");
 const Options       = require("../../lib/options.js");
+const pkgRoot       = path.join(__dirname, "..", "..");
 let tmpDir          = null;
 
 if(atom.inSpecMode()){
@@ -43,6 +44,7 @@ module.exports = {
 	getTempDir,
 	move,
 	open,
+	pkgRoot,
 	replaceText,
 	resetOptions,
 	resolvePath,

@@ -1,12 +1,12 @@
 "use strict";
 
 describe("Match strategies", function(){
-	const {setTheme} = require("./utils");
+	const {setTheme, pkgRoot} = require("./utils");
 	this.timeout(30000);
 	
 	before("Activate packages", async () => {
 		await atom.themes.activateThemes();
-		await atom.packages.activatePackage("file-icons");
+		await atom.packages.activatePackage(pkgRoot);
 		await atom.packages.activatePackage("tree-view");
 		await atom.packages.activatePackage("tabs");
 		await atom.packages.activatePackage("fuzzy-finder");
