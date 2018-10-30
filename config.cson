@@ -332,7 +332,7 @@ fileIcons:
 		priority: 4
 		match: /(^|.*(\.|-|\/))vault\.ya?ml$$/i
 		matchPath: true
-		signature: /^\$ANSIBLE_VAULT;/;
+		signature: /^\$ANSIBLE_VAULT;/
 		colour: "dark-blue"
 
 	"ANSI Weather":
@@ -3944,7 +3944,7 @@ fileIcons:
 		icon: "pros"
 		match: /^project\.pros$/i
 		colour: "medium-orange"
-		priority: 1.5;
+		priority: 1.5
 
 	Processing:
 		icon: "processing"
