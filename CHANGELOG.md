@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.26...HEAD
 
 
+[Unpublished]
+----------------------
+### Fixed
+- `linguist-language` attributes not affecting files on Windows
+
+
+
 [v2.1.26] - 2018-10-25
 ----------------------
 ### Added
