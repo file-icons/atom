@@ -135,7 +135,7 @@ describe("Interpreter directives", () => {
 	});
 
 
-	when("the hashbang is valid but matches nothing", () => {
+	unlessOnWindows(() => when("the hashbang is valid but matches nothing", () => {
 		it("shows the terminal-icon if the file is executable", () => {
 			TreeView.entries["unknown1"].should.have.classes(base + "terminal-icon medium-purple");
 		});
@@ -144,7 +144,7 @@ describe("Interpreter directives", () => {
 			TreeView.entries["unknown2"].should.have.classes(base + "default-icon");
 			TreeView.entries["unknown2"].should.not.have.classes("terminal-icon medium-purple");
 		});
-	});
+	}));
 	
 	
 	when("the file's hashbang is modified", () => {
