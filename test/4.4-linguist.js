@@ -27,7 +27,7 @@ describe("Linguist-language attributes", () => {
 		}
 		const editor = atom.workspace.getActiveTextEditor();
 		editor && revert(editor);
-		Tabs.closeAll();
+		return Tabs.closeAll();
 	});
 	
 	
@@ -111,7 +111,7 @@ describe("Linguist-language attributes", () => {
 			TreeView.refresh();
 			TreeView.entries["not-js.es"].should.have.classes(base + "erlang-icon medium-red");
 			TreeView.entries["not-js.es.swp"].should.have.classes(base + "apl-icon dark-cyan");
-			Tabs.closeAll();
+			await Tabs.closeAll();
 			
 			await open("perl/.gitattributes");
 			await replaceText(/Perl6/, "Prolog");

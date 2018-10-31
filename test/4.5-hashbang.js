@@ -53,7 +53,7 @@ describe("Interpreter directives", () => {
 	
 	after(() => {
 		FuzzyFinder.close();
-		Tabs.closeAll();
+		return Tabs.closeAll();
 	});
 	
 	beforeEach(() => TreeView.refresh());

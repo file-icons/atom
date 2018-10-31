@@ -100,11 +100,12 @@ module.exports = {
 	
 	/**
 	 * Force tree-view to display by dispatching `tree-view:show`.
+	 * @return {Promise}
 	 * @internal
 	 */
 	show(){
 		const workspace = atom.views.getView(atom.workspace);
-		atom.commands.dispatch(workspace, "tree-view:show");
+		return atom.commands.dispatch(workspace, "tree-view:show");
 	},
 };
 

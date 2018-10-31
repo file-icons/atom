@@ -11,7 +11,7 @@ describe("User-assigned grammars", () => {
 	
 	before(async () => {
 		await setup("4.7-grammar");
-		Tabs.closeAll();
+		await Tabs.closeAll();
 		await atom.packages.activatePackage("status-bar");
 		await atom.packages.activatePackage("grammar-selector");
 		await atom.packages.activatePackage("language-python");

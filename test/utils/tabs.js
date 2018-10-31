@@ -33,7 +33,7 @@ class TabsList extends Array {
 
 function closeAll(){
 	const workspace = atom.views.getView(atom.workspace);
-	atom.commands.dispatch(workspace, "tabs:close-all-tabs");
+	return atom.commands.dispatch(workspace, "tabs:close-all-tabs");
 }
 
 function getTab(paneItem){

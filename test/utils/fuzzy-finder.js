@@ -51,10 +51,10 @@ async function hide(){
 	await getVisible() && getView().toggle();
 }
 
-async function filter(query){
+async function filter(query, delay = 300){
 	await show();
 	const {selectListView} = getView();
 	selectListView.refs.queryEditor.setText(query);
 	await selectListView.update({maxResults: null});
-	await wait(300);
+	await wait(delay);
 }

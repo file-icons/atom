@@ -28,7 +28,7 @@ describe("Modelines", () => {
 	
 	after(() => {
 		FuzzyFinder.close();
-		Tabs.closeAll();
+		return Tabs.closeAll();
 	});
 	
 	
@@ -115,7 +115,7 @@ describe("Modelines", () => {
 	
 	when("the Fuzzy-Finder lists results which contain modelines", () => {
 		it("updates icons as files are scanned", async () => {
-			await FuzzyFinder.filter("abc12");
+			await FuzzyFinder.filter("abc12", 0);
 			FuzzyFinder.entries["subdir/abc123"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc124"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc125"].should.have.classes("default-icon");
