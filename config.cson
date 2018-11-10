@@ -2887,13 +2887,13 @@ fileIcons:
 		match: /\.mak?o$/i
 		colour: "dark-blue"
 
-	"Manual Page":
+	Roff:
 		icon: "manpage"
 		match: [
 			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|pic|roff?|tmac|tmac-u|tr|troff)$/i
 				"dark-green"
 				scope: /\.[gtn]?roff$/i
-				alias: /^([gtn]?roff|man(page|doc)?|mdoc)$/i
+				alias: /^([gtn]?roff|man([-_\s]?page|doc)?|mdoc)$/i
 				interpreter: /man|mandoc|([gnt]|dit)?roff/i
 				signature: /// ^
 					( '\\"\ [tre]+(?=\s|$)
@@ -3886,7 +3886,7 @@ fileIcons:
 			[".ps", "medium-red", scope: "postscript", alias: "postscr", signature: /^%!PS/]
 			[".eps", "medium-orange"]
 			[".pfa", "dark-blue"]
-			[".afm", "medium-green", signature: /^\s*StartFontMetrics\s+(\d+\.\d+)/]
+			[/\.a[fm]m$/i, "medium-green", scope: "afm", signature: /^\s*Start(Comp|Master)?FontMetrics\s+(\d+\.\d+)/]
 			[".gsf", "dark-orange"]
 		]
 
