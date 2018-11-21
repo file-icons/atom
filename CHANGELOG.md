@@ -8,6 +8,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]
 ----------------------
+### Added
+- **New icons:** Fountain (`.fountain`)
+
 ### Fixed
 - `linguist-language` attributes not affecting files on Windows
 - Signature matches missed unmarked HTML files with lengthy `<!DOCTYPE` headers
