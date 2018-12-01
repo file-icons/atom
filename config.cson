@@ -575,7 +575,7 @@ fileIcons:
 
 	Bazaar:
 		icon: "bazaar"
-		match: /^\.bzrignore$/i
+		match: ".bzrignore"
 		colour: "auto-yellow"
 
 	Bazel:
@@ -1242,7 +1242,7 @@ fileIcons:
 
 	CVS:
 		icon: "cvs"
-		match: /^\.cvsignore$/i
+		match: ".cvsignore"
 		colour: "medium-orange"
 
 	CWL:
@@ -3039,10 +3039,10 @@ fileIcons:
 	Mercurial:
 		icon: "hg"
 		match: [
-			[/^\.hgignore$/i, "medium-cyan"]
-			[/^\.?hgrc$/i, "dark-cyan"]
-			[/^\.hgsub$/i, "dark-blue"]
-			[/\.hgsubstate$/i, "medium-red"]
+			[".hgignore", "medium-cyan"]
+			[/\.?hgrc$/i, "dark-cyan"]
+			[".hgsub", "dark-blue"]
+			[".hgsubstate", "medium-red"]
 		]
 
 	Mercury:
@@ -3279,7 +3279,7 @@ fileIcons:
 
 	Monotone:
 		icon: "monotone"
-		match: /^\.mtn-ignore$/i
+		match: ".mtn-ignore"
 		colour: "dark-purple"
 
 	MoonScript:
@@ -3475,7 +3475,7 @@ fileIcons:
 	Nodemon:
 		icon: "nodemon"
 		priority: 2
-		match: /^nodemon\.json$|^\.nodemonignore$/i
+		match: /^nodemon\.json$|\.nodemonignore$/i
 		colour: "medium-green"
 
 	Nomad:
@@ -4730,7 +4730,7 @@ fileIcons:
 		colour: "medium-green"
 		match: [
 			[/^(openapi|swagger)\.(json|yaml|yml)$/i, "medium-green", priority: 2]
-			[/^.swagger-codegen-ignore$/i, "dark-green"]
+			[".swagger-codegen-ignore", "dark-green"]
 		]
 
 	Swift:
