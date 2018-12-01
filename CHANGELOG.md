@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Fountain (`.fountain`)
+- **Support:** Heroku (`.slugignore`)
 
 ### Fixed
 - `linguist-language` attributes not affecting files on Windows

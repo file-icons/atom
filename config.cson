@@ -2270,6 +2270,7 @@ fileIcons:
 		match: [
 			[/^(Proc|Apt)file$/, "medium-purple"]
 			[".buildpacks", "light-purple"]
+			[".slugignore", "dark-purple"]
 			[/^\.vendor_urls$/, "dark-purple"]
 		]
 
