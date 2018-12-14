@@ -9,8 +9,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Fountain (`.fountain`)
+- **New icons:** Caddy (new logo), Falcon (`.fal`, `.falcon`), Fountain (`.fountain`), Scilla (`.scilla`)
 - **Support:** Heroku (`.slugignore`)
+- Recognition of several `*ignore`-type files without leading dots (`dockerignore` instead of `.dockerignore`, etc)
 
 ### Fixed
 - `linguist-language` attributes not affecting files on Windows
