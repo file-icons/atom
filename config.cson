@@ -1646,6 +1646,13 @@ fileIcons:
 			[".factor-boot-rc", "medium-red"]
 		]
 
+	Falcon:
+		icon: "falcon"
+		match: /\.fal(con)?$/i
+		colour: "medium-red"
+		scope: "falcon"
+		interpreter: /^falcon$/
+
 	Fancy:
 		icon: "fancy"
 		match: [
@@ -4353,6 +4360,12 @@ fileIcons:
 			[".sld", "medium-blue"]
 			[".sps", "medium-purple"]
 		]
+
+	Scilla:
+		icon: "scilla"
+		match: ".scilla"
+		colour: "medium-orange"
+		scope: "scilla"
 
 	Scilab:
 		icon: "scilab"
