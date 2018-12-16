@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.26...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.27...HEAD
 
 
-[Unpublished]
+[v2.1.27] - 2018-12-17
 ----------------------
 ### Added
 - **New icons:** Caddy (new logo), Falcon (`.fal`, `.falcon`), Fountain (`.fountain`), Scilla (`.scilla`)
@@ -16,6 +16,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - `linguist-language` attributes not affecting files on Windows
 - Signature matches missed unmarked HTML files with lengthy `<!DOCTYPE` headers
+
+[v2.1.27]: https://github.com/file-icons/atom/releases/tag/v2.1.27
 
 
 
