@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]
 ----------------------
-- **Support:** Mocha (`.mocharc.{js,json,yml}`)
+- **Support:** Mocha (`.mocharc.{js,json,yml}`), TeX (`.pgf`, `.tikz`)
 
 
 
