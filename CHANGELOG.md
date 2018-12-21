@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.27...HEAD
 
 
+[Unpublished]
+----------------------
+- **Support:** Mocha (`.mocharc.{js,json,yml}`)
+
+
+
 [v2.1.27] - 2018-12-17
 ----------------------
 ### Added
