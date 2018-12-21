@@ -1,4 +1,4 @@
-/lib/icons/.icondb.js linguist-vendored
+/lib/icons/.icondb.js linguist-vendored -diff
 /preview.png export-ignore
 /test/ export-ignore
 
