@@ -475,6 +475,13 @@ fileIcons:
 			[/^\.rnd$/i, "dark-blue"]
 		]
 
+	Asymptote:
+		icon: "asymptote"
+		match: ".asy"
+		colour: "medium-red"
+		scope: "asymptote"
+		interpreter: "asy"
+
 	Atom:
 		icon: "atom"
 		match: /\.atomproject\.[jc]son$/i
