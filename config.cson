@@ -4314,6 +4314,12 @@ fileIcons:
 			[/^rust-toolchain$/, "medium-red"]
 		]
 
+	San:
+		icon: "san"
+		match: ".san"
+		colour: "medium-cyan"
+		scope: "san"
+
 	Safari:
 		icon: "safari"
 		generic: true
@@ -5355,8 +5361,19 @@ fileIcons:
 
 	Xcode:
 		icon: "appstore"
-		match: /\.(pbxproj|pbxuser|mode\dv3|xcplugindata|xcrequiredplugins)$/i
-		colour: "medium-blue"
+		match: [
+			[".pbxproj", "medium-blue"]
+			[".pbxuser", "medium-cyan"]
+			[".xccheckout", "medium-orange"]
+			[".xcplugindata", "dark-purple"]
+			[".xcrequiredplugins", "dark-cyan"]
+			[".xcscheme", "medium-purple"]
+			[".xcscmblueprint", "dark-blue"]
+			[".xcsettings", "medium-green"]
+			[".xcuserstate", "dark-cyan"]
+			[".xcworkspacedata", "dark-red"]
+			[/\.mode\dv3$/i, "medium-red"]
+		]
 
 	Xojo:
 		icon: "xojo"
