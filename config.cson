@@ -5241,8 +5241,8 @@ fileIcons:
 		icon: "vue"
 		scope: "vue"
 		match: [
-			["vue.config.js", "light-green"]
 			[".vue", "light-green"]
+			[/^vue\.config\.js$/i, "light-green", priority: 2]
 		]
 
 	Wallaby:
