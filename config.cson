@@ -5240,8 +5240,10 @@ fileIcons:
 	Vue:
 		icon: "vue"
 		scope: "vue"
-		match: ".vue"
-		colour: "light-green"
+		match: [
+			[".vue", "light-green"]
+			[/^vue\.config\.js$/i, "light-green", priority: 2]
+		]
 
 	Wallaby:
 		icon: "wallaby"
