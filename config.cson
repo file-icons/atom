@@ -2202,6 +2202,12 @@ fileIcons:
 			[/\.(plantuml|[ip]uml|pu)$/i, "medium-orange", alias: "PlantUML"]
 		]
 
+	Gridsome:
+		icon: "gridsome"
+		match: /\bgridsome\.config\.[jt]s$/i
+		colour: "medium-cyan"
+		priority: 2
+
 	Groovy:
 		icon: "groovy"
 		scope: "groovy"
@@ -5419,6 +5425,12 @@ fileIcons:
 		match: /\.ya?ml$/i
 		colour: "medium-red"
 
+	Yandex:
+		icon: "yandex"
+		match: /^\.yaspellerrc($|\.)|^\.yaspeller\.json$/i
+		colour: "medium-red"
+		priority: 2
+
 	YANG:
 		icon: "yang"
 		scope: "yang"
@@ -5460,6 +5472,12 @@ fileIcons:
 		icon: "zephir"
 		match: ".zep"
 		colour: "medium-pink"
+
+	Zig:
+		icon: "zig"
+		match: ".zig"
+		colour: "medium-orange"
+		scope: "zig"
 
 	Zimpl:
 		icon: "zimpl"
