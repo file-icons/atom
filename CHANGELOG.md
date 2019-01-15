@@ -3,13 +3,15 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.27...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.28...HEAD
 
 
-[Unpublished]
+[v2.1.28] - 2019-01-15
 ----------------------
 - **New icons:** Asymptote (`.asy`), Gridsome (`gridsome.config.{js,ts}`), San (`.san`), Yandex (`.yaspellerrc.*`, `.yaspeller.json`), Zig (`.zig`)
 - **Support:** Mocha (`.mocharc.{js,json,yml}`), TeX (`.pgf`, `.tikz`), Vue (`vue.config.js`), Xcode (`.xccheckout`, `.xcscheme`, `.xcscmblueprint`, `.xcsettings`, `.xcuserstate`, `.xcworkspacedata`)
+
+[v2.1.28]: https://github.com/file-icons/atom/releases/tag/v2.1.28
 
 
 
