@@ -42,7 +42,7 @@ Consult the package stylesheets to see what classes are used:
 
 #### Icon reference
 * [**File-Icons**](https://github.com/file-icons/source/blob/master/charmap.md) 
-* [**FontAwesome 4.7.0**](http://fontawesome.io/cheatsheet/)
+* [**FontAwesome 4.7.0**](https://fontawesome.com/v4.7.0/cheatsheet/)
 * [**Mfizz**](https://github.com/file-icons/MFixx/blob/master/charmap.md)
 * [**Devicons**](https://github.com/file-icons/DevOpicons/blob/master/charmap.md)
 
