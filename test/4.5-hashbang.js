@@ -207,7 +207,7 @@ describe("Interpreter directives", () => {
 		it("updates its icons to show the interpreter icons", async () => {
 			FuzzyFinder.close();
 			await FuzzyFinder.filter(".tho");
-			await wait(300);
+			await wait(600);
 			FuzzyFinder.entries["subdir/erlang.tho"]  .should.not  .have.classes("default-icon");
 			FuzzyFinder.entries["subdir/haskell.tho"] .should.not  .have.classes("default-icon");
 			FuzzyFinder.entries["subdir/erlang.tho"]  .should      .have.classes("erlang-icon medium-red");
