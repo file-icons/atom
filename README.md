@@ -271,6 +271,7 @@ If you enjoy these icons, help support the project by [becoming a backer][20]. H
 to our current backers for their generous support:
 
 <a title="Tipe" href="https://tipe.io/"><img alt="Tipe" height="32" src="https://camo.githubusercontent.com/cc8c116a0174ba6f6884fda5415ccd232173d0c7/68747470733a2f2f63646e2e746970652e696f2f746970652f746970652d3130323478313032342e706e67"/></a>
+<a title="Triplebyte" href="https://github.com/triplebyte"><img alt="Triplebyte" height="32" src="https://avatars3.githubusercontent.com/u/12144133"/></a>
 
 
 Acknowledgements
