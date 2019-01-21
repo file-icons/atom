@@ -2191,6 +2191,7 @@ fileIcons:
 		icon: "graphql"
 		match: [
 			[".graphql", "medium-pink", scope: "graphql"]
+			[".graphqls", "medium-red"]
 			[".gql", "medium-purple"]
 		]
 

@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.28...HEAD
 
 
+[Unpublished]
+----------------------
+- **Support:** GraphQL (`.graphqls`)
+
+
+
 [v2.1.28] - 2019-01-15
 ----------------------
 - **New icons:** Asymptote (`.asy`), Gridsome (`gridsome.config.{js,ts}`), San (`.san`), Yandex (`.yaspellerrc.*`, `.yaspeller.json`), Zig (`.zig`)
