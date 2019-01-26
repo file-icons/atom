@@ -3,14 +3,15 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.28...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.29...HEAD
 
 
-[Unpublished]
+[v2.1.29] - 2019-01-26
 ----------------------
 - **New icons:** Gatsby (`gatsby-*.{js,ts}`), Imba (new branding), Microsoft Project (`.mpp`, `.mpt`), Tailwind (`tailwind.{js,ts,coffee}`, `tailwind.config.{js,ts,coffee}`)
 - **Support:** 3D model (`.fnc`), Binary/Assembly (`.cnc`, `.dnc`, `.gc`, `.knc`), Bitbucket (`bitbucket-pipelines.yml`), GraphQL (`.graphqls`)
 
+[v2.1.29]: https://github.com/file-icons/atom/releases/tag/v2.1.29
 
 
 [v2.1.28] - 2019-01-15
