@@ -1869,6 +1869,12 @@ fileIcons:
 			[".tst", "medium-orange"]
 		]
 
+	Gatsby:
+		icon: "gatsby"
+		match: /^gatsby-.+\.[jt]s$/i
+		colour: "dark-purple"
+		priority: 2
+
 	GDB:
 		icon: "gdb"
 		match: [
@@ -2448,7 +2454,7 @@ fileIcons:
 	Imba:
 		icon: "imba"
 		match: ".imba"
-		colour: "medium-blue"
+		colour: "medium-yellow"
 		scope: /\.imba$/
 
 	"Inform 7":
@@ -3144,7 +3150,13 @@ fileIcons:
 			[".ppt", "dark-orange"]
 			[".pptx", "medium-red"]
 			[".potm", "medium-maroon"]
-			[".mpp", "dark-green"]
+		]
+
+	"Microsoft Project":
+		icon: "msproject"
+		match: [
+			[".mpp", "medium-green"]
+			[".mpt", "dark-green"]
 		]
 
 	"Microsoft Publisher":
@@ -4796,6 +4808,12 @@ fileIcons:
 			[/\.hgtags$|^localtags$/i, "medium-cyan"]
 			[".pid", "medium-orange"]
 		]
+
+	Tailwind:
+		icon: "tailwind"
+		match: /^\.?tailwind(\.config)?\.(m?js|ts|coffee)$/i
+		colour: "medium-cyan"
+		priority: 2
 
 	Tcl:
 		icon: "tcl"
