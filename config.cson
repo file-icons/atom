@@ -468,7 +468,7 @@ fileIcons:
 			[".lst", "medium-blue", "lst-cpu12"]
 			[/\.((c([+px]{2}?)?-?)?objdump|bsdiff|bin|dat|pak|pdb)$/i, "dark-orange"]
 			[".d-objdump", "dark-blue"]
-			[/\.gcode|\.gco/i, "medium-orange"]
+			[/\.(gco?|gcode|[cdhk]nc)$/i, "medium-orange", "g-code"]
 			[/\.rpy[bc]$/i, "medium-red"]
 			[/\.py[co]$/i, "dark-purple"]
 			[".swp", "dark-green", priority: 4]
@@ -625,6 +625,12 @@ fileIcons:
 		scope: "bison"
 		match: ".bison"
 		colour: "medium-red"
+
+	Bitbucket:
+		icon: "bitbucket"
+		match: /^bitbucket-pipelines\.ya?ml$/i
+		colour: "medium-blue"
+		priority: 2
 
 	bitHound:
 		icon: "bithound"
@@ -3258,6 +3264,7 @@ fileIcons:
 			[".tesc", "medium-green"]
 			[".tese", "medium-green"]
 			[".cginc", "dark-cyan"]
+			[".fnc", "dark-blue", alias: "QuickCAM 3D"]
 			[".stl", "dark-green"]
 			[".u3d", "medium-orange"]
 			[/\.(rviz|vcg)$/i, "dark-blue", "rviz"]

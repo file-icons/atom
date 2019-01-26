@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 - **New icons:** Gatsby (`gatsby-*.{js,ts}`), Imba (new branding), Microsoft Project (`.mpp`, `.mpt`), Tailwind (`tailwind.{js,ts,coffee}`, `tailwind.config.{js,ts,coffee}`)
-- **Support:** GraphQL (`.graphqls`)
+- **Support:** 3D model (`.fnc`), Binary/Assembly (`.cnc`, `.dnc`, `.gc`, `.knc`), Bitbucket (`bitbucket-pipelines.yml`), GraphQL (`.graphqls`)
 
 
 
