@@ -4448,6 +4448,7 @@ fileIcons:
 			[/\.(tab|tsv)$/i, "light-green"]
 			[".dif", "medium-green"]
 			[".slk", "medium-cyan"]
+			[".prn", "dark-blue"]
 		]
 
 	Serverless:
