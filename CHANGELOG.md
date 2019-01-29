@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.29...HEAD
 
 
+[Unpublished]
+----------------------
+- **Support:** Microsoft Excel (`.xla`, `.xlam`, `.xltm`, `.xltx`)
+
+
 [v2.1.29] - 2019-01-26
 ----------------------
 - **New icons:** Gatsby (`gatsby-*.{js,ts}`), Imba (new branding), Microsoft Project (`.mpp`, `.mpt`), Tailwind (`tailwind.{js,ts,coffee}`, `tailwind.config.{js,ts,coffee}`)

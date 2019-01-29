@@ -3118,6 +3118,10 @@ fileIcons:
 			[".xlsm", "medium-green"]
 			[".xlsb", "medium-red"]
 			[".xlt", "dark-cyan"]
+			[".xla", "medium-orange"]
+			[".xlam", "dark-red"]
+			[".xltm", "medium-maroon"]
+			[".xltx", "dark-maroon"]
 		]
 
 	"Microsoft InfoPath":
