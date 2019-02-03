@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]
 ----------------------
-- **Support:** Microsoft Excel (`.xla`, `.xlam`, `.xltm`, `.xltx`), Separated-value file (`.prn`)
+- **Support:** Go (`go.mod`, `go.sum`), Microsoft Excel (`.xla`, `.xlam`, `.xltm`, `.xltx`), Separated-value file (`.prn`)
 
 
 [v2.1.29] - 2019-01-26

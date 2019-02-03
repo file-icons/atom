@@ -2168,9 +2168,11 @@ fileIcons:
 
 	Go:
 		icon: "go"
-		scope: /\.go(template)?$/i
-		match: ".go"
-		colour: "medium-blue"
+		match: [
+			[".go", "medium-blue", scope: /\.go(template)?$/i]
+			[/^go\.mod$/i, "dark-blue", priority: 2]
+			[/^go\.sum$/i, "medium-green", priority: 2]
+		]
 
 	Golo:
 		icon: "golo"
