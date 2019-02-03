@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]
 ----------------------
+- **New icons:** Flutter (`.flutter-plugins`), Red (updated logo)
 - **Support:** Go (`go.mod`, `go.sum`), Microsoft Excel (`.xla`, `.xlam`, `.xltm`, `.xltx`), Package (`.packages`, `pubspec.{lock,yaml}`), Separated-value file (`.prn`)
 
 

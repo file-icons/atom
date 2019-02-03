@@ -1743,6 +1743,11 @@ fileIcons:
 			[".flux", "dark-blue"]
 		]
 
+	Flutter:
+		icon: "flutter"
+		match: ".flutter-plugins"
+		colour: "light-blue"
+
 	Font:
 		icon: "font"
 		match: [
