@@ -837,14 +837,6 @@ fileIcons:
 		match: ".ctp"
 		colour: "medium-red"
 
-	Cargo:
-		icon: "package"
-		priority: 2
-		match: [
-			["Cargo.toml", "light-orange"]
-			["Cargo.lock", "dark-orange"]
-		]
-
 	Carthage:
 		icon: "carthage"
 		match: /^Cartfile(\.|$)/
@@ -3729,6 +3721,17 @@ fileIcons:
 		match: ".p4"
 		scope: "p4"
 		colour: "dark-purple"
+
+	Package:
+		icon: "package"
+		priority: 2
+		match: [
+			["Cargo.toml", "light-orange"]
+			["Cargo.lock", "dark-orange"]
+			[".packages", "medium-green"]
+			[/^pubspec\.lock$/i, "medium-blue"]
+			[/^pubspec\.ya?ml$/i, "medium-yellow"]
+		]
 
 	Paket:
 		icon: "package"
