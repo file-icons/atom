@@ -317,6 +317,19 @@ fileIcons:
 		match: /^angular[^.]*\.js$/i
 		colour: "medium-red"
 
+	"Anime Studio":
+		icon: "animestudio"
+		priority: 0.5 # Rare
+		match: [
+			[".anme", "medium-maroon", mime: "application/x-vnd.lm_mohodoc", uses: "Text"]
+			[".anime", "medium-orange", uses: "Zip"]
+			[".animeaction", "medium-blue"]
+			[".animebrush", "medium-maroon"]
+			[".animeexport", "medium-yellow"]
+			[".animeproj", "medium-orange", priority: 1.5, uses: "JSON"]
+			[".animestyle", "medium-purple"]
+		]
+
 	Ansible:
 		icon: "ansible"
 		priority: 2
@@ -3307,6 +3320,17 @@ fileIcons:
 			[".m3", "dark-blue"]
 			[".mg", "dark-green"]
 			[/^m3(makefile|overrides)$/i, "medium-red", "quake"]
+		]
+
+	Moho:
+		icon: "moho"
+		match: [
+			[".moho", "medium-orange", uses: "Zip"]
+			[".mohoaction", "medium-blue"]
+			[".mohobrush", "medium-maroon"]
+			[".mohoexport", "medium-yellow"]
+			[".mohoproj", "medium-orange", priority: 1.5, uses: "JSON"]
+			[".mohostyle", "medium-purple"]
 		]
 
 	Moment:
