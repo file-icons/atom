@@ -2559,6 +2559,7 @@ fileIcons:
 			[".jsm", "auto-blue"]
 			[".jss", "auto-green"]
 			[/\.es\d?$/i, "auto-yellow"]
+			[".cjs", "auto-green", alias: "CommonJS"]
 			[".mjs", "auto-blue"]
 			[".sjs", "auto-pink"]
 			[".ssjs", "auto-red"]
