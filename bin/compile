@@ -7,10 +7,18 @@ const getOpts      = require("get-options");
 const IconCompiler = require("../lib/icons/icon-compiler.js");
 const {options, argv} = getOpts(process.argv.slice(2), {
 	"-h, -?, --help": "",
+	"-v, --version": "",
+	"--verbose": "",
 });
 
 if(options.help){
 	printHelp();
+	process.exit(0);
+}
+
+if(options.version){
+	const {version} = require("../package.json");
+	process.stdout.write(`v${version.replace(/^v/i, "")}\n`);
 	process.exit(0);
 }
 
@@ -29,15 +37,18 @@ if(!fs.existsSync(path.resolve(__dirname, "..", "node_modules", "coffee-script")
 
 
 // No arguments passed or input piped through; recompile package config automatically
-if(!argv[0] && process.stdin.isTTY)
+if(!argv[0] && process.stdin.isTTY){
+	debug("No arguments passed; using sane defaults");
 	new Promise((resolve, reject) => {
 		const inputPath = path.resolve(__dirname, "..", "config.cson");
+		debug(`Reading input from ${inputPath}`);
 		fs.readFile(inputPath, (error, data) => error
 			? reject(error)
 			: resolve(data.toString()));
 	}).then(data => {
 		const outputData = IconCompiler.compileConfigData(data, true);
 		const outputPath = path.resolve(__dirname, "..", "lib", "icons", ".icondb.js");
+		debug(`Writing output to ${outputPath}`);
 		return new Promise((resolve, reject) => {
 			fs.writeFile(outputPath, outputData, error => {
 				error ? reject(error) : resolve();
@@ -47,9 +58,10 @@ if(!argv[0] && process.stdin.isTTY)
 		console.error(error);
 		process.exit(1);
 	});
-
+}
 else new Promise((resolve, reject) => {
 	if(!process.stdin.isTTY){
+		debug("Reading config from standard input");
 		let input = "";
 		process.stdin.setEncoding("UTF8");
 		process.stdin.on("readable", () => {
@@ -57,10 +69,14 @@ else new Promise((resolve, reject) => {
 			null !== chunk ? input += chunk : resolve(input);
 		});
 	}
-	else fs.readFile(argv[0], (error, data) => error
-		? reject(error)
-		: resolve(data.toString()));
+	else{
+		debug(`Reading config from ${argv[0]}`);
+		fs.readFile(argv[0], (error, data) => error
+			? reject(error)
+			: resolve(data.toString()));
+	}
 }).then(data => {
+	debug("Writing result to standard output");
 	const output = IconCompiler.compileConfigData(data, true);
 	process.stdout.write(output);
 }).catch(error => {
@@ -76,7 +92,7 @@ function printHelp(short = false){
 		return;
 	}
 	const help = `
-		Usage: compile [-h|-?|--help] <input>
+		Usage: compile [-h|-?|--help] [--verbose] <input>
 		
 		Examples:
 			compile
@@ -103,4 +119,9 @@ function makeSpiffy(input){
 		.replace(/(\s+|\||\[)(-\?|-{1,2}\w+[-\w]*)(?=[\s|\]]|$)/g, `$1${bold}$2${plain}`)
 		.replace(/<([-\w]+)>/g, `<${italic}$1${plain}>`)
 		.replace(/(\s+)(\S+\.(?:cson|js)\b)/g, `$1${italic}$2${plain}`);
+}
+
+
+function debug(...args){
+	options.verbose && process.stderr.write(args.join(" ") + "\n");
 }
