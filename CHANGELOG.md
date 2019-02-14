@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 - **New icons:** Flutter (`.flutter-plugins`), Red (updated logo)
-- **Support:** Cabal (`cabal.*`, `cabal-ghcjs.project`), Go (`go.mod`, `go.sum`), JavaScript (`.cjs`), Manpage (`.3p`, `.3perl`, `.3pm`), Microsoft Excel (`.xla`, `.xlam`, `.xltm`, `.xltx`), Package (`.packages`, `pubspec.{lock,yaml}`), Separated-value file (`.prn`)
+- **Support:** Cabal (`cabal.*`, `cabal-ghcjs.project`), Go (`go.mod`, `go.sum`), JavaScript (`.cjs`), Manpage (`.3p`, `.3perl`, `.3pm`), Microsoft Excel (`.xla`, `.xlam`, `.xltm`, `.xltx`), Package (`.packages`, `pubspec.{lock,yaml}`), Separated-value file (`.prn`), Vim (`.vmb`)
 
 
 [v2.1.29] - 2019-01-26
