@@ -2250,9 +2250,11 @@ fileIcons:
 
 	Hack:
 		icon: "hack"
-		scope: "hack"
-		match: ".hh"
-		colour: "medium-orange"
+		match: [
+			[".hh", "medium-orange", scope: "hack"]
+			[".hhi", "medium-red"]
+			[".hack", "medium-yellow"]
+		]
 
 	Haml:
 		icon: "haml"
