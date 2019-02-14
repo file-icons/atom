@@ -795,9 +795,12 @@ fileIcons:
 
 	Cabal:
 		icon: "cabal"
-		scope: "cabal"
-		match: ".cabal"
-		colour: "medium-cyan"
+		match: [
+			[".cabal", "medium-cyan", scope: "cabal"]
+			[/^cabal\.(config|project)$/i, "medium-purple", priority: 2]
+			[/^cabal-ghcjs\.project$/i, "auto-yellow", priority: 2]
+			[/^cabal\../i, "medium-blue", priority: 0.75]
+		]
 
 	Caddy:
 		icon: "caddy"
