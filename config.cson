@@ -2932,7 +2932,7 @@ fileIcons:
 	Roff:
 		icon: "manpage"
 		match: [
-			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|pic|roff?|tmac|tmac-u|tr|troff)$/i
+			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|perl|pm?|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|pic|roff?|tmac|tmac-u|tr|troff)$/i
 				"dark-green"
 				scope: /\.[gtn]?roff$/i
 				alias: /^([gtn]?roff|man([-_\s]?page|doc)?|mdoc)$/i
