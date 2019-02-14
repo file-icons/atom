@@ -5216,7 +5216,6 @@ fileIcons:
 		icon: "vhdl"
 		match: [
 			[".vhdl", "dark-green", "vhdl"]
-			[".vhd", "medium-green"]
 			[".vhf", "dark-blue"]
 			[".vhi", "medium-blue"]
 			[".vho", "dark-purple"]
@@ -5250,8 +5249,14 @@ fileIcons:
 
 	VirtualBox:
 		icon: "virtualbox"
-		match: /\.vbox(-prev)?$/i
-		colour: "auto-blue"
+		match: [
+			[".ova", "medium-blue"]
+			[".ovf", "medium-purple"]
+			[".vhd", "medium-green"]
+			[".vhdx", "dark-green", signature: /^vhdxfile/]
+			[".vbox_version", "auto-blue"]
+			[/\.vbox(-prev)?$/i, "auto-blue"]
+		]
 
 	"Visual Studio":
 		icon: "vs"
