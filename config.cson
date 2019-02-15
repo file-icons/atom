@@ -896,6 +896,12 @@ fileIcons:
 		match: /^chefignore$|^(Berks|Policy)file(\.lock)?$/i
 		colour: "auto-orange"
 
+	Chocolatey:
+		icon: "chocolatey"
+		priority: 2
+		match: /^chocolatey.*\.ps1$/i
+		colour: "medium-blue"
+
 	ChucK:
 		icon: "chuck"
 		scope: "chuck"
