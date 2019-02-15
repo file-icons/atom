@@ -1,4 +1,4 @@
-@import "ui-variables";
+@import "./mixins";
 
 /*============================================================================*
 	PALETTE	
@@ -16,6 +16,7 @@
 @orange:  #d28445;
 @cyan:    #75b5aa;
 @pink:    #ff00cc;
+@grey:    #7f7f7f;
 
 
 // Red
@@ -63,36 +64,16 @@
 @light-pink: lighten(@pink, @adjust-tone);
 @dark-pink:   darken(@pink, @adjust-tone);
 
+// Grey
+@medium-grey: @grey;
+@light-grey: lighten(@grey, @adjust-tone);
+@dark-grey:   darken(@grey, @adjust-tone);
+
 
 
 /*============================================================================*
 	CSS CLASSES
 /*============================================================================*/
-@theme-colour: @tree-view-background-color;
-
-
-// Darken certain shades that're too bright in light-coloured themes
-.darken-if-needed(@colour, @amount: 25%)
-	when (lightness(@theme-colour) >= 50%) {
-		color: darken(@colour, @amount);
-	}
-
-.darken-if-needed(@colour, @amount: 25%)
-	when (lightness(@theme-colour) < 50%) {
-		color: @colour;
-	}
-
-
-// Same as above, except consider all logic inverted
-.brighten-if-needed(@colour, @amount: 25%)
-	when (lightness(@theme-colour) < 50%) {
-		color: saturate(lighten(@colour, @amount), @amount);
-	}
-.brighten-if-needed(@colour, @amount: 25%)
-	when (lightness(@theme-colour) >= 50%) {
-		color: @colour;
-	}
-
 
 .light-red:before     { color: @light-red; }
 .medium-red:before    { color: @medium-red; }
@@ -130,8 +111,6 @@
 .medium-pink:before   { color: @medium-pink; }
 .dark-pink:before     { .brighten-if-needed(@dark-pink, 5%); }
 
-
-// Utility class to provide JavaScript with a reliable brightness indicator
-.theme-colour-check{
-	background: @theme-colour;
-}
+.light-grey:before    { color: @light-grey; }
+.medium-grey:before   { color: @medium-grey; }
+.dark-grey:before     { .brighten-grey-if-needed(@dark-grey, 15%); }
