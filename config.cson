@@ -486,6 +486,10 @@ fileIcons:
 			[/\.py[co]$/i, "dark-purple"]
 			[".swp", "dark-green", priority: 4]
 			[/^\.rnd$/i, "dark-blue"]
+			[/\.PLX(COPY)?$/, "medium-blue",
+				alias: /^z\/?(OS|VM)\s*(Assembl(y|er)|PL\/?X(\s*EDL)?)$/i
+				scope: /\.zvm(asm|plx|plxedl)(\.|$)/
+				priority: 1.25]
 		]
 
 	Asymptote:
