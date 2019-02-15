@@ -2456,7 +2456,6 @@ fileIcons:
 			[".mng", "medium-orange", signature: /^.MNG\r\n\x1A\n/]
 			[".nrrd", "dark-blue"]
 			[".ora", "medium-yellow"]
-			[".pbm", "medium-pink"]
 			[".pcx", "dark-blue"]
 			[".pict", "light-purple"]
 			[".pxr", "medium-purple"]
@@ -3496,6 +3495,17 @@ fileIcons:
 		priority: 2
 		match: /^nestconfig\.json$/i
 		colour: "medium-red"
+
+	Netpbm:
+		icon: "image"
+		uses: "Text"
+		priority: 0.75 # Rare
+		match: [
+			[".pbm", "medium-pink", alias: "Portable Bitmap",  mime: "image/x‑portable‑bitmap"]
+			[".pgm", "medium-grey", alias: "Portable Graymap", mime: "image/x‑portable‑graymap"]
+			[".ppm", "dark-maroon", alias: "Portable Pixmap",  mime: "image/x‑portable‑pixmap"]
+			[".pnm", "medium-blue", alias: "Portable Anymap",  mime: "image/x‑portable‑anymap"]
+		]
 
 	NGINX:
 		icon: "nginx"
