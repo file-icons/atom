@@ -2724,6 +2724,12 @@ fileIcons:
 		colour: "dark-green"
 		scope: /^source\.kerboscript$/i
 
+	Keybase:
+		icon: "keybase"
+		match: /^keybase\.txt$/i
+		colour: "medium-blue"
+		priority: 2
+
 	Keynote:
 		icon: "keynote"
 		match: [
@@ -3303,10 +3309,10 @@ fileIcons:
 		]
 
 	Modelica:
-		icon: "circle"
+		icon: "modelica"
 		scope: /\.modelica(script)?$/i
 		match: ".mo"
-		colour: "light-red"
+		colour: "auto-red"
 
 	Modernizr:
 		icon: "modernizr"
@@ -3740,6 +3746,11 @@ fileIcons:
 		icon: "openvms"
 		match: ".hlb"
 		colour: "medium-blue"
+
+	OpenVPN:
+		icon: "openvpn"
+		match: ".ovpn"
+		colour: "medium-orange"
 
 	"Org-mode":
 		icon: "org"
