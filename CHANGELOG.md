@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.29...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.30...HEAD
 
 
-[Unpublished]
+[v2.1.30] - 2019-02-19
 ----------------------
 ### Added
 - **New icons:** AmigaOS, Anime Studio/Moho (`.anme`, `.{anime,moho}{action,brush,export,proj,style}`), Chocolatey (`chocolatey{*}.ps1`), Deno, DOSBox, DragonflyBSD, Flutter (`.flutter-plugins`), FreeDOS, illumos, Keybase (`keybase.txt`), Meson (updated logo), Modelica (`.mo`), MS-DOS, OpenBSD, OpenSolaris, OpenVPN (`.ovpn`), OS/2, pkgsrc, ReactOS, Red (updated logo), SmartOS, TempleOS
@@ -16,6 +16,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 # Changed
 - `.vhd` files now use VirtualBox icon instead of VHDL
 - Mercurial icons now use greyscale swatches
+
+[v2.1.30]: https://github.com/file-icons/atom/releases/tag/v2.1.30
 
 
 
