@@ -151,6 +151,7 @@ directoryIcons:
 	Mercurial:
 		icon: "hg"
 		match: /^\.hg$/
+		colour: "medium-grey"
 
 	NodeJS:
 		icon: "node"
@@ -3099,10 +3100,10 @@ fileIcons:
 	Mercurial:
 		icon: "hg"
 		match: [
-			[".hgignore", "medium-cyan"]
-			[/\.?hgrc$/i, "dark-cyan"]
-			[".hgsub", "dark-blue"]
-			[".hgsubstate", "medium-red"]
+			[".hgignore", "medium-grey"]
+			[/\.?hgrc$/i, "dark-grey"]
+			[".hgsub", "dark-cyan"]
+			[".hgsubstate", "medium-cyan"]
 		]
 
 	Mercury:

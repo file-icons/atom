@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # Changed
 - `.vhd` files now use VirtualBox icon instead of VHDL
+- Mercurial icons now use greyscale swatches
 
 
 
