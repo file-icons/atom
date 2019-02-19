@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.30...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **New icons:** QT (`.qml`, `.qbs`, `.qmlproject`)
+
+
+
 [v2.1.30] - 2019-02-19
 ----------------------
 ### Added

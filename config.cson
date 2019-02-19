@@ -1351,8 +1351,6 @@ fileIcons:
 			[".ejson", "dark-red"]
 			[".edn", "medium-purple"]
 			[".eam.fs", "dark-purple"]
-			[".qml", "medium-pink"]
-			[".qbs", "dark-pink"]
 			[".ston", "medium-maroon"]
 			[".ttl", "medium-cyan", scope: "turtle"]
 			[".schema", "dark-blue", priority: 0.25]
@@ -4187,6 +4185,14 @@ fileIcons:
 		match: [
 			[".qvw", "medium-green"]
 			[".qvd", "dark-green"]
+		]
+
+	QT:
+		icon: "qt"
+		match: [
+			[".qml", "medium-green", "qml"]
+			[".qmlproject", "dark-green"]
+			[".qbs", "medum-cyan"]
 		]
 
 	Quasar:
