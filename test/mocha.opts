@@ -1,5 +1,0 @@
---auto-it
---bail
---require chai/should
---slow 9999
---spec-pattern /[\\\/]\d+-\w+\.js$/
