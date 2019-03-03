@@ -273,6 +273,7 @@ to our current backers for their generous support:
 <a title="Justin Ireland" href="https://github.com/justinireland"><img alt="Justin Ireland" height="32" src="https://images.opencollective.com/proxy/images?src=https%3A%2F%2Fwww.gravatar.com%2Favatar%2Fa23264984bdeee03b97d970cd893a595%3Fdefault%3D404"/></a>
 <a title="Tipe" href="https://tipe.io/"><img alt="Tipe" height="32" src="https://camo.githubusercontent.com/cc8c116a0174ba6f6884fda5415ccd232173d0c7/68747470733a2f2f63646e2e746970652e696f2f746970652f746970652d3130323478313032342e706e67"/></a>
 <a title="Triplebyte" href="https://github.com/triplebyte"><img alt="Triplebyte" height="32" src="https://avatars3.githubusercontent.com/u/12144133"/></a>
+<a title="TakeShape" href="https://github.com/takeshape"><img alt="TakeShape" height="32" src="https://avatars0.githubusercontent.com/u/20775272"/></a>
 
 
 Acknowledgements
