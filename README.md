@@ -158,19 +158,6 @@ If restarting doesn't help, your stylesheet probably needs updating. See below.
 
 
 
-<a name="the-tree-view-keeps-opening-by-itself"></a>
-#### The tree-view keeps opening by itself when opening a project window:
-
-1. Open the dev-tools: **View** → **Developer** → **Toggle Developer Tools**
-2. Click the **Console** tab
-3. Run the following line, then restart Atom:
-
-~~~js
-atom.config.set("file-icons.revealTreeView", false);
-~~~
-
-
-
 <a name="my-stylesheet-has-errors-since-updating"></a>
 #### My stylesheet has errors since updating:
 As of [v2.0][], classes are used for displaying icons instead of mixins. Delete lines like these from your stylesheet:
