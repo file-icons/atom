@@ -1,2 +1,16 @@
 .DS_Store
+Thumbs.db
+Desktop.ini
 node_modules
+._*
+.\#*
+\#*\#
+*~
+*.lock
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+/test.mjs
+/test.js
+package-lock.json
