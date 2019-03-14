@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** QT (`.qml`, `.qbs`, `.qmlproject`)
+- **New icons:** Gravit Designer (`.gvdesign`), QT (`.qml`, `.qbs`, `.qmlproject`)
 
 
 

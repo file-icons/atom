@@ -2239,6 +2239,12 @@ fileIcons:
 			[/\.(plantuml|[ip]uml|pu)$/i, "medium-orange", alias: "PlantUML"]
 		]
 
+	"Gravit Designer":
+		icon: "gvdesign"
+		match: ".gvdesign"
+		colour: "medium-yellow"
+		uses: "Zip" # Gzipped JSON
+
 	Gridsome:
 		icon: "gridsome"
 		match: /\bgridsome\.config\.[jt]s$/i
