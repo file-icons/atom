@@ -1,7 +1,8 @@
 "use strict";
 
+require("mocha-when")({lowercaseIt: false});
+
 module.exports = {
-	autoIt: true,
 	bail: true,
 	require: ["chai/register-should"],
 	slow: 9999,
