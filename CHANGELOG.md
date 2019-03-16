@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.31...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **New icons:** Digdag (`.dig`)
+
+
+
 [v2.1.31] - 2019-03-16
 ----------------------
 ### Added

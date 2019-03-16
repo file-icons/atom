@@ -1444,6 +1444,12 @@ fileIcons:
 		match: ".diff"
 		colour: "medium-orange"
 
+	Digdag:
+		icon: "digdag"
+		match: ".dig"
+		colour: "medium-orange"
+		uses: "YAML"
+
 	"DNS Zone / CNAME":
 		icon: "earth"
 		match: [
