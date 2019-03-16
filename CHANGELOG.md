@@ -3,15 +3,17 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.30...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.31...HEAD
 
 
-[Unpublished]
+[v2.1.31] - 2019-03-16
 ----------------------
 ### Added
 - **New icons:** ElementaryOS, Gravit Designer (`.gvdesign`), Manjaro, OpenIndiana, QT (`.qml`, `.qbs`, `.qmlproject`), Xubuntu, ZorinOS
 - **Directory support:** Cabal (`.cabal`), CPAN (`.cpan`), Deno (`.deno`), Vagrant (`.vagrant.d`)
 - **File support:** Sass (`.sassrc`, `.sassrc.js`)
+
+[v2.1.31]: https://github.com/file-icons/atom/releases/tag/v2.1.31
 
 
 
