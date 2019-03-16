@@ -94,6 +94,11 @@ directoryIcons:
 		match: /^bower[-_]components$/
 		colour: ["medium-yellow", "medium-orange"]
 
+	Cabal:
+		icon: "cabal"
+		match: /^\.cabal$/i
+		colour: "medium-cyan"
+
 	Chef:
 		icon: "chef"
 		match: /\.chef$/
@@ -102,10 +107,20 @@ directoryIcons:
 		icon: "circleci"
 		match: /^\.circleci$/
 
+	CPAN:
+		icon: "cpan"
+		match: /^\.cpan$/i
+		colour: "medium-blue"
+
 	CVS:
 		icon: "cvs"
 		match: /^CVS$/
 		colour: "medium-orange"
+
+	Deno:
+		icon: "deno"
+		match: ".deno"
+		colour: "dark-purple"
 
 	Docker:
 		icon: "docker"
@@ -172,8 +187,10 @@ directoryIcons:
 
 	Vagrant:
 		icon: "vagrant"
-		match: ".vagrant"
-		colour: "medium-cyan"
+		match: [
+			[".vagrant", "medium-cyan"]
+			[".vagrant.d", "dark-cyan"]
+		]
 
 	"Visual Studio":
 		icon: "vs"
