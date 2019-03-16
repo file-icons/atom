@@ -4466,6 +4466,7 @@ fileIcons:
 		match: [
 			[".scss", "light-pink", "scss"]
 			[".sass", "dark-pink", "sass"]
+			[/^\.sassrc(\.js)?$/i, "auto-yellow", priority: 2, uses: "JavaScript"]
 		]
 
 	SBT:

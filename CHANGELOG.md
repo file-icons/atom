@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Gravit Designer (`.gvdesign`), QT (`.qml`, `.qbs`, `.qmlproject`)
+- **Support:** Sass (`.sassrc`, `.sassrc.js`)
 
 
 
