@@ -1490,6 +1490,11 @@ fileIcons:
 		match: /^dojo\.js$/i
 		colour: "light-red"
 
+	DOSBox:
+		icon: "dosbox"
+		match: /^dosbox(\b|_).*(\.conf|pref\w*)$/i
+		colour: "medium-orange"
+
 	Download:
 		icon: "download"
 		match: ".crdownload"

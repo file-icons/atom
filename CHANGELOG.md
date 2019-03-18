@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Digdag (`.dig`)
+- **Support:** DOSBox (`dosbox.conf`)
 
 
 
