@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Digdag (`.dig`), Nightwatch (`nightwatch.{conf,config}.js`)
-- **Support:** DOSBox (`dosbox.conf`)
+- **Support:** DOSBox (`dosbox.conf`), TypeScript (`deno` hashbangs)
 
 
 
