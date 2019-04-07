@@ -15,17 +15,18 @@
 	"dependencies": {
 		"atom-fs": "v0.1.6",
 		"lru-cache": "^5.1.1",
-		"mapped-disposable": "^1.0.2",
+		"mapped-disposable": "^1.0.3",
 		"micromatch": "^3.1.10"
 	},
 	"devDependencies": {
-		"atom-mocha": "^2.1.0",
+		"atom-mocha": "^2.1.1",
 		"coffee-script": "^1.12.7",
 		"coffeelint": "^2.1.0",
+		"eslint": "^5.16.0",
 		"get-options": "^1.2.0",
 		"mocha-when": "^1.0.0",
 		"rimraf": "^2.6.3",
-		"tmp": "^0.0.33",
+		"tmp": "^0.1.0",
 		"unzipper": "^0.9.11"
 	},
 	"scripts": {
