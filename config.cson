@@ -4696,6 +4696,13 @@ fileIcons:
 		match: ".tpl"
 		colour: "auto-yellow"
 
+	Snapcraft:
+		icon: "snapcraft"
+		match: /^snapcraft\.ya?ml$/i
+		colour: "dark-cyan"
+		priority: 2
+		uses: "YAML"
+
 	"Snap SVG":
 		icon: "snapsvg"
 		priority: 2
