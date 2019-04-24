@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** Azure Pipelines (`azure-pipelines.yaml`, `.azure-pipelines` directories), Digdag (`.dig`), doT.js, FreeDesktop, Greenkeeper (`greenkeeper.json`), Kubernetes (`.kazelcfg.json`), Magit, Nightwatch (`nightwatch.{conf,config}.js`), Nintendo 64 ROMs (`.n64`, `.z64`), OpenAPI, Snapcraft (`snapcraft.yaml`), Svelte (`.svelte`)
 - **Generic language-specific configs:** CoffeeScript (`coffeelint.json`, `.coffeelintignore`), Go (`go.mod`, `go.sum`), Haskell (`haskellconfig.json`), JavaScript (`jsconfig{.*}.json`), Perl (`perlconfig.json`), Python (`pythonconfig.json`), React (`jsxconfig.json`), Ruby (`rubyconfig.json`), Rust (`rustconfig.json`), TypeScript (`tsconfig{.*}.json`, `tslint.json`)
 - **Generic language-specific test-files:** Go (`*.{test,spec}.go`), Haskell (`*.{test,spec}.{hs,hsc,c2hs,lhs}`), Rust (`*.{test,spec}.rs`)
-- **File support:** Bazel (`.gazelcfg.json`), DOSBox (`dosbox.conf`)
+- **File support:** APL (`.apl[acfino]`), Bazel (`.gazelcfg.json`), DOSBox (`dosbox.conf`), Dyalog APL (`.dyapp`, `.mipage`)
 - **Hashbang support:** JavaScript (`chakra`, `d8`, `js`, `rhino`, `v8`, `v8-shell`), TypeScript (`deno`, `tsc`, `ts-node`)
 
 ### Changed

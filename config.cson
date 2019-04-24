@@ -423,7 +423,7 @@ fileIcons:
 	APL:
 		icon: "apl"
 		match: [
-			[".apl", "dark-cyan", interpreter: /^(gnu[-._]?)?aplx?$/i, scope: "apl", signature: /[⌶-⍺]/]
+			[/\.apl[acfino]?$/i, "dark-cyan", interpreter: /^(gnu[-._]?)?aplx?$/i, scope: "apl", signature: /[⌶-⍺]/]
 			[".apl.history", "medium-maroon"]
 		]
 
@@ -1615,9 +1615,12 @@ fileIcons:
 
 	"Dyalog APL":
 		icon: "dyalog"
-		match: ".dyalog"
-		colour: "medium-orange"
-		interpreter: "dyalog"
+		uses: "APL"
+		match: [
+			[".dyalog", "medium-orange", interpreter: "dyalog"]
+			[".dyapp", "medium-red"]
+			[".mipage", "dark-green"]
+		]
 
 	DyLib:
 		icon: "dylib"
