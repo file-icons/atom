@@ -2480,6 +2480,13 @@ fileIcons:
 		colour: "medium-green"
 		scope: "hjson"
 
+	HolyC:
+		icon: "templeos"
+		match: [
+			[".hc", "medium-yellow", scope: /\.hc$/]
+			[".hc.z", "medium-orange", priority: 2]
+		]
+
 	Hoplon:
 		icon: "hoplon"
 		match: ".hl"
