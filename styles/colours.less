@@ -83,7 +83,7 @@
 .medium-green:before  { color: @medium-green; }
 .dark-green:before    { color: @dark-green; }
 
-.light-yellow:before  { color: @light-yellow; }
+.light-yellow:before  { .darken-if-needed(@light-yellow, 23%); }
 .medium-yellow:before { .darken-if-needed(@medium-yellow, 15%); }
 .dark-yellow:before   { .darken-if-needed(@dark-yellow, 10%); }
 

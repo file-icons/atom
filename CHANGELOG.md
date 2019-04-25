@@ -18,6 +18,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - `go.mod` and `go.sum` files now use generic config icons
 
+### Fixed
+- `.light-yellow` colour-swatch not adjusting to light-coloured themes
+
 
 
 [v2.1.31] - 2019-03-16
