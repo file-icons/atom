@@ -20,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - `.light-yellow` colour-swatch not adjusting to light-coloured themes
+- Markdown icon not appearing on grammar-override for users of [`language-markdown`](https://atom.io/packages/language-markdown)
 
 
 

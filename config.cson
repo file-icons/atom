@@ -3154,7 +3154,7 @@ fileIcons:
 
 	Markdown:
 		icon: "markdown"
-		scope: /(^|\.)[gp]fm|markdown(\.|$)/i
+		scope: /(^|\.)[gp]fm|md|markdown(\.|$)/i
 		match: /\.(md|mdown|markdown|mkd|mkdown|mdwn|mkdn|rmd|ron|pmd)$/i
 		alias: /^(CommonMark|GFM|Pandoc)$|\bMarkdown\b/i
 		colour: "medium-blue"
