@@ -1525,10 +1525,10 @@ fileIcons:
 
 	Diff:
 		icon: "diff"
-		scope: "diff"
-		alias: "udiff"
-		match: ".diff"
-		colour: "medium-orange"
+		match: [
+			[".diff", "medium-orange", alias: "udiff", scope: "diff"]
+			[".diffs", "medium-red", priority: 0.1]
+		]
 
 	Digdag:
 		icon: "digdag"
@@ -3490,6 +3490,12 @@ fileIcons:
 			[".mohostyle", "medium-purple"]
 		]
 
+	Moleculer:
+		icon: "moleculer"
+		priority: 2
+		match: /^moleculer\.config\.(js|json|ts)$/i
+		colour: "medium-blue"
+
 	Moment:
 		icon: "moment"
 		priority: 2
@@ -4414,6 +4420,8 @@ fileIcons:
 			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copying(\.regex)?|faq|hacking|history|install|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks|warnings)(_\w+)?$/i, "dark-blue", priority: 2]
 			[/\b(changelog|copying(v?\d)?|install|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
 			[/^news([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
+			[/^zork\d\.(?!pre$|pur$)[a-z]+$/, "dark-blue", priority: 0]
+			[/^zork\d\.doc$/, "medium-blue", priority: 2]
 			[".changes", "medium-blue"]
 			[".faq", "medium-blue"]
 		]
@@ -4675,6 +4683,11 @@ fileIcons:
 		priority: 2
 		match: /^sencha(\.min)?\.js$/i
 		colour: "light-green"
+
+	Sentry:
+		icon: "sentry"
+		match: ".sentryclirc"
+		colour: ["medium-red", "light-red"]
 
 	"Seperated-value files":
 		icon: "graph"
@@ -5788,3 +5801,21 @@ fileIcons:
 		icon: "zimpl"
 		match: /\.(zimpl|zmpl|zpl)$/i
 		colour: "medium-orange"
+
+	"Zork Assembly":
+		icon: "zork"
+		alias: "ZAP"
+		match: [
+			[".zap", "dark-cyan", scope: "zap"]
+			[".xzap", "dark-green"]
+			[/^s4\.errors$/i, "dark-green"]
+			[/\.zabstr?$/i, "medium-red"]
+		]
+
+	"Zork Interpreter Language":
+		icon: "zork"
+		alias: "ZIL"
+		match: [
+			[".zil", "dark-blue", scope: "zil"]
+			[".mud", "medium-maroon"]
+		]
