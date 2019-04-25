@@ -18,7 +18,6 @@ environment:
 
     matrix:
         - ATOM_CHANNEL: stable
-        - ATOM_CHANNEL: beta
 
 install:
     - ps: Install-Product node 4
