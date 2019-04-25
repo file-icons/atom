@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.31...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.32...HEAD
 
 
-[Unpublished]
+[v2.1.32] - 2019-04-25
 ----------------------
 ### Added
 - **New icons:** Azure Pipelines (`azure-pipelines.yaml`, `.azure-pipelines` directories), Digdag (`.dig`), doT.js, FreeDesktop, Greenkeeper (`greenkeeper.json`), Kubernetes (`.kazelcfg.json`), Magit, Moleculer (`moleculer.config.{js,json,ts}`), Nightwatch (`nightwatch.{conf,config}.js`), Nintendo 64 ROMs (`.n64`, `.z64`), OpenAPI, Sentry (`.sentryclirc`), Snapcraft (`snapcraft.yaml`), Svelte (`.svelte`), Zork (`.zap`, `.xzap`, `.zabst`, `.zabstr`, `.zil`, `.mud`)
@@ -21,6 +21,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - `.light-yellow` colour-swatch not adjusting to light-coloured themes
 - Markdown icon not appearing on grammar-override for users of [`language-markdown`](https://atom.io/packages/language-markdown)
+
+[v2.1.32]: https://github.com/file-icons/atom/releases/tag/v2.1.32
 
 
 
