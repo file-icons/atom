@@ -4533,7 +4533,7 @@ fileIcons:
 	RobotFramework:
 		icon: "robot"
 		match: ".robot"
-		colour: "medium-purple"
+		colour: "medium-cyan"
 
 	Robots:
 		icon: "robots"
