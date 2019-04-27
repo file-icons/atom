@@ -2929,6 +2929,7 @@ fileIcons:
 		icon: "kubernetes"
 		alias: "k8s"
 		match: [
+			[/^kubernetes.*\.ya?ml$/i, "medium-blue", priority: 2, uses: "YAML"]
 			[/(^|\.)kazelcfg\.json$/i, "medium-blue", interpreter: "kazel", priority: 2, uses: "JSON"]
 		]
 

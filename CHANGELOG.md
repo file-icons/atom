@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Tagfile (`.atom-socket-*`)
+- **Support:** Kubernetes (`kubernetes*.yml`), Tagfile (`.atom-socket-*`)
 
 
 
