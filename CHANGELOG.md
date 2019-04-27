@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.32...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support:** Tagfile (`.atom-socket-*`)
+
+
+
 [v2.1.32] - 2019-04-25
 ----------------------
 ### Added

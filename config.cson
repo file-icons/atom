@@ -5088,6 +5088,7 @@ fileIcons:
 			[/\.?c?tags$/i, "medium-blue"]
 			[/\.gemtags/i, "medium-red"]
 			[/\.hgtags$|^localtags$/i, "medium-cyan"]
+			[/^\.atom-socket-.+\.\d$/, "medium-green", priority: 2]
 			[".pid", "medium-orange"]
 		]
 
