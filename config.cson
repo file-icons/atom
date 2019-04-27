@@ -4407,6 +4407,12 @@ fileIcons:
 		match: ".rsc"
 		colour: "medium-yellow"
 
+	Remark:
+		icon: "remark"
+		priority: 2
+		match: /^\.remarkrc(\.(js|json|ya?ml))?$/i
+		colour: "medium-red"
+
 	RDoc:
 		icon: "rdoc"
 		scope: "rdoc"

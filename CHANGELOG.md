@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Robot Framework (updated)
+- **New icons:** Remark (`.remarkrc.{js,json,yml,yaml}`), Robot Framework (updated)
 - **Support:** Kubernetes (`kubernetes*.yml`), Tagfile (`.atom-socket-*`)
 
 
