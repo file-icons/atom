@@ -4410,8 +4410,14 @@ fileIcons:
 	Remark:
 		icon: "remark"
 		priority: 2
-		match: /^\.remarkrc(\.(js|json|ya?ml))?$/i
-		colour: "medium-red"
+		match: [
+			[/^\.rehyperc(\.(js|json|ya?ml))?$/i, "medium-yellow"]
+			[/^\.remarkrc(\.(js|json|ya?ml))?$/i, "medium-red"]
+			[/^\.retextrc(\.(js|json|ya?ml))?$/i, "medium-green"]
+			[".rehypeignore", "dark-yellow"]
+			[".remarkignore", "dark-red"]
+			[".retextignore", "dark-green"]
+		]
 
 	RDoc:
 		icon: "rdoc"
