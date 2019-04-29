@@ -2823,6 +2823,13 @@ fileIcons:
 		match: ".jq"
 		colour: "medium-blue"
 
+	Jsonnet:
+		icon: "jsonnet"
+		match: [
+			[".jsonnet", "dark-blue", "jsonnet"]
+			[".libsonnet", "medium-blue"]
+		]
+
 	JSX:
 		icon: "jsx"
 		scope: "jsx"
