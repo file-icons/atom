@@ -1839,6 +1839,13 @@ fileIcons:
 		match: ".fbx"
 		colour: "medium-maroon"
 
+	Fexl:
+		icon: "fexl"
+		match: ".fxl"
+		colour: "medium-cyan"
+		scope: /(^|\.)fe?xl(.|$)/i
+		interpreter: "fexl"
+
 	Finder:
 		icon: "finder"
 		match: [
@@ -4687,6 +4694,14 @@ fileIcons:
 			[".sci", "dark-purple", "scilab"]
 			[".sce", "dark-blue"]
 			[".tst", "dark-cyan"]
+		]
+
+	Scratch:
+		icon: "scratch"
+		uses: "ZIP"
+		match: [
+			[".sb2", "dark-orange"]
+			[".sb3", "medium-orange"]
 		]
 
 	Scrutinizer:

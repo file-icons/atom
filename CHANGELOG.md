@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Jsonnet (`.jsonnet`, `.libsonnet`), Remark (`.re{hype,mark,text}rc.{js,json,yml,yaml}`, `.re{hype,mark,text}ignore`), Robot Framework (updated)
+- **New icons:** Fexl (`.fxl`), Jsonnet (`.jsonnet`, `.libsonnet`), Remark (`.re{hype,mark,text}rc.{js,json,yml,yaml}`, `.re{hype,mark,text}ignore`), Robot Framework (updated), Scratch (`.sb2`, `.sb3`)
 - **Support:** Kubernetes (`kubernetes*.yml`), Tagfile (`.atom-socket-*`)
 
 
