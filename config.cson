@@ -70,6 +70,13 @@ noSuffix:     By default, icon names are suffixed with "-icon". Set noSuffix to 
 
 directoryIcons:
 
+	"Acre Desktop":
+		icon: "acre"
+		match: [
+			[/^APLSource$/, "medium-blue"]
+			[/^\.acre$/, "dark-blue"]
+		]
+
 	"App Store":
 		icon: "appstore"
 		match: /\.(app|xcodeproj|xcworkspace)$/i
@@ -230,6 +237,13 @@ fileIcons:
 			[".ab1", "medium-green"]
 			[".fsa", "medium-red"]
 		]
+
+	"Acre Desktop":
+		icon: "acre"
+		match: /^acre\.config$/i
+		colour: "medium-blue"
+		priority: 1.5
+		uses: "JSON"
 
 	ActionScript: # Or Flash-related
 		icon: "as"
@@ -595,6 +609,16 @@ fileIcons:
 		match: /\.av(cs|sc|dl)$/i
 		colour: "medium-blue"
 		scope: /(^|\.)avro(-idl)?(\.|$)/i
+
+	Awk:
+		icon: "terminal"
+		match: [
+			[".awk", "medium-blue", "awk"]
+			[".gawk", "medium-red", "gawk"]
+			[".mawk", "medium-maroon", "mawk"]
+			[".nawk", "dark-green", "nawk"]
+			[".auk", "dark-cyan"]
+		]
 
 	"Azure Pipelines":
 		icon: "azurepipelines"
@@ -1190,7 +1214,11 @@ fileIcons:
 			[/^buildozer\.spec$/i, "dark-blue", priority: 2]
 			[/config|settings|option|pref/i, null, priority: 0]
 			[".flc", "medium-green", alias: "FIGlet control", scope: /^source\.figctrl$/i, signature: /^flc2a/]
-			[/\/dev[-\w]+\/([^\/]+\/)*(DESC|Foundry|download|symbolmap)(\.in|\.proto)?$/, "dark-green", matchPath: true, priority: 1.5]
+			[///
+				/(dev[-\w]+|troff)/ ([^/]+/)*
+				(DESC|Foundry|download|symbolmap)
+				(\.(in|proto|8400))?$
+			///i, "dark-green", matchPath: true, priority: 1.5, scope: /^source\.ditroff\.desc$/]
 			[/[\/\\]fontforge[\/\\]hotkeys[\/\\][^\/\\]+/i, "dark-blue", matchPath: true, priority: 0.75, scope: /fontforge.hotkeys/i]
 			[/\.git[\/\\](config|info[\/\\]\w+)$/, "dark-red", matchPath: true]
 			[/(^|[\/\\])\.fossil-settings\1(?:[^/\/]+)/, "dark-cyan", matchPath: true]
@@ -1471,6 +1499,11 @@ fileIcons:
 			[/^(magic\.mgc|figmagic)$/i, "medium-purple", signature: /^\xF1\x1E\x04\x1C|^\x1C\x04\x1E\xF1/]
 			[/[\/\\](?:magic[\/\\]Magdir|file[\/\\]magic)[\/\\][-.\w]+$/i, "dark-red", matchPath: true]
 			[/(\\|\/)dev[-\w]+\1(?:[^\\\/]+\1)*(?!DESC|NOTES)(?:[A-Z][-A-Z]*)(?:\.in)?$/, "medium-green", matchPath: true]
+			[///
+				/tab\.(37|450-12|450|lp|think)$
+				|
+				/dev[-\w]+/(APL\.bug|[A-Z][-A-Za-z0-9]*)(\.fd)?$
+			///i, "medium-green", matchPath: true, priority: 0.75]
 			[/\.ssh[\/\\](authorized_keys|known_hosts)$/, "medium-green", matchPath: true]
 			[/^\.icondb\.js$/, "dark-red", priority: 1.5]
 			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
@@ -1562,6 +1595,14 @@ fileIcons:
 		match: ".eco"
 		colour: "medium-maroon"
 		scope: "eco"
+
+	Docz:
+		icon: "docz"
+		priority: 2
+		match: [
+			[/(^|\.)docz(rc)?(\.config)?\.js$/i, "auto-yellow"]
+			[/(^|\.)docz(rc)?(\.config)?\.json$/i, "auto-orange"]
+		]
 
 	Dogescript:
 		icon: "doge"
@@ -1723,6 +1764,8 @@ fileIcons:
 		icon: "at"
 		match: /^(authors|(code)?owners)$/i
 		colour: "auto-red"
+		alias: /^(EML|mbox|e?-?mail)$/i
+		scope: /^text\.eml($|\.)/
 
 	Ember:
 		icon: "ember"
@@ -2146,7 +2189,7 @@ fileIcons:
 			[".jsproj", "dark-yellow"]
 			[".lagda", "medium-cyan"]
 			[".launch", "medium-blue"]
-			[".lex", "medium-cyan"]
+			[".lex", "medium-cyan", "lex"]
 			[".lid", "medium-purple"]
 			[".lp", "dark-purple"]
 			[".m4", "medium-red", "m4"]
@@ -3028,9 +3071,8 @@ fileIcons:
 	Lisp:
 		icon: "lisp"
 		match: [
-			[".lsp", "medium-red", "newlisp"]
 			[".lisp", "dark-red", "lisp"]
-			[".l", "medium-maroon", interpreter: /picolisp|pil/]
+			[".lsp", "medium-red", "newlisp"]
 			[".nl", "medium-maroon"]
 			[".ny", "medium-blue"]
 			[".podsl", "medium-purple"]
@@ -4118,6 +4160,14 @@ fileIcons:
 		signature: /^pico-8 cartridge \/\/ http:\/\/www\.pico-8\.com$/
 		scope: "p8"
 
+	PicoLisp:
+		icon: "picolisp"
+		priority: 0.5
+		match: ".l"
+		colour: "medium-purple"
+		interpreter: /^(picolisp|pil)$/
+		uses: "Lisp"
+
 	Pipenv:
 		icon: "pipenv"
 		match: /^Pipfile(\.lock)?$/i
@@ -4451,7 +4501,7 @@ fileIcons:
 		icon: "book"
 		match: [
 			[/^README(\b|_)|^(licen[sc]es?(\.mysql)?|(read|readme|click|delete|keep|test)\.me)$|\.(readme|1st|licen[sc]es?)$/i, "medium-blue", priority: 2]
-			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copying(\.regex)?|faq|hacking|history|install|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks|warnings)(_\w+)?$/i, "dark-blue", priority: 2]
+			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copying(\.regex)?|faq|fixes|hacking|history|install|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks|warnings)(_\w+)?$/i, "dark-blue", priority: 2]
 			[/\b(changelog|copying(v?\d)?|install|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
 			[/^news([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
 			[/^zork\d\.(?!pre$|pur$)[a-z]+$/, "dark-blue", priority: 0]
@@ -4790,11 +4840,6 @@ fileIcons:
 			[".profile", "dark-purple"]
 			[".tcsh", "medium-green"]
 			[".csh", "medium-yellow"]
-			[".awk", "medium-blue", "awk"]
-			[".gawk", "medium-red", "gawk"]
-			[".mawk", "medium-maroon", "mawk"]
-			[".nawk", "dark-green", "nawk"]
-			[".auk", "dark-cyan"]
 		]
 
 	Shen:

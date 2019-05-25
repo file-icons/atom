@@ -9,8 +9,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Fexl (`.fxl`), Jsonnet (`.jsonnet`, `.libsonnet`), Remark (`.re{hype,mark,text}rc.{js,json,yml,yaml}`, `.re{hype,mark,text}ignore`), Robot Framework (updated), Scratch (`.sb2`, `.sb3`)
+- **New icons:** Acre Desktop (`acre.config`, `.acre`, `APLSource`), Docz (`.doczrc.{js,json}`, `.docz`), Fexl (`.fxl`), InfluxData, Jsonnet (`.jsonnet`, `.libsonnet`), MacVim, Remark (`.re{hype,mark,text}rc.{js,json,yml,yaml}`, `.re{hype,mark,text}ignore`), Robot Framework (updated), Scratch (`.sb2`, `.sb3`), VSCode (alt)
 - **Support:** Kubernetes (`kubernetes*.yml`), Tagfile (`.atom-socket-*`)
+
+### Changed
+- `.l` extension now associated with Lex instead of Lisp
+
+### Fixed
+- Awk not being recognised when overriding a file's grammar
 
 
 
