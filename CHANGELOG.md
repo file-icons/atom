@@ -17,6 +17,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Awk not being recognised when overriding a file's grammar
+- Inkscape icon missing for `.inx` files
 
 
 
