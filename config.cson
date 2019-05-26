@@ -572,6 +572,7 @@ fileIcons:
 			[".flac", "dark-red", signature: /^fLaC/]
 			[/\.f4[ab]$/i, "medium-red", signature: /^FLV\x01\x04/]
 			[".m4a", "medium-cyan", signature: /^.{4}ftypM4A/]
+			[".mka", "medium-purple", mime: "audio/x-matroska"]
 			[/\.(mpc|mp\+)$/i, "dark-green", signature: /^MPCK/]
 			[".oga", "dark-orange"] # Shares .ogg sig
 			[".opus", "dark-maroon", signature: /OpusHead/]
@@ -5345,7 +5346,7 @@ fileIcons:
 			[".msg", "medium-orange"]
 			[".no", "medium-red"]
 			[".rpt", "medium-maroon"]
-			[".srt", "medium-purple"]
+			[".srt", "medium-purple", scope: "srt", alias: /^Sub-?Rip([-\s]*(Text|Sub-?titles?)){0,2}$/i]
 			[".sub", "dark-purple"]
 			[/^(bug-report|fdl|for-release|tests)$/i, "medium-red"]
 			[/\.(utxt|utf8)$/i, "medium-cyan"]
@@ -5584,7 +5585,7 @@ fileIcons:
 			[/\.(mp4|m4v|h264)$/i, "dark-blue", signature: /^.{4}ftyp/]
 			[".avi", "medium-blue", signature: /^MLVI/]
 			[".mov", "medium-cyan", signature: /^.{4}moov/]
-			[".mkv", "medium-purple", signature: /^\x1AEß£\x93B\x82\x88matroska/]
+			[/\.mk(v|s|3d)$/i, "medium-purple", mime: "video/x-matroska", signature: /^\x1AEß£\x93B\x82\x88matroska/]
 			[".flv", "medium-red", signature: /^FLV\x01/]
 			[".webm", "dark-blue", signature: /^\x1A\x45\xDF\xA3/]
 			[/\.mpe?g$/i, "medium-red", signature: /^\0{2}\x01[\xB3\xBA]/]
@@ -5704,6 +5705,13 @@ fileIcons:
 		priority: 2
 		match: /(^|\.)webpack(file)?(?=\.|$).*\.([jt]sx?|json)$/i
 		colour: "medium-blue"
+
+	WebVTT:
+		icon: "webvtt"
+		match: ".vtt"
+		colour: "dark-blue"
+		scope: /^source\.vtt$/
+		signature: /^WEBVTT(?=\s|$)/
 
 	WeChat:
 		icon: "wechat"

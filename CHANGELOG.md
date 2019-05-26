@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Acre Desktop (`acre.config`, `.acre`, `APLSource`), Docz (`.doczrc.{js,json}`, `.docz`), Fexl (`.fxl`), InfluxData, Jsonnet (`.jsonnet`, `.libsonnet`), MacVim, Remark (`.re{hype,mark,text}rc.{js,json,yml,yaml}`, `.re{hype,mark,text}ignore`), Robot Framework (updated), Scratch (`.sb2`, `.sb3`), VSCode (alt)
+- **New icons:** Acre Desktop (`acre.config`, `.acre`, `APLSource`), Docz (`.doczrc.{js,json}`, `.docz`), Fexl (`.fxl`), InfluxData, Jsonnet (`.jsonnet`, `.libsonnet`), MacVim, Matroska, Remark (`.re{hype,mark,text}rc.{js,json,yml,yaml}`, `.re{hype,mark,text}ignore`), Robot Framework (updated), Scratch (`.sb2`, `.sb3`), VSCode (alt), WebVTT (`.vtt`)
 - **Support:** Kubernetes (`kubernetes*.yml`), Tagfile (`.atom-socket-*`)
 
 ### Changed
