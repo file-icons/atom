@@ -7,7 +7,8 @@ const Tabs        = require("./utils/tabs.js");
 const Options     = require("../lib/options.js");
 
 
-describe("Modelines", () => {
+describe("Modelines", function(){
+	this.timeout(60000);
 	const base = "name icon ";
 	
 	before(async () => {
@@ -113,14 +114,11 @@ describe("Modelines", () => {
 	});
 	
 	
-	when("the Fuzzy-Finder lists results which contain modelines", () => {
+	when("the Fuzzy-Finder lists results which contain modelines", function(){
 		it("updates icons as files are scanned", async () => {
-			await FuzzyFinder.filter("abc12", 0);
-			FuzzyFinder.entries["subdir/abc123"].should.have.classes("default-icon");
-			FuzzyFinder.entries["subdir/abc124"].should.have.classes("default-icon");
-			FuzzyFinder.entries["subdir/abc125"].should.have.classes("default-icon");
-			FuzzyFinder.entries["subdir/abc126"].should.have.classes("default-icon");
-			await wait(500);
+			await FuzzyFinder.show();
+			await wait(600);
+			await FuzzyFinder.filter("abc12", 6000);
 			FuzzyFinder.entries["subdir/abc123"].should.have.classes("emacs-icon medium-purple");
 			FuzzyFinder.entries["subdir/abc124"].should.have.classes("apl-icon dark-cyan");
 			FuzzyFinder.entries["subdir/abc125"].should.have.classes("manpage-icon dark-green");
@@ -134,7 +132,7 @@ describe("Modelines", () => {
 	
 	
 	when("the strategy is disabled", () => {
-		it("removes any icons assigned by modeline", () => {
+		it("removes any icons assigned by modeline", async () => {
 			Options.set("modelines", false);
 			assertIconClasses(TreeView.entries, defaults);
 			for(let i = 0; i < 10; ++i){
@@ -145,6 +143,9 @@ describe("Modelines", () => {
 			TreeView.entries["mode-java"].should.not.have.classes("java-icon medium-purple");
 			TreeView.entries["mode-coffee.pl"].should.not.have.classes("coffee-icon medium-maroon");
 			TreeView.entries["mode-php.inc"].should.not.have.classes("php-icon dark-blue");
+			
+			await FuzzyFinder.show();
+			await wait(6000);
 			FuzzyFinder.entries["subdir/abc123"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc124"].should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/abc125"].should.have.classes("default-icon");
@@ -156,7 +157,7 @@ describe("Modelines", () => {
 		});
 		
 		when("the strategy is re-enabled", () => {
-			it("shows the icons again", () => {
+			it("shows the icons again", async () => {
 				Options.set("modelines", true);
 				for(let i = 0; i < 10; ++i){
 					TreeView.entries[`mode-c++${ i || ""}`].should.have.classes(base + "cpp-icon  medium-blue");
@@ -166,6 +167,9 @@ describe("Modelines", () => {
 				TreeView.entries["mode-java"].should.have.classes(base      + "java-icon medium-purple");
 				TreeView.entries["mode-coffee.pl"].should.have.classes(base + "coffee-icon medium-maroon");
 				TreeView.entries["mode-php.inc"].should.have.classes(base   + "php-icon dark-blue");
+				
+				await FuzzyFinder.show();
+				await wait(6000);
 				FuzzyFinder.entries["subdir/abc123"].should.have.classes("emacs-icon medium-purple");
 				FuzzyFinder.entries["subdir/abc124"].should.have.classes("apl-icon dark-cyan");
 				FuzzyFinder.entries["subdir/abc125"].should.have.classes("manpage-icon dark-green");

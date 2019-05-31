@@ -19,7 +19,7 @@
 		"micromatch": "^3.1.10"
 	},
 	"devDependencies": {
-		"atom-mocha": "^2.1.1",
+		"atom-mocha": "^2.1.2",
 		"coffee-script": "^1.12.7",
 		"coffeelint": "^2.1.0",
 		"eslint": "^5.16.0",
@@ -27,7 +27,7 @@
 		"mocha-when": "^1.0.0",
 		"rimraf": "^2.6.3",
 		"tmp": "^0.1.0",
-		"unzipper": "^0.9.11"
+		"unzipper": "^0.9.15"
 	},
 	"scripts": {
 		"lint": "npx eslint . && npx coffeelint -q config.cson",

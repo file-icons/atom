@@ -203,19 +203,20 @@ describe("Interpreter directives", () => {
 	});
 	
 	
-	when("the Fuzzy-Finder lists files which contain hashbangs", () => {
+	when("the Fuzzy-Finder lists files which contain hashbangs", function(){
+		this.timeout(60000);
 		it("updates its icons to show the interpreter icons", async () => {
-			FuzzyFinder.close();
-			await FuzzyFinder.filter(".tho");
+			await FuzzyFinder.close();
 			await wait(600);
+			await FuzzyFinder.filter(".tho", 6000);
 			FuzzyFinder.entries["subdir/erlang.tho"]  .should.not  .have.classes("default-icon");
 			FuzzyFinder.entries["subdir/haskell.tho"] .should.not  .have.classes("default-icon");
 			FuzzyFinder.entries["subdir/erlang.tho"]  .should      .have.classes("erlang-icon medium-red");
 			FuzzyFinder.entries["subdir/haskell.tho"] .should      .have.classes("haskell-icon medium-purple");
 		});
 		
-		it("shares what it finds with the Tree-View", () => {
-			FuzzyFinder.close();
+		it("shares what it finds with the Tree-View", async () => {
+			await FuzzyFinder.close();
 			TreeView.expand("subdir");
 			TreeView.refresh();
 			TreeView.entries["subdir/erlang.tho"].should.have.classes("erlang-icon medium-red");
@@ -228,7 +229,7 @@ describe("Interpreter directives", () => {
 		it("removes every icon that matched a hashbang", async () => {
 			Options.set("hashbangs", false);
 			assertIconClasses(FuzzyFinder.entries, defaults);
-			await FuzzyFinder.filter(".tho");
+			await FuzzyFinder.filter(".tho", 500);
 			FuzzyFinder.entries["subdir/erlang.tho"]   .should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/haskell.tho"]  .should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/erlang.tho"]   .should.not.have.classes("erlang-icon medium-red");
@@ -241,7 +242,7 @@ describe("Interpreter directives", () => {
 				await wait(100);
 				TreeView.refresh();
 				assertIconClasses(TreeView.entries, shebangedIcons);
-				await FuzzyFinder.filter(".tho");
+				await FuzzyFinder.filter(".tho", 500);
 				FuzzyFinder.entries["subdir/erlang.tho"]   .should.have.classes("erlang-icon medium-red");
 				FuzzyFinder.entries["subdir/haskell.tho"]  .should.have.classes("haskell-icon medium-purple");
 				FuzzyFinder.entries["subdir/erlang.tho"]   .should.not.have.classes("default-icon");
