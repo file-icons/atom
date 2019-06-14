@@ -5259,9 +5259,11 @@ fileIcons:
 
 	"Test, JavaScript":
 		icon: "test-js"
-		match: /[._-](spec|test)s?\.([_ms]?js|js[bms]|es\d*)$/i
-		colour: "auto-yellow"
 		priority: 1.5
+		match: [
+			[/[._-](spec|test)s?\.([_ms]?js|js[bms]|es\d*)$/i, "auto-yellow"]
+			[/([\\\/])(spec|test)s?\1(?:\d+[-.])+(?!-)[^.\\\/]+\.[cm]?js$/i, "auto-yellow", matchPath: true]
+		]
 
 	"Test, Perl":
 		icon: "test-perl"
@@ -5281,8 +5283,10 @@ fileIcons:
 	"Test, React":
 		icon: "test-react"
 		priority: 1.5
-		match: /[._-](spec|test)s?\.(jsx|react\.js)$/
-		colour: "auto-blue"
+		match: [
+			[/[._-](spec|test)s?\.(jsx|react\.js)$/, "auto-blue"]
+			[/([\\\/])(spec|test)s?\1(?:\d+[-.])+(?!-)[^.\\\/]+\.(jsx|react\.js)$/i, "auto-blue", matchPath: true]
+		]
 
 	"Test, Ruby":
 		icon: "test-ruby"
@@ -5303,6 +5307,8 @@ fileIcons:
 		match: [
 			[/[._-](spec|test)s?\.ts$/i, "auto-blue"]
 			[/[._-](spec|test)s?\.tsx$/i, ["light-blue", "medium-blue"]]
+			[/([\\\/])(spec|test)s?\1(?:\d+[-.])+(?!-)[^.\\\/]+\.ts$/i, "auto-blue", matchPath: true]
+			[/([\\\/])(spec|test)s?\1(?:\d+[-.])+(?!-)[^.\\\/]+\.tsx$/i, ["light-blue", "medium-blue"], matchPath: true]
 		]
 
 	TeX:
