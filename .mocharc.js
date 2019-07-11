@@ -1,7 +1,5 @@
 "use strict";
 
-require("mocha-when")({lowercaseIt: false});
-
 module.exports = {
 	bail: !AtomMocha.isCI,
 	require: ["chai/register-should"],
