@@ -1470,7 +1470,9 @@ fileIcons:
 		icon: "database"
 		generic: true
 		match: [
+			[".aff", "medium-red"]
 			[".cson", "medium-maroon"]
+			[/\.dict?$/i, "medium-green"]
 			[".hson", "medium-orange", "hson"]
 			[".http", "medium-red"]
 			[".ndjson", "medium-orange"]
@@ -1487,6 +1489,7 @@ fileIcons:
 			[".ston", "medium-maroon"]
 			[".ttl", "medium-cyan", scope: "turtle"]
 			[".schema", "dark-blue", priority: 0.25]
+			[".sy", "dark-green"]
 			[".syntax", "medium-blue"]
 			[".webmanifest", "medium-blue"]
 			[/\.snip(pets?)?$/i, "medium-green", alias: /^(SnipMate|UltiSnip|NeoSnippet)$/i, scope: /\.(snipmate|ultisnips|neosnippet|snippets?)(\.|$)/i]

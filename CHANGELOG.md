@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Data (`.snippet`, `.snippets`, `.snip`)
+- **Support:** Data (`.aff`, `.dic`, `.dict`, `.snippet`, `.snippets`, `.snip`)
 - Test-file icons to numbered JS/TS files inside a directory named `test{s}` or `spec{s}`
 
 
