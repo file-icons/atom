@@ -3453,6 +3453,9 @@ fileIcons:
 		match: [
 			[/^mcmod\.info$/i, "dark-green", scope: "forge-config"]
 			[".mcfunction", "light-green"]
+			[".mclevel", "medium-green"]
+			[".mcpack", "dark-green"]
+			[".mcworld", "medium-blue"]
 			[/^pack\.mcmeta$/i, "dark-green"]
 			[/\.png\.mcmeta$/, "dark-green"]
 		]
