@@ -88,7 +88,7 @@ directoryIcons:
 
 	Atom:
 		icon: "atom"
-		match: /^\.atom$/
+		match: /^\.atom(-ci)?$/
 		colour: "dark-green"
 
 	"Azure Pipelines":
