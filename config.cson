@@ -2643,6 +2643,7 @@ fileIcons:
 			[/\.fits?$/i, "medium-cyan", signature: /^SIMPLE  =/]
 			[".flif", "dark-red", signature: /^FLIF/]
 			[".fts", "medium-cyan"]
+			[/\.(gsrc|gr(emli)?n)$/i, "medium-orange", signature: /^(sun)?gremlinfile/, alias: "Gremlin", scope: /^source\.gremlin$/, mime: "text/plain"]
 			[".hdp", "dark-red"]
 			[".hdr", "medium-blue", signature: /^#\?RADIANCE\n/]
 			[".heic", "dark-red"]
