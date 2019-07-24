@@ -60,7 +60,7 @@ describe("Path", () => {
 				["webpack.config.js",        "js-icon config-icon"],
 				["wercker.yml",              "database-icon"],
 				["yarn.lock",                "database-icon"]
-			], true);
+			], {negate: true});
 		});
 	});
 
@@ -90,7 +90,7 @@ describe("Path", () => {
 				["git.git/case/obeyed-1.e",   "e-icon               medium-green"],
 				["git.git/case/obeyed-2.E",   "eiffel-icon          medium-cyan"],
 				["git.git/case/merge_msg",    "git-merge-icon       medium-red"]
-			], true);
+			], {negate: true});
 		});
 		
 		it("doesn't replace icons of well-known frameworks", () => {

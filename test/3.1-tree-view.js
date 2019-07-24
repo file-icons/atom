@@ -65,7 +65,7 @@ describe("Tree-view", () => {
 					["data.json",       "icon-file-text"],
 					["la.tex",          "icon-file-text"],
 					["markdown.md",     "icon-file-text"]
-				], true);
+				], {negate: true});
 			});
 			
 			when("coloured icons are enabled", () =>
@@ -89,7 +89,7 @@ describe("Tree-view", () => {
 						...allColouredFiles,
 						["la.tex",   "medium-blue dark-blue"],
 						[".bowerrc", "medium-orange medium-yellow"]
-					], true);
+					], {negate: true});
 				}));
 			
 			when("coloured icons are enabled later", () =>
@@ -111,11 +111,11 @@ describe("Tree-view", () => {
 						it("doesn't show a coloured icon", () => {
 							assertIconClasses(TreeView.entries, allColouredFiles);
 							Options.set("colourChangedOnly", true);
-							assertIconClasses(TreeView.entries, allColouredFiles, true);
+							assertIconClasses(TreeView.entries, allColouredFiles, {negate: true});
 							Options.set("coloured", false);
-							assertIconClasses(TreeView.entries, allColouredFiles, true);
+							assertIconClasses(TreeView.entries, allColouredFiles, {negate: true});
 							Options.set("coloured", true);
-							assertIconClasses(TreeView.entries, allColouredFiles, true);
+							assertIconClasses(TreeView.entries, allColouredFiles, {negate: true});
 						}));
 					
 					describe("If the file is modified", () =>
@@ -203,7 +203,7 @@ describe("Tree-view", () => {
 				assertIconClasses(TreeView.entries, [
 					["Dropbox",      "icon-file-directory"],
 					["node_modules", "icon-file-directory"]
-				], true);
+				], {negate: true});
 			});
 		});
 		
@@ -252,7 +252,7 @@ describe("Tree-view", () => {
 				["symlinks/empty.file",   "default-icon"],
 				["symlinks/node_modules", "node-icon"],
 				["symlinks/Dropbox",      "dropbox-icon"]
-			], true);
+			], {negate: true});
 		});
 		
 		it("uses the colour of its target's icon", () => {

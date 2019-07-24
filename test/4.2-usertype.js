@@ -103,14 +103,14 @@ describe("User-defined filetypes", () => {
 				["test.t",       "terraform-icon    dark-purple"],
 				["test.stTheme", "js-icon           medium-yellow"],
 				["test.tmMacro", "python-icon       dark-blue"]
-			], true);
+			], {negate: true});
 			assertIconClasses(Tabs.list, [
 				["test.m",       "mathematica-icon  dark-red"],
 				["test.mm",      "matlab-icon       medium-yellow"],
 				["test.t",       "terraform-icon    dark-purple"],
 				["test.stTheme", "js-icon           medium-yellow"],
 				["test.tmMacro", "python-icon       dark-blue"]
-			], true);
+			], {negate: true});
 		});
 		
 		it("updates icons not being displayed", () => {
@@ -253,20 +253,20 @@ describe("User-defined filetypes", () => {
 			
 			it("does nothing", () => {
 				Options.set("usertypes", false);
-				assertIconClasses(TreeView.entries, classes, true);
+				assertIconClasses(TreeView.entries, classes, {negate: true});
 				atom.config.set("core.customFileTypes", types);
-				assertIconClasses(TreeView.entries, classes, true);
+				assertIconClasses(TreeView.entries, classes, {negate: true});
 				atom.config.set("core.customFileTypes", {});
-				assertIconClasses(TreeView.entries, classes, true);
+				assertIconClasses(TreeView.entries, classes, {negate: true});
 				Options.set("usertypes", true);
-				assertIconClasses(TreeView.entries, classes, true);
+				assertIconClasses(TreeView.entries, classes, {negate: true});
 			});
 			
 			it("shows icons for updated types when re-enabled", () => {
 				atom.config.set("core.customFileTypes", types);
 				assertIconClasses(TreeView.entries, classes);
 				Options.set("usertypes", false);
-				assertIconClasses(TreeView.entries, classes, true);
+				assertIconClasses(TreeView.entries, classes, {negate: true});
 				assertIconClasses(TreeView.entries, [
 					["test.m",       treeIcon + "objc-icon      medium-blue"],
 					["test.mm",      treeIcon + "objc-icon      medium-blue"],
@@ -281,7 +281,7 @@ describe("User-defined filetypes", () => {
 					"source.js":    ["stTheme"]
 				});
 				Options.set("usertypes", true);
-				assertIconClasses(TreeView.entries, classes, true);
+				assertIconClasses(TreeView.entries, classes, {negate: true});
 				assertIconClasses(TreeView.entries, [
 					["test.m",       treeIcon + "mathematica-icon dark-red"],
 					["test.mm",      treeIcon + "matlab-icon      medium-yellow"],

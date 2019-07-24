@@ -160,7 +160,7 @@ describe("Linguist-language attributes", () => {
 				["not-js.es.swp",     "apl-icon    dark-cyan"],
 				["perl/butterfly.pl", "perl6-icon  medium-purple"],
 				["perl/camel.pl6",    "perl-icon   medium-blue"]
-			], true);
+			], {negate: true});
 		});
 		
 		it("applies them again if the strategy is re-enabled", () => {
@@ -170,7 +170,7 @@ describe("Linguist-language attributes", () => {
 				["not-js.es.swp",     "binary-icon dark-green"],
 				["perl/butterfly.pl", "perl-icon   medium-blue"],
 				["perl/camel.pl6",    "perl6-icon  medium-purple"]
-			], true);
+			], {negate: true});
 			assertIconClasses(TreeView.entries, [
 				["not-js.es",         base + "erlang-icon medium-red"],
 				["not-js.es.swp",     base + "apl-icon    dark-cyan"],

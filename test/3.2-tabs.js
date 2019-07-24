@@ -269,13 +269,13 @@ describe("Tabs", () => {
 						[".bowerrc",      "medium-yellow"]
 					];
 					assertIconClasses(Tabs.list, tabIcons);
-					assertIconClasses(Tabs.list, tabColours, true);
+					assertIconClasses(Tabs.list, tabColours, {negate: true});
 					Options.set("coloured", false);
 					assertIconClasses(Tabs.list, tabIcons);
-					assertIconClasses(Tabs.list, tabColours, true);
+					assertIconClasses(Tabs.list, tabColours, {negate: true});
 					Options.set("coloured", true);
 					assertIconClasses(Tabs.list, tabIcons);
-					assertIconClasses(Tabs.list, tabColours, true);
+					assertIconClasses(Tabs.list, tabColours, {negate: true});
 				}));
 			
 			describe("If the file is modified", () =>
@@ -292,7 +292,7 @@ describe("Tabs", () => {
 					assertIconClasses(Tabs.list, tabColours);
 					Options.set("coloured", false);
 					assertIconClasses(Tabs.list, tabIcons);
-					assertIconClasses(Tabs.list, tabColours, true);
+					assertIconClasses(Tabs.list, tabColours, {negate: true});
 					Options.set("coloured", true);
 					assertIconClasses(Tabs.list, tabIcons);
 					assertIconClasses(Tabs.list, tabColours);

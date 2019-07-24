@@ -58,7 +58,7 @@ describe("File signatures", function(){
 		it("checks its header for a recognised signature", async () => {
 			assertIconClasses(TreeView.entries, defaults);
 			await wait(1500);
-			assertIconClasses(TreeView.entries, defaults, true);
+			assertIconClasses(TreeView.entries, defaults, {negate: true});
 			assertIconClasses(TreeView.entries, sigIcons);
 		});
 		
@@ -68,10 +68,10 @@ describe("File signatures", function(){
 			TreeView.refresh();
 			TreeView.entries.length.should.be.at.least(15);
 			assertIconClasses(TreeView.entries, sigIcons);
-			assertIconClasses(TreeView.entries, defaults, true);
+			assertIconClasses(TreeView.entries, defaults, {negate: true});
 			await wait(1500);
 			assertIconClasses(TreeView.entries, sigIcons);
-			assertIconClasses(TreeView.entries, defaults, true);
+			assertIconClasses(TreeView.entries, defaults, {negate: true});
 		});
 	});
 });

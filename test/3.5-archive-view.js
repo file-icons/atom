@@ -52,7 +52,7 @@ describe("Archive-view", () => {
 					const colourClasses = classes.map(a => a[2] ? [a[0], a[2]] : null).filter(Boolean);
 					Options.set("coloured", false);
 					assertIconClasses(ArchiveView.entries, iconClasses);
-					assertIconClasses(ArchiveView.entries, colourClasses, true);
+					assertIconClasses(ArchiveView.entries, colourClasses, {negate: true});
 					Options.set("coloured", true);
 					assertIconClasses(ArchiveView.entries, iconClasses);
 					assertIconClasses(ArchiveView.entries, colourClasses);
@@ -127,7 +127,7 @@ describe("Archive-view", () => {
 						["zipped/.vagrant",         base + "vagrant-icon"]
 					];
 					Options.set("coloured", false);
-					assertIconClasses(ArchiveView.entries, colourClasses, true);
+					assertIconClasses(ArchiveView.entries, colourClasses, {negate: true});
 					assertIconClasses(ArchiveView.entries, iconClasses);
 					Options.set("coloured", true);
 					assertIconClasses(ArchiveView.entries, colourClasses);

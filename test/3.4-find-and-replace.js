@@ -58,7 +58,7 @@ describe("Find-and-replace", () => {
 			assertIconClasses(FindAndReplace.entries, classes);
 			assertIconClasses(FindAndReplace.entries, colours);
 			Options.set("coloured", false);
-			assertIconClasses(FindAndReplace.entries, colours, true);
+			assertIconClasses(FindAndReplace.entries, colours, {negate: true});
 		});
 		
 		when("in a Git repository", () => {
@@ -69,11 +69,11 @@ describe("Find-and-replace", () => {
 					it("doesn't show a coloured icon", () => {
 						assertIconClasses(FindAndReplace.entries, colours);
 						Options.set("colourChangedOnly", true);
-						assertIconClasses(FindAndReplace.entries, colours, true);
+						assertIconClasses(FindAndReplace.entries, colours, {negate: true});
 						Options.set("coloured", false);
-						assertIconClasses(FindAndReplace.entries, colours, true);
+						assertIconClasses(FindAndReplace.entries, colours, {negate: true});
 						Options.set("coloured", true);
-						assertIconClasses(FindAndReplace.entries, colours, true);
+						assertIconClasses(FindAndReplace.entries, colours, {negate: true});
 					}));
 				
 				describe("If the file is modified", () =>
@@ -177,17 +177,17 @@ describe("Find-and-replace", () => {
 				FindAndReplace.entries["status-new.pl"].should.have.class("medium-blue");
 				
 				Options.set("colourChangedOnly", true);
-				assertIconClasses(FindAndReplace.entries, colours, true);
+				assertIconClasses(FindAndReplace.entries, colours, {negate: true});
 				FindAndReplace.entries["status-modified.pl"].should.have.class("medium-blue");
 				FindAndReplace.entries["status-new.pl"].should.have.class("medium-blue");
 				
 				Options.set("coloured", false);
-				assertIconClasses(FindAndReplace.entries, colours, true);
+				assertIconClasses(FindAndReplace.entries, colours, {negate: true});
 				FindAndReplace.entries["status-modified.pl"].should.not.have.class("medium-blue");
 				FindAndReplace.entries["status-new.pl"].should.not.have.class("medium-blue");
 				
 				Options.set("coloured", true);
-				assertIconClasses(FindAndReplace.entries, colours, true);
+				assertIconClasses(FindAndReplace.entries, colours, {negate: true});
 				FindAndReplace.entries["status-modified.pl"].should.have.class("medium-blue");
 				FindAndReplace.entries["status-new.pl"].should.have.class("medium-blue");
 			});
