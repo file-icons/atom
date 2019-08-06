@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Atom (`.atom-ci` folders), Data (`.aff`, `.dic`, `.dict`, `.snippet`, `.snippets`, `.snip`), Images (`.gsrc`, `.grn`), Minecraft (`.mclevel`, `.mcpack`, `.mcworld`)
+- **Support:** Atom (`.atom-ci` folders), Data (`.aff`, `.dic`, `.dict`, `.snippet`, `.snippets`, `.snip`), Images (`.gsrc`, `.grn`), Istanbul (`.nycrc.{yml,yaml}`, `nyc.config.js`), Minecraft (`.mclevel`, `.mcpack`, `.mcworld`)
 - Test-file icons to numbered JS/TS files inside a directory named `test{s}` or `spec{s}`
 
 

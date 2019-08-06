@@ -2741,8 +2741,12 @@ fileIcons:
 
 	Istanbul:
 		icon: "istanbul"
-		match: /^\.nycrc(\.json)?$/i
-		colour: "medium-orange"
+		priority: 2
+		match: [
+			[/^\.nycrc(\.json)?$/i, "medium-orange", uses: "JSON"]
+			[/^\.nycrc\.ya?ml$/i, "medium-green", uses: "YAML"]
+			[/^nyc\.config\.js$/i, "auto-yellow", uses: "JavaScript"]
+		]
 
 	J:
 		icon: "j"
