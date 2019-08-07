@@ -170,6 +170,11 @@ directoryIcons:
 		icon: "gitlab"
 		match: /^\.gitlab$/
 
+	Istanbul:
+		icon: "istanbul"
+		match: /^\.nyc[-_]output$/
+		colour: "medium-orange"
+
 	Meteor:
 		icon: "meteor"
 		match: /^\.meteor$/
