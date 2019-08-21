@@ -77,6 +77,12 @@ directoryIcons:
 			[/^\.acre$/, "dark-blue"]
 		]
 
+	Alacritty:
+		icon: "alacritty-alt"
+		match: /\/\.config\/alacritty$/i
+		colour: "dark-blue"
+		matchPath: true
+
 	"App Store":
 		icon: "appstore"
 		match: /\.(app|xcodeproj|xcworkspace)$/i
@@ -305,6 +311,12 @@ fileIcons:
 			[".psq", "medium-purple"]
 		]
 
+	AffectScript:
+		icon: "affectscript"
+		match: ".affect"
+		colour: "medium-pink"
+		scope: "affect"
+
 	Affinity:
 		icon: "affinity"
 		match: [
@@ -312,6 +324,12 @@ fileIcons:
 			[".afphoto", "medium-pink"]
 			[".afpub", "medium-red"]
 		]
+
+	Alacritty:
+		icon: "alacritty"
+		match: /^\.?alacritty\.ya?ml$/i
+		colour: "medium-orange"
+		priority: 2
 
 	Alex:
 		icon: "alex"
@@ -633,6 +651,14 @@ fileIcons:
 		priority: 2
 		uses: "YAML"
 
+	"Backus-Naur Form":
+		icon: "bnf"
+		match: [
+			[".bnf", "medium-maroon", "bnf"]
+			[".abnf", "medium-green", "abnf"]
+			[".ebnf", "medium-red", "ebnf"]
+		]
+
 	Babel:
 		icon: "babel"
 		match: [
@@ -691,6 +717,13 @@ fileIcons:
 			[".bib", "auto-yellow", "bibtex"]
 			[".bst", "auto-green"]
 		]
+
+	Biml:
+		icon: "biml"
+		match: ".biml"
+		colour: "medium-red"
+		scope: "biml"
+		uses: "XML"
 
 	BinTray:
 		icon: "bintray"
@@ -2146,7 +2179,6 @@ fileIcons:
 			[/^Settings\.StyleCop$/, "medium-green"]
 			[".4th", "medium-blue"]
 			[/\.adm[lx]$/i, "dark-blue"]
-			[".abnf", "medium-green", "abnf"]
 			[".aepx", "medium-purple"]
 			[".agda", "dark-cyan"]
 			[".appxmanifest", "medium-orange"]
@@ -2156,7 +2188,6 @@ fileIcons:
 			[".bc", "dark-red", "baan"]
 			[".befunge", "medium-orange"]
 			[".bmx", "dark-blue"]
-			[".bnf", "medium-maroon", "bnf"]
 			[".brs", "dark-blue", "brightscript"]
 			[".capnp", "dark-red", scope: "capnp", alias: /^(Cap[^\w\s]?n\s*Proto|capnp)$/i]
 			[".ccxml", "dark-blue"]
@@ -2176,7 +2207,6 @@ fileIcons:
 			[".dtd", "medium-cyan", scope: "dtd", alias: /^(DTD|Document[\s_-]*Type[\s_-]*Definition)$/i]
 			[".dyl", "medium-blue"]
 			[".dylan", "medium-blue"]
-			[".ebnf", "medium-red", "ebnf"]
 			[".ecl", "medium-blue"]
 			[".eclxml", "dark-green"]
 			[".fcgi", "medium-blue"]
@@ -3847,6 +3877,20 @@ fileIcons:
 			[".nsh", "dark-cyan"]
 		]
 
+	"NSRI Config":
+		icon: "nsri"
+		priority: 2
+		match: [
+			[/^\.nsrirc(\.(json|(config\.)?js|ya?ml))?$/i, "medium-green"]
+			[/^\.nsriignore(\.(json|(config\.)?js|ya?ml))?$/i, "dark-green"]
+		]
+
+	"NSRI Integrity":
+		icon: "nsri-alt"
+		match: ".integrity.json"
+		colour: "medium-green"
+		priority: 2
+
 	Nu:
 		icon: "recycle"
 		match: [
@@ -4199,6 +4243,12 @@ fileIcons:
 			[".pmod", "medium-blue"]
 		]
 
+	PineScript:
+		icon: "pinescript"
+		match: ".pine"
+		colour: "medium-green"
+		scope: "pine"
+
 	PlatformIO:
 		icon: "platformio"
 		priority: 2
@@ -4426,6 +4476,12 @@ fileIcons:
 			[/^wscript$/, "dark-maroon"]
 		]
 
+	PyUp:
+		icon: "pyup"
+		match: /^\.pyup(\.ya?ml)?$/i
+		colour: "dark-cyan"
+		priority: 2
+
 	"Q/Kdb+":
 		icon: "kx"
 		alias: /^Kdb\s*\+$/
@@ -4579,6 +4635,13 @@ fileIcons:
 		match: /\.regexp?$/i
 		colour: "medium-green"
 		scope: /(\.|^)regexp?(\.|$)/i
+
+	Renovate:
+		icon: "renovate"
+		match: /(?!^renovate$)(\.|^)renovate(rc)?(\.json)?$/i
+		colour: "medium-cyan"
+		priority: 2
+		uses: "JSON"
 
 	RequireJS:
 		icon: "requirejs"
@@ -5557,6 +5620,14 @@ fileIcons:
 		match: [
 			[".ur", "medium-maroon", scope: "ur", alias: /^Ur(\/Web)?$/i]
 			[".urs", "dark-blue"]
+		]
+
+	V:
+		icon: "v"
+		priority: 0.9 # HACK
+		match: [
+			[".v", "medium-blue", scope: "source.v", interpreter: /^v$/i]
+			[".vh", "dark-blue"]
 		]
 
 	V8:
