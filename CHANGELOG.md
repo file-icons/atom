@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** AffectScript (`.affect`), Alacritty (`.alacritty.yml`, `.config/alacritty` folders), Biml (`.biml`), BNF (`.abnf`, `.bnf`, `.ebnf`), MELPA, NSRI (`.nsri{rc,ignore}{,.{{,config.}js,json,yml,yaml}}`, `.integrity.json`), PineScript (`.pine`), PyUp (`.pyup`, `.pyup.{yml,yaml}`), Renovate (`.renovaterc.json`, `renovate.json`), V (`.v`, `.vh`)
-
+- **Support:** Sequelize (`.sequelizerc.{js,json}`)
 
 
 
