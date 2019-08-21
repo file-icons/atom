@@ -4889,6 +4889,7 @@ fileIcons:
 		icon: "sequelize"
 		match: /\.sequelizerc(\.js|\.json)?$/i
 		colour: "auto-blue"
+		priority: 2
 
 	"Silicon Graphics Image":
 		icon: "sgi"
