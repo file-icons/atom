@@ -5627,7 +5627,7 @@ fileIcons:
 		icon: "v"
 		priority: 0.9 # HACK
 		match: [
-			[".v", "medium-blue", scope: "source.v", interpreter: /^v$/i]
+			[".v", "medium-blue", scope: "v", interpreter: /^v$/i]
 			[".vh", "dark-blue"]
 		]
 

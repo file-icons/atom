@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.35...HEAD
 
 
+[Unpublished]
+----------------------
+### Fixed
+- Incorrect scope-name used when matching a grammar override for V
+
+
+
 [v2.1.35] - 2019-08-21
 ----------------------
 ### Added
