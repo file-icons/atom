@@ -8,6 +8,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]
 ----------------------
+### Added
+- **Support:** Jest (`.{ts,tsx,mjs}.snap`)
+
 ### Fixed
 - Incorrect scope-name used when matching a grammar override for V
 

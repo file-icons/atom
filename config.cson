@@ -2861,6 +2861,7 @@ fileIcons:
 		match: [
 			[/^jest(\.config)?\.js(on)?$/i, "medium-red"]
 			[/\.jsx?\.snap$/i, "auto-yellow"]
+			[/\.(mjs|tsx?)\.snap$/i, "medium-blue"]
 		]
 
 	Jinja:
