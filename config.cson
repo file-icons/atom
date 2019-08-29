@@ -2226,7 +2226,7 @@ fileIcons:
 			[".intr", "dark-blue"]
 			[".ivy", "dark-green"]
 			[".jelly", "medium-yellow"]
-			[".jflex", "medium-red"]
+			[/\.jf?lex$/i, "medium-red", scope: /^source\.jf?lex$/i]
 			[".jsproj", "dark-yellow"]
 			[".lagda", "medium-cyan"]
 			[".launch", "medium-blue"]
