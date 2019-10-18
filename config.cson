@@ -2549,6 +2549,8 @@ fileIcons:
 			[".hsc", "medium-blue", scope: "hsc2hs"]
 			[".c2hs", "dark-purple", scope: "c2hs", alias: /^C2hs(\s*Haskell)?$/i]
 			[".lhs", "dark-blue", scope: "latex.haskell", alias: /^(lhaskell|lhs|Literate\s*Haskell)$/i]
+			[".hs-boot", "medium-maroon"]
+			[".hsig", "medium-maroon"]
 		]
 
 	Haxe:
