@@ -26,7 +26,7 @@ Open **Settings** → **Install** and search for `file-icons`.
 
 Alternatively, install through command-line:
 
-	apm install file-icons
+	apm install --production file-icons
 
 
 Customisation
