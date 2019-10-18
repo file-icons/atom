@@ -127,8 +127,10 @@ directoryIcons:
 
 	CPAN:
 		icon: "cpan"
-		match: /^\.cpan$/i
-		colour: "medium-blue"
+		match: [
+			[/^\.cpan$/i, "medium-blue"]
+			[/^\.cpanplus$/i, "dark-blue"]
+		]
 
 	CVS:
 		icon: "cvs"
@@ -193,8 +195,10 @@ directoryIcons:
 
 	NodeJS:
 		icon: "node"
-		match: /^node_modules$/
-		colour: "medium-green"
+		match: [
+			[/^node_modules$/, "medium-green"]
+			[/^\.node-gyp$/, "dark-green"]
+		]
 
 	Package:
 		icon: "package"
@@ -214,6 +218,11 @@ directoryIcons:
 			[".vagrant", "medium-cyan"]
 			[".vagrant.d", "dark-cyan"]
 		]
+
+	Vim:
+		icon: "vim"
+		match: /^\.vim$/i
+		colour: "medium-green"
 
 	"Visual Studio":
 		icon: "vs"
@@ -3877,6 +3886,7 @@ fileIcons:
 			[".node", "dark-green"]
 			[".node-version", "dark-green"]
 			[/^BUNDLED_NODE_VERSION$/, "dark-green"]
+			[".node_repl_history", "dark-green"]
 		]
 
 	Nodemon:
