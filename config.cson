@@ -1456,8 +1456,9 @@ fileIcons:
 
 	cURL:
 		icon: "curl"
-		match: /^\.curlrc$/i
+		match: /(^|\.)curlrc$|^_curlrc$/i
 		colour: "dark-blue"
+		scope: "curlrc"
 
 	CVS:
 		icon: "cvs"
@@ -1547,7 +1548,7 @@ fileIcons:
 			[".sy", "dark-green"]
 			[".syntax", "medium-blue"]
 			[".webmanifest", "medium-blue"]
-			[/\.snip(pets?)?$/i, "medium-green", alias: /^(SnipMate|UltiSnip|NeoSnippet)$/i, scope: /\.(snipmate|ultisnips|neosnippet|snippets?)(\.|$)/i]
+			[/\.snip(pets?)?$/i, "medium-green", alias: /^(SnipMate|UltiSnip|NeoSnippet)$/i, scope: /\.(vim-snippet|snipmate|ultisnips|neosnippet|snippets?)(\.|$)/i]
 			[/\.yas(nippet)?$/i, "medium-green", alias: /(YA)?Snippet/i, scope: /^source\.yasnippet$/i]
 			[/(^|\.)fonts\.(dir|scale|alias)$/i, "medium-red", scope: /^source\.fontdir$/i, priority: 4]
 			[/(^|\.)encodings\.dir$/i, "medium-orange"]
@@ -3907,6 +3908,7 @@ fileIcons:
 		priority: 2
 		match: /^(package\.json|\.npmignore|\.?npmrc|npm-debug\.log|npm-shrinkwrap\.json|package-lock\.json)$/i
 		colour: "medium-red"
+		scope: /\.ini\.npmrc\b/
 
 	NSIS:
 		icon: "nsis"
@@ -4966,7 +4968,7 @@ fileIcons:
 			[/\.zsh(-theme|_history)?$|^\.?(antigen|zpreztorc|zlogin|zlogout|zprofile|zshenv|zshrc)$/i, "medium-blue"]
 			[/\.fish$|^\.fishrc$/i, "medium-green", "fish"]
 			[/^\.?(login|profile)$/, "medium-red"]
-			[".inputrc", "medium-red"]
+			[".inputrc", "medium-red", alias: "Readline Config", scope: "inputrc"]
 			[".tmux", "medium-blue"]
 			[/^(configure|config\.(guess|rpath|status|sub)|depcomp|libtool|compile)$/, "medium-red"]
 			[/^\/(private\/)?etc\/([^/]+\/)*(profile$|nanorc$|rc\.|csh\.)/i, "dark-purple", matchPath: true]
