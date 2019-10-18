@@ -311,6 +311,16 @@ fileIcons:
 			[".psq", "medium-purple"]
 		]
 
+	AdvPL:
+		icon: "totvs"
+		alias: "TOTVS"
+		match: [
+			[".prw", "medium-maroon", "advpl"]
+			[".ahu", "medium-green"]
+			[".aph", "dark-green"]
+			[".tlpp", "dark-blue"]
+		]
+
 	AffectScript:
 		icon: "affectscript"
 		match: ".affect"
@@ -354,6 +364,13 @@ fileIcons:
 		scope: "ampl"
 		match: ".ampl"
 		colour: "dark-maroon"
+
+	AmuseWiki:
+		icon: "amusewiki"
+		match: ".muse"
+		colour: "dark-red"
+		alias: "Muse"
+		scope: "muse"
 
 	Android:
 		icon: "android"
@@ -1539,7 +1556,7 @@ fileIcons:
 			[/^(mime\.types|fstab)$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
 			[/\.(ldj|ldjson|jsonl)$/, "dark-orange", "jsonl"]
-			[/\.(irb-history|lesshst|wget-hsts)$/i, "medium-red"]
+			[/\.(irb-history|lesshst)$/i, "medium-red"]
 			[/^(magic\.mgc|figmagic)$/i, "medium-purple", signature: /^\xF1\x1E\x04\x1C|^\x1C\x04\x1E\xF1/]
 			[/[\/\\](?:magic[\/\\]Magdir|file[\/\\]magic)[\/\\][-.\w]+$/i, "dark-red", matchPath: true]
 			[/(\\|\/)dev[-\w]+\1(?:[^\\\/]+\1)*(?!DESC|NOTES)(?:[A-Z][-A-Z]*)(?:\.in)?$/, "medium-green", matchPath: true]
@@ -2253,7 +2270,6 @@ fileIcons:
 			[".pig", "medium-pink"]
 			[".plist", "dark-cyan", scope: "plist"]
 			[".prg", "medium-red"]
-			[".prw", "dark-red"]
 			[".proj", "dark-green"]
 			[".props", "medium-cyan"]
 			[".psc1", "light-blue"]
@@ -2627,6 +2643,12 @@ fileIcons:
 		interpreter: "hy"
 		match: ".hy"
 		colour: "dark-blue"
+
+	Hyper:
+		icon: "hyper"
+		match: /^\.hyper\.js$/i
+		colour: "dark-purple"
+		priority: 2
 
 	IDL:
 		icon: "idl"
@@ -3522,6 +3544,12 @@ fileIcons:
 		scope: "miranda"
 		colour: "medium-red"
 
+	mIRC:
+		icon: "mirc"
+		match: ".mrc"
+		colour: "medium-red"
+		scope: "mrc"
+
 	MJML:
 		icon: "mjml"
 		match: [
@@ -3859,6 +3887,13 @@ fileIcons:
 		match: ".nomad"
 		colour: "medium-green"
 
+	Noon:
+		icon: "noon"
+		match: ".noon"
+		colour: "dark-grey"
+		scope: "noon"
+		interpreter: "noon"
+
 	Normalize:
 		icon: "normalize"
 		priority: 2
@@ -3966,6 +4001,13 @@ fileIcons:
 			[".octaverc", "dark-orange"]
 		]
 
+	Odin:
+		icon: "odin"
+		match: ".odin"
+		colour: "medium-blue"
+		scope: "odin"
+		interpreter: "odin"
+
 	OOC:
 		icon: "ooc"
 		scope: "ooc"
@@ -4023,6 +4065,12 @@ fileIcons:
 			[".odf", "medium-maroon"]
 			[".odb", "light-pink"]
 		]
+
+	"Open Policy Agent":
+		icon: "openpolicy"
+		match: ".rego"
+		colour: "medium-cyan"
+		scope: "rego"
 
 	OpenSCAD:
 		icon: "scad"
@@ -5033,6 +5081,12 @@ fileIcons:
 		scope: "solidity"
 		colour: "dark-cyan"
 
+	Sorbet:
+		icon: "sorbet"
+		match: ".rbi"
+		colour: "auto-purple"
+		uses: "Ruby"
+
 	SourcePawn:
 		icon: "clojure"
 		match: [
@@ -5755,6 +5809,13 @@ fileIcons:
 			[/^vue\.config\.js$/i, "light-green", priority: 2]
 		]
 
+	Vyper:
+		icon: "vyper"
+		match: ".vy"
+		colour: "medium-grey"
+		interpreter: "vyper"
+		scope: "vyper"
+
 	Wallaby:
 		icon: "wallaby"
 		priority: 2
@@ -5787,6 +5848,13 @@ fileIcons:
 			[".wasm", "medium-red"]
 		]
 
+	Webhint:
+		icon: "webhint"
+		match: /^\.hintrc$/i
+		colour: "dark-purple"
+		interpreter: "hint"
+		uses: "JSON"
+
 	WebGL:
 		icon: "webgl"
 		match: ".webgl"
@@ -5809,6 +5877,13 @@ fileIcons:
 		colour: "dark-blue"
 		scope: /^source\.vtt$/
 		signature: /^WEBVTT(?=\s|$)/
+
+	Wget:
+		icon: "wget"
+		match: [
+			[/^wgetrc$|\.wgetrc$/i, "medium-purple", scope: "wgetrc", interpreter: "wget"]
+			[".wget-hsts", "medium-maroon"]
+		]
 
 	WeChat:
 		icon: "wechat"

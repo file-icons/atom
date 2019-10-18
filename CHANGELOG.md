@@ -9,7 +9,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **New icons:** AdvPL (`.ahu`, `.aph`, `.prw`, `.tlpp`), AmuseWiki (`.muse`), Hyper (`.hyper.js`), mIRC (`.mrc`), Noon (`.noon`), Odin (`.odin`), Open Policy Agent (`.rego`), Sorbet (`.rbi`), Vyper (`.vy`), Webhint (`.hintrc`), Wget (`.wgetrc`, `.wget-hsts`)
 - **Support:** Jest (`.{ts,tsx,mjs}.snap`), JFlex (`.jlex`)
+
+### Changed
+- Replaced V's icon with updated logo
 
 ### Fixed
 - Incorrect scope-name used when matching a grammar override for V
