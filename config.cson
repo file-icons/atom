@@ -5706,6 +5706,7 @@ fileIcons:
 		match: [
 			[/^([dv]8|v8[-_.][^.]*|mksnapshot|mkpeephole)$/i, "medium-blue", priority: 0]
 			[/^\.v8flags\b/, "medium-blue"]
+			[/^\.c8rc(\.json)?$/i, "dark-blue", priority: 2, interpreter: "c8", uses: "JSON"]
 		]
 
 	Vagrant:
