@@ -1809,7 +1809,7 @@ fileIcons:
 		icon: "elixir"
 		match: [
 			[".ex", "dark-purple", "elixir"]
-			[/\.(exs|eex)$/i, "medium-purple"]
+			[/\.(exs|l?eex)$/i, "medium-purple"]
 			[/^mix\.(exs?|lock)$/i, "light-purple"]
 		]
 
