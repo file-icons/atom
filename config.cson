@@ -2933,9 +2933,10 @@ fileIcons:
 
 	JSON:
 		icon: "json"
-		match: /\.(h|geo|topo)?json$/i
-		colour: "medium-cyan"
-		scope: "json"
+		match: [
+			[/\.(h|geo|topo)?json$/i, "medium-cyan", scope: "json"]
+			[".jsonc", "dark-blue", alias: "JSON with Comments", scope: "jsonc"]
+		]
 
 	JSON5:
 		icon: "json5"
@@ -5794,6 +5795,7 @@ fileIcons:
 			[/\.vscodeignore(\.json)?$/i, "medium-blue", priority: 2]
 			[".vstemplate", "medium-purple"]
 			[".vsixmanifest", "dark-orange"]
+			[".code-workspace", "dark-blue", uses: "JSON"]
 			[".builds", "medium-maroon"]
 			[".sln", "medium-orange"]
 			[".njsproj", "light-red"]
