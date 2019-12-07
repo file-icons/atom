@@ -3579,7 +3579,7 @@ fileIcons:
 		icon: "mocha"
 		priority: 2
 		match: [
-			[/\.mocharc\.(json|js|ya?ml)$/i, "medium-maroon"]
+			[/\.mocharc\.(jsonc?|[cm]?js|ya?ml)$/i, "medium-maroon"]
 			[/^mocha(\.min)?\.([jt]sx?|es6?|coffee)$/i, "medium-maroon"]
 			[/^mocha(\.min)?\.(s?css|less|styl)$/i, "medium-red"]
 			["mocha.opts", "light-maroon", priority: 2]
