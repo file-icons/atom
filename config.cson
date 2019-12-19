@@ -3126,6 +3126,13 @@ fileIcons:
 			[".hlean", "dark-red"]
 		]
 
+	Ledger:
+		icon: "graph"
+		match: [
+			[".ledger", "medium-blue", "ledger"]
+			[".hledger", "medium-green"]
+		]
+
 	Lektor:
 		icon: "lektor"
 		match: [
@@ -4684,6 +4691,7 @@ fileIcons:
 			[/^zork\d\.(?!pre$|pur$)[a-z]+$/, "dark-blue", priority: 0]
 			[/^zork\d\.doc$/, "medium-blue", priority: 2]
 			[".changes", "medium-blue"]
+			[".journal", "medium-blue", uses: "Ledger"]
 			[".faq", "medium-blue"]
 		]
 
