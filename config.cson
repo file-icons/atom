@@ -1959,6 +1959,12 @@ fileIcons:
 			[".sam", "dark-yellow"]
 		]
 
+	Faust:
+		icon: "faust"
+		match: ".dsp"
+		colour: "dark-orange"
+		scope: "faust"
+
 	FBX:
 		icon: "fbx"
 		match: ".fbx"
@@ -3995,6 +4001,13 @@ fileIcons:
 		match: ".nxc"
 		scope: "nxc"
 		colour: "medium-orange"
+
+	Oberon:
+		icon: "oberon"
+		match: ".ob2"
+		colour: "medium-purple"
+		scope: "oberon"
+		uses: "Modula-2"
 
 	"Objective-C":
 		icon: "objc"
