@@ -4229,19 +4229,6 @@ fileIcons:
 			[/\.(psgi|xs)$/i, "medium-red"]
 		]
 
-	Perl6:
-		icon: "perl6"
-		match: [
-			[".pl6", "medium-purple", scope: /(^|\.)perl6(fe)?(?=\.|$)/, alias: /^(pl6|Perl\s*6)$/i, interpreter: "perl6"]
-			[/\.[tp]6$|\.6pl$/i, "light-blue"]
-			[/\.(pm6|p6m)$/i, "dark-pink"]
-			[".6pm", "dark-cyan"]
-			[".nqp", "dark-purple"]
-			[".p6l", "medium-blue"]
-			[".pod6", "dark-green"]
-			[/^Rexfile$/, "medium-green"]
-		]
-
 	Phalcon:
 		icon: "phalcon"
 		scope: "volt"
@@ -4592,6 +4579,22 @@ fileIcons:
 			[".rktd", "medium-blue"]
 			[".rktl", "light-red"]
 			[".scrbl", "dark-blue", "scribble"]
+		]
+
+	Raku:
+		icon: "perl6"
+		match: [
+			[".pl6", "medium-purple", scope: /(^|\.)perl6(fe)?(?=\.|$)/, alias: /^(pl6|Perl\s*6)$/i, interpreter: "perl6"]
+			[/\.[tp]6$|\.6pl$/i, "light-blue"]
+			[/\.(pm6|p6m)$/i, "dark-pink"]
+			[".6pm", "dark-cyan"]
+			[".nqp", "dark-purple"]
+			[".p6l", "medium-blue"]
+			[".pod6", "dark-green"]
+			[".raku", "medium-blue"]
+			[".rakumod", "dark-blue"]
+			[".rakutest", "dark-purple"]
+			[/^Rexfile$/, "medium-green"]
 		]
 
 	RAML:
