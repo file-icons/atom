@@ -1984,6 +1984,7 @@ fileIcons:
 		icon: "firebase"
 		match: [
 			[/^firebase\.json$/i, "medium-yellow", priority: 2]
+			[/^firestore\.indexes\.json$/i, "medium-yellow", priority: 2]
 			[/^firestore\.rules?$/i, "medium-orange",
 				alias: "firerules"
 				scope: /\bsource\.fire(store|rules)(?=\\.|$)/i,
@@ -2506,7 +2507,7 @@ fileIcons:
 
 	Gridsome:
 		icon: "gridsome"
-		match: /\bgridsome\.config\.[jt]s$/i
+		match: /\bgridsome\.(config|client|server)\.[jt]s$/i
 		colour: "medium-cyan"
 		priority: 2
 
@@ -3627,7 +3628,7 @@ fileIcons:
 	Modernizr:
 		icon: "modernizr"
 		priority: 2
-		match: /^modernizr([-\.]custom|-\d\.\d+)(\.\d+)?\.js$/i
+		match: /^\.?modernizr(rc)?\.js$|^modernizr([-\.]custom|-\d\.\d+)(\.\d+)?\.js$/i
 		colour: "medium-red"
 
 	"Modula-2":
