@@ -11,9 +11,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icons:** Conda (`.condarc`), Dependabot (`.dependabot` directories), Faust (`.dsp`), Gnuplot, Oberon (`.ob2`), Razzle (`razzle.config.*`), Stylish Haskell (`.stylish-haskell.yaml`), Truffle (`truffle.js`), Zeit (`now.json`, `.nowignore`)
 - **Support:** Firestore (`firestore.indexes.json`), Gridsome (`gridsome.{client,server}.*`), JavaScript (`**/cartridge/scripts/**/*.ds`), JSON (`.jsonc`), Ledger (`.ledger`, `.hledger`, `.journal`), Mocha (`.mocharc.{jsonc,cjs,mjs}`), Modernizr (`.modernizr{,rc}.js`), Raku (`.raku`, `.rakumod`, `.rakutest`), VSCode (`.code-workspace`), YAML (`.yaml.mysql`, `.yaml.sed`)
+- Recognition of [`gjs`][], [`mujs`][], and [QuickJS][] interpreter directives
 
 ### Changed
 - Renamed Perl 6 to Raku
+
+[`gjs`]:   https://gitlab.gnome.org/GNOME/gjs/wikis/Home
+[`mujs`]:  https://www.mujs.com/
+[QuickJS]: https://bellard.org/quickjs/
 
 
 
