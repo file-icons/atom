@@ -142,6 +142,11 @@ directoryIcons:
 		match: ".deno"
 		colour: "dark-purple"
 
+	Dependabot:
+		icon: "dependabot"
+		match: ".dependabot"
+		colour: "medium-blue"
+
 	Docker:
 		icon: "docker"
 		match: /^\.docker$/
@@ -1262,6 +1267,12 @@ fileIcons:
 		priority: 2
 		match: /^(conanfile\.(txt|py)|conan\.conf)$/i
 		colour: "auto-blue"
+
+	Conda:
+		icon: "conda"
+		match: /^\.?condarc$/i
+		colour: "medium-green"
+		uses: "Python"
 
 	Config:
 		icon: "config"
@@ -2425,7 +2436,7 @@ fileIcons:
 		]
 
 	Gnuplot:
-		icon: "graph"
+		icon: "gnuplot"
 		scope: "gnuplot"
 		interpreter: "gnuplot"
 		match: /\.(gp|plo?t|gnuplot)$/i
@@ -4616,6 +4627,13 @@ fileIcons:
 		match: ".rsc"
 		colour: "medium-yellow"
 
+	Razzle:
+		icon: "razzle"
+		priority: 2
+		match: /^razzle\.config\./i
+		colour: "dark-blue"
+		uses: "JavaScript"
+
 	Remark:
 		icon: "remark"
 		priority: 2
@@ -5259,6 +5277,12 @@ fileIcons:
 			[/\.stylelint(ignore|cache)$/i, "dark-blue"]
 		]
 
+	"Stylish Haskell":
+		icon: "stylishhaskell"
+		priority: 2
+		match: /^\.stylish-haskell\.ya?ml$/i
+		colour: "medium-purple"
+
 	Stylus:
 		icon: "stylus"
 		scope: "stylus"
@@ -5590,6 +5614,12 @@ fileIcons:
 		priority: 2
 		match: /^\.travis/i
 		colour: "medium-red"
+
+	Truffle:
+		icon: "truffle"
+		priority: 2
+		match: /^\.?truffle\.js$/i
+		colour: "auto-maroon"
 
 	TSX: # React/Typescript
 		icon: "tsx"
@@ -6080,6 +6110,13 @@ fileIcons:
 		icon: "zbrush"
 		match: ".zpr"
 		colour: "dark-purple"
+
+	Zeit:
+		icon: "zeit"
+		match: [
+			[/^now\.json$/i, "auto-grey", priority: 2, uses: "JSON"]
+			[".nowignore", "auto-maroon", uses: "Ignore List"]
+		]
 
 	Zephir:
 		icon: "zephir"

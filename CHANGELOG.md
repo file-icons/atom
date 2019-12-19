@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **New icons:** Conda (`.condarc`), Dependabot (`.dependabot` directories), Gnuplot, Razzle (`razzle.config.*`), Stylish Haskell (`.stylish-haskell.yaml`), Truffle (`truffle.js`), Zeit (`now.json`, `.nowignore`)
 - **Support:** JavaScript (`**/cartridge/scripts/**/*.ds`), JSON (`.jsonc`), Mocha (`.mocharc.{jsonc,cjs,mjs}`), Raku (`.raku`, `.rakumod`, `.rakutest`), VSCode (`.code-workspace`), YAML (`.yaml.mysql`, `.yaml.sed`)
 
 ### Changed
