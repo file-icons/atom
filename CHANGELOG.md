@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** JSON (`.jsonc`), Mocha (`.mocharc.{jsonc,cjs,mjs}`), VSCode (`.code-workspace`)
+- **Support:** JavaScript (`**/cartridge/scripts/**/*.ds`), JSON (`.jsonc`), Mocha (`.mocharc.{jsonc,cjs,mjs}`), VSCode (`.code-workspace`)
 
 
 
