@@ -2284,6 +2284,7 @@ fileIcons:
 			[".props", "medium-cyan"]
 			[".psc1", "light-blue"]
 			[".pt", "medium-red"]
+			[".qhelp", "medium-purple", alias: "Semmle", uses: "XML"]
 			[".resx", "medium-cyan"]
 			[".rl", "medium-red"]
 			[".scxml", "light-cyan"]
@@ -6031,8 +6032,11 @@ fileIcons:
 
 	YAML:
 		icon: "yaml"
-		match: /\.ya?ml$/i
-		colour: "medium-red"
+		match: [
+			[/\.ya?ml$/i, "medium-red"]
+			[/\.ya?ml\.mysql$/i, "medium-orange", priority: 2]
+			[/\.ya?ml\.sed$/i, "dark-green", priority: 2]
+		]
 
 	Yandex:
 		icon: "yandex"

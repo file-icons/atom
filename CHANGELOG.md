@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** JavaScript (`**/cartridge/scripts/**/*.ds`), JSON (`.jsonc`), Mocha (`.mocharc.{jsonc,cjs,mjs}`), Raku (`.raku`, `.rakumod`, `.rakutest`), VSCode (`.code-workspace`)
+- **Support:** JavaScript (`**/cartridge/scripts/**/*.ds`), JSON (`.jsonc`), Mocha (`.mocharc.{jsonc,cjs,mjs}`), Raku (`.raku`, `.rakumod`, `.rakutest`), VSCode (`.code-workspace`), YAML (`.yaml.mysql`, `.yaml.sed`)
 
 ### Changed
 - Renamed Perl 6 to Raku
