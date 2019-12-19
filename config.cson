@@ -5921,7 +5921,7 @@ fileIcons:
 	WebAssembly:
 		icon: "wasm"
 		match: [
-			[/\.was?t$/i, "medium-blue", scope: /(^|\.)(webassembly|was[mt])(\.|$)/i, alias: /^was[mt]$/i]
+			[/\.was?t$/i, "medium-blue", scope: /(^|\.)(webassembly|was[mt])(\.|$)/i, alias: /^was[mti]$/i, interpreter: "wasmtime"]
 			[".wasm", "medium-red"]
 		]
 
