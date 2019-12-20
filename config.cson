@@ -4226,6 +4226,12 @@ fileIcons:
 		match: ".patch"
 		colour: "medium-green"
 
+	Patreon:
+		icon: "patreon"
+		match: /^PATR(ONS|EON)\.md$/
+		colour: "medium-orange"
+		priority: 2
+
 	PAWN:
 		icon: "pawn"
 		scope: "pwn"
@@ -5436,6 +5442,12 @@ fileIcons:
 			[".tf.json", "medium-yellow", priority: 2]
 			[/\.tfstate(\.backup)?$/i, "medium-cyan"]
 		]
+
+	Terser:
+		icon: "terser"
+		match: /^\.(terser|uglify)rc(\.\w+)?$/i
+		colour: "medium-orange"
+		priority: 2
 
 	"Test, CoffeeScript":
 		icon: "test-coffee"

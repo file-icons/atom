@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Conda (`.condarc`), Dependabot (`.dependabot` directories), Faust (`.dsp`), Gnuplot, Oberon (`.ob2`), Razzle (`razzle.config.*`), Stylish Haskell (`.stylish-haskell.yaml`), Truffle (`truffle.js`), Zeit (`now.json`, `.nowignore`)
+- **New icons:** Conda (`.condarc`), Dependabot (`.dependabot` directories), Faust (`.dsp`), Gnuplot, Oberon (`.ob2`), Patreon (`PATRONS.md`), Razzle (`razzle.config.*`), Stylish Haskell (`.stylish-haskell.yaml`), Terser (`.{terserrc,uglifyrc}.*`), Truffle (`truffle.js`), WASI, Zeit (`now.json`, `.nowignore`)
 - **Support:** Firestore (`firestore.indexes.json`), Gridsome (`gridsome.{client,server}.*`), JavaScript (`**/cartridge/scripts/**/*.ds`), JSON (`.jsonc`), Ledger (`.ledger`, `.hledger`, `.journal`), Mocha (`.mocharc.{jsonc,cjs,mjs}`), Modernizr (`.modernizr{,rc}.js`), Raku (`.raku`, `.rakumod`, `.rakutest`), Shell (`.dircolors`, `dircolors`), VSCode (`.code-workspace`), YAML (`.yaml.mysql`, `.yaml.sed`)
 - **Interpreter recognition:** JavaScript ([`gjs`][], [`mujs`][], [`qjs{,bn,bnc,c}`][QuickJS]), WebAssembly ([`wasmtime`][])
 
