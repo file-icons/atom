@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** JavaScript test (`*-{test,spec}.cjs`, `t/[0-9.]-*.{cjs,mjs,js}`), Text (`.stderr`, `.stdout`)
+- **Support:** Generic test (`t/[0-9]-*.sh`), JavaScript test (`*-{test,spec}.cjs`, `t/[0-9.]-*.{cjs,mjs,js}`), Text (`.stderr`, `.stdout`)
 
 
 

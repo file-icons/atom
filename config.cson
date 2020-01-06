@@ -5458,7 +5458,7 @@ fileIcons:
 	"Test, Generic":
 		icon: "test-generic"
 		match: [
-			[/([\\\x2F])t\1t\d+(?:(?!\1).)+\.sh$/i, "medium-green", matchPath: true, priority: 1.5]
+			[/([\\/])t\1t?\d+(?:(?!\1).)+\.sh$/i, "medium-green", matchPath: true, priority: 1.5]
 			[".test", "medium-green", priority: 0.25]
 			[".xspec", "dark-green"]
 		]
