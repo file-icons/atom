@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.37...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support:** Text (`.stderr`, `.stdout`)
+
+
+
 [v2.1.37] - 2019-12-20
 ----------------------
 ### Added

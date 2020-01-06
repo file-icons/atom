@@ -5556,7 +5556,7 @@ fileIcons:
 			[/\.te?xt$/i, "medium-blue", signature: /^\xEF\xBB\xBF|^\xFF\xFE/]
 			[/\.log$|^Terminal[-_\s]Saved[-_\s]Output$/i, "medium-maroon"]
 			[/\.git[\/\\]description$/, "dark-red", matchPath: true]
-			[".err", "medium-red"]
+			[/\.err$|\.std(err|out)$/i, "medium-red"]
 			[".rtf", "dark-red"]
 			[/\.i?nfo$/i, "dark-blue"]
 			[".abt", "dark-purple"]
