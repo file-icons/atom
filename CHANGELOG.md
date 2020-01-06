@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Text (`.stderr`, `.stdout`)
+- **Support:** JavaScript test (`*-{test,spec}.cjs`), Text (`.stderr`, `.stdout`)
 
 
 
