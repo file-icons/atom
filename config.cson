@@ -4399,11 +4399,13 @@ fileIcons:
 
 	PostScript:
 		icon: "postscript"
+		mime: "application/postscript"
 		match: [
 			[".ps", "medium-red", scope: "postscript", alias: "postscr", signature: /^%!PS/]
 			[".eps", "medium-orange"]
 			[".pfa", "dark-blue"]
 			[/\.a[fm]m$/i, "medium-green", scope: "afm", signature: /^\s*Start(Comp|Master)?FontMetrics\s+(\d+\.\d+)/]
+			[/\.eps[fi]$/i, "dark-orange"]
 			[".gsf", "dark-orange"]
 		]
 
