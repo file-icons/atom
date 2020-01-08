@@ -11,6 +11,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **Support:** Generic test (`t/[0-9]-*.sh`), JavaScript test (`*-{test,spec}.cjs`, `t/[0-9.]-*.{cjs,mjs,js}`), PostScript (`.epsf`, `.epsi`), Text (`.stderr`, `.stdout`)
 
+### Fixed
+- Missing [Ballerina](https://ballerina.io/) icon
+
 
 
 [v2.1.37] - 2019-12-20
