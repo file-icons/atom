@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Generic test (`t/[0-9]-*.sh`), JavaScript test (`*-{test,spec}.cjs`, `t/[0-9.]-*.{cjs,mjs,js}`), PostScript (`.epsf`, `.epsi`), Text (`.stderr`, `.stdout`)
+- **Support:** 3D asset (`.c4d`, `.dwg`, `.dxf`, `.jas`, `.lxo`, `.ply`), Audio (`.it`, `.s3m`, `.sndh`), Ballerina (`.balx`), BibTeX (`.bibtex`), Binary (`.pyd`), COLLADA (`.collada`), Compressed (`.dsk`, `.ear`), Config (`.cnf`), Database (`.dbi`, `.od`, `.onlydata`), Dephi (`.dof`), Generic code (`.jspx`), Generic test (`t/[0-9]-*.sh`), Handlebars (`.hbt`), Help file (`.chm`, `.hlp`), HTML (`.jspf`), Image (`.jng`, `.wbmp`), Java (`.class`), JavaScript test (`*-{test,spec}.cjs`, `t/[0-9.]-*.{cjs,mjs,js}`), JSON (`.rsj`), Markdown (`.mdtext`, `.mdtxt`), MATLAB (`.mdlp`, `.mltbx`, `.mn`, `.mlappinstall`, `.mlpkginstall`, `.sldd`, `.slx`, `.slxp`), Pascal (`.lfm`, `.lpi`, `.lpk`, `.lps`, `.lrs`, `.lrt`, `.or`, `.ppu`), PHP (`.engine`, `.phar`), Pickle (`.pickle`), PostScript (`.epsf`, `.epsi`), Python (`.pyz`), R (`.Rdata`, `.rdb`, `.rds`, `.rdx`), Readme (`COPYRIGHT`), Tags (`.tld`), Text (`.stderr`, `.stdout`), Themes (`.theme`), Unity3D (`.cubemap`, `.physic{,s}Material{,2D}`, `.unitypackage`), Video (`.asx`), VSCode (`.dbproj`, `.lsproj`, `.modelproj`, `.vcxitems`)
 
 ### Fixed
 - Missing [Ballerina](https://ballerina.io/) icon
