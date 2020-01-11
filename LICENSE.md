@@ -1,5 +1,5 @@
 Copyright (c) 2014-2016 Daniel Brooker
-Copyright (c) 2016-2019 John Gardner
+Copyright (c) 2016-2020 John Gardner
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
