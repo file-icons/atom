@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.37...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.38...HEAD
 
 
-[Unpublished]
+[v2.1.38] - 2020-01-11
 ----------------------
 ### Added
 - **New icons:** Adobe, Adobe Acrobat, Adobe Animate (`.fla`), Adobe Audition, Adobe Bridge, Adobe CC, Adobe Character Animator, Adobe Dimension, Adobe Dreamweaver, Adobe Flash, Adobe Fuse, Adobe InCopy, Adobe Lightroom, Adobe Media Encoder, Adobe Prelude, Adobe Rush, Adobe XD, AGC, AMD, ARM, Assembly: AGC (`.agc`), Assembly: AMD, Assembly: ARM (`.arm`), Assembly: ATT, Assembly: AVR (`.avr`), Assembly: Generic (`.a`, `.i`, `.s`, `.asm`, `.a51`), Assembly: Hitachi (`.h8s`, `.h8sx`, `.h8300`), Assembly: Intel (`.x86`, `.x64`, `.i32`, `.i64`, `.i386`), Assembly: Motorola (`.m68k`, `.lst`), Assembly: PowerPC, Assembly: RISCV, Assembly: SPARC, Assembly: VAX (`.vax`, `.vasm`), Assembly: Zilog (`.z80`, `.PLX`, `.PLXCOPY`), ATT/Bell Labs, AVR, Cheetah3D (`.jas`), Computable Document Format (`.cdf`), Dhall (`.dhall`), DocBook (`.dbk`, `.docbook`), Final Draft (`.fdx`), GenStat (`.gen`, `.gpi`), Hitachi, Intel, LilyPond (`.ly`, `.ily`), Modo (`.lxo`), Motorola, PowerPC, R database (`.Rdata`, `.rdb`, `.rds`, `.rdx`), Reason Studios (`.reason`, `.rns`, `.rsn`, `.rx2`, `.sxt`), RISC-V, SPARC, VAX, Yorick (`.yorick`), Zilog
@@ -14,6 +14,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Missing [Ballerina](https://ballerina.io/) icon
+
+[v2.1.38]: https://github.com/file-icons/atom/releases/tag/v2.1.38
 
 
 
