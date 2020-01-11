@@ -293,6 +293,11 @@ fileIcons:
 			[".aet", "dark-purple"]
 		]
 
+	"Adobe Animate":
+		icon: "animate"
+		match: ".fla"
+		colour: ["dark-orange", "medium-red"]
+
 	"Adobe Illustrator":
 		icon: "ai"
 		match: [
@@ -560,23 +565,73 @@ fileIcons:
 		match: ".aj"
 		colour: "medium-maroon"
 
-	Assembly: # Or binary
-		icon: "binary"
+	Assembly:
+		icon: "asm"
 		match: [
-			[/\.(l?a|[ls]?o|out|s|a51|asm|axf|elf|prx|puff|z80)$/i, "medium-red",
-				scope: /(^|\.)(a[rs]m|x86|z80|lc-?3|cpu12|x86asm|m68k|assembly|avr(dis)?asm|dasm)(\.|$)/i,
-				alias: /^(asm(68k|h8300)?|[ft]asm|v?masm)$/i]
-			[".agc", "dark-blue", scope: "source.agc", alias: /^(Virtual\s*)?AGC$|^Apollo([-_\s]*11)?\s*Guidance\s*Computer$/i]
-			[".ditroff", "dark-green", scope: "source.ditroff", signature: /^x\s*T\s+(dvi|html|lbp|lj4|ps|post|pdf|ascii|cp1047|latin1|utf8|X75|X75-12|X100|X100-12)(?=\s|$)/]
-			[".ko", "dark-green"]
-			[".lst", "medium-blue", "lst-cpu12"]
-			[/\.((c([+px]{2}?)?-?)?objdump|bsdiff|bin|dat|pak|pdb)$/i, "dark-orange"]
-			[".d-objdump", "dark-blue"]
-			[/\.(gco?|gcode|[cdhk]nc)$/i, "medium-orange", "g-code"]
-			[/\.rpy[bc]$/i, "medium-red"]
-			[/\.py[cdo]$/i, "dark-purple"]
-			[".swp", "dark-green", priority: 4]
-			[/^\.rnd$/i, "dark-blue"]
+			[".a", "medium-green", alias: "asm", scope: /(^|\.)(asm|assembly|lc-?3)(\.|$)/i]
+			[".i", "medium-cyan"]
+			[".s", "dark-green"]
+			[".asm", "medium-green"]
+			[".a51", "medium-orange", alias: "RTX-51 TINY"]
+		]
+
+	"Assembly, AGC":
+		icon: "asm-agc"
+		match: ".agc"
+		colour: "dark-blue"
+		scope: "source.agc"
+		alias: /^(Virtual\s*)?AGC$|^Apollo([-_\s]*11)?\s*Guidance\s*Computer$/i
+		uses: "Assembly"
+
+	"Assembly, ARM":
+		icon: "asm-arm"
+		match: ".arm"
+		colour: "medium-blue"
+		scope: "arm"
+		uses: "Assembly"
+
+	"Assembly, AVR":
+		icon: "asm-avr"
+		match: ".avr"
+		colour: "dark-purple"
+		scope: /(^|\.)avr(dis)?asm(\.|$)/i
+		uses: "Assembly"
+
+	"Assembly, Hitachi":
+		icon: "asm-hitachi"
+		match: /\.h8(SX?|\d{3})?$/i
+		colour: "medium-grey"
+		alias: /^(h8(SX?|\/?\d{3})?)$/i
+		uses: "Assembly"
+
+	"Assembly, Intel":
+		icon: "asm-intel"
+		match: /\.((x|i(a[-_]?))(32|86|64)(asm)?|i386|80386)$/i
+		colour: "dark-blue"
+		scope: /(^|\.)((x|i(a[-_]?))(32|86|64)(asm)?|i386|80386)(\.|$)/i
+		alias: /^(x86|x64|x86[-_]?64|i(a[-_]?)?(32|64)|i386|80386|Intel|Itanium|[ftm]asm)$/i
+		uses: "Assembly"
+
+	"Assembly, Motorola":
+		icon: "asm-m68k"
+		uses: "Assembly"
+		match: [
+			[".m68k", "dark-red", alias: /^(asm68(k|\d{2,3})?|m68k)$/i, scope: /(^|\.)(m68k|dasm)(\.|$)/i]
+			[".lst", "medium-blue", alias: "lst-cpu12", scope: /(^|\.)(lst-)?cpu[-_\s]?12(\.|$)/i]
+		]
+
+	"Assembly, VAX":
+		icon: "asm-vax"
+		match: /\.v(ax|masm)$/i
+		colour: "medium-maroon"
+		alias: /^(Macro[-_\s]?32|VAX\s+Macro|vmasm)$/i
+		uses: "Assembly"
+
+	"Assembly, Zilog":
+		icon: "asm-zilog"
+		uses: "Assembly"
+		match: [
+			[".z80", "medium-yellow", scope: "z80"]
 			[/\.PLX(COPY)?$/, "medium-blue",
 				alias: /^z\/?(OS|VM)\s*(Assembl(y|er)|PL\/?X(\s*EDL)?)$/i
 				scope: /\.zvm(asm|plx|plxedl)(\.|$)/
@@ -759,6 +814,25 @@ fileIcons:
 		colour: "medium-red"
 		scope: "biml"
 		uses: "XML"
+
+	Binary:
+		icon: "binary"
+		match: [
+			[/\.([ls]?o|out)$/i, "medium-red"]
+			[".axf", "dark-blue"]
+			[".elf", "medium-green"]
+			[".la", "dark-red"]
+			[".ko", "dark-green"]
+			[/\.((c([+px]{2}?)?-?)?objdump|bsdiff|bin|dat|pak|pdb)$/i, "dark-orange"]
+			[".d-objdump", "dark-blue"]
+			[/\.(gco?|gcode|[cdhk]nc)$/i, "medium-orange", "g-code"]
+			[/\.rpy[bc]$/i, "medium-red"]
+			[/\.py[cdo]$/i, "dark-purple"]
+			[".prx", "medium-purple"]
+			[".puff", "medium-grey"]
+			[".swp", "dark-green", priority: 4]
+			[/^\.rnd$/i, "dark-blue"]
+		]
 
 	BinTray:
 		icon: "bintray"
@@ -1024,6 +1098,11 @@ fileIcons:
 			[/\.(todo|taskpaper)$/i, "medium-yellow"]
 		]
 
+	Cheetah3D:
+		icon: "cheetah3d"
+		match: ".jas"
+		colour: "auto-yellow"
+
 	Chef:
 		icon: "chef"
 		match: /^chefignore$|^(Berks|Policy)file(\.lock)?$/i
@@ -1268,6 +1347,13 @@ fileIcons:
 			[".egg", "light-orange"]
 			[".sit", "medium-blue", signature: /^SIT[!D]/]
 		]
+
+	"Computable Document Format":
+		icon: "cdf"
+		match: ".cdf"
+		colour: "medium-red"
+		mime: "application/cdf"
+		uses: "Mathematica"
 
 	Conan:
 		icon: "conan"
@@ -1643,6 +1729,12 @@ fileIcons:
 			[".dtsi", "medium-orange"]
 		]
 
+	Dhall:
+		icon: "dhall"
+		match: ".dhall"
+		colour: "dark-grey"
+		scope: ".dhall"
+
 	Dia:
 		icon: "dia"
 		match: ".dia"
@@ -1661,6 +1753,13 @@ fileIcons:
 		colour: "medium-orange"
 		uses: "YAML"
 
+	Ditroff:
+		icon: "binary"
+		match: /\.dit(roff)?$/i
+		colour: "dark-green"
+		scope: "source.ditroff"
+		signature: /^x\s*T\s+(dvi|html|lbp|lj4|ps|post|pdf|ascii|cp1047|latin1|utf8|X75|X75-12|X100|X100-12)(?=\s|$)/
+
 	"DNS Zone / CNAME":
 		icon: "earth"
 		match: [
@@ -1668,6 +1767,13 @@ fileIcons:
 			[".arpa", "medium-green"]
 			[/^CNAME$/, "dark-blue"]
 		]
+
+	DocBook:
+		icon: "docbook"
+		match: /\.(dbk|docbook)$/i
+		colour: "medium-cyan"
+		mime: "application/docbook+xml"
+		uses: "XML"
 
 	Docker:
 		icon: "docker"
@@ -1986,6 +2092,12 @@ fileIcons:
 		colour: "medium-cyan"
 		scope: /(^|\.)fe?xl(.|$)/i
 		interpreter: "fexl"
+
+	"Final Draft":
+		icon: "finaldraft"
+		match: ".fdx"
+		colour: "medium-green"
+		uses: "XML"
 
 	Finder:
 		icon: "finder"
@@ -2330,6 +2442,7 @@ fileIcons:
 			[".st", "medium-blue"]
 			[".stellaris", "medium-blue", "stellaris"]
 			[".storyboard", "medium-green"]
+			[".tagx", "medium-purple"]
 			[".targets", "medium-red"]
 			[".tera", "medium-red"]
 			[".tml", "dark-green"]
@@ -2366,6 +2479,13 @@ fileIcons:
 		alias: /^xml\+(genshi|kid)$/i
 		match: ".kid"
 		colour: "medium-red"
+
+	GenStat:
+		icon: "genstat"
+		match: [
+			[".gen", "medium-green"]
+			[".gpi", "medium-blue"]
+		]
 
 	Gentoo:
 		icon: "gentoo"
@@ -3186,6 +3306,13 @@ fileIcons:
 			[".lws", "medium-blue"]
 		]
 
+	LilyPond:
+		icon: "lilypond"
+		match: [
+			[".ly", "medium-green", scope: /\.(At)?lilypond/i, alias: /^Lily\s*Pond$/i, mime: "text/x-lilypond"]
+			[".ily", "dark-green"]
+		]
+
 	Lime:
 		icon: "lime"
 		match: ".hxp"
@@ -3374,7 +3501,6 @@ fileIcons:
 		icon: "mathematica"
 		match: [
 			[".mathematica", "dark-red", scope: "mathematica", alias: "mma"]
-			[".cdf", "medium-red"]
 			[".ma", "medium-orange"]
 			[".mt", "medium-maroon"]
 			[".nb", "dark-orange"]
@@ -3662,7 +3788,6 @@ fileIcons:
 			[".jas", "medium-yellow"]
 			[".mdl", "medium-red"]
 			[".ply", "dark-red", mime: "text/plain", signature: /^ply|^EPLYBNDS/]
-			[".lxo", "dark-green", alias: "Luxology Modo"]
 			[".fnc", "dark-blue", alias: "QuickCAM 3D"]
 			[".stl", "dark-green"]
 			[".u3d", "medium-orange"]
@@ -3681,6 +3806,11 @@ fileIcons:
 		priority: 2
 		match: /^\.?modernizr(rc)?\.js$|^modernizr([-\.]custom|-\d\.\d+)(\.\d+)?\.js$/i
 		colour: "medium-red"
+
+	Modo:
+		icon: "modo"
+		match: ".lxo"
+		colour: "medium-cyan"
 
 	"Modula-2":
 		icon: "modula2"
@@ -3775,10 +3905,6 @@ fileIcons:
 		match: [
 			[".chord", "medium-orange"]
 			[/\.midi?$/i, "dark-blue", signature: /^MThd/]
-
-			# LilyPond
-			[".ly", "medium-green", scope: /\.(At)?lilypond/i, alias: /^Lily\s*Pond$/i]
-			[".ily", "dark-green"]
 
 			# Pure Data
 			[".pd", "dark-red"]
@@ -4725,7 +4851,7 @@ fileIcons:
 		]
 
 	RData:
-		icon: "r"
+		icon: "rdata"
 		uses: "Binary"
 		match: [
 			[".Rdata", "medium-red"]
@@ -4778,6 +4904,16 @@ fileIcons:
 		match: [
 			[".re", "medium-red", "reason"]
 			[".rei", "medium-orange"]
+		]
+
+	"Reason Studios":
+		icon: "reasonstudios"
+		match: [
+			[".reason", "medium-orange"]
+			[".rns", "dark-orange", signature: /^Propellerheads Reason Song File/]
+			[".rsn", "medium-orange"]
+			[".rx2", "medium-red"]
+			[".sxt", "medium-yellow", mime: "audio/x-aiff", signature: /^FORM.{4}PTCH/]
 		]
 
 	Rebol:
@@ -5626,7 +5762,6 @@ fileIcons:
 			[".brf", "medium-maroon"]
 			[".dri", "medium-blue"]
 			[".etx", "medium-yellow"]
-			[".gpi", "medium-red"]
 			[".irclog", "medium-blue"]
 			[".more", "medium-purple"]
 			[".msg", "medium-orange"]
@@ -6212,6 +6347,13 @@ fileIcons:
 		priority: 2
 		match: ".yo-rc.json"
 		colour: "medium-cyan"
+
+	Yorick:
+		icon: "yorick"
+		match: ".yorick" # HACK: `.i` is the real extension, but it's already used by SWIG/assembly
+		colour: "medium-orange"
+		interpreter: "yorick"
+		scope: "yorick"
 
 	YUI:
 		icon: "yui"
