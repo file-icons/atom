@@ -6218,6 +6218,7 @@ fileIcons:
 			[".wxs", "dark-purple"]
 			[".wxi", "auto-orange"]
 			[".wxl", "auto-maroon"]
+			[".wix", "auto-maroon"]
 		]
 
 	Workbox:
