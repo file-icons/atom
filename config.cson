@@ -233,6 +233,10 @@ directoryIcons:
 		icon: "vs"
 		match: /^\.vscode$/i
 
+	Yarn:
+		icon: "yarn"
+		match: /^\.yarn$/i
+		colour: "medium-blue"
 
 fileIcons:
 

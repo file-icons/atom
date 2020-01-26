@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.38...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support:** WiX (`.wix`), Yarn (`.yarn` directories)
+
+
 [v2.1.38] - 2020-01-11
 ----------------------
 ### Added
