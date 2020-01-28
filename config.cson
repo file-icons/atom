@@ -3999,6 +3999,12 @@ fileIcons:
 			[/^nextflow\.config$/i, "dark-green", priority: 2]
 		]
 
+	NextJS:
+		icon: "nextjs"
+		priority: 2
+		match: /^next\.config\.js$/i
+		colour: "dark-grey"
+
 	NestJS:
 		icon: "nestjs"
 		priority: 2
