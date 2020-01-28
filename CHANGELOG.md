@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **New icons:** Lefthook (`lefthook{,-local}.yml`), Next.js (`next.config.js`)
 - **Support:** WiX (`.wix`), Yarn (`.yarn` directories)
 
 

@@ -3280,6 +3280,12 @@ fileIcons:
 			[".hledger", "medium-green"]
 		]
 
+	Lefthook:
+		icon: "lefthook"
+		priority: 2
+		match: /^lefthook(-local)?\.ya?ml$/i
+		colour: "medium-red"
+
 	Lektor:
 		icon: "lektor"
 		match: [
