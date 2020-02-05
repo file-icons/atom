@@ -253,6 +253,12 @@ fileIcons:
 		match: ".mdo"
 		colour: "auto-red"
 
+	"4D":
+		icon: "_4d"
+		match: ".4dm"
+		colour: "dark-blue"
+		scope: "4dm"
+
 	ABAP:
 		icon: "abap"
 		scope: "abp"
@@ -3974,6 +3980,13 @@ fileIcons:
 		colour: "auto-blue"
 		scope: "neo4j"
 
+	Nessus:
+		icon: "nessus"
+		match: ".nasl"
+		colour: "auto-cyan"
+		scope: "nasl"
+		interpreter: "nasl"
+
 	NetLinx:
 		icon: "amx"
 		match: [
@@ -5186,6 +5199,12 @@ fileIcons:
 		match: ".self"
 		colour: "dark-blue"
 
+	"Semantic Release":
+		icon: "semrelease"
+		priority: 2
+		match: /^\.releaserc(\.(ya?ml|js(on)?))?$/i
+		colour: "medium-grey"
+
 	Sencha:
 		icon: "sencha"
 		priority: 2
@@ -5479,6 +5498,14 @@ fileIcons:
 		match: ".stencil"
 		colour: "medium-orange"
 		scope: "stencil"
+
+	StdlibJS:
+		icon: "stdlibjs"
+		priority: 2
+		match: [
+			[/^stdlib(-.+)?\.js$/i, "medium-orange"]
+			[/^stdlib(-.+)?\.js\.gz$/i, "medium-blue"]
+		]
 
 	Storybook:
 		icon: "storybook"
