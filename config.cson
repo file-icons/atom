@@ -4539,9 +4539,14 @@ fileIcons:
 
 	PLSQL:
 		icon: "sql"
-		scope: /\.plsql(\.oracle)?(\.|$)/i
-		match: /\.(pls|pck|pks|plb|plsql|pkb)$/i
-		colour: "medium-red"
+		match: [
+			[".pls", "medium-red", scope: /\.plsql(\.oracle)?(\.|$)/i]
+			[".pck", "medium-orange"]
+			[".pks", "medium-blue"]
+			[".plb", "medium-purple"]
+			[".plsql", "medium-red"]
+			[".pkb", "dark-red"]
+		]
 
 	PM2:
 		icon: "pm2"

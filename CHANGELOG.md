@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icons:** Lefthook (`lefthook{,-local}.yml`), Next.js (`next.config.js`)
 - **Support:** WiX (`.wix`), Yarn (`.yarn` directories)
+- Colour variations for PL/SQL files
 
 
 [v2.1.38] - 2020-01-11
