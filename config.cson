@@ -162,6 +162,11 @@ directoryIcons:
 		match: /^\.emacs\.d$/
 		colour: "medium-purple"
 
+	Expo:
+		icon: "expo"
+		match: /^\.expo(-shared)?$/i
+		colour: "medium-blue"
+
 	Fossil:
 		icon: "fossil"
 		match: /^\.fossil-settings$/i
@@ -216,6 +221,10 @@ directoryIcons:
 	TextMate:
 		icon: "textmate"
 		match: ".tmBundle"
+
+	UFO:
+		icon: "ufo"
+		match: /\.ufo\d?$/i
 
 	Vagrant:
 		icon: "vagrant"
@@ -2389,7 +2398,6 @@ fileIcons:
 			[".fcgi", "medium-blue"]
 			[".fidl", "medium-pink", "fidl"]
 			[".filters", "medium-pink"]
-			[".flex", "dark-red"]
 			[".fo", "medium-red", "fasto"]
 			[".forth", "medium-blue"]
 			[".frt", "dark-purple"]
@@ -2408,7 +2416,6 @@ fileIcons:
 			[".jspx", "dark-purple"]
 			[".lagda", "medium-cyan"]
 			[".launch", "medium-blue"]
-			[".lex", "medium-cyan", "lex"]
 			[".lid", "medium-purple"]
 			[".lp", "dark-purple"]
 			[".m4", "medium-red", "m4"]
@@ -3311,6 +3318,14 @@ fileIcons:
 		icon: "lein"
 		priority: 2
 		match: "project.clj"
+
+	Lex:
+		icon: "lex"
+		alias: "Flex"
+		match: [
+			[/\.l(ex)?$/i, "medium-cyan", "lex"]
+			[".flex", "dark-red"]
+		]
 
 	LFE:
 		icon: "lfe"
@@ -5989,6 +6004,44 @@ fileIcons:
 			[/\.unibeautifyrc\.ya?ml$/i, "auto-yellow"]
 		]
 
+	Unicode:
+		icon: "unicode"
+		priority: 2
+		match: [
+			[///^
+				( ArabicShaping
+				| Bidi(Brackets|CharacterTest|Mirroring|Test)
+				| Blocks
+				| CJKRadicals
+				| CaseFolding
+				| CompositionExclusions
+				| Derived(Age|CoreProperties|NormalizationProps)
+				| EastAsianWidth
+				| EmojiSources
+				| EquivalentUnifiedIdeograph
+				| HangulSyllableType
+				| Index
+				| Indic(Positional|Syllabic)Category
+				| Jamo
+				| LineBreak
+				| NameAliases
+				| NamedSequences(Prov)?
+				| NamesList
+				| Normalization(Corrections|Test)
+				| NushuSources
+				| PropList
+				| Property(Value)?Aliases
+				| Script(Extension)?s
+				| SpecialCasing
+				| StandardizedVariants
+				| TangutSources
+				| U(nicode|Source)Data
+				| VerticalOrientation
+				) \.txt$
+			///, "medium-red", scope: "unidata"]
+			[/([\\/])(UNIDATA|UCD)\1[^\\/]+\.txt$/i, "medium-red", matchPath: true]
+		]
+
 	Unity3D:
 		icon: "unity3d"
 		match: [
@@ -6243,6 +6296,13 @@ fileIcons:
 			[".wxml", "medium-green", alias: "WeiXin"]
 			[".wxss", "medium-blue"]
 		]
+
+	Wenyan:
+		icon: "wenyan"
+		match: ".wy"
+		colour: "light-orange"
+		scope: /^source\.wenyan$/
+		interpreter: "wenyan"
 
 	Wercker:
 		icon: "wercker"
