@@ -1457,9 +1457,11 @@ fileIcons:
 	"Config, Python":
 		icon: "config-python"
 		generic: true
-		match: /^python-?config\.json$/i
-		colour: "dark-blue"
 		priority: 1.5
+		match: [
+			[/^python-?config\.json$/i, "dark-blue"]
+			[/^pyproject\.toml$/i, "dark-blue"]
+		]
 
 	"Config, React":
 		icon: "config-react"
