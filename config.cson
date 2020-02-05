@@ -2028,7 +2028,7 @@ fileIcons:
 		priority: 2
 		match: [
 			[/\.eslint(cache|ignore)$/i, "medium-purple"]
-			[/\.eslintrc(\.(js|json|ya?ml))?$/i, "light-purple"]
+			[/\.eslintrc($|\.)/i, "light-purple"]
 		]
 
 	ExtJS:
@@ -2670,17 +2670,18 @@ fileIcons:
 		icon: "grunt"
 		priority: 2
 		match: [
-			["gruntfile.js", "medium-yellow"]
-			["gruntfile.coffee", "medium-maroon"]
+			[/^gruntfile.*\.([cm]?js|jsx)$/i, "medium-yellow"]
+			[/^gruntfile.*\.(lit)?coffee$/i, "medium-maroon"]
+			[/^gruntfile.*\.tsx?$/i, "medium-blue"]
 		]
 
 	Gulp:
 		icon: "gulp"
 		priority: 2
 		match: [
-			["gulpfile.js", "medium-red"]
-			["gulpfile.coffee", "medium-maroon"]
-			["gulpfile.babel.js", "medium-red"]
+			[/^gulpfile.*\.([cm]?js|jsx)$/i, "medium-red"]
+			[/^gulpfile.*\.(lit)?coffee$/i, "medium-maroon"]
+			[/^gulpfile.*\.tsx?$/i, "medium-blue"]
 		]
 
 	Hack:
@@ -3065,7 +3066,8 @@ fileIcons:
 		icon: "jest"
 		priority: 2
 		match: [
-			[/^jest(\.config)?\.js(on)?$/i, "medium-red"]
+			[/^jest(\.config)?\.(js(on|x)?|[cm]js|tsx?)$/i, "medium-red"]
+			[/^\.jestrc($|\.)/i, "medium-red"]
 			[/\.jsx?\.snap$/i, "auto-yellow"]
 			[/\.(mjs|tsx?)\.snap$/i, "medium-blue"]
 		]
@@ -6218,7 +6220,7 @@ fileIcons:
 	Webpack:
 		icon: "webpack"
 		priority: 2
-		match: /(^|\.)webpack(file)?(?=\.|$).*\.([jt]sx?|json)$/i
+		match: /(^|\.)webpack(file)?(?=\.|$).*\.([jt]sx?|[cm]js|json|(lit)?coffee)$/i
 		colour: "medium-blue"
 
 	WebVTT:

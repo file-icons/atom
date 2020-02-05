@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** 4D (`.4dm`), Lefthook (`lefthook{,-local}.yml`), Nessus (`.nasl`), Next.js (`next.config.js`), OpenStack, Semantic Release (`.releaserc{,.js,.json,.yaml,.yml}`), Stdlib.js (`stdlib-*{.js,.js.gz}`)
-- **Support:** WiX (`.wix`), Yarn (`.yarn` directories)
+- **Support:** ESLint (`.eslintrc.{cjs,mjs}`), Grunt (`gruntfile*.{cjs,jsx,mjs,ts,tsx}`), Gulp (`gulpfile*.{cjs,jsx,mjs,ts,tsx}`), Jest (`.jestrc{,.*}`, `jest.config.{cjs,jsx,mjs,ts,tsx}`), Webpack (`webpack*.{cjs,mjs,coffee}`), WiX (`.wix`), Yarn (`.yarn` directories)
 - **Interpreter recognition:** JavaScript ([`slimerjs`][])
 - Colour variations for PL/SQL files
 
