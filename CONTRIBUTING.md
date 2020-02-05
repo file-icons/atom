@@ -44,7 +44,7 @@ Preserve the existing format so readers can grep what they're looking for when s
 [1]: config.cson
 [2]: lib/icons/.icondb.js
 [3]: https://github.com/file-icons/atom/issues/new
-[4]: https://github.com/file-icons/source
-[5]: https://github.com/file-icons/source/issues/new
+[4]: https://github.com/file-icons/icons
+[5]: https://github.com/file-icons/icons/issues/new
 [6]: CHANGELOG.md
 [7]: https://github.com/file-icons/atom/blob/master/bin/compile
