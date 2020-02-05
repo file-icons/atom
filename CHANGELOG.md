@@ -11,7 +11,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icons:** Lefthook (`lefthook{,-local}.yml`), Next.js (`next.config.js`)
 - **Support:** WiX (`.wix`), Yarn (`.yarn` directories)
+- **Interpreter recognition:** JavaScript ([`slimerjs`][])
 - Colour variations for PL/SQL files
+
+[`slimerjs`]: https://slimerjs.org/
+
 
 
 [v2.1.38] - 2020-01-11
