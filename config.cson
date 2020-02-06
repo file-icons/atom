@@ -77,6 +77,11 @@ directoryIcons:
 			[/^\.acre$/, "dark-blue"]
 		]
 
+	Agda:
+		icon: "agda"
+		match: /^\.agda$/i
+		colour: "dark-cyan"
+
 	Alacritty:
 		icon: "alacritty-alt"
 		match: /\/\.config\/alacritty$/i
@@ -268,6 +273,12 @@ fileIcons:
 		colour: "dark-blue"
 		scope: "4dm"
 
+	"A+":
+		icon: "a-plus"
+		match: /\.a?\+$/i
+		colour: "medium-blue"
+		interpreter: /^a\+$/
+
 	ABAP:
 		icon: "abap"
 		scope: "abp"
@@ -373,6 +384,13 @@ fileIcons:
 			[".afpub", "medium-red"]
 		]
 
+	Agda:
+		icon: "agda"
+		match: [
+			[".agda", "dark-cyan", "agda"]
+			[".lagda", "medium-cyan", alias: "Literate Agda"]
+		]
+
 	Alacritty:
 		icon: "alacritty"
 		match: /^\.?alacritty\.ya?ml$/i
@@ -409,6 +427,11 @@ fileIcons:
 		colour: "dark-red"
 		alias: "Muse"
 		scope: "muse"
+
+	Analytica:
+		icon: "analytica"
+		match: ".ana"
+		colour: "medium-orange"
 
 	Android:
 		icon: "android"
@@ -860,10 +883,13 @@ fileIcons:
 		colour: "medium-green"
 
 	Bison:
-		icon: "gnu"
-		scope: "bison"
-		match: ".bison"
-		colour: "medium-red"
+		icon: "bison"
+		match: [
+			[".bison", "medium-red", "bison"]
+			[".y", "dark-green"]
+			[".yacc", "medium-green"]
+			[".yy", "medium-cyan"]
+		]
 
 	Bitbucket:
 		icon: "bitbucket"
@@ -1588,11 +1614,24 @@ fileIcons:
 			[".cuh", "dark-green"]
 		]
 
+	Cuneiform:
+		icon: "cuneiform"
+		match: ".cfl"
+		colour: "dark-blue"
+		interpreter: "cuneiform"
+		scope: "cfl"
+
 	cURL:
 		icon: "curl"
 		match: /(^|\.)curlrc$|^_curlrc$/i
 		colour: "dark-blue"
 		scope: "curlrc"
+
+	Curry:
+		icon: "curry"
+		match: ".curry"
+		colour: "medium-red"
+		scope: "curry"
 
 	CVS:
 		icon: "cvs"
@@ -1922,6 +1961,13 @@ fileIcons:
 			[/\.c?project$/, "dark-blue"]
 			[".classpath", "medium-red"]
 		]
+
+	ECLiPSe:
+		icon: "eclipse-lang"
+		priority: 1.5
+		match: /\.ecl(\.txt)?$/i
+		colour: "medium-blue"
+		scope: "eclipse"
 
 	EditorConfig:
 		icon: "editorconfig"
@@ -2278,6 +2324,19 @@ fileIcons:
 		match: /^fuse\.js$/
 		colour: "medium-blue"
 
+	Futhark:
+		icon: "futhark"
+		match: ".fut"
+		colour: "dark-maroon"
+		scope: "futhark"
+		interpreter: "futhark"
+
+	Galaxy:
+		icon: "galaxy"
+		match: /^galaxy\.ini$/i
+		colour: "medium-grey"
+		priority: 2
+
 	Galen:
 		icon: "galen"
 		match: [
@@ -2309,6 +2368,12 @@ fileIcons:
 		match: /^gatsby-.+\.[jt]s$/i
 		colour: "dark-purple"
 		priority: 2
+
+	GAUSS:
+		icon: "gauss"
+		match: ".gss"
+		colour: "medium-orange"
+		scope: "gauss"
 
 	GDB:
 		icon: "gdb"
@@ -2368,7 +2433,6 @@ fileIcons:
 			[".4th", "medium-blue"]
 			[/\.adm[lx]$/i, "dark-blue"]
 			[".aepx", "medium-purple"]
-			[".agda", "dark-cyan"]
 			[".appxmanifest", "medium-orange"]
 			[".ash", "medium-cyan"]
 			[/\.asn1?$/i, "medium-cyan"]
@@ -2395,7 +2459,6 @@ fileIcons:
 			[".dtd", "medium-cyan", scope: "dtd", alias: /^(DTD|Document[\s_-]*Type[\s_-]*Definition)$/i]
 			[".dyl", "medium-blue"]
 			[".dylan", "medium-blue"]
-			[".ecl", "medium-blue"]
 			[".eclxml", "dark-green"]
 			[".fcgi", "medium-blue"]
 			[".fidl", "medium-pink", "fidl"]
@@ -2414,9 +2477,9 @@ fileIcons:
 			[".ivy", "dark-green"]
 			[".jelly", "medium-yellow"]
 			[/\.jf?lex$/i, "medium-red", scope: /^source\.jf?lex$/i]
+			[".joy", "medium-yellow", "joy"]
 			[".jsproj", "dark-yellow"]
 			[".jspx", "dark-purple"]
-			[".lagda", "medium-cyan"]
 			[".launch", "medium-blue"]
 			[".lid", "medium-purple"]
 			[".lp", "dark-purple"]
@@ -2486,9 +2549,6 @@ fileIcons:
 			[".xsl", "medium-cyan", "xsl"]
 			[".xslt", "dark-cyan"]
 			[".xul", "medium-orange"]
-			[".y", "dark-green"]
-			[".yacc", "medium-green"]
-			[".yy", "medium-cyan"]
 			[".zcml", "dark-pink"]
 		]
 
@@ -4748,6 +4808,13 @@ fileIcons:
 			["Modulefile", "dark-blue"]
 		]
 
+	Pure:
+		icon: "pure"
+		match: ".pure"
+		colour: "medium-grey"
+		interpreter: "pure"
+		scope: "pure"
+
 	PureBasic:
 		icon: "purebasic"
 		match: [
@@ -5122,6 +5189,12 @@ fileIcons:
 			[/^rust-toolchain$/, "medium-red"]
 		]
 
+	SAC:
+		icon: "sac"
+		match: ".sac"
+		colour: "medium-yellow"
+		scope: "sac"
+
 	San:
 		icon: "san"
 		match: ".san"
@@ -5407,6 +5480,12 @@ fileIcons:
 		match: /\.sol(idity)?$/i
 		scope: "solidity"
 		colour: "dark-cyan"
+
+	Sophia:
+		icon: "sophia"
+		match: ".aes"
+		colour: "dark-pink"
+		scope: "sophia"
 
 	Sorbet:
 		icon: "sorbet"
