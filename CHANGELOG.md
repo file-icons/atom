@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** 4D (`.4dm`), Expo (`.expo{,-shared}` directories), Lefthook (`lefthook{,-local}.yml`), Lex (`.l`, `.lex`, `.flex`), Nessus (`.nasl`), Next.js (`next.config.js`), OpenStack, Semantic Release (`.releaserc{,.js,.json,.yaml,.yml}`), Stdlib.js (`stdlib-*{.js,.js.gz}`), UFO (`*.ufo` directories), Unicode (`UNIDATA/*.txt`, `UnicodeData.txt`), Wenyan (`.wy`)
-- **Support:** ESLint (`.eslintrc.{cjs,mjs}`), Grunt (`gruntfile*.{cjs,jsx,mjs,ts,tsx}`), Gulp (`gulpfile*.{cjs,jsx,mjs,ts,tsx}`), Jest (`.jestrc{,.*}`, `jest.config.{cjs,jsx,mjs,ts,tsx}`), Python config (`pyproject.toml`), Webpack (`webpack*.{cjs,mjs,coffee}`), WiX (`.wix`), Yarn (`.yarn` directories)
+- **Support:** ESLint (`.eslintrc.{cjs,mjs}`), Grunt (`gruntfile*.{cjs,jsx,mjs,ts,tsx}`), Gulp (`gulpfile*.{cjs,jsx,mjs,ts,tsx}`), Lua (`lakefile`, `.rockspec`, `.luacheckrc`), Jest (`.jestrc{,.*}`, `jest.config.{cjs,jsx,mjs,ts,tsx}`), Python config (`pyproject.toml`), Webpack (`webpack*.{cjs,mjs,coffee}`), WiX (`.wix`), Yarn (`.yarn` directories)
 - **Interpreter recognition:** JavaScript ([`slimerjs`][])
 - Colour variations for PL/SQL files
 

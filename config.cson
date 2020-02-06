@@ -3430,6 +3430,9 @@ fileIcons:
 			[".pd_lua", "dark-blue"]
 			[".rbxs", "dark-purple"]
 			[".wlua", "dark-red"]
+			[/^Lakefile$/i, "dark-green"]
+			[".luacheckrc", "medium-green"]
+			[".rockspec", "medium-purple"]
 		]
 
 	Makefile: # (Or similar build systems)
