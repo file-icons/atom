@@ -3334,6 +3334,7 @@ fileIcons:
 			[".las", "dark-blue"]
 			[".lasso8", "medium-blue"]
 			[".lasso9", "medium-purple"]
+			[".lassoapp", "dark-red"]
 			[".ldml", "medium-red"]
 		]
 
