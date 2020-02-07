@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.38...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.39...HEAD
 
 
-[Unpublished]
+[v2.1.39] - 2020-02-07
 ----------------------
 ### Added
 - **New icons:** 4D (`.4dm`), A+ (`.a+`, `.+`), Agda (`.agda`, `.lagda`), Analytica (`.ana`), Bison (`.bison`, `.y`, `.yacc`, `.yy`), C#, C++, Cuneiform (`.cfl`), Curl (language), Curry (`.curry`), ECLiPSe (`.ecl`), Expo (`.expo{,-shared}` directories), Futhark (`.fut`), Galaxy (`galaxy.ini`), GAUSS (`.gss`), Hop (`.hop`), KNIME, Lefthook (`lefthook{,-local}.yml`), Lex (`.l`, `.lex`, `.flex`), Mono, Nemerle, Nessus (`.nasl`), Next.js (`next.config.js`), OpenStack, Pure (`.pure`), SAC (`.sac`), Semantic Release (`.releaserc{,.js,.json,.yaml,.yml}`), Sophia (`.aes`), Stdlib.js (`stdlib-*{.js,.js.gz}`), UFO (`*.ufo` directories), Unicode (`UNIDATA/*.txt`, `UnicodeData.txt`), Vala (`.vala`, `.vapi`), Wenyan (`.wy`)
@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Interpreter recognition:** JavaScript ([`slimerjs`][])
 - Colour variations for PL/SQL files
 
+[v2.1.39]:    https://github.com/file-icons/atom/releases/tag/v2.1.39
 [`slimerjs`]: https://slimerjs.org/
 
 
