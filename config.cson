@@ -2646,11 +2646,8 @@ fileIcons:
 
 	GNOME:
 		icon: "gnome"
-		match: [
-			[".vala", "medium-purple", "vala"]
-			[".vapi", "dark-purple"]
-			[/\.gtk/, null, priority: 0.25]
-		]
+		match: /\.gtk/
+		priority: 0.25
 
 	Gnuplot:
 		icon: "gnuplot"
@@ -6179,6 +6176,13 @@ fileIcons:
 		icon: "vagrant"
 		match: /^Vagrantfile$/i
 		colour: "medium-cyan"
+
+	Vala:
+		icon: "vala"
+		match: [
+			[".vala", "medium-purple", "vala"]
+			[".vapi", "dark-purple"]
+		]
 
 	VCL: # (Varnish Configuration Language)
 		icon: "varnish"
