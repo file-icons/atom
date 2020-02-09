@@ -2447,7 +2447,7 @@ fileIcons:
 			[".cgi", "medium-red"]
 			[".ch", "medium-red"]
 			[".clixml", "dark-blue"]
-			[".cocci", "medium-blue"]
+			[".cocci", "medium-blue", scope: "smpl", alias: /^(SmPL|Coccinelle)$/i]
 			[".ct", "dark-pink"]
 			[".cw", "medium-red"]
 			[".cy", "dark-green"]
