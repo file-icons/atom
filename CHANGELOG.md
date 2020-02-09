@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **Support:** Jest (`.snap`)
 - [[`#721`][]]: Colour variations for JavaScript test files
 
 [`#721`]: https://github.com/file-icons/atom/issues/797

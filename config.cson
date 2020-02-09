@@ -3108,7 +3108,6 @@ fileIcons:
 			[".xsjslib", "auto-blue"]
 			[".dust", "auto-maroon"]
 			[".htc", "dark-yellow"]
-			[".snap", "auto-yellow"]
 			[".pac", "medium-purple", alias: "Proxy Auto-Config"]
 			[".pjs", "dark-purple"]
 			[".js.ecr", "medium-cyan", priority: 2]
@@ -3134,8 +3133,9 @@ fileIcons:
 		match: [
 			[/^jest(\.config)?\.(js(on|x)?|[cm]js|tsx?)$/i, "medium-red"]
 			[/^\.jestrc($|\.)/i, "medium-red"]
-			[/\.jsx?\.snap$/i, "auto-yellow"]
 			[/\.(mjs|tsx?)\.snap$/i, "medium-blue"]
+			[/\.cjs\.snap$/i, "auto-green"]
+			[/\.snap$/i, "auto-yellow"]
 		]
 
 	Jinja:
