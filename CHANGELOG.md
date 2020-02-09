@@ -6,6 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.39...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- [[`#721`][]]: Colour variations for JavaScript test files
+
+[`#721`]: https://github.com/file-icons/atom/issues/797
+
+
+
 [v2.1.39] - 2020-02-07
 ----------------------
 ### Added

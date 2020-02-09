@@ -5824,8 +5824,12 @@ fileIcons:
 		icon: "test-js"
 		priority: 1.5
 		match: [
-			[/[._-](spec|test)s?\.([_cms]?js|js[bms]|es\d*)$/i, "auto-yellow"]
-			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.[cm]?js$/i, "auto-yellow", matchPath: true]
+			[/[._-](spec|test)s?\.([_s]?js|js[bms]|es\d*)$/i, "auto-yellow"]
+			[/[._-](spec|test)s?\.mjs$/i, "auto-blue"]
+			[/[._-](spec|test)s?\.cjs$/i, "auto-green"]
+			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.js$/i, "auto-yellow", matchPath: true]
+			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.mjs$/i, "auto-yellow", matchPath: true]
+			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.cjs$/i, "auto-yellow", matchPath: true]
 		]
 
 	"Test, Perl":
