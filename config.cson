@@ -1426,6 +1426,7 @@ fileIcons:
 			[/^ld\.script$/i, "medium-orange"]
 			[/^\.?XCompose$/, "medium-cyan", "xcompose"]
 			[/^buildozer\.spec$/i, "dark-blue", priority: 2]
+			[/^settings\.bsp$/i, "medium-green", priority: 1.5]
 			[/config|settings|option|pref/i, null, priority: 0]
 			[".flc", "medium-green", alias: "FIGlet control", scope: /^source\.figctrl$/i, signature: /^flc2a/]
 			[///
@@ -6186,6 +6187,18 @@ fileIcons:
 		match: [
 			[".vala", "medium-purple", "vala"]
 			[".vapi", "dark-purple"]
+		]
+
+	"Valve Source Engine":
+		icon: "source"
+		match: [
+			[".bsp", "medium-orange", alias: "Binary Space Partition", signature: /^VBSP/]
+			[".vpk", "medium-red", alias: /^Valve (Package|Pak)$/i, signature: /^4\x12\xAAU./]
+			[".vtfx", "dark-red", signature: /^VTFX/]
+			[".vmt", "medium-blue", alias: "Valve Material Type", scope: "vmt"]
+			[".vtf", "dark-blue", alias: /^Valve Texture (File|Format)$/i, signature: /^VTF\0|^\0FTV/]
+			[".vmf", "medium-maroon", alias: /^Valve Map (File|Format)$/i, uses: "XML"]
+			[".res", "medium-cyan", alias: /^Resource List$/i]
 		]
 
 	VCL: # (Varnish Configuration Language)
