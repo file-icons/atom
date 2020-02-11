@@ -689,9 +689,10 @@ fileIcons:
 
 	Atom:
 		icon: "atom"
-		match: /\.atomproject\.[jc]son$/i
-		colour: "dark-green"
-		priority: 2
+		match: [
+			[/\.atomproject\.[jc]son$/i, "dark-green", priority: 2]
+			[/^\.?apmrc$/i, "medium-green"]
+		]
 
 	Atoum:
 		icon: "atoum"
