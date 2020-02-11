@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Valve Source Engine (`.bsp`, `.vpk`, `.vtfx`, `.vmt`, `.vtf`, `.vmf`, `.res`)
+- **New icons:** OpenQASM (`.qasm`), Valve Source Engine (`.bsp`, `.vpk`, `.vtfx`, `.vmt`, `.vtf`, `.vmf`, `.res`)
 - **Support:** Atom (`.apmrc`, `apmrc`), Jest (`.snap`), Squirrel (`.gnut`)
 - [[`#721`][]]: Colour variations for JavaScript test files
 

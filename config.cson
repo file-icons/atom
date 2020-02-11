@@ -4882,6 +4882,13 @@ fileIcons:
 			[".k", "dark-purple", scope: /^source\.k4$/]
 		]
 
+	QASM:
+		icon: "qiskit"
+		alias: "OpenQASM"
+		match: ".qasm"
+		colour: "dark-blue"
+		scope: "qasm"
+
 	QlikView:
 		icon: "qlik"
 		match: [
