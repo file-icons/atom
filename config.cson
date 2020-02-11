@@ -5556,9 +5556,10 @@ fileIcons:
 
 	Squirrel:
 		icon: "squirrel"
-		scope: "nut"
-		match: ".nut"
-		colour: "medium-maroon"
+		match: [
+			[".nut", "medium-maroon", scope: "nut"]
+			[".gnut", "medium-red"]
+		]
 
 	"SSH keys":
 		icon: "key"
