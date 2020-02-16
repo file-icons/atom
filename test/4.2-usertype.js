@@ -15,8 +15,8 @@ describe("User-defined filetypes", () => {
 				["test.mm",      "test-2"],
 				["test.stTheme", "test-3"],
 				["test.t",       "test-4"],
-				["test.tmMacro", "test-5"]
-			]
+				["test.tmMacro", "test-5"],
+			],
 		});
 		await open("test.m");
 		await open("test.mm");
@@ -87,14 +87,14 @@ describe("User-defined filetypes", () => {
 				["test.mm",      treeIcon + "matlab-icon       medium-yellow"],
 				["test.t",       treeIcon + "terraform-icon    dark-purple"],
 				["test.stTheme", treeIcon + "js-icon           medium-yellow"],
-				["test.tmMacro", treeIcon + "python-icon       dark-blue"]
+				["test.tmMacro", treeIcon + "python-icon       dark-blue"],
 			]);
 			assertIconClasses(Tabs.list, [
 				["test.m",       tabIcon  + "mathematica-icon  dark-red"],
 				["test.mm",      tabIcon  + "matlab-icon       medium-yellow"],
 				["test.t",       tabIcon  + "terraform-icon    dark-purple"],
 				["test.stTheme", tabIcon  + "js-icon           medium-yellow"],
-				["test.tmMacro", tabIcon  + "python-icon       dark-blue"]
+				["test.tmMacro", tabIcon  + "python-icon       dark-blue"],
 			]);
 			atom.config.set("core.customFileTypes", {});
 			assertIconClasses(TreeView.entries, [
@@ -102,14 +102,14 @@ describe("User-defined filetypes", () => {
 				["test.mm",      "matlab-icon       medium-yellow"],
 				["test.t",       "terraform-icon    dark-purple"],
 				["test.stTheme", "js-icon           medium-yellow"],
-				["test.tmMacro", "python-icon       dark-blue"]
+				["test.tmMacro", "python-icon       dark-blue"],
 			], {negate: true});
 			assertIconClasses(Tabs.list, [
 				["test.m",       "mathematica-icon  dark-red"],
 				["test.mm",      "matlab-icon       medium-yellow"],
 				["test.t",       "terraform-icon    dark-purple"],
 				["test.stTheme", "js-icon           medium-yellow"],
-				["test.tmMacro", "python-icon       dark-blue"]
+				["test.tmMacro", "python-icon       dark-blue"],
 			], {negate: true});
 		});
 		
@@ -118,7 +118,7 @@ describe("User-defined filetypes", () => {
 				"source.mathematica": ["m"],
 				"source.matlab":     ["mm"],
 				"source.terraform":   ["t"],
-				"source.js":    ["stTheme"]
+				"source.js":    ["stTheme"],
 			});
 			TreeView.collapse();
 			atom.config.set("core.customFileTypes", {
@@ -126,7 +126,7 @@ describe("User-defined filetypes", () => {
 				"source.perl": ["mm"],
 				"source.twig": ["t"],
 				"source.less": ["stTheme"],
-				"source.sass": ["tmMacro"]
+				"source.sass": ["tmMacro"],
 			});
 			TreeView.expand();
 			TreeView.refresh();
@@ -135,7 +135,7 @@ describe("User-defined filetypes", () => {
 				["test.mm",         treeIcon + "perl-icon medium-blue"],
 				["test.stTheme",    treeIcon + "css3-icon dark-blue"],
 				["test.t",          treeIcon + "twig-icon medium-green"],
-				["test.tmMacro",    treeIcon + "sass-icon dark-pink"]
+				["test.tmMacro",    treeIcon + "sass-icon dark-pink"],
 			]);
 		});
 		
@@ -153,14 +153,14 @@ describe("User-defined filetypes", () => {
 				["symlinks/test-2", treeIcon + "icon-file-symlink-file medium-blue"],
 				["symlinks/test-3", treeIcon + "icon-file-symlink-file dark-blue"],
 				["symlinks/test-4", treeIcon + "icon-file-symlink-file medium-green"],
-				["symlinks/test-5", treeIcon + "icon-file-symlink-file dark-pink"]
+				["symlinks/test-5", treeIcon + "icon-file-symlink-file dark-pink"],
 			]);
 			atom.config.set("core.customFileTypes", {
 				"source.mathematica":  ["m"],
 				"source.matlab":      ["mm"],
 				"source.terraform":    ["t"],
 				"source.js":     ["stTheme"],
-				"source.python": ["tmMacro"]
+				"source.python": ["tmMacro"],
 			});
 			assertIconClasses(TreeView.entries, [
 				["test.m",          treeIcon + "mathematica-icon  dark-red"],
@@ -172,7 +172,7 @@ describe("User-defined filetypes", () => {
 				["symlinks/test-2", treeIcon + "icon-file-symlink-file medium-yellow"],
 				["symlinks/test-3", treeIcon + "icon-file-symlink-file medium-yellow"],
 				["symlinks/test-4", treeIcon + "icon-file-symlink-file dark-purple"],
-				["symlinks/test-5", treeIcon + "icon-file-symlink-file dark-blue"]
+				["symlinks/test-5", treeIcon + "icon-file-symlink-file dark-blue"],
 			]);
 			atom.config.set("core.customFileTypes", {});
 			assertIconClasses(TreeView.entries, [
@@ -185,7 +185,7 @@ describe("User-defined filetypes", () => {
 				["symlinks/test-2", treeIcon + "icon-file-symlink-file medium-blue"],
 				["symlinks/test-3", treeIcon + "icon-file-symlink-file medium-orange"],
 				["symlinks/test-4", treeIcon + "icon-file-symlink-file medium-blue"],
-				["symlinks/test-5", treeIcon + "icon-file-symlink-file medium-maroon"]
+				["symlinks/test-5", treeIcon + "icon-file-symlink-file medium-maroon"],
 			]);
 		});
 	});
@@ -197,42 +197,42 @@ describe("User-defined filetypes", () => {
 			atom.config.set("core.customFileTypes", {
 				"source.matlab": ["m"],
 				"text.roff":    ["mm"],
-				"source.turing": ["t"]
+				"source.turing": ["t"],
 			});
-			TreeView.entries["test.m"]       .should.have.classes(treeIcon + "matlab-icon   medium-yellow");
-			TreeView.entries["test.mm"]      .should.have.classes(treeIcon + "manpage-icon  dark-green");
-			TreeView.entries["test.t"]       .should.have.classes(treeIcon + "turing-icon   medium-red");
-			TreeView.entries["test.stTheme"] .should.have.classes(treeIcon + "sublime-icon  medium-orange");
+			TreeView.entries["test.m"]       .should.have.classes(treeIcon + "matlab-icon medium-yellow");
+			TreeView.entries["test.mm"]      .should.have.classes(treeIcon + "manpage-icon dark-green");
+			TreeView.entries["test.t"]       .should.have.classes(treeIcon + "turing-icon medium-red");
+			TreeView.entries["test.stTheme"] .should.have.classes(treeIcon + "sublime-icon medium-orange");
 			TreeView.entries["test.tmMacro"] .should.have.classes(treeIcon + "textmate-icon medium-maroon");
-			Tabs.list["test.m"]              .should.have.classes(tabIcon  + "matlab-icon   medium-yellow");
-			Tabs.list["test.mm"]             .should.have.classes(tabIcon  + "manpage-icon  dark-green");
-			Tabs.list["test.t"]              .should.have.classes(tabIcon  + "turing-icon   medium-red");
-			Tabs.list["test.stTheme"]        .should.have.classes(tabIcon  + "sublime-icon  medium-orange");
-			Tabs.list["test.tmMacro"]        .should.have.classes(tabIcon  + "textmate-icon medium-maroon");
+			Tabs.list["test.m"]              .should.have.classes(tabIcon + "matlab-icon medium-yellow");
+			Tabs.list["test.mm"]             .should.have.classes(tabIcon + "manpage-icon dark-green");
+			Tabs.list["test.t"]              .should.have.classes(tabIcon + "turing-icon medium-red");
+			Tabs.list["test.stTheme"]        .should.have.classes(tabIcon + "sublime-icon medium-orange");
+			Tabs.list["test.tmMacro"]        .should.have.classes(tabIcon + "textmate-icon medium-maroon");
 		});
 		
 		it("restores affected icons", () => {
 			Options.set("usertypes", false);
-			TreeView.entries["test.m"]       .should.have.classes(treeIcon + "objc-icon     medium-blue");
-			TreeView.entries["test.mm"]      .should.have.classes(treeIcon + "objc-icon     medium-blue");
+			TreeView.entries["test.m"]       .should.have.classes(treeIcon + "objc-icon medium-blue");
+			TreeView.entries["test.mm"]      .should.have.classes(treeIcon + "objc-icon medium-blue");
 			TreeView.entries["test.t"]       .should.have.classes(treeIcon + "test-perl-icon medium-blue");
-			TreeView.entries["test.m"]       .should.not.have.classes(       "matlab-icon   medium-yellow");
-			TreeView.entries["test.mm"]      .should.not.have.classes(       "manpage-icon  dark-green");
-			TreeView.entries["test.t"]       .should.not.have.classes(       "turing-icon   medium-red");
-			Tabs.list["test.m"]              .should.have.classes(tabIcon  + "objc-icon     medium-blue");
-			Tabs.list["test.mm"]             .should.have.classes(tabIcon  + "objc-icon     medium-blue");
-			Tabs.list["test.t"]              .should.have.classes(tabIcon  + "test-perl-icon medium-blue");
-			Tabs.list["test.m"]              .should.not.have.classes(       "matlab-icon   medium-yellow");
-			Tabs.list["test.mm"]             .should.not.have.classes(       "manpage-icon  dark-green");
-			Tabs.list["test.t"]              .should.not.have.classes(       "turing-icon   medium-red");
+			TreeView.entries["test.m"]       .should.not.have.classes("matlab-icon medium-yellow");
+			TreeView.entries["test.mm"]      .should.not.have.classes("manpage-icon dark-green");
+			TreeView.entries["test.t"]       .should.not.have.classes("turing-icon medium-red");
+			Tabs.list["test.m"]              .should.have.classes(tabIcon + "objc-icon medium-blue");
+			Tabs.list["test.mm"]             .should.have.classes(tabIcon + "objc-icon medium-blue");
+			Tabs.list["test.t"]              .should.have.classes(tabIcon + "test-perl-icon medium-blue");
+			Tabs.list["test.m"]              .should.not.have.classes("matlab-icon medium-yellow");
+			Tabs.list["test.mm"]             .should.not.have.classes("manpage-icon dark-green");
+			Tabs.list["test.t"]              .should.not.have.classes("turing-icon medium-red");
 		});
 		
 		it("leaves unaffected icons alone", () => {
 			Options.set("usertypes", false);
 			TreeView.entries["test.stTheme"] .should.have.classes(treeIcon + "sublime-icon  medium-orange");
 			TreeView.entries["test.tmMacro"] .should.have.classes(treeIcon + "textmate-icon medium-maroon");
-			Tabs.list["test.stTheme"]        .should.have.classes(tabIcon  + "sublime-icon  medium-orange");
-			Tabs.list["test.tmMacro"]        .should.have.classes(tabIcon  + "textmate-icon medium-maroon");
+			Tabs.list["test.stTheme"]        .should.have.classes(tabIcon + "sublime-icon  medium-orange");
+			Tabs.list["test.tmMacro"]        .should.have.classes(tabIcon + "textmate-icon medium-maroon");
 		});
 		
 		describe("If usertypes change while the strategy is disabled", () => {
@@ -241,14 +241,14 @@ describe("User-defined filetypes", () => {
 				["test.mm",      "java-icon medium-purple"],
 				["test.stTheme", "css3-icon dark-blue"],
 				["test.t",       "html5-icon medium-orange"],
-				["test.tmMacro", "css3-icon medium-blue"]
+				["test.tmMacro", "css3-icon medium-blue"],
 			];
 			const types = {
 				"source.ruby": ["m"],
 				"source.java": ["mm"],
 				"text.html.basic": ["t"],
 				"source.less": ["stTheme"],
-				"source.css": ["tmMacro"]
+				"source.css": ["tmMacro"],
 			};
 			
 			it("does nothing", () => {
@@ -272,13 +272,13 @@ describe("User-defined filetypes", () => {
 					["test.mm",      treeIcon + "objc-icon      medium-blue"],
 					["test.t",       treeIcon + "test-perl-icon medium-blue"],
 					["test.stTheme", treeIcon + "sublime-icon   medium-orange"],
-					["test.tmMacro", treeIcon + "textmate-icon  medium-maroon"]
+					["test.tmMacro", treeIcon + "textmate-icon  medium-maroon"],
 				]);
 				atom.config.set("core.customFileTypes", {
 					"source.mathematica": ["m"],
 					"source.matlab":     ["mm"],
 					"source.terraform":   ["t"],
-					"source.js":    ["stTheme"]
+					"source.js":    ["stTheme"],
 				});
 				Options.set("usertypes", true);
 				assertIconClasses(TreeView.entries, classes, {negate: true});
@@ -287,7 +287,7 @@ describe("User-defined filetypes", () => {
 					["test.mm",      treeIcon + "matlab-icon      medium-yellow"],
 					["test.t",       treeIcon + "terraform-icon   dark-purple"],
 					["test.stTheme", treeIcon + "js-icon          medium-yellow"],
-					["test.tmMacro", treeIcon + "textmate-icon    medium-maroon"]
+					["test.tmMacro", treeIcon + "textmate-icon    medium-maroon"],
 				]);
 			});
 		});

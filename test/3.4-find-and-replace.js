@@ -39,7 +39,7 @@ describe("Find-and-replace", () => {
 			["subfolder/almighty.c",  "c-icon",         "medium-blue"],
 			["subfolder/fad.jsx",     "jsx-icon",       "medium-blue"],
 			["subfolder/markup.html", "html5-icon",     "medium-orange"],
-			["subfolder/script.js",   "js-icon",        "medium-yellow"]
+			["subfolder/script.js",   "js-icon",        "medium-yellow"],
 		];
 		
 		const colours = classes.map(strings => {

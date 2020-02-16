@@ -14,7 +14,7 @@ describe("Atom packages", function(){
 				["data.json", "dat.a"],
 				["blank.file", "empty.file"],
 				["la.tex", "late.x"],
-			]
+			],
 		});
 		await atom.themes.activateThemes();
 		await atom.packages.activatePackage(pkgRoot);

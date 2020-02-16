@@ -56,7 +56,7 @@ describe("Linguist-language attributes", () => {
 				["not-js.es",         base + "erlang-icon medium-red"],
 				["not-js.es.swp",     base + "apl-icon    dark-cyan"],
 				["perl/butterfly.pl", base + "perl6-icon  medium-purple"],
-				["perl/camel.pl6",    base + "perl-icon   medium-blue"]
+				["perl/camel.pl6",    base + "perl-icon   medium-blue"],
 			]);
 		});
 	});
@@ -153,13 +153,13 @@ describe("Linguist-language attributes", () => {
 				["not-js.es",         base + "js-icon     medium-yellow"],
 				["not-js.es.swp",     base + "binary-icon dark-green"],
 				["perl/butterfly.pl", base + "perl-icon   medium-blue"],
-				["perl/camel.pl6",    base + "perl6-icon  medium-purple"]
+				["perl/camel.pl6",    base + "perl6-icon  medium-purple"],
 			]);
 			assertIconClasses(TreeView.entries, [
 				["not-js.es",         "erlang-icon medium-red"],
 				["not-js.es.swp",     "apl-icon    dark-cyan"],
 				["perl/butterfly.pl", "perl6-icon  medium-purple"],
-				["perl/camel.pl6",    "perl-icon   medium-blue"]
+				["perl/camel.pl6",    "perl-icon   medium-blue"],
 			], {negate: true});
 		});
 		
@@ -169,13 +169,13 @@ describe("Linguist-language attributes", () => {
 				["not-js.es",         "js-icon     medium-yellow"],
 				["not-js.es.swp",     "binary-icon dark-green"],
 				["perl/butterfly.pl", "perl-icon   medium-blue"],
-				["perl/camel.pl6",    "perl6-icon  medium-purple"]
+				["perl/camel.pl6",    "perl6-icon  medium-purple"],
 			], {negate: true});
 			assertIconClasses(TreeView.entries, [
 				["not-js.es",         base + "erlang-icon medium-red"],
 				["not-js.es.swp",     base + "apl-icon    dark-cyan"],
 				["perl/butterfly.pl", base + "perl6-icon  medium-purple"],
-				["perl/camel.pl6",    base + "perl-icon   medium-blue"]
+				["perl/camel.pl6",    base + "perl-icon   medium-blue"],
 			]);
 		});
 	});

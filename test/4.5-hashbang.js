@@ -41,7 +41,7 @@ describe("Interpreter directives", () => {
 				["subdir/erlang.tho",  0o755],
 				["subdir/haskell.tho", 0o755],
 				["unknown1",           0o755],
-			]
+			],
 		});
 		
 		TreeView.refresh();
@@ -81,7 +81,7 @@ describe("Interpreter directives", () => {
 		["shell.d",        "dlang-icon medium-red"],
 		["shell2",         "default-icon"],
 		["unknown1",       "default-icon"],
-		["unknown2",       "default-icon"]
+		["unknown2",       "default-icon"],
 	];
 	
 	const shebangedIcons = [
@@ -99,7 +99,7 @@ describe("Interpreter directives", () => {
 		["sbcl",           base + "cl-icon       medium-orange"],
 		["shell",          base + "terminal-icon medium-purple"],
 		["shell.d",        base + "terminal-icon medium-purple"],
-		["shell2",         base + "terminal-icon medium-purple"]
+		["shell2",         base + "terminal-icon medium-purple"],
 	];
 	
 	
@@ -113,7 +113,7 @@ describe("Interpreter directives", () => {
 				["symlinks/test-2", "icon-file-symlink-file medium-yellow"],
 				["symlinks/test-3", "icon-file-symlink-file medium-blue"],
 				["symlinks/test-4", "icon-file-symlink-file medium-cyan"],
-				["symlinks/test-5", "icon-file-symlink-file medium-red"]
+				["symlinks/test-5", "icon-file-symlink-file medium-red"],
 			]);
 		});
 		
@@ -122,14 +122,14 @@ describe("Interpreter directives", () => {
 				["nada",  base + "default-icon"],
 				["nada2", base + "default-icon"],
 				["nada3", base + "default-icon"],
-				["nada4", base + "default-icon"]
+				["nada4", base + "default-icon"],
 			]);
 		});
 		
 		it("identifies hashbangs in files containing multibyte characters", () => {
 			assertIconClasses(TreeView.entries, [
 				["astral1",  base + "emacs-icon    medium-purple"],
-				["astral2",  base + "terminal-icon medium-purple"]
+				["astral2",  base + "terminal-icon medium-purple"],
 			]);
 		});
 	});

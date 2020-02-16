@@ -16,7 +16,7 @@ module.exports = {
 	},
 	
 	stitchPath(entry){
-		let segments = [];
+		const segments = [];
 		while(entry){
 			const tag = entry.tagName;
 			if("OL" === tag && entry.matches(".archive-tree"))

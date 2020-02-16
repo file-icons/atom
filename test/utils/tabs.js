@@ -24,7 +24,7 @@ class TabsList extends Array {
 				const tab  = getTab(item);
 				this.push(tab);
 				Object.defineProperty(this, name, {
-					value: tab.itemTitle
+					value: tab.itemTitle,
 				});
 			}
 		}

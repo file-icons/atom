@@ -23,7 +23,7 @@ describe("Tabs", () => {
 			open("markdown.md"),
 			open("la.tex"),
 			open("README.md"),
-			open(".bowerrc")
+			open(".bowerrc"),
 		]);
 		
 		const tab = Tabs.getTab(result);
@@ -259,14 +259,14 @@ describe("Tabs", () => {
 						["markdown.md",   "title icon markdown-icon"],
 						["package.json",  "title icon npm-icon"],
 						["README.md",     "title icon book-icon"],
-						[".bowerrc",      "title icon bower-icon"]
+						[".bowerrc",      "title icon bower-icon"],
 					];
 					const tabColours = [
 						["la.tex",        "medium-blue"],
 						["markdown.md",   "medium-blue"],
 						["package.json",  "medium-red"],
 						["README.md",     "medium-blue"],
-						[".bowerrc",      "medium-yellow"]
+						[".bowerrc",      "medium-yellow"],
 					];
 					assertIconClasses(Tabs.list, tabIcons);
 					assertIconClasses(Tabs.list, tabColours, {negate: true});
@@ -282,11 +282,11 @@ describe("Tabs", () => {
 				it("shows a coloured icon", () => {
 					const tabIcons = [
 						["status-modified.pl", "title icon perl-icon"],
-						["status-new.pl",      "title icon perl-icon"]
+						["status-new.pl",      "title icon perl-icon"],
 					];
 					const tabColours = [
 						["status-modified.pl", "medium-blue"],
-						["status-new.pl",      "medium-blue"]
+						["status-new.pl",      "medium-blue"],
 					];
 					assertIconClasses(Tabs.list, tabIcons);
 					assertIconClasses(Tabs.list, tabColours);

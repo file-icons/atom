@@ -12,9 +12,9 @@ describe("Icon database", () => {
 					match: [
 						[".bar", "medium-red", {scope: "c"}],
 						[".BAZ", "medium-red"],
-						[".quux", "dark-red"]
-					]
-				}
+						[".quux", "dark-red"],
+					],
+				},
 			});
 			expect(icons[0].match).to.eql(/\.bar$|\.BAZ$/i);
 			expect(icons[0].colour).to.eql(["medium-red", "medium-red"]);
@@ -26,9 +26,9 @@ describe("Icon database", () => {
 					icon: "foo",
 					match: [
 						[".foo", "red", {matchPath: true}],
-						[".bar", "red"]
-					]
-				}
+						[".bar", "red"],
+					],
+				},
 			});
 			expect(icons).to.have.lengthOf(2);
 			expect(icons[0].matchPath).to.eql(true);
@@ -41,9 +41,9 @@ describe("Icon database", () => {
 					icon: "foo",
 					match: [
 						[".merge", "red", {matchPath: true}],
-						[".this",  "red", {matchPath: true}]
-					]
-				}
+						[".this",  "red", {matchPath: true}],
+					],
+				},
 			});
 			expect(icons).to.have.lengthOf(1);
 			expect(icons[0].matchPath).to.be.true;
@@ -56,7 +56,7 @@ describe("Icon database", () => {
 		it("honours case-sensitivity", () => {
 			const icons = IconCompiler.compileList({
 				a: {colour: "dark-red", match: /AbC$/},
-				b: {colour: "dark-red", match: "AbC"}
+				b: {colour: "dark-red", match: "AbC"},
 			});
 			expect("Abc").to.not.match(icons[0].match);
 		});
@@ -64,7 +64,7 @@ describe("Icon database", () => {
 		
 		it("honours the noFuzz property", () => {
 			const icons = IconCompiler.compileList({
-				"abcXYZ": {match: ".a", noFuzz: true, scope: "xyz"}
+				abcXYZ: {match: ".a", noFuzz: true, scope: "xyz"},
 			});
 			expect("abc-xyz").to.not.match(icons[0].match);
 		});
@@ -73,7 +73,7 @@ describe("Icon database", () => {
 		it("honours the noSuffix property", () => {
 			const icons = IconCompiler.compileList({
 				a: {icon: "alpha", match: ".a"},
-				b: {icon: "beta",  match: ".b", noSuffix: true}
+				b: {icon: "beta",  match: ".b", noSuffix: true},
 			});
 			
 			expect(icons[0].icon).to.equal("alpha-icon");
@@ -86,8 +86,8 @@ describe("Icon database", () => {
 				a: {match: /a/},
 				b: {match: /b/, matchPath: true},
 				c: {match: [
-					[/c/, null, {matchPath: true}]
-				]}
+					[/c/, null, {matchPath: true}],
+				]},
 			});
 			expect(icons[0].matchPath).to.exist.and.be.false;
 			expect(icons[1].matchPath).to.exist.and.be.true;
@@ -98,7 +98,7 @@ describe("Icon database", () => {
 		it("forces capturing groups to be non-capturing", () => {
 			const icons = IconCompiler.compileList({
 				a: {match: /A(B)(?=C)/gi},
-				b: {match: /(A)(?:B)(C)/}
+				b: {match: /(A)(?:B)(C)/},
 			});
 			expect(icons[0].match).to.eql(/A(?:B)(?=C)/gi);
 			expect(icons[1].match).to.eql(/(?:A)(?:B)(?:C)/);
@@ -113,7 +113,7 @@ describe("Icon database", () => {
 					a: {match: ".jpg"},
 					b: {match: ".jpg", scope: "js"},
 					c: {match: ".jpg", scope: "f", alias: "F"},
-					d: {match: ".jpg", scope: "g", interpreter: "j"}
+					d: {match: ".jpg", scope: "g", interpreter: "j"},
 				});
 				expect(icons[0].match).to.eql(/\.jpg$/i);
 				expect(icons[1].scope).to.eql(/\.js$/i);
@@ -125,7 +125,7 @@ describe("Icon database", () => {
 				const icons = IconCompiler.compileList({
 					a: {match: "[A-Z]+*.nope"},
 					b: {match: "file.js"},
-					c: {match: "/foo/bar.var"}
+					c: {match: "/foo/bar.var"},
 				});
 				expect(icons[0].match).to.eql(/\[A-Z\]\+\*\.nope$/i);
 				expect(icons[1].match).to.eql(/file\.js$/i);
@@ -136,7 +136,7 @@ describe("Icon database", () => {
 				const icons = IconCompiler.compileList({
 					a: {match: "foo/bar.txt", matchPath: true},
 					b: {match: "C:\\foo\\bar.txt", matchPath: true},
-					c: {match: /over\/kill\.ott/, matchPath: true}
+					c: {match: /over\/kill\.ott/, matchPath: true},
 				});
 				expect(icons[0].match).to.eql(/foo[\\/]bar\.txt$/i);
 				expect(icons[1].match).to.eql(/C:[\\/]foo[\\/]bar\.txt$/i);
@@ -146,7 +146,7 @@ describe("Icon database", () => {
 			it("leaves path separators alone if matchPath is disabled", () => {
 				const icons = IconCompiler.compileList({
 					a: {match: "foo/bar.txt"},
-					b: {match: "C:\\foo\\bar.txt"}
+					b: {match: "C:\\foo\\bar.txt"},
 				});
 				expect(icons[0].match).to.eql(/foo\/bar\.txt$/i);
 				expect(icons[1].match).to.eql(/C:\\foo\\bar\.txt$/i);
@@ -155,7 +155,7 @@ describe("Icon database", () => {
 			it("bestows no special meaning to leading slashes", () => {
 				const icons = IconCompiler.compileList({
 					a: {match: "/etc/php.ini", matchPath: true},
-					b: {match: "\\etc\\php.ini", matchPath: true}
+					b: {match: "\\etc\\php.ini", matchPath: true},
 				});
 				expect("/usr/local/etc/php.ini").to.match(icons[0].match);
 				expect("\\usr\\local\\etc\\php.ini").to.match(icons[1].match);
@@ -170,7 +170,7 @@ describe("Icon database", () => {
 				a: {match: ".foo", colour: "medium-blue"},
 				b: {match: ".bar", colour: ["medium-green"]},
 				c: {match: ".qux", colour: ["medium-green", "medium-green"]},
-				d: {match: ".die"}
+				d: {match: ".die"},
 			});
 			
 			icons.forEach(icon => {
@@ -185,7 +185,7 @@ describe("Icon database", () => {
 		it("substitutes auto-colours with correct shades", () => {
 			const icons = IconCompiler.compileList({
 				a: {match: ".foo", colour: "auto-orange"},
-				b: {match: ".bar", colour: "auto-green"}
+				b: {match: ".bar", colour: "auto-green"},
 			});
 			
 			expect(icons[0].colour).to.eql(["medium-orange", "dark-orange"]);
@@ -198,7 +198,7 @@ describe("Icon database", () => {
 		it("gives names to language-specific icons", () => {
 			const icons = IconCompiler.compileList({
 				a: {match: ".a", alias: "Alpha"},
-				b: {match: ".b", alias: "Beta", scope: "text.fancy"}
+				b: {match: ".b", alias: "Beta", scope: "text.fancy"},
 			});
 			
 			expect(icons[0].lang).to.not.be.ok;
@@ -214,8 +214,8 @@ describe("Icon database", () => {
 					icon: "asciidoc",
 					scope: "asciidoc",
 					match: /\.(?:ad|adoc|asc|asciidoc)$/i,
-					colour: "medium-blue"
-				}
+					colour: "medium-blue",
+				},
 			});
 			expect(icons[0].lang).to.eql(/^Ascii[\W_ \t]?D[0o]c$/i);
 			expect(icons[1].lang).to.eql(/^Java[\W_ \t]?Script$|^Ecmascript$/i);
@@ -225,7 +225,7 @@ describe("Icon database", () => {
 		it("ignores config keys of generic icons", () => {
 			const icons = IconCompiler.compileList({
 				a: {generic: true, match: ".a", scope: "foo", alias: "x"},
-				b: {generic: true, match: ".b", scope: "bar", alias: "y"}
+				b: {generic: true, match: ".b", scope: "bar", alias: "y"},
 			});
 			expect("a").not.to.match(icons[0].lang);
 			expect("b").not.to.match(icons[1].lang);
@@ -238,7 +238,7 @@ describe("Icon database", () => {
 		it("sorts icons by priority", () => {
 			const config = {
 				a: {match: ".a", colour: "medium-red"},
-				z: {match: ".z", colour: "dark-green", priority: 2}
+				z: {match: ".z", colour: "dark-green", priority: 2},
 			};
 			
 			expect(IconCompiler.compileList(config)[0].colour[0]).to.equal("dark-green");
@@ -251,7 +251,7 @@ describe("Icon database", () => {
 			const icons = IconCompiler.compileList({
 				z: {match: ".z", priority: 2},
 				a: {match: ".a", priority: 2},
-				j: {match: ".j", priority: 2}
+				j: {match: ".j", priority: 2},
 			});
 			expect(".a").to.match(icons[0].match);
 			expect(".j").to.match(icons[1].match);
@@ -262,7 +262,7 @@ describe("Icon database", () => {
 		it("matches icons with 0 priority last", () => {
 			const icons = IconCompiler.compileList({
 				a: {match: ".a", priority: 0},
-				b: {match: ".b", priority: 1}
+				b: {match: ".b", priority: 1},
 			});
 			expect(".b").to.match(icons[0].match);
 		});

@@ -1,72 +1,13 @@
 {
-	"extends": "eslint:recommended",
-	"env": {
-		"atomtest": true,
-		"browser": true,
-		"es6": true,
-		"mocha": true,
-		"node": true
-	},
-	"globals": {
-		"atom": true,
-		"attachToDOM": true,
-		"Chai": true,
-		"expect": true,
-		"when": true,
-		"unlessOnWindows": true
-	},
-	"parserOptions": {
-		"ecmaVersion": 2017,
-		"sourceType": "module"
-	},
+	"extends": "@alhadis/eslint-config/atom",
 	"rules": {
-		"eqeqeq": [
-			"error",
-			"smart"
-		],
-		"eol-last": [
-			"error",
-			"always"
-		],
-		"indent": [
-			"error",
-			"tab",
-			{
-				"ignoreComments": true,
-				"VariableDeclarator": 0,
-				"SwitchCase": 1
-			}
-		],
-		"linebreak-style": [
-			"error",
-			"unix"
-		],
-		"no-fallthrough": [
-			"error",
-			{"commentPattern": "[Ff]alls?[-\\s]?through"}
-		],
-		"no-return-await": "error",
-		"no-case-declarations": 0,
-		"no-cond-assign": 0,
-		"no-console": 0,
-		"no-empty": 0,
-		"quotes": [
-			"error",
-			"double",
-			{"avoidEscape": true}
-		],
-		"semi": [
-			"error",
-			"always"
-		],
-		"spaced-comment": [
-			"error",
-			"always"
-		],
-		"yoda": [
-			"error",
-			"always",
-			{"onlyEquality": true}
-		]
-	}
+		"no-underscore-dangle": ["error", {
+			"allow": ["_FileIcons"],
+			"allowAfterThis": true
+		}]
+	},
+	"overrides": [{
+		"files": ["lib/{main,ui}.js"],
+		"rules": {"space-before-function-paren": 0}
+	}]
 }
