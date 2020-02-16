@@ -16,7 +16,7 @@
 		"atom-fs": "v0.1.6",
 		"lru-cache": "^5.1.1",
 		"mapped-disposable": "^1.0.3",
-		"micromatch": "^3.1.10"
+		"micromatch": "^4.0.2"
 	},
 	"devDependencies": {
 		"@alhadis/eslint-config": "^2.2.0",
@@ -27,9 +27,9 @@
 		"eslint": "^6.8.0",
 		"eslint-plugin-import": "^2.20.1",
 		"get-options": "^1.2.0",
-		"rimraf": "^2.6.3",
+		"rimraf": "^3.0.2",
 		"tmp": "^0.1.0",
-		"unzipper": "^0.9.15"
+		"unzipper": "^0.10.8"
 	},
 	"scripts": {
 		"lint": "make lint",
