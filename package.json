@@ -29,8 +29,8 @@
 		"unzipper": "^0.9.15"
 	},
 	"scripts": {
-		"lint": "npx eslint . && npx coffeelint -q config.cson",
-		"test": "atom -t ./test/"
+		"lint": "make lint",
+		"test": "make test"
 	},
 	"providedServices": {
 		"file-icons.element-icons": {
