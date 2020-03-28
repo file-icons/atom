@@ -20,8 +20,12 @@
 	},
 	"devDependencies": {
 		"@alhadis/eslint-config": "^2.2.0",
+		"@babel/cli": "^7.8.4",
+		"@babel/core": "^7.8.7",
+		"@babel/plugin-transform-for-of": "^7.8.6",
 		"atom-mocha": "^2.2.1",
 		"babel-eslint": "^10.0.3",
+		"babel-preset-minify": "^0.5.1",
 		"coffee-script": "^1.12.7",
 		"coffeelint": "^2.1.0",
 		"eslint": "^6.8.0",
@@ -33,7 +37,10 @@
 	},
 	"scripts": {
 		"lint": "make lint",
-		"test": "make test"
+		"test": "make test",
+		"babel": "babel lib_src --out-dir lib",
+		"babel_db": "babel lib_src/icons/.icondb.js --out-file lib/icons/.icondb.js",
+		"build": "npm run babel && npm run babel_db"
 	},
 	"providedServices": {
 		"file-icons.element-icons": {
@@ -46,6 +53,27 @@
 				"1.0.0": "suppressFOUC"
 			}
 		}
+	},
+	"babel": {
+		"presets": [
+			[
+				"minify",
+				{
+					"deadcode": true,
+					"mangle": false,
+					"booleans": false,
+					"builtIns": true,
+					"flipComparisons": true,
+					"infinity": true,
+					"memberExpressions": true,
+					"simplifyComparisons": true,
+					"undefinedToVoid": false
+				}
+			]
+		],
+		"plugins": [
+			["@babel/plugin-transform-for-of",{"loose": true}]
+		]
 	},
 	"configSchema": {
 		"coloured": {
