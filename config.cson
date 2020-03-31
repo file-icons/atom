@@ -1510,9 +1510,10 @@ fileIcons:
 	"Config, Rust":
 		icon: "config-rust"
 		generic: true
-		match: /^rustconfig\.json$/i
-		colour: "medium-maroon"
-		priority: 1.5
+		match: [
+			[/^rustconfig\.json$/i, "medium-maroon", priority: 1.5]
+			[/^rust-toolchain$/i, "dark-maroon"]
+		]
 
 	"Config, TypeScript":
 		icon: "config-ts"

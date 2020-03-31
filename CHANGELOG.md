@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** OpenQASM (`.qasm`), Valve Source Engine (`.bsp`, `.vpk`, `.vtfx`, `.vmt`, `.vtf`, `.vmf`, `.res`)
-- **Support:** Atom (`.apmrc`, `apmrc`), Godot (`.godot`, `.import`, `.tres`, `.tscn`), Jest (`.snap`, `jest.config.babel.*`), Squirrel (`.gnut`)
+- **Support:** Atom (`.apmrc`, `apmrc`), Config: Rust (`rust-toolchain`), Godot (`.godot`, `.import`, `.tres`, `.tscn`), Jest (`.snap`, `jest.config.babel.*`), Squirrel (`.gnut`)
 - [[`#721`][]]: Colour variations for JavaScript test files
 - [[`#67`][]]: Support for `cjs` and `mjs` config files
 
