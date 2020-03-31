@@ -2386,12 +2386,6 @@ fileIcons:
 			["gdbinit", "auto-cyan"]
 		]
 
-	GDScript:
-		icon: "godot"
-		scope: "gdscript"
-		match: ".gd"
-		colour: "medium-blue"
-
 	Gear:
 		icon: "gear"
 		match: [
@@ -2665,6 +2659,17 @@ fileIcons:
 		match: ".go"
 		colour: "medium-blue"
 		scope: /\.go(template)?$/i
+
+	Godot:
+		icon: "godot"
+		uses: "INI"
+		match: [
+			[".gd", "medium-blue", alias: "GDScript", scope: "gdscript", uses: "Text"]
+			[".godot", "dark-blue"]
+			[".tres", "medium-cyan"]
+			[".tscn", "medium-green"]
+			[".import", "medium-red"]
+		]
 
 	Golo:
 		icon: "golo"
