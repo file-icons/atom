@@ -152,6 +152,11 @@ directoryIcons:
 		match: ".dependabot"
 		colour: "medium-blue"
 
+	DevContainer:
+		icon: "devcontainer"
+		match: /^\.devcontainer$/i
+		colour: "medium-blue"
+
 	Docker:
 		icon: "docker"
 		match: /^\.docker$/
@@ -1787,6 +1792,12 @@ fileIcons:
 		alias: /^d[_\W]?mark$/i
 		noSuffix: true
 
+	DevContainer:
+		icon: "devcontainer"
+		match: /^devcontainer\.json$/i
+		colour: "medium-blue"
+		priority: 2
+
 	DeviceTree:
 		icon: "devicetree"
 		match: [
@@ -2264,6 +2275,12 @@ fileIcons:
 			[".pe", "medium-orange", scope: "source.fontforge", alias: "pfaedit", interpreter: "fontforge"]
 			[".sfd", "dark-blue", scope: "text.sfd"]
 		]
+
+	Fork:
+		icon: "fork"
+		match: /^\.issuetracker$/i
+		colour: "medium-blue"
+		uses: "gitconfig"
 
 	Fortran:
 		icon: "fortran"
@@ -4151,17 +4168,31 @@ fileIcons:
 		match: ".nib"
 		colour: "dark-orange"
 
+	Nickle:
+		icon: "nickle"
+		match: ".5c"
+		colour: "auto-grey"
+		interpreter: "nickle"
+		scope: "nickle"
+
 	Nightwatch:
 		icon: "nightwatch"
 		match: /^nightwatch\.conf(ig)?\.[cm]?js$/i
 		colour: "dark-maroon"
 		priority: 2
 
-	Nimrod:
+	Nim:
 		icon: "nimrod"
 		scope: "nim"
 		match: /\.nim(rod)?$/i
 		colour: "medium-green"
+		alias: "Nimrod"
+
+	Nimble:
+		icon: "nimble"
+		match: ".nimble"
+		colour: "medium-grey"
+		uses: "Nim"
 
 	Ninja:
 		icon: "shuriken"
@@ -4663,6 +4694,14 @@ fileIcons:
 		priority: 2
 		match: /^ecosystem.conf(ig)?./i
 		colour: "medium-blue"
+
+	PNPM:
+		icon: "pnpm"
+		priority: 2
+		match: [
+			[/^pnpm-(lock|workspace)\.ya?ml$/i, "medium-orange"]
+			[/^pnpmfile\.js$/i, "auto-yellow"]
+		]
 
 	Pod:
 		icon: "pod"
@@ -5237,6 +5276,12 @@ fileIcons:
 			[".sagews", "dark-blue"]
 		]
 
+	Sails:
+		icon: "sails"
+		match: /^\.sailsrc$/i
+		colour: "medium-blue"
+		uses: ["JSON", "INI"]
+
 	SaltStack:
 		icon: "saltstack"
 		scope: "salt"
@@ -5366,6 +5411,12 @@ fileIcons:
 		match: /\.(sgi|iris)$/i
 		colour: "medium-orange"
 		signature: /^\x01Ú[\0-\x01]/
+
+	"Shadow CLJS":
+		icon: "shadowcljs"
+		priority: 2
+		match: /^shadow-cljs\.edn$/i
+		colour: "auto-cyan"
 
 	Shell:
 		icon: "terminal"
@@ -6616,6 +6667,13 @@ fileIcons:
 		match: [
 			[/^now\.json$/i, "auto-grey", priority: 2, uses: "JSON"]
 			[".nowignore", "auto-maroon", uses: "Ignore List"]
+		]
+
+	ZenScript:
+		icon: "crafttweaker"
+		match: [
+			[".zs", "auto-maroon", "zenscript"]
+			[/^\.zsrc\.json$/i, "auto-orange", priority: 2]
 		]
 
 	Zephir:
