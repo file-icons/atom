@@ -3145,7 +3145,7 @@ fileIcons:
 		icon: "jest"
 		priority: 2
 		match: [
-			[/^jest(\.config)?\.(js(on|x)?|[cm]js|tsx?)$/i, "medium-red"]
+			[/^jest(\.config)?(\.babel)?\.(js(on|x)?|[cm]js|tsx?)$/i, "medium-red"]
 			[/^\.jestrc($|\.)/i, "medium-red"]
 			[/\.(mjs|tsx?)\.snap$/i, "medium-blue"]
 			[/\.cjs\.snap$/i, "auto-green"]
