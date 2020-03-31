@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.39...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.40...HEAD
 
 
-[Unpublished]
+[v2.1.40] - 2020-03-31
 ----------------------
 ### Added
 - **New icons:** DevContainer (`devcontainer.json`, `.devcontainer` directories), Fork (`.issuetracker`), Lefthook (solid-filled variant), Nickle (`.5c`), Nimble (`.nimble`), OpenQASM (`.qasm`), PNPM (`pnpm-{lock,workspace}.yaml`, `pnpmfile.js`), Sails (`.sailsrc`), Shadow CLJS (`shadow-cljs.edn`), Valve Source Engine (`.bsp`, `.vpk`, `.vtfx`, `.vmt`, `.vtf`, `.vmf`, `.res`), ZenScript (`.zs`, `.zsrc.json`)
