@@ -25,8 +25,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Lefthook icon to use solid-filled variant
 - Modeline strategy now also checks second line
 
-[`#721`]: https://github.com/file-icons/atom/issues/797
-[`#67`]:  https://github.com/file-icons/icons/issues/67
+[v2.1.40]: https://github.com/file-icons/atom/releases/tag/v2.1.40
+[`#721`]:  https://github.com/file-icons/atom/issues/797
+[`#67`]:   https://github.com/file-icons/icons/issues/67
 
 
 
