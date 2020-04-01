@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.40...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **Support:** FontForge (`.ff`)
+
+
+
 [v2.1.40] - 2020-03-31
 ----------------------
 ### Added
