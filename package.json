@@ -33,7 +33,9 @@
 	},
 	"scripts": {
 		"lint": "make lint",
-		"test": "make test"
+		"test": "make test",
+		"build": "webpack --mode production",
+		"dev": "webpack --mode none --watch"
 	},
 	"providedServices": {
 		"file-icons.element-icons": {
