@@ -1,6 +1,6 @@
 {
 	"name": "file-icons",
-	"main": "lib/main.js",
+	"main": "dist/main.js",
 	"version": "2.1.40",
 	"private": true,
 	"description": "Assign file extension icons and colours for improved visual grepping",
@@ -29,7 +29,10 @@
 		"get-options": "^1.2.0",
 		"rimraf": "^3.0.2",
 		"tmp": "^0.1.0",
-		"unzipper": "^0.10.8"
+		"unzipper": "^0.10.8",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11",
+		"less-loader": "^5.0.0"
 	},
 	"scripts": {
 		"lint": "make lint",
