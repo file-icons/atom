@@ -5469,6 +5469,14 @@ fileIcons:
 		match: ".liquid"
 		colour: "medium-green"
 
+	Sieve:
+		icon: "filter"
+		match: ".sieve"
+		colour: "medium-red"
+		scope: "sieve"
+		interpreter: "pigeonhole"
+		mime: "application/sieve"
+
 	Sigils:
 		icon: "sigils"
 		match: ".sigils"

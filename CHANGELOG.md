@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** FontForge (`.ff`)
+- **Support:** FontForge (`.ff`), Sieve (`.sieve`)
 
 
 
