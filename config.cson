@@ -65,6 +65,18 @@ matchPath:    By default, matching is done using a file or directory's basename.
 
 noSuffix:     By default, icon names are suffixed with "-icon". Set noSuffix to true if you need to specify an
               icon class in its entirety (such as a default Atom icon). This should otherwise rarely be used.
+
+
+
+RESERVED FOR FUTURE USE
+-----------------------
+
+mime:  A MIME Content-Type string of the form detailed in RFC 2231 §5.
+
+uses:  A loosely-defined "parent" from which to inherit properties not defined by the entry. Intended to
+       address the longstanding problem of config/case-specific icons being replaced by a less qualified
+       icon. For example, the file "app-test.js" should display the `test-js` icon even when it contains
+       a modeline or interpreter directive. Currently, this isn't the case.
 ###
 
 
