@@ -6226,6 +6226,13 @@ fileIcons:
 			[/([\\/])(UNIDATA|UCD)\1[^\\/]+\.txt$/i, "medium-red", matchPath: true]
 		]
 
+	Units:
+		icon: "scales"
+		match: [
+			[".units", "auto-green", "units"]
+			[/^units\.lib$/i, "auto-green", priority: 1.5]
+		]
+
 	Unity3D:
 		icon: "unity3d"
 		match: [
