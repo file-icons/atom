@@ -5992,7 +5992,7 @@ fileIcons:
 			[".mkii", "auto-orange"]
 			[".pgf", "auto-purple", "pgf"]
 			[".tikz", "auto-purple", "tikz"]
-			[".texi", "auto-red"]
+			[/\.(texi(nfo)?|txi)$/i, "auto-red", "texinfo"]
 			[/^hyphen(ex)?\.(cs|den|det|fr|sv|us)$/, "auto-red", priority: 2]
 		]
 

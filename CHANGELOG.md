@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** FontForge (`.ff`), Sieve (`.sieve`), Unit databases (`.units`, `units.lib`)
+- **Support:** FontForge (`.ff`), Sieve (`.sieve`), TeX (`.texinfo`, `.txi`), Unit databases (`.units`, `units.lib`)
 
 
 
