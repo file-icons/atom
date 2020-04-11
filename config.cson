@@ -1054,6 +1054,7 @@ fileIcons:
 			[".upc", "medium-cyan"]
 			[".xbm", "medium-orange", alias: "X BitMap"]
 			[".xpm", "medium-green", alias: "X PixMap"]
+			[/(\\|\/)share(?:\1misc)?\1getopts?\d?$/, "medium-blue", matchPath: true]
 		]
 
 	"C++":
@@ -1751,6 +1752,8 @@ fileIcons:
 			[/(^|\.)encodings\.dir$/i, "medium-orange"]
 			[/^pkginfo$/i, "medium-blue"]
 			[/^term(cap|info)/i, "dark-green", priority: 0.5]
+			[/^(birthtoken|flowers)$/, "medium-green", priority: 0.5, scope: /^source\.generic-db$/]
+			[/(\\|\/)share(?:\1misc)?\1(?:ascii|trace\.codes)$/, "medium-red", matchPath: true]
 			[/^(mime\.types|fstab)$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
 			[/\.(ldj|ldjson|jsonl)$/, "dark-orange", "jsonl"]
@@ -3579,6 +3582,7 @@ fileIcons:
 					| \.(EQ|PS|cstart)\n
 					| ('+\t?|\.\t)\\"\s
 					) ///m]
+			[/^(man|mdoc)\.template$/i, "dark-green"]
 			[/\.(rnh|rno|run|runoff)$/i, "dark-maroon", "runoff"]
 			[/(^|\.)((troff|eqn)rc(-end)?)$/i, "dark-green"]
 			[/^tmac\.|^(mmn|mmt|toc\.entries)$/i, "dark-green", priority: 2]
@@ -6003,6 +6007,7 @@ fileIcons:
 			[/\.te?xt$/i, "medium-blue", signature: /^\xEF\xBB\xBF|^\xFF\xFE/]
 			[/\.log$|^Terminal[-_\s]Saved[-_\s]Output$/i, "medium-maroon"]
 			[/\.git[\/\\]description$/, "dark-red", matchPath: true]
+			[/(\\|\/)share(?:\1misc)?\1(?:operator|mail\.(?:tilde)?help)$/, "dark-red", matchPath: true]
 			[/\.err$|\.std(err|out)$/i, "medium-red"]
 			[".rtf", "dark-red"]
 			[/\.i?nfo$/i, "dark-blue"]

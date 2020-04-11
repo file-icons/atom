@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** FontForge (`.ff`), Sieve (`.sieve`), TeX (`.texinfo`, `.txi`), Unit databases (`.units`, `units.lib`)
+- **Support:** C (`share/misc/getopt{,s}{0..9}`), Database (`birthtoken`, `flowers`), FontForge (`.ff`), Roff (`{man,mdoc}.template`), Sieve (`.sieve`), TeX (`.texinfo`, `.txi`), Text (`share/misc/{operator,mail.{help,tildehelp}}`), Unit databases (`.units`, `units.lib`)
 
 
 
