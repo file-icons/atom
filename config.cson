@@ -6234,7 +6234,7 @@ fileIcons:
 	Units:
 		icon: "scales"
 		match: [
-			[".units", "auto-green", "units"]
+			[".units", "auto-green", scope: /^source\.units(\.(gnu|bsd))?$/i]
 			[/^units\.lib$/i, "auto-green", priority: 1.5]
 		]
 
