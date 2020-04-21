@@ -3737,6 +3737,12 @@ fileIcons:
 		match: ".moo"
 		colour: "medium-cyan"
 
+	Mermaid:
+		icon: "mermaid"
+		match: /\.(mmd|mermaid)$/i
+		colour: "medium-blue"
+		scope: "mermaid"
+
 	Meson:
 		icon: "meson"
 		priority: 2
