@@ -1445,6 +1445,7 @@ fileIcons:
 			[/^mimeapps\.list$/i, "medium-blue"]
 			[/(\.|^)terminal(rc)?$/i, "dark-blue"]
 			[/^ld\.script$/i, "medium-orange"]
+			[/^shells$/i, "medium-green", priority: 0.5]
 			[/^\.?XCompose$/, "medium-cyan", "xcompose"]
 			[/^buildozer\.spec$/i, "dark-blue", priority: 2]
 			[/^settings\.bsp$/i, "medium-green", priority: 1.5]
