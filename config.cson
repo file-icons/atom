@@ -5692,7 +5692,7 @@ fileIcons:
 		match: [
 			[/^(\.bazelrc|bazel\.rc|bazel\.bazelrc)$/i, "dark-green", interpreter: "bazel"]
 			[/^(BUILD|WORKSPACE)(.[Bb][Aa][Zz][Ee][Ll])?$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
-			[".bzl", "dark-blue", alias: /^(Bazel|Skylark)$/i, scope: /(^|\.)(bzl|skylark)(\.|$)/i]
+			[/\.(bzl|star)$/i, "dark-blue", alias: /^(Bazel|Skylark)$/i, scope: /(^|\.)(bzl|skylark)(\.|$)/i]
 			[/^\.gazelcfg\.json$/i, "medium-cyan", alias: "Gazel", priority: 1.25]
 		]
 
