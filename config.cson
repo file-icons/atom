@@ -4414,6 +4414,13 @@ fileIcons:
 		match: ".opa"
 		colour: "medium-blue"
 
+	OpenBSD:
+		icon: "openbsd"
+		match: /^\+(CONTENTS|DESC|DISPLAY)$/
+		colour: "auto-orange"
+		priority: 0.5 # Uncommon
+		scope: /\.openbsd-pkg\.(contents|desc)$/
+
 	OpenCL:
 		icon: "opencl"
 		scope: "opencl"
