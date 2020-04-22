@@ -12,6 +12,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** Mermaid (`.mmd`, `.mermaid`)
 - **Support:** Archive (`.hqx`), C (`share/misc/getopt{,s}{0..9}`), Config (`shells`), Database (`birthtoken`, `flowers`), FontForge (`.ff`), OpenBSD package data (`+CONTENTS`, `+DESC`, `+DISPLAY`), Roff (`{man,mdoc}.template`), Sieve (`.sieve`), TeX (`.texinfo`, `.txi`), Text (`share/misc/{operator,mail.{help,tildehelp}}`), Unit databases (`.units`, `units.lib`, `.units_history`)
 
+### Changed
+- Renamed `Bazel` entry to `Starlark`
+
 
 
 [v2.1.40] - 2020-03-31

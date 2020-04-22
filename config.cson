@@ -838,15 +838,6 @@ fileIcons:
 		match: ".bzrignore"
 		colour: "auto-yellow"
 
-	Bazel:
-		icon: "bazel"
-		match: [
-			[/^(\.bazelrc|bazel\.rc|bazel\.bazelrc)$/i, "dark-green", interpreter: "bazel"]
-			[/^(BUILD|WORKSPACE)(.[Bb][Aa][Zz][Ee][Ll])?$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
-			[".bzl", "dark-blue", alias: "Skylark", scope: /(^|\.)(bzl|skylark)(\.|$)/i]
-			[/^\.gazelcfg\.json$/i, "medium-cyan", alias: "Gazel", priority: 1.25]
-		]
-
 	Behat:
 		icon: "behat"
 		match: /^behat(\.[^.]+)*\.ya?ml$/i
@@ -5694,6 +5685,16 @@ fileIcons:
 		scope: "stan"
 		match: ".stan"
 		colour: "medium-red"
+
+	Starlark:
+		icon: "bazel"
+		uses: "Python"
+		match: [
+			[/^(\.bazelrc|bazel\.rc|bazel\.bazelrc)$/i, "dark-green", interpreter: "bazel"]
+			[/^(BUILD|WORKSPACE)(.[Bb][Aa][Zz][Ee][Ll])?$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
+			[".bzl", "dark-blue", alias: /^(Bazel|Skylark)$/i, scope: /(^|\.)(bzl|skylark)(\.|$)/i]
+			[/^\.gazelcfg\.json$/i, "medium-cyan", alias: "Gazel", priority: 1.25]
+		]
 
 	Stata:
 		icon: "stata"
