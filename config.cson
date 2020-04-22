@@ -6088,6 +6088,12 @@ fileIcons:
 		colour: "medium-maroon"
 		signature: /^\*\*TI[789]\d\*\*/
 
+	Tilt:
+		icon: "tilt"
+		match: /^Tiltfile$/i
+		colour: "medium-green"
+		uses: "Starlark"
+
 	Tipe:
 		icon: "tipe"
 		match: ".tipe"
