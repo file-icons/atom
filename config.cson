@@ -1400,6 +1400,7 @@ fileIcons:
 			[".bz2", "dark-cyan"]
 			[".maff", "medium-orange", signature: /^\x04\x03KP/]
 			[".iso", "medium-blue", signature: /^\x45\x52\x02\0{3}|^\x8B\x45\x52\x02/]
+			[".hqx", "medium-cyan", signature: /^\(This file must be converted with BinHex 4\.0\)/, uses: "Text"]
 			[".xpi", "medium-orange"]
 			[".gem", "medium-red"]
 			[".whl", "dark-blue"]
