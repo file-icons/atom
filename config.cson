@@ -973,11 +973,6 @@ fileIcons:
 			[/^brakeman\.ignore$/i, "dark-red"]
 		]
 
-	Brewfile:
-		icon: "brew"
-		match: /^Brewfile$/
-		colour: "medium-orange"
-
 	Bro:
 		icon: "bro"
 		scope: "bro"
@@ -1581,6 +1576,12 @@ fileIcons:
 			[/^MANIFEST\.SKIP$/, "medium-maroon"]
 		]
 
+	"CpcdosC+":
+		icon: "cpcdosc"
+		match: ".cpc"
+		colour: "medium-blue"
+		scope: "cpc"
+
 	Creole:
 		icon: "creole"
 		scope: "creole"
@@ -1681,6 +1682,13 @@ fileIcons:
 		priority: 2
 		match: /^d3(\.v\d+)?[^.]*\.[cm]?js$/i
 		colour: "medium-orange"
+
+	Dafny:
+		icon: "dafny"
+		match: /\.(dfy|dafny)$/i
+		colour: ["medium-yellow", "medium-orange"]
+		scope: /\.(dfy|dafny)(?:$|\.)/i
+		interpreter: "dafny"
 
 	Danmakufu:
 		icon: "yang"
@@ -2875,6 +2883,12 @@ fileIcons:
 			[".hc.z", "medium-orange", priority: 2]
 		]
 
+	Homebrew:
+		icon: "brew"
+		match: /^Brewfile$/
+		colour: "auto-orange"
+		uses: "Ruby"
+
 	Hoplon:
 		icon: "hoplon"
 		match: ".hl"
@@ -2973,7 +2987,6 @@ fileIcons:
 			[".cin", "medium-orange", signature: /^\x80\x2A\x5F\xD7/]
 			[".cd5", "dark-green", signature: /^_CD5\x10\0/]
 			[".cgm", "medium-orange"]
-			[".cpc", "light-yellow"]
 			[".cr2", "medium-orange", signature: /^II\*\0\x10\0{3}CR/]
 			[".dcm", "medium-pink", signature: /^.{128}DICM/]
 			[".dds", "dark-green", signature: /^DDS \|\0{3}/]
@@ -3533,6 +3546,14 @@ fileIcons:
 			[".rockspec", "medium-purple"]
 		]
 
+	Macaulay2:
+		icon: "macaulay2"
+		match: ".m2"
+		colour: ["light-cyan", "dark-cyan"]
+		alias: "m2"
+		interpreter: "m2"
+		scope: "macaulay2"
+
 	Makefile: # (Or similar build systems)
 		icon: "checklist"
 		match: [
@@ -3962,7 +3983,6 @@ fileIcons:
 		match: [
 			[".mod", "medium-blue", scope: /(^|\.)modula-?2(\.|$)/i]
 			[".def", "medium-green"]
-			[".m2", "medium-red"]
 		]
 
 	"Modula-3":
@@ -4090,6 +4110,12 @@ fileIcons:
 		scope: "ncl"
 		match: ".ncl"
 		colour: "medium-green"
+
+	NEON:
+		icon: "neon"
+		match: ".neon"
+		colour: "medium-grey"
+		scope: "neon"
 
 	NDepend:
 		icon: "ndepend"
