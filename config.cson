@@ -6307,10 +6307,12 @@ fileIcons:
 		match: ".uno"
 		colour: "dark-blue"
 
-	UnrealScript:
+	Unreal:
 		icon: "unreal"
-		scope: "uc"
-		match: ".uc"
+		match: [
+			[".uc", "medium-grey", alias: "UnrealScript", scope: "uc"]
+			[".uasset", "dark-blue", alias: "Blueprints Visual Script"]
+		]
 
 	UrWeb:
 		icon: "urweb"

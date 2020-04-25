@@ -10,13 +10,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** CpcdosC+ (`.cpc`), Dafny (`.dfy`, `.dafny`), Homebrew (`Brewfile`), Macaulay2 (`.m2`), Mermaid (`.mmd`, `.mermaid`), NEON (`.neon`), Tilt (`Tiltfile`)
-- **Support:** Archive (`.hqx`), C (`share/misc/getopt{,s}{0..9}`), Config (`shells`), Database (`birthtoken`, `flowers`), FontForge (`.ff`), OpenBSD package data (`+CONTENTS`, `+DESC`, `+DISPLAY`), Roff (`{man,mdoc}.template`), Sieve (`.sieve`), Starlark (`.star`), TeX (`.texinfo`, `.txi`), Text (`share/misc/{operator,mail.{help,tildehelp}}`), Unit databases (`.units`, `units.lib`, `.units_history`)
+- **Support:** Archive (`.hqx`), C (`share/misc/getopt{,s}{0..9}`), Config (`shells`), Database (`birthtoken`, `flowers`), FontForge (`.ff`), OpenBSD package data (`+CONTENTS`, `+DESC`, `+DISPLAY`), Roff (`{man,mdoc}.template`), Sieve (`.sieve`), Starlark (`.star`), TeX (`.texinfo`, `.txi`), Text (`share/misc/{operator,mail.{help,tildehelp}}`), Unit databases (`.units`, `units.lib`, `.units_history`), Unreal (`.uasset`)
 
 ### Changed
 - Changed `brew-icon` to use Homebrew logo
 - `.m2` extension now associated with [Macaulay2][] instead of [Modula-2][]
 - `.cpc` extension now associated with [CpcdosC+][] instead of [Cartesian Perceptual Compression][CPC]
 - Renamed `Bazel` entry to `Starlark`
+- UnrealScript files now coloured grey
 
 [CPC]:       https://en.wikipedia.org/wiki/Cartesian_Perceptual_Compression
 [CpcdosC+]:  https://cpcdos.net/
