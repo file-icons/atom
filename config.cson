@@ -3066,9 +3066,10 @@ fileIcons:
 
 	"Inno Setup":
 		icon: "inno"
-		scope: "inno"
-		match: ".iss"
-		colour: "dark-blue"
+		match: [
+			[".iss", "dark-blue", scope: "inno"]
+			[".isl", "medium-cyan", uses: "INI"]
+		]
 
 	Io:
 		icon: "io"
