@@ -16,9 +16,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Changed `brew-icon` to use Homebrew logo
 - `.m2` extension now associated with [Macaulay2][] instead of [Modula-2][]
 - `.cpc` extension now associated with [CpcdosC+][] instead of [Cartesian Perceptual Compression][CPC]
+- [[`#812`][]]: Hashbang strategy now recognises test-files
 - Renamed `Bazel` entry to `Starlark`
 - UnrealScript files now coloured grey
 
+[`#812`]:    https://github.com/file-icons/atom/issues/812
 [CPC]:       https://en.wikipedia.org/wiki/Cartesian_Perceptual_Compression
 [CpcdosC+]:  https://cpcdos.net/
 [Macaulay2]: https://en.wikipedia.org/wiki/Macaulay2
