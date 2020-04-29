@@ -6059,7 +6059,7 @@ fileIcons:
 			[/(\\|\/)share(?:\1misc)?\1(?:operator|mail\.(?:tilde)?help)$/, "dark-red", matchPath: true]
 			[/\.err$|\.std(err|out)$/i, "medium-red"]
 			[".rtf", "dark-red"]
-			[/\.i?nfo$/i, "dark-blue"]
+			[/\.(i?nfo|lcov)$/i, "dark-blue", "lcov"]
 			[".abt", "dark-purple"]
 			[".ans", "dark-orange"]
 			[".brf", "medium-maroon"]
