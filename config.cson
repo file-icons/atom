@@ -1731,6 +1731,7 @@ fileIcons:
 			[".ndjson", "medium-orange"]
 			[".fea", "light-blue", scope: "opentype", alias: "afdko"]
 			[".json.eex", "medium-purple"]
+			[".cbor", "medium-cyan", mime: "application/cbor", uses: "Binary"]
 			[/\.(proto|protote?xt|pbte?xt)$/i, "dark-cyan", scope: "protobuf", alias: /^(protobuf|Protocol\s*Buffers?)(\s*text)?$/i]
 			[".pytb", "medium-orange", scope: "python.traceback"]
 			[".pydeps", "dark-blue"]
