@@ -3637,8 +3637,8 @@ fileIcons:
 
 	Markdown:
 		icon: "markdown"
-		scope: /(^|\.)[gp]fm|md|markdown(\.|$)/i
-		match: /\.(md(te?xt)?|mdown|markdown|mkd|mkdown|mdwn|mkdn|rmd|ron|pmd)$/i
+		scope: /(^|\.)[gp]fm|j?md|markdown(\.|$)/i
+		match: /\.(md(te?xt)?|mdown|markdown|mkd|mkdown|mdwn|mkdn|rmd|ron|pmd|jmd)$/i
 		alias: /^(CommonMark|GFM|Pandoc)$|\bMarkdown\b/i
 		colour: "medium-blue"
 
