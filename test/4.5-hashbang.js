@@ -6,6 +6,7 @@ const TreeView    = require("./utils/tree-view.js");
 const Tabs        = require("./utils/tabs.js");
 const Options     = require("../lib/options.js");
 
+global.Test_ENV = true;
 
 describe("Interpreter directives", () => {
 	const base = "name icon ";
