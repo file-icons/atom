@@ -869,7 +869,7 @@ fileIcons:
 	Binary:
 		icon: "binary"
 		match: [
-			[/\.([ls]?o|out)$/i, "medium-red"]
+			[/\.([ls]?o|out)$/i, "medium-red", tag: "binary"]
 			[".axf", "dark-blue"]
 			[".elf", "medium-green"]
 			[".la", "dark-red"]
@@ -1323,7 +1323,7 @@ fileIcons:
 	CoffeeScript:
 		icon: "coffee"
 		match: [
-			[".coffee", "medium-maroon", scope: "coffee", alias: /^Coffee(-Script)?$/i, interpreter: "coffee"]
+			[".coffee", "medium-maroon", scope: "coffee", alias: /^Coffee(-Script)?$/i, interpreter: "coffee", tag: "coffee"]
 			[".cjsx", "dark-maroon"]
 			[".coffee.ecr", "medium-cyan", priority: 2]
 			[".coffee.erb", "medium-red",  priority: 2]
@@ -2694,6 +2694,7 @@ fileIcons:
 		match: ".go"
 		colour: "medium-blue"
 		scope: /\.go(template)?$/i
+		tag: "go"
 
 	Godot:
 		icon: "godot"
@@ -2826,7 +2827,7 @@ fileIcons:
 	Haskell:
 		icon: "haskell"
 		match: [
-			[".hs", "medium-purple", scope: "source.haskell", interpreter: "runhaskell"]
+			[".hs", "medium-purple", scope: "source.haskell", interpreter: "runhaskell", tag: "haskell"]
 			[".hsc", "medium-blue", scope: "hsc2hs"]
 			[".c2hs", "dark-purple", scope: "c2hs", alias: /^C2hs(\s*Haskell)?$/i]
 			[".lhs", "dark-blue", scope: "latex.haskell", alias: /^(lhaskell|lhs|Literate\s*Haskell)$/i]
@@ -3145,7 +3146,7 @@ fileIcons:
 	JavaScript:
 		icon: "js"
 		match: [
-			[".js", "auto-yellow", scope: "js", alias: /^(js|node)$/i, interpreter: /^(node|chakra|d8|iojs|g?js|qjs(c?|bnc?)?|mujs|rhino|slimerjs|v8(-shell)?)$/]
+			[".js", "auto-yellow", scope: "js", alias: /^(js|node)$/i, interpreter: /^(node|chakra|d8|iojs|g?js|qjs(c?|bnc?)?|mujs|rhino|slimerjs|v8(-shell)?)$/, tag: "js"]
 			["._js", "auto-orange"]
 			[".jsb", "auto-maroon"]
 			[".jsm", "auto-blue"]
@@ -4645,7 +4646,7 @@ fileIcons:
 	Perl:
 		icon: "perl"
 		match: [
-			[/\.p(er)?l$/i, "medium-blue", alias: /^C?Perl$/i, scope: "perl", interpreter: /^c?perl5?$/]
+			[/\.p(er)?l$/i, "medium-blue", alias: /^C?Perl$/i, scope: "perl", interpreter: /^c?perl5?$/, tag: "perl"]
 			[".al", "dark-blue"]
 			[".ph", "dark-purple"]
 			[".plx", "medium-purple"]
@@ -4954,7 +4955,7 @@ fileIcons:
 	Python:
 		icon: "python"
 		match: [
-			[".py", "dark-blue", scope: "python", alias: "rusthon", interpreter: /python[\d.]*/]
+			[".py", "dark-blue", scope: "python", alias: "rusthon", interpreter: /python[\d.]*/, tag: "python"]
 			[".ipy", "medium-blue"]
 			[".isolate", "dark-green"]
 			[".pep", "medium-orange", "pep8"]
@@ -5282,6 +5283,7 @@ fileIcons:
 		icon: "ruby"
 		match: [
 			[/\.(rb|ru|ruby|erb|gemspec|god|mspec|pluginspec|podspec|rabl|rake|opal)$/i, "medium-red"
+				tag: "ruby"
 				scope: "ruby"
 				alias: /^(rbx?|rake|jruby|macruby)$/i
 				interpreter: /(mac|j)?ruby|rake|rbx/]
@@ -5301,7 +5303,7 @@ fileIcons:
 	Rust:
 		icon: "rust"
 		match: [
-			[".rs", "medium-maroon", "rust"]
+			[".rs", "medium-maroon", scope: "rust", interpreter: "rust", alias: "rust", tag: "rust"]
 			[".rlib", "light-maroon"]
 			[/^rust-toolchain$/, "medium-red"]
 		]
@@ -5479,6 +5481,7 @@ fileIcons:
 		generic: true
 		match: [
 			[/\.(sh|rc|bats|bash|tool|install|command)$/i, "medium-purple"
+				tag: "executable"
 				scope: "shell"
 				alias: /^(sh|shell|Shell-?Script|Bash)$/i
 				interpreter: /^([bd]ash|a?sh|zsh|rc)$/]
@@ -5950,12 +5953,14 @@ fileIcons:
 		icon: "test-coffee"
 		match: /[._-](spec|test)s?\.((lit)?coffee|iced|cjsx)$/i
 		colour: "auto-maroon"
+		tag: "coffeeTest"
 		priority: 1.5
 
 	"Test, Generic":
 		icon: "test-generic"
 		match: [
-			[/([\\/])t\1t?\d+(?:(?!\1).)+\.sh$|[._-](spec|test)s?\.sh$/i, "medium-green", matchPath: true, priority: 1.5]
+			[/[._-](spec|test)s?\.sh$/i, "medium-green", priority: 1.5, tag: "genericTest"]
+			[/([\\/])t\1t?\d+(?:(?!\1).)+\.sh$/i, "medium-green", matchPath: true, priority: 1.5]
 			[".test", "medium-green", priority: 0.25]
 			[".xspec", "dark-green"]
 		]
@@ -5964,19 +5969,21 @@ fileIcons:
 		icon: "test-go"
 		match: /[._-](spec|test)s?\.go$/i
 		colour: "auto-cyan"
+		tag: "goTest"
 		priority: 1.5
 
 	"Test, Haskell":
 		icon: "test-hs"
 		match: /[._-](spec|test)s?\.(hsc?|c2hs|lhs)$/i
 		colour: "auto-purple"
+		tag: "haskellTest"
 		priority: 1.5
 
 	"Test, JavaScript":
 		icon: "test-js"
 		priority: 1.5
 		match: [
-			[/[._-](spec|test)s?\.([_s]?js|js[bms]|es\d*)$/i, "auto-yellow"]
+			[/[._-](spec|test)s?\.([_s]?js|js[bms]|es\d*)$/i, "auto-yellow", tag: "jsTest"]
 			[/[._-](spec|test)s?\.mjs$/i, "auto-blue"]
 			[/[._-](spec|test)s?\.cjs$/i, "auto-green"]
 			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.js$/i, "auto-yellow", matchPath: true]
@@ -5987,7 +5994,7 @@ fileIcons:
 	"Test, Perl":
 		icon: "test-perl"
 		match: [
-			[".t", "auto-blue"]
+			[".t", "auto-blue", tag: "perlTest"]
 			[/([\\\x2F])t\1(?:(?!\1).)+\.t$/i, "auto-blue", priority: 1.5, matchPath: true]
 			[/([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1((?!\1).)+[._-](spec|test)s?\.p(er)?l$/i, "auto-blue", priority: 1.5, matchPath: true]
 		]
@@ -5995,7 +6002,7 @@ fileIcons:
 	"Test, Python":
 		icon: "test-python"
 		match: [
-			[/[._-](spec|test)s?\.py(3|thon)?/i, "dark-blue", priority: 1.5]
+			[/[._-](spec|test)s?\.py(3|thon)?/i, "dark-blue", priority: 1.5, tag: "pythonTest"]
 			[/([\\\x2F])(test|spec)s?(\1((?!\1).)+)*\1(((?!\1).)+[._-](?:spec|test)s?|(?:spec|test)s?[._-].+)\.py(3|thon)?$/i, "dark-blue", priority: 1.5, matchPath: true]
 		]
 
@@ -6010,7 +6017,7 @@ fileIcons:
 	"Test, Ruby":
 		icon: "test-ruby"
 		match: [
-			[/[._-](spec|test)s?\.(rb|ruby)$/i, "auto-red", priority: 2]
+			[/[._-](spec|test)s?\.(rb|ruby)$/i, "auto-red", priority: 2, tag: "rubyTest"]
 			[/([\\\x2F])(t|tests?|specs?)\1+(?:(?!\1).)*\.(rb|ruby)$/, "auto-red", priority: 2, matchPath: true]
 		]
 
@@ -6018,13 +6025,14 @@ fileIcons:
 		icon: "test-rust"
 		match: /[._-](spec|test)s?\.rs$/i
 		colour: "auto-maroon"
+		tag: "rustTest"
 		priority: 1.5
 
 	"Test, TypeScript":
 		icon: "test-ts"
 		priority: 1.5
 		match: [
-			[/[._-](spec|test)s?\.ts$/i, "auto-blue"]
+			[/[._-](spec|test)s?\.ts$/i, "auto-blue", tag: "tsTest"]
 			[/[._-](spec|test)s?\.tsx$/i, ["light-blue", "medium-blue"]]
 			[/([\\\/])(spec|test)s?\1(?:\d+[-.])+(?!-)[^.\\\/]+\.ts$/i, "auto-blue", matchPath: true]
 			[/([\\\/])(spec|test)s?\1(?:\d+[-.])+(?!-)[^.\\\/]+\.tsx$/i, ["light-blue", "medium-blue"], matchPath: true]
@@ -6220,6 +6228,7 @@ fileIcons:
 		match: ".ts"
 		colour: "medium-blue"
 		interpreter: /\b(deno|tsc|ts-node)$/
+		tag: "ts"
 
 	Typings:
 		icon: "typings"
