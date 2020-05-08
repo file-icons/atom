@@ -1,6 +1,6 @@
 "use strict";
 
-const {isRegExp, wait} = require("../../lib/utils.js");
+const {wait} = require("../../lib/utils.js");
 let activation = null;
 
 module.exports = {
@@ -45,7 +45,7 @@ module.exports = {
 		let caseSensitive = false;
 		let useRegex = false;
 		
-		if(isRegExp(string)){
+		if(string instanceof RegExp){
 			caseSensitive = !string.ignoreCase;
 			useRegex = true;
 			string = string.source;
