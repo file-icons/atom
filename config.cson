@@ -1350,6 +1350,12 @@ fileIcons:
 		colour: "medium-orange"
 		uses: "XML"
 
+	CommitLint:
+		icon: "commitlint"
+		match: /^commitlint\.config\.js$|^\.commitlintrc\.(json|js|ya?ml)$/i
+		colour: "medium-blue"
+		priority: 2
+
 	"Common Lisp":
 		icon: "cl"
 		scope: "common-lisp"

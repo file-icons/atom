@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** CodeMeta (`codemeta.json`), CpcdosC+ (`.cpc`), Dafny (`.dfy`, `.dafny`), GoReleaser (`.goreleaser.yml`), Homebrew (`Brewfile`), Hugo, Kaitai (`.ksy`), Macaulay2 (`.m2`), Mermaid (`.mmd`, `.mermaid`), NEON (`.neon`), Tilt (`Tiltfile`)
+- **New icons:** CodeMeta (`codemeta.json`), CommitLint (`commitlint.config.js`, `.commitlintrc.{js,json,yml}`), CpcdosC+ (`.cpc`), Dafny (`.dfy`, `.dafny`), GoReleaser (`.goreleaser.yml`), Homebrew (`Brewfile`), Hugo, Kaitai (`.ksy`), Macaulay2 (`.m2`), Mermaid (`.mmd`, `.mermaid`), NEON (`.neon`), Tilt (`Tiltfile`)
 - **Support:** Archive (`.hqx`), C (`share/misc/getopt{,s}{0..9}`), Config (`shells`), Database (`.cbor`, `birthtoken`, `flowers`), FontForge (`.ff`), Inno Setup (`.isl`), Markdown (`.jmd`), OpenBSD package data (`+CONTENTS`, `+DESC`, `+DISPLAY`), Roff (`{man,mdoc}.template`), Sieve (`.sieve`), Starlark (`.star`), Test, Shell (`-{spec,test}{,s}.sh`), TeX (`.texinfo`, `.txi`), Text (`.lcov`, `share/misc/{operator,mail.{help,tildehelp}}`), Unit databases (`.units`, `units.lib`, `.units_history`), Unreal (`.uasset`)
 
 ### Changed
