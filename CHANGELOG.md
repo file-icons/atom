@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.40...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.41...HEAD
 
 
-[Unpublished]
+[v2.1.41] - 2020-05-09
 ----------------------
 ### Added
 - **New icons:** CodeMeta (`codemeta.json`), CommitLint (`commitlint.config.js`, `.commitlintrc.{js,json,yml}`), CpcdosC+ (`.cpc`), Dafny (`.dfy`, `.dafny`), GoReleaser (`.goreleaser.yml`), Homebrew (`Brewfile`), Hugo, Kaitai (`.ksy`), Macaulay2 (`.m2`), Mermaid (`.mmd`, `.mermaid`), NEON (`.neon`), Tilt (`Tiltfile`)
@@ -20,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Renamed `Bazel` entry to `Starlark`
 - UnrealScript files now coloured grey
 
+[v2.1.41]:   https://github.com/file-icons/atom/releases/tag/v2.1.41
 [`#812`]:    https://github.com/file-icons/atom/issues/812
 [CPC]:       https://en.wikipedia.org/wiki/Cartesian_Perceptual_Compression
 [CpcdosC+]:  https://cpcdos.net/
