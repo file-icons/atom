@@ -1314,6 +1314,12 @@ fileIcons:
 		icon: "codekit"
 		match: /(^config)?\.codekit\d*$/i
 
+	CodeMeta:
+		icon: "codemeta"
+		match: /^codemeta\.json(ld)?$/i
+		colour: "auto-grey"
+		priority: 2
+
 	CodeShip:
 		icon: "codeship"
 		priority: 2
@@ -2712,6 +2718,12 @@ fileIcons:
 		scope: "golo"
 		match: ".golo"
 		colour: "medium-orange"
+
+	GoReleaser:
+		icon: "goreleaser"
+		match: /^\.goreleaser\.ya?ml$/i
+		colour: "medium-blue"
+		priority: 2
 
 	Gosu:
 		icon: "gosu"
