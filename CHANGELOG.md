@@ -6,6 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.41...HEAD
 
 
+[Unpublished]
+----------------------
+### Fixed
+- [`daa9906`][] not applying to shell-script tests
+
+[`daa9906`]: https://github.com/file-icons/atom/commit/daa9906fb4a0627c996f70dae96d060fd273a34d
+
+
+
 [v2.1.41] - 2020-05-09
 ----------------------
 ### Added
