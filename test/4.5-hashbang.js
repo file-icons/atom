@@ -228,7 +228,7 @@ describe("Interpreter directives", () => {
 	when("the strategy is disabled", async () => {
 		it("removes every icon that matched a hashbang", async () => {
 			Options.set("hashbangs", false);
-			assertIconClasses(FuzzyFinder.entries, defaults);
+			assertIconClasses(FuzzyFinder.entries, defaults, {ignoreMissing: true});
 			await FuzzyFinder.filter(".tho", 500);
 			FuzzyFinder.entries["subdir/erlang.tho"]   .should.have.classes("default-icon");
 			FuzzyFinder.entries["subdir/haskell.tho"]  .should.have.classes("default-icon");
@@ -241,7 +241,7 @@ describe("Interpreter directives", () => {
 				Options.set("hashbangs", true);
 				await wait(100);
 				TreeView.refresh();
-				assertIconClasses(TreeView.entries, shebangedIcons);
+				assertIconClasses(TreeView.entries, shebangedIcons, {ignoreMissing: true});
 				await FuzzyFinder.filter(".tho", 500);
 				FuzzyFinder.entries["subdir/erlang.tho"]   .should.have.classes("erlang-icon medium-red");
 				FuzzyFinder.entries["subdir/haskell.tho"]  .should.have.classes("haskell-icon medium-purple");
