@@ -6004,8 +6004,8 @@ fileIcons:
 			[/[._-](spec|test)s?\.mjs$/i, "auto-blue"]
 			[/[._-](spec|test)s?\.cjs$/i, "auto-green"]
 			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.js$/i, "auto-yellow", matchPath: true]
-			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.mjs$/i, "auto-yellow", matchPath: true]
-			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.cjs$/i, "auto-yellow", matchPath: true]
+			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.mjs$/i, "auto-blue", matchPath: true]
+			[/([\\\/])(?:(spec|test)s?|t)\1(?:\d+[-.])+(?!-)[^.\\\/]+\.cjs$/i, "auto-green", matchPath: true]
 		]
 
 	"Test, Perl":

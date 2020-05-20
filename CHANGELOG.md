@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Fixed
 - [`daa9906`][] not applying to shell-script tests
+- Inconsistent icons for JavaScript tests with `.mjs` and `.cjs` extensions
 
 [`daa9906`]: https://github.com/file-icons/atom/commit/daa9906fb4a0627c996f70dae96d060fd273a34d
 
