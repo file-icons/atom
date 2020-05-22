@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Husky (`.huskyrc.yml`)
+- **Support:** Husky (`.huskyrc.yml`, `.huskyrc.yaml`)
 
 ### Fixed
 - [`daa9906`][] not applying to shell-script tests
