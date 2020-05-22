@@ -2953,6 +2953,7 @@ fileIcons:
 			[".huskyrc.json", "auto-yellow"]
 			[".huskyrc.cjs", "auto-green"]
 			[".huskyrc.mjs", "auto-blue"]
+			[/\.huskyrc\.ya?ml$/i, "auto-red"]
 		]
 
 	Hy:
