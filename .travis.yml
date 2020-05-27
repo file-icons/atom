@@ -4,7 +4,6 @@ branches:
 env:
     global:
         - ATOM_LINT_WITH_BUNDLED_NODE: false
-        - TRAVIS_NODE_VERSION: 12
 git:
     depth: 10
 
@@ -40,4 +39,6 @@ notifications:
         on_success: never
         on_failure: change
 
-script: "curl -sL https://git.io/fji1w | sh"
+script:
+    - "nvm install 12.0 && node --version"
+    - "curl -sL https://git.io/fji1w | sh"
