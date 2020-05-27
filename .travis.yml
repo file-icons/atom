@@ -4,6 +4,7 @@ branches:
 env:
     global:
         - ATOM_LINT_WITH_BUNDLED_NODE: false
+        - TRAVIS_NODE_VERSION: 12
 git:
     depth: 10
 
