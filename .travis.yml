@@ -1,6 +1,9 @@
 branches:
     only:
         - master
+env:
+    global:
+        - ATOM_LINT_WITH_BUNDLED_NODE: false
 git:
     depth: 10
 
