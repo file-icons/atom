@@ -5504,7 +5504,7 @@ fileIcons:
 				scope: "shell"
 				alias: /^(sh|shell|Shell-?Script|Bash)$/i
 				interpreter: /^([bd]ash|a?sh|zsh|rc)$/]
-			[/^(\.?bash(rc|[-_]?(profile|login|logout|history|prompt))|_osc|config|install-sh|PKGBUILD)$/i, "dark-purple"]
+			[/^(\.?bash(rc|[-_]?(profile|login|logout|history|prompt))|_osc|config|install-sh)$/i, "dark-purple"]
 			[/\.(ksh|mksh|pdksh)$/i, "dark-yellow"
 				scope: "ksh-shell"
 				interpreter: /^(ksh|mksh(-static)?|pdksh|lksh)$/i]
