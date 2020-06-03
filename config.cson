@@ -6408,6 +6408,14 @@ fileIcons:
 		colour: "dark-blue"
 		scope: "velocity"
 
+	Vercel:
+		icon: "zeit"
+		alias: "Zeit"
+		match: [
+			[/^(vercel|now)\.json$/i, "auto-grey", priority: 2, uses: "JSON"]
+			[/^\.(vercel|now)ignore$/i, "auto-maroon", uses: "Ignore List"]
+		]
+
 	Verilog:
 		icon: "verilog"
 		match: [
@@ -6778,13 +6786,6 @@ fileIcons:
 		match: [
 			[".zpr", "dark-purple"]
 			[".ztl", "auto-red", alias: "ZBrush tool"]
-		]
-
-	Zeit:
-		icon: "zeit"
-		match: [
-			[/^now\.json$/i, "auto-grey", priority: 2, uses: "JSON"]
-			[".nowignore", "auto-maroon", uses: "Ignore List"]
 		]
 
 	ZenScript:
