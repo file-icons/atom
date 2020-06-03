@@ -6780,11 +6780,13 @@ fileIcons:
 			[".ztl", "auto-red", alias: "ZBrush tool"]
 		]
 
-	Zeit:
-		icon: "zeit"
+	Vercel:
+		icon: "vercel"
 		match: [
 			[/^now\.json$/i, "auto-grey", priority: 2, uses: "JSON"]
 			[".nowignore", "auto-maroon", uses: "Ignore List"]
+			[/^vercel\.json$/i, "auto-grey", priority: 2, uses: "JSON"]
+			[".vercelignore", "auto-maroon", uses: "Ignore List"]
 		]
 
 	ZenScript:
