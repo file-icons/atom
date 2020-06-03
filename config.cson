@@ -1492,7 +1492,7 @@ fileIcons:
 		icon: "config-js"
 		generic: true
 		priority: 1.5
-		match: /^jsconfig(\..+)?\.json$/i
+		match: /^(jsconfig(\..+)?|\.?eshost(-config)?)\.json$/i
 		colour: "auto-yellow"
 
 	"Config, Perl":

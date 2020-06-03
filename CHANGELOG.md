@@ -9,7 +9,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Husky (`.huskyrc.yml`, `.huskyrc.yaml`)
+- **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), Vercel (`.vercelignore`, `vercel.json`)
+
+### Changed
+- [[`#818`][]]: Renamed `Zeit` entry to `Vercel`
 
 ### Fixed
 - [`daa9906`][] not applying to shell-script tests
@@ -17,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PKGBUILD using Shell instead of using Arch Linux icon
 
 [`daa9906`]: https://github.com/file-icons/atom/commit/daa9906fb4a0627c996f70dae96d060fd273a34d
+[`#818`]:    https://github.com/file-icons/atom/issues/818
 
 
 
