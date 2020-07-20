@@ -1350,6 +1350,11 @@ fileIcons:
 		colour: "medium-orange"
 		uses: "XML"
 
+	"Command Language Definition":
+		icon: "openvms"
+		match: ".cld"
+		colour: "orange"
+				
 	CommitLint:
 		icon: "commitlint"
 		match: /^commitlint\.config\.js$|^\.commitlintrc\.(json|js|ya?ml)$/i
@@ -1857,6 +1862,11 @@ fileIcons:
 		match: ".dig"
 		colour: "medium-orange"
 		uses: "YAML"
+		
+	"Digital Command Language":
+        icon: "openvms"
+		match: ".com"
+		colour: "medium-orange"
 
 	Ditroff:
 		icon: "binary"
@@ -2322,6 +2332,7 @@ fileIcons:
 			[".f95", "dark-pink"]
 			[".for", "dark-cyan"]
 			[".fpp", "dark-yellow"]
+			[".pfo", "dark-blue"]
 		]
 
 	FOSSA:
