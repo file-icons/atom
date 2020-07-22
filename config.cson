@@ -2322,6 +2322,7 @@ fileIcons:
 			[".f95", "dark-pink"]
 			[".for", "dark-cyan"]
 			[".fpp", "dark-yellow"]
+			[".pfo", "dark-blue"]
 		]
 
 	FOSSA:
@@ -4528,8 +4529,11 @@ fileIcons:
 
 	OpenVMS:
 		icon: "openvms"
-		match: ".hlb"
-		colour: "medium-blue"
+		match: [
+			[".hlb", "medium-blue"]
+			[".cld", "medium-orange", alias: "Command Language Definition"]
+			[".com", "medium-orange", alias: "Digital Command Language", scope: "dcl", priority: 0.9]
+		]
 
 	OpenVPN:
 		icon: "openvpn"
