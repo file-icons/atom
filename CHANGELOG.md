@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), Vercel (`.vercelignore`, `vercel.json`)
+- **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Fortran (`.pfo`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), OpenVMS (`.cld`, `.com`), Vercel (`.vercelignore`, `vercel.json`)
 
 ### Changed
 - [[`#818`][]]: Renamed `Zeit` entry to `Vercel`
