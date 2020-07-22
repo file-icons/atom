@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), Vercel (`.vercelignore`, `vercel.json`)
+- **Support:** Digital Command Language (`.com`), Command Language Definition (`.cld`), added `.pfo` to Fortran
 
 ### Changed
 - [[`#818`][]]: Renamed `Zeit` entry to `Vercel`
