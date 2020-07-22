@@ -2140,6 +2140,12 @@ fileIcons:
 		colour: "light-green"
 
 	Fabric:
+		icon: "fabric"
+		match: /^fabric\.mod\.json$/i
+		colour: "auto-orange"
+		priority: 2
+
+	Fabfile:
 		icon: "fabfile"
 		priority: 2
 		match: /^fabfile\.py$/i
@@ -3473,6 +3479,12 @@ fileIcons:
 		icon: "lfe"
 		match: ".lfe"
 		colour: "dark-red"
+
+	LGTM:
+		icon: "lgtm"
+		match: /^\.?lgtm\.ya?ml$/i
+		colour: "dark-purple"
+		priority: 2
 
 	LightWave3D:
 		icon: "lightwave"
