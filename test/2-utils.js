@@ -48,30 +48,6 @@ describe("Utility functions", () => {
 			});
 		});
 		
-		describe("caseKludge()", () => {
-			const {caseKludge} = utils;
-			it("generates case-insensitive regex source", () => {
-				const pattern = new RegExp(`^(ABC|${caseKludge("DEF")})`);
-				expect("dEf").to.match(pattern);
-				expect("aBc").not.to.match(pattern);
-			});
-			
-			it("fuzzes word boundaries", () => {
-				const source = caseKludge("camelCase", true);
-				const pattern = new RegExp(`^abc: ${source}$`);
-				expect("abc: camelCASE").to.match(pattern);
-				expect("abc: camel-CASE").to.match(pattern);
-				expect("ABC: camel-CASE").not.to.match(pattern);
-			});
-			
-			it("allows multiple separators between fuzzed boundaries", () => {
-				const source = caseKludge("camelCase", true);
-				const pattern = new RegExp(`^abc: ${source}$`);
-				expect("abc: camel----CASE").to.match(pattern);
-				expect("abc: camel--CA").not.to.match(pattern);
-			});
-		});
-
 		describe("escapeRegExp()", () => {
 			const {escapeRegExp} = utils;
 			it("escapes backslashes",       () => void expect(escapeRegExp("\\")).to.equal("\\\\"));

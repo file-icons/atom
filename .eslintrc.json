@@ -9,5 +9,8 @@
 	"overrides": [{
 		"files": ["lib/{main,ui}.js"],
 		"rules": {"space-before-function-paren": 0}
+	},{
+		"files": ["lib/utils.js"],
+		"rules": {"multiline-ternary": 0}
 	}]
 }
