@@ -3273,6 +3273,16 @@ fileIcons:
 		match: /^jquery([-_.](ui[-_.](custom|dialog-?\w*)|effects)(\.[^.]*)?|[-.]?ui(-\d\.\d+(\.\d+)?)?(\.\w+)?)([-_.]?min|dev)?\.([jt]sx?|es6?|coffee|map|s?css|less|styl)$/i
 		colour: "dark-blue"
 
+	jscpd:
+		icon: "jscpd"
+		url: "https://github.com/kucherenko/jscpd"
+		priority: 2
+		match: [
+			[/\.jscpd(\.json)?$|^jscpd-report\.json/i, "medium-grey", uses: "JSON"]
+			[".jscpd.html", "medium-orange", uses: "HTML"]
+			[".jscpd.xml", "medium-cyan", uses: "XML"]
+		]
+
 	JSON:
 		icon: "json"
 		match: [
