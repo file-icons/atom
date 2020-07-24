@@ -3532,6 +3532,14 @@ fileIcons:
 		colour: "dark-purple"
 		priority: 2
 
+	Lighthouse:
+		icon: "lighthouse"
+		match: /^\.?lighthouserc\.(json|js|ya?ml)$/i
+		colour: "dark-blue"
+		interpreter: "lhci"
+		priority: 2
+		url: "https://github.com/GoogleChrome/lighthouse"
+
 	LightWave3D:
 		icon: "lightwave"
 		match: [
