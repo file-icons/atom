@@ -5028,6 +5028,13 @@ fileIcons:
 			[".k", "dark-purple", scope: /^source\.k4$/]
 		]
 
+	"Q#":
+		icon: "qsharp"
+		match: ".qs"
+		colour: "dark-purple"
+		scope: "source.qsharp"
+		alias: "qsharp"
+
 	QASM:
 		icon: "qiskit"
 		alias: "OpenQASM"
@@ -5048,6 +5055,7 @@ fileIcons:
 			[".qml", "medium-green", "qml"]
 			[".qmlproject", "dark-green"]
 			[".qbs", "medum-cyan"]
+			[/^(toolchain_)?installscript\.qs$/i, "auto-yellow", alias: "Qt Script", priority: 1.5, uses: "JavaScript"]
 		]
 
 	Quasar:
