@@ -565,6 +565,12 @@ fileIcons:
 		match: ".apib"
 		colour: "medium-blue"
 
+	"API Extractor":
+		icon: "apiextractor"
+		match: /^api-extractor(-base)?\.json$/i
+		colour: ["light-blue", "medium-blue"]
+		priority: 2
+
 	APL:
 		icon: "apl"
 		match: [
@@ -3013,6 +3019,13 @@ fileIcons:
 		match: ".hy"
 		colour: "dark-blue"
 
+	Hygen:
+		icon: "hygen"
+		match: ".ejs.t"
+		colour: "medium-pink"
+		priority: 1.5
+		url: "https://www.hygen.io/"
+
 	Hyper:
 		icon: "hyper"
 		match: /^\.hyper\.[cm]?js$/i
@@ -3453,6 +3466,13 @@ fileIcons:
 			[/(^|\.)kazelcfg\.json$/i, "medium-blue", interpreter: "kazel", priority: 2, uses: "JSON"]
 		]
 
+	Kusto:
+		icon: "kusto"
+		alias: /Kusto (Query.?Language|Explorer)|^KQL$/i
+		match: /\.(csl|kusto)$/i
+		colour: "medium-blue"
+		scope: "source.kusto"
+
 	LabVIEW:
 		icon: "labview"
 		match: ".lvproj"
@@ -3474,6 +3494,12 @@ fileIcons:
 			[".lassoapp", "dark-red"]
 			[".ldml", "medium-red"]
 		]
+
+	Latino:
+		icon: "latino"
+		match: ".lat"
+		colour: "auto-blue"
+		scope: "source.latino"
 
 	Leaflet:
 		icon: "leaflet"
@@ -4472,6 +4498,13 @@ fileIcons:
 		priority: 2
 		match: /^nuxt\.config\.[jt]s$/i
 		colour: "medium-cyan"
+
+	Nx:
+		icon: "nx"
+		match: /^nx\.json$/i
+		colour: "dark-blue"
+		priority: 2
+		url: "https://nx.dev/"
 
 	NXC: # Not eXactly C
 		icon: "nxc"
@@ -6064,6 +6097,13 @@ fileIcons:
 		match: /^\.(terser|uglify)rc(\.\w+)?$/i
 		colour: "medium-orange"
 		priority: 2
+
+	TestCafe:
+		icon: "testcafe"
+		match: /^\.testcaferc\.json$/i
+		colour: "medium-blue"
+		priority: 2
+		url: "https://devexpress.github.io/testcafe"
 
 	"Test, CoffeeScript":
 		icon: "test-coffee"
