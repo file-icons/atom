@@ -3739,7 +3739,7 @@ fileIcons:
 	Markdown:
 		icon: "markdown"
 		scope: /(^|\.)[gp]fm|j?md|markdown(\.|$)/i
-		match: /\.(md(te?xt)?|mdown|markdown|mkd|mkdown|mdwn|mkdn|rmd|ron|pmd|jmd)$/i
+		match: /\.(md(te?xt)?|mdown|markdown|mkd|mkdown|mdwn|mkdn|ron|pmd|jmd)$/i
 		alias: /^(CommonMark|GFM|Pandoc)$|\bMarkdown\b/i
 		colour: "medium-blue"
 
@@ -5351,6 +5351,12 @@ fileIcons:
 		scope: "riot"
 		match: ".tag"
 		colour: "medium-red"
+
+	Rmarkdown:
+		icon: "rmarkdown"
+		match: /\.(rmd|rmarkdown)$/i
+		colour: "medium-red"
+		uses: "Markdown"
 
 	RobotFramework:
 		icon: "robot"
