@@ -2611,6 +2611,7 @@ fileIcons:
 			[".smt2", "medium-cyan"]
 			[".spthy", "medium-green", alias: "Tamarin", scope: /(^|\.)(spthy|tamarin)(\.|$)/i, interpreter: /^tamarin([\s_-]?prover)?$/i]
 			[".srdf", "medium-blue"]
+			[".ssmssln", "medium-orange"]
 			[".st", "medium-blue"]
 			[".stellaris", "medium-blue", "stellaris"]
 			[".storyboard", "medium-green"]
