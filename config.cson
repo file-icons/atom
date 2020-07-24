@@ -186,6 +186,12 @@ directoryIcons:
 		match: /^(Dropbox|\.dropbox\.cache)$/
 		colour: "medium-blue"
 
+	DVS:
+		icon: "dvs"
+		match: /^\.dvs$/
+		colour: "light-blue"
+		url: "https://dvc.org/"
+
 	Emacs:
 		icon: "emacs"
 		match: /^\.emacs\.d$/
