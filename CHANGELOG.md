@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Fabric (`fabric.mod.json`), LGTM (`lgtm.yml`), Q\# (`.qs`)
+- **New icons:** Cubit (`cubit{,s}` directories), draw.io (`*.{drawio,dio}.{png,svg}`, `.drawio.*`), Fabric (`fabric.mod.json`), LGTM (`lgtm.yml`), LINQPad (`.linq`), Q\# (`.qs`), xmake (`xmake.lua`)
 - **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Dependabot (`dependabot.yml`), Fortran (`.pfo`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), OpenVMS (`.cld`, `.com`), Qt (`installscript.qs`, `toolchain_installscript.qs`), Vercel (`.vercelignore`, `vercel.json`)
 
 ### Changed

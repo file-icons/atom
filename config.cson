@@ -73,6 +73,8 @@ RESERVED FOR FUTURE USE
 
 mime:  A MIME Content-Type string of the form detailed in RFC 2231 §5.
 
+url:   A link to a canonical reference, product homepage, or relevant pull-request.
+
 uses:  A loosely-defined "parent" from which to inherit properties not defined by the entry. Intended to
        address the longstanding problem of config/case-specific icons being replaced by a less qualified
        icon. For example, the file "app-test.js" should display the `test-js` icon even when it contains
@@ -148,6 +150,11 @@ directoryIcons:
 			[/^\.cpan$/i, "medium-blue"]
 			[/^\.cpanplus$/i, "dark-blue"]
 		]
+
+	Cubit:
+		icon: "cubit"
+		match: /^cubits?$/i
+		colour: "medium-cyan"
 
 	CVS:
 		icon: "cvs"
@@ -1957,6 +1964,13 @@ fileIcons:
 		match: /^dragula(\.min)?\.([cm]?js|css)$/i
 		colour: "dark-purple"
 
+	"draw.io":
+		icon: "drawio"
+		match: /^\.drawio($|\.)|\.d(raw)?io(\.png|\.svg)?$/i
+		colour: "medium-orange"
+		priority: 2
+		url: "https://drawio-app.com/"
+
 	Drone:
 		icon: "drone"
 		priority: 2
@@ -3519,6 +3533,13 @@ fileIcons:
 			[".lnk", "medium-blue", priority: 3, alias: "Windows shortcut", signature: /^L\0{3}\x01\x14\x02\0{5}\xC0\0{6}F/]
 			[/\.alias$/, "medium-blue", priority: 3, alias: "macOS alias", signature: /^book\0{4}mark\0{4}/]
 		]
+
+	LINQPad:
+		icon: "linqpad"
+		match: ".linq"
+		colour: "dark-pink"
+		url: "https://www.linqpad.net/"
+		uses: "C#"
 
 	Lisp:
 		icon: "lisp"
@@ -6720,6 +6741,13 @@ fileIcons:
 			[".xcworkspacedata", "dark-red"]
 			[/\.mode\dv3$/i, "medium-red"]
 		]
+
+	xmake:
+		icon: "xmake"
+		match: /^xmake\.lua$/i
+		colour: "medium-green"
+		priority: 2
+		url: "https://xmake.io/"
 
 	Xojo:
 		icon: "xojo"
