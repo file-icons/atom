@@ -951,6 +951,13 @@ fileIcons:
 			[".bootstraprc", "medium-orange"]
 		]
 
+	Bosque:
+		icon: "bosque"
+		match: ".bsq"
+		colour: "medium-green"
+		scope: "source.bsq"
+		url: "https://github.com/microsoft/BosqueLanguage"
+
 	Bower:
 		icon: "bower"
 		priority: 2
@@ -2381,6 +2388,13 @@ fileIcons:
 		alias: "f#"
 		match: /\.fs[xi]?$/i
 		colour: "medium-blue"
+
+	ftHTML:
+		icon: "fthtml"
+		match: ".fthtml"
+		colour: "medium-orange"
+		scope: "source.fthtml"
+		url: "https://fthtml.com/"
 
 	"Fuel UX":
 		icon: "fuelux"
