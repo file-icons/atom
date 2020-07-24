@@ -1821,6 +1821,12 @@ fileIcons:
 		alias: /^d[_\W]?mark$/i
 		noSuffix: true
 
+	Dependabot:
+		icon: "dependabot"
+		match: /^dependabot\.ya?ml$/i
+		colour: "medium-blue"
+		priority: 2
+
 	DevContainer:
 		icon: "devcontainer"
 		match: /^devcontainer\.json$/i

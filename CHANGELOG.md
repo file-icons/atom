@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Fabric (`fabric.mod.json`), LGTM (`lgtm.yml`), Q\# (`.qs`)
-- **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Fortran (`.pfo`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), OpenVMS (`.cld`, `.com`), Qt (`installscript.qs`, `toolchain_installscript.qs`), Vercel (`.vercelignore`, `vercel.json`)
+- **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Dependabot (`dependabot.yml`), Fortran (`.pfo`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), OpenVMS (`.cld`, `.com`), Qt (`installscript.qs`, `toolchain_installscript.qs`), Vercel (`.vercelignore`, `vercel.json`)
 
 ### Changed
 - [[`#818`][]]: Renamed `Zeit` entry to `Vercel`
