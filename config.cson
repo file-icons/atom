@@ -5550,7 +5550,7 @@ fileIcons:
 		icon: "terminal"
 		generic: true
 		match: [
-			[/\.(sh|rc|bats|bash|tool|install|command)$/i, "medium-purple"
+			[/\.(sh|rc|bash|tool|install|command)$/i, "medium-purple"
 				tag: "executable"
 				scope: "shell"
 				alias: /^(sh|shell|Shell-?Script|Bash)$/i
@@ -6030,6 +6030,7 @@ fileIcons:
 		icon: "test-generic"
 		match: [
 			[/([\\/])t\1t?\d+(?:(?!\1).)+\.sh$|[._-](spec|test)s?\.sh$/i, "medium-green", matchPath: true, priority: 1.5, tag: "genericTest"]
+			[".bats", "auto-grey", interpreter: "bats", alias: "Bats", url: "https://github.com/bats-core/bats-core", uses: "Shell", scope: "bats"]
 			[".test", "medium-green", priority: 0.25]
 			[".xspec", "dark-green"]
 		]

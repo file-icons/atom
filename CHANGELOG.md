@@ -14,15 +14,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - [[`#818`][]]: Renamed `Zeit` entry to `Vercel`
+- [`.bats`][] tests now display a [test-icon][] instead of terminal-icon
 
 ### Fixed
 - [`daa9906`][] not applying to shell-script tests
 - Inconsistent icons for JavaScript tests with `.mjs` and `.cjs` extensions
 - PKGBUILD using Shell instead of using Arch Linux icon
 
+[test-icon]: https://github.com/file-icons/icons/blob/76bd3c4f8b5be540b47771b0d53e6a435425c4c2/svg/Test-Generic.svg
 [`daa9906`]: https://github.com/file-icons/atom/commit/daa9906fb4a0627c996f70dae96d060fd273a34d
 [`#818`]:    https://github.com/file-icons/atom/issues/818
-
+[`.bats`]:   https://github.com/bats-core/bats-core
 
 
 [v2.1.41] - 2020-05-09
