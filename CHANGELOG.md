@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Cubit (`cubit{,s}` directories), draw.io (`*.{drawio,dio}.{png,svg}`, `.drawio.*`), Fabric (`fabric.mod.json`), jscpd (`jscpd-report.{xml,html,json}`, `.jscpd.json`), LGTM (`lgtm.yml`), LINQPad (`.linq`), Q\# (`.qs`), xmake (`xmake.lua`)
-- **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Dependabot (`dependabot.yml`), Fortran (`.pfo`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), OpenVMS (`.cld`, `.com`), Qt (`installscript.qs`, `toolchain_installscript.qs`), Vercel (`.vercelignore`, `vercel.json`)
+- **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Dependabot (`dependabot.yml`), Fortran (`.pfo`), Grammar (`.cddl`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), OpenVMS (`.cld`, `.com`), Qt (`installscript.qs`, `toolchain_installscript.qs`), Vercel (`.vercelignore`, `vercel.json`)
 
 ### Changed
 - [[`#818`][]]: Renamed `Zeit` entry to `Vercel`

@@ -807,14 +807,6 @@ fileIcons:
 		priority: 2
 		uses: "YAML"
 
-	"Backus-Naur Form":
-		icon: "bnf"
-		match: [
-			[".bnf", "medium-maroon", "bnf"]
-			[".abnf", "medium-green", "abnf"]
-			[".ebnf", "medium-red", "ebnf"]
-		]
-
 	Babel:
 		icon: "babel"
 		match: [
@@ -2772,6 +2764,16 @@ fileIcons:
 		match: [
 			[".gradle", "medium-blue", scope: "gradle"]
 			["gradlew", "dark-purple"]
+		]
+
+	Grammar: # Or “meta-language”
+		icon: "bnf"
+		generic: true
+		match: [
+			[".bnf", "medium-maroon", scope: "bnf",  alias: "Backus-Naur Form"]
+			[".abnf", "medium-green", scope: "abnf", alias: "Augmented Backus-Naur Form", rfc: 5234]
+			[".ebnf", "medium-red",   scope: "ebnf", alias: "Extended Backus-Naur Form", rfc: 5234]
+			[".cddl", "medium-grey",  scope: "cddl", alias: "Concise Data Definition Language", rfc: 8610]
 		]
 
 	"Grammatical Framework":
