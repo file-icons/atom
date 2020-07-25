@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.41...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.42...HEAD
 
 
-[Unpublished]
+[v2.1.42] - 2020-07-25
 ----------------------
 ### Added
 - **New icons:** API Extractor (`api-extractor{,-base}.json`), Bosque (`.bsq`), Cubit (`cubit{,s}` directories), draw.io (`*.{drawio,dio}.{png,svg}`, `.drawio.*`), DVC (`.dvc` directories), Fabric (`fabric.mod.json`), ftHTML (`.fthtml`), Hygen (`.ejs.t`), Kusto (`.csl`, `.kusto`), jscpd (`jscpd-report.{xml,html,json}`, `.jscpd.json`), Latino (`.lat`), LGTM (`lgtm.yml`), Lighthouse (`{.,}lighthouserc.{yaml,yml,js,json}`), LINQPad (`.linq`), Nx (`nx.json`), Q\# (`.qs`), Rmarkdown (`.rmd`, `.rmarkdown`), TestCafe (`.testcaferc.json`), xmake (`xmake.lua`)
@@ -19,12 +19,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [`daa9906`][] not applying to shell-script tests
 - Inconsistent icons for JavaScript tests with `.mjs` and `.cjs` extensions
-- PKGBUILD using Shell instead of using Arch Linux icon
+- `PKGBUILD` using Shell instead of using Arch Linux icon
 
+[v2.1.42]:   https://github.com/file-icons/atom/releases/tag/v2.1.42
 [test-icon]: https://github.com/file-icons/icons/blob/76bd3c4f8b5be540b47771b0d53e6a435425c4c2/svg/Test-Generic.svg
 [`daa9906`]: https://github.com/file-icons/atom/commit/daa9906fb4a0627c996f70dae96d060fd273a34d
 [`#818`]:    https://github.com/file-icons/atom/issues/818
 [`.bats`]:   https://github.com/bats-core/bats-core
+
 
 
 [v2.1.41] - 2020-05-09
