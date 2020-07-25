@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** API Extractor (`api-extractor{,-base}.json`), Bosque (`.bsq`), Cubit (`cubit{,s}` directories), draw.io (`*.{drawio,dio}.{png,svg}`, `.drawio.*`), DVS (`.dvs` directories), Fabric (`fabric.mod.json`), ftHTML (`.fthtml`), Hygen (`.ejs.t`), Kusto (`.csl`, `.kusto`), jscpd (`jscpd-report.{xml,html,json}`, `.jscpd.json`), Latino (`.lat`), LGTM (`lgtm.yml`), Lighthouse (`{.,}lighthouserc.{yaml,yml,js,json}`), LINQPad (`.linq`), Nx (`nx.json`), Q\# (`.qs`), Rmarkdown (`.rmd`, `.rmarkdown`), TestCafe (`.testcaferc.json`), xmake (`xmake.lua`)
+- **New icons:** API Extractor (`api-extractor{,-base}.json`), Bosque (`.bsq`), Cubit (`cubit{,s}` directories), draw.io (`*.{drawio,dio}.{png,svg}`, `.drawio.*`), DVC (`.dvc` directories), Fabric (`fabric.mod.json`), ftHTML (`.fthtml`), Hygen (`.ejs.t`), Kusto (`.csl`, `.kusto`), jscpd (`jscpd-report.{xml,html,json}`, `.jscpd.json`), Latino (`.lat`), LGTM (`lgtm.yml`), Lighthouse (`{.,}lighthouserc.{yaml,yml,js,json}`), LINQPad (`.linq`), Nx (`nx.json`), Q\# (`.qs`), Rmarkdown (`.rmd`, `.rmarkdown`), TestCafe (`.testcaferc.json`), xmake (`xmake.lua`)
 - **Support:** Config: JS (`.eshost-config.json`, `.eshost.json`), Dependabot (`dependabot.yml`), Fortran (`.pfo`), Generic (`.ssmssln`), Grammar (`.cddl`), Husky (`.huskyrc.yml`, `.huskyrc.yaml`), OpenVMS (`.cld`, `.com`), Qt (`installscript.qs`, `toolchain_installscript.qs`), Vercel (`.vercelignore`, `vercel.json`)
 
 ### Changed

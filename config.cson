@@ -186,9 +186,9 @@ directoryIcons:
 		match: /^(Dropbox|\.dropbox\.cache)$/
 		colour: "medium-blue"
 
-	DVS:
-		icon: "dvs"
-		match: /^\.dvs$/
+	DVC:
+		icon: "dvc"
+		match: /^\.dvc$/
 		colour: "light-blue"
 		url: "https://dvc.org/"
 
