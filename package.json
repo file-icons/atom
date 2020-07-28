@@ -22,7 +22,7 @@
 		"@alhadis/eslint-config": "^2.3.2",
 		"atom-mocha": "^2.2.1",
 		"babel-eslint": "^10.0.3",
-		"coffee-script": "^1.12.7",
+		"coffeescript": "^1.12.7",
 		"coffeelint": "^2.1.0",
 		"eslint": "^7.1.0",
 		"eslint-plugin-import": "^2.20.2",

@@ -30,7 +30,7 @@ if(unrecognisedOption){
 }
 
 // Bail out if needed dependencies are missing
-if(!fs.existsSync(path.resolve(__dirname, "..", "node_modules", "coffee-script"))){
+if(!fs.existsSync(path.resolve(__dirname, "..", "node_modules", "coffeescript"))){
 	process.stderr.write("devDependencies are missing. Run `apm install file-icons`, then try again\n");
 	process.exit(1);
 }
