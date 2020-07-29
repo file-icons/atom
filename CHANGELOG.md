@@ -4,6 +4,8 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.42...HEAD
+### Added
+- **Support**: Poetry (`poetry.lock`)
 
 
 [v2.1.42] - 2020-07-25

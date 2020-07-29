@@ -1527,6 +1527,7 @@ fileIcons:
 		match: [
 			[/^python-?config\.json$/i, "dark-blue"]
 			[/^pyproject\.toml$/i, "dark-blue"]
+			[/^poetry\.lock$/i, "dark-blue"]
 		]
 
 	"Config, React":
