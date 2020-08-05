@@ -578,6 +578,13 @@ fileIcons:
 			[".apl.history", "medium-maroon"]
 		]
 
+	Apollo:
+		icon: "apollo"
+		match: /^apollo\.config\.js$/i
+		colour: "dark-blue"
+		interpreter: "apollo"
+		priority: 2
+
 	Appcelerator:
 		icon: "appcelerator"
 		priority: 2
@@ -2815,6 +2822,8 @@ fileIcons:
 			[".graphql", "medium-pink", scope: "graphql"]
 			[".graphqls", "medium-red"]
 			[".gql", "medium-purple"]
+			[/^\.graphqlrc(?:\.(?:json|js|ya?ml))?$/i, "medium-pink", priority: 2]
+			[/^graphql\.config\.js$/, "medium-pink", priority: 2]
 		]
 
 	Graphviz:

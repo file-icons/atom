@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.42...HEAD
 
 ### Added
-- **Support**: Config: Python (`poetry.lock`)
+- **New icons:** Apollo (`apollo.config.js`)
+- **Support**: Config: Python (`poetry.lock`), GraphQL (`graphql.config.js`, `.graphqlrc{,.{json,js,yaml,yml}}`)
 
 
 
