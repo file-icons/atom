@@ -6028,10 +6028,10 @@ fileIcons:
 
 	"Table of Contents":
 		icon: "toc"
-		scope: "toc"
-		priority: 2
-		match: ".toc"
-		colour: "auto-cyan"
+		match: [
+			[".toc", "auto-cyan", priority: 2, scope: "toc"]
+			[/^\.listing(\.\d+)?$/, "medium-maroon"]
+		]
 
 	Tagfile: # CTags
 		icon: "tag"

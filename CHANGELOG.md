@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - **New icons:** Apollo (`apollo.config.js`)
-- **Support**: Config: Python (`poetry.lock`), GraphQL (`graphql.config.js`, `.graphqlrc{,.{json,js,yaml,yml}}`)
+- **Support**: Config: Python (`poetry.lock`), GraphQL (`graphql.config.js`, `.graphqlrc{,.{json,js,yaml,yml}}`), Table of Contents (`.listing`)
 
 
 
