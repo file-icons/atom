@@ -2356,6 +2356,11 @@ fileIcons:
 		colour: "medium-blue"
 		uses: "gitconfig"
 
+	"For the Record":
+		icon: "ftr"
+		match: ".trm"
+		colour: "medium-red"
+
 	Fortran:
 		icon: "fortran"
 		match: [
@@ -3087,7 +3092,6 @@ fileIcons:
 			[/\.djvu?$/i, "medium-purple", signature: /^AT&TFORM/]
 			[".dpx", "dark-orange", signature: /^(SDPX|XPDS)/]
 			[".ecw", "light-blue"]
-			[".exr", "dark-yellow", signature: /^v\/1\x01/]
 			[".fig", "dark-orange"]
 			[/\.fits?$/i, "medium-cyan", signature: /^SIMPLE  =/]
 			[".flif", "dark-red", signature: /^FLIF/]
@@ -4604,6 +4608,12 @@ fileIcons:
 		match: /\.(p|abl)$/i
 		colour: "medium-green"
 
+	OpenEXR:
+		icon: "openexr"
+		match: ".exr"
+		colour: "auto-pink"
+		signature: /^v\/1\x01/
+
 	"OpenGL Shading Language":
 		icon: "opengl"
 		alias: /^(GLSL|GLslang)$/i
@@ -4662,6 +4672,12 @@ fileIcons:
 		icon: "openvpn"
 		match: ".ovpn"
 		colour: "medium-orange"
+
+	OpenZFS:
+		icon: "openzfs"
+		match: /^vdev\d+$/
+		colour: "dark-blue"
+		signature: /^(.|\r|\n){8}(\0\0\0\x02\xF5\xBA\xCB\xAC|\xAC\xCB\xBA\xF5\x02\0\0\0)/
 
 	"Org-mode":
 		icon: "org"
@@ -5438,6 +5454,14 @@ fileIcons:
 		icon: "rstudio"
 		match: ".rproj"
 		colour: "light-blue"
+
+	rsync:
+		icon: "rsync"
+		match: /^rsyncd\.conf$/i
+		colour: "dark-purple"
+		scope: /(\.|^)rsyncd(-conf(ig)?)?(\.|$)/i
+		priority: 1.5
+		uses: "INI"
 
 	Ruby:
 		icon: "ruby"
@@ -6657,6 +6681,11 @@ fileIcons:
 			[".vmx", "auto-orange"]
 			[".vmxf", "auto-orange"]
 		]
+
+	"V-Ray":
+		icon: "vray"
+		match: ".vrimg"
+		colour: "auto-grey"
 
 	VSTS:
 		icon: "vsts"
