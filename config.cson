@@ -6460,10 +6460,24 @@ fileIcons:
 				| CJKRadicals
 				| CaseFolding
 				| CompositionExclusions
-				| Derived(Age|CoreProperties|NormalizationProps)
+				| Derived
+					( Age
+					| Name
+					| Numeric(Type|Values)
+					| BidiClass
+					| BinaryProperties
+					| CombiningClass
+					| CoreProperties
+					| DecompositionType
+					| EastAsianWidth
+					| GeneralCategory
+					| Joining(Group|Type)
+					| LineBreak
+					| NormalizationProps)
 				| EastAsianWidth
 				| EmojiSources
 				| EquivalentUnifiedIdeograph
+				| (Grapheme|Line|Sentence|Word)Break(Property|Test)
 				| HangulSyllableType
 				| Index
 				| Indic(Positional|Syllabic)Category
@@ -6480,11 +6494,13 @@ fileIcons:
 				| SpecialCasing
 				| StandardizedVariants
 				| TangutSources
+				| Unihan(_\w+)?
 				| U(nicode|Source)Data
 				| VerticalOrientation
 				) \.txt$
 			///, "medium-red", scope: "unidata"]
-			[/([\\/])(UNIDATA|UCD)\1[^\\/]+\.txt$/i, "medium-red", matchPath: true]
+			[/^NamesList\.(lst|txt)$/, "medium-red", scope: "ucd.nameslist"]
+			[/([\\/])(UNIDATA|UCD)(?:\1(?:auxiliary|emoji|extracted|unihan))?\1(?!ReadMe)[^\\/]+\.txt$/i, "medium-red", matchPath: true]
 		]
 
 	Units:

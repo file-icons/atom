@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - **New icons:** Apollo (`apollo.config.js`), For the Record (`.trm`), OpenEXR (`.exr`), OpenZFS (`vdev{0..9}`), rsync (`rsyncd.conf`), V-Ray (`.vrimg`)
 - **Support**: Config: Python (`poetry.lock`), GraphQL (`graphql.config.js`, `.graphqlrc{,.{json,js,yaml,yml}}`), Table of Contents (`.listing`)
+- Improved recognition for Unicode database files
 
 
 
