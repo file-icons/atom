@@ -6646,6 +6646,7 @@ fileIcons:
 			[/\.(vim|[gn]?vimrc)$/i, "medium-green", scope: "viml", alias: /^(VimL?|NVim|Vim\s*Script)$/i, interpreter: /Vim?/i]
 			[/^[.gn_]?vim(rc|info)$/i, "dark-green"]
 			[".vmb", "dark-green", alias: "Vimball", signature: /^UseVimball/m]
+			[/(^|\.)n?exrc$/i, "medium-green"]
 		]
 
 	VirtualBox:
