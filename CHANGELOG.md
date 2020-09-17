@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.42...HEAD
 
 ### Added
-- **New icons:** Apollo (`apollo.config.js`), For the Record (`.trm`), OpenEXR (`.exr`), OpenZFS (`vdev{0..9}`), rsync (`rsyncd.conf`), V-Ray (`.vrimg`)
+- **New icons:** Apollo (`apollo.config.js`), For the Record (`.trm`), OpenEXR (`.exr`), OpenZFS (`vdev{0..9}`), rsync (`rsyncd.conf`), V-Ray (`.vrimg`), Wine (`.wine`), YAMLLint (`.yamllint`)
 - **Support**: Config: Python (`poetry.lock`), GraphQL (`graphql.config.js`, `.graphqlrc{,.{json,js,yaml,yml}}`), Table of Contents (`.listing`), VimL (`.exrc`, `.nexrc`)
 - Improved recognition for Unicode database files
 

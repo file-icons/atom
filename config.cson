@@ -277,6 +277,11 @@ directoryIcons:
 		icon: "vs"
 		match: /^\.vscode$/i
 
+	Wine:
+		icon: "wine"
+		match: /^\.wine$/i
+		colour: "dark-red"
+
 	Yarn:
 		icon: "yarn"
 		match: /^\.yarn$/i
@@ -6937,6 +6942,12 @@ fileIcons:
 			[/\.ya?ml\.mysql$/i, "medium-orange", priority: 2]
 			[/\.ya?ml\.sed$/i, "dark-green", priority: 2]
 		]
+
+	YAMLLint:
+		icon: "yamllint"
+		match: /^\.yamllint$/i
+		colour: "medium-green"
+		priority: 2
 
 	Yandex:
 		icon: "yandex"
