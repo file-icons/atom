@@ -2541,6 +2541,7 @@ fileIcons:
 			[/^Settings\.StyleCop$/, "medium-green"]
 			[".4th", "medium-blue"]
 			[/\.adm[lx]$/i, "dark-blue"]
+			[/\.[ad]sl$/i, "medium-blue", scope: "source.asl"]
 			[".aepx", "medium-purple"]
 			[".appxmanifest", "medium-orange"]
 			[".ash", "medium-cyan"]
