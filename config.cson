@@ -1363,6 +1363,7 @@ fileIcons:
 			[".cjsx", "dark-maroon"]
 			[".coffee.ecr", "medium-cyan", priority: 2]
 			[".coffee.erb", "medium-red",  priority: 2]
+			[".coffee.md", "medium-blue",  priotity: 2]
 			[".litcoffee", "light-maroon", "litcoffee"]
 			[".iced", "medium-blue"]
 		]
@@ -3570,6 +3571,7 @@ fileIcons:
 		alias: "Flex"
 		match: [
 			[/\.l(ex)?$/i, "medium-cyan", "lex"]
+			[/^lexer\.x$/i, "medium-cyan", priority: 2]
 			[".flex", "dark-red"]
 		]
 
@@ -4355,7 +4357,7 @@ fileIcons:
 		priority: 2
 		match: [
 			[/^nginx(\.[-\w]+)*\.conf$/i, "dark-green"]
-			[".nginxconf", "medium-green", scope: "nginx", alias: "nginx configuration file"]
+			[/\.nginx(conf)?$/i, "medium-green", scope: "nginx", alias: "nginx configuration file"]
 		]
 
 	Nib:
@@ -5479,6 +5481,7 @@ fileIcons:
 			[/^\.?(irbrc|gemrc|pryrc|ruby-(gemset|version))$/i, "medium-red"]
 			[/^(Appraisals|(Rake|App|[bB]uild|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(\.lock)?)$/, "medium-red"]
 			[/\.(jbuilder|rbuild|rb[wx]|builder)$/i, "dark-red"]
+			[/^\.simplecov$/i, "medium-red"]
 			[/^rails$/, "medium-red"]
 			[".watchr", "dark-yellow"]
 		]
