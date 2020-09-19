@@ -3,12 +3,17 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.42...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.43...HEAD
 
+
+[v2.1.43] - 2020-09-19
+----------------------
 ### Added
 - **New icons:** Apollo (`apollo.config.js`), For the Record (`.trm`), OpenEXR (`.exr`), OpenZFS (`vdev{0..9}`), rsync (`rsyncd.conf`), V-Ray (`.vrimg`), Wine (`.wine`), YAMLLint (`.yamllint`)
 - **Support**: CoffeeScript (`.coffee.md`), Config: Python (`poetry.lock`), Generic (`.asl`, `.dsl`), GraphQL (`graphql.config.js`, `.graphqlrc{,.{json,js,yaml,yml}}`), Lex (`lexer.x`), NGINX (`.nginx`), Ruby (`.simplecov`), Table of Contents (`.listing`), VimL (`.exrc`, `.nexrc`)
 - Improved recognition for Unicode database files
+
+[v2.1.43]: https://github.com/file-icons/atom/releases/tag/v2.1.43
 
 
 
