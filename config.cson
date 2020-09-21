@@ -7045,3 +7045,9 @@ fileIcons:
 			[".zil", "dark-blue", scope: "zil"]
 			[".mud", "medium-maroon"]
 		]
+
+	Stitches:
+		icon: "stitches"
+		match: /^\.?stitches.config?\.([cm]?js|ts)$/i
+		colour: "medium-purple"
+		priority: 2
