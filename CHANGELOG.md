@@ -5,8 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.43...HEAD
 
+
+[Unpublished]
+----------------------
 ### Added
-- **New icons**: Stitches (stitches.config.ts, stitches.config.ts)
+- **New icons:** Modern Web (`web-{dev-server,test-runner}.config.{js,mjs,cjs,ts}`), Stitches (`stitches.config.{js,mjs,cjs,ts}`)
+
 
 
 [v2.1.43] - 2020-09-19

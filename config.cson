@@ -4130,6 +4130,12 @@ fileIcons:
 		match: /^\.?modernizr(rc)?\.[cm]?js$|^modernizr([-\.]custom|-\d\.\d+)(\.\d+)?\.[cm]?js$/i
 		colour: "medium-red"
 
+	"Modern Web":
+		icon: "modernweb"
+		priority: 2
+		match: /^web-(dev-server|test-runner)\.config\.([cm]?js)$/i
+		colour: "medium-blue"
+
 	Modo:
 		icon: "modo"
 		match: ".lxo"
@@ -5952,6 +5958,12 @@ fileIcons:
 			[/^stdlib(-.+)?\.[cm]?js\.gz$/i, "medium-blue"]
 		]
 
+	Stitches:
+		icon: "stitches"
+		match: /^\.?stitches.config?\.([cm]?js|ts)$/i
+		colour: "medium-purple"
+		priority: 2
+
 	Storybook:
 		icon: "storybook"
 		priority: 2
@@ -7045,9 +7057,3 @@ fileIcons:
 			[".zil", "dark-blue", scope: "zil"]
 			[".mud", "medium-maroon"]
 		]
-
-	Stitches:
-		icon: "stitches"
-		match: /^\.?stitches.config?\.([cm]?js|ts)$/i
-		colour: "medium-purple"
-		priority: 2
