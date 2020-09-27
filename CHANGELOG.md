@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.43...HEAD
 
+### Added
+- **New icons**: Stitches (stitches.config.ts, stitches.config.ts)
+
 
 [v2.1.43] - 2020-09-19
 ----------------------
