@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Modern Web (`web-{dev-server,test-runner}.config.{js,mjs,cjs,ts}`), Stitches (`stitches.config.{js,mjs,cjs,ts}`)
+- **Support:** Bitcoin (`.bitcoin` directories, `bitcoin.conf`)
 
 
 

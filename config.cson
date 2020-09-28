@@ -126,6 +126,11 @@ directoryIcons:
 		match: /^\.bzr$/
 		colour: "auto-yellow"
 
+	Bitcoin:
+		icon: "bitcoin"
+		match: /^\.bitcoin$/i
+		colour: "medium-orange"
+
 	Bower:
 		icon: "bower"
 		match: /^bower[-_]components$/
@@ -928,6 +933,13 @@ fileIcons:
 		match: /^bitbucket-pipelines\.ya?ml$/i
 		colour: "medium-blue"
 		priority: 2
+
+	Bitcoin:
+		icon: "bitcoin"
+		match: /^bitcoin\.conf$/i
+		colour: "medium-orange"
+		priority: 2
+		uses: "INI"
 
 	bitHound:
 		icon: "bithound"
