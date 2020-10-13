@@ -1154,6 +1154,12 @@ fileIcons:
 		match: ".ctp"
 		colour: "medium-red"
 
+	Calva:
+		icon: "calva"
+		match: ".calva-repl"
+		colour: "medium-maroon"
+		uses: "ClojureScript"
+
 	Carthage:
 		icon: "carthage"
 		match: /^Cartfile(\.|$)/
@@ -3517,6 +3523,15 @@ fileIcons:
 		scope: "php.blade"
 		match: /\.blade(\.php)?$/i
 		colour: "medium-orange"
+
+	Lark:
+		icon: "lark"
+		match: ".lark"
+		colour: "dark-blue"
+		scope: "source.lark"
+		interpreter: "lark"
+		url: "https://github.com/lark-parser/lark"
+		uses: "EBNF"
 
 	Lasso:
 		icon: "lasso"
