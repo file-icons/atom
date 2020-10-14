@@ -2839,6 +2839,7 @@ fileIcons:
 			[".abnf", "medium-green", scope: "abnf", alias: "Augmented Backus-Naur Form", rfc: 5234]
 			[".ebnf", "medium-red",   scope: "ebnf", alias: "Extended Backus-Naur Form", rfc: 5234]
 			[".cddl", "medium-grey",  scope: "cddl", alias: "Concise Data Definition Language", rfc: 8610]
+			[/\.(cf|lbnf)$/i, "dark-yellow", scope: "lbnf", alias: "Labelled Backus-Naur Form", interpreter: "bnfc"]
 		]
 
 	"Grammatical Framework":
