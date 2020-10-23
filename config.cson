@@ -5840,6 +5840,12 @@ fileIcons:
 		colour: "light-red"
 		scope: "snort"
 
+	Snowpack:
+		icon: "snowpack"
+		match: /^snowpack\.config\.([cm]?js|ts|json)$/i
+		colour: "dark-blue"
+		priority: 2
+
 	Snyk:
 		icon: "snyk"
 		match: ".snyk"
