@@ -1490,6 +1490,7 @@ fileIcons:
 			[".ld", "dark-red"]
 			[".lds", "medium-red"]
 			[".opts", "medium-green"]
+			[/\.sdl(ang)?$/i, "medium-blue", scope: /^source\.sdl$/]
 			[/^mimeapps\.list$/i, "medium-blue"]
 			[/(\.|^)terminal(rc)?$/i, "dark-blue"]
 			[/^ld\.script$/i, "medium-orange"]
