@@ -1808,6 +1808,7 @@ fileIcons:
 			[".sy", "dark-green"]
 			[".syntax", "medium-blue"]
 			[".webmanifest", "medium-blue"]
+			[".2da", "medium-cyan", alias: "2-dimensional Array"]
 			[/\.(od|onlydata)$/i, "medium-grey", alias: "OnlyData"]
 			[".dbi", "medium-orange"] # https://wiki.servoy.com/display/DOCS/Updating+a+Local+Database+Using+DBI+Files
 			[/\.snip(pets?)?$/i, "medium-green", alias: /^(SnipMate|UltiSnip|NeoSnippet)$/i, scope: /\.(vim-snippet|snipmate|ultisnips|neosnippet|snippets?)(\.|$)/i]
@@ -4555,6 +4556,14 @@ fileIcons:
 		priority: 2
 		match: /^nuxt\.config\.[jt]s$/i
 		colour: "medium-cyan"
+
+	NWScript:
+		icon: "nwscript"
+		match: [
+			[".nss", "dark-blue", uses: "C", scope: "nwscript"]
+			[".ncs", "dark-red", uses: "Binary"]
+			[".ndb", "medium-maroon", uses: "Binary"]
+		]
 
 	Nx:
 		icon: "nx"

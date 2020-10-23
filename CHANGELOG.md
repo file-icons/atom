@@ -9,8 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Modern Web (`web-{dev-server,test-runner}.config.{js,mjs,cjs,ts}`), Stitches (`stitches.config.{js,mjs,cjs,ts}`)
-- **Support:** Bitcoin (`.bitcoin` directories, `bitcoin.conf`), Grammar (`.cf`, `.lbnf`)
+- **New icons:** Modern Web (`web-{dev-server,test-runner}.config.{js,mjs,cjs,ts}`), NWScript (`.nss`, `.ncs`, `.ndb`), Stitches (`stitches.config.{js,mjs,cjs,ts}`)
+- **Support:** Bitcoin (`.bitcoin` directories, `bitcoin.conf`), Database (`.2da`), Grammar (`.cf`, `.lbnf`)
 
 
 
