@@ -191,6 +191,12 @@ directoryIcons:
 		match: /^(Dropbox|\.dropbox\.cache)$/
 		colour: "medium-blue"
 
+	DUB:
+		icon: "dub"
+		match: /^\.dub$/
+		colour: "medium-red"
+		url: "https://dub.pm/"
+
 	DVC:
 		icon: "dvc"
 		match: /^\.dvc$/
@@ -2021,6 +2027,12 @@ fileIcons:
 		priority: 2
 		match: /\.drone\.ya?ml$/i
 		colour: "medium-cyan"
+
+	DUB:
+		icon: "dub"
+		match: /^dub(\.selections)?\.(json|sdl)$/i
+		colour: "medium-red"
+		priority: 2
 
 	"Dyalog APL":
 		icon: "dyalog"
