@@ -103,8 +103,10 @@ describe("Tree-view", () => {
 				}));
 			
 			when("in a Git repository", () => {
-				it("shows the default repo-icon for the root directory", () =>
-					TreeView.entries["."].className.should.equal("name icon icon-repo"));
+				it("shows the default repo-icon for the root directory", () => {
+					const classes = TreeView.entries["."].className.trim().split(/\s+/).sort();
+					classes.should.eql(["icon", "icon-repo", "name"]);
+				});
 				
 				when('the "Only colour when changed" setting is enabled', () => {
 					describe("If the file is unmodified", () =>
