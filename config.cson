@@ -4581,7 +4581,10 @@ fileIcons:
 		icon: "nuget"
 		match: [
 			[".nuspec", "medium-blue"]
+			[".nupkg", "medium-purple"]
 			[".pkgproj", "dark-purple"]
+			[".snupkg", "medium-green"]
+			[".psmdcp", "dark-green"]
 		]
 
 	NumPy:
