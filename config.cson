@@ -1560,7 +1560,7 @@ fileIcons:
 		icon: "config-js"
 		generic: true
 		priority: 1.5
-		match: /^(jsconfig(\..+)?|\.?eshost(-config)?)\.json$/i
+		match: /\.js(beautify|cs|hint)rc$|^(jsconfig(\..+)?|\.?eshost(-config)?)\.json$/i
 		colour: "auto-yellow"
 
 	"Config, Perl":
@@ -1578,6 +1578,7 @@ fileIcons:
 			[/^python-?config\.json$/i, "dark-blue"]
 			[/^pyproject\.toml$/i, "dark-blue"]
 			[/^poetry\.lock$/i, "dark-blue"]
+			[".python-version", "dark-blue"]
 		]
 
 	"Config, React":
@@ -2553,16 +2554,11 @@ fileIcons:
 			[/^\.csscomb\.json$/i, "medium-yellow"]
 			[/^text\.enc$/, "dark-green"]
 			[".csslintrc", "medium-yellow"]
-			[".jsbeautifyrc", "medium-yellow"]
-			[".jshintrc", "medium-yellow"]
 			[".htmlhintrc", "medium-red"]
-			[".coffeelintignore", "medium-maroon"]
-			[".jscsrc", "medium-yellow"]
 			[".module", "medium-blue"]
 			[".codoopts", "medium-maroon"]
 			[".arcconfig", "dark-blue"]
 			[".pairs", "dark-green"]
-			[".python-version", "dark-blue"]
 			[".lintstagedrc", "dark-orange"]
 			[".indent.pro", "medium-blue", priority: 2]
 			[/^\./, null, priority: 0]

@@ -13,6 +13,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** 3D (`.step`, `.stp`, `.p21`), Config (`.sdl`, `.sdlang`), Config: Ruby (`.autotest`, `.cross_rubies`, `.gemtest`, `.hoerc`, `.kick`, `.simplecov`, `.yardopts*`), Bitcoin (`.bitcoin` directories, `bitcoin.conf`), Database (`.2da`), Grammar (`.cf`, `.lbnf`)
 - Support for Dockerfile hashbangs
 
+### Changed
+- `.python-version` now shows a Python config-icon
+- `.simplecov` and `.yardopts` now show Ruby config-icons
+- `.jsbeautifyrc`, `.jshintrc` and `.jscsrc` now show JavaScript config-icons
 
 
 [v2.1.43] - 2020-09-19
