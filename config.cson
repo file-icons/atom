@@ -5090,7 +5090,7 @@ fileIcons:
 		icon: "prettier"
 		priority: 2
 		match: [
-			[/\.prettierrc(\.([cm]?js|json|ya?ml))?$|^prettier\.config\.[cm]?js$/i, "auto-cyan"]
+			[/\.prettierrc(\.([cm]?js|json5?|ya?ml))?$|^prettier\.config\.[cm]?js$/i, "auto-cyan"]
 			[".prettierignore", "dark-yellow"]
 		]
 
@@ -6019,7 +6019,7 @@ fileIcons:
 		match: [
 			[/^(\.bazelrc|bazel\.rc|bazel\.bazelrc)$/i, "dark-green", interpreter: "bazel"]
 			[/^(BUILD|WORKSPACE)(.[Bb][Aa][Zz][Ee][Ll])?$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
-			[/\.(bzl|star)$/i, "dark-blue", alias: /^(Bazel|Skylark)$/i, scope: /(^|\.)(bzl|skylark)(\.|$)/i]
+			[/\.(bazel|bzl|star)$/i, "dark-blue", alias: /^(Bazel|Skylark)$/i, scope: /(^|\.)(bzl|skylark)(\.|$)/i]
 			[/^\.gazelcfg\.json$/i, "medium-cyan", alias: "Gazel", priority: 1.25]
 		]
 
