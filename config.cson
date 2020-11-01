@@ -131,6 +131,11 @@ directoryIcons:
 		match: /^\.bitcoin$/i
 		colour: "medium-orange"
 
+	Bloc:
+		icon: "bloc"
+		match: /^bloc$/i
+		colour: "medium-cyan"
+
 	Bower:
 		icon: "bower"
 		match: /^bower[-_]components$/
