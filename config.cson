@@ -1590,9 +1590,10 @@ fileIcons:
 	"Config, Ruby":
 		icon: "config-ruby"
 		generic: true
-		match: /^rubyconfig\.json$/i
-		colour: "auto-red"
-		priority: 1.5
+		match: [
+			[/^rubyconfig\.json$|\.(autotest|cross_rubies|gemtest|hoerc|kick|simplecov|yardopts)$/i, "auto-red", priority: 1.5]
+			[/^\.yardopts/i, "auto-red", priority: 0.5]
+		]
 
 	"Config, Rust":
 		icon: "config-rust"
@@ -1958,6 +1959,7 @@ fileIcons:
 
 	Docker:
 		icon: "docker"
+		alias: "Dockerfile"
 		match: [
 			[/^(Dockerfile|docker-compose)|\.docker(file|ignore)$/i, "dark-blue", scope: "dockerfile", priority: 2]
 			[/^docker-sync\.yml$/i, "dark-orange", priority: 2]
@@ -2558,7 +2560,6 @@ fileIcons:
 			[".jscsrc", "medium-yellow"]
 			[".module", "medium-blue"]
 			[".codoopts", "medium-maroon"]
-			[".yardopts", "medium-red"]
 			[".arcconfig", "dark-blue"]
 			[".pairs", "dark-green"]
 			[".python-version", "dark-blue"]
@@ -4169,6 +4170,7 @@ fileIcons:
 			[".stl", "dark-green"]
 			[".u3d", "medium-orange"]
 			[/\.(rviz|vcg)$/i, "dark-blue", "rviz"]
+			[/\.(ste?p|p21)$/i, "medium-orange", alias: "STEP Physical File", scope: "step-file", signature: /^ISO-10303-21/]
 			[".x", "medium-green", alias: "DirectX 3D File", scope: /(^|\.)direct-?x($|\.)/i, priority: 0.5, signature: /^xof 0303(?:txt|bin|tzip|bzip)\b/]
 		]
 
@@ -5550,7 +5552,7 @@ fileIcons:
 			[/^\.?(irbrc|gemrc|pryrc|ruby-(gemset|version))$/i, "medium-red"]
 			[/^(Appraisals|(Rake|App|[bB]uild|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(\.lock)?)$/, "medium-red"]
 			[/\.(jbuilder|rbuild|rb[wx]|builder)$/i, "dark-red"]
-			[/^\.simplecov$/i, "medium-red"]
+			[/Gemfile/i, "medium-red", priority: 0.01]
 			[/^rails$/, "medium-red"]
 			[".watchr", "dark-yellow"]
 		]
