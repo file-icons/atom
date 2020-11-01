@@ -2294,6 +2294,14 @@ fileIcons:
 			[".sam", "dark-yellow"]
 		]
 
+	Fauna:
+		icon: "fauna"
+		alias: /^(FaunaDB|Fauna *Query *Language)$/i
+		match: [
+			[".fql", "dark-blue", scope: "source.fql"]
+			[".faunarc", "dark-blue"]
+		]
+
 	Faust:
 		icon: "faust"
 		match: ".dsp"
@@ -4679,6 +4687,12 @@ fileIcons:
 		scope: "odin"
 		interpreter: "odin"
 
+	Ogone:
+		icon: "ogone"
+		match: /\.(o3|ogone)$/i
+		colour: "auto-grey"
+		scope: "source.o3"
+
 	OOC:
 		icon: "ooc"
 		scope: "ooc"
@@ -6883,6 +6897,14 @@ fileIcons:
 		scope: "walt"
 		match: ".walt"
 		colour: "medium-purple"
+
+	"Warcraft III":
+		icon: "warcraft3"
+		match: [
+			[".wc3", "dark-orange", url: "https://en.wikipedia.org/wiki/Warcraft_III_World_Editor"]
+			[".jass", "medium-red", alias: "vjass", scope: "source.jass", url: "http://www.wc3c.net/vexorian/jasshelpermanual.html"]
+			[".zn", "medium-maroon", alias: "Zinc", scope: "source.zinc", url: "http://www.wc3c.net/vexorian/zincmanual.html"]
+		]
 
 	Watchman:
 		icon: "watchman"
