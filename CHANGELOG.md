@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Awk (`.{g,m,n,}awk`, `.auk`), Binder (`{dev-,}requirements.txt`), BlitzBASIC (`.bb`, `.decls`), Bloc (`bloc` directories), DUB (`.dub` directories, `dub{.selections,}.{json,sdl}`), Fauna (`.fql`, `.faunarc`), Gitpod (`.gitpod.yml`), Kibo (`.hypr`, `.hypr.live`), Modern Web (`web-{dev-server,test-runner}.config.{js,mjs,cjs,ts}`), Nokogiri, NumPy (updated icon), NWScript (`.nss`, `.ncs`, `.ndb`), Ogone (`.o3`, `.ogone`), pytest (`pytest.ini`), Read the Docs (`readthedocs.yml`), ReScript (`.resi`), RubyGems (`.gemspec`), Snowpack (`snowpack.config.{js,mjs,cjs,ts,json}`), Spacengine (`.spe`), Stitches (`stitches.config.{js,mjs,cjs,ts}`), Warcraft III (`.wc3`, `.jass`, `.zn`)
-- **Support:** 3D (`.step`, `.stp`, `.p21`), Bazel (`.bazel`), Config (`.sdl`, `.sdlang`), Config: Ruby (`.autotest`, `.cross_rubies`, `.gemtest`, `.hoerc`, `.kick`, `.simplecov`, `.yardopts*`), Bitcoin (`.bitcoin` directories, `bitcoin.conf`), Database (`.2da`), Grammar (`.cf`, `.lbnf`), NumPY (`.npy`, `.npz`), NuGet (`.nupkg`, `.snupkg`, `.psmdcp`), Prettier (`.prettierrc.json5`)
+- **Support:** 3D (`.step`, `.stp`, `.p21`), Bazel (`.bazel`), Config (`.sdl`, `.sdlang`), Config: Ruby (`.autotest`, `.cross_rubies`, `.gemtest`, `.hoerc`, `.kick`, `.simplecov`, `.yardopts*`), Bitcoin (`.bitcoin` directories, `bitcoin.conf`), Database (`.2da`), Grammar (`.cf`, `.lbnf`), NumPY (`.npy`, `.npz`), NuGet (`.nupkg`, `.snupkg`, `.psmdcp`), Prettier (`.prettierrc.json5`), Python (`py.typed`)
 - Support for Dockerfile hashbangs
 
 ### Changed

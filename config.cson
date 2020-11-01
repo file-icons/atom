@@ -5258,6 +5258,7 @@ fileIcons:
 			[".xpy", "auto-yellow"]
 			[".smk", "medium-green"]
 			[".rpy", "medium-pink", scope: "renpy", alias: /^Ren'?Py$/i]
+			[/^py\.typed$/i, "medium-grey"]
 			[/\.?(pypirc|pythonrc|python-venv)$/i, "dark-blue"]
 			[/^(SConstruct|SConscript)$/, "dark-green"]
 			[/^(Snakefile|WATCHLISTS)$/, "medium-green"]
