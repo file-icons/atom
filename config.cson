@@ -972,6 +972,13 @@ fileIcons:
 			[".bphys", "dark-blue"]
 		]
 
+	BlitzBASIC:
+		icon: "blitzbasic"
+		match: [
+			[".bb", "medium-cyan", alias: /^(b3d|blitz(plus|3d)|bplus)$/i, scope: "source.blitzmax"]
+			[".decls", "medium-green"]
+		]
+
 	Bluespec:
 		icon: "bluespec"
 		scope: "bsv"
@@ -3784,7 +3791,6 @@ fileIcons:
 			[/^mkfile$/i, "medium-yellow"]
 			[/^\.?qmake$/i, "dark-blue"]
 			[".am", "medium-red"]
-			[".bb", "dark-blue"]
 			[/^DEPS$/, "dark-blue"]
 			[".mms", "medium-blue"]
 			[".mmk", "light-blue"]
@@ -5467,6 +5473,13 @@ fileIcons:
 		match: /^require([-.]min|dev)?\.[cm]?js$/i
 		colour: "medium-blue"
 
+	ReScript:
+		icon: "rescript"
+		match: ".resi" # FIXME: `.res` extension already in-use
+		colour: "medium-red"
+		scope: "rescript"
+		uses: "Reason"
+
 	reStructuredText:
 		icon: "rst"
 		scope: "restructuredtext"
@@ -5929,6 +5942,13 @@ fileIcons:
 			[/\.(sma|sp)$/i, "auto-yellow", scope: "sp", alias: "sourcemod"]
 			[".inc", "medium-green"]
 		]
+
+	Spacengine:
+		icon: "spacengine"
+		match: ".spe"
+		colour: "medium-blue"
+		scope: "text.html.spe"
+		uses: "HTML"
 
 	Spacemacs:
 		icon: "spacemacs"
