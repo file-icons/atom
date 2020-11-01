@@ -831,13 +831,13 @@ fileIcons:
 		scope: /(^|\.)avro(-idl)?(\.|$)/i
 
 	Awk:
-		icon: "terminal"
+		icon: "awk"
 		match: [
-			[".awk", "medium-blue", "awk"]
-			[".gawk", "medium-red", "gawk"]
-			[".mawk", "medium-maroon", "mawk"]
-			[".nawk", "dark-green", "nawk"]
-			[".auk", "dark-cyan"]
+			[".awk", "auto-blue", "awk"]
+			[".gawk", "auto-red", "gawk"]
+			[".mawk", "auto-maroon", "mawk"]
+			[".nawk", "auto-green", "nawk"]
+			[".auk", "auto-cyan"]
 		]
 
 	"Azure Pipelines":
@@ -3490,6 +3490,15 @@ fileIcons:
 			[".knt", "dark-blue"]
 		]
 
+	Kibo:
+		icon: "kibo"
+		url: "https://www.mozu.com/docs/developer/themes/hypr.htm"
+		uses: "HTML"
+		match: [
+			[".hypr", "light-yellow"]
+			[".hypr.live", "dark-orange"]
+		]
+
 	KiCad:
 		icon: "kicad"
 		match: [
@@ -4577,7 +4586,10 @@ fileIcons:
 
 	NumPy:
 		icon: "numpy"
+		url: "https://numpy.org/devdocs/reference/generated/numpy.lib.format.html"
 		match: [
+			[".npy", "medium-cyan", uses: "Binary"]
+			[".npz", "dark-cyan", uses: "ZIP"]
 			[".numpy", "dark-blue"]
 			[".numpyw", "medium-blue"]
 			[".numsc", "medium-orange"]
