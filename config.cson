@@ -919,6 +919,13 @@ fileIcons:
 			[/^\.rnd$/i, "dark-blue"]
 		]
 
+	Binder:
+		icon: "binder"
+		match: /^(dev-)?requirements\.txt$/
+		colour: "medium-orange"
+		priority: 1.5
+		url: "https://mybinder.org/"
+
 	BinTray:
 		icon: "bintray"
 		match: /^\.bintray\.json$/i

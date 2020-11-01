@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** DUB (`.dub` directories, `dub{.selections,}.{json,sdl}`), Modern Web (`web-{dev-server,test-runner}.config.{js,mjs,cjs,ts}`), NWScript (`.nss`, `.ncs`, `.ndb`), Snowpack (`snowpack.config.{js,mjs,cjs,ts,json}`), Stitches (`stitches.config.{js,mjs,cjs,ts}`)
+- **New icons:** Binder (`{dev-,}requirements.txt`), DUB (`.dub` directories, `dub{.selections,}.{json,sdl}`), Modern Web (`web-{dev-server,test-runner}.config.{js,mjs,cjs,ts}`), NWScript (`.nss`, `.ncs`, `.ndb`), Snowpack (`snowpack.config.{js,mjs,cjs,ts,json}`), Stitches (`stitches.config.{js,mjs,cjs,ts}`)
 - **Support:** Config (`.sdl`, `.sdlang`), Bitcoin (`.bitcoin` directories, `bitcoin.conf`), Database (`.2da`), Grammar (`.cf`, `.lbnf`)
 
 
