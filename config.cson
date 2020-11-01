@@ -1079,6 +1079,7 @@ fileIcons:
 		match: [
 			[/^Gemfile(\.lock)?$/i, "auto-blue", priority: 2]
 			[".gemfile", "auto-cyan"]
+			[/gemfile/i, "medium-red", priority: 0.01]
 		]
 
 	BYOND: # Dream Maker Script
@@ -1373,7 +1374,7 @@ fileIcons:
 	Codecov:
 		icon: "codecov"
 		priority: 2
-		match: /^codecov\.ya?ml$/i
+		match: /^\.?codecov\.ya?ml$/i
 		colour: "dark-pink"
 
 	CodeKit:
@@ -1578,6 +1579,7 @@ fileIcons:
 			[/^python-?config\.json$/i, "dark-blue"]
 			[/^pyproject\.toml$/i, "dark-blue"]
 			[/^poetry\.lock$/i, "dark-blue"]
+			[/^\.coveragerc$/i, "dark-blue"]
 			[".python-version", "dark-blue"]
 		]
 
@@ -2757,6 +2759,12 @@ fileIcons:
 		priority: 2
 		match: /^\.gitlab-ci\.yml$/
 		colour: "medium-orange"
+
+	Gitpod:
+		icon: "gitpod"
+		match: /^\.?gitpod\.ya?ml$/i
+		colour: "medium-blue"
+		priority: 2
 
 	Glade:
 		icon: "glade"
@@ -5188,6 +5196,12 @@ fileIcons:
 		scope: /^source\.arr$/
 		interpreter: "pyret"
 
+	pytest:
+		icon: "pytest"
+		match: /^pytest\.ini$/
+		colour: "medium-blue"
+		priority: 2
+
 	Python:
 		icon: "python"
 		match: [
@@ -5322,6 +5336,12 @@ fileIcons:
 		match: /^razzle\.config\./i
 		colour: "dark-blue"
 		uses: "JavaScript"
+
+	"Read the Docs":
+		icon: "readthedocs"
+		match: /^\.?readthedocs\.ya?ml$/i
+		colour: "dark-grey"
+		priority: 2
 
 	Remark:
 		icon: "remark"
@@ -5540,7 +5560,7 @@ fileIcons:
 	Ruby:
 		icon: "ruby"
 		match: [
-			[/\.(rb|ru|ruby|erb|gemspec|god|mspec|pluginspec|podspec|rabl|rake|opal)$/i, "medium-red"
+			[/\.(rb|ru|ruby|erb|god|mspec|pluginspec|podspec|rabl|rake|opal)$/i, "medium-red"
 				tag: "ruby"
 				scope: "ruby"
 				alias: /^(rbx?|rake|jruby|macruby)$/i
@@ -5548,7 +5568,6 @@ fileIcons:
 			[/^\.?(irbrc|gemrc|pryrc|ruby-(gemset|version))$/i, "medium-red"]
 			[/^(Appraisals|(Rake|App|[bB]uild|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(\.lock)?)$/, "medium-red"]
 			[/\.(jbuilder|rbuild|rb[wx]|builder)$/i, "dark-red"]
-			[/Gemfile/i, "medium-red", priority: 0.01]
 			[/^rails$/, "medium-red"]
 			[".watchr", "dark-yellow"]
 		]
@@ -5558,6 +5577,12 @@ fileIcons:
 		priority: 2
 		match: /^\.rubocop(_todo)?\.ya?ml$/i
 		colour: "dark-red"
+
+	RubyGems:
+		icon: "rubygems"
+		match: ".gemspec"
+		colour: "medium-red"
+		uses: "Ruby"
 
 	Rust:
 		icon: "rust"
