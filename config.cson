@@ -1599,6 +1599,7 @@ fileIcons:
 			[/^pyproject\.toml$/i, "dark-blue"]
 			[/^poetry\.lock$/i, "dark-blue"]
 			[/^\.coveragerc$/i, "dark-blue"]
+			[/^MANIFEST\.in$/i, "dark-blue"]
 			[".python-version", "dark-blue"]
 		]
 
