@@ -1498,6 +1498,7 @@ fileIcons:
 			[".ear", "medium-purple"]
 			[".egg", "light-orange"]
 			[".sit", "medium-blue", signature: /^SIT[!D]/]
+			[".hak", "dark-blue", signature: /^HAK V\d\.\d/]
 		]
 
 	"Computable Document Format":
