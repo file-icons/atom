@@ -141,6 +141,11 @@ directoryIcons:
 		match: /^bower[-_]components$/
 		colour: ["medium-yellow", "medium-orange"]
 
+	Buildkite:
+		icon: "buildkite"
+		match: /^\.buildkite$/
+		colour: ["light-green", "medium-green"]
+
 	Cabal:
 		icon: "cabal"
 		match: /^\.cabal$/i
@@ -997,6 +1002,13 @@ fileIcons:
 			[".boot"]
 			[/^Makefile\.boot$/i, "auto-green", priority: 2]
 		]
+
+	Bors:
+		icon: "bors"
+		match: /^bors\.toml$/i
+		colour: "dark-purple"
+		priority: 2
+		url: "https://bors.tech/"
 
 	Bootstrap:
 		icon: "bootstrap"
@@ -2903,6 +2915,12 @@ fileIcons:
 			[/^graphql\.config\.js$/, "medium-pink", priority: 2]
 		]
 
+	"GraphQL Code Generator":
+		icon: "gql-codegen"
+		match: /^codegen\.(json|ya?ml)$/i
+		colour: "dark-pink"
+		priority: 2
+
 	Graphviz:
 		icon: "graphviz"
 		match: [
@@ -2995,6 +3013,12 @@ fileIcons:
 			[".hs-boot", "medium-maroon"]
 			[".hsig", "medium-maroon"]
 		]
+
+	"Haskell IDE Engine":
+		icon: "hie"
+		match: /^hie\.ya?ml($|\.)/i
+		colour: "dark-purple"
+		priority: 2
 
 	Haxe:
 		icon: "haxe"
@@ -6887,6 +6911,12 @@ fileIcons:
 		colour: "medium-grey"
 		interpreter: "vyper"
 		scope: "vyper"
+
+	W3C:
+		icon: "w3c"
+		match: /^w3c\.json$/i
+		colour: "auto-blue"
+		priority: 2
 
 	Wallaby:
 		icon: "wallaby"
