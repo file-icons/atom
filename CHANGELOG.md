@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** 3D (`.step`, `.stp`, `.p21`), Bazel (`.bazel`), Config (`.sdl`, `.sdlang`), Config: Ruby (`.autotest`, `.cross_rubies`, `.gemtest`, `.hoerc`, `.kick`, `.simplecov`, `.yardopts*`), Bitcoin (`.bitcoin` directories, `bitcoin.conf`), Database (`.2da`), Grammar (`.cf`, `.lbnf`), NumPY (`.npy`, `.npz`), NuGet (`.nupkg`, `.snupkg`, `.psmdcp`), Prettier (`.prettierrc.json5`), Python (`py.typed`), Ruby (`Gemfile_*`)
 - Improved recognition of test-files by `test_` prefix (e.g., `test_foo.py` and `test-bar.rb`)
 - Improved recognition of `dockerfile` in modelines; previously, only `docker` was recognised
+- `runghc` and `runhugs` as recognised Haskell interpreters
 
 ### Changed
 - `.python-version` now shows a Python config-icon

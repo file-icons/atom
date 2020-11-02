@@ -3006,7 +3006,7 @@ fileIcons:
 	Haskell:
 		icon: "haskell"
 		match: [
-			[".hs", "medium-purple", scope: "source.haskell", interpreter: "runhaskell", tag: "haskell"]
+			[".hs", "medium-purple", scope: "source.haskell", interpreter: /^run(ghc|haskell|hugs)$/, tag: "haskell"]
 			[".hsc", "medium-blue", scope: "hsc2hs"]
 			[".c2hs", "dark-purple", scope: "c2hs", alias: /^C2hs(\s*Haskell)?$/i]
 			[".lhs", "dark-blue", scope: "latex.haskell", alias: /^(lhaskell|lhs|Literate\s*Haskell)$/i]
