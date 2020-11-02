@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.43...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.44...HEAD
 
 
-[Unpublished]
+[v2.1.44] - 2020-11-02
 ----------------------
 ### Added
 - **New icons:** Awk (`.auk`, `.{g,m,n,}awk`), Binder (`{dev-,}requirements.txt`), Blitz BASIC (`.bb`, `.decls`), Bloc (`bloc` directories), Bors (`bors.toml`), Buildkite (`.buildkite` directories), Calva (`*.calva-repl`), DUB (`.dub` directories, `dub{.selections,}.{json,sdl}`), Fauna (`.faunarc`, `.fql`), Gitpod (`.gitpod.yml`), GraphQL Code Generator (`codegen.{json,yaml,yml}`), Haskell IDE Engine (`hie.yaml*`), Kibo (`.hypr`, `.hypr.live`), Lark (`.lark`), Modern Web (`web-{dev-server,test-runner}.config.{cjs,js,mjs,ts}`), Nokogiri, NumPy (Updated branding), NWScript (`.ncs`, `.ndb`, `.nss`), Ogone (`.o3`, `.ogone`), pytest (`pytest.ini`), Read the Docs (`readthedocs.yml`), ReScript (`.resi`), RubyGems (`.gemspec`), Snowpack (`snowpack.config.{cjs,js,json,mjs,ts}`), Spacengine (`.spe`), Stitches (`stitches.config.{cjs,js,mjs,ts}`), W3C (`w3c.json`), Warcraft III (`.jass`, `.wc3`, `.zn`)
@@ -19,6 +19,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - `.python-version` now shows a Python config-icon
 - `.simplecov` and `.yardopts` now show Ruby config-icons
 - `.jsbeautifyrc`, `.jshintrc` and `.jscsrc` now show JavaScript config-icons
+
+[v2.1.44]: https://github.com/file-icons/atom/releases/tag/v2.1.44
 
 
 
