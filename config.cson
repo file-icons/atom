@@ -3850,7 +3850,7 @@ fileIcons:
 	Roff:
 		icon: "manpage"
 		match: [
-			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|perl|pm?|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|chem|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|pic|roff?|tmac|tmac-u|tr|troff)$/i
+			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|perl|pm?|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|roff?|tmac|tmac-u|tr|troff)$/i
 				"dark-green"
 				scope: /\.[gtn]?roff$/i
 				alias: /^([gtn]?roff|man([-_\s]?page|doc)?|mdoc)$/i
@@ -3859,10 +3859,15 @@ fileIcons:
 					( '\\"\ [tre]+(?=\s|$)
 					| \.TH[\ \t]+(?:\S+)
 					| \.so[\ \t]+man(\w+)/.+\.\1($|\s)
-					| \.(EQ|PS|cstart)\n
+					| \.EQ\n
 					| ('+\t?|\.\t)\\"\s
 					) ///m]
 			[/^(man|mdoc)\.template$/i, "dark-green"]
+			[/\.(chem|dformat|pic)$|^grap(\.tex)?\.defines$/i, "dark-green"
+				alias: /^([gt]?pic|dformat|chem)$/i
+				scope: "source.pic"
+				interpreter: /^((pic|grap)2(plot|graph)|[gt]?pic|picpack|picasso)$/
+				signature: /^\.(PS\s[^\0]*?^\.PE|cstart\n[^\0]*?^\.cend|begin dformat\s[^\0]*?^\.end|G1\n[^\0]*?\n\.G2)\n/m]
 			[/\.(rnh|rno|run|runoff)$/i, "dark-maroon", "runoff"]
 			[/(^|\.)((troff|eqn)rc(-end)?)$/i, "dark-green"]
 			[/^tmac\.|^(mmn|mmt|toc\.entries)$/i, "dark-green", priority: 2]
