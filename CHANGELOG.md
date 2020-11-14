@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.44...HEAD
 
 
+[Unpublished]
+----------------------
+### Added
+- **New icons:** MetaPost (`.mp`, `.mf`)
+- **Support:** Fonts (`.tfm`)
+
+
+
 [v2.1.44] - 2020-11-02
 ----------------------
 ### Added

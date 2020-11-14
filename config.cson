@@ -2411,6 +2411,7 @@ fileIcons:
 			[".otf", "dark-yellow", signature: /^OTTO.*\0/]
 			[".pfb", "dark-red"]
 			[".pfm", "medium-red"]
+			[".tfm", "dark-green", alias: "TeX Font Metric", mime: "application/x-tex-tfm"]
 		]
 
 	"Font, Bitmap":
@@ -4038,6 +4039,13 @@ fileIcons:
 		icon: "metal"
 		match: ".metal"
 		colour: "dark-cyan"
+
+	MetaPost:
+		icon: "metapost"
+		match: [
+			[".mp", "dark-red", "metapost"]
+			[".mf", "dark-green", "metafont"]
+		]
 
 	"Microsoft Access":
 		icon: "access"
