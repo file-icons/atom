@@ -898,6 +898,7 @@ fileIcons:
 		icon: "bibtex"
 		match: [
 			[".cbx", "auto-red"]
+			[".bbl", "auto-blue"]
 			[".bbx", "auto-orange"]
 			[/\.bib(tex)?$/i, "auto-yellow", "bibtex"]
 			[".bst", "auto-green"]
