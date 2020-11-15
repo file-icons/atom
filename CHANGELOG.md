@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** MetaPost (`.mp`, `.mf`)
-- **Support:** BibTeX (`.bbl`), Config (`.mcf`), Databases (`eign`, `term/tab.*`, `nterm/tab.{X,lpr}`), Fonts (`.tfm`), GNU (`{A,L,}GPL*`), Lex (`.lx`), Makefile (`contrib.mak-*`), PostScript (`Fontmap`), Printer (`.joboptions`)
+- **Support:** BibTeX (`.bbl`), Config (`.mcf`), Databases (`eign`, `term/tab.*`, `nterm/tab.{X,lpr}`), Fonts (`.tfm`), GNU (`{A,L,}GPL*`), Lex (`.lx`), Makefile (`contrib.mak-*`), PostScript (`Fontmap`), Printer (`.joboptions`), Tag (`VERSION`)
 
 
 
