@@ -2832,8 +2832,10 @@ fileIcons:
 
 	GNU:
 		icon: "gnu"
-		match: /\.(gnu|gplv[23])$/i
-		colour: "auto-red"
+		match: [
+			[/\.(gnu|gplv[23])$/i, "auto-red"]
+			[/^([AL]?GPL|GFDL)(\b|_)/, "auto-red", priority: 0]
+		]
 
 	GNOME:
 		icon: "gnome"
