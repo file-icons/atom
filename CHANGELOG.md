@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** MetaPost (`.mp`, `.mf`)
-- **Support:** Fonts (`.tfm`)
+- **Support:** Fonts (`.tfm`), PostScript (`Fontmap`), Printer (`.joboptions`)
 
 
 
