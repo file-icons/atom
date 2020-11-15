@@ -1529,6 +1529,7 @@ fileIcons:
 			[".properties", "medium-purple", scope: "java-properties"]
 			[".ld", "dark-red"]
 			[".lds", "medium-red"]
+			[".mcf", "medium-blue"]
 			[".opts", "medium-green"]
 			[/\.sdl(ang)?$/i, "medium-blue", scope: /^source\.sdl$/]
 			[/^mimeapps\.list$/i, "medium-blue"]
@@ -1862,6 +1863,7 @@ fileIcons:
 			[/(^|\.)encodings\.dir$/i, "medium-orange"]
 			[/^pkginfo$/i, "medium-blue"]
 			[/^term(cap|info)/i, "dark-green", priority: 0.5]
+			[/^eign$/, "dark-red", priority: 0.5]
 			[/^(birthtoken|flowers)$/, "medium-green", priority: 0.5, scope: /^source\.generic-db$/]
 			[/(\\|\/)share(?:\1misc)?\1(?:ascii|trace\.codes)$/, "medium-red", matchPath: true]
 			[/^(mime\.types|fstab)$/i, "medium-maroon"]
@@ -1871,11 +1873,8 @@ fileIcons:
 			[/^(magic\.mgc|figmagic)$/i, "medium-purple", signature: /^\xF1\x1E\x04\x1C|^\x1C\x04\x1E\xF1/]
 			[/[\/\\](?:magic[\/\\]Magdir|file[\/\\]magic)[\/\\][-.\w]+$/i, "dark-red", matchPath: true]
 			[/(\\|\/)dev[-\w]+\1(?:[^\\\/]+\1)*(?!DESC|NOTES)(?:[A-Z][-A-Z]*)(?:\.in)?$/, "medium-green", matchPath: true]
-			[///
-				/tab\.(37|450-12|450|lp|think)$
-				|
-				/dev[-\w]+/(APL\.bug|[A-Z][-A-Za-z0-9]*)(\.fd)?$
-			///i, "medium-green", matchPath: true, priority: 0.75]
+			[/term\/O?tab\.[^\/]+$|\/dev[-\w]+\/(APL\.bug|[A-Z][-A-Za-z0-9]*)(\.fd)?$/i, "medium-green", matchPath: true, priority: 0.75]
+			[/(^|\/)n?term\/O?tab\.(X|lpr)$/i, "medium-green", matchPath: true, priority: 1.5]
 			[/\.ssh[\/\\](authorized_keys|known_hosts)$/, "medium-green", matchPath: true]
 			[/^\.icondb\.js$/, "dark-red", priority: 1.5]
 			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
@@ -1980,6 +1979,7 @@ fileIcons:
 		match: /\.(dbk|docbook)$/i
 		colour: "medium-cyan"
 		mime: "application/docbook+xml"
+		signature: /^<!DOCTYPE(?=\s)[^>]+?DTD[^>]+?DocBook\b[^>]*>/i
 		uses: "XML"
 
 	Docker:
@@ -3685,7 +3685,7 @@ fileIcons:
 		icon: "lex"
 		alias: "Flex"
 		match: [
-			[/\.l(ex)?$/i, "medium-cyan", "lex"]
+			[/\.l(e?x)?$/i, "medium-cyan", "lex"]
 			[/^lexer\.x$/i, "medium-cyan", priority: 2]
 			[".flex", "dark-red"]
 		]
@@ -3831,6 +3831,7 @@ fileIcons:
 			[/^Makefile/, "medium-yellow", scope: "makefile", alias: /^(bsdmake|make|mf)$/i, interpreter: "make"]
 			[/^mk\.config$/, "medium-green", priority: 2]
 			[/\.(mk|mak|make)$/i, "medium-yellow"]
+			[/^contrib\.make?([-.]|$)/i, "dark-red", priority: 0]
 			[/^BSDmakefile$/i, "medium-red"]
 			[/^GNUmakefile$/i, "medium-green"]
 			[/^makefile\.sco$/i, "medium-red"]
@@ -3871,10 +3872,11 @@ fileIcons:
 				alias: /^([gt]?pic|dformat|chem)$/i
 				scope: "source.pic"
 				interpreter: /^((pic|grap)2(plot|graph)|[gt]?pic|picpack|picasso)$/
-				signature: /^\.(PS\s[^\0]*?^\.PE|cstart\n[^\0]*?^\.cend|begin dformat\s[^\0]*?^\.end|G1\n[^\0]*?\n\.G2)\n/m]
+				signature: /^\.(PS\s[^\0]*?^\.P[EF]|cstart\n[^\0]*?^\.cend|begin dformat\s[^\0]*?^\.end|G1\n[^\0]*?\n\.G2)\n/m]
 			[/\.(rnh|rno|run|runoff)$/i, "dark-maroon", "runoff"]
 			[/(^|\.)((troff|eqn)rc(-end)?)$/i, "dark-green"]
 			[/^tmac\.|^(mmn|mmt|toc\.entries)$/i, "dark-green", priority: 2]
+			[/(^|\/)samples\/(eqn|mm|[nt]?roff|pic|tbl)\.[a-z]+$/i, "dark-green", matchPath: true, priority: 0.5]
 			[///
 				(\\|/)
 				(?: man(\w+)\1[^\\/]+\.\2
@@ -5177,6 +5179,7 @@ fileIcons:
 		icon: "print"
 		match: [
 			[".ppd", "dark-cyan", alias: "PostScript Printer Description", signature: /^\*PPD-Adobe:/]
+			[".upp", "medium-orange", alias: "Uniprint", scope: "source.uniprint"]
 			[".joboptions", "dark-red", uses: "PostScript"]
 		]
 
@@ -5466,8 +5469,8 @@ fileIcons:
 		match: [
 			[/^README(\b|_)|^((un)?licen[sc]es?(\.mysql)?|(read|readme|click|delete|keep|test)\.me)(\.(md|txt))?$|\.(readme|1st|licen[sc]es?)$/i, "medium-blue", priority: 2]
 			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copy(ing|right)(\.regex)?|faq|fixes|hacking|history|install|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks|warnings)(_\w+)?$/i, "dark-blue", priority: 2]
-			[/\b(changelog|copying(v?\d)?|install|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
-			[/^news([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
+			[/\b(changelog|copying(v?\d)?|install|notes?|notices?|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
+			[/^(news|release[-_.]?notes)([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
 			[/^zork\d\.(?!pre$|pur$)[a-z]+$/, "dark-blue", priority: 0]
 			[/^zork\d\.doc$/, "medium-blue", priority: 2]
 			[".changes", "medium-blue"]
