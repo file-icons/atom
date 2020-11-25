@@ -12,9 +12,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** MetaPost (`.mp`, `.mf`)
 - **Support:** BibTeX (`.bbl`), Config (`.mcf`), Databases (`eign`, `term/tab.*`, `nterm/tab.{X,lpr}`), Fonts (`.tfm`), GNU (`{A,L,}GPL*`), Lex (`.lx`), Makefile (`contrib.mak-*`), PostScript (`Fontmap`), Printer (`.joboptions`), Tag (`VERSION`)
 
-### Fixed
-- Potential race conditions with `deleted`/`created` filesystem events
-
 
 
 [v2.1.44] - 2020-11-02
