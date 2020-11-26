@@ -2413,6 +2413,7 @@ fileIcons:
 			[".pfb", "dark-red"]
 			[".pfm", "medium-red"]
 			[".tfm", "dark-green", alias: "TeX Font Metric", mime: "application/x-tex-tfm"]
+			[".dfont", "dark-cyan", alias: "Datafork Font", mime: "application/x-dfont", signature: /^\0\0\x01\0.*?(sfnt|FONT|NFNT|POST)/]
 		]
 
 	"Font, Bitmap":
@@ -3181,6 +3182,7 @@ fileIcons:
 			[/\.a?png$/i, "medium-orange", signature: /^.PNG\r\n\x1A\n/]
 			[".gif", "medium-yellow", signature: /^GIF8[97]a/]
 			[/\.jpe?g$/i, "medium-green", signature: /^\xFF\xD8\xFF[\xDB\xE0\xE1]|(JFIF|Exif)\0|^\xCF\x84\x01|^\xFF\xD8.+\xFF\xD9$/]
+			[/\.(avif|heifs?|hif)$/i, "medium-orange", alias: "AV1", mime: "image/avif"]
 			[".ico", "medium-blue", signature: /^\0{2}\x01\0/]
 			[".webp", "dark-blue", signature: /^RIFF.{4}WEBPVP8/]
 			[".bmp", "medium-red", signature: /^BM/]
@@ -3202,7 +3204,6 @@ fileIcons:
 			[".hdp", "dark-red"]
 			[".hdr", "medium-blue", signature: /^#\?RADIANCE\n/]
 			[".heic", "dark-red"]
-			[".heif", "dark-red"]
 			[".icns", "medium-pink", signature: /^icns/]
 			[".iff", "dark-blue"]
 			[/\.(jp[f2xm]|j2c|mj2)$/i, "dark-green", signature: /^\0{3}\fjP {2}/]
