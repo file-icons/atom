@@ -7167,7 +7167,7 @@ fileIcons:
 
 	YAMLLint:
 		icon: "yamllint"
-		match: /^\.yamllint$/i
+		match: /^\.yamllint(\.ya?ml)?$/i
 		colour: "medium-green"
 		priority: 2
 
