@@ -97,7 +97,7 @@ describe("Archive-view", () => {
 					["zipped/.meteor",          base + "meteor-icon  dark-orange"],
 					["zipped/.vagrant",         base + "vagrant-icon medium-cyan"],
 					["zipped/.bundle",          base + "package-icon"],
-					["zipped/.framework",       base + "dylib-icon"],
+					["zipped/.framework",       base + "icon-file-directory"],
 					["zipped/.github",          base + "github-icon"],
 					["zipped/.svn",             base + "svn-icon"],
 					["zipped/.tmBundle",        base + "textmate-icon"],

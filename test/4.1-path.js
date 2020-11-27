@@ -149,7 +149,7 @@ describe("Path", () => {
 			assertIconClasses(TreeView.directories, [
 				["colours",           base + "icon-file-directory"],
 				[".bundle",           base + "package-icon"],
-				[".framework",        base + "dylib-icon"],
+				[".framework",        base + "icon-file-directory"],
 				[".github",           base + "github-icon"],
 				["git.git",           base + "git-icon      medium-red"],
 				[".meteor",           base + "meteor-icon   dark-orange"],
