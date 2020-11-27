@@ -4578,6 +4578,12 @@ fileIcons:
 		match: /^nodemon\.json$|\.nodemonignore$/i
 		colour: "medium-green"
 
+	Nokogiri:
+		icon: "nokogiri"
+		match: /^\.?nokogirirc($|\.)/i
+		colour: "medium-red"
+		uses: "Ruby"
+
 	Nomad:
 		icon: "nomad"
 		match: ".nomad"

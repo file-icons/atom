@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** MetaPost (`.mp`, `.mf`)
-- **Support:** BibTeX (`.bbl`), Config (`.mcf`), Databases (`eign`, `term/tab.*`, `nterm/tab.{X,lpr}`), Fonts (`.dfont`, `.tfm`), GNU (`{A,L,}GPL*`), Images (`.avif`, `.heif`, `.heifs`, `.hif`), Lex (`.lx`), macOS Libraries (`.bundle`, `.ccl`, `.component`, `.framework`, `.kext`, `.mdimporter`, `.osax`, `.{osirix,}plugin`, `.qlgenerator`), Makefile (`contrib.mak-*`), PostScript (`Fontmap`), Printer (`.joboptions`), Tag (`VERSION`)
+- **Support:** BibTeX (`.bbl`), Config (`.mcf`), Databases (`eign`, `term/tab.*`, `nterm/tab.{X,lpr}`), Fonts (`.dfont`, `.tfm`), GNU (`{A,L,}GPL*`), Images (`.avif`, `.heif`, `.heifs`, `.hif`), Lex (`.lx`), macOS Libraries (`.bundle`, `.ccl`, `.component`, `.framework`, `.kext`, `.mdimporter`, `.osax`, `.{osirix,}plugin`, `.qlgenerator`), Makefile (`contrib.mak-*`), Nokogiri (`.nokogirirc`), PostScript (`Fontmap`), Printer (`.joboptions`), Tag (`VERSION`)
 
 
 
