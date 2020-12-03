@@ -5483,6 +5483,7 @@ fileIcons:
 			[".changes", "medium-blue"]
 			[".journal", "medium-blue", uses: "Ledger"]
 			[".faq", "medium-blue"]
+			[".yo", "medium-red", "yodl"]
 		]
 
 	REALbasic:
