@@ -12,6 +12,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **New icons:** Automator (`.workflow`, `.action`, `.cation`, `.definition`), Grapher (`.gcx`), Houdini (`.hipnc`, `.hip`, `.i3d`, `.picnc`), MetaPost (`.mp`, `.mf`), NgRx, OmniGraffle (`.graffle`, `.gdiagramstyle`, `.gstencil`, `.gtemplate`), restQL (`.rql`, `.restql`, `restql.yml`), Sandbox (`.sb`), WinUI (`.baml`, `.xaml`), Wolfram (`.wl`, `.wls`, `.wlt`)
 - **Support:** BibTeX (`.bbl`), Config (`.mcf`), Databases (`eign`, `term/tab.*`, `nterm/tab.{X,lpr}`), Fonts (`.dfont`, `.tfm`), GNU (`{A,L,}GPL*`), Images (`.avif`, `.heif`, `.heifs`, `.hif`), Lex (`.lx`), macOS Libraries (`.bundle`, `.ccl`, `.component`, `.framework`, `.kext`, `.mdimporter`, `.osax`, `.{osirix,}plugin`, `.qlgenerator`), Makefile (`contrib.mak-*`), Nokogiri (`.nokogirirc`), PostScript (`Fontmap`), Printer (`.joboptions`), Readme (`.yo`), Tag (`VERSION`)
 
+### Fixed
+- Editors blocked from opening when `atom-fs` misidentifies filetype
+
 
 
 [v2.1.44] - 2020-11-02
