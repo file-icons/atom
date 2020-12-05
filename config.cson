@@ -116,6 +116,11 @@ directoryIcons:
 		match: /^\.atom(-ci)?$/
 		colour: "dark-green"
 
+	Automator:
+		icon: "automator"
+		match: /[^\s.]\.(c?action|definition|workflow)$/i
+		colour: "medium-cyan"
+
 	"Azure Pipelines":
 		icon: "azurepipelines"
 		match: /^\.azure-pipelines$/i
@@ -2725,7 +2730,6 @@ fileIcons:
 			[".wsf", "medium-blue"]
 			[".x3d", "medium-blue"]
 			[".xacro", "medium-red"]
-			[".xaml", "medium-blue"]
 			[".xib", "dark-purple"]
 			[".xlf", "dark-cyan"]
 			[".xliff", "medium-red"]
@@ -2912,6 +2916,11 @@ fileIcons:
 		match: ".gf"
 		colour: "medium-red"
 
+	Grapher:
+		icon: "grapher"
+		match: ".gcx"
+		colour: "auto-green"
+
 	GraphQL:
 		icon: "graphql"
 		match: [
@@ -3087,6 +3096,11 @@ fileIcons:
 		icon: "hoplon"
 		match: ".hl"
 		colour: "medium-red"
+
+	Houdini:
+		icon: "houdini"
+		match: /\.(hipnc|hip|i3d|picnc)$/i
+		colour: "medium-orange"
 
 	HoundCI:
 		icon: "houndci"
@@ -3943,8 +3957,6 @@ fileIcons:
 			[".mt", "medium-maroon"]
 			[".nb", "dark-orange"]
 			[".nbp", "dark-red"]
-			[".wl", "medium-yellow"]
-			[".wlt", "dark-yellow"]
 		]
 
 	MathJax:
@@ -4739,6 +4751,15 @@ fileIcons:
 		scope: "odin"
 		interpreter: "odin"
 
+	OmniGraffle:
+		icon: "omnigraffle"
+		match: [
+			[".graffle", "medium-green"]
+			[".gdiagramstyle", "medium-cyan"]
+			[".gstencil", "medium-red"]
+			[".gtemplate", "dark-green"]
+		]
+
 	Ogone:
 		icon: "ogone"
 		match: /\.(o3|ogone)$/i
@@ -5447,6 +5468,13 @@ fileIcons:
 			[".retextignore", "dark-green"]
 		]
 
+	restQL:
+		icon: "restql"
+		match: [
+			[/\.r(est)?ql$/i, "dark-blue", "restql"]
+			[/^restql\.ya?ml$/i, "medium-cyan", priority: 2]
+		]
+
 	RData:
 		icon: "rdata"
 		uses: "Binary"
@@ -5730,6 +5758,14 @@ fileIcons:
 		alias: /^Salt(State)?$/i
 		match: ".sls"
 		colour: "auto-blue"
+
+	Sandbox:
+		icon: "sandbox"
+		alias: /^(Sandbox Profile Language|SBPL)$/i
+		match: ".sb"
+		colour: "dark-orange"
+		scope: "sbpl"
+		uses: "Scheme" # Kinda
 
 	SAS:
 		icon: "sas"
@@ -7059,6 +7095,13 @@ fileIcons:
 			[".reg", "medium-blue"]
 		]
 
+	WinUI:
+		icon: "winui"
+		match: [
+			[".xaml", "medium-blue", uses: "XML", mime: "application/xaml+xml"]
+			[".baml", "medium-red", uses: "Binary"]
+		]
+
 	WiX:
 		icon: "wix"
 		match: [
@@ -7068,6 +7111,14 @@ fileIcons:
 			[".wxi", "auto-orange"]
 			[".wxl", "auto-maroon"]
 			[".wix", "auto-maroon"]
+		]
+
+	Wolfram:
+		icon: "wolfram"
+		match: [
+			[".wl", "medium-red"]
+			[".wls", "dark-red"]
+			[".wlt", "auto-orange"]
 		]
 
 	Workbox:
