@@ -5,7 +5,7 @@ const Options = require("../lib/options.js");
 
 
 describe("Tree-view", () => {
-	const {assertIconClasses, resetOptions, setTheme} = require("./utils");
+	const {assertIconClasses, resetOptions, setTheme, wait} = require("./utils");
 	
 	before(() => {
 		resetOptions();
@@ -214,9 +214,10 @@ describe("Tree-view", () => {
 				TreeView.entries["subfolder"].should.have.class("name icon icon-file-directory")));
 		
 		when("it contains a submodule", () => {
-			it("shows the default icon for submodules", () => {
+			it("shows the default icon for submodules", async () => {
 				TreeView.expand(".bundle");
 				TreeView.refresh();
+				await wait(500);
 				assertIconClasses(TreeView.entries, [
 					[".bundle/node_modules",    "name icon icon-file-submodule"],
 					[".bundle/submodule-1",     "name icon icon-file-submodule"],
