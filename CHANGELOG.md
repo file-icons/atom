@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.44...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.45...HEAD
 
 
-[Unpublished]
+[v2.1.45] - 2020-12-08
 ----------------------
 ### Added
 - **New icons:** Automator (`.workflow`, `.action`, `.cation`, `.definition`), Grapher (`.gcx`), Houdini (`.hipnc`, `.hip`, `.i3d`, `.picnc`), MetaPost (`.mp`, `.mf`), NgRx, OmniGraffle (`.graffle`, `.gdiagramstyle`, `.gstencil`, `.gtemplate`), restQL (`.rql`, `.restql`, `restql.yml`), Sandbox (`.sb`), WinUI (`.baml`, `.xaml`), Wolfram (`.wl`, `.wls`, `.wlt`)
@@ -14,6 +14,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Editors blocked from opening when `atom-fs` misidentifies filetype
+
+[v2.1.45]: https://github.com/file-icons/atom/releases/tag/v2.1.45
 
 
 
