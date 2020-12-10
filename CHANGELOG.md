@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.45...HEAD
 
 
+[Unpublished]
+----------------------
+### Fixed
+- Missing restQL icon
+
+
+
 [v2.1.45] - 2020-12-08
 ----------------------
 ### Added
