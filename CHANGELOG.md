@@ -8,6 +8,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]
 ----------------------
+### Added
+- **Support:** Houdini (`.vfl`)
+
 ### Fixed
 - Missing restQL icon
 

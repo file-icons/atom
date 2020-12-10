@@ -3099,8 +3099,10 @@ fileIcons:
 
 	Houdini:
 		icon: "houdini"
-		match: /\.(hipnc|hip|i3d|picnc)$/i
-		colour: "medium-orange"
+		match: [
+			[/\.(hipnc|hip|i3d|picnc)$/i, "medium-orange"]
+			[".vfl", "medium-cyan"]
+		]
 
 	HoundCI:
 		icon: "houndci"
