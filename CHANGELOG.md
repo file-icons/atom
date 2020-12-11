@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** Houdini (`.vfl`)
 
 ### Fixed
+- Icons of symlinked Git repositories
 - Missing restQL icon
 
 
