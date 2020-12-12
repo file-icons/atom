@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Houdini (`.vfl`)
+- **Support:** Config (`.ldif`, `pf.os`, `rpc`), Houdini (`.vfl`), Readme (`sudo_lecture`), Shell (`*rc_Apple_Terminal`)
 
 ### Fixed
 - Icons of symlinked Git repositories
