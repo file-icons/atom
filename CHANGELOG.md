@@ -3,10 +3,10 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.45...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.46...HEAD
 
 
-[Unpublished]
+[v2.1.46] - 2020-12-14
 ----------------------
 ### Added
 - **Support:** Config (`.ldif`, `pf.os`, `rpc`), Houdini (`.vfl`), Readme (`sudo_lecture`), Shell (`*rc_Apple_Terminal`)
@@ -14,6 +14,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Icons of symlinked Git repositories
 - Missing restQL icon
+
+[v2.1.46]: https://github.com/file-icons/atom/releases/tag/v2.1.46
 
 
 
