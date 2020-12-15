@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.46...HEAD
 
 
+[Unpublished]
+----------------------
+### Fixed
+- Icons of symlinked projects that aren't Git repositories
+
+
+
 [v2.1.46] - 2020-12-14
 ----------------------
 ### Added
