@@ -1884,6 +1884,8 @@ fileIcons:
 			[/(^|\/)n?term\/O?tab\.(X|lpr)$/i, "medium-green", matchPath: true, priority: 1.5]
 			[/\.ssh[\/\\](authorized_keys|known_hosts)$/, "medium-green", matchPath: true]
 			[/^\.icondb\.js$/, "dark-red", priority: 1.5]
+			[/^index\.(bt|db|dir|pag)$/i, "medium-red", priority: 1.5]
+			[/^whatis$/i, "medium-maroon"]
 			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
 				priority: 2,
 				matchPath: true]

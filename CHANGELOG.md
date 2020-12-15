@@ -8,6 +8,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]
 ----------------------
+### Added
+- **Support:** Databases (`index.{bt,db,dir,pag}`, `whatis`)
+
 ### Fixed
 - Icons of symlinked projects that aren't Git repositories
 
