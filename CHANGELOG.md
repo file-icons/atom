@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **New icons:** Laravel (updated logo)
 - **Support:** Databases (`index.{bt,db,dir,pag}`, `whatis`)
 
 ### Fixed
