@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Laravel (updated logo)
-- **Support:** Config (`.kys`), Databases (`index.{bt,db,dir,pag}`, `whatis`)
+- **Support:** Config (`.git/info/*-*`, `.kys`), Databases (`index.{bt,db,dir,pag}`, `whatis`)
 
 ### Fixed
 - Icons of symlinked projects that aren't Git repositories
