@@ -5807,6 +5807,7 @@ fileIcons:
 			[".scm", "medium-red", scope: "scheme", interpreter: /guile|bigloo|chicken/]
 			[".sld", "medium-blue"]
 			[".sps", "medium-purple"]
+			[".xtm", "medium-yellow", "extempore"]
 		]
 
 	Scilla:
