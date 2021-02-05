@@ -9,8 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **New icons:** Laravel (updated logo)
-- **Support:** Config (`.git/info/*-*`, `.kys`), Databases (`index.{bt,db,dir,pag}`, `whatis`), Scheme (`.xtm`)
+- **New icons:** Commitizen (`.cz.{json,toml,yaml}`), Laravel (updated logo)
+- **Support:** Config (`.git/info/*-*`, `.kys`), Databases (`index.{bt,db,dir,pag}`, `language-subtag-registry{,.txt}`, `nametable`, `whatis`), Scheme (`.xtm`)
 
 ### Fixed
 - Icons of symlinked projects that aren't Git repositories

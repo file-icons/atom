@@ -1449,6 +1449,13 @@ fileIcons:
 		colour: "medium-blue"
 		priority: 2
 
+	Commitizen:
+		icon: "commitizen"
+		match: /^\.?cz\.(json|toml|ya?ml)$/i
+		colour: "dark-purple"
+		priority: 2
+		url: "https://commitizen-tools.github.io/commitizen/config/"
+
 	"Common Lisp":
 		icon: "cl"
 		scope: "common-lisp"
@@ -1887,6 +1894,7 @@ fileIcons:
 			[/^\.icondb\.js$/, "dark-red", priority: 1.5]
 			[/^index\.(bt|db|dir|pag)$/i, "medium-red", priority: 1.5]
 			[/^whatis$/i, "medium-maroon"]
+			[/^(language-subtag-registry(\.txt)?|nametable)$/, "dark-blue", priority: 1.5, scope: "record-jar"]
 			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
 				priority: 2,
 				matchPath: true]
