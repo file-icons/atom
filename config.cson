@@ -937,7 +937,8 @@ fileIcons:
 
 	Binder:
 		icon: "binder"
-		match: /^(dev-)?requirements\.txt$/
+		# HACK: Kludge to avoid deleting definition whilst also fixing #841
+		match: /^binder[-_]requirements\.(in|txt)$/i
 		colour: "medium-orange"
 		priority: 1.5
 		url: "https://mybinder.org/"
@@ -5312,7 +5313,12 @@ fileIcons:
 
 	PyPi:
 		icon: "pypi"
-		match: /^requirements\.in$/i
+		match: ///
+			^
+			( (dev|docs?|tests?) [-_] requirements
+			| requirements ([-_] (dev|docs?|tests?))?
+			) \.(in|txt)$
+		///i
 		colour: "dark-blue"
 		priority: 2
 

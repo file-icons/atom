@@ -10,10 +10,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Commitizen (`.cz.{json,toml,yaml}`), Laravel (updated logo)
-- **Support:** Config (`.git/info/*-*`, `.kys`), Databases (`index.{bt,db,dir,pag}`, `language-subtag-registry{,.txt}`, `nametable`, `whatis`), Scheme (`.xtm`)
+- **Support:** Config (`.git/info/*-*`, `.kys`), Databases (`index.{bt,db,dir,pag}`, `language-subtag-registry{,.txt}`, `nametable`, `whatis`), PyPi (`{dev,{doc,test}{,s}}-requirements.{in,txt}`, `requirements-{dev,{doc,test}{,s}}.{in,txt}`), Scheme (`.xtm`)
 
 ### Fixed
 - Icons of symlinked projects that aren't Git repositories
+- [[`#841`][]]: `requirements.txt` showing [Binder][] icon instead of PyPi's
+
+[`#841`]: https://github.com/file-icons/atom/issues/841
+[Binder]: https://mybinder.org/
 
 
 
