@@ -164,6 +164,11 @@ directoryIcons:
 		icon: "circleci"
 		match: /^\.circleci$/
 
+	CNAB:
+		icon: "cnab"
+		match: /^cnab$/i
+		colour: "dark-blue"
+
 	CPAN:
 		icon: "cpan"
 		match: [
@@ -1210,6 +1215,13 @@ fileIcons:
 		match: /^Cartfile(\.|$)/
 		colour: "dark-pink"
 		priority: 2
+
+	CASC:
+		icon: "casc"
+		match: /\.casc?$/i
+		colour: "auto-orange"
+		scope: "casc"
+		url: "https://github.com/CASC-Lang/CASC"
 
 	Ceylon:
 		icon: "ceylon"
@@ -6943,6 +6955,12 @@ fileIcons:
 			[".vbox_version", "auto-blue"]
 			[/\.vbox(-prev)?$/i, "auto-blue"]
 		]
+
+	Vite:
+		icon: "vite"
+		match: /^vite\.config\.[jt]s$/i
+		colour: "auto-yellow"
+		priority: 2
 
 	"Visual Studio":
 		icon: "vs"
