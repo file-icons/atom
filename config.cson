@@ -2175,9 +2175,10 @@ fileIcons:
 
 	Electron:
 		icon: "electron"
-		match: /\.compilerc(\.json)?$/i
-		colour: "dark-blue"
-		priority: 2
+		match: [
+			[/\.compilerc(\.json)?$/i, "dark-blue", priority: 2]
+			[/(^|\.)forge\.config\.js$/i, "dark-cyan", priority: 1.4, url: "https://www.electronforge.io/configuration"]
+		]
 
 	Elixir:
 		icon: "elixir"
@@ -5173,6 +5174,8 @@ fileIcons:
 			[".ps", "medium-red", scope: /(^|\.)postscript$/i, alias: "postscr", signature: /^%!PS/]
 			[".eps", "medium-orange"]
 			[".pfa", "dark-blue"]
+			[".bez", "medium-red", scope: "stdbez", alias: /^(St(andar)?d )B[eè]zier$/i, priority: 0.5]
+			[/^fontinfo$/i, "medium-blue", scope: "fontinfo", alias: "fontinfo", signature: /^IsItalicStyle\s/]
 			[/\.a[fm]m$/i, "medium-green", scope: "afm", signature: /^\s*Start(Comp|Master)?FontMetrics\s+(\d+\.\d+)/]
 			[/\.eps[fi]$/i, "dark-orange"]
 			[/^Fontmap$/, "dark-red"]
