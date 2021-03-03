@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** CASC (`.casc`, `.cas`), CNAB (`cnab` directories), Commitizen (`.cz.{json,toml,yaml}`), Fiddle, Laravel (updated logo), Vite (`vite.config.{js,ts}`)
-- **Support:** Config (`.git/info/*-*`, `.kys`), Databases (`index.{bt,db,dir,pag}`, `language-subtag-registry{,.txt}`, `nametable`, `whatis`), Electron (`{,*.}forge.config.js`), PostScript (`.bez`, `fontinfo`), PyPi (`{dev,{doc,test}{,s}}-requirements.{in,txt}`, `requirements-{dev,{doc,test}{,s}}.{in,txt}`), Scheme (`.xtm`)
+- **Support:** Config (`.git/info/*-*`, `.kys`), Databases (`index.{bt,db,dir,pag}`, `language-subtag-registry{,.txt}`, `nametable`, `whatis`), Electron (`{,*.}forge.config.js`), Makefile (`justfile`), PostScript (`.bez`, `fontinfo`), PyPi (`{dev,{doc,test}{,s}}-requirements.{in,txt}`, `requirements-{dev,{doc,test}{,s}}.{in,txt}`), Scheme (`.xtm`)
 
 ### Fixed
 - Icons of symlinked projects that aren't Git repositories

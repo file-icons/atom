@@ -3888,6 +3888,7 @@ fileIcons:
 			[".mms", "medium-blue"]
 			[".mmk", "light-blue"]
 			[".pri", "dark-purple"]
+			[/^justfile$/i, "medium-cyan", "just"]
 		]
 
 	Mako:
