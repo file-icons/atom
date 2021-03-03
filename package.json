@@ -99,7 +99,7 @@
 					"default": true,
 					"order": 3,
 					"title": "Check modelines",
-					"description": "Allow [Vim](http://vim.wikia.com/wiki/Modeline_magic) and [Emacs](https://www.gnu.org/software/emacs/manual/html_node/emacs/Specifying-File-Variables.html#Specifying-File-Variables) modelines to change icons."
+					"description": "Allow [Vim](https://vim.fandom.com/wiki/Modeline_magic) and [Emacs](https://www.gnu.org/software/emacs/manual/html_node/emacs/Specifying-File-Variables.html#Specifying-File-Variables) modelines to change icons."
 				},
 				"usertypes": {
 					"type": "boolean",
@@ -113,7 +113,7 @@
 					"default": true,
 					"order": 5,
 					"title": "Use .gitattributes",
-					"description": "Honour [`linguist-language`](https://github.com/github/linguist#using-gitattributes) attributes in local `.gitattributes` files."
+					"description": "Honour [`linguist-language`](https://github.com/github/linguist/blob/master/docs/overrides.md#using-gitattributes) attributes in local `.gitattributes` files."
 				}
 			}
 		}
