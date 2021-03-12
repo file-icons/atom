@@ -13,7 +13,7 @@
 	},
 	"atomTestRunner": "atom-mocha",
 	"dependencies": {
-		"atom-fs": "v0.2.0",
+		"atom-fs": "v0.2.1",
 		"lru-cache": "^5.1.1",
 		"mapped-disposable": "^1.0.3",
 		"micromatch": "^4.0.2"
