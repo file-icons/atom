@@ -15,7 +15,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Icons of symlinked projects that aren't Git repositories
 - [[`#841`][]]: `requirements.txt` showing [Binder][] icon instead of PyPi's
+- [[`github/linguist#5271`][]]: Inaccuracies related to modeline matching
 
+[`github/linguist#5271`]: https://github.com/github/linguist/pull/5271
 [`#841`]: https://github.com/file-icons/atom/issues/841
 [Binder]: https://mybinder.org/
 
