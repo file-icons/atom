@@ -1751,7 +1751,7 @@ fileIcons:
 		match: [
 			[".css", "medium-blue", "css"]
 			[".less", "dark-blue", "less"]
-			[".tss", "medium-blue", "tss"]
+			[".tss", "dark-red", "tss"]
 		]
 
 	Cucumber:
