@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unpublished]: https://github.com/file-icons/atom/compare/v2.1.47...HEAD
 
-[v2.1.48] - 2021-03-13
+[Unpublished]
 ----------------------
 ### Added
 - **Support:** Appcelerator Titanium (`.tss`)
