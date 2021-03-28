@@ -2642,6 +2642,7 @@ fileIcons:
 		generic: true
 		match: [
 			[".xml", "medium-blue", signature: /^<\?xml /]
+			[".xmp", "medium-red", signature: /^(<\?xpacket|<x:xmpmeta) /]
 			[".rdf", "dark-red"]
 			[".config", "medium-blue"]
 			[/^_service$/, "medium-blue"]
