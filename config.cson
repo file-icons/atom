@@ -2164,9 +2164,10 @@ fileIcons:
 
 	EditorConfig:
 		icon: "editorconfig"
-		match: ".editorconfig"
-		colour: "medium-orange"
-		scope: "editorconfig"
+		match: [
+			[".editorconfig", "medium-orange", scope: "editorconfig"]
+			[".ecrc", "dark-blue", uses: "JSON"]
+		]
 
 	Edge:
 		icon: "edge"
