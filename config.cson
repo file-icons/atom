@@ -5193,8 +5193,9 @@ fileIcons:
 			[".bez", "medium-red", scope: "stdbez", alias: /^(St(andar)?d )B[eè]zier$/i, priority: 0.5]
 			[/^fontinfo$/i, "medium-blue", scope: "fontinfo", alias: "fontinfo", signature: /^IsItalicStyle\s/]
 			[/\.a[fm]m$/i, "medium-green", scope: "afm", signature: /^\s*Start(Comp|Master)?FontMetrics\s+(\d+\.\d+)/]
+			[/\/Resource\/[A-Z]\w+\/[^/]+$|(^|\/)(cidfmap|xlatmap|PPI_CUtils|Pscript5Idiom)$/i, "medium-red", matchPath: true, priority: 0.5, signature: /^%+\s+Copyright\s+\(C\)\s+([-\d]+),?\s+Artifex\sSoftware\b/i]
 			[/\.eps[fi]$/i, "dark-orange"]
-			[/^Fontmap$/, "dark-red"]
+			[/^Fontmap(\.GS)?$/i, "dark-red", priority: 1.5]
 			[".gsf", "dark-orange"]
 		]
 
