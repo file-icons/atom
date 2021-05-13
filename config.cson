@@ -6591,6 +6591,7 @@ fileIcons:
 	TextMate:
 		icon: "textmate"
 		match: [
+			[/\.(tm_properties|tmProperties)$/i, "medium-pink", scope: "source.tm-properties"]
 			[".tmcg", "medium-green", scope: "tmcg"]
 			[".tmLanguage", "dark-purple"]
 			[".tmCommand", "medium-blue"]

@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
-- **Support:** Appcelerator Titanium (`.tss`), EditorConfig (`.ecrc`), XML (`.xmp`)
+- **Support:** Appcelerator Titanium (`.tss`), EditorConfig (`.ecrc`), TextMate (`.tm_properties`, `.tmProperties`), XML (`.xmp`)
 
 
 
