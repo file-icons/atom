@@ -2939,6 +2939,7 @@ fileIcons:
 			[".ebnf", "medium-red",   scope: "ebnf", alias: "Extended Backus-Naur Form", rfc: 5234]
 			[".cddl", "medium-grey",  scope: "cddl", alias: "Concise Data Definition Language", rfc: 8610]
 			[/\.(cf|lbnf)$/i, "dark-yellow", scope: "lbnf", alias: "Labelled Backus-Naur Form", interpreter: "bnfc"]
+			[".grammar", "medium-cyan"]
 		]
 
 	"Grammatical Framework":
@@ -5024,7 +5025,7 @@ fileIcons:
 	PegJS:
 		icon: "peg"
 		match: [
-			[".pegjs", "medium-red", "pegjs"]
+			[/\.(pegjs|peggy)$/i, "medium-red", "pegjs"]
 			[".pegcoffee", "medium-maroon", "pegcoffee"]
 		]
 
