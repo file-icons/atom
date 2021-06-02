@@ -6429,6 +6429,7 @@ fileIcons:
 			[".pid", "medium-orange"]
 			[".tld", "medium-maroon", uses: "XML"]
 			[/(\.|^)sha(256|sum)?$/i, "medium-green"]
+			[/(\.|^)(check|ck|crc(32)?|md5|rmd160|sha(224|256|384|512|1|2|3)?)?(sums?|(?<=\w))$/i, "medium-green", scope: "text.checksums"]
 		]
 
 	Tailwind:
