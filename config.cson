@@ -3975,6 +3975,12 @@ fileIcons:
 			[".mjs.map", "auto-blue"]
 			[".cidmap", "medium-orange", "cidmap"]
 			[".map", "dark-blue", priority: 0.5]
+			[".mapping", "dark-blue", priority: 0.5]
+			[".enigma", "medium-purple"]
+			[".match", "medium-maroon"]
+			[".tiny", "dark-green"]
+			[".tinyv2", "medium-green"]
+			[".unpick", "light-cyan"]
 		]
 
 	Mapbox:
