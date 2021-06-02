@@ -111,6 +111,11 @@ directoryIcons:
 		match: /\.artx$/i
 		colour: "dark-purple"
 
+	"Art Text 4":
+		icon: "arttext4"
+		match: /\.art4$/i
+		colour: "medium-purple"
+
 	Atom:
 		icon: "atom"
 		match: /^\.atom(-ci)?$/
@@ -913,6 +918,13 @@ fileIcons:
 			[/\.bib(tex)?$/i, "auto-yellow", "bibtex"]
 			[".bst", "auto-green"]
 		]
+
+	Bikeshed:
+		icon: "bikeshed"
+		match: ".bs"
+		colour: ["medium-red", "dark-blue"]
+		scope: "source.csswg"
+		uses: "HTML"
 
 	Biml:
 		icon: "biml"
@@ -2060,6 +2072,13 @@ fileIcons:
 		match: /^dosbox(\b|_).*(\.conf|pref\w*)$/i
 		colour: "medium-orange"
 
+	dotenv:
+		icon: "dotenv"
+		match: /^\.env(\.|$)/i
+		colour: "auto-yellow"
+		scope: "source.dotenv"
+		priority: 0.5
+
 	"doT.js":
 		icon: "dotjs"
 		priority: 0.9 # Hack to avoid conflict with GraphViz, but allow scope association
@@ -2368,6 +2387,11 @@ fileIcons:
 		colour: "medium-cyan"
 		scope: /(^|\.)fe?xl(.|$)/i
 		interpreter: "fexl"
+
+	Figma:
+		icon: "figma"
+		match: ".figma"
+		colour: "medium-red"
 
 	"Final Draft":
 		icon: "finaldraft"
@@ -3292,6 +3316,12 @@ fileIcons:
 		match: ".imba"
 		colour: "medium-yellow"
 		scope: /\.imba$/
+
+	Imgbot:
+		icon: "imgbot"
+		match: /^\.imgbotconfig$/i
+		colour: "dark-cyan"
+		uses: "JSON"
 
 	"Inform 7":
 		icon: "inform7"
@@ -4224,6 +4254,13 @@ fileIcons:
 			[".dzn", "dark-blue", alias: "MiniZinc Data"]
 		]
 
+	Mint:
+		icon: "mint"
+		match: ".mint"
+		colour: "medium-green"
+		scope: "source.mint"
+		url: "https://www.mint-lang.com/"
+
 	Mirah:
 		icon: "mirah"
 		match: [
@@ -5068,6 +5105,12 @@ fileIcons:
 			[/^phoenix\.ex$/i, "medium-red"]
 			[/^phoenix\.[cm]?js$/i, "medium-orange"]
 		]
+
+	PhotoRec:
+		icon: "photorec"
+		match: /^\.photorec\.cfg$/i
+		colour: "auto-green"
+		priority: 1.5
 
 	PhraseApp:
 		icon: "phraseapp"
@@ -5971,6 +6014,12 @@ fileIcons:
 			[".csh", "medium-yellow"]
 		]
 
+	ShellCheck:
+		icon: "shellcheck"
+		match: /^\.?shellcheckrc$/i
+		colour: "light-maroon"
+		scope: "source.shellcheckrc"
+
 	Shen:
 		icon: "shen"
 		match: ".shen"
@@ -6131,6 +6180,12 @@ fileIcons:
 			[".sparql", "medium-blue", scope: "rq"]
 			[".rq", "dark-blue"]
 		]
+
+	"Sponge-powered Mixin":
+		icon: "mixin"
+		match: /\.mixins?\.json$/i
+		colour: "medium-orange"
+		priority: 1.5
 
 	SquareSpace: # JSON Templates
 		icon: "squarespace"
@@ -7136,6 +7191,12 @@ fileIcons:
 		priority: 2
 		match: /^wercker\.ya?ml$/i
 		colour: "medium-purple"
+
+	"Windi CSS":
+		icon: "windi"
+		match: /^windi\.config\.[tj]s$/i
+		colour: "medium-blue"
+		priority: 2
 
 	Windows:
 		icon: "windows"

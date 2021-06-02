@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [Unpublished]
 ----------------------
 ### Added
+- **New icons:** Art Text 4 (`.art4` directories), Bikeshed (`.bs`), dotenv (`.env{,.*}`), Figma (`.figma`), Imgbot (`.imgbotconfig`), Mint (`.mint`), PhotoRec (`.photorec.cfg`), ShellCheck (`.shellcheckrc`), Sponge-powered Mixin (`.mixin{,s}.json`), Windi CSS (`windi.config.{ts,js}`)
 - **Support:** Appcelerator Titanium (`.tss`), EditorConfig (`.ecrc`), Grammar (`.grammar`), PEG.js (`.peggy`), TextMate (`.tm_properties`, `.tmProperties`), XML (`.xmp`)
 
 
