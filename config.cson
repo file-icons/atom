@@ -1895,6 +1895,7 @@ fileIcons:
 			[".sy", "dark-green"]
 			[".syntax", "medium-blue"]
 			[".webmanifest", "medium-blue"]
+			[".tgn", "medium-blue", uses: "JSON"]
 			[".2da", "medium-cyan", alias: "2-dimensional Array"]
 			[/\.(od|onlydata)$/i, "medium-grey", alias: "OnlyData"]
 			[".dbi", "medium-orange"] # https://wiki.servoy.com/display/DOCS/Updating+a+Local+Database+Using+DBI+Files
