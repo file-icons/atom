@@ -2642,7 +2642,6 @@ fileIcons:
 		match: [
 			[/^\.htaccess$/i, "medium-red"]
 			[/^\.htpasswd$/i, "medium-orange"]
-			[/^\.env\./i, "dark-green"]
 			[/^\.lesshintrc$/i, "dark-yellow"]
 			[/^\.csscomb\.json$/i, "medium-yellow"]
 			[/^text\.enc$/, "dark-green"]
