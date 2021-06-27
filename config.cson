@@ -3925,6 +3925,14 @@ fileIcons:
 			[/^justfile$/i, "medium-cyan", "just"]
 		]
 
+	Mail:
+		icon: "icon-mail"
+		noSuffix: true
+		match: [
+			[".eml", "medium-blue", scope: /^text\.eml\.basic$/]
+			[/\.mbo?x$/i, "medium-red", alias: "Mailbox", mime: "text/x-mail"]
+		]
+
 	Mako:
 		icon: "mako"
 		scope: "mako"
