@@ -2704,6 +2704,7 @@ fileIcons:
 			[".dyl", "medium-blue"]
 			[".dylan", "medium-blue"]
 			[".eclxml", "dark-green"]
+			[".ed", "dark-maroon", scope: /^source\.ed$i/, interpreter: "ed"]
 			[".fcgi", "medium-blue"]
 			[".fidl", "medium-pink", "fidl"]
 			[".filters", "medium-pink"]
