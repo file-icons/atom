@@ -1762,7 +1762,7 @@ fileIcons:
 		icon: "css3"
 		match: [
 			[".css", "medium-blue", "css"]
-			[".less", "dark-blue", "less"]
+			[".less", "dark-blue", alias: /^less(c|-?css)?$/i, interpreter: "lessc", scope: /^source(\.css)?\.less$/]
 			[".tss", "dark-red", "tss"]
 		]
 
