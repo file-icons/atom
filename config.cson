@@ -897,6 +897,15 @@ fileIcons:
 		match: ".bzrignore"
 		colour: "auto-yellow"
 
+	BC: # and dc(1)
+		icon: "calc"
+		match: [
+			[".bc", "medium-red", "bc"]
+			[".dc", "medium-blue", "dc"]
+			[/^bc\.library$/i, "medium-red"]
+			[/^\.?dcrc$/i, "medium-blue"]
+		]
+
 	Behat:
 		icon: "behat"
 		match: /^behat(\.[^.]+)*\.ya?ml$/i
