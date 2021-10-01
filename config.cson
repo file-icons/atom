@@ -592,7 +592,7 @@ fileIcons:
 		icon: "apache"
 		priority: 2
 		match: [
-			[/^(apache2?|httpd)(\.[-\w]+)*.conf$/i, "medium-red"]
+			[/^(apache2?|httpd)(\.[-\w]+)*\.conf$/i, "medium-red"]
 			[".apacheconf", "dark-red", scope: "apache-config", alias: /^(aconf|ApacheConf)$/i]
 			[/^httpd\.conf/i, "medium-red", priority: 0]
 			["apache2/magic", "medium-purple", matchPath: true]
@@ -4444,7 +4444,7 @@ fileIcons:
 	MooTools:
 		icon: "mootools"
 		priority: 2
-		match: /^mootools[^.]*\d+\.\d+(.\d+)?[^.]*\.[cm]?js$/i
+		match: /^mootools[^.]*\d+\.\d+(\.\d+)?[^.]*\.[cm]?js$/i
 		colour: "medium-purple"
 
 	mruby:
@@ -5202,7 +5202,7 @@ fileIcons:
 	PM2:
 		icon: "pm2"
 		priority: 2
-		match: /^ecosystem.conf(ig)?./i
+		match: /^ecosystem\.conf(ig)?\./i
 		colour: "medium-blue"
 
 	PNPM:
@@ -6285,7 +6285,7 @@ fileIcons:
 		uses: "Python"
 		match: [
 			[/^(\.bazelrc|bazel\.rc|bazel\.bazelrc)$/i, "dark-green", interpreter: "bazel"]
-			[/^(BUILD|WORKSPACE)(.[Bb][Aa][Zz][Ee][Ll])?$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
+			[/^(BUILD|WORKSPACE)(\.[Bb][Aa][Zz][Ee][Ll])?$/, "medium-green", scope: /^source\.build$|(^|\.)bazel(\.|$)/i]
 			[/\.(bazel|bzl|star)$/i, "dark-blue", alias: /^(Bazel|Skylark)$/i, scope: /(^|\.)(bzl|skylark)(\.|$)/i]
 			[/^\.gazelcfg\.json$/i, "medium-cyan", alias: "Gazel", priority: 1.25]
 		]
@@ -6318,7 +6318,7 @@ fileIcons:
 
 	Stitches:
 		icon: "stitches"
-		match: /^\.?stitches.config?\.([cm]?js|ts)$/i
+		match: /^\.?stitches\.config?\.([cm]?js|ts)$/i
 		colour: "medium-purple"
 		priority: 2
 
@@ -7180,7 +7180,7 @@ fileIcons:
 	Webpack:
 		icon: "webpack"
 		priority: 2
-		match: /(^|\.)webpack(file)?(?=\.|$).*\.([jt]sx?|[cm]js|json|(lit)?coffee)$/i
+		match: /(^|\.)webpack(file)?.*\.([jt]sx?|[cm]js|json|(lit)?coffee)$/i
 		colour: "medium-blue"
 
 	WebVTT:
