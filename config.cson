@@ -2840,7 +2840,7 @@ fileIcons:
 	Git:
 		icon: "git"
 		match: [
-			[/^\.git|^\.keep$|\.mailmap$/i, "medium-red", scope: /\.git-(commit|config|rebase)$/i]
+			[/^\.git|^\.keep$|\.(lfsconfig|mailmap)$/i, "medium-red", scope: /\.git-(commit|config|rebase)$/i]
 			[/\.git(ignore|config|attributes)$/i, "medium-red", priority: 0.5]
 		]
 
