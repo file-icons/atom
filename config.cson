@@ -1272,7 +1272,7 @@ fileIcons:
 		icon: "checklist"
 		match: [
 			[/TODO/, "medium-yellow", priority: 0]
-			[/^todo.txt$/i, "medium-green", priority: 2, scope: /^text\.(gfm-)?todotxt$/i]
+			[/^todo\.txt$/i, "medium-green", priority: 2, scope: /^text\.(gfm-)?todotxt$/i]
 			[/\.(todo|taskpaper)$/i, "medium-yellow"]
 		]
 
@@ -5491,7 +5491,7 @@ fileIcons:
 		match: [
 			[".qml", "medium-green", "qml"]
 			[".qmlproject", "dark-green"]
-			[".qbs", "medum-cyan"]
+			[".qbs", "medium-cyan"]
 			[/^(toolchain_)?installscript\.qs$/i, "auto-yellow", alias: "Qt Script", priority: 1.5, uses: "JavaScript"]
 		]
 
@@ -6318,7 +6318,7 @@ fileIcons:
 
 	Stitches:
 		icon: "stitches"
-		match: /^\.?stitches\.config?\.([cm]?js|ts)$/i
+		match: /^\.?stitches\.config\.([cm]?js|ts)$/i
 		colour: "medium-purple"
 		priority: 2
 
@@ -6736,7 +6736,7 @@ fileIcons:
 
 	TortoiseSVN:
 		icon: "tortoise"
-		match: /^.tgitconfig$/i
+		match: /^\.tgitconfig$/i
 		colour: "medium-red"
 
 	Travis:
