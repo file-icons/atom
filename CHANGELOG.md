@@ -13,6 +13,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** Appcelerator Titanium (`.tss`), BC (`.bc`, `bc.library`), Checksum lists (`{.,}{check,ck,crc{,32},md5,rmd160,sha{1..3,224,384,512}}sum{,s}`), DC (`.dc`, `.dcrc`), Database (`.tgn`), EditorConfig (`.ecrc`), Generic (`.ed`), Git (`.lfsconfig`), Grammar (`.grammar`), Mail (`.eml`, `.mbox`, `.mbx`), Maps (`.mapping`, `.tiny`, `.tinyv2`, `.enigma`, `.match`, `.unpick`), PEG.js (`.peggy`), TextMate (`.tm_properties`, `.tmProperties`), XML (`.xmp`)
 - Improved modeline support for [Less](https://lesscss.org/) stylesheets
 
+### Fixed
+- Docz icon missing from its initial introduction in [v2.1.33]
+
 
 
 [v2.1.47] - 2021-03-12

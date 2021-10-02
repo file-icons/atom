@@ -4343,7 +4343,6 @@ fileIcons:
 			[".cginc", "dark-cyan"]
 			[".dxf", "medium-orange"]
 			[".dwg", "dark-orange"]
-			[".jas", "medium-yellow"]
 			[".mdl", "medium-red"]
 			[".ply", "dark-red", mime: "text/plain", signature: /^ply|^EPLYBNDS/]
 			[".fnc", "dark-blue", alias: "QuickCAM 3D"]
