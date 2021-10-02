@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Docz icon missing from its initial introduction in [v2.1.33]
+- Unibeautify icon ID misspelt _"unbeautify"_
 
 
 
