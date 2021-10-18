@@ -6889,7 +6889,7 @@ fileIcons:
 		icon: "scales"
 		match: [
 			[".units", "auto-green", scope: /^source\.units(\.(gnu|bsd))?$/i]
-			[/^units\.lib$/i, "auto-green", priority: 1.5]
+			[/^units\.(lib|dat)$|^unittab$/i, "auto-green", priority: 1.5]
 			[/^\.?units[-_]?history$/i, "auto-red", uses: "Text"]
 		]
 
