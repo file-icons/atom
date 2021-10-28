@@ -2936,6 +2936,13 @@ fileIcons:
 			[".import", "medium-red"]
 		]
 
+	"GOLD Parser":
+		icon: "bnf" # TODO: Add dedicated icon
+		match: [
+			[".grm", "auto-yellow", alias: "GOLD Grammar", scope: "goldgrm", url: "http://goldparser.org/"]
+			[/\.[ce]gt$/i, "auto-red", alias: /^(Compiled|Enhanced) Grammar Table$/, uses: "Binary"]
+		]
+
 	Golo:
 		icon: "golo"
 		scope: "golo"
