@@ -251,15 +251,15 @@ fileIcon.onDestroy(() => disposable.dispose());
 ```
 
 
-Backers
+Sponsors
 ------------------------------------------------------------------------------------------
-If you enjoy these icons, help support the project by [becoming a backer][20]. Huge thanks
-to our current backers for their generous support:
+Huge thanks to the following backers who generously sponsored this project in the past:
 
 <a title="Justin Ireland" href="https://github.com/justinireland"><img alt="Justin Ireland" height="32" src="https://images.opencollective.com/proxy/images?src=https%3A%2F%2Fwww.gravatar.com%2Favatar%2Fa23264984bdeee03b97d970cd893a595%3Fdefault%3D404"/></a>
 <a title="Tipe" href="https://tipe.io/"><img alt="Tipe" height="32" src="https://camo.githubusercontent.com/cc8c116a0174ba6f6884fda5415ccd232173d0c7/68747470733a2f2f63646e2e746970652e696f2f746970652f746970652d3130323478313032342e706e67"/></a>
 <a title="Triplebyte" href="https://github.com/triplebyte"><img alt="Triplebyte" height="32" src="https://avatars3.githubusercontent.com/u/12144133"/></a>
 <a title="TakeShape" href="https://github.com/takeshape"><img alt="TakeShape" height="32" src="https://avatars0.githubusercontent.com/u/20775272"/></a>
+<a title="Targeted Web Traffic" href="https://www.targetedwebtraffic.com/"><img alt="Targeted Web Traffic" height="32" src="https://images.opencollective.com/targeted-web-traffic1/7abacc7/logo/256.png"/></a>
 
 
 Acknowledgements
@@ -286,5 +286,4 @@ Both versions owe their success to innumerable [contributions][9] from the Atom 
 [17]: https://atom.io/packages/linter-solidity
 [18]: https://atom.io/packages/language-solidity
 [19]: https://github.com/file-icons/atom/issues/708#issuecomment-366959765
-[20]: https://opencollective.com/file-icons/#support
 [v2.0]: https://github.com/file-icons/atom/releases/tag/v2.0.0
