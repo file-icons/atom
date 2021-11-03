@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----------------------
 ### Added
 - **New icons:** Art Text 4 (`.art4` directories), Bikeshed (`.bs`), dotenv (`.env{,.*}`), Figma (`.figma`), Imgbot (`.imgbotconfig`), Mint (`.mint`), PhotoRec (`.photorec.cfg`), ShellCheck (`.shellcheckrc`), Sponge-powered Mixin (`.mixin{,s}.json`), Windi CSS (`windi.config.{ts,js}`)
-- **Support:** Appcelerator Titanium (`.tss`), BC (`.bc`, `bc.library`), Checksum lists (`{.,}{check,ck,crc{,32},md5,rmd160,sha{1..3,224,384,512}}sum{,s}`), DC (`.dc`, `.dcrc`), Database (`.tgn`), EditorConfig (`.ecrc`), Generic (`.ed`), Git (`.lfsconfig`), Grammar (`.grammar`), Mail (`.eml`, `.mbox`, `.mbx`), Maps (`.mapping`, `.tiny`, `.tinyv2`, `.enigma`, `.match`, `.unpick`), PEG.js (`.peggy`), TextMate (`.tm_properties`, `.tmProperties`), Units (`units.dat`, `unittab`), XML (`.xmp`)
+- **Support:** Appcelerator Titanium (`.tss`), BC (`.bc`, `bc.library`), Checksum lists (`{.,}{check,ck,crc{,32},md5,rmd160,sha{1..3,224,384,512}}sum{,s}`), DC (`.dc`, `.dcrc`), Database (`.tgn`), EditorConfig (`.ecrc`), Generic (`.ed`), Git (`.lfsconfig`), Grammar (`.grammar`), Mail (`.eml`, `.mbox`, `.mbx`), Maps (`.mapping`, `.tiny`, `.tinyv2`, `.enigma`, `.match`, `.unpick`), PEG.js (`.peggy`), Roff (`*.cstr`, `cstr.54`, `indep_tr`), TextMate (`.tm_properties`, `.tmProperties`), Units (`units.dat`, `unittab`), XML (`.xmp`)
 - Improved modeline support for [Less](https://lesscss.org/) stylesheets
 
 ### Fixed
