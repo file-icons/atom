@@ -981,7 +981,7 @@ fileIcons:
 			[".bison", "medium-red", "bison"]
 			[".y", "dark-green"]
 			[".yacc", "medium-green"]
-			[".yy", "medium-cyan"]
+			[/\.(yy|ypp)$/i, "medium-cyan"]
 		]
 
 	Bitbucket:
@@ -2537,6 +2537,12 @@ fileIcons:
 			[/\.fossaignore$/i, "dark-blue"]
 		]
 
+	Fossil:
+		icon: "fossil"
+		match: ".fossil"
+		colour: "auto-cyan"
+		uses: "SQLite"
+
 	Fountain:
 		icon: "fountain"
 		match: ".fountain"
@@ -3972,14 +3978,14 @@ fileIcons:
 					| ('+\t?|\.\t)\\"\s
 					) ///m]
 			[/^(man|mdoc)\.template$/i, "dark-green"]
-			[/\.(chem|dformat|pic)$|^grap(\.tex)?\.defines$/i, "dark-green"
-				alias: /^([gt]?pic|dformat|chem)$/i
+			[/\.(chem|dformat|pic|pikchr)$|^grap(\.tex)?\.defines$/i, "dark-green"
+				alias: /^([gtd]?pic|dformat|chem|pikchr)$/i
 				scope: "source.pic"
-				interpreter: /^((pic|grap)2(plot|graph)|[gt]?pic|picpack|picasso)$/
+				interpreter: /^((pic|grap)2(plot|graph)|[gtd]?pic|picpack|picasso|pikchr)$/
 				signature: /^\.(PS\s[^\0]*?^\.P[EF]|cstart\n[^\0]*?^\.cend|begin dformat\s[^\0]*?^\.end|G1\n[^\0]*?\n\.G2)\n/m]
 			[/\.(rnh|rno|run|runoff)$/i, "dark-maroon", "runoff"]
 			[/(^|\.)((troff|eqn)rc(-end)?)$/i, "dark-green"]
-			[/^tmac\.|^(cstr\.54|indep_tr|mmn|mmt|toc\.entries)$/i, "dark-green", priority: 2]
+			[/^tmac\.|^(cstr\.54|indep_tr|mmn|mmt|toc\.entries|chem\.macros|(eth|lsd|morphine)\.p)$/i, "dark-green", priority: 2]
 			[/(^|\/)samples\/(eqn|mm|[nt]?roff|pic|tbl)\.[a-z]+$/i, "dark-green", matchPath: true, priority: 0.5]
 			[///
 				(\\|/)
