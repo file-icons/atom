@@ -2227,7 +2227,7 @@ fileIcons:
 		icon: "elixir"
 		match: [
 			[".ex", "dark-purple", "elixir"]
-			[/\.(exs|l?eex)$/i, "medium-purple"]
+			[/\.(exs|[hl]?eex)$/i, "medium-purple"]
 			[/^mix\.(exs?|lock)$/i, "light-purple"]
 		]
 
@@ -3194,7 +3194,7 @@ fileIcons:
 			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /^(xhtml|htm)$/i, signature: /^<!DOCTYPE\s+html/i]
 			[".cshtml", "medium-red"]
 			[".gohtml", "dark-blue", "gohtml"]
-			[".html.eex", "medium-purple"]
+			[/\.html\.[hl]?eex$/i, "medium-purple"]
 			[".jsp", "medium-purple", scope: "jsp", alias: /^(jsp|Java\s*Server\s*Pages?)$/i]
 			[".jspf", "dark-purple"]
 			[".kit", "medium-green"]
