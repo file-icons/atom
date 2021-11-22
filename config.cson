@@ -423,6 +423,7 @@ fileIcons:
 		match: [
 			[".psd", "medium-blue", signature: /^8BPS/]
 			[".psb", "dark-purple"]
+			[".atn", "dark-blue"]
 		]
 
 	"Adobe Premiere":
