@@ -404,6 +404,8 @@ fileIcons:
 		match: [
 			[".ai", "medium-orange"]
 			[".ait", "dark-orange"]
+			[".aia", "medium-yellow"]
+			[/^(AIAppResources|Adobe Illustrator( Cloud)? Prefs|Last Used Asset Export Settings|Tools Panel Presets)$/, "medium-orange", priority: 0.5, uses: "PostScript", signature: /^\/(Menus|collection1) \{(\r?\n|\r)/]
 		]
 
 	"Adobe InDesign":
