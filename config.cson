@@ -5861,6 +5861,7 @@ fileIcons:
 		generic: true
 		match: [
 			[".webarchive", "medium-blue", alias: "WebArchive"]
+			[".binarycookies", "dark-blue", signature: /^cook\0/]
 		]
 
 	Sage:
