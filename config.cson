@@ -1166,6 +1166,7 @@ fileIcons:
 			[/\.h[+px]{2}$/i, "auto-purple"]
 			[/\.[it]pp$/i, "auto-orange"]
 			[/\.(tcc|inl)$/i, "auto-red"]
+			[".ixx", "auto-blue"]
 		]
 
 	"C#":
@@ -1656,6 +1657,7 @@ fileIcons:
 			[/^\.coveragerc$/i, "dark-blue"]
 			[/^MANIFEST\.in$/i, "dark-blue"]
 			[".python-version", "dark-blue"]
+			[".flake8", "dark-blue", uses: "INI"]
 		]
 
 	"Config, React":
@@ -1909,6 +1911,7 @@ fileIcons:
 			[".webmanifest", "medium-blue"]
 			[".tgn", "medium-blue", uses: "JSON"]
 			[".2da", "medium-cyan", alias: "2-dimensional Array"]
+			[/^MANIFEST\.MF$/, "medium-maroon", alias: "JAR Manifest", priority: 2]
 			[/\.(od|onlydata)$/i, "medium-grey", alias: "OnlyData"]
 			[".dbi", "medium-orange"] # https://wiki.servoy.com/display/DOCS/Updating+a+Local+Database+Using+DBI+Files
 			[/\.snip(pets?)?$/i, "medium-green", alias: /^(SnipMate|UltiSnip|NeoSnippet)$/i, scope: /\.(vim-snippet|snipmate|ultisnips|neosnippet|snippets?)(\.|$)/i]
@@ -2043,7 +2046,7 @@ fileIcons:
 		icon: "docker"
 		alias: "Dockerfile"
 		match: [
-			[/^(Dockerfile|docker-compose)|\.docker(file|ignore)$/i, "dark-blue", scope: "dockerfile", priority: 2]
+			[/^((Container|Docker)file|docker-compose)|\.docker(file|ignore)$/i, "dark-blue", scope: "dockerfile", priority: 2]
 			[/^docker-sync\.yml$/i, "dark-orange", priority: 2]
 		]
 
@@ -2735,6 +2738,7 @@ fileIcons:
 			[".fxml", "medium-maroon"]
 			[".grace", "medium-purple"]
 			[".grxml", "dark-orange"]
+			[".hzp", "dark-blue"]
 			[".iml", "medium-red"]
 			[".intr", "dark-blue"]
 			[".ivy", "dark-green"]
@@ -3197,6 +3201,7 @@ fileIcons:
 			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /^(xhtml|htm)$/i, signature: /^<!DOCTYPE\s+html/i]
 			[".cshtml", "medium-red"]
 			[".gohtml", "dark-blue", "gohtml"]
+			[".hta", "dark-orange", alias: "HTML App"]
 			[/\.html\.[hl]?eex$/i, "medium-purple"]
 			[".jsp", "medium-purple", scope: "jsp", alias: /^(jsp|Java\s*Server\s*Pages?)$/i]
 			[".jspf", "dark-purple"]
@@ -3934,7 +3939,7 @@ fileIcons:
 		match: [
 			[/^Makefile/, "medium-yellow", scope: "makefile", alias: /^(bsdmake|make|mf)$/i, interpreter: "make"]
 			[/^mk\.config$/, "medium-green", priority: 2]
-			[/\.(mk|mak|make)$/i, "medium-yellow"]
+			[/\.(mk|mak|make)(file)?$/i, "medium-yellow"]
 			[/^contrib\.make?([-.]|$)/i, "dark-red", priority: 0]
 			[/^BSDmakefile$/i, "medium-red"]
 			[/^GNUmakefile$/i, "medium-green"]
@@ -4917,7 +4922,7 @@ fileIcons:
 	"OpenGL Shading Language":
 		icon: "opengl"
 		alias: /^(GLSL|GLslang)$/i
-		match: /\.(glslv?|gsh|gshader)$/i
+		match: /\.(glslv?|gsh|gshader|rchit|rmiss)$/i
 		colour: "dark-cyan"
 		scope: "glsl"
 
@@ -5629,6 +5634,7 @@ fileIcons:
 			[/^README(\b|_)|^((un)?licen[sc]es?(\.mysql)?|(read|readme|click|delete|keep|test)\.me)(\.(md|txt))?$|\.(readme|1st|licen[sc]es?)$/i, "medium-blue", priority: 2]
 			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copy(ing|right)(\.regex)?|faq|fixes|hacking|history|install|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks|warnings)(_\w+)?$/i, "dark-blue", priority: 2]
 			[/\b(changelog|copying(v?\d)?|install|notes?|notices?|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
+			[/^CITATION(S|\.cff)?$/, "medium-blue", priority: 2, uses: "YAML"]
 			[/^(news|release[-_.]?notes)([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
 			[/^zork\d\.(?!pre$|pur$)[a-z]+$/, "dark-blue", priority: 0]
 			[/^zork\d\.doc$/, "medium-blue", priority: 2]
@@ -6033,7 +6039,7 @@ fileIcons:
 				alias: /^(sh|shell|Shell-?Script|Bash)$/i
 				interpreter: /^([bd]ash|a?sh|zsh|rc)$/]
 			[/^(\.?bash(rc|[-_]?(profile|login|logout|history|prompt))|_osc|config|install-sh)$/i, "dark-purple"]
-			[/\.(ksh|mksh|pdksh)$/i, "dark-yellow"
+			[/\.(m?ksh|pdksh)(rc)?$|^m?kshrc$/i, "dark-yellow"
 				scope: "ksh-shell"
 				interpreter: /^(ksh|mksh(-static)?|pdksh|lksh)$/i]
 			[".sh-session", "auto-yellow"
@@ -6815,7 +6821,7 @@ fileIcons:
 		icon: "ts"
 		scope: "ts"
 		alias: /^(ts|Type[-\s]*Script)$/i
-		match: ".ts"
+		match: /\.[cm]?ts$/i
 		colour: "medium-blue"
 		interpreter: /\b(deno|tsc|ts-node)$/
 		tag: "ts"
