@@ -1921,6 +1921,7 @@ fileIcons:
 			[/^pkginfo$/i, "medium-blue"]
 			[/^term(cap|info)/i, "dark-green", priority: 0.5]
 			[/^eign$/, "dark-red", priority: 0.5]
+			[/^fc-list$/, "medium-orange", priority: 0.5, scope: "fc-list"]
 			[/^(birthtoken|flowers)$/, "medium-green", priority: 0.5, scope: /^source\.generic-db$/]
 			[/(\\|\/)share(?:\1misc)?\1(?:ascii|trace\.codes)$/, "medium-red", matchPath: true]
 			[/^(mime\.types|fstab)$/i, "medium-maroon"]
@@ -1975,6 +1976,12 @@ fileIcons:
 		colour: "dark-red"
 		alias: /^d[_\W]?mark$/i
 		noSuffix: true
+
+	Deno:
+		icon: "deno"
+		match: /^deno\.jsonc?$/i
+		colour: "auto-grey"
+		priority: 2
 
 	Dependabot:
 		icon: "dependabot"
