@@ -2943,6 +2943,7 @@ fileIcons:
 		uses: "INI"
 		match: [
 			[".gd", "medium-blue", alias: "GDScript", scope: "gdscript", uses: "Text"]
+			[".gdshader", "dark-cyan", uses: "GLSL"]
 			[".godot", "dark-blue"]
 			[".tres", "medium-cyan"]
 			[".tscn", "medium-green"]
