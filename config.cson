@@ -3657,11 +3657,16 @@ fileIcons:
 	KiCad:
 		icon: "kicad"
 		match: [
-			[".kicad_pcb", "dark-blue", scope: /^source\.pcb\.board$|\.kicad(?=$|\.)/]
+			[".kicad_pcb", "dark-blue", scope: /^source\.pcb\.board$|\.kicad(?=$|\.)/, signature: /^\s*EESchema(\s+Schematic|-(DOCLIB|LIBRARY))\s/]
+			[".kicad_sch", "dark-green", scope: /^source\.pcb\.schematic$/i]
 			[".kicad_pcb-bak", "dark-red"]
 			[".kicad_mod", "medium-green"]
 			[".kicad_wks", "medium-cyan"]
-			[/^fp-lib-table$/i, "dark-blue"]
+			[".kicad_dru", "medium-red"]
+			[".kicad_sym", "dark-green"]
+			[/^fp-(info-cache|lib-table)$/i, "medium-maroon"]
+			[/^sym-lib-table$/i, "dark-green"]
+			[/\.kicad_pr[lo]$/i, "medium-orange", uses: "JSON"]
 		]
 
 	KitchenCI:
