@@ -779,6 +779,7 @@ fileIcons:
 		match: [
 			[/\.atomproject\.[jc]son$/i, "dark-green", priority: 2]
 			[/^\.?apmrc$/i, "medium-green"]
+			[".atomignore", "medium-green", uses: "Ignore List"]
 		]
 
 	Atoum:
@@ -2861,7 +2862,7 @@ fileIcons:
 		icon: "git"
 		match: [
 			[/^\.git|^\.keep$|\.(lfsconfig|mailmap)$/i, "medium-red", scope: /\.git-(commit|config|rebase)$/i]
-			[/\.git(ignore|config|attributes)$/i, "medium-red", priority: 0.5]
+			[/\.git(ignore|config|attributes)$|^gitignore[-_]global$/i, "medium-red", priority: 0.5]
 		]
 
 	"Git - Commit":
