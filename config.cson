@@ -1601,7 +1601,7 @@ fileIcons:
 				(\.(in|proto|8400))?$
 			///i, "dark-green", matchPath: true, priority: 1.5, scope: /^source\.ditroff\.desc$/]
 			[/[\/\\]fontforge[\/\\]hotkeys[\/\\][^\/\\]+/i, "dark-blue", matchPath: true, priority: 0.75, scope: /fontforge.hotkeys/i]
-			[/\.git[\/\\](config|info[\/\\][-\w]+)$/, "dark-red", matchPath: true]
+			[/\.git[\/\\](config(\.worktree)?|(info|refs([\/\\]heads)?)[\/\\][-.,\w]+)$/, "dark-red", matchPath: true]
 			[/(^|[\/\\])\.fossil-settings\1(?:[^/\/]+)/, "dark-cyan", matchPath: true]
 			[/(^|[\/\\])\.ssh[\/\\]config$/, "dark-blue", matchPath: true, priority: 1.5]
 			[/^\/(private\/)?etc\/([^/]+\/)*[^/]*\.(cf|conf|ini)(\.default)?$/i, "dark-orange", matchPath: true]
@@ -1939,7 +1939,7 @@ fileIcons:
 			[/^index\.(bt|db|dir|pag)$/i, "medium-red", priority: 1.5]
 			[/^whatis$/i, "medium-maroon"]
 			[/^(language-subtag-registry(\.txt)?|nametable)$/, "dark-blue", priority: 1.5, scope: "record-jar"]
-			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
+			[/\.git[\/\\](.*[\/\\])?((ORIG_|FETCH_)?HEAD|(http-)?alternates|packed-refs|packs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
 				priority: 2,
 				matchPath: true]
 		]
@@ -6487,6 +6487,7 @@ fileIcons:
 			[".tld", "medium-maroon", uses: "XML"]
 			[/(\.|^)sha(256|sum)?$/i, "medium-green"]
 			[/(\.|^)(check|ck|crc(32)?|md5|rmd160|sha(224|256|384|512|1|2|3)?)?(sums?|(?<=\w))$/i, "medium-green", scope: "text.checksums"]
+			[/\.git[\/\\]refs[\/\\]tags[\/\\][^\/\\]+$/i, "medium-red", priority: 2, matchPath: true]
 		]
 
 	Tailwind:
