@@ -262,7 +262,7 @@ directoryIcons:
 
 	"macOS Library":
 		icon: "dylib"
-		match: /.\.(appex|bundle|ccl|component|framework|framework|ideplugin|kext|mdimporter|osax|(osirix)?plugin|qlgenerator)$/i
+		match: /.\.(appex|bundle|ccl|component|framework|ideplugin|kext|mdimporter|osax|(osirix)?plugin|qlgenerator)$/i
 
 	Meteor:
 		icon: "meteor"
@@ -2007,7 +2007,7 @@ fileIcons:
 		icon: "dhall"
 		match: ".dhall"
 		colour: "dark-grey"
-		scope: ".dhall"
+		scope: "dhall"
 
 	Dia:
 		icon: "dia"
@@ -2216,7 +2216,7 @@ fileIcons:
 		icon: "edge"
 		match: ".edge"
 		colour: "dark-orange"
-		scope: /\.html.edge$/
+		scope: /\.html\.edge$/
 
 	Eiffel:
 		icon: "eiffel"
@@ -2409,7 +2409,7 @@ fileIcons:
 		icon: "fexl"
 		match: ".fxl"
 		colour: "medium-cyan"
-		scope: /(^|\.)fe?xl(.|$)/i
+		scope: /(^|\.)fe?xl(\.|$)/i
 		interpreter: "fexl"
 
 	Figma:
@@ -2733,7 +2733,7 @@ fileIcons:
 			[".dyl", "medium-blue"]
 			[".dylan", "medium-blue"]
 			[".eclxml", "dark-green"]
-			[".ed", "dark-maroon", scope: /^source\.ed$i/, interpreter: "ed"]
+			[".ed", "dark-maroon", scope: /^source\.ed$/i, interpreter: "ed"]
 			[".fcgi", "medium-blue"]
 			[".fidl", "medium-pink", "fidl"]
 			[".filters", "medium-pink"]
@@ -5057,7 +5057,7 @@ fileIcons:
 		icon: "pan"
 		match: ".pan"
 		colour: "medium-red"
-		scope: /^source.pan$/
+		scope: /^source\.pan$/
 
 	Papyrus:
 		icon: "papyrus"
