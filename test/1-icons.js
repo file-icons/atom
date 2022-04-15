@@ -62,14 +62,6 @@ describe("Icon database", () => {
 		});
 		
 		
-		it("honours the noFuzz property", () => {
-			const icons = IconCompiler.compileList({
-				abcXYZ: {match: ".a", noFuzz: true, scope: "xyz"},
-			});
-			expect("abc-xyz").to.not.match(icons[0].match);
-		});
-		
-		
 		it("honours the noSuffix property", () => {
 			const icons = IconCompiler.compileList({
 				a: {icon: "alpha", match: ".a"},
@@ -217,8 +209,8 @@ describe("Icon database", () => {
 					colour: "medium-blue",
 				},
 			});
-			expect(icons[0].lang).to.eql(/^Ascii[\W_ \t]?D[0o]c$/i);
-			expect(icons[1].lang).to.eql(/^Java[\W_ \t]?Script$|^Ecmascript$/i);
+			expect(icons[0].lang).to.eql(/^Ascii[-_ ]?Doc$/i);
+			expect(icons[1].lang).to.eql(/^Java[-_ ]?Script$|^ECMAScript$/i);
 		});
 		
 		

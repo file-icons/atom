@@ -375,7 +375,7 @@ fileIcons:
 		icon: "as"
 		match: [
 			[".swf", "medium-blue"]
-			[".as", "medium-red", scope: /\.(flex-config|actionscript(\.\d+)?)$/i, alias: /^(ActionScript\s*3|as3)$/i]
+			[".as", "medium-red", scope: /\.(flex-config|actionscript(\.[1-3])?|as3)$/i, alias: /^(Action[-_ ]?Script[-_ ]?[1-3]|as3)$/i]
 			[".jsfl", "auto-yellow"]
 			[".swc", "dark-red"]
 		]
@@ -709,8 +709,9 @@ fileIcons:
 		match: ".agc"
 		colour: "dark-blue"
 		scope: "source.agc"
-		alias: /^(Virtual\s*)?AGC$|^Apollo([-_\s]*11)?\s*Guidance\s*Computer$/i
+		alias: ["Virtual AGC", "AGC", "Apollo 11", "Apollo 11", "Apollo 11 Guidance Computer"]
 		uses: "Assembly"
+		generic: yes
 
 	"Assembly, ARM":
 		icon: "asm-arm"
@@ -718,6 +719,7 @@ fileIcons:
 		colour: "medium-blue"
 		scope: "arm"
 		uses: "Assembly"
+		generic: yes
 
 	"Assembly, AVR":
 		icon: "asm-avr"
@@ -725,6 +727,7 @@ fileIcons:
 		colour: "dark-purple"
 		scope: /(^|\.)avr(dis)?asm(\.|$)/i
 		uses: "Assembly"
+		generic: yes
 
 	"Assembly, Hitachi":
 		icon: "asm-hitachi"
@@ -732,6 +735,7 @@ fileIcons:
 		colour: "medium-grey"
 		alias: /^(h8(SX?|\/?\d{3})?)$/i
 		uses: "Assembly"
+		generic: yes
 
 	"Assembly, Intel":
 		icon: "asm-intel"
@@ -740,10 +744,12 @@ fileIcons:
 		scope: /(^|\.)((x|i(a[-_]?))(32|86|64)(asm)?|i386|80386)(\.|$)/i
 		alias: /^(x86|x64|x86[-_]?64|i(a[-_]?)?(32|64)|i386|80386|Intel|Itanium|[ftm]asm)$/i
 		uses: "Assembly"
+		generic: yes
 
 	"Assembly, Motorola":
 		icon: "asm-m68k"
 		uses: "Assembly"
+		generic: yes
 		match: [
 			[".m68k", "dark-red", alias: /^(asm68(k|\d{2,3})?|m68k)$/i, scope: /(^|\.)(m68k|dasm)(\.|$)/i]
 			[".lst", "medium-blue", alias: "lst-cpu12", scope: /(^|\.)(lst-)?cpu[-_\s]?12(\.|$)/i]
@@ -753,12 +759,14 @@ fileIcons:
 		icon: "asm-vax"
 		match: /\.v(ax|masm)$/i
 		colour: "medium-maroon"
-		alias: /^(Macro[-_\s]?32|VAX\s+Macro|vmasm)$/i
+		alias: ["Macro 32", "VAX Macro", "vmasm"]
 		uses: "Assembly"
+		generic: yes
 
 	"Assembly, Zilog":
 		icon: "asm-zilog"
 		uses: "Assembly"
+		generic: yes
 		match: [
 			[".z80", "medium-yellow", scope: "z80"]
 			[/\.PLX(COPY)?$/, "medium-blue",
@@ -1141,7 +1149,7 @@ fileIcons:
 	BYOND: # Dream Maker Script
 		icon: "byond"
 		scope: "dm"
-		alias: /^(DM|Dream\s*Maker(\s*Script)?)$/i
+		alias: ["DM", "Dream Maker", "Dream Maker Script"]
 		match: ".dm"
 		colour: "medium-blue"
 
@@ -1173,7 +1181,7 @@ fileIcons:
 	"C#":
 		icon: "csharp"
 		scope: "cs"
-		alias: /^c\s*sharp$/i
+		alias: ["C♯", "C Sharp"]
 		match: ".cs"
 		colour: "auto-blue"
 
@@ -1460,7 +1468,7 @@ fileIcons:
 	CoffeeScript:
 		icon: "coffee"
 		match: [
-			[".coffee", "medium-maroon", scope: "coffee", alias: /^Coffee(-Script)?$/i, interpreter: "coffee", tag: "coffee"]
+			[".coffee", "medium-maroon", scope: "coffee", alias: /^Coffee([-_ ]Script)?$/i, interpreter: "coffee", tag: "coffee"]
 			[".cjsx", "dark-maroon"]
 			[".coffee.ecr", "medium-cyan", priority: 2]
 			[".coffee.erb", "medium-red",  priority: 2]
@@ -1472,8 +1480,8 @@ fileIcons:
 	ColdFusion:
 		icon: "cf"
 		match: [
-			[".cfc", "light-cyan", scope: "cfscript", alias: /^(CFC|CFScript)$/i]
-			[/\.cfml?$/i, "medium-cyan", scope: /\.cfml?$/i, alias: /^(cfml?|ColdFusion\s*HTML)$/i]
+			[".cfc", "light-cyan", scope: "cfscript", alias: ["CFC", "CFScript"]]
+			[/\.cfml?$/i, "medium-cyan", scope: /\.cfml?$/i, alias: ["cfml", "ColdFusion HTML"]]
 		]
 
 	COLLADA:
@@ -1975,7 +1983,7 @@ fileIcons:
 		icon: "icon-star"
 		match: ".dmark"
 		colour: "dark-red"
-		alias: /^d[_\W]?mark$/i
+		alias: /^D[-_ *★]?Mark$/i
 		noSuffix: true
 
 	Deno:
@@ -2714,7 +2722,7 @@ fileIcons:
 			[".befunge", "medium-orange"]
 			[".bmx", "dark-blue"]
 			[".brs", "dark-blue", "brightscript"]
-			[".capnp", "dark-red", scope: "capnp", alias: /^(Cap[^\w\s]?n\s*Proto|capnp)$/i]
+			[".capnp", "dark-red", scope: "capnp", alias: /^(Cap['‘’]?n[-_ ]?Proto|capnp)$/i]
 			[".ccxml", "dark-blue"]
 			[".cscfg", "medium-red"]
 			[".cgi", "medium-red"]
@@ -3601,7 +3609,7 @@ fileIcons:
 	Junos:
 		icon: "junos"
 		match: [
-			[".jos", "medium-cyan", scope: "junos", alias: /^(Juniper\W*)Jun\s*os(\W*Config)?$/i]
+			[".jos", "medium-cyan", scope: "junos", alias: /^Juniper[-_ ]?Jun\s*os([-_ ]?Config)?$/i]
 			[".slax", "medium-blue", "slax"]
 		]
 
@@ -3717,7 +3725,7 @@ fileIcons:
 
 	Kusto:
 		icon: "kusto"
-		alias: /Kusto (Query.?Language|Explorer)|^KQL$/i
+		alias: /Kusto (Query[-_ ]?Language|Explorer)|^KQL$/i
 		match: /\.(csl|kusto)$/i
 		colour: "medium-blue"
 		scope: "source.kusto"
@@ -5185,7 +5193,7 @@ fileIcons:
 		icon: "pico8"
 		match: ".p8"
 		colour: "medium-red"
-		alias: /^pico\W8$/i
+		alias: /^pico[-_ ]?8$/i
 		interpreter: "pico-8"
 		signature: /^pico-8 cartridge \/\/ http:\/\/www\.pico-8\.com$/
 		scope: "p8"
@@ -6386,7 +6394,7 @@ fileIcons:
 		colour: "medium-green"
 		priority: 2
 
-	StyledComponent:
+	"Styled Component":
 		icon: "nailpolish"
 		priority: 2
 		match: [
@@ -6572,7 +6580,7 @@ fileIcons:
 		icon: "test-generic"
 		match: [
 			[/([\\/])t\1t?\d+(?:(?!\1).)+\.sh$|[._-](spec|test)s?\.sh$/i, "medium-green", matchPath: true, priority: 1.5, tag: "genericTest"]
-			[".bats", "auto-grey", interpreter: "bats", alias: "Bats", url: "https://github.com/bats-core/bats-core", uses: "Shell", scope: "bats"]
+			[".bats", "auto-grey", interpreter: "bats", alias: "Bats", url: "https://github.com/bats-core/bats-core", uses: "Shell", scope: "bats", generic: yes]
 			[".test", "medium-green", priority: 0.25]
 			[".xspec", "dark-green"]
 		]

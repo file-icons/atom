@@ -4,18 +4,6 @@ const utils = require("../lib/utils.js");
 
 describe("Utility functions", () => {
 	describe("Regular expressions", () => {
-		describe("fuzzyRegExp()", () => {
-			const fuzz = utils.fuzzyRegExp;
-			it("returns case-insensitive patterns",          () => void expect("abc")    .to.match(fuzz("aBc")));
-			it('fuzzes the letter "O" to match zeroes',      () => void expect("f0o")    .to.match(fuzz("foo")));
-			it("fuzzes word boundaries to match hyphens",    () => void expect("abc-xyz").to.match(fuzz("abc xyz")));
-			it("fuzzes word boundaries to match whitespace", () => void expect("abc xyz").to.match(fuzz("abc-xyz")));
-			it("treats camelCase/PascalCase as boundaries",  () => void expect("abc xyz").to.match(fuzz("abcXyz")));
-			it("treats stylised caps as word boundaries",    () => void expect("d-base") .to.match(fuzz("dBASE")));
-			it("makes boundary separators optional",         () => void expect("abcxyz") .to.match(fuzz("ABC-XYZ")));
-			it("makes punctuation optional",                 () => void expect("abc")    .to.match(fuzz("A.B.C.")));
-		});
-
 		describe("forceNonCapturing()", () => {
 			const force = utils.forceNonCapturing;
 			it("converts capturing groups into non-capturing", () => expect(force(/AA(BB)AA/)).to.eql(/AA(?:BB)AA/));
