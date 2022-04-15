@@ -957,7 +957,7 @@ fileIcons:
 	Binary:
 		icon: "binary"
 		match: [
-			[/\.([ls]?o|out)$/i, "medium-red", tag: "binary"]
+			[/\.([ls]?o|out)$/i, "medium-red", tag: "binary", scope: /^(code-text-)?binary$/i]
 			[".axf", "dark-blue"]
 			[".elf", "medium-green"]
 			[".la", "dark-red"]
@@ -1585,7 +1585,7 @@ fileIcons:
 		generic: true
 		match: [
 			[/\.(ini|desktop|directory|cfg|co?nf|prefs)$/i, "medium-yellow", scope: "ini", alias: "dosini"]
-			[".properties", "medium-purple", scope: "java-properties"]
+			[".properties", "medium-purple", scope: /(^|\.)(Java[-_ ]?)?Properties($|\.)/i]
 			[".ld", "dark-red"]
 			[".ldif", "dark-green"]
 			[".lds", "medium-red"]
@@ -1799,7 +1799,7 @@ fileIcons:
 	CUDA:
 		icon: "nvidia"
 		match: [
-			[".cu", "medium-green", scope: /\.cuda(-c\+\+)?$/i]
+			[".cu", "medium-green", scope: /\.CUDA([-_ ]?C(\+\+|pp))?$/i]
 			[".cuh", "dark-green"]
 		]
 
@@ -2060,7 +2060,7 @@ fileIcons:
 
 	Docker:
 		icon: "docker"
-		alias: "Dockerfile"
+		alias: /^((Docker|Container)file|DockerCompose)$/i
 		match: [
 			[/^((Container|Docker)file|docker-compose)|\.docker(file|ignore)$/i, "dark-blue", scope: "dockerfile", priority: 2]
 			[/^docker-sync\.yml$/i, "dark-orange", priority: 2]
@@ -2870,7 +2870,8 @@ fileIcons:
 		icon: "git"
 		match: [
 			[/^\.git|^\.keep$|\.(lfsconfig|mailmap)$/i, "medium-red", scope: /\.git-(commit|config|rebase)$/i]
-			[/\.git(ignore|config|attributes)$|^gitignore[-_]global$/i, "medium-red", priority: 0.5]
+			[/(^|\.)gitignore([-_]global)?$/i, "medium-red", scope: /(^|\.)((git[-_ ]?)?ignore)($|\.)/i, alias: "Ignore List"]
+			[/\.git(config|attributes)$/i, "medium-red", priority: 0.5]
 		]
 
 	"Git - Commit":
@@ -3215,8 +3216,8 @@ fileIcons:
 	HTML:
 		icon: "html5"
 		match: [
-			[/\.x?html?$/i, "medium-orange", scope: "html.basic", alias: /^(xhtml|htm)$/i, signature: /^<!DOCTYPE\s+html/i]
-			[".cshtml", "medium-red"]
+			[/\.x?html?$/i, "medium-orange", scope: /\.html\.basic$|^HTML$/i, alias: /^(xhtml|htm)$/i, signature: /^<!DOCTYPE\s+html/i]
+			[".cshtml", "medium-red", "razor"]
 			[".gohtml", "dark-blue", "gohtml"]
 			[".hta", "dark-orange", alias: "HTML App"]
 			[/\.html\.[hl]?eex$/i, "medium-purple"]
@@ -3595,7 +3596,7 @@ fileIcons:
 
 	JSX:
 		icon: "jsx"
-		scope: "jsx"
+		scope: /(^|\.)(JSX|JavaScript[-_ ]?React)($|\.)/i
 		match: ".jsx"
 		colour: "auto-blue"
 
@@ -4053,10 +4054,10 @@ fileIcons:
 
 	Markdown:
 		icon: "markdown"
-		scope: /(^|\.)[gp]fm|j?md|markdown(\.|$)/i
-		match: /\.(md(te?xt)?|mdown|markdown|mkd|mkdown|mdwn|mkdn|ron|pmd|jmd)$/i
-		alias: /^(CommonMark|GFM|Pandoc)$|\bMarkdown\b/i
-		colour: "medium-blue"
+		match: [
+			[/\.(md(te?xt)?|mdown|markdown|mkd|mkdown|mdwn|mkdn|ron|pmd)$/i, "medium-blue", scope: /(^|\.)[gp]fm|md|markdown(\.|$)/i, alias: /^(CommonMark|GFM|Pandoc)$|\bMarkdown\b/i]
+			[".jmd", "medium-purple", scope: /(^|\.)julia([-_ ]?(markdown|md))($|\.)/i]
+		]
 
 	MarkdownLint:
 		icon: "markdownlint"
@@ -4383,7 +4384,6 @@ fileIcons:
 			[".comp", "medium-purple"]
 			[".tesc", "medium-green"]
 			[".tese", "medium-green"]
-			[".cginc", "dark-cyan"]
 			[".dxf", "medium-orange"]
 			[".dwg", "dark-orange"]
 			[".mdl", "medium-red"]
@@ -4394,6 +4394,12 @@ fileIcons:
 			[/\.(rviz|vcg)$/i, "dark-blue", "rviz"]
 			[/\.(ste?p|p21)$/i, "medium-orange", alias: "STEP Physical File", scope: "step-file", signature: /^ISO-10303-21/]
 			[".x", "medium-green", alias: "DirectX 3D File", scope: /(^|\.)direct-?x($|\.)/i, priority: 0.5, signature: /^xof 0303(?:txt|bin|tzip|bzip)\b/]
+
+			# HLSL extensions
+			[".hlsl", "medium-blue", "hlsl"]
+			[".cginc", "dark-cyan"]
+			[".fxh", "dark-cyan"]
+			[".hlsli", "dark-green"]
 		]
 
 	Modelica:
@@ -4849,7 +4855,8 @@ fileIcons:
 	"Objective-C":
 		icon: "objc"
 		match: [
-			[/\.mm?$/i, "medium-blue", scope: /\.objc(pp)?$/i, alias: /^(Obj-?C|ObjectiveC)(\+\+)?$/i]
+			[".m", "medium-blue", scope: "objc", alias: /^Obj(ective)?[-_ ]?C$/i]
+			[".mm", "dark-blue", scope: "objcpp", alias: /^Obj(ective)?[-_ ]?C(\+\+|pp)$/i]
 			[".pch", "dark-red"]
 			[".x", "dark-green"]
 		]
@@ -6801,7 +6808,7 @@ fileIcons:
 
 	TSX: # React/Typescript
 		icon: "tsx"
-		scope: "tsx"
+		scope: /(^|\.)(TSX|TypeScript[-_ ]?React)($|\.)/i
 		match: ".tsx"
 		colour: "light-blue"
 
@@ -7100,7 +7107,7 @@ fileIcons:
 	"Visual Studio":
 		icon: "vs"
 		match: [
-			[/\.(vba?|fr[mx]|bas)$/i, "medium-blue", scope: "vbnet", alias: /^vb\.?net$/i]
+			[/\.(vba?|fr[mx]|bas)$/i, "medium-blue", scope: /(^|\.)vb(net)?($|\.)/i, alias: /^(VB\.?NET|Visual[-_ ]?Basic([-_ ]?\.NET)?)$/i]
 			[".vbhtml", "medium-red"]
 			[".vbs", "medium-green"]
 			[".vsix", "medium-cyan"]
@@ -7149,7 +7156,7 @@ fileIcons:
 
 	Vue:
 		icon: "vue"
-		scope: "vue"
+		scope: /^(Vue([-_ ]?HTML)?|text\.html\.vue)$/i
 		match: [
 			[".vue", "light-green"]
 			[/^vue\.config\.[cm]?js$/i, "light-green", priority: 2]

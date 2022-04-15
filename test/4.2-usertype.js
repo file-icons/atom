@@ -37,10 +37,10 @@ describe("User-defined filetypes", () => {
 	when("a file matches a user-defined filetype", () => {
 		it("displays the icon of the language the type is mapped to", () => {
 			TreeView.entries["test.m"]  .should.have.classes(treeIcon + "objc-icon medium-blue");
-			TreeView.entries["test.mm"] .should.have.classes(treeIcon + "objc-icon medium-blue");
+			TreeView.entries["test.mm"] .should.have.classes(treeIcon + "objc-icon dark-blue");
 			TreeView.entries["test.t"]  .should.have.classes(treeIcon + "test-perl-icon medium-blue");
 			Tabs.list["test.m"]         .should.have.classes(tabIcon  + "objc-icon medium-blue");
-			Tabs.list["test.mm"]        .should.have.classes(tabIcon  + "objc-icon medium-blue");
+			Tabs.list["test.mm"]        .should.have.classes(tabIcon  + "objc-icon dark-blue");
 			Tabs.list["test.t"]         .should.have.classes(tabIcon  + "test-perl-icon medium-blue");
 			atom.config.set("core.customFileTypes", {
 				"source.matlab": ["m"],
@@ -54,10 +54,10 @@ describe("User-defined filetypes", () => {
 			Tabs.list["test.mm"]        .should.have.classes(tabIcon  + "manpage-icon dark-green");
 			Tabs.list["test.t"]         .should.have.classes(tabIcon  + "turing-icon medium-red");
 			TreeView.entries["test.m"]  .should.not.have.classes("objc-icon medium-blue");
-			TreeView.entries["test.mm"] .should.not.have.classes("objc-icon medium-blue");
+			TreeView.entries["test.mm"] .should.not.have.classes("objc-icon dark-blue");
 			TreeView.entries["test.t"]  .should.not.have.classes("perl-icon medium-blue");
 			Tabs.list["test.m"]         .should.not.have.classes("objc-icon medium-blue");
-			Tabs.list["test.mm"]        .should.not.have.classes("objc-icon medium-blue");
+			Tabs.list["test.mm"]        .should.not.have.classes("objc-icon dark-blue");
 			Tabs.list["test.t"]         .should.not.have.classes("perl-icon medium-blue");
 		});
 		
@@ -177,12 +177,12 @@ describe("User-defined filetypes", () => {
 			atom.config.set("core.customFileTypes", {});
 			assertIconClasses(TreeView.entries, [
 				["test.m",          treeIcon + "objc-icon medium-blue"],
-				["test.mm",         treeIcon + "objc-icon medium-blue"],
+				["test.mm",         treeIcon + "objc-icon dark-blue"],
 				["test.t",          treeIcon + "test-perl-icon medium-blue"],
 				["test.stTheme",    treeIcon + "sublime-icon medium-orange"],
 				["test.tmMacro",    treeIcon + "textmate-icon medium-maroon"],
 				["symlinks/test-1", treeIcon + "icon-file-symlink-file medium-blue"],
-				["symlinks/test-2", treeIcon + "icon-file-symlink-file medium-blue"],
+				["symlinks/test-2", treeIcon + "icon-file-symlink-file dark-blue"],
 				["symlinks/test-3", treeIcon + "icon-file-symlink-file medium-orange"],
 				["symlinks/test-4", treeIcon + "icon-file-symlink-file medium-blue"],
 				["symlinks/test-5", treeIcon + "icon-file-symlink-file medium-maroon"],
@@ -214,13 +214,13 @@ describe("User-defined filetypes", () => {
 		it("restores affected icons", () => {
 			Options.set("usertypes", false);
 			TreeView.entries["test.m"]       .should.have.classes(treeIcon + "objc-icon medium-blue");
-			TreeView.entries["test.mm"]      .should.have.classes(treeIcon + "objc-icon medium-blue");
+			TreeView.entries["test.mm"]      .should.have.classes(treeIcon + "objc-icon dark-blue");
 			TreeView.entries["test.t"]       .should.have.classes(treeIcon + "test-perl-icon medium-blue");
 			TreeView.entries["test.m"]       .should.not.have.classes("matlab-icon medium-yellow");
 			TreeView.entries["test.mm"]      .should.not.have.classes("manpage-icon dark-green");
 			TreeView.entries["test.t"]       .should.not.have.classes("turing-icon medium-red");
 			Tabs.list["test.m"]              .should.have.classes(tabIcon + "objc-icon medium-blue");
-			Tabs.list["test.mm"]             .should.have.classes(tabIcon + "objc-icon medium-blue");
+			Tabs.list["test.mm"]             .should.have.classes(tabIcon + "objc-icon dark-blue");
 			Tabs.list["test.t"]              .should.have.classes(tabIcon + "test-perl-icon medium-blue");
 			Tabs.list["test.m"]              .should.not.have.classes("matlab-icon medium-yellow");
 			Tabs.list["test.mm"]             .should.not.have.classes("manpage-icon dark-green");
@@ -269,7 +269,7 @@ describe("User-defined filetypes", () => {
 				assertIconClasses(TreeView.entries, classes, {negate: true});
 				assertIconClasses(TreeView.entries, [
 					["test.m",       treeIcon + "objc-icon      medium-blue"],
-					["test.mm",      treeIcon + "objc-icon      medium-blue"],
+					["test.mm",      treeIcon + "objc-icon      dark-blue"],
 					["test.t",       treeIcon + "test-perl-icon medium-blue"],
 					["test.stTheme", treeIcon + "sublime-icon   medium-orange"],
 					["test.tmMacro", treeIcon + "textmate-icon  medium-maroon"],
