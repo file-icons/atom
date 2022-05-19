@@ -827,6 +827,7 @@ fileIcons:
 			[".opus", "dark-maroon", signature: /OpusHead/]
 			[/\.r[am]$/i, "dark-blue", signature: /^\.RMF/]
 			[".s3m", "medium-green", mime: "audio/x-s3m", signature: /^.{44}SCRM/]
+			[".spc", "medium-red", signature: /^SNES-SPC700 Sound File Data v/]
 			[".sndh", "medium-yellow"]
 			[".wma", "medium-blue"] # Shares .asf sig
 		]
