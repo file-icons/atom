@@ -399,6 +399,13 @@ fileIcons:
 		match: ".fla"
 		colour: ["dark-orange", "medium-red"]
 
+	"Adobe Creative Cloud":
+		icon: "adobe-cc"
+		match: ".cclibs"
+		colour: "medium-red"
+		uses: "ZIP"
+		mime: "application/vnd.adobe.library"
+
 	"Adobe Illustrator":
 		icon: "ai"
 		match: [
@@ -1596,6 +1603,7 @@ fileIcons:
 			[/\.sdl(ang)?$/i, "medium-blue", scope: /^source\.sdl$/]
 			[/^mimeapps\.list$/i, "medium-blue"]
 			[/(\.|^)terminal(rc)?$/i, "dark-blue"]
+			[/(\.|^)rhashrc$/i, "dark-blue", alias: "RHash config", uses: "INI"]
 			[/^ld\.script$/i, "medium-orange"]
 			[/^(shells|rpc)$/i, "medium-green", priority: 0.5]
 			[/^\.?XCompose$/, "medium-cyan", "xcompose"]
@@ -5495,7 +5503,7 @@ fileIcons:
 			[".smk", "medium-green"]
 			[".rpy", "medium-pink", scope: "renpy", alias: /^Ren'?Py$/i]
 			[/^py\.typed$/i, "medium-grey"]
-			[/\.?(pypirc|pythonrc|python-venv)$/i, "dark-blue"]
+			[/\.?(pypirc|pythonrc|python(_history|-venv))$/i, "dark-blue"]
 			[/^(SConstruct|SConscript)$/, "dark-green"]
 			[/^(Snakefile|WATCHLISTS)$/, "medium-green"]
 			[/^wscript$/, "dark-maroon"]
@@ -6303,6 +6311,7 @@ fileIcons:
 		match: [
 			[".sqlite", "medium-blue"]
 			[".sqlite3", "dark-blue", signature: /^SQLite format 3/]
+			[".sqlite_history", "dark-cyan", uses: "SQL"]
 			[".db", "medium-purple"]
 			[".db3", "dark-purple"]
 		]
@@ -6499,6 +6508,7 @@ fileIcons:
 			[/\.hgtags$|^localtags$/i, "medium-cyan"]
 			[/^\.?VERSION$/i, "medium-yellow"]
 			[/^\.atom-socket-.+\.\d$/, "medium-green", priority: 2]
+			[".sfv", "medium-green", scope: "source.sfv", mime: "text/x-sfv"]
 			[".pid", "medium-orange"]
 			[".tld", "medium-maroon", uses: "XML"]
 			[/(\.|^)sha(256|sum)?$/i, "medium-green"]
