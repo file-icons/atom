@@ -2954,7 +2954,7 @@ fileIcons:
 		icon: "gnuplot"
 		scope: "gnuplot"
 		interpreter: "gnuplot"
-		match: /\.(gp|plo?t|gnuplot)$/i
+		match: /\.(gp|plo?t|gnuplot)$|(^|\.)gnuplot(rc|_history)$/i
 		colour: "medium-red"
 
 	Go:
