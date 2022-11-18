@@ -1599,6 +1599,7 @@ fileIcons:
 			[".lds", "medium-red"]
 			[".mcf", "medium-blue"]
 			[".opts", "medium-green"]
+			[/^man([-_]?db|path)?\.conf(ig)?$|^\.?manpath$/i, "dark-green", scope: "man-conf", alias: "manpath", priority: 1.5]
 			[/^pf\.os$/i, "medium-yellow", priority: 1.5]
 			[/\.sdl(ang)?$/i, "medium-blue", scope: /^source\.sdl$/]
 			[/^mimeapps\.list$/i, "medium-blue"]
