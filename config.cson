@@ -1955,6 +1955,7 @@ fileIcons:
 			[/\.ssh[\/\\](authorized_keys|known_hosts)$/, "medium-green", matchPath: true]
 			[/^\.icondb\.js$/, "dark-red", priority: 1.5]
 			[/^index\.(bt|db|dir|pag)$/i, "medium-red", priority: 1.5]
+			[/^hosts$/i, "medium-cyan", "hosts"]
 			[/^whatis$/i, "medium-maroon"]
 			[/^(language-subtag-registry(\.txt)?|nametable)$/, "dark-blue", priority: 1.5, scope: "record-jar"]
 			[/\.git[\/\\](.*[\/\\])?((ORIG_|FETCH_)?HEAD|(http-)?alternates|packed-refs|packs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
