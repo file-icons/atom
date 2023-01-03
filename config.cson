@@ -1592,7 +1592,7 @@ fileIcons:
 		icon: "config"
 		generic: true
 		match: [
-			[/\.(ini|desktop|directory|cfg|co?nf|prefs)$/i, "medium-yellow", scope: "ini", alias: "dosini"]
+			[/\.(ini|desktop|directory|cfg|co?nf|prefs|inf)$/i, "medium-yellow", scope: "ini", alias: "dosini"]
 			[".properties", "medium-purple", scope: /(^|\.)(Java[-_ ]?)?Properties($|\.)/i]
 			[".ld", "dark-red"]
 			[".ldif", "dark-green"]
