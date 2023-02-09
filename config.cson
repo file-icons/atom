@@ -2883,6 +2883,7 @@ fileIcons:
 			[/^\.git|^\.keep$|\.(lfsconfig|mailmap)$/i, "medium-red", scope: /\.git-(commit|config|rebase)$/i]
 			[/(^|\.)gitignore([-_]global)?$/i, "medium-red", scope: /(^|\.)((git[-_ ]?)?ignore)($|\.)/i, alias: "Ignore List"]
 			[/\.git(config|attributes)$/i, "medium-red", priority: 0.5]
+			[".git-blame-ignore-revs", "medium-red"]
 		]
 
 	"Git - Commit":
