@@ -2800,6 +2800,7 @@ fileIcons:
 			[".proj", "dark-green"]
 			[".props", "medium-cyan"]
 			[".psc1", "light-blue"]
+			[".pseudoxml", "medium-purple", alias: "Pseudo-XML", scope: /^text\.pseudoxml$/, interpreter: "docutils"]
 			[".pt", "medium-red"]
 			[".qhelp", "medium-purple", alias: "Semmle", uses: "XML"]
 			[".resx", "medium-cyan"]
