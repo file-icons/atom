@@ -5561,7 +5561,7 @@ fileIcons:
 	Quasar:
 		icon: "quasar"
 		priority: 2
-		match: /^quasar\.conf\.[cm]?js$/i
+		match: /^quasar\.conf(?:ig)?\.[cm]?[jt]s$/i
 		colour: "medium-blue"
 
 	R:
