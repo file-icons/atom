@@ -2342,9 +2342,9 @@ fileIcons:
 		icon: "eslint"
 		priority: 2
 		match: [
-			[/\.eslint(cache|ignore)$/i, "medium-purple"]
-			[/\.eslintrc($|\.)/i, "light-purple"]
-			[/^eslint\.config\.js$/i, "light-purple"]
+			[/\.eslint(cache|ignore)$/i, "light-purple"]
+			[/\.eslintrc($|\.)/i, "medium-purple"]
+			[/^eslint\.config\.js$/i, "medium-purple"]
 		]
 
 	ExtJS:
