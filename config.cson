@@ -255,6 +255,10 @@ directoryIcons:
 		icon: "gitlab"
 		match: /^\.gitlab$/
 
+	Godot:
+		icon: "godot"
+		match: /^\.godot$/
+
 	Istanbul:
 		icon: "istanbul"
 		match: /^\.nyc[-_]output$/
