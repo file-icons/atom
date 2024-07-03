@@ -15,3 +15,5 @@ node_modules
 /test.js
 package-lock.json
 /styles/ui-variables.less
+# Environment configuration
+**/.env
