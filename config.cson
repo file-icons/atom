@@ -5467,8 +5467,8 @@ fileIcons:
 		icon: "pypi"
 		match: ///
 			^
-			( (dev|docs?|tests?) [-_] requirements
-			| requirements ([-_] (dev|docs?|tests?))?
+			( (all|base|dev|docs?|tests?) [-_] requirements
+			| requirements ([-_] (all|base|dev|docs?|tests?))?
 			) \.(in|txt)$
 		///i
 		colour: "dark-blue"
