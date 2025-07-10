@@ -412,7 +412,7 @@ fileIcons:
 			[".ai", "medium-orange"]
 			[".ait", "dark-orange"]
 			[".aia", "medium-yellow"]
-			[/^(AIAppResources|Adobe Illustrator( Cloud)? Prefs|Last Used Asset Export Settings|Tools Panel Presets)$/, "medium-orange", priority: 0.5, uses: "PostScript", signature: /^\/(Menus|collection1) \{(\r?\n|\r)/]
+			[/^(AIAppResources|Adobe Illustrator( Cloud)? Prefs|Last Used Asset Export Settings|(Tools Panel|Vectorizing) Presets)$/, "medium-orange", priority: 0.5, uses: "PostScript", signature: /^\/(Menus|collection1) \{(\r?\n|\r)/]
 		]
 
 	"Adobe InDesign":
@@ -430,6 +430,8 @@ fileIcons:
 		match: [
 			[".psd", "medium-blue", signature: /^8BPS/]
 			[".psb", "dark-purple"]
+			[".psp", "light-blue"]
+			[".ple", "light-cyan", uses: "PSD", alias: "Photoshop Lighting Effect"]
 			[".atn", "dark-blue"]
 		]
 
@@ -1246,6 +1248,13 @@ fileIcons:
 		match: ".ctp"
 		colour: "medium-red"
 
+	Calendar:
+		icon: "calendar"
+		match: [
+			[/^calendar\.\w+$|(?:^|\.)calendar$/i, "auto-orange", scope: /^source\.c\.calendar$/, priority: 0.9]
+			[/\.(ical(endar)?|ics|ifb|vcs)$/i, "medium-red", scope: "iCalendar", mime: "text/calendar", signature: /^BEGIN:VCALENDAR\r?\n/]
+		]
+
 	Calva:
 		icon: "calva"
 		match: ".calva-repl"
@@ -1594,6 +1603,7 @@ fileIcons:
 		match: [
 			[/\.(ini|desktop|directory|cfg|co?nf|prefs|inf)$/i, "medium-yellow", scope: "ini", alias: "dosini"]
 			[".properties", "medium-purple", scope: /(^|\.)(Java[-_ ]?)?Properties($|\.)/i]
+			[".eno", "medium-grey", "eno"]
 			[".ld", "dark-red"]
 			[".ldif", "dark-green"]
 			[".lds", "medium-red"]
@@ -1612,6 +1622,7 @@ fileIcons:
 			[/^settings\.bsp$/i, "medium-green", priority: 1.5]
 			[/config|settings|option|pref/i, null, priority: 0]
 			[".flc", "medium-green", alias: "FIGlet control", scope: /^source\.figctrl$/i, signature: /^flc2a/]
+			[/(^|\.)torrc([-_.]defaults|\.(minimal|sample)(\.in(-staging)?)?)?$/i, "medium-purple", "torrc"]
 			[/\.kys(_mac)?$/i, "medium-red", alias: "Adobe Keyboard Shortcuts", uses: "PostScript", IDs: {macCreatorCode: "ART5", macTypeCode: "Akys"}]
 			[///
 				/(dev[-\w]+|troff)/ ([^/]+/)*
@@ -2807,6 +2818,7 @@ fileIcons:
 			[".qhelp", "medium-purple", alias: "Semmle", uses: "XML"]
 			[".resx", "medium-cyan"]
 			[".rl", "medium-red"]
+			[".savane", "medium-red", "savane"]
 			[".scxml", "light-cyan"]
 			[".sed", "dark-green", scope: "sed", interpreter: /^([gs]?sed|minised)$/]
 			[/\.sgml?$/i, "dark-yellow"]
@@ -3251,6 +3263,7 @@ fileIcons:
 			[/\.mht(ml)?$/i, "medium-blue", "mhtml"]
 			[/\.html?\.ecr$/i, "medium-cyan", priority: 2]
 			[/\.(html?\.erb(\.deface)?|rhtml)$/i, "medium-red", scope: "html.erb", priority: 2]
+			[/\.(emu|ecmark(down|up))$/i, "medium-orange", scope: /\.html\.ecmarkup$/i, alias: "Ecmarkup"]
 		]
 
 	Husky:
@@ -3361,6 +3374,7 @@ fileIcons:
 			[".tga", "dark-orange", signature: /TRUEVISION-XFILE\.\0$/]
 			[/\.tiff?$/i, "medium-red", signature: /^II\x2A\0|^MM\0\x2A/]
 			[/\.vsdx?$/i, "dark-blue"]
+			[".wac", "medium-blue", alias: "Adaptive Wide Angle Constraint", signature: /^CADWsreV/]
 			[".wbm", "dark-maroon"]
 			[".wbmp", "dark-grey", mime: "image/vnd.wap.wbmp"]
 			[/\.(wmf|emf|wmz|apm)$/i, "medium-red", signature: /^[\x01\x02]\0\t\0|^×ÍÆ\x9A/]
@@ -3486,7 +3500,7 @@ fileIcons:
 	JavaScript:
 		icon: "js"
 		match: [
-			[".js", "auto-yellow", scope: "js", alias: /^(js|node)$/i, interpreter: /^(node|chakra|d8|iojs|g?js|qjs(c?|bnc?)?|mujs|rhino|slimerjs|v8(-shell)?)$/, tag: "js"]
+			[".js", "auto-yellow", scope: "js", alias: /^(js|node)$/i, interpreter: /^(node|chakra|d8|iojs|g?js|qjs(c?|bnc?)?|mujs|phantomjs|rhino|slimerjs|v8(-shell)?)$/, tag: "js"]
 			["._js", "auto-orange"]
 			[".jsb", "auto-maroon"]
 			[".jsm", "auto-blue"]
@@ -3506,6 +3520,7 @@ fileIcons:
 			[".htc", "dark-yellow"]
 			[".pac", "medium-purple", alias: "Proxy Auto-Config"]
 			[".pjs", "dark-purple"]
+			[".psjs", "medium-blue"]
 			[".js.ecr", "medium-cyan", priority: 2]
 			[".js.erb", "medium-red", priority: 2]
 			[/([/\\])cartridge\1scripts(?:\1.+)?\1[^\\/]+\.ds$/i, "medium-blue", matchPath: true]
@@ -3540,6 +3555,13 @@ fileIcons:
 			[".jinja", "dark-red", scope: "jinja", alias: /^(django|htmldjango|html\+django\/jinja|html\+jinja)$/i]
 			[/\.j(inja)?2$/i, "medium-red", alias: "jinja2"]
 		]
+
+	JIRA:
+		icon: "jira"
+		priority: 0.5
+		match: /\.jira(-markup)?$/i
+		colour: "dark-blue"
+		scope: /^text\.jira$/
 
 	Jison:
 		icon: "jison"
@@ -3583,6 +3605,7 @@ fileIcons:
 			[/\.(h|geo|topo)?json$/i, "medium-cyan", scope: "json"]
 			[".jsonc", "dark-blue", alias: "JSON with Comments", scope: "jsonc"]
 			[".rsj", "medium-blue"]
+			[/^\.runConfig(Robin)?$/, "medium-yellow", priority: 0.75]
 		]
 
 	JSON5:
@@ -4011,13 +4034,13 @@ fileIcons:
 	Roff:
 		icon: "manpage"
 		match: [
-			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|perl|pm?|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|cstr|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|roff?|tmac|tmac-u|tr|troff)$/i
+			[/\.(1([bcmstx]|has|in)?|[24568]|3(avl|bsm|cfgadm|in|[cmx]|perl|pm?|qt)?|7(d|fs|i|ipp|m|p)?|9[efps]?|cstr|eqn|groff|man|mandoc|mdoc|me|mom|nr?|nroff|rof?f?|tmac|tmac-u|tr|troff)$/i
 				"dark-green"
 				scope: /\.[gtn]?roff$/i
 				alias: /^([gtn]?roff|man([-_\s]?page|doc)?|mdoc)$/i
 				interpreter: /man|mandoc|([gnt]|dit)?roff/i
 				signature: /// ^
-					( '\\"\ [tre]+(?=\s|$)
+					( [.']\\"(\ [tre]+(?=\s|$)|[\ \t]*$)
 					| \.TH[\ \t]+(?:\S+)
 					| \.so[\ \t]+man(\w+)/.+\.\1($|\s)
 					| \.EQ\n
@@ -4546,9 +4569,10 @@ fileIcons:
 
 	Nano:
 		icon: "nano"
-		match: ".nanorc"
-		colour: "medium-blue"
-		scope: /\.nanorc(?=\.|$)/i
+		match: [
+			[/(^|\.)nanorc$/i, "medium-blue", /\.nanorc(?=\.|$)/i]
+			[".nanorc.in", "dark-blue"]
+		]
 
 	Nanoc:
 		icon: "nanoc"
@@ -5328,6 +5352,7 @@ fileIcons:
 			[/\/Resource\/[A-Z]\w+\/[^/]+$|(^|\/)(cidfmap|xlatmap|PPI_CUtils|Pscript5Idiom)$/i, "medium-red", matchPath: true, priority: 0.5, signature: /^%+\s+Copyright\s+\(C\)\s+([-\d]+),?\s+Artifex\sSoftware\b/i]
 			[/\.eps[fi]$/i, "dark-orange"]
 			[/^Fontmap(\.GS)?$/i, "dark-red", priority: 1.5]
+			[/^AIAppResources(_\d+(\.\d+)*)?$/i, "medium-red"]
 			[".gsf", "dark-orange"]
 		]
 
@@ -5874,7 +5899,7 @@ fileIcons:
 			[/^\.?(irbrc|gemrc|pryrc|ruby-(gemset|version))$/i, "medium-red"]
 			[/^(Appraisals|(Rake|App|[bB]uild|Cap|Danger|Deliver|Fast|Guard|Jar|Maven|Pod|Puppet|Snap)file(\.lock)?)$/, "medium-red"]
 			[/\.(jbuilder|rbuild|rb[wx]|builder)$/i, "dark-red"]
-			[/^rails$/, "medium-red"]
+			[/^(rails|brew_irbrc)$/, "medium-red"]
 			[".watchr", "dark-yellow"]
 		]
 
@@ -6504,6 +6529,7 @@ fileIcons:
 		match: [
 			[".toc", "auto-cyan", priority: 2, scope: "toc"]
 			[/^\.listing(\.\d+)?$/, "medium-maroon"]
+			[/\.m(3u[8p]?|4u)$/i, "dark-blue", scope: "m3u", alias: /^(hlsplaylist|m3u)$/i, rfc: 8216]
 		]
 
 	Tagfile: # CTags
@@ -6518,8 +6544,9 @@ fileIcons:
 			[".pid", "medium-orange"]
 			[".tld", "medium-maroon", uses: "XML"]
 			[/(\.|^)sha(256|sum)?$/i, "medium-green"]
-			[/(\.|^)(check|ck|crc(32)?|md5|rmd160|sha(224|256|384|512|1|2|3)?)?(sums?|(?<=\w))$/i, "medium-green", scope: "text.checksums"]
+			[/(\.|^)(check|ck|crc(32)?|md5|rmd160|sha(224|256|384|512|1|2|3)?)?(sums?|(?<=\w))$/i, "medium-green", "checksums"]
 			[/\.git[\/\\]refs[\/\\]tags[\/\\][^\/\\]+$/i, "medium-red", priority: 2, matchPath: true]
+			[/(^|\/)\.?calendar\/nomail$/i, "dark-red", matchPath: true]
 		]
 
 	Tailwind:
@@ -7478,6 +7505,14 @@ fileIcons:
 		colour: "medium-orange"
 		interpreter: "yorick"
 		scope: "yorick"
+
+	YouTube:
+		icon: "youtube"
+		alias: "YouTube Rich Text"
+		match: ".youtube-text"
+		colour: "auto-red"
+		scope: /^text\.youtube$/
+		priority: 0.5
 
 	YUI:
 		icon: "yui"
