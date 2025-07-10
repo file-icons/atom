@@ -2344,7 +2344,7 @@ fileIcons:
 		match: [
 			[/\.eslint(cache|ignore)$/i, "medium-purple"]
 			[/\.eslintrc($|\.)/i, "light-purple"]
-			[/^eslint\.config\.(m|c|)[jt]s$/i, "light-purple"]
+			[/^eslint\.config\.[cm]?[jt]s$/i, "light-purple"]
 		]
 
 	ExtJS:
