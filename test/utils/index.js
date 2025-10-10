@@ -142,18 +142,34 @@ function snapshot(outputPath, root = null){
 /**
  * Retrieve or create the temporary file directory.
  *
- * Thin wrapper to cache the result of `tmp.dirSync`.
- * @return {Object}
+ * @param {String} [prefix="file-icons@"] - String prepended to randomly-generated directory name
+ * @param {Number} [mode=0o755] - Permissions of the newly-created directory
+ * @return {String}
  */
-function getTempDir(){
+function getTempDir(prefix = null, mode = 0o755){
 	if(tmpDir)
 		return tmpDir;
 	
-	const tmp = require("tmp");
-	return tmpDir = tmp.dirSync({
-		prefix: "file-icons@",
-		mode:   0o755,
-	});
+	// Sanitise directory prefix string
+	prefix = String(prefix || "file-icons@") + process.pid;
+	if(prefix.includes(path.sep)) throw new TypeError("Directory prefix cannot contain path separators");
+	if(prefix.startsWith(".."))   throw new TypeError("Prefix cannot reference parent directory");
+	
+	// Generate randomly-named, unique directory
+	const codex  = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	const crypto = require("crypto");
+	const tmpdir = fs.realpathSync(require("os").tmpdir());
+	do{
+		tmpDir = "";
+		let random;
+		try{      random = crypto.randomBytes(12); }
+		catch(e){ random = crypto.pseudoRandomBytes(12); }
+		for(const byte of random)
+			tmpDir += codex[byte % codex.length];
+		tmpDir = path.join(tmpdir, prefix + tmpDir);
+	} while(fs.existsSync(tmpDir));
+	fs.mkdirSync(tmpDir, {mode});
+	return tmpDir;
 }
 
 
@@ -327,7 +343,7 @@ async function setup(name, opts = {}){
 	
 	// Resolve path to zipped files
 	name = name.replace(/\.zip$/i, "");
-	const tmpPath = getTempDir().name;
+	const tmpPath = getTempDir();
 	const source  = path.join(__dirname, "..", "fixtures", `${name}.zip`);
 	const project = path.join(tmpPath, name);
 	

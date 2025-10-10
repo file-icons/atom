@@ -28,7 +28,6 @@
 		"eslint-plugin-import": "^2.24.2",
 		"get-options": "^1.2.0",
 		"rimraf": "^3.0.2",
-		"tmp": "^0.1.0",
 		"unzipper": "^0.10.8"
 	},
 	"scripts": {
