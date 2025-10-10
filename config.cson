@@ -318,6 +318,11 @@ directoryIcons:
 		match: /^\.wine$/i
 		colour: "dark-red"
 
+	X11:
+		icon: "x11"
+		match: /^(xorg\.conf|xinitrc)\.d$|^X11$/i
+		colour: "medium-orange"
+
 	Yarn:
 		icon: "yarn"
 		match: /^\.yarn$/i
@@ -7380,8 +7385,14 @@ fileIcons:
 
 	X11:
 		icon: "x11"
-		match: /\.X(authority|clients|initrc|inputrc|profile|resources|session-errors|screensaver)$/i
-		colour: "medium-orange"
+		match: [
+			[/(^|\.)x(clients|defaults|errordb|inputrc|profile|rdb|res(ources)?|session-errors|screensaver)$/i, "medium-orange", alias: /^(conf-)?xdefaults$/i, scope: "xdefaults"]
+			[/^\.x(defaults|resources)-[^-\s]/i, "medium-orange", priority: 0.5]
+			[/(^|\.)x(initrc|serverrc|session)$/i, "medium-purple", uses: "shell"]
+			[/^\.?xdm-config$/i, "dark-blue"]
+			[/(^|\/)app-defaults\/[^\/]+$/i, "dark-orange", matchPath: true, priority: 0.5]
+			[/(^|\.)(X|ICE)authority$/i, "dark-red", signature: /^.{10,18}MIT-MAGIC-COOKIE-1/]
+		]
 
 	Xamarin:
 		icon: "xamarin"
