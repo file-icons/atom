@@ -1,8 +1,8 @@
 File Icons
 ==========
 
-[![Build status: TravisCI](https://img.shields.io/travis/file-icons/atom)](https://travis-ci.com/file-icons/atom)
-[![Latest package version](https://img.shields.io/apm/v/file-icons.svg?colorB=brightgreen)](https://github.com/file-icons/atom/releases/latest)
+[![Build status: TravisCI](https://img.shields.io/travis/com/file-icons/atom)](https://app.travis-ci.com/github/file-icons/atom/builds)
+[![Latest package version](https://img.shields.io/github/v/release/file-icons/atom?label=apm&color=brightgreen)](https://github.com/file-icons/atom/releases/latest)
 
 File-specific icons in Atom for improved visual grepping.
 
