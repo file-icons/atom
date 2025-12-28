@@ -7410,6 +7410,7 @@ fileIcons:
 			[".pbxproj", "medium-blue"]
 			[".pbxuser", "medium-cyan"]
 			[".xccheckout", "medium-orange"]
+			[".xccolortheme", "medium-pink", uses: "plist"]
 			[".xcplugindata", "dark-purple"]
 			[".xcrequiredplugins", "dark-cyan"]
 			[".xcscheme", "medium-purple"]
