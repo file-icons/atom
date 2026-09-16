@@ -260,6 +260,11 @@ directoryIcons:
 		match: /^\.nyc[-_]output$/
 		colour: "medium-orange"
 
+	Lefthook:
+		icon: "lefthook"
+		match: /^\.lefthook-local$/
+		colour: "medium-red"
+
 	"macOS Library":
 		icon: "dylib"
 		match: /.\.(appex|bundle|ccl|component|framework|ideplugin|kext|mdimporter|osax|(osirix)?plugin|qlgenerator)$/i
@@ -654,6 +659,7 @@ fileIcons:
 		match: [
 			[/\.(applescript|scpt)$/i, "medium-purple", scope: "applescript", alias: "osascript", interpreter: "osascript"]
 			[/^com\.apple\./, "medium-blue", priority: 0.5]
+			[".mac-tts", "medium-cyan", priority: 0, scope: "mac-tts"]
 		]
 
 	Appveyor:
@@ -1608,6 +1614,7 @@ fileIcons:
 		match: [
 			[/\.(ini|desktop|directory|cfg|co?nf|prefs|inf)$/i, "medium-yellow", scope: "ini", alias: "dosini"]
 			[".properties", "medium-purple", scope: /(^|\.)(Java[-_ ]?)?Properties($|\.)/i]
+			[".colorscheme", "medium-pink", uses: "INI"]
 			[".eno", "medium-grey", "eno"]
 			[".ld", "dark-red"]
 			[".ldif", "dark-green"]
@@ -1658,6 +1665,7 @@ fileIcons:
 		match: [
 			[/^go\.mod$/i, "dark-blue", priority: 2]
 			[/^go\.sum$/i, "medium-green", priority: 2]
+			[/^go\.work$/i, "medium-red", priority: 2]
 		]
 
 	"Config, Haskell":
@@ -1770,7 +1778,8 @@ fileIcons:
 			[/^cpanfile$/i, "dark-blue"]
 			[/^META\.yml$/, "medium-red", priority: 2]
 			[/^META\.json$/, "auto-yellow", priority: 2]
-			[/^MANIFEST\.SKIP$/, "medium-maroon"]
+			[/^MANIFEST\.SKIP$/, "medium-maroon", scope: "cpan-skiplist"]
+			[/^MIRRORED\.BY$/, "medium-green", scope: "cpan-mirror"]
 		]
 
 	"CpcdosC+":
@@ -1937,6 +1946,7 @@ fileIcons:
 			[".ejson", "dark-red"]
 			[".edn", "medium-purple"]
 			[".eam.fs", "dark-purple"]
+			[".rec", "medium-green", alias: "Recfile", scope: /^(text\.recfile|rec)$/i]
 			[".son", "dark-green", "son"]
 			[".ston", "medium-maroon"]
 			[".ttl", "medium-cyan", scope: "turtle"]
@@ -1959,7 +1969,7 @@ fileIcons:
 			[/^fc-list$/, "medium-orange", priority: 0.5, scope: "fc-list"]
 			[/^(birthtoken|flowers)$/, "medium-green", priority: 0.5, scope: /^source\.generic-db$/]
 			[/(\\|\/)share(?:\1misc)?\1(?:ascii|trace\.codes)$/, "medium-red", matchPath: true]
-			[/^(mime\.types|fstab)$/i, "medium-maroon"]
+			[/^(mime\.types(-nonunix)?|fstab)$/i, "medium-maroon"]
 			[/^METADATA\.pb$/, "medium-red", priority: 2]
 			[/\.(ldj|ldjson|jsonl)$/, "dark-orange", "jsonl"]
 			[".irb-history", "medium-red"]
@@ -1974,7 +1984,11 @@ fileIcons:
 			[/^index\.(bt|db|dir|pag)$/i, "medium-red", priority: 1.5]
 			[/^hosts$/i, "medium-cyan", "hosts"]
 			[/^whatis$/i, "medium-maroon"]
+			[/^paperspecs$/i, "medium-green", priority: 0.5, scope: "paperspecs", alias: "libpaper"]
+			[/^papersize$/i, "medium-red", priority: 0.5, uses: "paperspecs"]
+			[".fortune", "medium-orange", priority: 0.5, scope: "cookie-jar"]
 			[/^(language-subtag-registry(\.txt)?|nametable)$/, "dark-blue", priority: 1.5, scope: "record-jar"]
+			[/(^|\/)fortunes\/(off\/)?[^\s\/.]+$/i, "medium-orange", priority: 0.5, scope: "cookie-jar", matchPath: true]
 			[/\.git[\/\\](.*[\/\\])?((ORIG_|FETCH_)?HEAD|(http-)?alternates|packed-refs|packs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
 				priority: 2,
 				matchPath: true]
@@ -2735,6 +2749,7 @@ fileIcons:
 			[".xml", "medium-blue", signature: /^<\?xml /]
 			[".xmp", "medium-red", signature: /^(<\?xpacket|<x:xmpmeta) /]
 			[".rdf", "dark-red"]
+			[".doap", "dark-orange"]
 			[".config", "medium-blue"]
 			[/^_service$/, "medium-blue"]
 			[/^configure\.ac$/, "medium-red"]
@@ -2891,10 +2906,22 @@ fileIcons:
 		icon: "gimp"
 		match: [
 			[".xcf", "medium-red"]
-			[".ggr", "medium-orange"]
+			[".ggr", "medium-orange", signature: /^GIMP Gradient\n/, scope: "gimpres"]
 			[".gih", "medium-maroon"]
-			[".gpl", "medium-green"]
-			[".vbr", "medium-cyan"]
+			[".gpl", "medium-green", signature: /^GIMP Palette\n/, mime: "application/x-gimp-palette"]
+			[".vbr", "medium-cyan", signature: /^GIMP-VBR\n/]
+			[".gdyn", "medium-blue"]
+			[".gfig", "medium-purple", signature: /^GFIG Version \d+(\.\d+)*\n/]
+			[".gflare", "light-red", signature: /^GIMP GFlare \d+(?:\.\d+)*\n/]
+			[".interp", "dark-blue", scope: "source.interp"]
+			[/^action-history$/i, "medium-red"]
+			[/(^|\.)gimprc(\.in|~)?$/i, "medium-green", "gimprc", priority: 1.5]
+			[/(^|\.)(color|context|controller|device|dock|extension|modifiers|parasite|plugin|profile|session|shortcuts|template|tool|unit)rc~?$/i, "dark-green"]
+			[/(^|\/)filters\/Gimp[-\w]+.*\.settings$/i, "medium-cyan", priority: 0.5, matchPath: true]
+			[/(^|\/)fractal-?explorer\/[^\/]+$/i, "medium-red", priority: 0.5, matchPath: true, signature: /^Fractal Explorer Plug-In Version \d/]
+			[/(^|\/)gimpressionist\/Presets\/[^\/.]+$/i, "medium-cyan", priority: 0.5, matchPath: true]
+			[/(^|\/)tool-options\/gimp(?=-).*-tool$/i, "medium-blue", priority: 0.5, matchPath: true]
+			[/(^|\/)plug-?in-settings\/.*\.last$/i, "dark-cyan", priority: 0.5, matchPath: true]
 		]
 
 	Git:
@@ -2970,8 +2997,10 @@ fileIcons:
 
 	GNOME:
 		icon: "gnome"
-		match: /\.gtk/
-		priority: 0.25
+		match: [
+			[/(^|\.)(gtkrc(-?[12]\.0)?|themerc)$/i, "medium-purple", "gtkrc"]
+			[/\.gtk/, null, priority: 0.25]
+		]
 
 	Gnuplot:
 		icon: "gnuplot"
@@ -3835,7 +3864,7 @@ fileIcons:
 	Lefthook:
 		icon: "lefthook"
 		priority: 2
-		match: /^lefthook(-local)?\.ya?ml$/i
+		match: /^\.?lefthook([-.]local)?\.(ya?ml|jsonc?|toml)$/i
 		colour: "medium-red"
 
 	Lektor:
@@ -3943,7 +3972,7 @@ fileIcons:
 		icon: "llvm"
 		match: [
 			[".ll", "dark-green", "llvm"]
-			[/\.clang-(format|tidy)$/i, "auto-yellow"]
+			[/(\.|^_)clang-(format|tidy)$/i, "auto-yellow"]
 			[/^ubsan\.blacklist$/i, "auto-red"]
 		]
 
@@ -4049,6 +4078,7 @@ fileIcons:
 					| \.TH[\ \t]+(?:\S+)
 					| \.so[\ \t]+man(\w+)/.+\.\1($|\s)
 					| \.EQ\n
+					| (\.KS)? \n \.TS\n
 					| ('+\t?|\.\t)\\"\s
 					) ///m]
 			[/^(man|mdoc)\.template$/i, "dark-green"]
@@ -4731,6 +4761,8 @@ fileIcons:
 		match: [
 			[".ninja", "medium-blue", "ninja"]
 			[".ninja.d", "dark-cyan", priority: 2]
+			[".ninja_deps", "medium-red", signature: /^# ninjadeps\n/]
+			[".ninja_log", "dark-green", signature: /^# ninja log v\d+\n/]
 		]
 
 	"Nintendo 64":
@@ -5100,6 +5132,7 @@ fileIcons:
 		match: [
 			["Cargo.toml", "light-orange"]
 			["Cargo.lock", "dark-orange"]
+			[".pc", "medium-cyan", scope: "pkgconf", interpreter: /^pkg-?conf(ig)?$/i]
 			[".packages", "medium-green"]
 			[/^pubspec\.lock$/i, "medium-blue"]
 			[/^pubspec\.ya?ml$/i, "medium-yellow"]
@@ -5600,7 +5633,7 @@ fileIcons:
 		scope: "r"
 		alias: /^(Rscript|splus|Rlang)$/i
 		interpreter: "Rscript"
-		match: /\.(r|Rprofile|Rhistory|rsx|rd)$/i
+		match: /\.(rd?|Rprofile|R(app\.)?history|rsx)$|^expr-dist$/i
 		colour: "medium-blue"
 
 	Racket:
@@ -5682,7 +5715,7 @@ fileIcons:
 		icon: "rdata"
 		uses: "Binary"
 		match: [
-			[".Rdata", "medium-red"]
+			[".Rdata", "medium-red", signature: /^RD[AX][23]\n/]
 			[".rdb", "medium-orange"]
 			[".rds", "medium-yellow"]
 			[".rdx", "medium-maroon"]
@@ -5705,9 +5738,9 @@ fileIcons:
 	Readme:
 		icon: "book"
 		match: [
-			[/^README(\b|_)|^((un)?licen[sc]es?(\.mysql)?|(read|readme|click|delete|keep|test)\.me)(\.(md|txt))?$|\.(readme|1st|licen[sc]es?)$/i, "medium-blue", priority: 2]
-			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copy(ing|right)(\.regex)?|faq|fixes|hacking|history|install|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks|warnings)(_\w+)?$/i, "dark-blue", priority: 2]
-			[/\b(changelog|copying(v?\d)?|install|notes?|notices?|read[-_]?me)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
+			[/^README(\b|_)|^((un)?licen[sc]es?(\.mysql)?|(read|readme|click|delete|keep|test)\.me)(\.(md|txt))?$|\.(readme|1st|licen[sc]es?)$/i, "medium-blue", interpreter: "cat", priority: 2]
+			[/^(notice|bugs|changes|change[-_]?log([-._]?\d+)?|contribute|contributing|contributors|copy(ing|right)(\.regex)?|faq|features|fixes|hacking|history|install|machines|maintainers|manifest|more\.stuff|notes|problems|projects|revision|terms|thanks|warnings)(_\w+)?$/i, "dark-blue", priority: 2]
+			[/\b(changelog|copying(v?\d)?|guide|install|notes?|notices?|read[-_]?me|tutorials?)\b|^licen[sc]es?[-._]/i, "medium-blue", priority: 0]
 			[/^CITATION(S|\.cff)?$/, "medium-blue", priority: 2, uses: "YAML"]
 			[/^(news|release[-_.]?notes)([-_.]?[-\d]+)?$/i, "dark-blue", priority: 0]
 			[/^zork\d\.(?!pre$|pur$)[a-z]+$/, "dark-blue", priority: 0]
@@ -5717,7 +5750,9 @@ fileIcons:
 			[".journal", "medium-blue", uses: "Ledger"]
 			[/\.(en(l[px]?|[fqswz]|tl)|es1|nbib|ris(-rm8)?)$/i, "medium-blue", priority: 0.5]
 			[".ens", "medium-pink", alias: "EndNote Style", uses: "Binary", signature: /^\0\cH(?:.|\r|\n){2}\0\0(?:.|\r|\n){2}RSFTSTYL/, IDs: {macTypeCode: "ENFT"}]
-			[".enw", "medium-green", alias: "EndNote Import File", uses: "Roff", mime: "application/x-endnote-refer"]
+			[/\.(enw|refer)$/i, "medium-green", alias: "EndNote Import File", uses: "Roff", scope: "refer", mime: "application/x-endnote-refer"]
+			[/\/papers\/Ind(ex)?$/i, "medium-green", matchPath: true, priority: 0.5]
+			[/^(Rv7man|Rbstjissue)$/, "light-green", priority: 0.25]
 			[".faq", "medium-blue"]
 			[".yo", "medium-red", "yodl"]
 		]
@@ -6128,6 +6163,7 @@ fileIcons:
 			[/^\.?_?dir_?colors$/i, "medium-green", "dircolors"]
 			[".inputrc", "medium-red", alias: "Readline Config", scope: "inputrc"]
 			[".tmux", "medium-blue"]
+			[".mdd", "medium-purple", uses: "Shell"]
 			["rc_Apple_Terminal", "dark-blue", priority: 0.5]
 			[/^(configure|config\.(guess|rpath|status|sub)|depcomp|libtool|compile)$/, "medium-red"]
 			[/^\/(private\/)?etc\/([^/]+\/)*(profile$|nanorc$|rc\.|csh\.)/i, "dark-purple", matchPath: true]
@@ -6367,6 +6403,7 @@ fileIcons:
 			[".key", "medium-blue"]
 			[".crt", "medium-blue"]
 			[".der", "medium-purple"]
+			[".pgp", "dark-orange", signature: /^(-{5})BEGIN PGP PUBLIC KEY BLOCK\1$/m]
 			[/^id_rsa/, "medium-red"]
 			[/\.glyphs\d*License$/i, "medium-green"]
 			[/^(master\.)?passwd$/i, "dark-green"]
@@ -6533,6 +6570,7 @@ fileIcons:
 		icon: "toc"
 		match: [
 			[".toc", "auto-cyan", priority: 2, scope: "toc"]
+			[/\.uris?$/i, "medium-blue", scope: "uri-list", mime: "text/uri-list", rfc: 2483, IDs: {macTypeCode: "URIs"}]
 			[/^\.listing(\.\d+)?$/, "medium-maroon"]
 			[/\.m(3u[8p]?|4u)$/i, "dark-blue", scope: "m3u", alias: /^(hlsplaylist|m3u)$/i, rfc: 8216]
 		]
@@ -6543,6 +6581,7 @@ fileIcons:
 			[/\.?c?tags$/i, "medium-blue"]
 			[/\.gemtags/i, "medium-red"]
 			[/\.hgtags$|^localtags$/i, "medium-cyan"]
+			[/^CACHEDIR\.TAG$/, "medium-yellow", priority: 2, url: "https://bford.info/cachedir/", signature: /^Signature: 8a477f597d28d172789f06886806bc55/, scope: /^text\.cachedir$/]
 			[/^\.?VERSION$/i, "medium-yellow"]
 			[/^\.atom-socket-.+\.\d$/, "medium-green", priority: 2]
 			[".sfv", "medium-green", scope: "source.sfv", mime: "text/x-sfv"]
@@ -6639,6 +6678,7 @@ fileIcons:
 			[".bats", "auto-grey", interpreter: "bats", alias: "Bats", url: "https://github.com/bats-core/bats-core", uses: "Shell", scope: "bats", generic: yes]
 			[".test", "medium-green", priority: 0.25]
 			[".xspec", "dark-green"]
+			[".ztst", "medium-purple", scope: "ztst", uses: "Shell"]
 		]
 
 	"Test, Go":
@@ -6842,6 +6882,7 @@ fileIcons:
 		icon: "tortoise"
 		match: /^\.tgitconfig$/i
 		colour: "medium-red"
+		uses: "gitconfig"
 
 	Travis:
 		icon: "travis"
