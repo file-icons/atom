@@ -2306,7 +2306,10 @@ fileIcons:
 		priority: 1.5
 		match: [
 			[/(^|\.)(el|_?emacs|emacs\.desktop|abbrev[-_]defs)$/i, "medium-purple", alias: "elisp", scope: "emacs.lisp", interpreter: /^(x?emacs)$/]
-			[/(^|\.)(elc|eld)$/i, "dark-purple", signature: /^;ELC\x17\0{3}/]
+			[".elc", "dark-purple", signature: /^;ELC\x17\0{3}/]
+			[".eld", "dark-cyan", alias: "lisp-data"]
+			[/^tramp$/, "medium-green"]
+			[".dynvars", "medium-cyan"]
 			[".gnus", "medium-red"]
 			[".viper", "dark-green"]
 			[/^Cask$/, "dark-blue"]
