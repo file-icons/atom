@@ -2305,14 +2305,16 @@ fileIcons:
 		icon: "emacs"
 		priority: 1.5
 		match: [
-			[/(^|\.)(el|_?emacs|emacs\.desktop|abbrev[-_]defs)$/i, "medium-purple", alias: "elisp", scope: "emacs.lisp", interpreter: /^(x?emacs)$/]
+			[/(^|\.)(el|_?emacs|emacs\.desktop|abbrev[-_]defs)$/i, "medium-purple", alias: /^(elisp|lisp-data)$/i, scope: "emacs.lisp", interpreter: /^(x?emacs)$/]
 			[".elc", "dark-purple", signature: /^;ELC\x17\0{3}/]
-			[".eld", "dark-cyan", alias: "lisp-data"]
+			[".eld", "dark-cyan"]
 			[/^tramp$/, "medium-green"]
-			[".dynvars", "medium-cyan"]
+			[/(^|\.)dynvars$/i, "medium-cyan"]
 			[".gnus", "medium-red"]
 			[".viper", "dark-green"]
 			[/^Cask$/, "dark-blue"]
+			[/^Keg$/, "dark-orange", "keg"]
+			[/^Eldev$/, "medium-orange"]
 			[/^Project\.ede$/i, "medium-blue"]
 		]
 
