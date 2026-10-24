@@ -3978,6 +3978,7 @@ fileIcons:
 		match: [
 			[".ll", "dark-green", "llvm"]
 			[/(\.|^_)clang-(format|tidy)$/i, "auto-yellow"]
+			[/(\.|^)clang-format-ignore$/i, "auto-orange"]
 			[/^ubsan\.blacklist$/i, "auto-red"]
 		]
 
