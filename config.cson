@@ -2844,6 +2844,8 @@ fileIcons:
 			[".resx", "medium-cyan"]
 			[".rl", "medium-red"]
 			[".savane", "medium-red", "savane"]
+			[".scriptSuite", "medium-green"]
+			[".scriptTerminology", "medium-cyan"]
 			[".scxml", "light-cyan"]
 			[".sed", "dark-green", scope: "sed", interpreter: /^([gs]?sed|minised)$/]
 			[/\.sgml?$/i, "dark-yellow"]
