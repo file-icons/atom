@@ -2205,6 +2205,7 @@ fileIcons:
 			[".dyalog", "medium-orange", interpreter: "dyalog"]
 			[".dyapp", "medium-red"]
 			[".mipage", "dark-green"]
+			[".apls", "dark-orange", interpreter: "dyalogscript"]
 		]
 
 	DyLib:
