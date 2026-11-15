@@ -3906,7 +3906,11 @@ fileIcons:
 	LFE:
 		icon: "lfe"
 		match: ".lfe"
-		colour: "dark-red"
+		colour: "auto-green"
+		alias: "Lisp-Flavoured Erlang"
+		scope: "source.lfe"
+		interpreter: /^lfe(c|doc|exec|script|-test|-first-try)?$/
+		url: "https://lfe.io/"
 
 	LGTM:
 		icon: "lgtm"
