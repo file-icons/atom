@@ -2365,6 +2365,7 @@ fileIcons:
 			[".yrl", "dark-green"]
 			[".app.src", "dark-maroon"]
 			[/^Emakefile$/, "dark-green"]
+			[/^\.erlang\.cookie$/, "medium-orange"]
 			[/^rebar(\.config)?\.lock$/i, "medium-red"]
 		]
 
