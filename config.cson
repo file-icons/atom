@@ -251,6 +251,10 @@ directoryIcons:
 		icon: "github"
 		match: /^\.github$/
 
+	GitHub:
+		icon: "github"
+		match: /^\.github/workflows$/
+
 	GitLab:
 		icon: "gitlab"
 		match: /^\.gitlab$/
